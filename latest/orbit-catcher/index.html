@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orbit Catcher</title>
+  <style>
+    :root {
+      --bg:#0f172a;
+      --panel:#ffffff;
+      --ink:#172033;
+      --muted:#667085;
+      --line:#d9dee7;
+      --green:#16a34a;
+      --red:#dc2626;
+      --blue:#2563eb;
+      --amber:#f59e0b;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0;
+      min-height:100vh;
+      font-family:"Segoe UI", system-ui, sans-serif;
+      background:#0f172a;
+      color:var(--ink);
+      letter-spacing:0;
+    }
+    header {
+      padding:12px 14px;
+      background:var(--panel);
+      border-bottom:1px solid var(--line);
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      align-items:center;
+    }
+    h1 { margin:0; font-size:20px; }
+    main {
+      min-height:calc(100vh - 57px);
+      display:grid;
+      grid-template-columns:320px 1fr;
+      gap:0;
+    }
+    aside {
+      background:var(--panel);
+      border-right:1px solid var(--line);
+      padding:12px;
+      display:grid;
+      gap:10px;
+      align-content:start;
+    }
+    .stats {
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:8px;
+    }
+    .stat, .panel {
+      border:1px solid var(--line);
+      border-radius:8px;
+      background:#fbfcfe;
+      padding:10px;
+    }
+    .stat strong {
+      display:block;
+      font-size:22px;
+      line-height:1.1;
+    }
+    .stat span, .muted {
+      color:var(--muted);
+      font-size:12px;
+    }
+    .panel { display:grid; gap:8px; }
+    button {
+      min-height:42px;
+      border:1px solid var(--blue);
+      border-radius:8px;
+      background:var(--blue);
+      color:#fff;
+      font:inherit;
+      font-weight:700;
+      cursor:pointer;
+    }
+    button.secondary {
+      background:#fff;
+      color:var(--ink);
+      border-color:var(--line);
+    }
+    .play-wrap {
+      min-height:100%;
+      display:grid;
+      place-items:center;
+      padding:12px;
+    }
+    .stage {
+      width:min(100%, 860px);
+      aspect-ratio:4/3;
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:8px;
+      background:#111827;
+      position:relative;
+      overflow:hidden;
+      box-shadow:0 16px 50px rgba(0,0,0,.28);
+    }
+    canvas {
+      width:100%;
+      height:100%;
+      display:block;
+      touch-action:none;
+      background:#111827;
+    }
+    .overlay {
+      position:absolute;
+      inset:auto 12px 12px 12px;
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:8px;
+      color:#dbeafe;
+      pointer-events:none;
+      font-size:12px;
+    }
+    .badge {
+      display:inline-flex;
+      align-items:center;
+      min-height:26px;
+      padding:3px 9px;
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:999px;
+      background:rgba(15,23,42,.72);
+      backdrop-filter:blur(6px);
+    }
+    .legend {
+      display:grid;
+      gap:6px;
+      font-size:13px;
+    }
+    .legend div { display:flex; align-items:center; gap:8px; }
+    .dot { width:12px; height:12px; border-radius:999px; display:inline-block; }
+    .dot.good { background:var(--green); }
+    .dot.bad { background:var(--red); }
+    .dot.player { background:#38bdf8; }
+    @media (max-width:820px) {
+      header { padding:10px 12px; }
+      h1 { font-size:18px; }
+      main { grid-template-columns:1fr; }
+      aside { border-right:0; border-bottom:1px solid var(--line); }
+      .stats { grid-template-columns:repeat(4, minmax(0,1fr)); }
+      .stat { padding:8px; }
+      .stat strong { font-size:17px; }
+      .panel { display:none; }
+      .play-wrap { padding:8px; align-items:start; }
+      .stage { width:100%; max-height:70vh; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Orbit Catcher</h1>
+    <div class="muted">Mini-game composition prototype</div>
+  </header>
+  <main>
+    <aside>
+      <div class="stats">
+        <div class="stat"><strong id="score">0</strong><span>Score</span></div>
+        <div class="stat"><strong id="best">0</strong><span>Best</span></div>
+        <div class="stat"><strong id="time">45</strong><span>Time</span></div>
+        <div class="stat"><strong id="lives">3</strong><span>Lives</span></div>
+      </div>
+      <button id="start">Start</button>
+      <button class="secondary" id="pause">Pause</button>
+      <button class="secondary" id="reset-best">Reset Best</button>
+      <div class="panel">
+        <strong>Goal</strong>
+        <div class="muted">Collect green sparks, avoid red hazards, and keep moving. The round ends when time or lives run out.</div>
+      </div>
+      <div class="panel legend">
+        <div><span class="dot player"></span> Player</div>
+        <div><span class="dot good"></span> Spark +10</div>
+        <div><span class="dot bad"></span> Hazard -1 life</div>
+      </div>
+    </aside>
+    <div class="play-wrap">
+      <div class="stage">
+        <canvas id="game" width="800" height="600" aria-label="Orbit Catcher game canvas"></canvas>
+        <div class="overlay">
+          <span class="badge" id="state">Ready</span>
+          <span class="badge">WASD / arrows / touch</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+    const canvas = document.querySelector("#game");
+    const ctx = canvas.getContext("2d");
+    const scoreEl = document.querySelector("#score");
+    const bestEl = document.querySelector("#best");
+    const timeEl = document.querySelector("#time");
+    const livesEl = document.querySelector("#lives");
+    const stateEl = document.querySelector("#state");
+    const startButton = document.querySelector("#start");
+    const pauseButton = document.querySelector("#pause");
+    const resetBestButton = document.querySelector("#reset-best");
+    const bestKey = "codex.orbit-catcher.best.v1";
+    const keys = new Set();
+    const pointer = { active:false, x:400, y:300 };
+
+    let best = readBest();
+    let running = false;
+    let paused = false;
+    let lastTime = 0;
+    let spawnGood = 0;
+    let spawnBad = 0;
+    let score = 0;
+    let lives = 3;
+    let timeLeft = 45;
+    let player = { x:400, y:300, r:15, speed:250 };
+    let sparks = [];
+    let hazards = [];
+
+    function resetRound() {
+      score = 0;
+      lives = 3;
+      timeLeft = 45;
+      player = { x:400, y:300, r:15, speed:250 };
+      sparks = [];
+      hazards = [];
+      spawnGood = 0;
+      spawnBad = 0;
+      running = true;
+      paused = false;
+      lastTime = performance.now();
+      stateEl.textContent = "Running";
+      startButton.textContent = "Restart";
+      pauseButton.textContent = "Pause";
+      updateHud();
+    }
+
+    function readBest() {
+      try {
+        return Number(localStorage.getItem(bestKey) || "0");
+      } catch {
+        return 0;
+      }
+    }
+
+    function writeBest(value) {
+      try {
+        localStorage.setItem(bestKey, String(value));
+      } catch {
+        stateEl.textContent = "No Storage";
+      }
+    }
+
+    function updateHud() {
+      scoreEl.textContent = score;
+      bestEl.textContent = best;
+      timeEl.textContent = Math.max(0, Math.ceil(timeLeft));
+      livesEl.textContent = lives;
+    }
+
+    function rand(min, max) {
+      return min + Math.random() * (max - min);
+    }
+
+    function spawn(list, kind) {
+      const radius = kind === "spark" ? 9 : 13;
+      list.push({
+        x: rand(radius + 10, canvas.width - radius - 10),
+        y: rand(radius + 10, canvas.height - radius - 10),
+        r: radius,
+        life: kind === "spark" ? 7 : 8,
+        vx: kind === "spark" ? 0 : rand(-45, 45),
+        vy: kind === "spark" ? 0 : rand(-45, 45)
+      });
+    }
+
+    function movePlayer(dt) {
+      let dx = 0;
+      let dy = 0;
+      if (keys.has("arrowleft") || keys.has("a")) dx -= 1;
+      if (keys.has("arrowright") || keys.has("d")) dx += 1;
+      if (keys.has("arrowup") || keys.has("w")) dy -= 1;
+      if (keys.has("arrowdown") || keys.has("s")) dy += 1;
+      if (pointer.active) {
+        dx += (pointer.x - player.x) / 80;
+        dy += (pointer.y - player.y) / 80;
+      }
+      const length = Math.hypot(dx, dy) || 1;
+      player.x += (dx / length) * player.speed * dt;
+      player.y += (dy / length) * player.speed * dt;
+      player.x = Math.max(player.r, Math.min(canvas.width - player.r, player.x));
+      player.y = Math.max(player.r, Math.min(canvas.height - player.r, player.y));
+    }
+
+    function updateObjects(list, dt) {
+      list.forEach((item) => {
+        item.life -= dt;
+        item.x += item.vx * dt;
+        item.y += item.vy * dt;
+        if (item.x < item.r || item.x > canvas.width - item.r) item.vx *= -1;
+        if (item.y < item.r || item.y > canvas.height - item.r) item.vy *= -1;
+      });
+      return list.filter((item) => item.life > 0);
+    }
+
+    function collide(a, b) {
+      return Math.hypot(a.x - b.x, a.y - b.y) < a.r + b.r;
+    }
+
+    function update(dt) {
+      if (!running || paused) return;
+      timeLeft -= dt;
+      spawnGood -= dt;
+      spawnBad -= dt;
+      if (spawnGood <= 0) {
+        spawn(sparks, "spark");
+        spawnGood = Math.max(.45, 1.1 - score / 500);
+      }
+      if (spawnBad <= 0) {
+        spawn(hazards, "hazard");
+        spawnBad = Math.max(.7, 1.8 - score / 360);
+      }
+      movePlayer(dt);
+      sparks = updateObjects(sparks, dt);
+      hazards = updateObjects(hazards, dt);
+
+      sparks = sparks.filter((spark) => {
+        if (collide(player, spark)) {
+          score += 10;
+          return false;
+        }
+        return true;
+      });
+      hazards = hazards.filter((hazard) => {
+        if (collide(player, hazard)) {
+          lives -= 1;
+          score = Math.max(0, score - 15);
+          return false;
+        }
+        return true;
+      });
+      if (timeLeft <= 0 || lives <= 0) endRound();
+      updateHud();
+    }
+
+    function endRound() {
+      running = false;
+      paused = false;
+      if (score > best) {
+        best = score;
+        writeBest(best);
+        stateEl.textContent = "New Best";
+      } else {
+        stateEl.textContent = "Finished";
+      }
+      startButton.textContent = "Start";
+      pauseButton.textContent = "Pause";
+      updateHud();
+    }
+
+    function togglePause() {
+      if (!running) return;
+      paused = !paused;
+      stateEl.textContent = paused ? "Paused" : "Running";
+      pauseButton.textContent = paused ? "Resume" : "Pause";
+      lastTime = performance.now();
+    }
+
+    function drawBackground() {
+      ctx.fillStyle = "#111827";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.strokeStyle = "rgba(148,163,184,.16)";
+      ctx.lineWidth = 1;
+      for (let x = 40; x < canvas.width; x += 40) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
+        ctx.stroke();
+      }
+      for (let y = 40; y < canvas.height; y += 40) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+        ctx.stroke();
+      }
+    }
+
+    function drawCircle(item, color, glow) {
+      ctx.save();
+      ctx.shadowColor = glow;
+      ctx.shadowBlur = 14;
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(item.x, item.y, item.r, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function draw() {
+      drawBackground();
+      sparks.forEach((spark) => drawCircle(spark, "#22c55e", "rgba(34,197,94,.9)"));
+      hazards.forEach((hazard) => drawCircle(hazard, "#ef4444", "rgba(239,68,68,.9)"));
+      drawCircle(player, "#38bdf8", "rgba(56,189,248,.95)");
+      if (!running && score === 0) {
+        ctx.fillStyle = "rgba(219,234,254,.9)";
+        ctx.font = "700 30px Segoe UI, sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillText("Press Start", canvas.width / 2, canvas.height / 2);
+      }
+    }
+
+    function loop(now) {
+      const dt = Math.min(.033, (now - lastTime) / 1000 || 0);
+      lastTime = now;
+      update(dt);
+      draw();
+      requestAnimationFrame(loop);
+    }
+
+    function canvasPoint(event) {
+      const rect = canvas.getBoundingClientRect();
+      return {
+        x: (event.clientX - rect.left) * (canvas.width / rect.width),
+        y: (event.clientY - rect.top) * (canvas.height / rect.height)
+      };
+    }
+
+    window.addEventListener("keydown", (event) => {
+      const key = event.key.toLowerCase();
+      if (["arrowleft", "arrowright", "arrowup", "arrowdown", "a", "d", "w", "s"].includes(key)) {
+        event.preventDefault();
+        keys.add(key);
+      }
+    });
+    window.addEventListener("keyup", (event) => keys.delete(event.key.toLowerCase()));
+    canvas.addEventListener("pointerdown", (event) => {
+      pointer.active = true;
+      Object.assign(pointer, canvasPoint(event));
+      canvas.setPointerCapture(event.pointerId);
+    });
+    canvas.addEventListener("pointermove", (event) => {
+      if (pointer.active) Object.assign(pointer, canvasPoint(event));
+    });
+    canvas.addEventListener("pointerup", () => { pointer.active = false; });
+    canvas.addEventListener("pointercancel", () => { pointer.active = false; });
+    startButton.addEventListener("click", resetRound);
+    pauseButton.addEventListener("click", togglePause);
+    resetBestButton.addEventListener("click", () => {
+      best = 0;
+      writeBest(0);
+      updateHud();
+    });
+
+    updateHud();
+    draw();
+    requestAnimationFrame(loop);
+  </script>
+</body>
+</html>

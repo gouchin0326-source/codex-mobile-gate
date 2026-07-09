@@ -1,0 +1,18 @@
+{
+  "name": "CODEX Gate",
+  "short_name": "CODEX",
+  "description": "Mobile gate for Codex dashboard and latest artifacts.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f7f9",
+  "theme_color": "#172033",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

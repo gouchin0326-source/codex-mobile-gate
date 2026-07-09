@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Codex Mobile Dashboard</title>
+  <style>
+    :root { --bg:#f6f7f9; --panel:#fff; --ink:#172033; --muted:#667085; --line:#d9dee7; --blue:#2563eb; --red:#b42318; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Segoe UI", system-ui, sans-serif; background:var(--bg); color:var(--ink); letter-spacing:0; }
+    header, main { max-width:720px; margin:0 auto; }
+    header { padding:14px; }
+    h1 { margin:0 0 4px; font-size:21px; }
+    main { padding:0 10px 16px; display:grid; gap:10px; }
+    section, a.card { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; color:var(--ink); text-decoration:none; }
+    .grid { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:8px; }
+    .num { font-size:24px; font-weight:800; display:block; }
+    .muted { color:var(--muted); font-size:12px; }
+    pre { white-space:pre-wrap; margin:8px 0 0; font:13px/1.45 Consolas, monospace; }
+    .warn { color:var(--red); font-weight:700; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Codex Mobile Dashboard</h1>
+    <div class="muted">外部確認用。公開対象は最小HTMLのみ。</div>
+  </header>
+  <main>
+    <section>
+      <strong>トークン節約</strong>
+      <div class="grid">
+        <div><span class="num">87%</span><span class="muted">使用済み</span></div>
+        <div><span class="num">13%</span><span class="muted">残り</span></div>
+        <div><span class="num">6日</span><span class="muted">期限まで</span></div>
+        <div><span class="num">2.17%</span><span class="muted">1日上限</span></div>
+      </div>
+      <pre>結論: &lt;先に答え&gt;
+理由: &lt;1行&gt;
+手順: &lt;箇条書き&gt;
+注意: &lt;重要点/要確認&gt;</pre>
+    </section>
+    <a class="card" href="quick-notes-board/index.html">
+      <strong>Quick Notes Board</strong>
+      <div class="muted">todo / waiting / done</div>
+    </a>
+    <a class="card" href="orbit-catcher/index.html">
+      <strong>Orbit Catcher</strong>
+      <div class="muted">mini game</div>
+    </a>
+    <section>
+      <div class="warn">注意</div>
+      <div class="muted">このURLは一時公開です。用が済んだらトンネルを止めます。</div>
+    </section>
+  </main>
+</body>
+</html>
