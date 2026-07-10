@@ -8,7 +8,7 @@
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <title>CODEX Gate</title>
   <style>
-    :root { --bg:#f6f7f9; --panel:#fff; --ink:#172033; --muted:#667085; --line:#d9dee7; --blue:#2563eb; --green:#15803d; }
+    :root { --bg:#f6f7f9; --panel:#fff; --ink:#172033; --muted:#667085; --line:#d9dee7; --blue:#2563eb; --green:#15803d; --amber:#b45309; }
     * { box-sizing:border-box; }
     body { margin:0; font-family:"Segoe UI", system-ui, sans-serif; background:var(--bg); color:var(--ink); letter-spacing:0; }
     header { background:#172033; color:#fff; padding:16px; }
@@ -21,6 +21,10 @@
     .metric span { color:var(--muted); font-size:12px; }
     .card strong { display:block; font-size:16px; margin-bottom:4px; }
     .ok { color:var(--green); font-weight:700; }
+    .pillar { display:grid; gap:7px; }
+    .pillar div { border-left:4px solid var(--blue); padding-left:8px; font-size:13px; }
+    .pillar div:nth-child(3) { border-left-color:var(--green); }
+    .pillar div:nth-child(4) { border-left-color:var(--amber); }
     code { font-family:Consolas, monospace; font-size:12px; }
   </style>
 </head>
@@ -35,21 +39,31 @@
       <div class="grid">
         <div class="metric"><strong>87%</strong><span>使用済み</span></div>
         <div class="metric"><strong>13%</strong><span>残り</span></div>
-        <div class="metric"><strong>6日</strong><span>期限まで</span></div>
-        <div class="metric"><strong>2.17%</strong><span>1日上限</span></div>
+        <div class="metric"><strong>5日</strong><span>期限まで</span></div>
+        <div class="metric"><strong>2.60%</strong><span>1日上限</span></div>
+      </div>
+    </section>
+    <section>
+      <strong>5本柱</strong>
+      <div class="pillar">
+        <div>インクルーシブ: やさしい日本語、読みやすい状態表示</div>
+        <div>HTML First: 単一HTML、ビルド無しで開ける</div>
+        <div>エクスポート導線: メモ、結果、コマンドをファイル出力</div>
+        <div>gentle slope: 設定なしでまず使える</div>
+        <div>検証重視: 現場で触って完成を判断</div>
       </div>
     </section>
     <a class="card" href="./latest/index.html">
       <strong>Mobile Dashboard</strong>
-      <div class="muted">成果物・節約状況・リンク集</div>
+      <div class="muted">成果物・節約状況・5本柱</div>
     </a>
     <a class="card" href="./latest/quick-notes-board/index.html">
       <strong>Quick Notes Board</strong>
-      <div class="muted">todo / waiting / done</div>
+      <div class="muted">todo / waiting / done / JSON・Markdown出力</div>
     </a>
     <a class="card" href="./latest/orbit-catcher/index.html">
       <strong>Orbit Catcher</strong>
-      <div class="muted">ミニゲーム</div>
+      <div class="muted">ミニゲーム / 結果JSON出力</div>
     </a>
     <section>
       <strong>Google Drive</strong>
