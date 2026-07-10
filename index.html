@@ -8,67 +8,129 @@
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <title>CODEX Gate</title>
   <style>
-    :root { --bg:#f6f7f9; --panel:#fff; --ink:#172033; --muted:#667085; --line:#d9dee7; --blue:#2563eb; --green:#15803d; --amber:#b45309; }
+    :root { --bg:#f6f7f9; --panel:#fff; --ink:#172033; --muted:#667085; --line:#d9dee7; --blue:#2563eb; --green:#15803d; --amber:#b45309; --red:#b42318; }
     * { box-sizing:border-box; }
     body { margin:0; font-family:"Segoe UI", system-ui, sans-serif; background:var(--bg); color:var(--ink); letter-spacing:0; }
     header { background:#172033; color:#fff; padding:16px; }
     h1 { margin:0 0 4px; font-size:24px; }
-    main { padding:10px; max-width:760px; margin:0 auto; display:grid; gap:10px; }
+    main { padding:10px; max-width:860px; margin:0 auto; display:grid; gap:10px; }
     section, a.card { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; color:var(--ink); text-decoration:none; }
+    h2 { margin:0 0 8px; font-size:16px; }
     .muted { color:var(--muted); font-size:12px; }
     .grid { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:8px; }
-    .metric strong { display:block; font-size:26px; }
+    .metric { border:1px solid var(--line); border-radius:8px; padding:10px; background:#fbfcfe; }
+    .metric strong { display:block; font-size:25px; line-height:1.1; }
     .metric span { color:var(--muted); font-size:12px; }
-    .card strong { display:block; font-size:16px; margin-bottom:4px; }
-    .ok { color:var(--green); font-weight:700; }
-    .pillar { display:grid; gap:7px; }
-    .pillar div { border-left:4px solid var(--blue); padding-left:8px; font-size:13px; }
-    .pillar div:nth-child(3) { border-left-color:var(--green); }
-    .pillar div:nth-child(4) { border-left-color:var(--amber); }
-    code { font-family:Consolas, monospace; font-size:12px; }
+    .row { display:grid; gap:7px; }
+    .item { border-left:4px solid var(--blue); padding:7px 0 7px 9px; font-size:13px; line-height:1.45; }
+    .item.ok { border-left-color:var(--green); }
+    .item.warn { border-left-color:var(--amber); }
+    .item.stop { border-left-color:var(--red); }
+    .cards { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:8px; }
+    .card strong { display:block; font-size:15px; margin-bottom:4px; }
+    .pill { display:inline-block; margin-top:5px; border:1px solid var(--line); border-radius:999px; padding:2px 7px; color:var(--muted); font-size:11px; }
+    .ok-text { color:var(--green); font-weight:700; }
+    code { font-family:Consolas, monospace; font-size:12px; overflow-wrap:anywhere; }
+    @media (max-width:640px) { .cards { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
   <header>
     <h1>CODEX Gate</h1>
-    <div>スマホ用入口 / 節約モード</div>
+    <div>直下で状況確認 / このチャットへ指示するための司令盤</div>
   </header>
   <main>
     <section>
-      <strong>トークン</strong>
+      <h2>いまの結論</h2>
+      <div class="row">
+        <div class="item ok">C:\CODEX は独立した節約開発レーンとして稼働中。登録アプリ7件、プロジェクト8件、AI成果物11件。</div>
+        <div class="item warn">Codex側GPU/ローカルLLM生成は停止中。重い生成はGPUロック原因の確認後に再開。</div>
+        <div class="item">5本柱は反映中: インクルーシブ / HTML First / エクスポート導線 / gentle slope / 検証重視。</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>トークン</h2>
       <div class="grid">
         <div class="metric"><strong>87%</strong><span>使用済み</span></div>
         <div class="metric"><strong>13%</strong><span>残り</span></div>
         <div class="metric"><strong>5日</strong><span>期限まで</span></div>
         <div class="metric"><strong>2.60%</strong><span>1日上限</span></div>
       </div>
+      <div class="muted">運用: 1タスク1目的。大読込なし。ローカルLLM/GPUなし。</div>
     </section>
+
     <section>
-      <strong>5本柱</strong>
-      <div class="pillar">
-        <div>インクルーシブ: やさしい日本語、読みやすい状態表示</div>
-        <div>HTML First: 単一HTML、ビルド無しで開ける</div>
-        <div>エクスポート導線: メモ、結果、コマンドをファイル出力</div>
-        <div>gentle slope: 設定なしでまず使える</div>
-        <div>検証重視: 現場で触って完成を判断</div>
+      <h2>開発状況</h2>
+      <div class="grid">
+        <div class="metric"><strong>7</strong><span>登録アプリ</span></div>
+        <div class="metric"><strong>8</strong><span>プロジェクト</span></div>
+        <div class="metric"><strong>11</strong><span>AI成果物</span></div>
+        <div class="metric"><strong>ON</strong><span>C:\CODEX trusted</span></div>
       </div>
     </section>
-    <a class="card" href="./latest/index.html">
-      <strong>Mobile Dashboard</strong>
-      <div class="muted">成果物・節約状況・5本柱</div>
-    </a>
-    <a class="card" href="./latest/quick-notes-board/index.html">
-      <strong>Quick Notes Board</strong>
-      <div class="muted">todo / waiting / done / JSON・Markdown出力</div>
-    </a>
-    <a class="card" href="./latest/orbit-catcher/index.html">
-      <strong>Orbit Catcher</strong>
-      <div class="muted">ミニゲーム / 結果JSON出力</div>
-    </a>
+
     <section>
-      <strong>Google Drive</strong>
-      <div class="muted">同期先: <code>G:\マイドライブ\CODEX\latest</code></div>
-      <div class="ok">ローカルLLM/GPU不使用</div>
+      <h2>成果物と進捗</h2>
+      <div class="row">
+        <div class="item ok">Quick Notes Board: todo/waiting/done、JSON・Markdown出力対応。</div>
+        <div class="item ok">Orbit Catcher: Canvasミニゲーム、ベストスコア保存、結果JSON出力対応。</div>
+        <div class="item ok">Local AI系: Output Cards / Sample Planner / Media Control Panel にエクスポート導線追加。</div>
+        <div class="item">CODEX Gate: 最新状況、課題、指示例を直下に表示する形へ整理。</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>いま見えている課題</h2>
+      <div class="row">
+        <div class="item warn">実ブラウザ自動検証は未導入。Playwright/jsdom が無いため、現在はインラインJS構文チェック中心。</div>
+        <div class="item warn">public-mobile は軽量版。C:\CODEX 全体の詳細ダッシュボードとは別に、ゲート用要約として更新が必要。</div>
+        <div class="item warn">GPU生成は一時停止中。再開するなら `LOCAL_AI_MEDIA_SAFE_ROUTE.md` とGPUロック確認が必要。</div>
+        <div class="item">次に伸ばすなら、Quick Notesの検索/タグ、Orbit Catcherの難易度調整、ゲートの自動生成化。</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>このチャットへの具体的指示例</h2>
+      <div class="row">
+        <div class="item">「Quick Notes Boardに検索とタグを追加して」</div>
+        <div class="item">「Orbit Catcherをスマホで遊びやすく調整して」</div>
+        <div class="item">「CODEX GateをHUB/status.jsonから自動生成するようにして」</div>
+        <div class="item">「今日のトークン残量に合わせてGateとDashboardを更新して」</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>主要リンク</h2>
+      <div class="cards">
+        <a class="card" href="./latest/quick-notes-board/index.html">
+          <strong>Quick Notes Board</strong>
+          <div class="muted">メモ整理 / JSON・Markdown出力</div>
+          <span class="pill">usable</span>
+        </a>
+        <a class="card" href="./latest/orbit-catcher/index.html">
+          <strong>Orbit Catcher</strong>
+          <div class="muted">ミニゲーム / 結果JSON出力</div>
+          <span class="pill">prototype+polish</span>
+        </a>
+        <a class="card" href="./latest/index.html">
+          <strong>Mobile Summary</strong>
+          <div class="muted">軽量版の節約状況とリンク</div>
+          <span class="pill">latest</span>
+        </a>
+        <a class="card" href="https://github.com/gouchin0326-source/codex-mobile-gate">
+          <strong>GitHub Repo</strong>
+          <div class="muted">公開ゲートのソース</div>
+          <span class="pill">pages</span>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>同期先</h2>
+      <div class="muted">Google Drive: <code>G:\マイドライブ\CODEX</code></div>
+      <div class="muted">Local source: <code>C:\CODEX\mobile-gate</code> / <code>C:\CODEX\public-mobile</code></div>
+      <div class="ok-text">ローカルLLM/GPU不使用</div>
     </section>
   </main>
   <script>
