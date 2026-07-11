@@ -32,21 +32,18 @@
     .dot.bad { background:var(--red); }
     .dot.player { background:#38bdf8; }
     .dot.bonus { background:var(--amber); }
-    .controls { width:min(100%, 860px); justify-self:center; background:#fff; border:1px solid var(--line); border-radius:8px; padding:10px; display:grid; grid-template-columns:1fr 150px; gap:10px; align-items:center; }
-    .pad { display:grid; grid-template-columns:repeat(3, 64px); grid-template-rows:repeat(3, 48px); gap:6px; justify-content:center; }
-    .pad button, .boost { min-height:48px; border-color:#1d4ed8; background:#1d4ed8; font-size:18px; user-select:none; }
-    .pad .up { grid-column:2; grid-row:1; }
-    .pad .left { grid-column:1; grid-row:2; }
-    .pad .down { grid-column:2; grid-row:3; }
-    .pad .right { grid-column:3; grid-row:2; }
-    .boost { width:100%; height:102px; background:var(--cyan); border-color:var(--cyan); font-size:16px; }
+    .controls { width:min(100%, 860px); justify-self:center; background:#fff; border:1px solid var(--line); border-radius:8px; padding:10px; display:grid; grid-template-columns:1fr auto; gap:12px; align-items:center; }
+    .stick { width:144px; height:144px; border:1px solid #cbd5e1; border-radius:999px; background:radial-gradient(circle at center, #eff6ff 0 30%, #dbeafe 31% 100%); position:relative; justify-self:center; touch-action:none; user-select:none; }
+    .stick::before { content:""; position:absolute; inset:20px; border:1px dashed #93c5fd; border-radius:999px; }
+    .stick-knob { width:58px; height:58px; border-radius:999px; background:#1d4ed8; color:#fff; display:grid; place-items:center; font-size:12px; font-weight:800; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); box-shadow:0 8px 20px rgba(37,99,235,.28); pointer-events:none; }
+    .boost { width:112px; height:112px; border-radius:999px; background:var(--cyan); border-color:var(--cyan); font-size:16px; }
     .control-note { grid-column:1 / -1; color:var(--muted); font-size:12px; text-align:center; }
     @media (max-width:920px) { main { grid-template-columns:1fr; } aside { border-right:0; border-bottom:1px solid var(--line); grid-template-columns:1fr; } .stats { grid-template-columns:repeat(4, minmax(0,1fr)); } .stat { padding:8px; } .stat strong { font-size:17px; } .panel { display:none; } .play-wrap { padding:8px; align-items:start; } .stage { width:100%; max-height:56vh; } }
-    @media (max-width:560px) { header { padding:10px 12px; } h1 { font-size:18px; } .stats { grid-template-columns:repeat(3, minmax(0,1fr)); } .controls { grid-template-columns:1fr 112px; padding:8px; } .pad { grid-template-columns:repeat(3, 54px); grid-template-rows:repeat(3, 44px); } .pad button, .boost { min-height:44px; } .boost { height:94px; } }
+    @media (max-width:560px) { header { padding:10px 12px; } h1 { font-size:18px; } .stats { grid-template-columns:repeat(3, minmax(0,1fr)); } .controls { grid-template-columns:1fr 96px; padding:8px; gap:8px; } .stick { width:128px; height:128px; } .stick-knob { width:52px; height:52px; } .boost { width:88px; height:88px; font-size:14px; } }
   </style>
 </head>
 <body>
-  <header><h1>軌道キャッチャー</h1><div class="muted">下の操作パネルで遊ぶ回避アクション</div></header>
+  <header><h1>軌道キャッチャー</h1><div class="muted">スティックで自由に動く回避アクション</div></header>
   <main>
     <aside>
       <div class="stats">
@@ -54,12 +51,12 @@
       </div>
       <button id="start">開始</button><button class="secondary" id="pause">一時停止</button><button class="secondary" id="export-result">結果を書き出し</button><button class="secondary" id="reset-best">最高記録をリセット</button>
       <div class="status-line" id="export-status" role="status" aria-live="polite"></div>
-      <div class="panel"><strong>遊び方</strong><div class="muted">緑の粒を集め、赤い障害物を避けます。金の粒はシールドと時間延長。連続回収で得点倍率が上がります。</div></div>
+      <div class="panel"><strong>遊び方</strong><div class="muted">スティックを倒した方向へ動きます。緑の粒を集め、赤い障害物を避け、金の粒でシールドと時間を得ます。</div></div>
       <div class="panel legend"><div><span class="dot player"></span> 自機</div><div><span class="dot good"></span> 緑の粒: 得点</div><div><span class="dot bonus"></span> 金の粒: シールドと時間</div><div><span class="dot bad"></span> 赤い障害物: 耐久低下</div></div>
     </aside>
     <div class="play-wrap">
       <div class="stage"><canvas id="game" width="800" height="600" aria-label="軌道キャッチャーのゲーム画面"></canvas><div class="overlay"><span class="badge" id="state">準備中</span><span class="badge" id="shield">シールド 0</span></div></div>
-      <div class="controls" aria-label="ゲーム操作パネル"><div class="pad"><button class="up" data-control="up" aria-label="上へ移動">上</button><button class="left" data-control="left" aria-label="左へ移動">左</button><button class="right" data-control="right" aria-label="右へ移動">右</button><button class="down" data-control="down" aria-label="下へ移動">下</button></div><button class="boost" data-control="boost" aria-label="加速">加速</button><div class="control-note">PCは矢印キー/WASDも使えます。スマホは下のボタンで画面を隠さず操作できます。</div></div>
+      <div class="controls" aria-label="ゲーム操作パネル"><div class="stick" id="stick" aria-label="移動スティック" role="application"><div class="stick-knob" id="stickKnob">移動</div></div><button class="boost" data-control="boost" aria-label="加速">加速</button><div class="control-note">スティックを倒した方向へ自由に動きます。PCは矢印キー/WASDも使えます。</div></div>
     </div>
   </main>
   <script>
@@ -78,9 +75,12 @@
     const exportButton = document.querySelector("#export-result");
     const exportStatusEl = document.querySelector("#export-status");
     const resetBestButton = document.querySelector("#reset-best");
+    const stick = document.querySelector("#stick");
+    const stickKnob = document.querySelector("#stickKnob");
     const bestKey = "codex.orbit-catcher.best.v2";
     const keys = new Set();
-    const controls = { up:false, down:false, left:false, right:false, boost:false };
+    const controls = { boost:false };
+    const stickState = { active:false, x:0, y:0, power:0, pointerId:null };
     let best = readBest();
     let running = false, paused = false, lastTime = 0, spawnGood = 0, spawnBad = 0, spawnBonus = 5;
     let score = 0, lives = 3, level = 1, combo = 0, shield = 0, timeLeft = 60;
@@ -93,7 +93,7 @@
     function updateHud() { scoreEl.textContent = score; bestEl.textContent = best; timeEl.textContent = Math.max(0, Math.ceil(timeLeft)); livesEl.textContent = lives; levelEl.textContent = level; comboEl.textContent = combo; shieldEl.textContent = `シールド ${shield}`; }
     function rand(min, max) { return min + Math.random() * (max - min); }
     function spawn(list, kind) { const radius = kind === "spark" ? 9 : kind === "bonus" ? 12 : 13; const speed = kind === "hazard" ? 50 + level * 9 : kind === "bonus" ? 25 : 0; const angle = rand(0, Math.PI * 2); list.push({ x:rand(radius + 10, canvas.width - radius - 10), y:rand(radius + 10, canvas.height - radius - 10), r:radius, life:kind === "spark" ? 6.5 : kind === "bonus" ? 6 : 8, vx:kind === "spark" ? 0 : Math.cos(angle) * speed, vy:kind === "spark" ? 0 : Math.sin(angle) * speed }); }
-    function movePlayer(dt) { let dx = 0, dy = 0; if (keys.has("arrowleft") || keys.has("a") || controls.left) dx -= 1; if (keys.has("arrowright") || keys.has("d") || controls.right) dx += 1; if (keys.has("arrowup") || keys.has("w") || controls.up) dy -= 1; if (keys.has("arrowdown") || keys.has("s") || controls.down) dy += 1; const length = Math.hypot(dx, dy); if (length > 0) { const boost = (keys.has("shift") || controls.boost) ? 1.55 : 1; player.x += (dx / length) * player.speed * boost * dt; player.y += (dy / length) * player.speed * boost * dt; } player.x = Math.max(player.r, Math.min(canvas.width - player.r, player.x)); player.y = Math.max(player.r, Math.min(canvas.height - player.r, player.y)); }
+    function movePlayer(dt) { let dx = stickState.x; let dy = stickState.y; if (keys.has("arrowleft") || keys.has("a")) dx -= 1; if (keys.has("arrowright") || keys.has("d")) dx += 1; if (keys.has("arrowup") || keys.has("w")) dy -= 1; if (keys.has("arrowdown") || keys.has("s")) dy += 1; const length = Math.hypot(dx, dy); if (length > 0) { const normalized = Math.min(1, length); const boost = (keys.has("shift") || controls.boost) ? 1.55 : 1; player.x += (dx / length) * player.speed * normalized * boost * dt; player.y += (dy / length) * player.speed * normalized * boost * dt; } player.x = Math.max(player.r, Math.min(canvas.width - player.r, player.x)); player.y = Math.max(player.r, Math.min(canvas.height - player.r, player.y)); }
     function updateObjects(list, dt) { list.forEach((item) => { item.life -= dt; item.x += item.vx * dt; item.y += item.vy * dt; if (item.x < item.r || item.x > canvas.width - item.r) item.vx *= -1; if (item.y < item.r || item.y > canvas.height - item.r) item.vy *= -1; }); return list.filter((item) => item.life > 0); }
     function collide(a, b) { return Math.hypot(a.x - b.x, a.y - b.y) < a.r + b.r; }
     function update(dt) { if (!running || paused) return; timeLeft -= dt; level = Math.max(1, Math.floor(score / 120) + 1); spawnGood -= dt; spawnBad -= dt; spawnBonus -= dt; if (spawnGood <= 0) { spawn(sparks, "spark"); spawnGood = Math.max(.28, .9 - level * .035); } if (spawnBad <= 0) { spawn(hazards, "hazard"); spawnBad = Math.max(.42, 1.55 - level * .06); } if (spawnBonus <= 0) { spawn(bonuses, "bonus"); spawnBonus = Math.max(4.5, 8.5 - level * .25); } movePlayer(dt); sparks = updateObjects(sparks, dt); hazards = updateObjects(hazards, dt); bonuses = updateObjects(bonuses, dt); sparks = sparks.filter((spark) => { if (collide(player, spark)) { combo += 1; score += 10 + Math.min(40, combo * 2); if (combo % 8 === 0) timeLeft += 2; return false; } return true; }); bonuses = bonuses.filter((bonus) => { if (collide(player, bonus)) { shield = Math.min(3, shield + 1); timeLeft += 4; score += 25; flash("ボーナス"); return false; } return true; }); hazards = hazards.filter((hazard) => { if (collide(player, hazard)) { if (shield > 0) { shield -= 1; score += 5; flash("防御"); } else { lives -= 1; combo = 0; score = Math.max(0, score - 20); flash("被弾"); } return false; } return true; }); if (running && performance.now() > flashUntil) stateEl.textContent = "プレイ中"; if (timeLeft <= 0 || lives <= 0) endRound(); updateHud(); }
@@ -105,12 +105,18 @@
     function drawCircle(item, color, glow) { ctx.save(); ctx.shadowColor = glow; ctx.shadowBlur = 14; ctx.fillStyle = color; ctx.beginPath(); ctx.arc(item.x, item.y, item.r, 0, Math.PI * 2); ctx.fill(); ctx.restore(); }
     function drawPlayer() { if (shield > 0) { ctx.save(); ctx.strokeStyle = "rgba(250,204,21,.9)"; ctx.lineWidth = 4; ctx.beginPath(); ctx.arc(player.x, player.y, player.r + 8, 0, Math.PI * 2); ctx.stroke(); ctx.restore(); } drawCircle(player, "#38bdf8", "rgba(56,189,248,.95)"); }
     function drawTextCenter(text, subtext) { ctx.fillStyle = "rgba(219,234,254,.95)"; ctx.font = "700 30px Segoe UI, sans-serif"; ctx.textAlign = "center"; ctx.fillText(text, canvas.width / 2, canvas.height / 2 - 10); if (subtext) { ctx.font = "500 16px Segoe UI, sans-serif"; ctx.fillText(subtext, canvas.width / 2, canvas.height / 2 + 24); } }
-    function draw() { drawBackground(); sparks.forEach((spark) => drawCircle(spark, "#22c55e", "rgba(34,197,94,.9)")); bonuses.forEach((bonus) => drawCircle(bonus, "#f59e0b", "rgba(245,158,11,.9)")); hazards.forEach((hazard) => drawCircle(hazard, "#ef4444", "rgba(239,68,68,.9)")); drawPlayer(); ctx.fillStyle = "rgba(219,234,254,.9)"; ctx.font = "600 16px Segoe UI, sans-serif"; ctx.textAlign = "left"; ctx.fillText(`レベル ${level}`, 16, 28); if (!running && score === 0) drawTextCenter("開始を押してください", "下の操作パネルで移動します"); if (paused) drawTextCenter("一時停止中", "再開で続きから遊べます"); }
+    function draw() { drawBackground(); sparks.forEach((spark) => drawCircle(spark, "#22c55e", "rgba(34,197,94,.9)")); bonuses.forEach((bonus) => drawCircle(bonus, "#f59e0b", "rgba(245,158,11,.9)")); hazards.forEach((hazard) => drawCircle(hazard, "#ef4444", "rgba(239,68,68,.9)")); drawPlayer(); ctx.fillStyle = "rgba(219,234,254,.9)"; ctx.font = "600 16px Segoe UI, sans-serif"; ctx.textAlign = "left"; ctx.fillText(`レベル ${level}`, 16, 28); if (!running && score === 0) drawTextCenter("開始を押してください", "スティックを倒して移動します"); if (paused) drawTextCenter("一時停止中", "再開で続きから遊べます"); }
     function loop(now) { const dt = Math.min(.033, (now - lastTime) / 1000 || 0); lastTime = now; update(dt); draw(); requestAnimationFrame(loop); }
     function setControl(name, value) { controls[name] = value; }
+    function updateStickFromPointer(event) { const rect = stick.getBoundingClientRect(); const cx = rect.left + rect.width / 2; const cy = rect.top + rect.height / 2; const max = rect.width / 2 - 29; const rawX = event.clientX - cx; const rawY = event.clientY - cy; const distance = Math.hypot(rawX, rawY); const limited = Math.min(max, distance || 0); const angle = Math.atan2(rawY, rawX); const knobX = Math.cos(angle) * limited; const knobY = Math.sin(angle) * limited; stickState.x = max ? knobX / max : 0; stickState.y = max ? knobY / max : 0; stickState.power = Math.min(1, distance / max); stickKnob.style.transform = `translate(calc(-50% + ${knobX}px), calc(-50% + ${knobY}px))`; }
+    function resetStick() { stickState.active = false; stickState.x = 0; stickState.y = 0; stickState.power = 0; stickState.pointerId = null; stickKnob.style.transform = "translate(-50%, -50%)"; }
     window.addEventListener("keydown", (event) => { const key = event.key.toLowerCase(); if (["arrowleft", "arrowright", "arrowup", "arrowdown", "a", "d", "w", "s", "shift"].includes(key)) { event.preventDefault(); keys.add(key); } if (key === " " && running) { event.preventDefault(); togglePause(); } });
     window.addEventListener("keyup", (event) => keys.delete(event.key.toLowerCase()));
     document.querySelectorAll("[data-control]").forEach((button) => { const name = button.dataset.control; button.addEventListener("pointerdown", (event) => { event.preventDefault(); setControl(name, true); button.setPointerCapture(event.pointerId); }); button.addEventListener("pointerup", () => setControl(name, false)); button.addEventListener("pointercancel", () => setControl(name, false)); button.addEventListener("pointerleave", () => setControl(name, false)); });
+    stick.addEventListener("pointerdown", (event) => { event.preventDefault(); stickState.active = true; stickState.pointerId = event.pointerId; stick.setPointerCapture(event.pointerId); updateStickFromPointer(event); });
+    stick.addEventListener("pointermove", (event) => { if (stickState.active && event.pointerId === stickState.pointerId) updateStickFromPointer(event); });
+    stick.addEventListener("pointerup", (event) => { if (event.pointerId === stickState.pointerId) resetStick(); });
+    stick.addEventListener("pointercancel", resetStick);
     startButton.addEventListener("click", resetRound); pauseButton.addEventListener("click", togglePause); exportButton.addEventListener("click", exportResult); resetBestButton.addEventListener("click", () => { best = 0; writeBest(0); updateHud(); exportStatusEl.textContent = "最高記録をリセットしました"; });
     updateHud(); draw(); requestAnimationFrame(loop);
   </script>
