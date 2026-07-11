@@ -1,8 +1,11 @@
-const CACHE = "codex-gate-v3";
+const CACHE = "codex-gate-v6";
 const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
-  "./icon.svg"
+  "./icon.svg",
+  "./latest/index.html",
+  "./latest/quick-notes-board/index.html",
+  "./latest/orbit-catcher/index.html"
 ];
 
 self.addEventListener("install", (event) => {

@@ -1,9 +1,9 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Codex Mobile Dashboard</title>
+  <title>Codexモバイル要約</title>
   <style>
     :root { --bg:#f6f7f9; --panel:#fff; --ink:#172033; --muted:#667085; --line:#d9dee7; --blue:#2563eb; --green:#15803d; --amber:#b45309; --red:#b42318; }
     * { box-sizing:border-box; }
@@ -25,46 +25,16 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Codex Mobile Dashboard</h1>
-    <div class="muted">外部確認用。公開対象は最小HTMLのみ。</div>
-  </header>
+  <header><h1>Codexモバイル要約</h1><div class="muted">スマホで見るための軽量な入口です。重い生成は行いません。</div></header>
   <main>
-    <section>
-      <strong>トークン節約</strong>
-      <div class="grid">
-        <div><span class="num">87%</span><span class="muted">使用済み</span></div>
-        <div><span class="num">13%</span><span class="muted">残り</span></div>
-        <div><span class="num">5日</span><span class="muted">期限まで</span></div>
-        <div><span class="num">2.60%</span><span class="muted">1日上限</span></div>
-      </div>
-      <pre>結論: &lt;先に答え&gt;
-理由: &lt;1行&gt;
-手順: &lt;箇条書き&gt;
-注意: &lt;重要点/要確認&gt;</pre>
-    </section>
-    <section>
-      <strong>5本柱</strong>
-      <div class="pillar">
-        <div>インクルーシブ: やさしい日本語、状態を読める表示</div>
-        <div>HTML First: 単一HTML中心、ビルド無し</div>
-        <div>エクスポート導線: メモと結果をファイル出力</div>
-        <div>gentle slope: 設定なしで開始</div>
-        <div>検証重視: 実機で触って完成判断</div>
-      </div>
-    </section>
-    <a class="card" href="quick-notes-board/index.html">
-      <strong>Quick Notes Board</strong>
-      <div class="muted">todo / waiting / done / JSON・Markdown出力</div>
-    </a>
-    <a class="card" href="orbit-catcher/index.html">
-      <strong>Orbit Catcher</strong>
-      <div class="muted">mini game / 結果JSON出力</div>
-    </a>
-    <section>
-      <div class="warn">注意</div>
-      <div class="muted">このURLは一時公開です。用が済んだらトンネルを止めます。</div>
-    </section>
+    <section><strong>トークン節約</strong><div class="grid"><div><span class="num">87%</span><span class="muted">使用済み</span></div><div><span class="num">13%</span><span class="muted">残り</span></div><div><span class="num">5日</span><span class="muted">期限まで</span></div><div><span class="num">2.60%</span><span class="muted">1日上限</span></div></div><pre>結論: 先に答える
+理由: 1行
+手順: 必要な分だけ
+注意: 重要な未確認点だけ</pre></section>
+    <section><strong>5本柱</strong><div class="pillar"><div>インクルーシブ: やさしい日本語で、状態を読める表示にする。</div><div>HTML First: 単一HTML中心。ビルドなしで開ける。</div><div>エクスポート導線: メモや結果をファイルに書き出せる。</div><div>gentle slope: 設定なしで使い始められる。</div><div>検証重視: 実際に触って誤解や詰まりを見つける。</div></div></section>
+    <a class="card" href="quick-notes-board/index.html"><strong>メモ整理板</strong><div class="muted">未着手 / 待ち / 完了 / JSON・Markdown出力</div></a>
+    <a class="card" href="orbit-catcher/index.html"><strong>軌道キャッチャー</strong><div class="muted">下部操作パネルで遊ぶ回避アクション / 結果JSON出力</div></a>
+    <section><div class="warn">注意</div><div class="muted">このURLは一時公開用です。作業が済んだら必要に応じて更新・停止します。</div></section>
   </main>
 </body>
 </html>

@@ -1,9 +1,9 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quick Notes Board</title>
+  <title>メモ整理板</title>
   <style>
     :root { --bg:#f6f7f9; --panel:#fff; --ink:#172033; --muted:#667085; --line:#d9dee7; --blue:#2563eb; --green:#15803d; --amber:#b45309; --red:#b42318; }
     * { box-sizing:border-box; }
@@ -30,160 +30,37 @@
     .text { white-space:pre-wrap; overflow-wrap:anywhere; font-size:14px; line-height:1.35; }
     .actions { display:flex; gap:6px; flex-wrap:wrap; }
     .empty { color:var(--muted); font-size:12px; padding:8px; border:1px dashed var(--line); border-radius:7px; }
-    @media (max-width:760px) {
-      .entry { grid-template-columns:1fr; }
-      .board { grid-template-columns:1fr; }
-    }
+    @media (max-width:760px) { .entry { grid-template-columns:1fr; } .board { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Quick Notes Board</h1>
-    <div class="sub">todo / waiting / done。保存はこのブラウザ内だけ。</div>
-  </header>
+  <header><h1>メモ整理板</h1><div class="sub">未着手 / 待ち / 完了。保存はこのブラウザ内だけです。</div></header>
   <main>
     <section class="entry">
       <label class="sr-only" for="noteText">メモ本文</label>
       <textarea id="noteText" placeholder="メモを書く"></textarea>
-      <div>
-        <select id="noteStatus" aria-label="置き場所">
-          <option value="todo">todo</option>
-          <option value="waiting">waiting</option>
-          <option value="done">done</option>
-        </select>
-        <button class="primary" id="addBtn">追加</button>
-      </div>
+      <div><select id="noteStatus" aria-label="置き場所"><option value="todo">未着手</option><option value="waiting">待ち</option><option value="done">完了</option></select><button class="primary" id="addBtn">追加</button></div>
     </section>
-    <section class="entry">
-      <div class="tools">
-        <button id="exportJson" type="button">JSON出力</button>
-        <button id="exportMarkdown" type="button">Markdown出力</button>
-      </div>
-      <div class="sub" id="status" role="status" aria-live="polite">保存済みメモをファイルに書き出せます。</div>
-    </section>
+    <section class="entry"><div class="tools"><button id="exportJson" type="button">JSONを書き出し</button><button id="exportMarkdown" type="button">Markdownを書き出し</button></div><div class="sub" id="status" role="status" aria-live="polite">保存済みメモをファイルに書き出せます。</div></section>
     <section class="board" id="board"></section>
   </main>
   <script>
     const key = "codex.quickNotesBoard.v1";
-    const statuses = [
-      ["todo", "Todo"],
-      ["waiting", "Waiting"],
-      ["done", "Done"]
-    ];
+    const statuses = [["todo", "未着手"], ["waiting", "待ち"], ["done", "完了"]];
     let notes = load();
-
-    function load() {
-      try {
-        const parsed = JSON.parse(localStorage.getItem(key) || "[]");
-        return Array.isArray(parsed) ? parsed : [];
-      } catch {
-        return [];
-      }
-    }
-
-    function save() {
-      try {
-        localStorage.setItem(key, JSON.stringify(notes));
-      } catch {
-        // The board still works for the current page even when browser storage is blocked.
-      }
-    }
-
-    function downloadText(filename, text, type) {
-      const blob = new Blob([text], { type });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = filename;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
-      document.getElementById("status").textContent = `${filename} を出力しました。`;
-    }
-
-    function exportJson() {
-      downloadText("quick-notes-board.json", JSON.stringify(notes, null, 2), "application/json;charset=utf-8");
-    }
-
-    function exportMarkdown() {
-      const grouped = statuses.map(([id, label]) => {
-        const lines = notes
-          .filter((note) => note.status === id)
-          .map((note) => `- ${note.text.replace(/\n/g, " / ")}`);
-        return `## ${label}\n${lines.length ? lines.join("\n") : "- なし"}`;
-      }).join("\n\n");
-      downloadText("quick-notes-board.md", `# Quick Notes Board\n\n${grouped}\n`, "text/markdown;charset=utf-8");
-    }
-
-    function addNote() {
-      const text = document.getElementById("noteText").value.trim();
-      if (!text) return;
-      notes.unshift({
-        id: String(Date.now()),
-        text,
-        status: document.getElementById("noteStatus").value,
-        createdAt: new Date().toISOString()
-      });
-      document.getElementById("noteText").value = "";
-      save();
-      render();
-    }
-
-    function setStatus(id, status) {
-      notes = notes.map((note) => note.id === id ? { ...note, status } : note);
-      save();
-      render();
-    }
-
-    function removeNote(id) {
-      notes = notes.filter((note) => note.id !== id);
-      save();
-      render();
-    }
-
-    function render() {
-      const board = document.getElementById("board");
-      board.innerHTML = statuses.map(([id, label]) => {
-        const items = notes.filter((note) => note.status === id);
-        return `<section class="col">
-          <header><h2>${label}</h2><small>${items.length}</small></header>
-          <div class="list">
-            ${items.length ? items.map(noteHtml).join("") : '<div class="empty">なし</div>'}
-          </div>
-        </section>`;
-      }).join("");
-    }
-
-    function noteHtml(note) {
-      const moveButtons = statuses
-        .filter(([id]) => id !== note.status)
-        .map(([id, label]) => `<button data-move="${note.id}" data-status="${id}">${label}</button>`)
-        .join("");
-      return `<article class="note ${note.status}">
-        <div class="text">${escapeHtml(note.text)}</div>
-        <div class="actions">${moveButtons}<button class="danger" data-delete="${note.id}">削除</button></div>
-      </article>`;
-    }
-
-    function escapeHtml(value) {
-      return String(value).replace(/[&<>"']/g, (char) => ({
-        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
-      }[char]));
-    }
-
-    document.getElementById("addBtn").addEventListener("click", addNote);
-    document.getElementById("exportJson").addEventListener("click", exportJson);
-    document.getElementById("exportMarkdown").addEventListener("click", exportMarkdown);
-    document.getElementById("noteText").addEventListener("keydown", (event) => {
-      if ((event.ctrlKey || event.metaKey) && event.key === "Enter") addNote();
-    });
-    document.getElementById("board").addEventListener("click", (event) => {
-      const moveId = event.target.dataset.move;
-      const deleteId = event.target.dataset.delete;
-      if (moveId) setStatus(moveId, event.target.dataset.status);
-      if (deleteId) removeNote(deleteId);
-    });
+    function load() { try { const parsed = JSON.parse(localStorage.getItem(key) || "[]"); return Array.isArray(parsed) ? parsed : []; } catch { return []; } }
+    function save() { try { localStorage.setItem(key, JSON.stringify(notes)); } catch {} }
+    function downloadText(filename, text, type) { const blob = new Blob([text], { type }); const url = URL.createObjectURL(blob); const a = document.createElement("a"); a.href = url; a.download = filename; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url); document.getElementById("status").textContent = `${filename} を書き出しました。`; }
+    function exportJson() { downloadText("quick-notes-board.json", JSON.stringify(notes, null, 2), "application/json;charset=utf-8"); }
+    function exportMarkdown() { const grouped = statuses.map(([id, label]) => { const lines = notes.filter((note) => note.status === id).map((note) => `- ${note.text.replace(/\n/g, " / ")}`); return `## ${label}\n${lines.length ? lines.join("\n") : "- なし"}`; }).join("\n\n"); downloadText("quick-notes-board.md", `# メモ整理板\n\n${grouped}\n`, "text/markdown;charset=utf-8"); }
+    function addNote() { const text = document.getElementById("noteText").value.trim(); if (!text) return; notes.unshift({ id:String(Date.now()), text, status:document.getElementById("noteStatus").value, createdAt:new Date().toISOString() }); document.getElementById("noteText").value = ""; save(); render(); }
+    function setStatus(id, status) { notes = notes.map((note) => note.id === id ? { ...note, status } : note); save(); render(); }
+    function removeNote(id) { notes = notes.filter((note) => note.id !== id); save(); render(); }
+    function render() { const board = document.getElementById("board"); board.innerHTML = statuses.map(([id, label]) => { const items = notes.filter((note) => note.status === id); return `<section class="col"><header><h2>${label}</h2><small>${items.length}</small></header><div class="list">${items.length ? items.map(noteHtml).join("") : '<div class="empty">なし</div>'}</div></section>`; }).join(""); }
+    function noteHtml(note) { const moveButtons = statuses.filter(([id]) => id !== note.status).map(([id, label]) => `<button data-move="${note.id}" data-status="${id}">${label}へ</button>`).join(""); return `<article class="note ${note.status}"><div class="text">${escapeHtml(note.text)}</div><div class="actions">${moveButtons}<button class="danger" data-delete="${note.id}">削除</button></div></article>`; }
+    function escapeHtml(value) { return String(value).replace(/[&<>"']/g, (char) => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[char])); }
+    document.getElementById("addBtn").addEventListener("click", addNote); document.getElementById("exportJson").addEventListener("click", exportJson); document.getElementById("exportMarkdown").addEventListener("click", exportMarkdown); document.getElementById("noteText").addEventListener("keydown", (event) => { if ((event.ctrlKey || event.metaKey) && event.key === "Enter") addNote(); });
+    document.getElementById("board").addEventListener("click", (event) => { const move = event.target.closest("[data-move]"); const del = event.target.closest("[data-delete]"); if (move) setStatus(move.dataset.move, move.dataset.status); if (del) removeNote(del.dataset.delete); });
     render();
   </script>
 </body>
