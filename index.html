@@ -37,7 +37,7 @@
 <body>
   <header>
     <h1>CODEX入口</h1>
-    <div>直下で状況確認し、このチャットへ指示するための司令盤</div>
+    <div>2026/7/13版。直下で状況確認し、このチャットへ指示するための司令盤</div>
   </header>
   <main>
     <section>
@@ -45,7 +45,7 @@
       <div class="row">
         <div class="item ok">C:\Codex は独立した軽量開発レーンとして稼働中。登録アプリ7件、プロジェクト8件、AI成果物11件。</div>
         <div class="item warn">Codex側のGPU/ローカルLLM生成は停止中。重い生成はGPUロック原因の確認後に再開する。</div>
-        <div class="item">5本柱を反映中: インクルーシブ / HTML First / エクスポート導線 / gentle slope / 検証重視。</div>
+        <div class="item">公式最新確認: GPT-5.6系が最新案内。CODEX側は引き続き gpt-5.4-mini 既定、難所だけ一時引き上げ。</div>
       </div>
     </section>
 
@@ -54,10 +54,10 @@
       <div class="grid">
         <div class="metric"><strong>87%</strong><span>使用済み</span></div>
         <div class="metric"><strong>13%</strong><span>残り</span></div>
-        <div class="metric"><strong>5日</strong><span>期限まで</span></div>
-        <div class="metric"><strong>2.60%</strong><span>1日上限</span></div>
+        <div class="metric"><strong>1日</strong><span>期限まで</span></div>
+        <div class="metric"><strong>13.00%</strong><span>残り全量の目安</span></div>
       </div>
-      <div class="muted">運用: 1タスク1目的。大読込なし。ローカルLLM/GPUなし。</div>
+      <div class="muted">7/13時点。使用率は手元台帳値の87%を維持。運用: 1タスク1目的。大読込なし。ローカルLLM/GPUなし。</div>
     </section>
 
     <section>
@@ -76,7 +76,7 @@
         <div class="item ok">メモ整理板: 未着手 / 待ち / 完了の管理、JSON・Markdown出力に対応。</div>
         <div class="item ok">軌道キャッチャー: スティック操作、連続回収、シールド、ボーナス粒子を追加。</div>
         <div class="item ok">ローカルAI系: 成果物カード / サンプル計画 / メディア操作盤にエクスポート導線を追加。</div>
-        <div class="item">CODEX入口: 最新状況、課題、指示例を直下に表示する形へ整理。</div>
+        <div class="item">CODEX入口: 7/13の最新情報、残日数、課題、指示例を反映。</div>
       </div>
     </section>
 
@@ -84,9 +84,9 @@
       <h2>いま見えている課題</h2>
       <div class="row">
         <div class="item warn">実ブラウザ自動検証は未導入。現在は静的HTMLとインラインJSの構文チェック中心。</div>
-        <div class="item warn">public-mobile は軽量配布用。C:\Codex 全体の詳細ダッシュボードとは別に、ゲート用要約として更新が必要。</div>
+        <div class="item warn">Codex manual helper は x-content-sha256 ヘッダ不足で失敗。公式ページ本文は取得できたが、取得手順の再確認が必要。</div>
         <div class="item warn">GPU生成は一時停止中。再開するなら <code>LOCAL_AI_MEDIA_SAFE_ROUTE.md</code> とGPUロック確認が必要。</div>
-        <div class="item">次に伸ばすなら、メモ整理板の検索/タグ、軌道キャッチャーのステージ追加、入口の自動生成化。</div>
+        <div class="item">次に伸ばすなら、入口の自動生成化、GitHub Pages再デプロイ確認、メモ整理板の検索/タグ。</div>
       </div>
     </section>
 
@@ -96,7 +96,7 @@
         <div class="item">「メモ整理板に検索とタグを追加して」</div>
         <div class="item">「軌道キャッチャーにステージと難易度を追加して」</div>
         <div class="item">「CODEX入口をHUB/status.jsonから自動生成するようにして」</div>
-        <div class="item">「今日のトークン残量に合わせて入口とダッシュボードを更新して」</div>
+        <div class="item">「GitHub PagesのCODEX入口を7/13版として再公開して」</div>
       </div>
     </section>
 
