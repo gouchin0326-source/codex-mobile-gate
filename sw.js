@@ -1,11 +1,14 @@
-const CACHE = "codex-gate-v8";
+const CACHE = "codex-gate-v9";
 const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
   "./icon.svg",
   "./latest/index.html",
   "./latest/quick-notes-board/index.html",
-  "./latest/orbit-catcher/index.html"
+  "./latest/orbit-catcher/index.html",
+  "./latest/codex-data-pocket/index.html",
+  "./latest/data/codex-data-schema.json",
+  "./latest/data/seed-records.json"
 ];
 
 self.addEventListener("install", (event) => {

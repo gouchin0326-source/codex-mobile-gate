@@ -1,0 +1,12 @@
+{
+  "schema": "codex-data-pocket-v1",
+  "description": "Small records exported from CODEX Data Pocket.",
+  "record": {
+    "id": "string",
+    "date": "YYYY-MM-DD",
+    "kind": "log | idea | issue | risk",
+    "title": "string",
+    "body": "string",
+    "tags": ["string"]
+  }
+}

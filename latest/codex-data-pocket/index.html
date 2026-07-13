@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CODEX Data Pocket</title>
+  <style>
+    :root { --bg:#f7f8fb; --panel:#fff; --ink:#172033; --muted:#667085; --line:#d9dee7; --blue:#2563eb; --green:#15803d; --amber:#b45309; --red:#b42318; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Segoe UI", system-ui, sans-serif; background:var(--bg); color:var(--ink); letter-spacing:0; }
+    header { padding:14px; background:#172033; color:#fff; }
+    main { max-width:860px; margin:0 auto; padding:10px; display:grid; gap:10px; }
+    h1 { margin:0 0 4px; font-size:22px; }
+    h2 { margin:0 0 8px; font-size:16px; }
+    section { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px; }
+    label { display:grid; gap:4px; font-size:13px; font-weight:700; }
+    input, textarea, select { width:100%; border:1px solid var(--line); border-radius:8px; padding:9px; font:inherit; background:#fff; color:var(--ink); }
+    textarea { min-height:92px; resize:vertical; }
+    button, a.button { border:1px solid var(--line); border-radius:8px; padding:9px 10px; background:#fff; color:var(--ink); font:inherit; font-weight:700; text-decoration:none; text-align:center; }
+    button.primary { background:var(--blue); border-color:var(--blue); color:#fff; }
+    button.danger { color:var(--red); }
+    .grid { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:8px; }
+    .actions { display:flex; flex-wrap:wrap; gap:8px; }
+    .muted { color:var(--muted); font-size:12px; }
+    .item { border-left:4px solid var(--blue); padding:8px 0 8px 9px; display:grid; gap:4px; }
+    .item[data-kind="idea"] { border-left-color:var(--green); }
+    .item[data-kind="issue"] { border-left-color:var(--amber); }
+    .item[data-kind="log"] { border-left-color:var(--blue); }
+    .item[data-kind="risk"] { border-left-color:var(--red); }
+    .meta { color:var(--muted); font-size:12px; }
+    pre { white-space:pre-wrap; overflow:auto; max-height:220px; margin:0; padding:10px; background:#f2f4f7; border-radius:8px; font:12px/1.45 Consolas, monospace; }
+    @media (max-width:640px) { .grid { grid-template-columns:1fr; } .actions button, .actions a { flex:1 1 46%; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CODEX Data Pocket</h1>
+    <div>Gateで使う小さな記録箱。Driveへ渡すデータをここで整えます。</div>
+  </header>
+  <main>
+    <section>
+      <h2>記録する</h2>
+      <div class="grid">
+        <label>種類
+          <select id="kind">
+            <option value="log">ログ</option>
+            <option value="idea">アイデア</option>
+            <option value="issue">課題</option>
+            <option value="risk">注意</option>
+          </select>
+        </label>
+        <label>タグ
+          <input id="tags" placeholder="gate, drive, data">
+        </label>
+      </div>
+      <label>タイトル
+        <input id="title" placeholder="例: Drive同期データの型を作る">
+      </label>
+      <label>本文
+        <textarea id="body" placeholder="短く。後で検索できる粒度で。"></textarea>
+      </label>
+      <div class="actions">
+        <button class="primary" id="add">追加</button>
+        <button id="sample">サンプル追加</button>
+        <button class="danger" id="clear">全消去</button>
+      </div>
+      <div class="muted">保存先: このブラウザのlocalStorage。共有するときは下の出力をDriveへ置きます。</div>
+    </section>
+
+    <section>
+      <h2>一覧</h2>
+      <div id="list" class="row"></div>
+    </section>
+
+    <section>
+      <h2>出力</h2>
+      <div class="actions">
+        <button id="json">JSON</button>
+        <button id="csv">CSV</button>
+        <button id="md">Markdown</button>
+        <button id="copy">コピー</button>
+      </div>
+      <pre id="out"></pre>
+      <div class="muted">Drive配置目安: <code>G:\マイドライブ\CODEX\latest\data\records-YYYY-MM-DD.json</code></div>
+    </section>
+  </main>
+  <script>
+    const key = "codex-data-pocket-v1";
+    const $ = (id) => document.getElementById(id);
+    const fields = ["kind", "tags", "title", "body"];
+    let records = JSON.parse(localStorage.getItem(key) || "[]");
+
+    function save() {
+      localStorage.setItem(key, JSON.stringify(records));
+      render();
+    }
+
+    function today() {
+      return new Date().toISOString().slice(0, 10);
+    }
+
+    function cleanTags(value) {
+      return value.split(",").map((tag) => tag.trim()).filter(Boolean);
+    }
+
+    function addRecord(seed) {
+      const record = seed || {
+        id: `cdp-${Date.now()}`,
+        date: today(),
+        kind: $("kind").value,
+        title: $("title").value.trim() || "無題",
+        body: $("body").value.trim(),
+        tags: cleanTags($("tags").value)
+      };
+      records.unshift(record);
+      fields.forEach((id) => { if (id !== "kind") $(id).value = ""; });
+      save();
+    }
+
+    function render() {
+      $("list").innerHTML = records.length ? records.map((record, index) => `
+        <div class="item" data-kind="${record.kind}">
+          <strong>${escapeHtml(record.title)}</strong>
+          <div>${escapeHtml(record.body || "本文なし")}</div>
+          <div class="meta">${record.date} / ${record.kind} / ${(record.tags || []).join(", ")}</div>
+          <button data-delete="${index}">削除</button>
+        </div>
+      `).join("") : '<div class="muted">まだ記録はありません。</div>';
+      $("out").textContent = toJson();
+    }
+
+    function escapeHtml(text) {
+      return String(text).replace(/[&<>"']/g, (ch) => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[ch]));
+    }
+
+    function toJson() {
+      return JSON.stringify({ schema: "codex-data-pocket-v1", exported_at: new Date().toISOString(), records }, null, 2);
+    }
+
+    function toCsv() {
+      const rows = [["id", "date", "kind", "title", "body", "tags"], ...records.map((r) => [r.id, r.date, r.kind, r.title, r.body, (r.tags || []).join("|")])];
+      return rows.map((row) => row.map((cell) => `"${String(cell || "").replace(/"/g, '""')}"`).join(",")).join("\n");
+    }
+
+    function toMarkdown() {
+      return records.map((r) => `## ${r.title}\n- date: ${r.date}\n- kind: ${r.kind}\n- tags: ${(r.tags || []).join(", ")}\n\n${r.body || ""}`).join("\n\n");
+    }
+
+    document.addEventListener("click", (event) => {
+      const del = event.target.dataset.delete;
+      if (del !== undefined) {
+        records.splice(Number(del), 1);
+        save();
+      }
+    });
+    $("add").addEventListener("click", () => addRecord());
+    $("sample").addEventListener("click", () => addRecord({
+      id: `cdp-${Date.now()}`,
+      date: today(),
+      kind: "issue",
+      title: "GateとDriveのデータ置き場をそろえる",
+      body: "public-mobile/data を同期対象にし、records JSONをDrive側で保管する。",
+      tags: ["gate", "drive", "data"]
+    }));
+    $("clear").addEventListener("click", () => {
+      if (confirm("記録を全消去しますか。")) {
+        records = [];
+        save();
+      }
+    });
+    $("json").addEventListener("click", () => { $("out").textContent = toJson(); });
+    $("csv").addEventListener("click", () => { $("out").textContent = toCsv(); });
+    $("md").addEventListener("click", () => { $("out").textContent = toMarkdown(); });
+    $("copy").addEventListener("click", async () => {
+      await navigator.clipboard.writeText($("out").textContent);
+    });
+    render();
+  </script>
+</body>
+</html>
