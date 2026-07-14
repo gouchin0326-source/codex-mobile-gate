@@ -19,6 +19,9 @@
     button, a.button { border:1px solid var(--line); border-radius:8px; padding:9px 10px; background:#fff; color:var(--ink); font:inherit; font-weight:700; text-decoration:none; text-align:center; }
     button.primary { background:var(--blue); border-color:var(--blue); color:#fff; }
     button.danger { color:var(--red); }
+    .status { margin-top:8px; color:var(--muted); font-size:12px; }
+    .status.ok { color:var(--green); }
+    .status.error { color:var(--red); }
     .grid { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:8px; }
     .actions { display:flex; flex-wrap:wrap; gap:8px; }
     .muted { color:var(--muted); font-size:12px; }
@@ -83,6 +86,19 @@
       <pre id="out"></pre>
       <div class="muted">Drive配置目安: <code>G:\マイドライブ\CODEX\latest\data\records-YYYY-MM-DD.json</code></div>
     </section>
+
+    <section>
+      <h2>JSON取り込み</h2>
+      <label>貼り付け
+        <textarea id="importText" placeholder="出力したJSONをここへ貼り付け"></textarea>
+      </label>
+      <div class="actions">
+        <button id="checkImport">検証</button>
+        <button class="primary" id="mergeImport">追加</button>
+        <button class="danger" id="replaceImport">置換</button>
+      </div>
+      <div id="importStatus" class="status">未検証</div>
+    </section>
   </main>
   <script>
     const key = "codex-data-pocket-v1";
@@ -146,6 +162,43 @@
       return records.map((r) => `## ${r.title}\n- date: ${r.date}\n- kind: ${r.kind}\n- tags: ${(r.tags || []).join(", ")}\n\n${r.body || ""}`).join("\n\n");
     }
 
+    function readImportRecords() {
+      const text = $("importText").value.trim();
+      if (!text) throw new Error("JSONが空です。");
+      const payload = JSON.parse(text);
+      const imported = Array.isArray(payload) ? payload : payload.records;
+      if (!Array.isArray(imported)) throw new Error("records配列が見つかりません。");
+      return imported.map((record, index) => normalizeRecord(record, index));
+    }
+
+    function normalizeRecord(record, index) {
+      if (!record || typeof record !== "object") throw new Error(`${index + 1}件目が記録ではありません。`);
+      return {
+        id: String(record.id || `cdp-import-${Date.now()}-${index}`),
+        date: String(record.date || today()),
+        kind: ["log", "idea", "issue", "risk"].includes(record.kind) ? record.kind : "log",
+        title: String(record.title || "無題"),
+        body: String(record.body || ""),
+        tags: Array.isArray(record.tags) ? record.tags.map(String) : cleanTags(String(record.tags || ""))
+      };
+    }
+
+    function setImportStatus(message, type) {
+      $("importStatus").textContent = message;
+      $("importStatus").className = `status ${type || ""}`.trim();
+    }
+
+    function previewImport() {
+      try {
+        const imported = readImportRecords();
+        setImportStatus(`${imported.length}件を取り込めます。`, "ok");
+        return imported;
+      } catch (error) {
+        setImportStatus(`取り込み不可: ${error.message}`, "error");
+        return null;
+      }
+    }
+
     document.addEventListener("click", (event) => {
       const del = event.target.dataset.delete;
       if (del !== undefined) {
@@ -173,6 +226,23 @@
     $("md").addEventListener("click", () => { $("out").textContent = toMarkdown(); });
     $("copy").addEventListener("click", async () => {
       await navigator.clipboard.writeText($("out").textContent);
+    });
+    $("checkImport").addEventListener("click", () => { previewImport(); });
+    $("mergeImport").addEventListener("click", () => {
+      const imported = previewImport();
+      if (!imported) return;
+      records = [...imported, ...records];
+      $("importText").value = "";
+      save();
+      setImportStatus(`${imported.length}件を追加しました。`, "ok");
+    });
+    $("replaceImport").addEventListener("click", () => {
+      const imported = previewImport();
+      if (!imported || !confirm("現在の記録を取り込みJSONで置換しますか。")) return;
+      records = imported;
+      $("importText").value = "";
+      save();
+      setImportStatus(`${imported.length}件で置換しました。`, "ok");
     });
     render();
   </script>
