@@ -15,7 +15,9 @@
     .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
     .entry, .col { background:var(--panel); border:1px solid var(--line); border-radius:8px; }
     .entry { padding:10px; display:grid; grid-template-columns:1fr auto; gap:8px; }
+    .entry.stack { grid-template-columns:1fr; }
     textarea { width:100%; min-height:72px; resize:vertical; border:1px solid var(--line); border-radius:6px; padding:9px; font:inherit; color:var(--ink); }
+    #importText { min-height:86px; }
     button, select { border:1px solid var(--line); border-radius:6px; background:#fff; color:var(--ink); font:inherit; min-height:36px; padding:6px 9px; }
     button.primary { background:var(--blue); border-color:var(--blue); color:#fff; }
     button.danger { color:var(--red); }
@@ -28,6 +30,8 @@
     .note.waiting { border-left-color:var(--amber); }
     .note.done { border-left-color:var(--green); }
     .text { white-space:pre-wrap; overflow-wrap:anywhere; font-size:14px; line-height:1.35; }
+    .edit-box { display:grid; gap:7px; }
+    .edit-box textarea { min-height:96px; }
     .actions { display:flex; gap:6px; flex-wrap:wrap; }
     .empty { color:var(--muted); font-size:12px; padding:8px; border:1px dashed var(--line); border-radius:7px; }
     @media (max-width:760px) { .entry { grid-template-columns:1fr; } .board { grid-template-columns:1fr; } }
@@ -41,13 +45,26 @@
       <textarea id="noteText" placeholder="メモを書く"></textarea>
       <div><select id="noteStatus" aria-label="置き場所"><option value="todo">未着手</option><option value="waiting">待ち</option><option value="done">完了</option></select><button class="primary" id="addBtn">追加</button></div>
     </section>
-    <section class="entry"><div class="tools"><button id="exportJson" type="button">JSONを書き出し</button><button id="exportMarkdown" type="button">Markdownを書き出し</button></div><div class="sub" id="status" role="status" aria-live="polite">保存済みメモをファイルに書き出せます。</div></section>
+    <section class="entry stack">
+      <div class="tools">
+        <button id="exportJson" type="button">JSONを書き出し</button>
+        <button id="exportMarkdown" type="button">Markdownを書き出し</button>
+      </div>
+      <label class="sr-only" for="importText">JSON取り込み</label>
+      <textarea id="importText" placeholder="JSONを貼り付け"></textarea>
+      <div class="tools">
+        <button id="appendJson" type="button">追加で取り込み</button>
+        <button id="replaceJson" type="button">置き換え</button>
+      </div>
+      <div class="sub" id="status" role="status" aria-live="polite">保存済みメモをファイルに書き出せます。</div>
+    </section>
     <section class="board" id="board"></section>
   </main>
   <script>
     const key = "codex.quickNotesBoard.v1";
     const statuses = [["todo", "未着手"], ["waiting", "待ち"], ["done", "完了"]];
     let notes = load();
+    let editingId = "";
     function load() { try { const parsed = JSON.parse(localStorage.getItem(key) || "[]"); return Array.isArray(parsed) ? parsed : []; } catch { return []; } }
     function save() { try { localStorage.setItem(key, JSON.stringify(notes)); } catch {} }
     function downloadText(filename, text, type) { const blob = new Blob([text], { type }); const url = URL.createObjectURL(blob); const a = document.createElement("a"); a.href = url; a.download = filename; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url); document.getElementById("status").textContent = `${filename} を書き出しました。`; }
@@ -55,12 +72,18 @@
     function exportMarkdown() { const grouped = statuses.map(([id, label]) => { const lines = notes.filter((note) => note.status === id).map((note) => `- ${note.text.replace(/\n/g, " / ")}`); return `## ${label}\n${lines.length ? lines.join("\n") : "- なし"}`; }).join("\n\n"); downloadText("quick-notes-board.md", `# メモ整理板\n\n${grouped}\n`, "text/markdown;charset=utf-8"); }
     function addNote() { const text = document.getElementById("noteText").value.trim(); if (!text) return; notes.unshift({ id:String(Date.now()), text, status:document.getElementById("noteStatus").value, createdAt:new Date().toISOString() }); document.getElementById("noteText").value = ""; save(); render(); }
     function setStatus(id, status) { notes = notes.map((note) => note.id === id ? { ...note, status } : note); save(); render(); }
-    function removeNote(id) { notes = notes.filter((note) => note.id !== id); save(); render(); }
+    function startEdit(id) { editingId = id; render(); }
+    function cancelEdit() { editingId = ""; render(); }
+    function updateNote(id) { const editor = document.querySelector(`[data-editor="${id}"]`); if (!editor) return; const text = editor.value.trim(); if (!text) return; notes = notes.map((note) => note.id === id ? { ...note, text, updatedAt:new Date().toISOString() } : note); editingId = ""; save(); render(); }
+    function removeNote(id) { notes = notes.filter((note) => note.id !== id); if (editingId === id) editingId = ""; save(); render(); }
+    function parseImport() { const raw = document.getElementById("importText").value.trim(); if (!raw) return []; const parsed = JSON.parse(raw); const rows = Array.isArray(parsed) ? parsed : parsed.notes; if (!Array.isArray(rows)) throw new Error("array"); return rows.map((row, index) => normalizeNote(row, index)); }
+    function normalizeNote(row, index) { const status = statuses.some(([id]) => id === row.status) ? row.status : "todo"; const text = String(row.text || row.body || "").trim(); if (!text) throw new Error("text"); return { id:String(row.id || `${Date.now()}-${index}`), text, status, createdAt:String(row.createdAt || new Date().toISOString()), updatedAt:row.updatedAt ? String(row.updatedAt) : undefined }; }
+    function importJson(mode) { try { const incoming = parseImport(); if (!incoming.length) return; notes = mode === "replace" ? incoming : [...incoming, ...notes]; document.getElementById("importText").value = ""; editingId = ""; save(); render(); document.getElementById("status").textContent = `${incoming.length}件を取り込みました。`; } catch { document.getElementById("status").textContent = "JSONを取り込めませんでした。"; } }
     function render() { const board = document.getElementById("board"); board.innerHTML = statuses.map(([id, label]) => { const items = notes.filter((note) => note.status === id); return `<section class="col"><header><h2>${label}</h2><small>${items.length}</small></header><div class="list">${items.length ? items.map(noteHtml).join("") : '<div class="empty">なし</div>'}</div></section>`; }).join(""); }
-    function noteHtml(note) { const moveButtons = statuses.filter(([id]) => id !== note.status).map(([id, label]) => `<button data-move="${note.id}" data-status="${id}">${label}へ</button>`).join(""); return `<article class="note ${note.status}"><div class="text">${escapeHtml(note.text)}</div><div class="actions">${moveButtons}<button class="danger" data-delete="${note.id}">削除</button></div></article>`; }
+    function noteHtml(note) { const moveButtons = statuses.filter(([id]) => id !== note.status).map(([id, label]) => `<button data-move="${note.id}" data-status="${id}">${label}へ</button>`).join(""); if (note.id === editingId) return `<article class="note ${note.status}"><div class="edit-box"><textarea data-editor="${note.id}">${escapeHtml(note.text)}</textarea><div class="actions"><button class="primary" data-save-edit="${note.id}">保存</button><button data-cancel-edit type="button">戻す</button></div></div></article>`; return `<article class="note ${note.status}"><div class="text">${escapeHtml(note.text)}</div><div class="actions">${moveButtons}<button data-edit="${note.id}">編集</button><button class="danger" data-delete="${note.id}">削除</button></div></article>`; }
     function escapeHtml(value) { return String(value).replace(/[&<>"']/g, (char) => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[char])); }
-    document.getElementById("addBtn").addEventListener("click", addNote); document.getElementById("exportJson").addEventListener("click", exportJson); document.getElementById("exportMarkdown").addEventListener("click", exportMarkdown); document.getElementById("noteText").addEventListener("keydown", (event) => { if ((event.ctrlKey || event.metaKey) && event.key === "Enter") addNote(); });
-    document.getElementById("board").addEventListener("click", (event) => { const move = event.target.closest("[data-move]"); const del = event.target.closest("[data-delete]"); if (move) setStatus(move.dataset.move, move.dataset.status); if (del) removeNote(del.dataset.delete); });
+    document.getElementById("addBtn").addEventListener("click", addNote); document.getElementById("exportJson").addEventListener("click", exportJson); document.getElementById("exportMarkdown").addEventListener("click", exportMarkdown); document.getElementById("appendJson").addEventListener("click", () => importJson("append")); document.getElementById("replaceJson").addEventListener("click", () => importJson("replace")); document.getElementById("noteText").addEventListener("keydown", (event) => { if ((event.ctrlKey || event.metaKey) && event.key === "Enter") addNote(); });
+    document.getElementById("board").addEventListener("click", (event) => { const move = event.target.closest("[data-move]"); const edit = event.target.closest("[data-edit]"); const saveEdit = event.target.closest("[data-save-edit]"); const cancel = event.target.closest("[data-cancel-edit]"); const del = event.target.closest("[data-delete]"); if (move) setStatus(move.dataset.move, move.dataset.status); if (edit) startEdit(edit.dataset.edit); if (saveEdit) updateNote(saveEdit.dataset.saveEdit); if (cancel) cancelEdit(); if (del) removeNote(del.dataset.delete); });
     render();
   </script>
 </body>

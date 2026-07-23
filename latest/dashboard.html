@@ -1,0 +1,1407 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Codex Status Dashboard</title>
+  <style>
+    :root { color-scheme: light; --bg:#f5f6f8; --panel:#fff; --ink:#1f2937; --muted:#667085; --line:#d9dee7; --green:#15803d; --amber:#b45309; --red:#b42318; --blue:#2563eb; --violet:#6d28d9; --shadow:0 5px 16px rgba(20,31,50,.07); }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Segoe UI", system-ui, sans-serif; background:var(--bg); color:var(--ink); letter-spacing:0; }
+    header { background:var(--panel); border-bottom:1px solid var(--line); padding:14px 16px; position:sticky; top:0; z-index:2; }
+    h1 { margin:0 0 4px; font-size:22px; }
+    h2 { margin:0; font-size:15px; }
+    a { color:var(--blue); text-decoration:none; }
+    main { padding:12px; display:grid; gap:12px; max-width:1180px; margin:0 auto; }
+    .sub, .muted { color:var(--muted); font-size:12px; }
+    .hero { display:grid; grid-template-columns:1.2fr .8fr; gap:12px; }
+    section, .tile, .metric, .mini-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .tile { padding:14px; display:grid; gap:8px; }
+    .title-row { display:flex; justify-content:space-between; gap:10px; align-items:start; border-bottom:1px solid var(--line); padding:10px 12px; }
+    .body { padding:12px; }
+    .metrics { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:8px; }
+    .metric { padding:10px; min-height:64px; border-left:4px solid var(--blue); }
+    .metric.ok { border-left-color:var(--green); }
+    .metric.warn { border-left-color:var(--amber); }
+    .metric.stop { border-left-color:var(--red); }
+    .metric strong { display:block; font-size:22px; line-height:1.1; }
+    .metric span { color:var(--muted); font-size:12px; }
+    .budget-grid { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:8px; }
+    .budget-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:10px; }
+    .budget-card strong { display:block; font-size:21px; line-height:1.15; }
+    .budget-card span { color:var(--muted); font-size:12px; }
+    .prompt-box { margin-top:10px; border:1px solid var(--line); border-radius:8px; background:#fbfcfe; padding:10px; }
+    .prompt-box pre { max-height:none; margin-top:8px; }
+    .status-line { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:8px; }
+    .pill { display:inline-flex; align-items:center; min-height:28px; border:1px solid var(--line); border-radius:999px; padding:4px 9px; font-size:12px; color:var(--muted); background:#fbfcfe; }
+    .pill.ok { color:var(--green); border-color:#abefc6; background:#ecfdf3; }
+    .pill.warn { color:var(--amber); border-color:#fedf89; background:#fffaeb; }
+    .pill.danger { color:var(--red); border-color:#fecdca; background:#fef3f2; }
+    table { width:100%; border-collapse:collapse; font-size:13px; }
+    th, td { padding:8px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { color:var(--muted); font-weight:600; }
+    tr.ok .badge { background:#ecfdf3; color:var(--green); border-color:#abefc6; }
+    tr.warn .badge { background:#fffaeb; color:var(--amber); border-color:#fedf89; }
+    tr.stop .badge { background:#fef3f2; color:var(--red); border-color:#fecdca; }
+    .badge { display:inline-block; min-width:44px; text-align:center; border:1px solid var(--line); border-radius:999px; padding:2px 8px; font-size:12px; }
+    .step { display:inline-grid; place-items:center; width:26px; height:26px; border-radius:999px; background:#eff6ff; color:var(--blue); font-weight:700; }
+    .tabs { display:flex; gap:6px; overflow-x:auto; }
+    .tabs button { min-width:92px; border:1px solid var(--line); background:var(--panel); border-radius:8px; padding:8px 10px; color:var(--ink); font:inherit; font-size:12px; cursor:pointer; }
+    .tabs button.active { border-color:var(--blue); color:var(--blue); font-weight:700; }
+    .tab-panel { display:none; }
+    .tab-panel.active { display:block; }
+    .mini-grid { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:8px; }
+    .mini-card { padding:10px; display:grid; gap:4px; color:var(--ink); box-shadow:none; }
+    .mini-card strong { font-size:13px; overflow-wrap:anywhere; }
+    .mini-card span, .mini-card small { color:var(--muted); font-size:12px; }
+    .next-list { display:grid; gap:8px; }
+    .next-item { border:1px solid var(--line); border-left:4px solid var(--violet); border-radius:8px; padding:10px; background:#fbfcfe; }
+    .next-item strong { display:block; font-size:13px; margin-bottom:3px; }
+    .table-group { display:grid; gap:14px; }
+    .subhead { display:flex; justify-content:space-between; gap:10px; align-items:center; color:var(--muted); font-size:12px; }
+    code, pre { font-family:Consolas, "Courier New", monospace; font-size:12px; }
+    pre { margin:0; white-space:pre-wrap; line-height:1.35; max-height:440px; overflow:auto; }
+    @media (max-width:840px) {
+      header { padding:10px 12px; }
+      h1 { font-size:19px; }
+      main { padding:8px; gap:8px; }
+      .hero { grid-template-columns:1fr; }
+      .metrics, .status-line, .budget-grid { grid-template-columns:repeat(2, minmax(0,1fr)); }
+      .metric { min-height:56px; padding:8px; }
+      .metric strong { font-size:18px; }
+      th:nth-child(2), td:nth-child(2) { display:none; }
+      th, td { padding:7px 6px; font-size:12px; }
+      .mini-grid { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Codex Status Dashboard</h1>
+    <div class="sub">C:\Codex / 更新 2026/7/23 18:34:18 / トークン節約で成果物を増やす作業環境</div>
+  </header>
+  <main>
+    <div class="hero">
+      <div class="tile">
+        <h2>狙い</h2>
+        <div class="muted">Plus枠のCodexを、重い生成担当ではなく、成果物を整理し、他AIへ渡せる形に統合する管制塔として使います。小さく作り、出力を残し、次のAIが読める材料へ変換していく方針です。</div>
+        <div class="status-line">
+          <span class="pill ok">LLM: ok</span>
+          <span class="pill ok">ComfyUI: ok</span>
+          <span class="pill warn">GPU lock: free</span>
+          <span class="pill danger">Codex GPU: disabled</span>
+          <span class="pill ok">C:\Codex trusted: yes</span>
+        </div>
+      </div>
+      <div class="metrics">
+        <div class="metric ok"><strong>13</strong><span>できる</span></div>
+        <div class="metric warn"><strong>6</strong><span>注意</span></div>
+        <div class="metric stop"><strong>3</strong><span>未実装</span></div>
+        <div class="metric"><strong>11</strong><span>AI成果物</span></div>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button class="active" data-tab="matrix">能力表</button>
+      <button data-tab="csd-actions">CSDアクション</button>
+      <button data-tab="pipeline">制作ライン</button>
+      <button data-tab="external">外部AI</button>
+      <button data-tab="codex-lanes">CODEXレーン</button>
+      <button data-tab="growth">増やすこと</button>
+      <button data-tab="pillars">5本柱</button>
+      <button data-tab="budget">節約</button>
+      <button data-tab="next">次にやる</button>
+      <button data-tab="apps">アプリ</button>
+      <button data-tab="artifacts">成果物</button>
+      <button data-tab="settings">設定</button>
+      <button data-tab="system">システム</button>
+      <button data-tab="tree">構造</button>
+    </div>
+
+    <section id="matrix" class="tab-panel active">
+      <div class="title-row"><h2>できる / 注意 / 未実装</h2><span class="muted">運用判断用</span></div>
+      <div class="body">
+        <table>
+          <thead><tr><th>状態</th><th>領域</th><th>項目</th><th>説明</th></tr></thead>
+          <tbody>
+            
+            <tr class="ok">
+              <td><span class="badge">できる</span></td>
+              <td>基盤</td>
+              <td><a href="HUB.md">Codex専用ルート</a></td>
+              <td>C:\Codex配下にルール、ログ、出力、プロジェクトを分離済み</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">できる</span></td>
+              <td>起動</td>
+              <td><a href="app-launcher.html">アプリランチャー</a></td>
+              <td>登録済みアプリを開ける。制作依頼もブラウザ内に保存できる</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">できる</span></td>
+              <td>依頼</td>
+              <td><a href="local_llm/scripts/process-launcher-request.ps1">Request to Brief</a></td>
+              <td>launcher request JSONからBrief、scaffold、登録まで1件ずつ処理できる</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">できる</span></td>
+              <td>制作</td>
+              <td><a href="apps/apps.json">静的HTMLアプリ</a></td>
+              <td>単一HTMLでメモ、データ、ゲーム、制御パネルを作れる</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">できる</span></td>
+              <td>LLM</td>
+              <td><a href="local_llm/MODEL_INVENTORY.md">Ollama API</a></td>
+              <td>qwen2.5-coder:14bを小さなコード補助として使える。現在のCodex側GPU運用は停止中</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">できる</span></td>
+              <td>素材</td>
+              <td><a href="local_ai/gallery.html">画像・音楽・動画の実験成果</a></td>
+              <td>ComfyUI系wrapperでCodex配下に成果物を残すルートは検証済み</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">できる</span></td>
+              <td>ゲーム</td>
+              <td><a href="projects/orbit-catcher/index.html">ミニゲームMVP</a></td>
+              <td>Orbit Catcherで入力、スコア、localStorage保存、JSON/Markdown出力を確認済み</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">できる</span></td>
+              <td>出力</td>
+              <td><a href="app-launcher.html">エクスポート導線</a></td>
+              <td>主要アプリにJSON/Markdown/CSV/コマンド出力を追加済み</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">できる</span></td>
+              <td>出力</td>
+              <td><a href="data/artifact-capabilities.json">成果物台帳</a></td>
+              <td>16件の成果物について、出力形式と次に渡せるAIを記録</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">できる</span></td>
+              <td>司令塔</td>
+              <td><a href="data/external-ai-lanes.json">外部AIレーン</a></td>
+              <td>4本の外部AI活用レーンを定義。Codexは統合と検証に集中</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">できる</span></td>
+              <td>司令塔</td>
+              <td><a href="data/codex-lanes.json">CODEX PDCAレーン</a></td>
+              <td>5本のCODEX内レーンを可視化。チケットから検収記録まで小さく回す</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">できる</span></td>
+              <td>知識</td>
+              <td><a href="knowledge/RECIPE_INDEX.md">Recipe Index</a></td>
+              <td>Claude型を参考に、次回の入口を短い索引へ集約</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">できる</span></td>
+              <td>安全</td>
+              <td><a href="runbooks/LOCAL_AI_MEDIA_SAFE_ROUTE.md">共有データ保護</a></td>
+              <td>C:\local_ai / C:\ollama / HOSHI系はobserve-onlyとして扱う</td>
+            </tr>
+            
+            <tr class="warn">
+              <td><span class="badge">注意</span></td>
+              <td>予算</td>
+              <td><a href="AGENTS.md">Plus枠は少ない</a></td>
+              <td>大読込、大改修、長い説明を避ける。1タスク1目的で進める</td>
+            </tr>
+            <tr class="warn">
+              <td><span class="badge">注意</span></td>
+              <td>LLM</td>
+              <td><a href="reports/LOCAL_LLM_CAPABILITY_TEST_2026-07-07.md">品質管理</a></td>
+              <td>ローカルLLM出力は粗い場合がある。Codexレビューとテストが必須</td>
+            </tr>
+            <tr class="warn">
+              <td><span class="badge">注意</span></td>
+              <td>GPU</td>
+              <td><a href="data/gpu-policy.json">Codex側GPU停止中</a></td>
+              <td>GPU lock/session切替の原因が分かるまで、Codexからの生成は再開しない</td>
+            </tr>
+            <tr class="warn">
+              <td><span class="badge">注意</span></td>
+              <td>UI</td>
+              <td><a href="projects/media-control-panel/index.html">メディア生成パネル</a></td>
+              <td>画像・音楽・動画の生成コマンド作成は可能。ブラウザからの直接実行は未実装</td>
+            </tr>
+            <tr class="warn">
+              <td><span class="badge">注意</span></td>
+              <td>運用</td>
+              <td><a href="dashboard.html">永続サーバー</a></td>
+              <td>HTMLはファイル/一時HTTPで開ける。常駐Webアプリ化は未実装</td>
+            </tr>
+            <tr class="warn">
+              <td><span class="badge">注意</span></td>
+              <td>設定</td>
+              <td><a href="memory/CODEX_SETTINGS_PREP.md">追加設定</a></td>
+              <td>C:\Codex trustedは適用済み。その他config変更は1項目ずつ</td>
+            </tr>
+            
+            <tr class="stop">
+              <td><span class="badge">未実装</span></td>
+              <td>自動化</td>
+              <td><a href="templates/EXTERNAL_AI_BRIEF.md">依頼から完成品質まで全自動</a></td>
+              <td>Codex節約のため、完全自動より外部AI brief + Codex統合を優先</td>
+            </tr>
+            <tr class="stop">
+              <td><span class="badge">未実装</span></td>
+              <td>製品化</td>
+              <td><a href="README.md">認証・DB・バックエンド</a></td>
+              <td>現在は静的HTMLとローカルファイル中心。外部公開前提ではない</td>
+            </tr>
+            <tr class="stop">
+              <td><span class="badge">未実装</span></td>
+              <td>GPU</td>
+              <td><a href="data/gpu-policy.json">Codex側ローカル生成の再開</a></td>
+              <td>渋滞回避のため停止中。明示指示とlock確認がある時だけ再検討</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="csd-actions" class="tab-panel">
+      <div class="title-row"><h2>CSDアクション</h2><span class="muted">注意・未実施をレーンチケット候補として使う</span></div>
+      <div class="body table-group">
+        <div class="subhead"><strong>呼称</strong><a href="memory/DECISIONS.md">DECISIONS.md</a></div>
+        <table>
+          <tbody>
+            <tr><td>CSD</td><td>CODEX Status Dashboard / Codex Status Dashboard</td><td>このダッシュボードの略称</td></tr>
+            <tr><td>台帳</td><td><a href="data/csd-action-items.json">data/csd-action-items.json</a></td><td>注意・未実施の次アクション一覧</td></tr>
+          </tbody>
+        </table>
+        <div class="subhead"><strong>注意から使う</strong><a href="templates/LANE_TICKET.md">LANE_TICKET.md</a></div>
+        <table>
+          <thead><tr><th>状態</th><th>項目</th><th>レーン</th><th>次アクション</th><th>チケット化のヒント</th><th>参照</th></tr></thead>
+          <tbody>
+            <tr class="ok">
+              <td><span class="badge">needs-update</span></td>
+              <td>Token budget period is stale</td>
+              <td>Static Tool Lane</td>
+              <td>Refresh data\token-budget.json for the current period or hide stale daily-cap wording.</td>
+              <td>Target data\token-budget.json and dashboard token panel only.</td>
+              <td><a href="data/token-budget.json">data/token-budget.json</a></td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">ready-ticket</span></td>
+              <td>CSD generator still contains mojibake labels</td>
+              <td>Static Tool Lane</td>
+              <td>Replace visible mojibake labels in scripts\update-dashboard.mjs with readable Japanese labels.</td>
+              <td>Keep behavior unchanged; verify dashboard generation and public copy sync.</td>
+              <td><a href="scripts/update-dashboard.mjs">scripts/update-dashboard.mjs</a></td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">ready-ticket</span></td>
+              <td>CSD visual readability needs human/browser check</td>
+              <td>Review Lane</td>
+              <td>Open CSD on desktop and mobile widths and note overlap, unreadable labels, or low-value tabs.</td>
+              <td>Return findings as ranked bullets with screenshots if useful.</td>
+              <td><a href="dashboard.html">dashboard.html</a></td>
+            </tr></tbody>
+        </table>
+        <div class="subhead"><strong>未実施から使う</strong><span>延期・禁止・着手候補を分けて扱う</span></div>
+        <table>
+          <thead><tr><th>状態</th><th>項目</th><th>レーン</th><th>次アクション</th><th>チケット化のヒント</th><th>参照</th></tr></thead>
+          <tbody>
+            <tr class="warn">
+              <td><span class="badge">defer</span></td>
+              <td>Request-to-finished-quality automation is not implemented</td>
+              <td>Handoff Lane</td>
+              <td>Use external AI brief plus CODEX integration rather than full automation.</td>
+              <td>Create one LANE_TICKET.md task per run.</td>
+              <td><a href="templates/LANE_TICKET.md">templates/LANE_TICKET.md</a></td>
+            </tr>
+            <tr class="warn">
+              <td><span class="badge">defer</span></td>
+              <td>Auth, database, and backend productization are not implemented</td>
+              <td>Review Lane</td>
+              <td>Keep CSD as a local/static control surface unless a concrete productization ticket is approved.</td>
+              <td>Do not add backend scope to routine CSD work.</td>
+              <td><a href="README.md">README.md</a></td>
+            </tr>
+            <tr class="stop">
+              <td><span class="badge">blocked-by-policy</span></td>
+              <td>CODEX local AI/GPU lane remains paused</td>
+              <td>Local AI Lane</td>
+              <td>Do nothing until explicit user re-enable instruction and fresh lock/route review.</td>
+              <td>Never make this an automatic follow-up.</td>
+              <td><a href="data/gpu-policy.json">data/gpu-policy.json</a></td>
+            </tr></tbody>
+        </table>
+        <div class="subhead"><strong>レーン試行</strong><a href="data/csd-lane-trials.json">csd-lane-trials.json</a></div>
+        <table>
+          <thead><tr><th>状態</th><th>ID</th><th>使用レーン</th><th>目的</th><th>検証</th><th>次チケット</th></tr></thead>
+          <tbody>
+            <tr class="ok">
+              <td><span class="badge">done</span></td>
+              <td>csd-lane-trial-2026-07-23-001</td>
+              <td>Handoff Lane -&gt; Static Tool Lane -&gt; Review Lane</td>
+              <td>Import Claude-side lane know-how and make one CSD lane trial visible.</td>
+              <td>Run generator, syntax, JSON, and visibility checks.</td>
+              <td>Use Static Tool Lane to clean visible CSD mojibake labels in the dashboard generator.</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">done</span></td>
+              <td>csd-lane-trial-2026-07-23-002</td>
+              <td>Handoff Lane -&gt; Web Designer Sample Lane -&gt; Static Tool Lane</td>
+              <td>Create sample content from GO/HOSHI shared web design know-how and show it on CSD.</td>
+              <td>Run syntax, JSON, dashboard, and public-copy visibility checks.</td>
+              <td>Run browser visual check for CSD Web Designer Sample.</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">done</span></td>
+              <td>csd-lane-trial-2026-07-23-003</td>
+              <td>Web Designer Sample Lane -&gt; Static Tool Lane</td>
+              <td>Create a stronger web-design showcase content artifact and make it visible through CSD.</td>
+              <td>Run inline-script checks, JSON registry checks, dashboard generation, and public-copy sync.</td>
+              <td>Run browser visual checks for CSD Designer Showcase and clean CSD mojibake labels.</td>
+            </tr></tbody>
+        </table>
+        <div class="subhead"><strong>Claude側から取得したノウハウ</strong><span>今回の試行に使った要点</span></div>
+        <table>
+          <tbody><tr><td>Lane output should become a usable artifact, not only a status note.</td></tr><tr><td>Visual control planes should make purpose, state, check, and next action visible quickly.</td></tr><tr><td>High-quality repeated output depends on a compact ticket, fixed acceptance, and reusable export shape.</td></tr><tr><td>Use actual visual material when judging web-design quality.</td></tr><tr><td>Keep the artifact portable so another AI or reviewer can continue from a small export.</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="pipeline" class="tab-panel">
+      <div class="title-row"><h2>節約型制作ライン</h2><span class="muted">Codexを管制塔にする流れ</span></div>
+      <div class="body">
+        <table>
+          <thead><tr><th>順</th><th>段階</th><th>やること</th><th>節約効果</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><span class="step">1</span></td>
+              <td>原始人プロンプト</td>
+              <td>目的、場所、合格条件、禁止事項だけを渡す</td>
+              <td>Codex消費を最小化</td>
+            </tr>
+            <tr>
+              <td><span class="step">2</span></td>
+              <td>小さなBrief</td>
+              <td>依頼を1画面で読める仕様に圧縮する</td>
+              <td>他AIに渡せる形にする</td>
+            </tr>
+            <tr>
+              <td><span class="step">3</span></td>
+              <td>部品生成</td>
+              <td>ローカルLLMや他AIには小部品、表、案、テスト観点だけ任せる</td>
+              <td>失敗時の損失を小さくする</td>
+            </tr>
+            <tr>
+              <td><span class="step">4</span></td>
+              <td>Codex統合</td>
+              <td>既存HTML/JSON/PowerShellに接続し、余計な新規構成を増やさない</td>
+              <td>成果物を確実に動かす</td>
+            </tr>
+            <tr>
+              <td><span class="step">5</span></td>
+              <td>検証と登録</td>
+              <td>構文チェック、手元確認、apps.json登録、dashboard更新まで行う</td>
+              <td>次回の入口を短くする</td>
+            </tr>
+            <tr>
+              <td><span class="step">6</span></td>
+              <td>エクスポート</td>
+              <td>JSON/Markdown/CSVなどで成果を外へ渡す</td>
+              <td>各AIへ再利用できる材料にする</td>
+            </tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="external" class="tab-panel">
+      <div class="title-row"><h2>外部AI司令塔</h2><span class="muted">ローカルLLM渋滞を避ける役割分担</span></div>
+      <div class="body table-group">
+        <div class="subhead"><strong>レーン</strong><a href="data/external-ai-lanes.json">external-ai-lanes.json</a></div>
+        <table>
+          <thead><tr><th>レーン</th><th>向いている仕事</th><th>入力</th><th>出力</th><th>Codexの役割</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><a href="data/external-ai-lanes.json">ChatGPT Research Lane</a></td>
+              <td>short research, comparison table, test ideas, copy draft</td>
+              <td>templates/EXTERNAL_AI_BRIEF.md</td>
+              <td>Markdown, JSON bullets</td>
+              <td>verify facts when needed, reduce to implementation steps, update dashboard artifacts</td>
+            </tr>
+            <tr>
+              <td><a href="data/external-ai-lanes.json">Claude Design Review Lane</a></td>
+              <td>UI critique, workflow review, Japanese copy polish, edge-case discovery</td>
+              <td>templates/EXTERNAL_AI_BRIEF.md</td>
+              <td>review note, ranked findings</td>
+              <td>apply only scoped fixes under C:\Codex and avoid editing C:\Claude shared data</td>
+            </tr>
+            <tr>
+              <td><a href="data/external-ai-lanes.json">Human Browser Check Lane</a></td>
+              <td>mobile feel, visual overlap, actual workflow completion</td>
+              <td>dashboard link or app HTML path</td>
+              <td>short notes, screenshots, pass/fail</td>
+              <td>convert notes into small implementation tasks</td>
+            </tr>
+            <tr>
+              <td><a href="data/external-ai-lanes.json">Local AI Lane</a></td>
+              <td>image, music, video, local coding helper</td>
+              <td>disabled until explicit user instruction</td>
+              <td>Codex-owned files only</td>
+              <td>keep lane visible but paused to avoid GPU and LLM congestion</td>
+            </tr></tbody>
+        </table>
+        <div class="subhead"><strong>同期状態</strong><span>次回の入口を短くするための更新時刻</span></div>
+        <table>
+          <thead><tr><th>対象</th><th>役割</th><th>更新</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>dashboard.html</td>
+              <td>司令塔HTML</td>
+              <td>2026/7/23 18:24:16</td>
+            </tr>
+            <tr>
+              <td>app-launcher.html</td>
+              <td>アプリ入口</td>
+              <td>2026/7/23 18:34:17</td>
+            </tr>
+            <tr>
+              <td>public-mobile</td>
+              <td>モバイル用latest素材</td>
+              <td>2026/7/23 18:24:17</td>
+            </tr>
+            <tr>
+              <td>pages-site</td>
+              <td>GitHub Pages準備フォルダ</td>
+              <td>2026/7/23 18:23:51</td>
+            </tr>
+            <tr>
+              <td>artifact-capabilities.json</td>
+              <td>AI handoff台帳</td>
+              <td>2026/7/23 17:30:53</td>
+            </tr>
+            <tr>
+              <td>external-ai-lanes.json</td>
+              <td>外部AIレーン台帳</td>
+              <td>2026/7/21 18:29:33</td>
+            </tr>
+            <tr>
+              <td>codex-lanes.json</td>
+              <td>CODEX PDCAレーン台帳</td>
+              <td>2026/7/23 17:31:05</td>
+            </tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="codex-lanes" class="tab-panel">
+      <div class="title-row"><h2>CODEX PDCAレーン</h2><span class="muted">チケットから成果物、検収記録までを小さく回す</span></div>
+      <div class="body table-group">
+        <div class="subhead"><strong>現在タスク</strong><a href="data/status.json">status.json</a></div>
+        <table>
+          <tbody>
+            <tr><td>Objective</td><td>2026-07-23 task - create a stronger CSD web-design showcase content artifact.</td></tr>
+            <tr><td>Scope</td><td>`C:\Codex` showcase project, generated visual asset copy, lane ledgers, app/artifact registry, dashboard/status visibility only. GO/HOSHI shared files are reference-only. No local LLM/GPU.</td></tr>
+            <tr><td>Acceptance</td><td>CSD shows the Web Designer Sample Lane/showcase trial; showcase HTML opens as a CODEX-owned artifact; app/artifact registries include it; dashboard/status generation and inline script checks pass.</td></tr>
+          </tbody>
+        </table>
+        <div class="subhead"><strong>PDCA</strong><a href="data/codex-lanes.json">codex-lanes.json</a></div>
+        <table>
+          <thead><tr><th>Step</th><th>内容</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><span class="step">Plan</span></td>
+              <td>One compact lane ticket: objective, target files, constraints, acceptance.</td>
+            </tr>
+            <tr>
+              <td><span class="step">Do</span></td>
+              <td>Scoped CODEX edits or integration only.</td>
+            </tr>
+            <tr>
+              <td><span class="step">Check</span></td>
+              <td>Deterministic checks first; browser or human check when needed.</td>
+            </tr>
+            <tr>
+              <td><span class="step">Act</span></td>
+              <td>Register result, update dashboard/logs, and write the next ticket.</td>
+            </tr></tbody>
+        </table>
+        <div class="subhead"><strong>レーン一覧</strong><a href="templates/LANE_TICKET.md">LANE_TICKET.md</a></div>
+        <table>
+          <thead><tr><th>状態</th><th>レーン</th><th>目的</th><th>検証</th><th>記録</th><th>次チケット</th></tr></thead>
+          <tbody>
+            <tr class="ok">
+              <td><span class="badge">ready</span></td>
+              <td><a href="data/codex-lanes.json">Static Tool Lane</a></td>
+              <td>Produce small HTML-first tools with import/export and deterministic checks.</td>
+              <td>Run inline script checks, generator checks, and browser/human checks when visual feel matters.</td>
+              <td>Update HUB.md, logs\PROGRESS.md, registry/dashboard, and next ticket.</td>
+              <td>Clean stale mojibake/current-task state and align dashboard visibility.</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">ready</span></td>
+              <td><a href="data/codex-lanes.json">Review Lane</a></td>
+              <td>Use CODEX as a second-system reviewer for generated artifacts.</td>
+              <td>Return ranked findings with file references and missing verification.</td>
+              <td>Convert accepted findings into a new implementation ticket.</td>
+              <td>Review dashboard mojibake and navigation readability.</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">ready</span></td>
+              <td><a href="data/codex-lanes.json">Handoff Lane</a></td>
+              <td>Convert notes or external AI output into compact implementation tickets.</td>
+              <td>Confirm target files, forbidden scope, and acceptance are explicit.</td>
+              <td>Place the ticket in inbox or execute it when small enough.</td>
+              <td>Create the first concrete ticket from Claude lane references.</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">showcase-done</span></td>
+              <td><a href="data/codex-lanes.json">Web Designer Sample Lane</a></td>
+              <td>Use GO/HOSHI shared web-design know-how to create CODEX-owned sample content.</td>
+              <td>Run HTML inline-script checks, JSON checks, dashboard generation, and public copy sync.</td>
+              <td>Register the sample and showcase in apps, artifacts, CSD lane trials, and progress logs.</td>
+              <td>Run browser visual checks for the CSD design samples on desktop and mobile widths.</td>
+            </tr>
+            <tr class="stop">
+              <td><span class="badge">paused</span></td>
+              <td><a href="data/codex-lanes.json">Local AI Lane</a></td>
+              <td>Image, music, video, or local coding helper work.</td>
+              <td>GPU lock, timeout, and no shared-data edits.</td>
+              <td>Record outputs and keep the lane paused again unless told otherwise.</td>
+              <td>No action while GPU policy is disabled.</td>
+            </tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="growth" class="tab-panel">
+      <div class="title-row"><h2>今後増やすこと</h2><span class="muted">成果物を各AIへ渡すための環境整備</span></div>
+      <div class="body">
+        <table>
+          <thead><tr><th>優先</th><th>項目</th><th>説明</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><span class="badge">済</span></td>
+              <td><a href="data/artifact-capabilities.json">成果物台帳</a></td>
+              <td>各アプリの出力形式、保存先、次に渡せるAIを一覧化済み</td>
+            </tr>
+            <tr>
+              <td><span class="badge">済</span></td>
+              <td><a href="data/external-ai-lanes.json">外部AIレーン</a></td>
+              <td>研究、設計レビュー、人間確認、停止中ローカルAIの役割を分離済み</td>
+            </tr>
+            <tr>
+              <td><span class="badge">済</span></td>
+              <td><a href="data/codex-lanes.json">CODEX PDCAレーン</a></td>
+              <td>Static Tool、Review、Handoff、Local AI paused の各レーンを可視化済み</td>
+            </tr>
+            <tr>
+              <td><span class="badge">高</span></td>
+              <td><a href="templates/">Briefテンプレート集</a></td>
+              <td>ゲーム、業務ツール、データ整理、画像素材の依頼型をさらに固定する</td>
+            </tr>
+            <tr>
+              <td><span class="badge">中</span></td>
+              <td><a href="checklists/">検証チェック欄</a></td>
+              <td>各アプリに最小テストと現場確認メモを持たせる</td>
+            </tr>
+            <tr>
+              <td><span class="badge">済</span></td>
+              <td><a href="public-mobile/">公開コピー同期</a></td>
+              <td>public-mobile、pages-site、Google Drive latestの更新時刻を見える化</td>
+            </tr>
+            <tr>
+              <td><span class="badge">低</span></td>
+              <td><a href="data/gpu-policy.json">GPU再開判定</a></td>
+              <td>明示指示がある時だけ、lock確認から再開できる手順にする</td>
+            </tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="pillars" class="tab-panel">
+      <div class="title-row"><h2>5本柱</h2><span class="muted">AGENTS.mdの中心思想</span></div>
+      <div class="body">
+        <table>
+          <thead><tr><th>柱</th><th>要点</th><th>現在の反映</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>インクルーシブ</td>
+              <td>WCAG 2.2 AAとやさしい日本語を前提にする</td>
+              <td>入力ラベル、aria-live、読める状態表示を追加していく</td>
+            </tr>
+            <tr>
+              <td>HTML First</td>
+              <td>単一HTML、ビルド無し、ソース可読を優先する</td>
+              <td>登録アプリは静的HTML中心。生成スクリプトもNode/PowerShellだけ</td>
+            </tr>
+            <tr>
+              <td>エクスポート導線</td>
+              <td>全アプリに成果物を書き出す入口を置く</td>
+              <td>JSON、Markdown、CSV、コマンド出力を標準化していく</td>
+            </tr>
+            <tr>
+              <td>gentle slope</td>
+              <td>設定を触らなくても業務完結できる設計にする</td>
+              <td>localStorageから始め、必要時だけファイル出力へ進む</td>
+            </tr>
+            <tr>
+              <td>検証重視</td>
+              <td>意図誤解、コーナーケース、幻覚APIを狙い撃ちする</td>
+              <td>自動テストに加えて、現場確認できる見える成果物を残す</td>
+            </tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="budget" class="tab-panel">
+      <div class="title-row"><h2>トークン節約</h2><span class="muted">期限 2026-07-14 / 原始人プロンプト</span></div>
+      <div class="body">
+        <div class="budget-grid">
+          <div class="budget-card"><strong>87%</strong><span>使用済み</span></div>
+          <div class="budget-card"><strong>13%</strong><span>残り</span></div>
+          <div class="budget-card"><strong>0日</strong><span>期限まで</span></div>
+          <div class="budget-card"><strong>13.00%</strong><span>1日上限</span></div>
+        </div>
+        <div class="prompt-box">
+          <strong>Keep it short, but do not remove accuracy notes, cautions, or code uncertainty.</strong>
+          <pre>Conclusion: &lt;answer first&gt;
+Reason: &lt;one line&gt;
+Steps: &lt;only what is needed&gt;
+Caution: &lt;important unknowns only&gt;
+Avoid: long preface, greeting, long background</pre>
+        </div>
+        <table>
+          <tbody>
+            <tr><td>運用</td><td>1タスク1目的。読むのは入口だけ。大ログ禁止。</td><td>低トークン</td></tr>
+            <tr><td>委任</td><td>他AIへ渡す前にBrief化し、Codexには統合と検証を担当させる。</td><td>継続</td></tr>
+            <tr><td>注意</td><td>残日数が0の場合は新しい期間に合わせてtoken-budget.jsonを更新する。</td><td>要更新</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="next" class="tab-panel">
+      <div class="title-row"><h2>次に進めるならここ</h2><span class="muted">優先順</span></div>
+      <div class="body next-list">
+        <div class="next-item"><strong>1. Briefテンプレートを増やす</strong><span class="muted">ゲーム、業務ツール、データ整理、素材生成を型にして依頼を短くする。</span></div>
+        <div class="next-item"><strong>2. 外部AIから戻る形式を固定する</strong><span class="muted">Markdown findings、JSON rows、CSV、small patchの4形式へ寄せる。</span></div>
+        <div class="next-item"><strong>3. Orbit Catcherを検証台にする</strong><span class="muted">スマホ操作、難易度、エクスポートを確認し、次のゲームの型にする。</span></div>
+        <div class="next-item"><strong>4. 各アプリに検証チェック欄を持たせる</strong><span class="muted">自動テストだけで終えず、現場確認メモを残せる形にする。</span></div>
+      </div>
+    </section>
+
+    <section id="apps" class="tab-panel">
+      <div class="title-row"><h2>登録済みアプリ</h2><span class="muted">10 apps / 11 projects</span></div>
+      <div class="body mini-grid">
+          <a class="mini-card" href="projects/token-flow-app/index.html">
+            <strong>Token Flow</strong>
+            <span>prototype / development</span>
+            <small>Codex節約開発のタスク分解・AI役割分担・Brief生成アプリ</small>
+          </a>
+          <a class="mini-card" href="projects/local-ai-output-cards/index.html">
+            <strong>Local AI Output Cards</strong>
+            <span>generated+export / local-ai</span>
+            <small>ローカルLLM生成をCodexが安全化した成果物カード管理アプリ。JSON出力対応</small>
+          </a>
+          <a class="mini-card" href="projects/local-ai-sample-planner/index.html">
+            <strong>Local AI Sample Planner</strong>
+            <span>generated+export / local-ai</span>
+            <small>ローカルLLM生成をCodexが安全化したサンプル成果物計画アプリ。JSON出力対応</small>
+          </a>
+          <a class="mini-card" href="projects/launcher-brief-draft/index.html">
+            <strong>Launcher Brief Draft</strong>
+            <span>draft / local-llm</span>
+            <small>Static launcher draft with localStorage request queue for app ideas</small>
+          </a>
+          <a class="mini-card" href="projects/media-control-panel/index.html">
+            <strong>Media Control Panel</strong>
+            <span>prototype+export / local-ai</span>
+            <small>Static command panel for Codex-owned image, music, and video generation wrappers with command export</small>
+          </a>
+          <a class="mini-card" href="projects/quick-notes-board/index.html">
+            <strong>Quick Notes Board</strong>
+            <span>usable+import / productivity</span>
+            <small>Tiny browser-local board for sorting, editing, importing, and exporting notes as JSON/Markdown</small>
+          </a>
+          <a class="mini-card" href="projects/orbit-catcher/index.html">
+            <strong>Orbit Catcher</strong>
+            <span>prototype+export / game</span>
+            <small>Canvas mini-game prototype with staged difficulty: collect sparks, avoid hazards, save a best score, and export result JSON or Markdown</small>
+          </a>
+          <a class="mini-card" href="projects/codex-data-pocket/index.html">
+            <strong>CODEX Data Pocket</strong>
+            <span>usable / data</span>
+            <small>Small Gate content for collecting records, importing pasted JSON, and exporting JSON, CSV, or Markdown for Google Drive CODEX data sync</small>
+          </a>
+          <a class="mini-card" href="projects/csd-web-designer-sample/index.html">
+            <strong>CSD Web Designer Sample</strong>
+            <span>sample+export / design</span>
+            <small>HTML First sample content based on GO/HOSHI shared web design know-how, with JSON and Markdown export</small>
+          </a>
+          <a class="mini-card" href="projects/csd-designer-showcase/index.html">
+            <strong>CSD Designer Showcase</strong>
+            <span>showcase+export / design</span>
+            <small>Designed CSD lane content showcase using a generated visual asset, responsive editorial layout, and JSON/Markdown export</small>
+          </a></div>
+    </section>
+
+    <section id="artifacts" class="tab-panel">
+      <div class="title-row"><h2>成果物</h2><span class="muted">AIへ渡せる材料と生成サンプル</span></div>
+      <div class="body table-group">
+        <div class="subhead"><strong>AIへ渡せる成果物台帳</strong><a href="data/artifact-capabilities.json">artifact-capabilities.json</a></div>
+        <table>
+          <thead><tr><th>成果物</th><th>種類</th><th>出力</th><th>渡し先</th><th>次の用途</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><a href="dashboard.html">Codex Status Dashboard</a></td>
+              <td>html-dashboard</td>
+              <td>visual status, capability matrix, token-saving workflow</td>
+              <td>ChatGPT, Claude, local LLM</td>
+              <td>Show what Codex can do, what is risky, and what to build next.</td>
+            </tr>
+            <tr>
+              <td><a href="app-launcher.html">Codex Apps Launcher</a></td>
+              <td>html-launcher</td>
+              <td>request JSON, brief markdown</td>
+              <td>Codex, local LLM</td>
+              <td>Capture small app requests and convert them into short briefs.</td>
+            </tr>
+            <tr>
+              <td><a href="projects/codex-data-pocket/index.html">CODEX Data Pocket</a></td>
+              <td>html-data-tool</td>
+              <td>JSON, CSV, Markdown</td>
+              <td>ChatGPT, Claude, Google Sheets</td>
+              <td>Collect small structured records and pass them to analysis or reporting tools.</td>
+            </tr>
+            <tr>
+              <td><a href="projects/quick-notes-board/index.html">Quick Notes Board</a></td>
+              <td>html-productivity-tool</td>
+              <td>JSON, Markdown</td>
+              <td>ChatGPT, Claude, Codex</td>
+              <td>Turn rough notes into compact briefs, checklists, or implementation tasks.</td>
+            </tr>
+            <tr>
+              <td><a href="projects/orbit-catcher/index.html">Orbit Catcher</a></td>
+              <td>html-canvas-game</td>
+              <td>result JSON, result Markdown</td>
+              <td>Codex, game-design AI</td>
+              <td>Use as the first small game pattern for controls, scoring, storage, and export.</td>
+            </tr>
+            <tr>
+              <td><a href="projects/media-control-panel/index.html">Media Control Panel</a></td>
+              <td>html-command-panel</td>
+              <td>generation command text</td>
+              <td>ComfyUI workflow, Codex</td>
+              <td>Prepare image, music, and video generation commands without editing shared model data.</td>
+            </tr>
+            <tr>
+              <td><a href="data/external-ai-lanes.json">External AI Lanes</a></td>
+              <td>coordination-ledger</td>
+              <td>lane JSON, role split</td>
+              <td>ChatGPT, Claude, human reviewer</td>
+              <td>Choose the lowest-cost external lane before spending Codex tokens.</td>
+            </tr>
+            <tr>
+              <td><a href="templates/EXTERNAL_AI_BRIEF.md">External AI Brief Template</a></td>
+              <td>brief-template</td>
+              <td>compact prompt</td>
+              <td>ChatGPT, Claude, local LLM when re-enabled</td>
+              <td>Ask for bounded research, review, or patch suggestions without sharing large folders.</td>
+            </tr>
+            <tr>
+              <td><a href="knowledge/RECIPE_INDEX.md">Codex Recipe Index</a></td>
+              <td>knowledge-index</td>
+              <td>short entry point, operating recipe</td>
+              <td>Codex, ChatGPT, Claude</td>
+              <td>Start ecosystem tasks from one short file instead of scanning the workspace.</td>
+            </tr>
+            <tr>
+              <td><a href="data/codex-lanes.json">CODEX Lane Ledger</a></td>
+              <td>coordination-ledger</td>
+              <td>lane JSON, PDCA status, next tickets</td>
+              <td>Codex, Claude, ChatGPT</td>
+              <td>Show which bounded CODEX lane should run next and what acceptance it needs.</td>
+            </tr>
+            <tr>
+              <td><a href="templates/LANE_TICKET.md">CODEX Lane Ticket Template</a></td>
+              <td>ticket-template</td>
+              <td>compact implementation ticket</td>
+              <td>Codex, Claude, ChatGPT</td>
+              <td>Turn Claude lane output or user goals into one executable CODEX task.</td>
+            </tr>
+            <tr>
+              <td><a href="memory/CODEX_LANE_RESTART_2026-07-23.md">CODEX Lane Restart Memo</a></td>
+              <td>restart-memo</td>
+              <td>latest state, Claude lane lessons, CODEX adaptation</td>
+              <td>Codex, Claude, ChatGPT</td>
+              <td>Resume CODEX development without re-reading broad folders.</td>
+            </tr>
+            <tr>
+              <td><a href="data/csd-action-items.json">CSD Action Items</a></td>
+              <td>action-ledger</td>
+              <td>caution actions, not-yet actions, lane ticket hints</td>
+              <td>Codex, Claude, ChatGPT, human reviewer</td>
+              <td>Turn CSD caution and not-yet items into concrete lane tickets or explicit deferrals.</td>
+            </tr>
+            <tr>
+              <td><a href="data/csd-lane-trials.json">CSD Lane Trials</a></td>
+              <td>trial-ledger</td>
+              <td>trial results, Claude know-how, next lane ticket</td>
+              <td>Codex, Claude, ChatGPT, human reviewer</td>
+              <td>Confirm that CSD lanes have been exercised and decide the next bounded ticket.</td>
+            </tr>
+            <tr>
+              <td><a href="projects/csd-web-designer-sample/index.html">CSD Web Designer Sample</a></td>
+              <td>html-design-sample</td>
+              <td>JSON, Markdown</td>
+              <td>Codex, Claude, ChatGPT, human reviewer</td>
+              <td>Use as the first CODEX-owned sample content made from GO/HOSHI web design know-how.</td>
+            </tr>
+            <tr>
+              <td><a href="projects/csd-designer-showcase/index.html">CSD Designer Showcase</a></td>
+              <td>html-design-showcase</td>
+              <td>JSON, Markdown, visual content</td>
+              <td>Codex, Claude, ChatGPT, human reviewer</td>
+              <td>Use as the stronger web-design example for CSD lane-created content and exportable handoff.</td>
+            </tr></tbody>
+        </table>
+        <div class="subhead"><strong>最近のローカルAI成果物</strong><a href="local_ai/gallery.html">gallery.html</a></div>
+        <table>
+          <thead><tr><th>種類</th><th>成果物</th><th>状態</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>code</td>
+              <td><a href="projects/local-ai-output-cards/index.html">Local AI Output Cards</a></td>
+              <td>generated</td>
+            </tr>
+            <tr>
+              <td>code</td>
+              <td><a href="projects/launcher-brief-draft/index.html">Launcher Brief Draft</a></td>
+              <td>draft</td>
+            </tr>
+            <tr>
+              <td>code</td>
+              <td><a href="local_llm/outputs/capability-code-test-20260707-115814.md">Capability Code Test</a></td>
+              <td>verified</td>
+            </tr>
+            <tr>
+              <td>image</td>
+              <td><a href="local_ai/outputs/image/capability-image-test-20260707-115857.png">Capability Image Test</a></td>
+              <td>generated</td>
+            </tr>
+            <tr>
+              <td>music</td>
+              <td><a href="local_ai/outputs/music/capability-audio-test-20260707-120034.wav">Capability Audio Test</a></td>
+              <td>generated</td>
+            </tr>
+            <tr>
+              <td>video</td>
+              <td><a href="local_ai/outputs/video/capability-video-test-20260707-120213.avi">Capability Video Test</a></td>
+              <td>generated</td>
+            </tr>
+            <tr>
+              <td>music</td>
+              <td><a href="local_ai/outputs/music/capability-ace-music-test-20260707-121042.mp3">Capability ACE-Step Music Test</a></td>
+              <td>generated</td>
+            </tr>
+            <tr>
+              <td>video</td>
+              <td><a href="local_ai/outputs/video/capability-ltxv-video-test-20260707-121351.mp4">Capability LTXV Video Test</a></td>
+              <td>generated</td>
+            </tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="settings" class="tab-panel">
+      <div class="title-row"><h2>設定</h2><span class="muted">C:\Codex trusted 適用済み</span></div>
+      <div class="body">
+        <table>
+          <tbody>
+            <tr><td>準備メモ</td><td><a href="memory/CODEX_SETTINGS_PREP.md">CODEX_SETTINGS_PREP.md</a></td><td>作成済み</td></tr>
+            <tr><td>最新バックアップ</td><td><code>archive\config-backups\config-20260707-145148.toml</code></td><td>復元用</td></tr>
+            <tr><td>適用変更</td><td><code>[projects.'c:\codex'] trust_level = "trusted"</code></td><td>適用済み</td></tr>
+            <tr><td>据え置き</td><td>model / approval / sandbox / plugins</td><td>現状で動いているため変更しない</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="system" class="tab-panel">
+      <div class="title-row"><h2>システム状態</h2><span class="muted">安全境界</span></div>
+      <div class="body">
+        <table>
+          <tbody>
+            <tr><td>Root</td><td><code>C:\Codex</code></td><td>Codex専用の作業場所</td></tr>
+            <tr><td>Local LLM</td><td><code>C:\Codex\local_llm</code></td><td>プロンプト、ログ、出力を分離</td></tr>
+            <tr><td>Local AI outputs</td><td><code>C:\Codex\local_ai\outputs</code></td><td>生成成果物の置き場</td></tr>
+            <tr><td>Shared data</td><td><code>C:\local_ai</code> / <code>C:\ollama*</code> / HOSHI</td><td>観察のみ。編集しない</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="tree" class="tab-panel">
+      <div class="title-row"><h2>ファイル構造</h2><span class="muted">C:\Codex</span></div>
+      <div class="body"><pre>C:\CODEX
+|   AGENTS.md
+|   app-launcher.html
+|   dashboard.html
+|   HOSHI_CODEX_TOKEN_ECONOMY_SPEC_2026-07-06.md
+|   HUB.md
+|   README.md
+|   
++---apps
+|       apps.json
+|       README.md
+|       
++---archive
+|   |   README.md
+|   |   
+|   \---config-backups
+|           config-20260707-145148.toml
+|           config-before-trust-codex-20260707-150719.toml
+|           
++---checklists
+|       END_SESSION.md
+|       LOCAL_LLM_TEST.md
+|       START_SESSION.md
+|       
++---cloud_ai
+|       CHATGPT_TO_CODEX_BRIEF.md
+|       README.md
+|       
++---data
+|       artifact-capabilities.json
+|       codex-lanes.json
+|       csd-action-items.json
+|       csd-lane-trials.json
+|       external-ai-lanes.json
+|       gpu-policy.json
+|       local-ai-artifacts.json
+|       local-ai-routes.json
+|       status.json
+|       token-budget.json
+|       
++---handoffs
++---inbox
+|       CSD_LANE_TRIAL_2026-07-23.md
+|       README.md
+|       
++---knowledge
+|       RECIPE_INDEX.md
+|       
++---local_ai
+|   |   gallery.html
+|   |   README.md
+|   |   
+|   \---outputs
+|       +---code
+|       |       README.md
+|       |       
+|       +---image
+|       |       capability-image-test-20260707-115857.json
+|       |       capability-image-test-20260707-115857.png
+|       |       codex-image-sample-20260707-105818.json
+|       |       codex-image-sample-20260707-105818.png
+|       |       README.md
+|       |       
+|       +---music
+|       |       capability-ace-music-test-20260707-121042.json
+|       |       capability-ace-music-test-20260707-121042.mp3
+|       |       capability-audio-test-20260707-120034.json
+|       |       capability-audio-test-20260707-120034.wav
+|       |       README.md
+|       |       
+|       \---video
+|               capability-ltxv-video-test-20260707-121351.json
+|               capability-ltxv-video-test-20260707-121351.mp4
+|               capability-video-test-20260707-120213.avi
+|               capability-video-test-20260707-120213.json
+|               README.md
+|               
++---local_llm
+|   |   ALTERNATIVES.md
+|   |   MODEL_INVENTORY.md
+|   |   MODEL_POLICY.md
+|   |   README.md
+|   |   
+|   +---briefs
+|   |       launcher-request-quick-notes-board-20260707-154420.md
+|   |       launcher-request-test-20260706-221007.md
+|   |       
+|   +---logs
+|   |       brief-compression-14b-20260706-220753.txt
+|   |       brief-compression-14b-full-20260706-220813.txt
+|   |       capability-audio-spec-20260707-115945.request.json
+|   |       capability-audio-spec-20260707-115945.response.json
+|   |       capability-audio-spec-20260707-115945.txt
+|   |       capability-code-test-20260707-115814.request.json
+|   |       capability-code-test-20260707-115814.response.json
+|   |       capability-code-test-20260707-115814.txt
+|   |       capability-video-spec-20260707-120100.request.json
+|   |       capability-video-spec-20260707-120100.response.json
+|   |       capability-video-spec-20260707-120100.txt
+|   |       dev-loop-next-step-20260707-065521.request.json
+|   |       dev-loop-next-step-20260707-065521.response.json
+|   |       dev-loop-next-step-20260707-065521.txt
+|   |       gpu-policy-smoke-20260707-173552.txt
+|   |       launcher-brief-draft-one-step-20260707-112746.request.json
+|   |       launcher-brief-draft-one-step-20260707-112746.response.json
+|   |       launcher-brief-draft-one-step-20260707-112746.txt
+|   |       launcher-request-capture-20260707-114843.request.json
+|   |       launcher-request-capture-20260707-114843.response.json
+|   |       launcher-request-capture-20260707-114843.txt
+|   |       launcher-request-test-20260706-221007.txt
+|   |       local-llm-sample-app-20260707-084734.request.json
+|   |       local-llm-sample-app-20260707-084734.response.json
+|   |       local-llm-sample-app-20260707-084734.txt
+|   |       lock-smoke-20260707-065438.request.json
+|   |       lock-smoke-20260707-065438.txt
+|   |       lock-smoke-20260707-065450.request.json
+|   |       lock-smoke-20260707-065450.response.json
+|   |       lock-smoke-20260707-065450.txt
+|   |       ollama-check-20260706-175942.txt
+|   |       ollama-check-20260706-220227.txt
+|   |       ollama-check-20260707-061645.txt
+|   |       ollama-check-20260707-112734.txt
+|   |       ollama-check-20260707-114837.txt
+|   |       ollama-check-20260707-132042.txt
+|   |       ollama-check-20260707-133359.txt
+|   |       ollama-check-20260707-145208.txt
+|   |       request-validator-test-20260706-221007.txt
+|   |       sample-artifact-planner-20260707-091006.request.json
+|   |       sample-artifact-planner-20260707-091006.response.json
+|   |       sample-artifact-planner-20260707-091006.txt
+|   |       sample-generation-test-20260707-103607.request.json
+|   |       sample-generation-test-20260707-103607.response.json
+|   |       sample-generation-test-20260707-103607.txt
+|   |       smoke-14b-code-20260706-220323.txt
+|   |       smoke-1p5b-20260706-220312.txt
+|   |       
+|   +---outputs
+|   |       brief-compression-14b-20260706-220753.txt
+|   |       brief-compression-14b-full-20260706-220813.txt
+|   |       capability-audio-spec-20260707-115945.md
+|   |       capability-code-test-20260707-115814.md
+|   |       capability-video-spec-20260707-120100.md
+|   |       dev-loop-next-step-20260707-065521.md
+|   |       launcher-brief-draft-one-step-20260707-112746.md
+|   |       launcher-request-capture-20260707-114843.md
+|   |       local-llm-sample-app-20260707-084734.md
+|   |       lock-smoke-20260707-065450.txt
+|   |       request-validator-test-20260706-221007.md
+|   |       sample-artifact-planner-20260707-091006.md
+|   |       sample-generation-test-20260707-103607.md
+|   |       smoke-14b-code-20260706-220323.txt
+|   |       smoke-1p5b-20260706-220312.txt
+|   |       
+|   +---prompts
+|   |       brief-compression-14b-20260706-220753.txt
+|   |       brief-compression-14b-full-20260706-220813.txt
+|   |       brief-compression-sample.md
+|   |       gpu-policy-smoke-20260707-173552.txt
+|   |       lock-smoke-20260707-065438.txt
+|   |       lock-smoke-20260707-065450.txt
+|   |       smoke-14b-code-20260706-220323.txt
+|   |       smoke-1p5b-20260706-220312.txt
+|   |       
+|   +---scripts
+|   |   |   ask-coding-helper.ps1
+|   |   |   check-ollama.ps1
+|   |   |   compress-to-brief.ps1
+|   |   |   import-launcher-requests.ps1
+|   |   |   new-static-app-from-brief.ps1
+|   |   |   ollama-generate-with-lock.py
+|   |   |   process-launcher-request.ps1
+|   |   |   run-ollama-prompt.ps1
+|   |   |   
+|   |   \---__pycache__
+|   |           ollama-generate-with-lock.cpython-313.pyc
+|   |           
+|   \---tasks
+|           capability-audio-spec-20260707-115945.md
+|           capability-code-test-20260707-115814.md
+|           capability-video-spec-20260707-120100.md
+|           dev-loop-next-step-20260707-065521.md
+|           launcher-brief-draft-one-step-20260707-112746.md
+|           launcher-request-capture-20260707-114843.md
+|           local-llm-sample-app-20260707-084734.md
+|           request-validator-test-20260706-221007.md
+|           sample-artifact-planner-20260707-091006.md
+|           sample-generation-test-20260707-103607.md
+|           
++---logs
+|       codex-dashboard-http-8765.err.log
+|       codex-dashboard-http-8765.log
+|       codex-mobile-gate-8766.err.log
+|       codex-mobile-gate-8766.log
+|       codex-public-mobile-8766.err.log
+|       codex-public-mobile-8766.log
+|       comfyui-codex-start.err.log
+|       comfyui-codex-start.log
+|       localtunnel-codex-8766.err.log
+|       localtunnel-codex-8766.log
+|       ngrok-codex-8765.err.log
+|       ngrok-codex-8765.log
+|       PROGRESS.md
+|       
++---memory
+|       CODEX_ECOSYSTEM_PATTERN_FROM_CLAUDE.md
+|       CODEX_LANE_RESTART_2026-07-23.md
+|       CODEX_SETTINGS_PREP.md
+|       DECISIONS.md
+|       LOCAL_LLM_CODING_STRATEGY.md
+|       OPERATING_PRINCIPLES.md
+|       
++---mobile-gate
+|   |   icon.svg
+|   |   index.html
+|   |   manifest.webmanifest
+|   |   README.md
+|   |   sw.js
+|   |   
+|   \---latest
+|       |   app-launcher.html
+|       |   dashboard.html
+|       |   index.html
+|       |   
+|       +---codex-data-pocket
+|       |       index.html
+|       |       
+|       +---csd-designer-showcase
+|       |   |   index.html
+|       |   |   README.md
+|       |   |   
+|       |   \---assets
+|       |           csd-hero.png
+|       |           
+|       +---csd-web-designer-sample
+|       |       index.html
+|       |       README.md
+|       |       
+|       +---data
+|       |       codex-data-schema.json
+|       |       README.md
+|       |       seed-records.json
+|       |       
+|       +---orbit-catcher
+|       |       index.html
+|       |       README.md
+|       |       
+|       +---projects
+|       |   +---csd-designer-showcase
+|       |   |   |   index.html
+|       |   |   |   README.md
+|       |   |   |   
+|       |   |   \---assets
+|       |   |           csd-hero.png
+|       |   |           
+|       |   \---csd-web-designer-sample
+|       |           index.html
+|       |           README.md
+|       |           
+|       \---quick-notes-board
+|               index.html
+|               
++---pages-site
+|   |   .nojekyll
+|   |   icon.svg
+|   |   index.html
+|   |   manifest.webmanifest
+|   |   README.md
+|   |   sw.js
+|   |   
+|   \---latest
+|       |   app-launcher.html
+|       |   dashboard.html
+|       |   index.html
+|       |   
+|       +---codex-data-pocket
+|       |       index.html
+|       |       
+|       +---csd-designer-showcase
+|       |   |   index.html
+|       |   |   README.md
+|       |   |   
+|       |   \---assets
+|       |           csd-hero.png
+|       |           
+|       +---csd-web-designer-sample
+|       |       index.html
+|       |       README.md
+|       |       
+|       +---data
+|       |       codex-data-schema.json
+|       |       README.md
+|       |       seed-records.json
+|       |       
+|       +---orbit-catcher
+|       |       index.html
+|       |       README.md
+|       |       
+|       +---projects
+|       |   +---csd-designer-showcase
+|       |   |   |   index.html
+|       |   |   |   README.md
+|       |   |   |   
+|       |   |   \---assets
+|       |   |           csd-hero.png
+|       |   |           
+|       |   \---csd-web-designer-sample
+|       |           index.html
+|       |           README.md
+|       |           
+|       \---quick-notes-board
+|               index.html
+|               
++---projects
+|   +---codex-data-pocket
+|   |       index.html
+|   |       README.md
+|   |       
+|   +---codex-ecosystem
+|   |       MINIGAME_COMPOSITION_PLAN.md
+|   |       README.md
+|   |       TOKEN_SAVING_DEV_PLAN.md
+|   |       
+|   +---csd-designer-showcase
+|   |   |   index.html
+|   |   |   README.md
+|   |   |   
+|   |   \---assets
+|   |           csd-hero.png
+|   |           
+|   +---csd-web-designer-sample
+|   |       index.html
+|   |       README.md
+|   |       
+|   +---launcher-brief-draft
+|   |       index.html
+|   |       README.md
+|   |       
+|   +---local-ai-output-cards
+|   |       index.html
+|   |       README.md
+|   |       
+|   +---local-ai-sample-planner
+|   |       index.html
+|   |       README.md
+|   |       
+|   +---media-control-panel
+|   |       index.html
+|   |       README.md
+|   |       
+|   +---orbit-catcher
+|   |       index.html
+|   |       README.md
+|   |       
+|   +---quick-notes-board
+|   |       index.html
+|   |       README.md
+|   |       
+|   \---token-flow-app
+|           index.html
+|           README.md
+|           
++---public-mobile
+|   |   app-launcher.html
+|   |   dashboard.html
+|   |   index.html
+|   |   
+|   +---codex-data-pocket
+|   |       index.html
+|   |       
+|   +---csd-designer-showcase
+|   |   |   index.html
+|   |   |   README.md
+|   |   |   
+|   |   \---assets
+|   |           csd-hero.png
+|   |           
+|   +---csd-web-designer-sample
+|   |       index.html
+|   |       README.md
+|   |       
+|   +---data
+|   |       codex-data-schema.json
+|   |       README.md
+|   |       seed-records.json
+|   |       
+|   +---orbit-catcher
+|   |       index.html
+|   |       README.md
+|   |       
+|   +---projects
+|   |   +---csd-designer-showcase
+|   |   |   |   index.html
+|   |   |   |   README.md
+|   |   |   |   
+|   |   |   \---assets
+|   |   |           csd-hero.png
+|   |   |           
+|   |   \---csd-web-designer-sample
+|   |           index.html
+|   |           README.md
+|   |           
+|   \---quick-notes-board
+|           index.html
+|           
++---reports
+|       LOCAL_LLM_CAPABILITY_TEST_2026-07-07.md
+|       README.md
+|       SMALL_STEP_LOCAL_LLM_CODING_RESEARCH_2026-07-06.md
+|       
++---runbooks
+|       CONFIG_CHANGE_PROTOCOL.md
+|       DAILY_CODEX_FLOW.md
+|       FIXED_MOBILE_GATE.md
+|       LOCAL_AI_MEDIA_SAFE_ROUTE.md
+|       LOCAL_LLM_SETUP_HOME.md
+|       NO_LOCAL_LLM_CODING_MODE.md
+|       
++---scripts
+|   |   check-local-ai-routes.ps1
+|   |   generate-codex-ace-music-sample.py
+|   |   generate-codex-audio-sample.py
+|   |   generate-codex-image-sample.py
+|   |   generate-codex-ltxv-video-sample.py
+|   |   generate-codex-video-sample.py
+|   |   normalize-apps-json.mjs
+|   |   prepare-pages-publish.ps1
+|   |   sync-google-drive.ps1
+|   |   update-app-launcher.ps1
+|   |   update-dashboard.mjs
+|   |   update-dashboard.ps1
+|   |   update-local-ai-gallery.ps1
+|   |   update-status.ps1
+|   |   
+|   \---__pycache__
+|           generate-codex-image-sample.cpython-313.pyc
+|           
+\---templates
+        APP_REQUEST_BRIEF.md
+        EXTERNAL_AI_BRIEF.md
+        HANDOFF.md
+        LANE_TICKET.md
+        PROJECT_README.md
+        REVIEW_NOTE.md
+        SESSION_SUMMARY.md
+        TASK_NOTE.md
+        
+</pre></div>
+    </section>
+  </main>
+  <script>
+    document.querySelectorAll(".tabs button").forEach(function(button) {
+      button.addEventListener("click", function() {
+        document.querySelectorAll(".tabs button, .tab-panel").forEach(function(node) {
+          node.classList.remove("active");
+        });
+        button.classList.add("active");
+        document.getElementById(button.dataset.tab).classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>

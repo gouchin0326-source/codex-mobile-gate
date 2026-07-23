@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSD Web Designer Sample</title>
+  <style>
+    :root {
+      --bg:#f6f7fb; --panel:#ffffff; --ink:#172033; --sub:#667085; --line:#d8dee8;
+      --blue:#2563eb; --green:#15803d; --amber:#b45309; --red:#b42318; --navy:#10233f;
+      --soft-blue:#eaf1ff; --soft-green:#eaf8ef; --soft-amber:#fff6df; --shadow:0 8px 24px rgba(23,32,51,.08);
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:"Segoe UI", system-ui, sans-serif; line-height:1.6; letter-spacing:0; }
+    header { position:sticky; top:0; z-index:2; background:rgba(255,255,255,.94); border-bottom:1px solid var(--line); backdrop-filter:blur(10px); }
+    .top { max-width:1120px; margin:0 auto; padding:12px 16px; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+    h1 { margin:0; font-size:22px; line-height:1.25; }
+    h2 { margin:0; font-size:18px; }
+    h3 { margin:0; font-size:15px; }
+    p { margin:0; }
+    a { color:var(--blue); text-decoration:none; }
+    button { min-height:40px; border:1px solid var(--blue); background:var(--blue); color:#fff; border-radius:8px; padding:8px 12px; font:inherit; font-weight:700; cursor:pointer; }
+    button.secondary { background:#fff; color:var(--ink); border-color:var(--line); }
+    main { max-width:1120px; margin:0 auto; padding:14px 16px 24px; display:grid; gap:12px; }
+    section, .card, .visual, .note { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    section { padding:14px; display:grid; gap:12px; }
+    .lead { display:grid; grid-template-columns:1fr 340px; gap:12px; align-items:stretch; }
+    .hero-copy { background:var(--navy); color:#fff; border-radius:8px; padding:18px; display:grid; gap:12px; align-content:center; min-height:240px; }
+    .hero-copy strong { font-size:28px; line-height:1.2; }
+    .hero-copy span { color:#dbeafe; }
+    .visual { min-height:240px; padding:16px; display:grid; place-items:center; background:linear-gradient(135deg, #fff 0%, #f9fbff 100%); }
+    .orbit { width:min(100%, 280px); aspect-ratio:1; border:2px solid #dbe7ff; border-radius:999px; position:relative; display:grid; place-items:center; }
+    .orbit::before, .orbit::after { content:""; position:absolute; border:1px dashed #b6c7e7; border-radius:999px; }
+    .orbit::before { inset:34px; }
+    .orbit::after { inset:72px; }
+    .core { width:96px; height:96px; border-radius:999px; background:var(--blue); color:#fff; display:grid; place-items:center; text-align:center; font-weight:800; }
+    .node { position:absolute; min-width:64px; min-height:34px; padding:5px 8px; border-radius:999px; display:grid; place-items:center; font-size:12px; font-weight:700; border:1px solid var(--line); background:#fff; }
+    .n1 { top:4px; left:50%; transform:translateX(-50%); color:var(--blue); }
+    .n2 { right:-8px; top:43%; color:var(--green); }
+    .n3 { bottom:4px; left:50%; transform:translateX(-50%); color:var(--amber); }
+    .n4 { left:-8px; top:43%; color:var(--red); }
+    .grid { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:10px; }
+    .card { padding:12px; box-shadow:none; display:grid; gap:6px; min-width:0; }
+    .badge { display:inline-flex; width:max-content; min-height:26px; align-items:center; border-radius:999px; padding:3px 8px; font-size:12px; font-weight:700; border:1px solid var(--line); background:#fbfcfe; color:var(--sub); }
+    .badge.ok { background:var(--soft-green); color:var(--green); border-color:#b7e4c7; }
+    .badge.warn { background:var(--soft-amber); color:var(--amber); border-color:#f4d28b; }
+    .badge.blue { background:var(--soft-blue); color:var(--blue); border-color:#c7d7fe; }
+    .muted { color:var(--sub); font-size:13px; }
+    .steps { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:8px; }
+    .step { border:1px solid var(--line); border-radius:8px; padding:10px; background:#fbfcfe; display:grid; gap:5px; }
+    .step strong { color:var(--blue); }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th, td { padding:8px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { color:var(--sub); font-weight:700; }
+    .toolbar { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+    .status { min-height:22px; color:var(--sub); font-size:13px; }
+    .note { padding:10px; box-shadow:none; background:#fbfcfe; }
+    @media (max-width:860px) {
+      .lead { grid-template-columns:1fr; }
+      .grid, .steps { grid-template-columns:1fr; }
+      .top { align-items:flex-start; flex-direction:column; }
+      .hero-copy strong { font-size:24px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top">
+      <div>
+        <h1>CSD Web Designer Sample</h1>
+        <p class="muted">GO/HOSHI共有ノウハウを参考にした、CSD用サンプルコンテンツ</p>
+      </div>
+      <div class="toolbar">
+        <button id="exportJson">JSON</button>
+        <button class="secondary" id="exportMarkdown">Markdown</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="lead">
+      <div class="hero-copy">
+        <span>HTML First / やさしい日本語 / gentle slope</span>
+        <strong>レーンの考えを、見て使える形にする。</strong>
+        <p>このサンプルは、CSDに作ったレーンを「説明」だけで終わらせず、コンテンツ制作にも使えることを確認するための小さな実物です。</p>
+      </div>
+      <div class="visual" aria-label="CSDレーンの流れ">
+        <div class="orbit">
+          <div class="node n1">Plan</div>
+          <div class="node n2">Do</div>
+          <div class="node n3">Check</div>
+          <div class="node n4">Act</div>
+          <div class="core">CSD<br>Lane</div>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <h2>参考にしたノウハウ</h2>
+      <div class="grid">
+        <div class="card"><span class="badge blue">設計</span><h3>HTML First</h3><p>単一HTMLで開けます。ビルドなしで読み返せます。</p></div>
+        <div class="card"><span class="badge ok">文章</span><h3>やさしい日本語</h3><p>短い文にします。何をするかを先に書きます。</p></div>
+        <div class="card"><span class="badge warn">運用</span><h3>現物確認</h3><p>自動チェックだけで終わらせず、実物を開いて確認します。</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>レーンで作る流れ</h2>
+      <div class="steps">
+        <div class="step"><strong>Plan</strong><p>目的、対象、合格条件を1枚のチケットにします。</p></div>
+        <div class="step"><strong>Do</strong><p>C:\Codex 配下だけを編集します。共有元は読み取りだけです。</p></div>
+        <div class="step"><strong>Check</strong><p>構文、JSON、表示、コピー同期を確認します。</p></div>
+        <div class="step"><strong>Act</strong><p>CSD、ログ、次チケットへ戻します。</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>サンプルの検収表</h2>
+      <table>
+        <thead><tr><th>観点</th><th>内容</th><th>状態</th></tr></thead>
+        <tbody>
+          <tr><td>開ける形</td><td>単一HTML。外部通信なし。</td><td><span class="badge ok">OK</span></td></tr>
+          <tr><td>使える形</td><td>JSONとMarkdownを書き出せます。</td><td><span class="badge ok">OK</span></td></tr>
+          <tr><td>読みやすさ</td><td>短い文、見出し、表で構成しています。</td><td><span class="badge ok">OK</span></td></tr>
+          <tr><td>残り確認</td><td>実ブラウザでスマホ幅の見た目を確認します。</td><td><span class="badge warn">人の確認</span></td></tr>
+        </tbody>
+      </table>
+      <div class="note">
+        <strong>注意:</strong> これはCSDレーンの試作品です。公開、課金、GPU、共有元編集は含めません。
+      </div>
+      <div class="status" id="status" role="status" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script>
+    const sample = {
+      app: "csd-web-designer-sample",
+      title: "CSD Web Designer Sample",
+      source: "GO/HOSHI shared upper_design references, read-only",
+      pillars: ["HTML First", "やさしい日本語", "gentle slope", "export path", "real artifact check"],
+      lane: ["Plan", "Do", "Check", "Act"],
+      cautions: ["No GPU", "No shared-source edits", "No backend scope"]
+    };
+    const statusEl = document.querySelector("#status");
+    function downloadText(name, text, type) {
+      const blob = new Blob([text], { type });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = name;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+      statusEl.textContent = `${name} を書き出しました`;
+    }
+    document.querySelector("#exportJson").addEventListener("click", () => {
+      downloadText("csd-web-designer-sample.json", JSON.stringify({ exportedAt:new Date().toISOString(), ...sample }, null, 2), "application/json;charset=utf-8");
+    });
+    document.querySelector("#exportMarkdown").addEventListener("click", () => {
+      const lines = [
+        "# CSD Web Designer Sample",
+        "",
+        `- 書き出し: ${new Date().toISOString()}`,
+        `- 参照: ${sample.source}`,
+        `- レーン: ${sample.lane.join(" -> ")}`,
+        "",
+        "## 反映したこと",
+        ...sample.pillars.map((item) => `- ${item}`),
+        "",
+        "## 注意",
+        ...sample.cautions.map((item) => `- ${item}`)
+      ];
+      downloadText("csd-web-designer-sample.md", lines.join("\n"), "text/markdown;charset=utf-8");
+    });
+  </script>
+</body>
+</html>

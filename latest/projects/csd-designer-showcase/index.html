@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSD Designer Showcase</title>
+  <style>
+    :root {
+      --paper: #f7f3ea;
+      --sheet: #fffdf7;
+      --ink: #1a1d21;
+      --muted: #5f6670;
+      --line: #d9d1c3;
+      --blue: #155ec2;
+      --green: #2f7d4f;
+      --amber: #df9b21;
+      --rose: #b44c5f;
+      --shadow: 0 22px 60px rgba(33, 35, 38, .18);
+      font-family: "Segoe UI", "Meiryo", system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    a, button { font: inherit; }
+
+    .hero {
+      min-height: 92svh;
+      display: grid;
+      align-items: end;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background: url("assets/csd-hero.png") center / cover no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(247, 243, 234, .98) 0%, rgba(247, 243, 234, .84) 32%, rgba(247, 243, 234, .18) 64%),
+        linear-gradient(0deg, rgba(247, 243, 234, .98) 0%, rgba(247, 243, 234, .02) 42%);
+    }
+
+    .hero-inner,
+    main,
+    .site-footer {
+      width: min(1120px, calc(100% - 32px));
+      margin-inline: auto;
+    }
+
+    .hero-inner {
+      padding: 72px 0 80px;
+    }
+
+    .eyebrow {
+      width: fit-content;
+      margin: 0 0 20px;
+      padding: 6px 10px;
+      border: 1px solid rgba(26, 29, 33, .2);
+      background: rgba(255, 253, 247, .74);
+      color: var(--muted);
+      font-size: .86rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(2.6rem, 8vw, 6.5rem);
+      line-height: .95;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 620px;
+      margin: 24px 0 0;
+      color: #34383e;
+      font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      min-height: 44px;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: white;
+      padding: 10px 16px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .button.secondary {
+      background: rgba(255, 253, 247, .78);
+      color: var(--ink);
+    }
+
+    main { padding: 36px 0 56px; }
+
+    .section {
+      padding: 46px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(220px, 340px);
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 4vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .section-head p,
+    .quiet {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .feature-grid,
+    .lane-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .feature,
+    .lane-card,
+    .export-panel {
+      background: var(--sheet);
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 24px rgba(54, 48, 37, .08);
+    }
+
+    .feature {
+      min-height: 220px;
+      padding: 22px;
+      display: grid;
+      align-content: space-between;
+    }
+
+    .marker {
+      width: 42px;
+      height: 10px;
+      display: block;
+      margin-bottom: 24px;
+      background: var(--blue);
+    }
+
+    .feature:nth-child(2) .marker { background: var(--green); }
+    .feature:nth-child(3) .marker { background: var(--amber); }
+
+    .feature h3,
+    .lane-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .feature p,
+    .lane-card p { margin: 0; color: #3d434b; }
+
+    .showcase-band {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .visual-board {
+      min-height: 430px;
+      padding: 22px;
+      background:
+        linear-gradient(135deg, rgba(21, 94, 194, .12), transparent 36%),
+        linear-gradient(315deg, rgba(47, 125, 79, .14), transparent 42%),
+        #15181c;
+      color: white;
+      display: grid;
+      gap: 14px;
+      grid-template-rows: auto 1fr;
+      overflow: hidden;
+    }
+
+    .board-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      color: #d6dde6;
+      font-weight: 800;
+    }
+
+    .board-canvas {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      align-items: end;
+    }
+
+    .meter-stack {
+      display: grid;
+      gap: 10px;
+      align-content: end;
+    }
+
+    .meter {
+      min-height: 54px;
+      padding: 12px;
+      border: 1px solid rgba(255, 255, 255, .16);
+      background: rgba(255, 255, 255, .08);
+    }
+
+    .meter b { display: block; font-size: 1.5rem; line-height: 1.1; }
+    .meter span { color: #b8c0ca; font-size: .88rem; }
+
+    .lane-rhythm {
+      height: 260px;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 8px;
+      align-items: end;
+    }
+
+    .lane-rhythm i {
+      display: block;
+      min-height: 28px;
+      background: var(--blue);
+    }
+
+    .lane-rhythm i:nth-child(2n) { background: var(--green); }
+    .lane-rhythm i:nth-child(3n) { background: var(--amber); }
+    .lane-rhythm i:nth-child(5n) { background: var(--rose); }
+
+    .export-panel {
+      padding: 24px;
+      display: grid;
+      align-content: space-between;
+      gap: 20px;
+    }
+
+    .export-panel textarea {
+      width: 100%;
+      min-height: 240px;
+      resize: vertical;
+      border: 1px solid var(--line);
+      background: #fffaf0;
+      padding: 14px;
+      color: #24272b;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: .9rem;
+      line-height: 1.5;
+    }
+
+    .lane-card { padding: 20px; }
+
+    .lane-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      background: #fbf6eb;
+      color: #34383e;
+      padding: 4px 8px;
+      font-size: .82rem;
+      font-weight: 800;
+    }
+
+    .site-footer {
+      padding: 28px 0 44px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    @media (max-width: 820px) {
+      .hero { min-height: 86svh; }
+      .hero::after {
+        background:
+          linear-gradient(90deg, rgba(247, 243, 234, .98), rgba(247, 243, 234, .68)),
+          linear-gradient(0deg, rgba(247, 243, 234, .98), rgba(247, 243, 234, .28));
+      }
+
+      .section-head,
+      .showcase-band,
+      .board-canvas {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-grid,
+      .lane-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .visual-board { min-height: auto; }
+      .lane-rhythm { height: 180px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">CSD / Web Designer Lane / 2026-07-23</p>
+      <h1>CSD Designer Showcase</h1>
+      <p class="lead">CODEXのレーン成果を、ただの表ではなく、見て判断できるコンテンツとしてまとめる試作です。</p>
+      <div class="hero-actions">
+        <a class="button" href="#content">内容を見る</a>
+        <button class="button secondary" type="button" data-export="json">JSON出力</button>
+        <button class="button secondary" type="button" data-export="markdown">Markdown出力</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="section">
+      <div class="section-head">
+        <h2>デザインで判断を速くする。</h2>
+        <p>CSDの目的は、作業ログを増やすことではなく、次に動ける状態を短時間で作ることです。</p>
+      </div>
+      <div class="feature-grid" aria-label="Design principles">
+        <article class="feature">
+          <div>
+            <span class="marker" aria-hidden="true"></span>
+            <h3>HTML First</h3>
+            <p>単体で開ける。読める。壊れたときに直しやすい。軽い成果物を優先します。</p>
+          </div>
+          <p class="quiet">No build step</p>
+        </article>
+        <article class="feature">
+          <div>
+            <span class="marker" aria-hidden="true"></span>
+            <h3>Gentle Slope</h3>
+            <p>設定を触らなくても読める。必要な人だけ、出力や細部へ進めます。</p>
+          </div>
+          <p class="quiet">Start useful</p>
+        </article>
+        <article class="feature">
+          <div>
+            <span class="marker" aria-hidden="true"></span>
+            <h3>Export Path</h3>
+            <p>見た内容をJSONかMarkdownで渡せる。次のAIや人へ小さく引き継げます。</p>
+          </div>
+          <p class="quiet">Portable result</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>レーンの状態を、画面でつかむ。</h2>
+        <p>レーンはPDCAの作業単位です。今は大きな統合より、短く回せる成果物の量産を優先します。</p>
+      </div>
+      <div class="showcase-band">
+        <div class="visual-board" aria-label="CSD visual board">
+          <div class="board-top">
+            <span>CSD Signal Board</span>
+            <span>3 lanes active</span>
+          </div>
+          <div class="board-canvas">
+            <div class="meter-stack">
+              <div class="meter"><b>Plan</b><span>目的、入力、出力、検証を固定</span></div>
+              <div class="meter"><b>Do</b><span>C:\Codex配下で小さく実装</span></div>
+              <div class="meter"><b>Check</b><span>構文、JSON、表示、同期を確認</span></div>
+              <div class="meter"><b>Act</b><span>CSDへ登録し、次の券を残す</span></div>
+            </div>
+            <div class="lane-rhythm" aria-hidden="true">
+              <i style="height:44%"></i>
+              <i style="height:62%"></i>
+              <i style="height:38%"></i>
+              <i style="height:82%"></i>
+              <i style="height:55%"></i>
+              <i style="height:74%"></i>
+              <i style="height:46%"></i>
+              <i style="height:92%"></i>
+            </div>
+          </div>
+        </div>
+        <div class="export-panel">
+          <div>
+            <h3>出力プレビュー</h3>
+            <p class="quiet">ボタンを押すと、このコンテンツの要点を引き継ぎ用に整形します。</p>
+          </div>
+          <textarea id="exportBox" aria-label="Export preview" readonly></textarea>
+          <div class="hero-actions">
+            <button class="button" type="button" data-copy>コピー</button>
+            <button class="button secondary" type="button" data-reset>初期表示</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>今回の成果物。</h2>
+        <p>Claude側のレーン運用を参考にしつつ、CODEXではCSDに登録できる小さな完成品として着地させます。</p>
+      </div>
+      <div class="lane-grid">
+        <article class="lane-card">
+          <h3>目的</h3>
+          <p>CSDで「作ったレーン」を見せるだけでなく、そのレーンが生むコンテンツ品質を確認する。</p>
+          <div class="lane-meta"><span class="pill">Web design</span><span class="pill">CSD</span></div>
+        </article>
+        <article class="lane-card">
+          <h3>検証</h3>
+          <p>HTMLのスクリプト構文、JSON台帳、ダッシュボード生成、公開コピー同期まで確認する。</p>
+          <div class="lane-meta"><span class="pill">Check</span><span class="pill">Export</span></div>
+        </article>
+        <article class="lane-card">
+          <h3>次の一手</h3>
+          <p>CSD自体の文字化け修正と、デザインサンプルのブラウザ実機確認を短い券に分ける。</p>
+          <div class="lane-meta"><span class="pill">Act</span><span class="pill">Next ticket</span></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    CODEX-owned sample. Reference material: GO/HOSHI upper design knowledge, used read-only.
+  </footer>
+
+  <script>
+    const content = {
+      id: "csd-designer-showcase",
+      title: "CSD Designer Showcase",
+      date: "2026-07-23",
+      purpose: "Use web design to turn CSD lane output into a viewable, exportable content artifact.",
+      principles: ["HTML First", "Gentle Slope", "Export Path"],
+      checks: ["inline script syntax", "JSON registry parse", "dashboard generation", "public copy sync"],
+      next: "Clean CSD mojibake labels and run a browser visual check for designer samples."
+    };
+
+    const exportBox = document.querySelector("#exportBox");
+
+    function toMarkdown(data) {
+      return [
+        `# ${data.title}`,
+        "",
+        `- Date: ${data.date}`,
+        `- Purpose: ${data.purpose}`,
+        `- Principles: ${data.principles.join(", ")}`,
+        `- Checks: ${data.checks.join(", ")}`,
+        `- Next: ${data.next}`
+      ].join("\n");
+    }
+
+    function setExport(mode) {
+      exportBox.value = mode === "markdown"
+        ? toMarkdown(content)
+        : JSON.stringify(content, null, 2);
+    }
+
+    document.querySelectorAll("[data-export]").forEach((button) => {
+      button.addEventListener("click", () => setExport(button.dataset.export));
+    });
+
+    document.querySelector("[data-copy]").addEventListener("click", async () => {
+      exportBox.select();
+      await navigator.clipboard.writeText(exportBox.value);
+    });
+
+    document.querySelector("[data-reset]").addEventListener("click", () => setExport("json"));
+
+    setExport("json");
+  </script>
+</body>
+</html>

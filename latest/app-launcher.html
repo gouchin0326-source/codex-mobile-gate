@@ -1,0 +1,215 @@
+﻿<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Codex Apps</title>
+  <style>
+    :root { --bg:#f5f7fa; --panel:#fff; --ink:#172033; --muted:#667085; --line:#d9dee7; --blue:#2563eb; --green:#16803c; --amber:#b45309; --shadow:0 6px 18px rgba(24,35,55,.08); }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:"Segoe UI", system-ui, sans-serif; background:var(--bg); color:var(--ink); letter-spacing:0; }
+    header { padding:14px 16px; background:var(--panel); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:1; }
+    h1 { margin:0 0 4px; font-size:22px; }
+    .sub { color:var(--muted); font-size:12px; }
+    main { padding:12px; display:grid; gap:10px; }
+    .metrics { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+    .metric, .card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
+    .metric { padding:10px; }
+    .metric b { display:block; font-size:20px; }
+    .metric span { color:var(--muted); font-size:11px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:10px; }
+    .card { padding:12px; border-left:4px solid var(--blue); }
+    .card.prototype { border-left-color:var(--green); }
+    .card.generated { border-left-color:var(--amber); }
+    .card h2 { margin:0 0 6px; font-size:16px; overflow-wrap:anywhere; }
+    .card p { margin:0 0 10px; color:var(--muted); font-size:13px; line-height:1.4; }
+    .pill { display:inline-block; border:1px solid var(--line); border-radius:999px; padding:2px 8px; font-size:11px; color:var(--muted); margin-right:4px; }
+    a.button { display:inline-block; margin-top:10px; padding:8px 10px; border-radius:8px; background:var(--blue); color:#fff; text-decoration:none; font-weight:700; font-size:13px; }
+    label { display:block; color:var(--muted); font-size:12px; margin:0 0 4px; }
+    input, textarea, select { width:100%; border:1px solid var(--line); border-radius:8px; padding:10px; font:inherit; color:var(--ink); background:#fff; }
+    textarea { min-height:78px; resize:vertical; }
+    .field { margin-bottom:9px; }
+    .row { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+    button { border:1px solid var(--blue); background:var(--blue); color:#fff; border-radius:8px; padding:10px 12px; font-weight:700; width:100%; }
+    .request-list { display:grid; gap:8px; }
+    .request { background:#fff; border:1px solid var(--line); border-left:4px solid var(--green); border-radius:8px; padding:10px; }
+    .request strong { display:block; font-size:14px; margin-bottom:4px; }
+    .request p { margin:0 0 6px; color:var(--muted); font-size:12px; line-height:1.35; }
+    .small { color:var(--muted); font-size:11px; }
+    @media (max-width:800px) { .metrics { grid-template-columns:repeat(3,1fr); } .metric { padding:8px; } .metric b { font-size:16px; } .row { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Codex Apps</h1>
+    <div class="sub">Generated from apps.json / Codex-owned local apps</div>
+  </header>
+  <main>
+    <div class="metrics">
+      <div class="metric"><b>10</b><span>Registered</span></div>
+      <div class="metric"><b>1</b><span>Prototype</span></div>
+      <div class="metric"><b>0</b><span>Generated</span></div>
+    </div>
+    <section class="grid">
+      <article class="card prototype">
+        <h2>Token Flow</h2>
+        <p>Codex節約開発のタスク分解・AI役割分担・Brief生成アプリ</p>
+        <span class="pill">prototype</span>
+        <span class="pill">development</span>
+        <br>
+        <a class="button" href="projects/token-flow-app/index.html">Open</a>
+      </article>
+      <article class="card draft">
+        <h2>Local AI Output Cards</h2>
+        <p>ローカルLLM生成をCodexが安全化した成果物カード管理アプリ。JSON出力対応</p>
+        <span class="pill">generated+export</span>
+        <span class="pill">local-ai</span>
+        <br>
+        <a class="button" href="projects/local-ai-output-cards/index.html">Open</a>
+      </article>
+      <article class="card draft">
+        <h2>Local AI Sample Planner</h2>
+        <p>ローカルLLM生成をCodexが安全化したサンプル成果物計画アプリ。JSON出力対応</p>
+        <span class="pill">generated+export</span>
+        <span class="pill">local-ai</span>
+        <br>
+        <a class="button" href="projects/local-ai-sample-planner/index.html">Open</a>
+      </article>
+      <article class="card draft">
+        <h2>Launcher Brief Draft</h2>
+        <p>Static launcher draft with localStorage request queue for app ideas</p>
+        <span class="pill">draft</span>
+        <span class="pill">local-llm</span>
+        <br>
+        <a class="button" href="projects/launcher-brief-draft/index.html">Open</a>
+      </article>
+      <article class="card draft">
+        <h2>Media Control Panel</h2>
+        <p>Static command panel for Codex-owned image, music, and video generation wrappers with command export</p>
+        <span class="pill">prototype+export</span>
+        <span class="pill">local-ai</span>
+        <br>
+        <a class="button" href="projects/media-control-panel/index.html">Open</a>
+      </article>
+      <article class="card draft">
+        <h2>Quick Notes Board</h2>
+        <p>Tiny browser-local board for sorting, editing, importing, and exporting notes as JSON/Markdown</p>
+        <span class="pill">usable+import</span>
+        <span class="pill">productivity</span>
+        <br>
+        <a class="button" href="projects/quick-notes-board/index.html">Open</a>
+      </article>
+      <article class="card draft">
+        <h2>Orbit Catcher</h2>
+        <p>Canvas mini-game prototype with staged difficulty: collect sparks, avoid hazards, save a best score, and export result JSON or Markdown</p>
+        <span class="pill">prototype+export</span>
+        <span class="pill">game</span>
+        <br>
+        <a class="button" href="projects/orbit-catcher/index.html">Open</a>
+      </article>
+      <article class="card draft">
+        <h2>CODEX Data Pocket</h2>
+        <p>Small Gate content for collecting records, importing pasted JSON, and exporting JSON, CSV, or Markdown for Google Drive CODEX data sync</p>
+        <span class="pill">usable</span>
+        <span class="pill">data</span>
+        <br>
+        <a class="button" href="projects/codex-data-pocket/index.html">Open</a>
+      </article>
+      <article class="card draft">
+        <h2>CSD Web Designer Sample</h2>
+        <p>HTML First sample content based on GO/HOSHI shared web design know-how, with JSON and Markdown export</p>
+        <span class="pill">sample+export</span>
+        <span class="pill">design</span>
+        <br>
+        <a class="button" href="projects/csd-web-designer-sample/index.html">Open</a>
+      </article>
+      <article class="card draft">
+        <h2>CSD Designer Showcase</h2>
+        <p>Designed CSD lane content showcase using a generated visual asset, responsive editorial layout, and JSON/Markdown export</p>
+        <span class="pill">showcase+export</span>
+        <span class="pill">design</span>
+        <br>
+        <a class="button" href="projects/csd-designer-showcase/index.html">Open</a>
+      </article>
+    </section>
+    <section class="card">
+      <h2>App Request</h2>
+      <p>Save small app ideas in this browser. Codex can later turn one into a brief and static app.</p>
+      <div class="field">
+        <label>App idea</label>
+        <input id="appName" placeholder="Example: classify shopping notes">
+      </div>
+      <div class="field">
+        <label>Acceptance</label>
+        <textarea id="appNeed" placeholder="Example: show food, daily goods, and other buckets"></textarea>
+      </div>
+      <div class="row">
+        <div class="field">
+          <label>Input</label>
+          <select id="appInput">
+            <option>text</option>
+            <option>voice note plan</option>
+            <option>file input plan</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Helper</label>
+          <select id="appHelper">
+            <option>Codex only</option>
+            <option>Local LLM brief</option>
+            <option>ChatGPT summary</option>
+          </select>
+        </div>
+      </div>
+      <button id="addRequest">Add Request</button>
+    </section>
+    <section class="card">
+      <h2>Request Queue</h2>
+      <div id="requests" class="request-list"></div>
+    </section>
+  </main>
+  <script>
+    const key = "codex-app-requests-v1";
+    let requests = JSON.parse(localStorage.getItem(key) || "[]");
+    function save() { localStorage.setItem(key, JSON.stringify(requests)); }
+    function el(tag, text, className) {
+      const node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text !== undefined) node.textContent = text;
+      return node;
+    }
+    function render() {
+      const root = document.getElementById("requests");
+      root.replaceChildren();
+      if (!requests.length) {
+        root.appendChild(el("div", "No requests", "small"));
+        return;
+      }
+      requests.forEach((r) => {
+        const item = el("div", "", "request");
+        item.appendChild(el("strong", r.name || "Untitled"));
+        item.appendChild(el("p", r.need || ""));
+        item.appendChild(el("div", (r.input || "-") + " / " + (r.helper || "-"), "small"));
+        root.appendChild(item);
+      });
+    }
+    document.getElementById("addRequest").onclick = function() {
+      const name = document.getElementById("appName").value.trim();
+      const need = document.getElementById("appNeed").value.trim();
+      if (!name || !need) return;
+      requests.unshift({
+        name,
+        need,
+        input: document.getElementById("appInput").value,
+        helper: document.getElementById("appHelper").value,
+        created: new Date().toISOString()
+      });
+      document.getElementById("appName").value = "";
+      document.getElementById("appNeed").value = "";
+      save();
+      render();
+    };
+    render();
+  </script>
+</body>
+</html>
