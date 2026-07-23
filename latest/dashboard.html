@@ -78,7 +78,7 @@
 <body>
   <header>
     <h1>Codex Status Dashboard</h1>
-    <div class="sub">C:\Codex / 更新 2026/7/23 18:34:18 / トークン節約で成果物を増やす作業環境</div>
+    <div class="sub">C:\Codex / 更新 2026/7/24 7:19:48 / トークン節約で成果物を増やす作業環境</div>
   </header>
   <main>
     <div class="hero">
@@ -87,7 +87,7 @@
         <div class="muted">Plus枠のCodexを、重い生成担当ではなく、成果物を整理し、他AIへ渡せる形に統合する管制塔として使います。小さく作り、出力を残し、次のAIが読める材料へ変換していく方針です。</div>
         <div class="status-line">
           <span class="pill ok">LLM: ok</span>
-          <span class="pill ok">ComfyUI: ok</span>
+          <span class="pill ok">ComfyUI: unreachable</span>
           <span class="pill warn">GPU lock: free</span>
           <span class="pill danger">Codex GPU: disabled</span>
           <span class="pill ok">C:\Codex trusted: yes</span>
@@ -177,7 +177,7 @@
               <td><span class="badge">できる</span></td>
               <td>出力</td>
               <td><a href="data/artifact-capabilities.json">成果物台帳</a></td>
-              <td>16件の成果物について、出力形式と次に渡せるAIを記録</td>
+              <td>17件の成果物について、出力形式と次に渡せるAIを記録</td>
             </tr>
             <tr class="ok">
               <td><span class="badge">できる</span></td>
@@ -189,7 +189,7 @@
               <td><span class="badge">できる</span></td>
               <td>司令塔</td>
               <td><a href="data/codex-lanes.json">CODEX PDCAレーン</a></td>
-              <td>5本のCODEX内レーンを可視化。チケットから検収記録まで小さく回す</td>
+              <td>6本のCODEX内レーンを可視化。チケットから検収記録まで小さく回す</td>
             </tr>
             <tr class="ok">
               <td><span class="badge">できる</span></td>
@@ -359,11 +359,19 @@
               <td>Create a stronger web-design showcase content artifact and make it visible through CSD.</td>
               <td>Run inline-script checks, JSON registry checks, dashboard generation, and public-copy sync.</td>
               <td>Run browser visual checks for CSD Designer Showcase and clean CSD mojibake labels.</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">done</span></td>
+              <td>csd-lane-trial-2026-07-24-001</td>
+              <td>Cat Affinity Lane -&gt; Static Tool Lane</td>
+              <td>Create an actual content lane from the theme: make people more interested in cats.</td>
+              <td>Run inline-script checks, JSON registry checks, dashboard generation, public-copy sync, and CG visibility checks.</td>
+              <td>Add optional purr sound using shared procedural sound recipe and a too-much-touch response state.</td>
             </tr></tbody>
         </table>
         <div class="subhead"><strong>Claude側から取得したノウハウ</strong><span>今回の試行に使った要点</span></div>
         <table>
-          <tbody><tr><td>Lane output should become a usable artifact, not only a status note.</td></tr><tr><td>Visual control planes should make purpose, state, check, and next action visible quickly.</td></tr><tr><td>High-quality repeated output depends on a compact ticket, fixed acceptance, and reusable export shape.</td></tr><tr><td>Use actual visual material when judging web-design quality.</td></tr><tr><td>Keep the artifact portable so another AI or reviewer can continue from a small export.</td></tr></tbody>
+          <tbody><tr><td>A lane is not an explanation; it includes the artifact, ledger update, QC, and dashboard listing.</td></tr><tr><td>Single HTML, offline-friendly content and export routes are preferred for cloud/GO-style lanes.</td></tr><tr><td>Reuse asset/design/response patterns so future lanes cost less and keep quality.</td></tr><tr><td>CG is the main listing surface; CSD remains the detailed check surface.</td></tr><tr><td>Small interaction should feel like response, not just decoration.</td></tr></tbody>
         </table>
       </div>
     </section>
@@ -457,17 +465,17 @@
             <tr>
               <td>dashboard.html</td>
               <td>司令塔HTML</td>
-              <td>2026/7/23 18:24:16</td>
+              <td>2026/7/23 18:34:18</td>
             </tr>
             <tr>
               <td>app-launcher.html</td>
               <td>アプリ入口</td>
-              <td>2026/7/23 18:34:17</td>
+              <td>2026/7/24 7:19:45</td>
             </tr>
             <tr>
               <td>public-mobile</td>
               <td>モバイル用latest素材</td>
-              <td>2026/7/23 18:24:17</td>
+              <td>2026/7/23 18:34:19</td>
             </tr>
             <tr>
               <td>pages-site</td>
@@ -477,7 +485,7 @@
             <tr>
               <td>artifact-capabilities.json</td>
               <td>AI handoff台帳</td>
-              <td>2026/7/23 17:30:53</td>
+              <td>2026/7/24 7:19:00</td>
             </tr>
             <tr>
               <td>external-ai-lanes.json</td>
@@ -487,7 +495,7 @@
             <tr>
               <td>codex-lanes.json</td>
               <td>CODEX PDCAレーン台帳</td>
-              <td>2026/7/23 17:31:05</td>
+              <td>2026/7/24 7:19:00</td>
             </tr></tbody>
         </table>
       </div>
@@ -560,6 +568,14 @@
               <td>Run HTML inline-script checks, JSON checks, dashboard generation, and public copy sync.</td>
               <td>Register the sample and showcase in apps, artifacts, CSD lane trials, and progress logs.</td>
               <td>Run browser visual checks for the CSD design samples on desktop and mobile widths.</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">cg-listed</span></td>
+              <td><a href="data/codex-lanes.json">Cat Affinity Lane</a></td>
+              <td>Create a small experience content lane that makes viewers more interested in cats.</td>
+              <td>Run HTML inline-script checks, JSON checks, CSD generation, public copy sync, and CG visibility checks.</td>
+              <td>List the lane on CG, register app/artifact/trial ledgers, and keep the next improvement ticket visible.</td>
+              <td>Add richer response patterns such as too-much-touch caution and optional procedural purr sound.</td>
             </tr>
             <tr class="stop">
               <td><span class="badge">paused</span></td>
@@ -691,7 +707,7 @@ Avoid: long preface, greeting, long background</pre>
     </section>
 
     <section id="apps" class="tab-panel">
-      <div class="title-row"><h2>登録済みアプリ</h2><span class="muted">10 apps / 11 projects</span></div>
+      <div class="title-row"><h2>登録済みアプリ</h2><span class="muted">11 apps / 12 projects</span></div>
       <div class="body mini-grid">
           <a class="mini-card" href="projects/token-flow-app/index.html">
             <strong>Token Flow</strong>
@@ -742,6 +758,11 @@ Avoid: long preface, greeting, long background</pre>
             <strong>CSD Designer Showcase</strong>
             <span>showcase+export / design</span>
             <small>Designed CSD lane content showcase using a generated visual asset, responsive editorial layout, and JSON/Markdown export</small>
+          </a>
+          <a class="mini-card" href="projects/cat-affinity-lane/index.html">
+            <strong>Cat Affinity Lane</strong>
+            <span>lane+content+export / experience</span>
+            <small>CG-listed cat appreciation content lane with generated visual asset, touch-like interaction, and JSON/Markdown export</small>
           </a></div>
     </section>
 
@@ -863,6 +884,13 @@ Avoid: long preface, greeting, long background</pre>
               <td>JSON, Markdown, visual content</td>
               <td>Codex, Claude, ChatGPT, human reviewer</td>
               <td>Use as the stronger web-design example for CSD lane-created content and exportable handoff.</td>
+            </tr>
+            <tr>
+              <td><a href="projects/cat-affinity-lane/index.html">Cat Affinity Lane</a></td>
+              <td>html-experience-lane</td>
+              <td>JSON, Markdown, visual content</td>
+              <td>Codex, Claude, ChatGPT, human reviewer</td>
+              <td>Use as the first CG-listed content lane created from the shared lane production method.</td>
             </tr></tbody>
         </table>
         <div class="subhead"><strong>最近のローカルAI成果物</strong><a href="local_ai/gallery.html">gallery.html</a></div>
@@ -1164,7 +1192,10 @@ Avoid: long preface, greeting, long background</pre>
 |   \---latest
 |       |   app-launcher.html
 |       |   dashboard.html
+|       |   icon.svg
 |       |   index.html
+|       |   manifest.webmanifest
+|       |   sw.js
 |       |   
 |       +---codex-data-pocket
 |       |       index.html
@@ -1215,7 +1246,10 @@ Avoid: long preface, greeting, long background</pre>
 |   \---latest
 |       |   app-launcher.html
 |       |   dashboard.html
+|       |   icon.svg
 |       |   index.html
+|       |   manifest.webmanifest
+|       |   sw.js
 |       |   
 |       +---codex-data-pocket
 |       |       index.html
@@ -1256,6 +1290,13 @@ Avoid: long preface, greeting, long background</pre>
 |               index.html
 |               
 +---projects
+|   +---cat-affinity-lane
+|   |   |   index.html
+|   |   |   README.md
+|   |   |   
+|   |   \---assets
+|   |           cat-hero.png
+|   |           
 |   +---codex-data-pocket
 |   |       index.html
 |   |       README.md
@@ -1307,7 +1348,10 @@ Avoid: long preface, greeting, long background</pre>
 +---public-mobile
 |   |   app-launcher.html
 |   |   dashboard.html
+|   |   icon.svg
 |   |   index.html
+|   |   manifest.webmanifest
+|   |   sw.js
 |   |   
 |   +---codex-data-pocket
 |   |       index.html

@@ -9,16 +9,15 @@
   <title>CG | CODEX Gate</title>
   <style>
     :root {
-      --bg: #f6f4ee;
+      --bg: #f5f1e8;
       --panel: #fffdf8;
       --ink: #172033;
-      --muted: #647084;
-      --line: #d8d2c7;
+      --muted: #657083;
+      --line: #d7cdbc;
       --blue: #1d5fd1;
-      --green: #167247;
-      --amber: #bd7613;
-      --red: #b42318;
-      --shadow: 0 14px 34px rgba(23, 32, 51, .12);
+      --green: #19744a;
+      --amber: #bc7613;
+      --rose: #b44c5f;
       font-family: "Segoe UI", "Meiryo", system-ui, sans-serif;
     }
 
@@ -29,322 +28,263 @@
       background: var(--bg);
       color: var(--ink);
       letter-spacing: 0;
-      line-height: 1.65;
+      line-height: 1.45;
+    }
+
+    .wrap {
+      width: min(980px, calc(100% - 20px));
+      margin-inline: auto;
     }
 
     header {
       background: #172033;
       color: white;
-      padding: 22px 16px 26px;
-      border-bottom: 5px solid var(--amber);
+      padding: 12px 0 10px;
+      border-bottom: 4px solid var(--amber);
     }
 
-    .wrap {
-      width: min(980px, calc(100% - 24px));
-      margin-inline: auto;
+    .top {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      align-items: center;
     }
 
     h1 {
-      margin: 0 0 6px;
-      font-size: clamp(1.9rem, 8vw, 3.4rem);
+      margin: 0;
+      font-size: 2.2rem;
       line-height: 1;
       letter-spacing: 0;
     }
 
-    h2 {
-      margin: 0 0 10px;
-      font-size: 1.1rem;
-      line-height: 1.25;
-      letter-spacing: 0;
+    .tagline {
+      margin: 3px 0 0;
+      color: #dce5f3;
+      font-size: .78rem;
+      font-weight: 700;
     }
 
-    p { margin: 0; }
+    .date {
+      border: 1px solid rgba(255, 255, 255, .22);
+      padding: 5px 8px;
+      color: #dce5f3;
+      font-size: .72rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
 
     main {
-      padding: 12px 0 28px;
       display: grid;
-      gap: 12px;
+      gap: 8px;
+      padding: 8px 0 22px;
     }
 
     section,
-    a.card {
+    a.tile {
       background: var(--panel);
       border: 1px solid var(--line);
       border-radius: 8px;
-      padding: 14px;
       color: var(--ink);
       text-decoration: none;
-      box-shadow: 0 4px 16px rgba(65, 58, 47, .06);
     }
 
-    .hero-note {
-      color: #dce5f3;
-      max-width: 720px;
-      font-weight: 600;
+    section { padding: 10px; }
+
+    h2 {
+      margin: 0 0 7px;
+      font-size: .92rem;
+      line-height: 1.2;
+      letter-spacing: 0;
     }
 
-    .grid {
+    .metrics,
+    .shelf {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 8px;
-    }
-
-    .two {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px;
+      gap: 6px;
     }
 
     .metric {
       min-width: 0;
+      padding: 8px;
       border: 1px solid var(--line);
       border-radius: 8px;
-      padding: 10px;
-      background: #fbfaf5;
+      background: #fbf8f0;
     }
 
     .metric strong {
       display: block;
-      font-size: 1.75rem;
-      line-height: 1.08;
+      font-size: 1.35rem;
+      line-height: 1;
     }
 
     .metric span,
     .muted {
       color: var(--muted);
-      font-size: .82rem;
+      font-size: .72rem;
     }
 
-    .row {
-      display: grid;
-      gap: 8px;
-    }
-
-    .item {
-      border-left: 4px solid var(--blue);
-      padding: 8px 0 8px 10px;
-      font-size: .92rem;
-      background: linear-gradient(90deg, rgba(29, 95, 209, .06), transparent);
-    }
-
-    .item.ok {
-      border-left-color: var(--green);
-      background: linear-gradient(90deg, rgba(22, 114, 71, .08), transparent);
-    }
-
-    .item.warn {
-      border-left-color: var(--amber);
-      background: linear-gradient(90deg, rgba(189, 118, 19, .1), transparent);
-    }
-
-    .item.stop {
-      border-left-color: var(--red);
-      background: linear-gradient(90deg, rgba(180, 35, 24, .08), transparent);
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px;
-    }
-
-    .card {
-      min-height: 112px;
+    .tile {
+      min-height: 74px;
+      padding: 9px;
       display: grid;
       align-content: space-between;
-      transition: transform .15s ease, box-shadow .15s ease;
+      border-top: 5px solid var(--blue);
     }
 
-    .card:hover,
-    .card:focus-visible {
-      transform: translateY(-1px);
-      box-shadow: var(--shadow);
-      outline: none;
-    }
+    .tile:nth-child(2) { border-top-color: var(--green); }
+    .tile:nth-child(3) { border-top-color: var(--amber); }
+    .tile:nth-child(4) { border-top-color: var(--rose); }
 
-    .card strong {
+    .tile strong {
       display: block;
-      font-size: 1rem;
-      margin-bottom: 4px;
+      font-size: .86rem;
+      line-height: 1.2;
     }
 
-    .pill {
-      width: fit-content;
-      display: inline-block;
-      margin-top: 8px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 2px 8px;
+    .tile small {
       color: var(--muted);
-      font-size: .75rem;
-      font-weight: 700;
-      background: #fff9ed;
+      font-size: .68rem;
+      line-height: 1.25;
     }
 
-    .primary-link {
-      border-color: rgba(29, 95, 209, .45);
-      background: linear-gradient(135deg, #ffffff, #eef4ff);
+    .lane-now {
+      display: grid;
+      grid-template-columns: 84px 1fr auto;
+      gap: 8px;
+      align-items: center;
     }
 
-    code {
-      font-family: Consolas, "Courier New", monospace;
-      font-size: .82rem;
-      overflow-wrap: anywhere;
+    .badge {
+      display: grid;
+      place-items: center;
+      min-height: 62px;
+      border-radius: 8px;
+      background: #172033;
+      color: white;
+      font-size: .78rem;
+      font-weight: 900;
+      text-align: center;
+      padding: 6px;
     }
 
-    @media (max-width: 760px) {
-      .grid,
-      .two,
-      .cards {
-        grid-template-columns: 1fr;
-      }
+    .lane-now strong {
+      display: block;
+      font-size: .96rem;
+      line-height: 1.25;
+    }
+
+    .lane-now p {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: .76rem;
+    }
+
+    .go {
+      min-height: 44px;
+      padding: 9px 11px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: var(--blue);
+      color: white;
+      text-decoration: none;
+      font-size: .78rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+    }
+
+    .step {
+      padding: 7px;
+      border-radius: 7px;
+      border: 1px solid var(--line);
+      background: #fbf8f0;
+      font-size: .72rem;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    @media (max-width: 520px) {
+      .wrap { width: min(100% - 14px, 420px); }
+      header { padding-top: 9px; }
+      h1 { font-size: 1.85rem; }
+      .tagline { font-size: .7rem; }
+      main { gap: 6px; padding-top: 6px; }
+      section { padding: 8px; }
+      .metrics { grid-template-columns: repeat(4, 1fr); }
+      .metric { padding: 6px 5px; }
+      .metric strong { font-size: 1.05rem; }
+      .metric span { font-size: .62rem; }
+      .shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .tile { min-height: 62px; padding: 7px; }
+      .lane-now { grid-template-columns: 58px 1fr 58px; gap: 6px; }
+      .badge { min-height: 52px; font-size: .66rem; }
+      .lane-now strong { font-size: .82rem; }
+      .lane-now p { font-size: .66rem; }
+      .go { min-height: 42px; padding: 7px; font-size: .68rem; }
+      .flow { grid-template-columns: repeat(4, 1fr); }
+      .step { padding: 6px 2px; font-size: .62rem; }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="wrap">
-      <h1>CG</h1>
-      <p class="hero-note">CODEX Gate。旧CODEX入口です。C:\Codex の開発情報、レーン、CSD、アプリをここに集約します。</p>
+    <div class="wrap top">
+      <div>
+        <h1>CG</h1>
+        <p class="tagline">CODEX Gate / 一画面で見る開発入口</p>
+      </div>
+      <div class="date">2026-07-24</div>
     </div>
   </header>
 
   <main class="wrap">
-    <section>
-      <h2>CGの役割</h2>
-      <div class="row">
-        <div class="item ok">CGは旧CODEX入口 / CODEXGATEです。元ファイルは <code>C:\Codex\mobile-gate\index.html</code> です。</div>
-        <div class="item ok">今後、レーンを作るとは「CGに掲載し、CSDでチェックできる状態にする」ことです。</div>
-        <div class="item">CSDは詳細ダッシュボードとして残し、CGから最短で開ける形にします。</div>
+    <section aria-label="status summary">
+      <div class="metrics">
+        <div class="metric"><strong>11</strong><span>アプリ</span></div>
+        <div class="metric"><strong>12</strong><span>企画</span></div>
+        <div class="metric"><strong>17</strong><span>成果物</span></div>
+        <div class="metric"><strong>6</strong><span>レーン</span></div>
       </div>
     </section>
 
     <section>
-      <h2>いまの状態</h2>
-      <div class="grid">
-        <div class="metric"><strong>10</strong><span>登録アプリ</span></div>
-        <div class="metric"><strong>11</strong><span>プロジェクト</span></div>
-        <div class="metric"><strong>16</strong><span>AI成果物</span></div>
-        <div class="metric"><strong>5</strong><span>掲載レーン</span></div>
-      </div>
-      <p class="muted">更新日: 2026-07-23。GPU/ローカルLLM生成は停止中。C:\Codex は trusted。</p>
-    </section>
-
-    <section>
-      <h2>メイン入口</h2>
-      <div class="cards">
-        <a class="card primary-link" href="./latest/dashboard.html">
-          <span>
-            <strong>CSD 詳細ダッシュボード</strong>
-            <span class="muted">CGに掲載した内容を、レーン、注意、未実施、成果物、同期状態で詳しく見る。</span>
-          </span>
-          <span class="pill">詳細</span>
-        </a>
-        <a class="card primary-link" href="./latest/app-launcher.html">
-          <span>
-            <strong>アプリ一覧</strong>
-            <span class="muted">登録済みのCODEXアプリを開く。</span>
-          </span>
-          <span class="pill">Launcher</span>
-        </a>
-        <a class="card" href="./latest/csd-designer-showcase/index.html">
-          <span>
-            <strong>CSD Designer Showcase</strong>
-            <span class="muted">Webデザインを使ったCSDレーン成果物。</span>
-          </span>
-          <span class="pill">New</span>
-        </a>
-        <a class="card" href="./latest/codex-data-pocket/index.html">
-          <span>
-            <strong>CODEX Data Pocket</strong>
-            <span class="muted">小さな記録をJSON/CSV/Markdownで出力。</span>
-          </span>
-          <span class="pill">Data</span>
-        </a>
+      <h2>棚から開く</h2>
+      <div class="shelf">
+        <a class="tile" href="./latest/dashboard.html"><strong>CSD</strong><small>詳細チェック</small></a>
+        <a class="tile" href="./latest/app-launcher.html"><strong>アプリ棚</strong><small>全アプリ</small></a>
+        <a class="tile" href="./latest/cat-affinity-lane/index.html"><strong>猫レーン</strong><small>新しい体験</small></a>
+        <a class="tile" href="./latest/csd-designer-showcase/index.html"><strong>デザイン</strong><small>見せ方の例</small></a>
       </div>
     </section>
 
     <section>
-      <h2>レーン掲載状況</h2>
-      <div class="cards">
-        <a class="card" href="./latest/dashboard.html">
-          <span>
-            <strong>Static Tool Lane</strong>
-            <span class="muted">小さなHTML Firstツールを作り、検証して同期する。</span>
-          </span>
-          <span class="pill">ready</span>
-        </a>
-        <a class="card" href="./latest/dashboard.html">
-          <span>
-            <strong>Review Lane</strong>
-            <span class="muted">成果物を読み、リスク、欠落、次の修正券へ落とす。</span>
-          </span>
-          <span class="pill">ready</span>
-        </a>
-        <a class="card" href="./latest/dashboard.html">
-          <span>
-            <strong>Handoff Lane</strong>
-            <span class="muted">Claudeや人のメモを、CODEXで実行できる小さな券にする。</span>
-          </span>
-          <span class="pill">ready</span>
-        </a>
-        <a class="card" href="./latest/csd-designer-showcase/index.html">
-          <span>
-            <strong>Web Designer Sample Lane</strong>
-            <span class="muted">GO/HOSHIのデザイン知見を、CG掲載用の実コンテンツにする。</span>
-          </span>
-          <span class="pill">showcase-done</span>
-        </a>
+      <h2>最新レーン</h2>
+      <div class="lane-now">
+        <div class="badge">NEW<br>LANE</div>
+        <div>
+          <strong>猫が好きになるコンテンツ</strong>
+          <p>写真、短い観察、触れる反応で「猫を見てみたい」に寄せる小さな体験。</p>
+        </div>
+        <a class="go" href="./latest/cat-affinity-lane/index.html">開く</a>
       </div>
     </section>
 
     <section>
-      <h2>アプリ</h2>
-      <div class="cards">
-        <a class="card" href="./latest/quick-notes-board/index.html">
-          <span><strong>Quick Notes Board</strong><span class="muted">メモ整理、編集、JSON/Markdown出力。</span></span>
-          <span class="pill">usable+import</span>
-        </a>
-        <a class="card" href="./latest/orbit-catcher/index.html">
-          <span><strong>Orbit Catcher</strong><span class="muted">ステージ付きCanvasミニゲーム。結果出力対応。</span></span>
-          <span class="pill">prototype+export</span>
-        </a>
-        <a class="card" href="./latest/codex-data-pocket/index.html">
-          <span><strong>CODEX Data Pocket</strong><span class="muted">小さな記録をJSON/CSV/Markdownで出力。</span></span>
-          <span class="pill">usable</span>
-        </a>
-        <a class="card" href="./latest/csd-designer-showcase/index.html">
-          <span><strong>CSD Designer Showcase</strong><span class="muted">Webデザインを使ったレーン成果物。</span></span>
-          <span class="pill">showcase+export</span>
-        </a>
-        <a class="card" href="./latest/csd-web-designer-sample/index.html">
-          <span><strong>CSD Web Designer Sample</strong><span class="muted">HTML Firstのデザインサンプル。</span></span>
-          <span class="pill">sample+export</span>
-        </a>
-        <a class="card" href="./latest/app-launcher.html">
-          <span><strong>全アプリ一覧</strong><span class="muted">登録済み10件をランチャーで確認。</span></span>
-          <span class="pill">all apps</span>
-        </a>
+      <h2>レーンの作り方</h2>
+      <div class="flow" aria-label="lane flow">
+        <div class="step">目的</div>
+        <div class="step">実作</div>
+        <div class="step">検証</div>
+        <div class="step">CG掲載</div>
       </div>
-    </section>
-
-    <section>
-      <h2>チェックの流れ</h2>
-      <div class="row">
-        <div class="item ok">Plan: レーン券に目的、対象、受入基準を書く。</div>
-        <div class="item ok">Do: C:\Codex配下に小さく作る。</div>
-        <div class="item ok">Check: 構文、JSON、CSD表示、公開コピーを確認する。</div>
-        <div class="item ok">Act: CGに掲載し、次の券を残す。</div>
-        <div class="item warn">次の小タスクは、CSD詳細側に残る文字化け表示の修正。</div>
-      </div>
-    </section>
-
-    <section>
-      <h2>同期先</h2>
-      <div class="two">
-        <div class="metric"><strong>Local</strong><span><code>C:\Codex\mobile-gate</code></span></div>
-        <div class="metric"><strong>Drive</strong><span><code>G:\マイドライブ\CODEX</code></span></div>
-      </div>
+      <p class="muted">共有Driveのレーン知見を反映。レーンは説明ではなく、CGに載る成果物まで作る単位。</p>
     </section>
   </main>
 
