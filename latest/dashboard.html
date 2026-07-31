@@ -78,7 +78,7 @@
 <body>
   <header>
     <h1>Codex Status Dashboard</h1>
-    <div class="sub">C:\Codex / 更新 2026/7/31 16:33:11 / トークン節約で成果物を増やす作業環境</div>
+    <div class="sub">C:\Codex / 更新 2026/8/1 6:33:50 / トークン節約で成果物を増やす作業環境</div>
   </header>
   <main>
     <div class="hero">
@@ -407,11 +407,19 @@
               <td>Expand the brief compressor into a multi-genre lane selector with Codex task-list output.</td>
               <td>Run inline-script checks, JSON registry checks, CSD/status generation, public-copy sync, CG link checks, and Google Drive sync.</td>
               <td>Use MV lane to create the next media-style CG content brief.</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">done</span></td>
+              <td>csd-lane-trial-2026-08-01-001</td>
+              <td>CG Token-Saving Command Lane -&gt; External AI Brief Compressor Lane -&gt; Static Tool Lane</td>
+              <td>Turn the compressor into a GO-ready task control panel.</td>
+              <td>Run inline-script checks, JSON registry checks, CSD/status generation, public-copy sync, CG link checks, GitHub Pages publish, and Google Drive sync.</td>
+              <td>Use this GO-ready compressor to create the next CG-listed artifact from a selected task.</td>
             </tr></tbody>
         </table>
         <div class="subhead"><strong>Claude側から取得したノウハウ</strong><span>今回の試行に使った要点</span></div>
         <table>
-          <tbody><tr><td>Smartphone operation benefits from preset lanes and short text fields.</td></tr><tr><td>Creative work needs many patterns: MV, music, lyrics, image, illustration, game, app, article, and research.</td></tr><tr><td>A compressor should decide whether the output goes to chat copy, external AI/Web, or a Codex task list.</td></tr><tr><td>Complex media such as MV should expose component lanes for music, lyrics, image, and video structure.</td></tr><tr><td>Local task-list storage reduces repeated prompt writing.</td></tr></tbody>
+          <tbody><tr><td>A compressed brief should remove ambiguity before Codex starts work.</td></tr><tr><td>The user needs to see whether a task is only set or explicitly approved with GO.</td></tr><tr><td>Rough token estimates are useful as planning hints but must not pretend to be exact.</td></tr><tr><td>Genre lanes should work for apps, music, images, videos, MV, games, articles, and research using the same control model.</td></tr><tr><td>A mobile-first control panel should turn choices into target files, acceptance, checks, and handoff exports.</td></tr></tbody>
         </table>
       </div>
     </section>
@@ -505,27 +513,27 @@
             <tr>
               <td>dashboard.html</td>
               <td>司令塔HTML</td>
-              <td>2026/7/31 15:11:48</td>
+              <td>2026/7/31 16:33:11</td>
             </tr>
             <tr>
               <td>app-launcher.html</td>
               <td>アプリ入口</td>
-              <td>2026/7/31 16:33:08</td>
+              <td>2026/8/1 6:33:47</td>
             </tr>
             <tr>
               <td>public-mobile</td>
               <td>モバイル用latest素材</td>
-              <td>2026/7/31 15:11:13</td>
+              <td>2026/8/1 6:33:02</td>
             </tr>
             <tr>
               <td>pages-site</td>
               <td>GitHub Pages準備フォルダ</td>
-              <td>2026/7/31 15:11:50</td>
+              <td>2026/7/31 16:33:13</td>
             </tr>
             <tr>
               <td>artifact-capabilities.json</td>
               <td>AI handoff台帳</td>
-              <td>2026/7/31 16:32:40</td>
+              <td>2026/8/1 6:33:02</td>
             </tr>
             <tr>
               <td>external-ai-lanes.json</td>
@@ -535,7 +543,7 @@
             <tr>
               <td>codex-lanes.json</td>
               <td>CODEX PDCAレーン台帳</td>
-              <td>2026/7/31 16:32:40</td>
+              <td>2026/8/1 6:33:02</td>
             </tr></tbody>
         </table>
       </div>
@@ -547,9 +555,9 @@
         <div class="subhead"><strong>現在タスク</strong><a href="data/status.json">status.json</a></div>
         <table>
           <tbody>
-            <tr><td>Objective</td><td>2026-07-31 task - expand External AI Brief Compressor into a multi-genre lane selector.</td></tr>
-            <tr><td>Scope</td><td>`C:\Codex` External AI Brief Compressor, public copies, CSD/status visibility, app/artifact ledgers, and Google Drive sync only. Shared Claude/HOSHI files are reference-only. No local LLM/GPU.</td></tr>
-            <tr><td>Acceptance</td><td>Compressor supports genre lanes such as MV, music, lyrics, image, illustration, game, app, article, and research; output can be copied to chat, sent as external AI/Web brief, or saved to a Codex task list; JSON/Markdown/task export, CSD/status generation, and inline script checks pass.</td></tr>
+            <tr><td>Objective</td><td>2026-08-01 task - make External AI Brief Compressor a GO-ready task control panel.</td></tr>
+            <tr><td>Scope</td><td>`C:\Codex` External AI Brief Compressor, CG entry, public copies, CSD/status visibility, app/artifact ledgers, GitHub Pages, and Google Drive sync only. Shared Claude/HOSHI files are reference-only. No local LLM/GPU.</td></tr>
+            <tr><td>Acceptance</td><td>Compressor supports genre lanes, detailed target fields, ambiguity score, rough token estimate, GO readiness, set-complete task storage, GO-sign visualization, JSON/Markdown/task export, CG update, CSD/status generation, GitHub Pages publish, and inline script checks.</td></tr>
           </tbody>
         </table>
         <div class="subhead"><strong>PDCA</strong><a href="data/codex-lanes.json">codex-lanes.json</a></div>
@@ -652,10 +660,10 @@
             <tr class="ok">
               <td><span class="badge">cg-listed</span></td>
               <td><a href="data/codex-lanes.json">External AI Brief Compressor Lane</a></td>
-              <td>Support the Codex to external AI/Web main lane with mobile-first prompt compression.</td>
+              <td>Support the Codex to external AI/Web main lane with mobile-first prompt compression and GO-ready task control.</td>
               <td>Run inline-script checks, JSON checks, CSD/status generation, public copy sync, CG link checks, and Drive sync.</td>
-              <td>List the compressor on CG and use it before external AI/Web handoffs.</td>
-              <td>Use the MV lane to generate a brief for the next media-style CG-listed content item.</td>
+              <td>List the compressor on CG and use it as the pre-execution gate before external AI/Web/Codex handoffs.</td>
+              <td>Use a GO-signed task from the compressor to create the next CG-listed content item.</td>
             </tr>
             <tr class="stop">
               <td><span class="badge">paused</span></td>
@@ -862,7 +870,7 @@ Avoid: long preface, greeting, long background</pre>
           <a class="mini-card" href="projects/external-ai-brief-compressor/index.html">
             <strong>External AI Brief Compressor</strong>
             <span>usable+export / productivity</span>
-            <small>Mobile-first CG tool for compressing external AI prompts with genre lanes such as MV, music, lyrics, image, illustration, game, app, task-list save, copy, JSON, and Markdown export</small>
+            <small>Mobile-first CG control panel for compressing external AI/Codex tasks with genre lanes, ambiguity scoring, rough token estimate, GO readiness, task set, copy, JSON, and Markdown export</small>
           </a></div>
     </section>
 
@@ -1016,9 +1024,9 @@ Avoid: long preface, greeting, long background</pre>
             <tr>
               <td><a href="projects/external-ai-brief-compressor/index.html">External AI Brief Compressor</a></td>
               <td>html-prompt-compressor</td>
-              <td>clipboard, Codex task list, JSON, Markdown</td>
+              <td>clipboard, Codex task list, GO status, rough token estimate, JSON, Markdown</td>
               <td>external AI, Codex, Claude, ChatGPT</td>
-              <td>Use on mobile to select a genre lane and compress a loose CG request into a chat-ready or Codex-task-ready brief.</td>
+              <td>Use on mobile to remove ambiguity, estimate rough token cost, set a Codex task, and decide whether to give GO before implementation.</td>
             </tr></tbody>
         </table>
         <div class="subhead"><strong>最近のローカルAI成果物</strong><a href="local_ai/gallery.html">gallery.html</a></div>

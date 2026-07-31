@@ -7,21 +7,22 @@
   <style>
     :root {
       --bg:#f4f6f8; --panel:#fff; --ink:#172033; --muted:#667085; --line:#d9dee7;
-      --blue:#2563eb; --green:#15803d; --amber:#b45309; --red:#b42318;
+      --blue:#2563eb; --green:#15803d; --amber:#b45309; --red:#b42318; --violet:#6d28d9;
       font-family:"Segoe UI","Meiryo",system-ui,sans-serif;
     }
     * { box-sizing:border-box; }
     body { margin:0; background:var(--bg); color:var(--ink); letter-spacing:0; line-height:1.45; }
     header { background:#172033; color:white; padding:14px; border-bottom:4px solid var(--blue); }
-    .wrap { width:min(1120px, calc(100% - 18px)); margin:0 auto; }
+    .wrap { width:min(1180px, calc(100% - 18px)); margin:0 auto; }
     h1 { margin:0; font-size:1.45rem; line-height:1.15; }
     .sub { margin-top:3px; color:#dce5f3; font-size:.82rem; font-weight:700; }
     main { padding:10px 0 24px; display:grid; gap:10px; }
-    section, .task { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:10px; }
+    section, .task, .lane-card { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:10px; }
     h2 { margin:0 0 8px; font-size:1rem; line-height:1.2; }
     h3 { margin:0 0 6px; font-size:.9rem; }
     .grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-    .triple { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:8px; }
+    .triple { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+    .quad { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:7px; }
     .chips, .tools { display:flex; flex-wrap:wrap; gap:7px; }
     button {
       min-height:38px; border:1px solid var(--line); border-radius:7px; background:#fff; color:var(--ink);
@@ -29,28 +30,32 @@
     }
     button[aria-pressed="true"] { background:var(--blue); border-color:var(--blue); color:#fff; }
     button.primary { background:var(--green); border-color:var(--green); color:#fff; }
+    button.go { background:var(--violet); border-color:var(--violet); color:#fff; }
     button.warn { color:var(--red); }
     label { display:grid; gap:5px; color:var(--muted); font-size:.78rem; font-weight:800; }
     textarea, input {
       width:100%; border:1px solid var(--line); border-radius:7px; padding:8px; color:var(--ink);
       font:inherit; letter-spacing:0; background:#fff;
     }
-    textarea { min-height:86px; resize:vertical; }
-    .brief { min-height:250px; white-space:pre-wrap; overflow-wrap:anywhere; background:#f9fafb; }
+    textarea { min-height:78px; resize:vertical; }
+    .brief { min-height:260px; white-space:pre-wrap; overflow-wrap:anywhere; background:#f9fafb; }
     .status, .hint, .muted { color:var(--muted); font-size:.78rem; }
-    .meter { display:grid; grid-template-columns:repeat(4,1fr); gap:7px; }
-    .metric { border:1px solid var(--line); border-radius:8px; padding:8px; background:#f9fafb; }
-    .metric strong { display:block; font-size:1.15rem; line-height:1; }
+    .metric { border:1px solid var(--line); border-radius:8px; padding:8px; background:#f9fafb; min-width:0; }
+    .metric strong { display:block; font-size:1.18rem; line-height:1; overflow-wrap:anywhere; }
     .metric span { color:var(--muted); font-size:.72rem; }
-    .lane-card { border:1px solid var(--line); border-radius:8px; padding:8px; background:#f9fafb; }
+    .lane-card { background:#f9fafb; display:grid; gap:6px; align-content:start; }
     .lane-card p { margin:0; color:var(--muted); font-size:.76rem; }
     .tasks { display:grid; gap:8px; }
-    .task { border-left:5px solid var(--green); display:grid; gap:4px; }
+    .task { border-left:5px solid var(--amber); display:grid; gap:5px; }
+    .task.ready { border-left-color:var(--green); }
+    .task.go { border-left-color:var(--violet); }
     .task strong { font-size:.9rem; overflow-wrap:anywhere; }
     .task p { margin:0; color:var(--muted); font-size:.76rem; white-space:pre-wrap; overflow-wrap:anywhere; }
-    @media (max-width:820px) {
-      .grid, .triple, .meter { grid-template-columns:1fr; }
+    .pill { display:inline-block; border:1px solid var(--line); border-radius:999px; padding:3px 7px; font-size:.7rem; font-weight:800; background:#fff; }
+    @media (max-width:860px) {
+      .grid, .triple, .quad { grid-template-columns:1fr; }
       button { min-height:42px; }
+      .wrap { width:min(100% - 14px, 460px); }
     }
   </style>
 </head>
@@ -58,25 +63,25 @@
   <header>
     <div class="wrap">
       <h1>外部AIブリーフ圧縮器</h1>
-      <div class="sub">スマホで選んで、外部AI・Web・CODEXタスクへ渡す</div>
+      <div class="sub">選ぶ、曖昧さを消す、超概算を見る、GO前タスクにセットする</div>
     </div>
   </header>
 
   <main class="wrap">
     <section>
-      <h2>圧縮シグナル</h2>
-      <div class="meter">
-        <div class="metric"><strong id="selectedCount">0</strong><span>選択済み</span></div>
-        <div class="metric"><strong id="charCount">0</strong><span>依頼文の文字数</span></div>
-        <div class="metric"><strong id="taskCount">0</strong><span>タスク保存</span></div>
-        <div class="metric"><strong>1</strong><span>目的は1つ</span></div>
+      <h2>管制メーター</h2>
+      <div class="quad">
+        <div class="metric"><strong id="ambiguityScore">0</strong><span>曖昧さ</span></div>
+        <div class="metric"><strong id="tokenEstimate">0</strong><span>超概算トークン</span></div>
+        <div class="metric"><strong id="readiness">未設定</strong><span>GO判定</span></div>
+        <div class="metric"><strong id="taskCount">0</strong><span>セット済み</span></div>
       </div>
+      <p class="hint">トークン量は文字数と選択内容からの粗い目安です。正確な請求量ではありません。</p>
     </section>
 
     <section>
       <h2>専用レーン</h2>
       <div class="triple" id="laneCards"></div>
-      <p class="hint">MVのような複合制作は、音楽、歌詞、画像、動画構成を1つの短い依頼に束ねます。</p>
     </section>
 
     <section class="grid">
@@ -86,35 +91,35 @@
           <button type="button" data-value="アイデアを出す">アイデア</button>
           <button type="button" data-value="仕様に分解する">仕様化</button>
           <button type="button" data-value="素材を生成する">素材生成</button>
-          <button type="button" data-value="実装手順に分解する">実装手順</button>
-          <button type="button" data-value="Webで調べる観点を作る">調査観点</button>
+          <button type="button" data-value="実装する">実装</button>
+          <button type="button" data-value="Webで調べる">Web調査</button>
         </div>
       </div>
       <div>
         <h2>出力先</h2>
         <div class="chips" data-group="destination">
           <button type="button" data-value="チャット欄へコピペ">チャットへコピー</button>
-          <button type="button" data-value="CODEXタスクリストへ追加">CODEXタスク</button>
+          <button type="button" data-value="CODEXタスクとしてセット">CODEXタスク</button>
           <button type="button" data-value="外部AIへ依頼">外部AI</button>
           <button type="button" data-value="Web調査へ渡す">Web調査</button>
         </div>
       </div>
       <div>
-        <h2>出力形式</h2>
-        <div class="chips" data-group="format">
-          <button type="button" data-value="箇条書き5件">5件リスト</button>
-          <button type="button" data-value="実装チケット形式">チケット</button>
-          <button type="button" data-value="制作レーン表">レーン表</button>
-          <button type="button" data-value="そのまま貼れるプロンプト">プロンプト</button>
+        <h2>作り込み</h2>
+        <div class="chips" data-group="depth">
+          <button type="button" data-value="MVP">MVP</button>
+          <button type="button" data-value="標準">標準</button>
+          <button type="button" data-value="作り込み">作り込み</button>
+          <button type="button" data-value="徹底作り込み">徹底作り込み</button>
         </div>
       </div>
       <div>
-        <h2>トーン</h2>
-        <div class="chips" data-group="tone">
-          <button type="button" data-value="短く実務的に">短く実務的</button>
-          <button type="button" data-value="やさしい日本語で">やさしい日本語</button>
-          <button type="button" data-value="制作スタッフ向けに">制作向け</button>
-          <button type="button" data-value="スマホで読める長さで">スマホ向け</button>
+        <h2>実行主体</h2>
+        <div class="chips" data-group="executor">
+          <button type="button" data-value="CODEXで静的成果物を作る">CODEX</button>
+          <button type="button" data-value="外部AIで素材案を作る">外部AI</button>
+          <button type="button" data-value="Webで材料を確認する">Web</button>
+          <button type="button" data-value="HOSHI確認待ち">HOSHI確認</button>
         </div>
       </div>
     </section>
@@ -130,78 +135,86 @@
         <button type="button" data-value="ゲーム設計">ゲーム</button>
         <button type="button" data-value="アプリUI">アプリUI</button>
         <button type="button" data-value="Web記事">Web記事</button>
-      </div>
-    </section>
-
-    <section>
-      <h2>確認観点</h2>
-      <div class="chips" data-group="checks" data-multi="true">
-        <button type="button" data-value="前提が不明な点を分ける">不明点</button>
-        <button type="button" data-value="実行手順を小さくする">小手順</button>
-        <button type="button" data-value="権利や利用範囲に注意する">権利</button>
-        <button type="button" data-value="CODEXで実行できる形にする">CODEX実行</button>
-        <button type="button" data-value="CG掲載までの確認を書く">CG掲載</button>
+        <button type="button" data-value="データ設計">データ</button>
+        <button type="button" data-value="検証手順">検証</button>
       </div>
     </section>
 
     <section class="grid">
+      <label>成果物名
+        <input id="title" placeholder="例: MV Brief Kit">
+      </label>
+      <label>対象ユーザー
+        <input id="audience" placeholder="例: スマホからCG制作を指示するHOSHI">
+      </label>
       <label>材料メモ
         <textarea id="source" placeholder="例: 和風Lo-fiのMV。夜の街、短い歌詞、1分動画の構成がほしい"></textarea>
       </label>
-      <label>追加条件
-        <textarea id="extra" placeholder="例: HOSHIのGPUは使わない。外部AI/Web中心。スマホから渡せる短さ。"></textarea>
+      <label>禁止/制約
+        <textarea id="constraints" placeholder="例: HOSHIのGPU/CPU/NPUは使わない。権利が絡む固有名詞は避ける。"></textarea>
+      </label>
+      <label>受入基準
+        <textarea id="acceptance" placeholder="例: 単一HTML。スマホで選択式。JSON/Markdown/コピー。CG掲載。"></textarea>
+      </label>
+      <label>確認コマンド/確認観点
+        <textarea id="checks" placeholder="例: JS構文、JSON台帳、CGリンク、CSD生成、Drive同期。"></textarea>
       </label>
     </section>
 
     <section>
       <div class="tools">
-        <button class="primary" id="build" type="button">依頼文を作る</button>
-        <button id="copy" type="button">コピー</button>
-        <button id="addTask" type="button">タスクリストに追加</button>
+        <button class="primary" id="build" type="button">詳細仕様を作る</button>
+        <button id="copy" type="button">チャット用コピー</button>
+        <button id="setTask" type="button">セット完了</button>
+        <button class="go" id="approveTask" type="button">GOサイン</button>
         <button id="exportJson" type="button">JSON</button>
         <button id="exportMarkdown" type="button">Markdown</button>
         <button class="warn" id="reset" type="button">リセット</button>
       </div>
-      <label style="margin-top:8px;">圧縮ブリーフ
+      <label style="margin-top:8px;">CODEX実行前ブリーフ
         <textarea class="brief" id="brief" readonly></textarea>
       </label>
-      <div class="status" id="status" role="status" aria-live="polite">専用レーンを選ぶと、制作要素も自動で入ります。</div>
+      <div class="status" id="status" role="status" aria-live="polite">成果物名、材料、受入基準が入るとGO判定が上がります。</div>
     </section>
 
     <section>
-      <h2>CODEXタスクリスト</h2>
+      <h2>セット済みタスク</h2>
       <div class="tools">
         <button id="exportTasks" type="button">タスクJSON</button>
-        <button id="clearTasks" class="warn" type="button">タスクを消す</button>
+        <button class="warn" id="clearTasks" type="button">タスクを消す</button>
       </div>
       <div class="tasks" id="tasks" style="margin-top:8px;"></div>
     </section>
   </main>
 
   <script>
-    const key = "codex.externalAiBriefCompressor.v2";
-    const groups = ["lane", "purpose", "destination", "format", "tone", "elements", "checks"];
+    const key = "codex.externalAiBriefCompressor.v3";
+    const groups = ["lane","purpose","destination","depth","executor","elements"];
     const lanePresets = [
-      { id:"mv", label:"MV", desc:"音楽+歌詞+画像+動画構成", purpose:"仕様に分解する", format:"制作レーン表", elements:["音楽","歌詞","画像","動画構成"], checks:["権利や利用範囲に注意する","CODEXで実行できる形にする","CG掲載までの確認を書く"] },
-      { id:"music", label:"音楽", desc:"曲調、構成、歌詞なし/あり", purpose:"素材を生成する", format:"そのまま貼れるプロンプト", elements:["音楽"], checks:["権利や利用範囲に注意する","実行手順を小さくする"] },
-      { id:"lyrics", label:"歌詞", desc:"テーマ、語感、構成", purpose:"アイデアを出す", format:"箇条書き5件", elements:["歌詞"], checks:["前提が不明な点を分ける"] },
-      { id:"illustration", label:"イラスト", desc:"構図、画風、差分", purpose:"素材を生成する", format:"そのまま貼れるプロンプト", elements:["イラスト"], checks:["権利や利用範囲に注意する","CG掲載までの確認を書く"] },
-      { id:"image", label:"画像", desc:"写真風、バナー、素材", purpose:"素材を生成する", format:"そのまま貼れるプロンプト", elements:["画像"], checks:["権利や利用範囲に注意する"] },
-      { id:"game", label:"ゲーム", desc:"ルール、UI、MVP", purpose:"実装手順に分解する", format:"実装チケット形式", elements:["ゲーム設計","アプリUI"], checks:["実行手順を小さくする","CODEXで実行できる形にする"] },
-      { id:"app", label:"アプリ", desc:"画面、保存、出力", purpose:"実装手順に分解する", format:"実装チケット形式", elements:["アプリUI"], checks:["CODEXで実行できる形にする","CG掲載までの確認を書く"] },
-      { id:"article", label:"Web記事", desc:"調査、構成、要約", purpose:"Webで調べる観点を作る", format:"箇条書き5件", elements:["Web記事"], checks:["前提が不明な点を分ける","権利や利用範囲に注意する"] },
-      { id:"research", label:"調査", desc:"URL、要点、判断材料", purpose:"アイデアを出す", format:"制作レーン表", elements:["Web記事"], checks:["前提が不明な点を分ける","実行手順を小さくする"] }
+      { id:"mv", label:"MV", desc:"音楽+歌詞+画像+動画構成", elements:["音楽","歌詞","画像","動画構成"], acceptance:"MV制作ブリーフ一式を生成できる。音楽AI用、画像AI用、動画AI用、CODEX掲載用を分ける。" },
+      { id:"music", label:"音楽", desc:"曲調、BPM、構成、歌の有無", elements:["音楽"], acceptance:"曲調、構成、歌詞有無、外部AI用プロンプトを出せる。" },
+      { id:"lyrics", label:"歌詞", desc:"テーマ、語感、構成", elements:["歌詞"], acceptance:"短いオリジナル歌詞案と修正観点を出せる。" },
+      { id:"image", label:"画像", desc:"写真風、バナー、素材", elements:["画像"], acceptance:"画像生成用の安全な構図、画風、用途、差分指示を出せる。" },
+      { id:"illustration", label:"イラスト", desc:"キャラ、背景、差分", elements:["イラスト"], acceptance:"イラスト用プロンプト、構図、差分、権利注意を出せる。" },
+      { id:"video", label:"動画", desc:"尺、場面、カット、字幕", elements:["動画構成","画像"], acceptance:"秒単位の構成、必要素材、確認観点を出せる。" },
+      { id:"game", label:"ゲーム", desc:"ルール、UI、MVP、保存", elements:["ゲーム設計","アプリUI","検証手順"], acceptance:"単一HTMLゲームとして実装できる仕様、操作、勝敗、保存、出力を定義する。" },
+      { id:"app", label:"アプリ", desc:"画面、保存、出力、CG掲載", elements:["アプリUI","データ設計","検証手順"], acceptance:"単一HTMLアプリとして目的、画面、保存、JSON/Markdown出力、検証を定義する。" },
+      { id:"article", label:"Web記事", desc:"調査、構成、要約", elements:["Web記事","検証手順"], acceptance:"URL、要点、判断、引用しすぎ防止、次アクションを分ける。" },
+      { id:"research", label:"調査", desc:"Web材料、比較、判断", elements:["Web記事","データ設計"], acceptance:"調査観点、信頼できる一次情報、比較表、使う/使わない判断を出せる。" }
     ];
     const defaults = {
       lane:"mv",
       purpose:"仕様に分解する",
-      destination:"チャット欄へコピペ",
-      format:"制作レーン表",
-      tone:"スマホで読める長さで",
+      destination:"CODEXタスクとしてセット",
+      depth:"標準",
+      executor:"CODEXで静的成果物を作る",
       elements:["音楽","歌詞","画像","動画構成"],
-      checks:["権利や利用範囲に注意する","CODEXで実行できる形にする","CG掲載までの確認を書く"],
+      title:"",
+      audience:"",
       source:"",
-      extra:"HOSHIのGPU/CPU/NPUの重い処理は使わない。CODEXから外部AI/Webへ渡す前提。",
+      constraints:"HOSHIのGPU/CPU/NPUの重い処理は使わない。CODEXから外部AI/Webへ渡す前提。",
+      acceptance:"単一HTML。スマホで選択式。JSON/Markdown/コピー。CG掲載。",
+      checks:"JS構文、JSON台帳、CGリンク、CSD生成、Drive同期。",
       brief:"",
       tasks:[]
     };
@@ -216,28 +229,23 @@
     }
 
     function save() {
-      state.source = document.getElementById("source").value;
-      state.extra = document.getElementById("extra").value;
-      state.brief = document.getElementById("brief").value;
+      ["title","audience","source","constraints","acceptance","checks","brief"].forEach((id) => {
+        state[id] = document.getElementById(id).value;
+      });
       localStorage.setItem(key, JSON.stringify(state));
-      updateMetrics();
-    }
-
-    function renderLanes() {
-      const box = document.getElementById("laneCards");
-      box.innerHTML = lanePresets.map((lane) => `<article class="lane-card"><h3>${escapeHtml(lane.label)}</h3><p>${escapeHtml(lane.desc)}</p><button type="button" data-lane="${lane.id}" aria-pressed="${state.lane === lane.id}">選ぶ</button></article>`).join("");
-      box.querySelectorAll("[data-lane]").forEach((button) => button.addEventListener("click", () => selectLane(button.dataset.lane)));
+      updateMeters();
     }
 
     function selectLane(id) {
       const preset = lanePresets.find((item) => item.id === id);
       if (!preset) return;
       state.lane = preset.id;
-      state.purpose = preset.purpose;
-      state.format = preset.format;
       state.elements = [...preset.elements];
-      state.checks = [...preset.checks];
+      if (!document.getElementById("acceptance").value.trim()) {
+        state.acceptance = preset.acceptance;
+      }
       renderAll();
+      applyFields();
       save();
       setStatus(`${preset.label}レーンを選びました。`);
     }
@@ -255,50 +263,75 @@
       save();
     }
 
-    function renderButtons() {
-      groups.filter((group) => group !== "lane").forEach((group) => {
-        document.querySelectorAll(`[data-group="${group}"] button`).forEach((button) => {
-          const current = state[group];
-          const pressed = Array.isArray(current) ? current.includes(button.dataset.value) : current === button.dataset.value;
-          button.setAttribute("aria-pressed", String(pressed));
-        });
-      });
+    function ambiguity() {
+      const required = ["title","source","acceptance","checks"];
+      const missing = required.filter((id) => !String(state[id] || "").trim());
+      const weak = [];
+      if ((state.elements || []).length === 0) weak.push("制作要素");
+      if (!state.executor) weak.push("実行主体");
+      if (!state.destination) weak.push("出力先");
+      return { score: missing.length + weak.length, missing:[...missing, ...weak] };
+    }
+
+    function estimateTokens() {
+      const text = [state.title,state.audience,state.source,state.constraints,state.acceptance,state.checks,state.brief].join("\n");
+      const base = Math.ceil(text.length / 2.2);
+      const laneCost = { MVP:500, "標準":900, "作り込み":1500, "徹底作り込み":2400 }[state.depth] || 900;
+      const elementCost = (state.elements || []).length * 180;
+      return Math.max(500, base + laneCost + elementCost);
+    }
+
+    function readinessLabel() {
+      const score = ambiguity().score;
+      if (score === 0) return "GO可";
+      if (score <= 2) return "要確認";
+      return "未整理";
     }
 
     function buildBrief() {
       save();
       const lane = lanePresets.find((item) => item.id === state.lane);
-      const elements = (state.elements || []).map((item) => `- ${item}`).join("\n");
-      const checks = (state.checks || []).map((item) => `- ${item}`).join("\n");
+      const missing = ambiguity().missing;
       const text = [
-        "あなたは外部AIとして、以下の制作依頼を短く処理してください。",
+        "CODEX実行前ブリーフ",
         "",
+        `成果物名: ${state.title || "未設定"}`,
         `専用レーン: ${lane ? lane.label : state.lane}`,
         `目的: ${state.purpose}`,
         `出力先: ${state.destination}`,
-        `出力形式: ${state.format}`,
-        `トーン: ${state.tone}`,
+        `作り込み: ${state.depth}`,
+        `実行主体: ${state.executor}`,
+        `対象ユーザー: ${state.audience || "未設定"}`,
+        `超概算トークン: ${estimateTokens()} tokens前後`,
+        `GO判定: ${readinessLabel()}`,
         "",
         "制作要素:",
-        elements || "- 未選択",
+        (state.elements || []).map((item) => `- ${item}`).join("\n") || "- 未選択",
         "",
         "材料:",
-        state.source.trim() || "未入力。必要なら最小限の確認質問を1つだけしてください。",
+        state.source.trim() || "未入力",
         "",
-        "追加条件:",
-        state.extra.trim() || "なし",
+        "禁止/制約:",
+        state.constraints.trim() || "なし",
         "",
-        "確認観点:",
-        checks || "- 前提と次アクションを分ける",
+        "受入基準:",
+        state.acceptance.trim() || "未設定",
         "",
-        "制約:",
-        "- 長い背景説明は不要。",
-        "- 結論、理由、手順、注意点の順で短く返す。",
-        "- CODEXで実行する場合は、対象ファイル、受入基準、確認コマンドを分ける。"
+        "確認:",
+        state.checks.trim() || "未設定",
+        "",
+        "曖昧さ:",
+        missing.length ? missing.map((item) => `- ${item}`).join("\n") : "- なし",
+        "",
+        "CODEXで実行する場合:",
+        "- まず対象ファイルを限定する。",
+        "- 単一HTML、CG掲載、CSD/台帳同期を優先する。",
+        "- HOSHIのGPU/CPU/NPUの重い処理は使わない。",
+        "- 作成後にJS構文、JSON台帳、CGリンク、Drive同期を確認する。"
       ].join("\n");
       document.getElementById("brief").value = text;
       save();
-      setStatus("依頼文を作りました。");
+      setStatus("詳細仕様を作りました。");
       return text;
     }
 
@@ -312,25 +345,30 @@
       }
     }
 
-    function addTask() {
+    function setTask(status) {
       const brief = document.getElementById("brief").value || buildBrief();
       const lane = lanePresets.find((item) => item.id === state.lane);
-      state.tasks.unshift({
+      const item = {
         id:String(Date.now()),
+        status,
+        title: state.title || `${lane ? lane.label : "制作"}タスク`,
         lane: lane ? lane.label : state.lane,
         destination: state.destination,
-        title: `${lane ? lane.label : "制作"}: ${state.purpose}`,
+        readiness: readinessLabel(),
+        ambiguity: ambiguity(),
+        estimatedTokens: estimateTokens(),
         brief,
         createdAt:new Date().toISOString()
-      });
+      };
+      state.tasks.unshift(item);
       save();
       renderTasks();
-      setStatus("CODEXタスクリストに追加しました。");
+      setStatus(status === "go" ? "GOサイン済みタスクにしました。" : "タスクをセットしました。");
     }
 
     function payload() {
       save();
-      return { name:"外部AIブリーフ圧縮器", ...state, updatedAt:new Date().toISOString() };
+      return { name:"外部AIブリーフ圧縮器", ...state, ambiguity:ambiguity(), estimatedTokens:estimateTokens(), updatedAt:new Date().toISOString() };
     }
 
     function exportJson() {
@@ -350,7 +388,7 @@
       state.tasks = [];
       save();
       renderTasks();
-      setStatus("タスクリストを消しました。");
+      setStatus("タスクを消しました。");
     }
 
     function downloadText(filename, text, type) {
@@ -367,36 +405,53 @@
     }
 
     function resetAll() {
-      state = { ...defaults, elements:[...defaults.elements], checks:[...defaults.checks], tasks:state.tasks || [] };
-      applyState();
+      state = { ...defaults, elements:[...defaults.elements], tasks:state.tasks || [] };
+      applyFields();
+      renderAll();
       save();
-      setStatus("選択を初期状態に戻しました。");
+      setStatus("入力を初期化しました。");
     }
 
-    function applyState() {
-      document.getElementById("source").value = state.source || "";
-      document.getElementById("extra").value = state.extra || "";
-      document.getElementById("brief").value = state.brief || "";
-      renderAll();
+    function applyFields() {
+      ["title","audience","source","constraints","acceptance","checks","brief"].forEach((id) => {
+        document.getElementById(id).value = state[id] || "";
+      });
+    }
+
+    function renderLanes() {
+      const box = document.getElementById("laneCards");
+      box.innerHTML = lanePresets.map((lane) => `<article class="lane-card"><h3>${escapeHtml(lane.label)}</h3><p>${escapeHtml(lane.desc)}</p><button type="button" data-lane="${lane.id}" aria-pressed="${state.lane === lane.id}">選ぶ</button><span class="pill">${escapeHtml(lane.elements.join(" / "))}</span></article>`).join("");
+      box.querySelectorAll("[data-lane]").forEach((button) => button.addEventListener("click", () => selectLane(button.dataset.lane)));
+    }
+
+    function renderButtons() {
+      groups.filter((group) => group !== "lane").forEach((group) => {
+        document.querySelectorAll(`[data-group="${group}"] button`).forEach((button) => {
+          const current = state[group];
+          const pressed = Array.isArray(current) ? current.includes(button.dataset.value) : current === button.dataset.value;
+          button.setAttribute("aria-pressed", String(pressed));
+        });
+      });
+    }
+
+    function renderTasks() {
+      const box = document.getElementById("tasks");
+      box.innerHTML = state.tasks.length ? state.tasks.map((task) => `<article class="task ${task.status === "go" ? "go" : task.readiness === "GO可" ? "ready" : ""}"><strong>${escapeHtml(task.title)}</strong><p>${escapeHtml(task.status === "go" ? "GOサイン済み" : "セット済み")} / ${escapeHtml(task.lane)} / ${escapeHtml(task.readiness)} / 約${escapeHtml(task.estimatedTokens)} tokens</p><p>${escapeHtml(task.brief.slice(0, 220))}${task.brief.length > 220 ? "..." : ""}</p></article>`).join("") : '<p class="muted">まだタスクはありません。</p>';
+    }
+
+    function updateMeters() {
+      const amb = ambiguity();
+      document.getElementById("ambiguityScore").textContent = amb.score;
+      document.getElementById("tokenEstimate").textContent = estimateTokens();
+      document.getElementById("readiness").textContent = readinessLabel();
+      document.getElementById("taskCount").textContent = state.tasks.length;
     }
 
     function renderAll() {
       renderLanes();
       renderButtons();
       renderTasks();
-      updateMetrics();
-    }
-
-    function renderTasks() {
-      const box = document.getElementById("tasks");
-      box.innerHTML = state.tasks.length ? state.tasks.map((task) => `<article class="task"><strong>${escapeHtml(task.title)}</strong><p>${escapeHtml(task.destination)} / ${escapeHtml(task.createdAt)}</p><p>${escapeHtml(task.brief.slice(0, 180))}${task.brief.length > 180 ? "..." : ""}</p></article>`).join("") : '<p class="muted">まだタスクはありません。</p>';
-    }
-
-    function updateMetrics() {
-      const selected = groups.reduce((sum, group) => sum + (Array.isArray(state[group]) ? state[group].length : state[group] ? 1 : 0), 0);
-      document.getElementById("selectedCount").textContent = selected;
-      document.getElementById("charCount").textContent = document.getElementById("brief").value.length;
-      document.getElementById("taskCount").textContent = state.tasks.length;
+      updateMeters();
     }
 
     function setStatus(text) {
@@ -410,17 +465,18 @@
     document.querySelectorAll("[data-group] button").forEach((button) => {
       button.addEventListener("click", () => selectValue(button.parentElement.dataset.group, button.dataset.value));
     });
-    document.getElementById("source").addEventListener("input", save);
-    document.getElementById("extra").addEventListener("input", save);
+    ["title","audience","source","constraints","acceptance","checks"].forEach((id) => document.getElementById(id).addEventListener("input", save));
     document.getElementById("build").addEventListener("click", buildBrief);
     document.getElementById("copy").addEventListener("click", copyBrief);
-    document.getElementById("addTask").addEventListener("click", addTask);
+    document.getElementById("setTask").addEventListener("click", () => setTask("set"));
+    document.getElementById("approveTask").addEventListener("click", () => setTask("go"));
     document.getElementById("exportJson").addEventListener("click", exportJson);
     document.getElementById("exportMarkdown").addEventListener("click", exportMarkdown);
     document.getElementById("exportTasks").addEventListener("click", exportTasks);
     document.getElementById("clearTasks").addEventListener("click", clearTasks);
     document.getElementById("reset").addEventListener("click", resetAll);
-    applyState();
+    applyFields();
+    renderAll();
   </script>
 </body>
 </html>

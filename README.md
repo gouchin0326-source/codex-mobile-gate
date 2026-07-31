@@ -2,7 +2,7 @@
 
 Static PWA site for GitHub Pages.
 
-- Built: 2026-07-31 16:33:13
+- Built: 2026-08-01 06:33:52
 - Source gate: C:\Codex\mobile-gate
 - Source latest: C:\Codex\public-mobile
 - Policy: no local LLM, no GPU
