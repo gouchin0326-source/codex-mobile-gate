@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>0731 作業掲示板</title>
+  <style>
+    :root {
+      --bg: #f4f6f8;
+      --panel: #ffffff;
+      --ink: #172033;
+      --muted: #667085;
+      --line: #d9dee7;
+      --blue: #2563eb;
+      --green: #15803d;
+      --amber: #b45309;
+      --red: #b42318;
+      --violet: #6d28d9;
+      font-family: "Segoe UI", "Meiryo", system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      letter-spacing: 0;
+      line-height: 1.45;
+    }
+
+    header {
+      background: #172033;
+      color: #fff;
+      padding: 14px;
+      border-bottom: 4px solid var(--green);
+    }
+
+    .top {
+      width: min(1120px, calc(100% - 8px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.45rem;
+      line-height: 1.15;
+    }
+
+    .sub {
+      margin-top: 3px;
+      color: #dce5f3;
+      font-size: .82rem;
+      font-weight: 700;
+    }
+
+    .date {
+      border: 1px solid rgba(255,255,255,.26);
+      padding: 6px 9px;
+      font-size: .78rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    main {
+      width: min(1120px, calc(100% - 16px));
+      margin: 0 auto;
+      padding: 10px 0 24px;
+      display: grid;
+      gap: 10px;
+    }
+
+    section, .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    section { padding: 10px; }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+    label {
+      display: grid;
+      gap: 5px;
+      font-size: .78rem;
+      font-weight: 800;
+      color: var(--muted);
+    }
+
+    input, textarea, select, button {
+      font: inherit;
+      color: var(--ink);
+      letter-spacing: 0;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 8px;
+      background: #fff;
+    }
+
+    textarea {
+      min-height: 72px;
+      resize: vertical;
+    }
+
+    button {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #fff;
+      padding: 6px 10px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    button.primary {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+
+    button.danger { color: var(--red); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .entry {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr auto;
+      gap: 8px;
+      align-items: end;
+    }
+
+    .tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .column {
+      min-width: 0;
+      display: grid;
+      align-content: start;
+    }
+
+    .column header {
+      position: static;
+      padding: 9px;
+      color: var(--ink);
+      background: #f9fafb;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .column h3 {
+      margin: 0;
+      font-size: .9rem;
+    }
+
+    .count {
+      color: var(--muted);
+      font-size: .76rem;
+      font-weight: 800;
+    }
+
+    .list {
+      min-height: 150px;
+      padding: 8px;
+      display: grid;
+      align-content: start;
+      gap: 8px;
+    }
+
+    .task {
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--blue);
+      border-radius: 8px;
+      background: #fbfcfe;
+      padding: 8px;
+      display: grid;
+      gap: 7px;
+    }
+
+    .task.doing { border-left-color: var(--violet); }
+    .task.waiting { border-left-color: var(--amber); }
+    .task.done { border-left-color: var(--green); }
+
+    .task strong {
+      font-size: .9rem;
+      line-height: 1.25;
+      overflow-wrap: anywhere;
+    }
+
+    .task p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .78rem;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .actions button {
+      min-height: 30px;
+      padding: 4px 7px;
+      font-size: .75rem;
+    }
+
+    .empty {
+      color: var(--muted);
+      border: 1px dashed var(--line);
+      border-radius: 7px;
+      padding: 8px;
+      font-size: .78rem;
+    }
+
+    .status {
+      color: var(--muted);
+      font-size: .78rem;
+    }
+
+    @media (max-width: 860px) {
+      .grid, .entry, .board { grid-template-columns: 1fr; }
+      .top { grid-template-columns: 1fr; }
+      .date { justify-self: start; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top">
+      <div>
+        <h1>0731 作業掲示板</h1>
+        <div class="sub">今日のタスクを小さく決めて、CG掲載まで持っていく板</div>
+      </div>
+      <div class="date">2026-07-31</div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>今日の目的</h2>
+      <div class="grid">
+        <label>目的
+          <input id="goal" value="GC/CGに掲載できるコンテンツを1つ完成させる">
+        </label>
+        <label>受入基準
+          <input id="acceptance" value="単一HTML、保存、JSON/Markdown書き出し、入口掲載を確認">
+        </label>
+      </div>
+    </section>
+
+    <section>
+      <h2>タスク追加</h2>
+      <div class="entry">
+        <label>タスク名
+          <input id="taskTitle" placeholder="例: CG入口に今日分を追加">
+        </label>
+        <label>メモ
+          <textarea id="taskMemo" placeholder="作業条件、確認したいこと、引き継ぎ"></textarea>
+        </label>
+        <div>
+          <label>置き場所
+            <select id="taskStatus">
+              <option value="todo">未着手</option>
+              <option value="doing">進行中</option>
+              <option value="waiting">待ち</option>
+              <option value="done">完了</option>
+            </select>
+          </label>
+          <button class="primary" id="addTask" type="button">追加</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>引き継ぎ</h2>
+      <div class="tools">
+        <button id="exportJson" type="button">JSONを書き出し</button>
+        <button id="exportMarkdown" type="button">Markdownを書き出し</button>
+        <button id="resetSample" type="button">初期タスクに戻す</button>
+      </div>
+      <label style="margin-top:8px;">JSON取り込み
+        <textarea id="importText" placeholder="書き出したJSONを貼り付け"></textarea>
+      </label>
+      <div class="tools">
+        <button id="appendJson" type="button">追加で取り込み</button>
+        <button id="replaceJson" type="button">置き換え</button>
+      </div>
+      <div class="status" id="status" role="status" aria-live="polite">このブラウザ内に保存します。</div>
+    </section>
+
+    <section class="board" id="board" aria-label="タスク板"></section>
+  </main>
+
+  <script>
+    const storeKey = "codex.dailyTask0731.v1";
+    const statuses = [
+      ["todo", "未着手"],
+      ["doing", "進行中"],
+      ["waiting", "待ち"],
+      ["done", "完了"]
+    ];
+    const sample = {
+      goal: "GC/CGに掲載できるコンテンツを1つ完成させる",
+      acceptance: "単一HTML、保存、JSON/Markdown書き出し、入口掲載を確認",
+      tasks: [
+        { id: "sample-1", title: "GC/CGの更新状況を確認", memo: "最後の入口日付と掲載済みレーンを見る。", status: "done", createdAt: "2026-07-31T00:00:00+09:00" },
+        { id: "sample-2", title: "0731用コンテンツを作る", memo: "今日のタスクを整理できる小さな作業掲示板にする。", status: "doing", createdAt: "2026-07-31T00:00:00+09:00" },
+        { id: "sample-3", title: "CG入口へ掲載", memo: "public-mobile、mobile-gate、pages-siteの入口にリンクを反映。", status: "todo", createdAt: "2026-07-31T00:00:00+09:00" }
+      ]
+    };
+
+    let state = loadState();
+
+    function loadState() {
+      try {
+        const parsed = JSON.parse(localStorage.getItem(storeKey) || "null");
+        if (parsed && Array.isArray(parsed.tasks)) return parsed;
+      } catch {}
+      return structuredClone(sample);
+    }
+
+    function saveState() {
+      state.goal = document.getElementById("goal").value.trim();
+      state.acceptance = document.getElementById("acceptance").value.trim();
+      localStorage.setItem(storeKey, JSON.stringify(state));
+    }
+
+    function downloadText(filename, text, type) {
+      const blob = new Blob([text], { type });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+      setStatus(`${filename} を書き出しました。`);
+    }
+
+    function exportJson() {
+      saveState();
+      downloadText("daily-task-0731.json", JSON.stringify(state, null, 2), "application/json;charset=utf-8");
+    }
+
+    function exportMarkdown() {
+      saveState();
+      const groups = statuses.map(([id, label]) => {
+        const items = state.tasks.filter((task) => task.status === id);
+        const lines = items.map((task) => `- ${task.title}${task.memo ? `: ${task.memo.replace(/\n/g, " / ")}` : ""}`);
+        return `## ${label}\n${lines.length ? lines.join("\n") : "- なし"}`;
+      }).join("\n\n");
+      const text = `# 0731 作業掲示板\n\n目的: ${state.goal || "未設定"}\n\n受入基準: ${state.acceptance || "未設定"}\n\n${groups}\n`;
+      downloadText("daily-task-0731.md", text, "text/markdown;charset=utf-8");
+    }
+
+    function addTask() {
+      const title = document.getElementById("taskTitle").value.trim();
+      const memo = document.getElementById("taskMemo").value.trim();
+      if (!title) return;
+      state.tasks.unshift({
+        id: String(Date.now()),
+        title,
+        memo,
+        status: document.getElementById("taskStatus").value,
+        createdAt: new Date().toISOString()
+      });
+      document.getElementById("taskTitle").value = "";
+      document.getElementById("taskMemo").value = "";
+      saveState();
+      render();
+    }
+
+    function moveTask(id, status) {
+      state.tasks = state.tasks.map((task) => task.id === id ? { ...task, status, updatedAt: new Date().toISOString() } : task);
+      saveState();
+      render();
+    }
+
+    function removeTask(id) {
+      state.tasks = state.tasks.filter((task) => task.id !== id);
+      saveState();
+      render();
+    }
+
+    function importJson(mode) {
+      try {
+        const raw = document.getElementById("importText").value.trim();
+        if (!raw) return;
+        const parsed = JSON.parse(raw);
+        const incoming = normalizeState(parsed);
+        state = mode === "replace"
+          ? incoming
+          : { goal: state.goal, acceptance: state.acceptance, tasks: [...incoming.tasks, ...state.tasks] };
+        document.getElementById("importText").value = "";
+        applyState();
+        saveState();
+        render();
+        setStatus(`${incoming.tasks.length}件を取り込みました。`);
+      } catch {
+        setStatus("JSONを取り込めませんでした。");
+      }
+    }
+
+    function normalizeState(value) {
+      const rows = Array.isArray(value) ? value : value.tasks;
+      if (!Array.isArray(rows)) throw new Error("tasks");
+      return {
+        goal: String(value.goal || state.goal || ""),
+        acceptance: String(value.acceptance || state.acceptance || ""),
+        tasks: rows.map((row, index) => ({
+          id: String(row.id || `${Date.now()}-${index}`),
+          title: String(row.title || row.text || "").trim(),
+          memo: String(row.memo || row.body || ""),
+          status: statuses.some(([id]) => id === row.status) ? row.status : "todo",
+          createdAt: String(row.createdAt || new Date().toISOString()),
+          updatedAt: row.updatedAt ? String(row.updatedAt) : undefined
+        })).filter((task) => task.title)
+      };
+    }
+
+    function resetSample() {
+      state = structuredClone(sample);
+      applyState();
+      saveState();
+      render();
+      setStatus("初期タスクに戻しました。");
+    }
+
+    function applyState() {
+      document.getElementById("goal").value = state.goal || "";
+      document.getElementById("acceptance").value = state.acceptance || "";
+    }
+
+    function render() {
+      const board = document.getElementById("board");
+      board.innerHTML = statuses.map(([id, label]) => {
+        const items = state.tasks.filter((task) => task.status === id);
+        return `<article class="column card"><header><h3>${label}</h3><span class="count">${items.length}</span></header><div class="list">${items.length ? items.map(taskHtml).join("") : '<div class="empty">なし</div>'}</div></article>`;
+      }).join("");
+    }
+
+    function taskHtml(task) {
+      const moves = statuses
+        .filter(([id]) => id !== task.status)
+        .map(([id, label]) => `<button type="button" data-move="${escapeHtml(task.id)}" data-status="${id}">${label}</button>`)
+        .join("");
+      return `<article class="task ${escapeHtml(task.status)}"><strong>${escapeHtml(task.title)}</strong>${task.memo ? `<p>${escapeHtml(task.memo)}</p>` : ""}<div class="actions">${moves}<button class="danger" type="button" data-delete="${escapeHtml(task.id)}">削除</button></div></article>`;
+    }
+
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" }[char]));
+    }
+
+    function setStatus(text) {
+      document.getElementById("status").textContent = text;
+    }
+
+    document.getElementById("goal").addEventListener("input", saveState);
+    document.getElementById("acceptance").addEventListener("input", saveState);
+    document.getElementById("addTask").addEventListener("click", addTask);
+    document.getElementById("exportJson").addEventListener("click", exportJson);
+    document.getElementById("exportMarkdown").addEventListener("click", exportMarkdown);
+    document.getElementById("appendJson").addEventListener("click", () => importJson("append"));
+    document.getElementById("replaceJson").addEventListener("click", () => importJson("replace"));
+    document.getElementById("resetSample").addEventListener("click", resetSample);
+    document.getElementById("taskTitle").addEventListener("keydown", (event) => {
+      if ((event.ctrlKey || event.metaKey) && event.key === "Enter") addTask();
+    });
+    document.getElementById("board").addEventListener("click", (event) => {
+      const move = event.target.closest("[data-move]");
+      const del = event.target.closest("[data-delete]");
+      if (move) moveTask(move.dataset.move, move.dataset.status);
+      if (del) removeTask(del.dataset.delete);
+    });
+
+    applyState();
+    render();
+  </script>
+</body>
+</html>

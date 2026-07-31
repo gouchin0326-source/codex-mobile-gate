@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>エコレーン実装マップ</title>
+  <style>
+    :root {
+      --bg:#f4f6f8;
+      --panel:#fff;
+      --ink:#172033;
+      --muted:#667085;
+      --line:#d9dee7;
+      --blue:#2563eb;
+      --green:#15803d;
+      --amber:#b45309;
+      --red:#b42318;
+      font-family:"Segoe UI","Meiryo",system-ui,sans-serif;
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); letter-spacing:0; line-height:1.45; }
+    header { background:#172033; color:white; padding:14px; border-bottom:4px solid var(--green); }
+    .wrap { width:min(1080px, calc(100% - 18px)); margin:0 auto; }
+    h1 { margin:0; font-size:1.45rem; line-height:1.15; }
+    .sub { margin-top:3px; color:#dce5f3; font-size:.82rem; font-weight:700; }
+    main { padding:10px 0 24px; display:grid; gap:10px; }
+    section, .card { background:var(--panel); border:1px solid var(--line); border-radius:8px; }
+    section { padding:10px; }
+    h2 { margin:0 0 8px; font-size:1rem; line-height:1.2; }
+    .signal { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:8px; }
+    .metric { padding:9px; background:#f9fafb; border:1px solid var(--line); border-radius:8px; }
+    .metric strong { display:block; font-size:1.2rem; line-height:1; }
+    .metric span, .muted { color:var(--muted); font-size:.74rem; }
+    .flow { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:8px; }
+    .lane { padding:10px; min-height:150px; display:grid; align-content:start; gap:8px; border-top:5px solid var(--blue); }
+    .lane:nth-child(2) { border-top-color:var(--amber); }
+    .lane:nth-child(3) { border-top-color:var(--green); }
+    .lane:nth-child(4) { border-top-color:var(--red); }
+    .lane h3 { margin:0; font-size:.95rem; }
+    .lane p { margin:0; color:var(--muted); font-size:.78rem; }
+    .chips { display:flex; flex-wrap:wrap; gap:6px; }
+    .chip { border:1px solid var(--line); border-radius:999px; padding:4px 7px; font-size:.7rem; font-weight:800; background:#fff; }
+    .ticket { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+    label { display:grid; gap:5px; color:var(--muted); font-size:.78rem; font-weight:800; }
+    input, textarea, button { font:inherit; color:var(--ink); letter-spacing:0; }
+    input, textarea { width:100%; border:1px solid var(--line); border-radius:7px; padding:8px; background:#fff; }
+    textarea { min-height:78px; resize:vertical; }
+    button { min-height:36px; border:1px solid var(--line); border-radius:7px; background:#fff; padding:6px 10px; font-weight:800; cursor:pointer; }
+    button.primary { background:var(--blue); border-color:var(--blue); color:#fff; }
+    .tools { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+    .status { color:var(--muted); font-size:.78rem; margin-top:8px; }
+    @media (max-width:780px) {
+      .signal, .flow, .ticket { grid-template-columns:1fr; }
+      .lane { min-height:auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>エコレーン実装マップ</h1>
+      <div class="sub">CODEXがCG掲載コンテンツを増やす時の、節約型の進め方</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>節約シグナル</h2>
+      <div class="signal">
+        <div class="metric"><strong>1</strong><span>目的は1つ</span></div>
+        <div class="metric"><strong>HTML</strong><span>単一ファイル優先</span></div>
+        <div class="metric"><strong>狭読</strong><span>必要範囲だけ読む</span></div>
+        <div class="metric"><strong>台帳</strong><span>短く記録して再利用</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>CODEX実装の流れ</h2>
+      <div class="flow">
+        <article class="lane card">
+          <h3>司令塔レーン</h3>
+          <p>Claude/Codexは、目的、対象、受入基準、確認方法だけを決める。</p>
+          <div class="chips"><span class="chip">小チケット</span><span class="chip">再説明なし</span></div>
+        </article>
+        <article class="lane card">
+          <h3>実装レーン</h3>
+          <p>既存の単一HTMLパターンを使い、作るファイルを最小にする。</p>
+          <div class="chips"><span class="chip">外部通信なし</span><span class="chip">localStorage</span></div>
+        </article>
+        <article class="lane card">
+          <h3>検証レーン</h3>
+          <p>JSON解析、インラインJS構文、CGリンク、CSD生成を決定的に見る。</p>
+          <div class="chips"><span class="chip">自動確認</span><span class="chip">リンク確認</span></div>
+        </article>
+        <article class="lane card">
+          <h3>同期レーン</h3>
+          <p>public-mobile、mobile-gate、pages-site、Driveへ同じ成果を置く。</p>
+          <div class="chips"><span class="chip">CG掲載</span><span class="chip">CSD可視化</span></div>
+        </article>
+      </div>
+      <p class="muted">重い相談や大読込を避け、毎回の成果を小さなコンテンツと台帳に残します。</p>
+    </section>
+
+    <section>
+      <h2>次のエコチケット</h2>
+      <div class="ticket">
+        <label>目的
+          <input id="goal" value="CG掲載コンテンツを1つ増やす">
+        </label>
+        <label>対象
+          <input id="target" value="projects/new-small-content/index.html">
+        </label>
+        <label>受入基準
+          <textarea id="acceptance">単一HTML。ブラウザ保存。JSON/Markdown出力。CG入口、CSD、アプリ棚、Driveへ反映。</textarea>
+        </label>
+        <label>確認
+          <textarea id="checks">JSON parse。inline script syntax。CG link visibility。dashboard/app launcher generation。Drive sync。</textarea>
+        </label>
+      </div>
+      <div class="tools">
+        <button class="primary" id="exportJson" type="button">JSONを書き出し</button>
+        <button id="exportMarkdown" type="button">Markdownを書き出し</button>
+      </div>
+      <div class="status" id="status" role="status" aria-live="polite">このチケットを次のCG制作に渡せます。</div>
+    </section>
+  </main>
+
+  <script>
+    function data() {
+      return {
+        name: "エコレーン実装マップ",
+        goal: document.getElementById("goal").value.trim(),
+        target: document.getElementById("target").value.trim(),
+        acceptance: document.getElementById("acceptance").value.trim(),
+        checks: document.getElementById("checks").value.trim(),
+        lanes: ["司令塔", "実装", "検証", "同期"],
+        updatedAt: new Date().toISOString()
+      };
+    }
+    function downloadText(filename, text, type) {
+      const blob = new Blob([text], { type });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+      document.getElementById("status").textContent = `${filename} を書き出しました。`;
+    }
+    function exportJson() {
+      downloadText("eco-lane-map.json", JSON.stringify(data(), null, 2), "application/json;charset=utf-8");
+    }
+    function exportMarkdown() {
+      const item = data();
+      const text = `# ${item.name}\n\n目的: ${item.goal}\n\n対象: ${item.target}\n\n受入基準:\n${item.acceptance}\n\n確認:\n${item.checks}\n`;
+      downloadText("eco-lane-map.md", text, "text/markdown;charset=utf-8");
+    }
+    document.getElementById("exportJson").addEventListener("click", exportJson);
+    document.getElementById("exportMarkdown").addEventListener("click", exportMarkdown);
+  </script>
+</body>
+</html>

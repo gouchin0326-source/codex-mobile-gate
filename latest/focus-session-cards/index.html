@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>集中セッションカード</title>
+  <style>
+    :root {
+      --bg: #f4f6f8;
+      --panel: #ffffff;
+      --ink: #172033;
+      --muted: #667085;
+      --line: #d9dee7;
+      --blue: #2563eb;
+      --green: #15803d;
+      --amber: #b45309;
+      --red: #b42318;
+      font-family: "Segoe UI", "Meiryo", system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); letter-spacing: 0; line-height: 1.45; }
+    header { background: #172033; color: #fff; padding: 14px; border-bottom: 4px solid var(--amber); }
+    .wrap { width: min(1080px, calc(100% - 18px)); margin: 0 auto; }
+    h1 { margin: 0; font-size: 1.45rem; line-height: 1.15; }
+    .sub { margin-top: 3px; color: #dce5f3; font-size: .82rem; font-weight: 700; }
+    main { padding: 10px 0 24px; display: grid; gap: 10px; }
+    section, .card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+    section { padding: 10px; }
+    h2 { margin: 0 0 8px; font-size: 1rem; line-height: 1.2; }
+    label { display: grid; gap: 5px; color: var(--muted); font-size: .78rem; font-weight: 800; }
+    input, textarea, button { font: inherit; color: var(--ink); letter-spacing: 0; }
+    input, textarea { width: 100%; border: 1px solid var(--line); border-radius: 7px; padding: 8px; background: #fff; }
+    textarea { min-height: 78px; resize: vertical; }
+    button { min-height: 36px; border: 1px solid var(--line); border-radius: 7px; background: #fff; padding: 6px 10px; font-weight: 800; cursor: pointer; }
+    button.primary { background: var(--blue); border-color: var(--blue); color: #fff; }
+    button.done { background: var(--green); border-color: var(--green); color: #fff; }
+    button.danger { color: var(--red); }
+    .hero { display: grid; grid-template-columns: 220px 1fr; gap: 12px; align-items: center; }
+    .dial {
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 14px solid #dce5f3;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at center, #fff 0 58%, transparent 59%), conic-gradient(var(--blue) var(--progress, 0deg), #dce5f3 0);
+      min-width: 0;
+    }
+    .time { text-align: center; font-size: 2rem; font-weight: 900; line-height: 1; }
+    .time small { display: block; margin-top: 5px; color: var(--muted); font-size: .75rem; }
+    .presets, .tools { display: flex; flex-wrap: wrap; gap: 8px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .stack, .log { display: grid; gap: 8px; }
+    .item { border-left: 5px solid var(--green); padding: 8px; display: grid; gap: 4px; }
+    .item strong { font-size: .92rem; overflow-wrap: anywhere; }
+    .item p { margin: 0; color: var(--muted); font-size: .78rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+    .status, .empty { color: var(--muted); font-size: .78rem; }
+    .empty { border: 1px dashed var(--line); border-radius: 7px; padding: 8px; }
+    @media (max-width: 760px) {
+      .hero, .grid { grid-template-columns: 1fr; }
+      .dial { width: min(220px, 72vw); margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>集中セッションカード</h1>
+      <div class="sub">短く決めて、終わったら記録して、次へ渡す</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="dial" id="dial" aria-label="残り時間">
+        <div class="time"><span id="minutes">05</span>:<span id="seconds">00</span><small id="timerLabel">待機中</small></div>
+      </div>
+      <div class="stack">
+        <h2>今回のセッション</h2>
+        <div class="presets">
+          <button type="button" data-minutes="5">5分</button>
+          <button type="button" data-minutes="15">15分</button>
+          <button type="button" data-minutes="25">25分</button>
+        </div>
+        <div class="grid">
+          <label>目的
+            <input id="goal" value="掲載済みコンテンツを1つ増やす">
+          </label>
+          <label>次の一手
+            <input id="nextAction" value="CG入口とCSDに反映する">
+          </label>
+        </div>
+        <label>メモ
+          <textarea id="memo" placeholder="気づき、詰まり、引き継ぎを書く"></textarea>
+        </label>
+        <div class="tools">
+          <button class="primary" id="start" type="button">開始</button>
+          <button id="pause" type="button">一時停止</button>
+          <button id="reset" type="button">戻す</button>
+          <button class="done" id="complete" type="button">完了として記録</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>書き出し</h2>
+      <div class="tools">
+        <button id="exportJson" type="button">JSONを書き出し</button>
+        <button id="exportMarkdown" type="button">Markdownを書き出し</button>
+        <button class="danger" id="clearLog" type="button">ログを消す</button>
+      </div>
+      <label style="margin-top:8px;">JSON取り込み
+        <textarea id="importText" placeholder="書き出したJSONを貼り付け"></textarea>
+      </label>
+      <div class="tools">
+        <button id="appendJson" type="button">追加で取り込み</button>
+        <button id="replaceJson" type="button">置き換え</button>
+      </div>
+      <div class="status" id="status" role="status" aria-live="polite">ログはこのブラウザ内に保存します。</div>
+    </section>
+
+    <section>
+      <h2>完了ログ</h2>
+      <div class="log" id="log"></div>
+    </section>
+  </main>
+
+  <script>
+    const key = "codex.focusSessionCards.v1";
+    let state = load();
+    let totalSeconds = state.totalSeconds || 300;
+    let remainingSeconds = state.remainingSeconds || totalSeconds;
+    let running = false;
+    let timerId = 0;
+
+    function load() {
+      try {
+        const parsed = JSON.parse(localStorage.getItem(key) || "null");
+        if (parsed && Array.isArray(parsed.logs)) return parsed;
+      } catch {}
+      return { totalSeconds: 300, remainingSeconds: 300, logs: [] };
+    }
+
+    function save() {
+      state.totalSeconds = totalSeconds;
+      state.remainingSeconds = remainingSeconds;
+      localStorage.setItem(key, JSON.stringify(state));
+    }
+
+    function setPreset(minutes) {
+      running = false;
+      clearInterval(timerId);
+      totalSeconds = minutes * 60;
+      remainingSeconds = totalSeconds;
+      save();
+      renderTimer();
+      setStatus(`${minutes}分に設定しました。`);
+    }
+
+    function startTimer() {
+      if (running) return;
+      running = true;
+      document.getElementById("timerLabel").textContent = "進行中";
+      timerId = setInterval(() => {
+        remainingSeconds = Math.max(0, remainingSeconds - 1);
+        save();
+        renderTimer();
+        if (remainingSeconds === 0) {
+          running = false;
+          clearInterval(timerId);
+          document.getElementById("timerLabel").textContent = "終了";
+          setStatus("時間になりました。完了として記録できます。");
+        }
+      }, 1000);
+    }
+
+    function pauseTimer() {
+      running = false;
+      clearInterval(timerId);
+      document.getElementById("timerLabel").textContent = "一時停止";
+      save();
+    }
+
+    function resetTimer() {
+      running = false;
+      clearInterval(timerId);
+      remainingSeconds = totalSeconds;
+      document.getElementById("timerLabel").textContent = "待機中";
+      save();
+      renderTimer();
+    }
+
+    function completeSession() {
+      const goal = document.getElementById("goal").value.trim();
+      const nextAction = document.getElementById("nextAction").value.trim();
+      const memo = document.getElementById("memo").value.trim();
+      state.logs.unshift({
+        id: String(Date.now()),
+        minutes: Math.round(totalSeconds / 60),
+        goal,
+        nextAction,
+        memo,
+        completedAt: new Date().toISOString()
+      });
+      document.getElementById("memo").value = "";
+      resetTimer();
+      save();
+      renderLog();
+      setStatus("完了ログに記録しました。");
+    }
+
+    function exportJson() {
+      downloadText("focus-session-cards.json", JSON.stringify(state, null, 2), "application/json;charset=utf-8");
+    }
+
+    function exportMarkdown() {
+      const rows = state.logs.map((log) => `- ${log.minutes}分 / ${log.goal || "目的なし"} / 次: ${log.nextAction || "未設定"}${log.memo ? ` / ${log.memo.replace(/\n/g, " / ")}` : ""}`);
+      downloadText("focus-session-cards.md", `# 集中セッションカード\n\n${rows.length ? rows.join("\n") : "- ログなし"}\n`, "text/markdown;charset=utf-8");
+    }
+
+    function importJson(mode) {
+      try {
+        const raw = document.getElementById("importText").value.trim();
+        if (!raw) return;
+        const parsed = JSON.parse(raw);
+        const logs = Array.isArray(parsed) ? parsed : parsed.logs;
+        if (!Array.isArray(logs)) throw new Error("logs");
+        const incoming = logs.map((log, index) => ({
+          id: String(log.id || `${Date.now()}-${index}`),
+          minutes: Number(log.minutes || 5),
+          goal: String(log.goal || ""),
+          nextAction: String(log.nextAction || ""),
+          memo: String(log.memo || ""),
+          completedAt: String(log.completedAt || new Date().toISOString())
+        }));
+        state.logs = mode === "replace" ? incoming : [...incoming, ...state.logs];
+        document.getElementById("importText").value = "";
+        save();
+        renderLog();
+        setStatus(`${incoming.length}件を取り込みました。`);
+      } catch {
+        setStatus("JSONを取り込めませんでした。");
+      }
+    }
+
+    function clearLog() {
+      state.logs = [];
+      save();
+      renderLog();
+      setStatus("ログを消しました。");
+    }
+
+    function downloadText(filename, text, type) {
+      const blob = new Blob([text], { type });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+      setStatus(`${filename} を書き出しました。`);
+    }
+
+    function renderTimer() {
+      const minutes = Math.floor(remainingSeconds / 60);
+      const seconds = remainingSeconds % 60;
+      const done = totalSeconds ? 1 - (remainingSeconds / totalSeconds) : 0;
+      document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+      document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+      document.getElementById("dial").style.setProperty("--progress", `${Math.round(done * 360)}deg`);
+    }
+
+    function renderLog() {
+      const log = document.getElementById("log");
+      log.innerHTML = state.logs.length ? state.logs.map((item) => `<article class="item card"><strong>${escapeHtml(item.minutes)}分: ${escapeHtml(item.goal || "目的なし")}</strong><p>次: ${escapeHtml(item.nextAction || "未設定")}</p>${item.memo ? `<p>${escapeHtml(item.memo)}</p>` : ""}</article>`).join("") : '<div class="empty">まだ記録はありません。</div>';
+    }
+
+    function setStatus(text) {
+      document.getElementById("status").textContent = text;
+    }
+
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" }[char]));
+    }
+
+    document.querySelectorAll("[data-minutes]").forEach((button) => button.addEventListener("click", () => setPreset(Number(button.dataset.minutes))));
+    document.getElementById("start").addEventListener("click", startTimer);
+    document.getElementById("pause").addEventListener("click", pauseTimer);
+    document.getElementById("reset").addEventListener("click", resetTimer);
+    document.getElementById("complete").addEventListener("click", completeSession);
+    document.getElementById("exportJson").addEventListener("click", exportJson);
+    document.getElementById("exportMarkdown").addEventListener("click", exportMarkdown);
+    document.getElementById("appendJson").addEventListener("click", () => importJson("append"));
+    document.getElementById("replaceJson").addEventListener("click", () => importJson("replace"));
+    document.getElementById("clearLog").addEventListener("click", clearLog);
+
+    renderTimer();
+    renderLog();
+  </script>
+</body>
+</html>

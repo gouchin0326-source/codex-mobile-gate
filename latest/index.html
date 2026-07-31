@@ -9,15 +9,15 @@
   <title>CG | CODEX Gate</title>
   <style>
     :root {
-      --bg: #f5f1e8;
-      --panel: #fffdf8;
+      --bg: #f4f6f8;
+      --panel: #ffffff;
       --ink: #172033;
-      --muted: #657083;
-      --line: #d7cdbc;
-      --blue: #1d5fd1;
-      --green: #19744a;
-      --amber: #bc7613;
-      --rose: #b44c5f;
+      --muted: #667085;
+      --line: #d9dee7;
+      --blue: #2563eb;
+      --green: #15803d;
+      --amber: #b45309;
+      --rose: #b4235a;
       font-family: "Segoe UI", "Meiryo", system-ui, sans-serif;
     }
 
@@ -32,15 +32,15 @@
     }
 
     .wrap {
-      width: min(980px, calc(100% - 20px));
+      width: min(980px, calc(100% - 18px));
       margin-inline: auto;
     }
 
     header {
       background: #172033;
       color: white;
-      padding: 12px 0 10px;
-      border-bottom: 4px solid var(--amber);
+      padding: 14px 0 12px;
+      border-bottom: 4px solid var(--green);
     }
 
     .top {
@@ -52,31 +52,30 @@
 
     h1 {
       margin: 0;
-      font-size: 2.2rem;
+      font-size: 2.1rem;
       line-height: 1;
-      letter-spacing: 0;
     }
 
     .tagline {
-      margin: 3px 0 0;
+      margin: 4px 0 0;
       color: #dce5f3;
-      font-size: .78rem;
+      font-size: .8rem;
       font-weight: 700;
     }
 
     .date {
-      border: 1px solid rgba(255, 255, 255, .22);
-      padding: 5px 8px;
+      border: 1px solid rgba(255, 255, 255, .24);
+      padding: 6px 9px;
       color: #dce5f3;
-      font-size: .72rem;
-      font-weight: 800;
+      font-size: .76rem;
+      font-weight: 900;
       white-space: nowrap;
     }
 
     main {
       display: grid;
-      gap: 8px;
-      padding: 8px 0 22px;
+      gap: 9px;
+      padding: 9px 0 22px;
     }
 
     section,
@@ -91,17 +90,16 @@
     section { padding: 10px; }
 
     h2 {
-      margin: 0 0 7px;
-      font-size: .92rem;
+      margin: 0 0 8px;
+      font-size: .96rem;
       line-height: 1.2;
-      letter-spacing: 0;
     }
 
     .metrics,
     .shelf {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 6px;
+      gap: 7px;
     }
 
     .metric {
@@ -109,7 +107,7 @@
       padding: 8px;
       border: 1px solid var(--line);
       border-radius: 8px;
-      background: #fbf8f0;
+      background: #f9fafb;
     }
 
     .metric strong {
@@ -125,7 +123,7 @@
     }
 
     .tile {
-      min-height: 74px;
+      min-height: 78px;
       padding: 9px;
       display: grid;
       align-content: space-between;
@@ -138,27 +136,28 @@
 
     .tile strong {
       display: block;
-      font-size: .86rem;
+      font-size: .88rem;
       line-height: 1.2;
+      overflow-wrap: anywhere;
     }
 
     .tile small {
       color: var(--muted);
-      font-size: .68rem;
+      font-size: .69rem;
       line-height: 1.25;
     }
 
     .lane-now {
       display: grid;
-      grid-template-columns: 84px 1fr auto;
-      gap: 8px;
+      grid-template-columns: 86px 1fr auto;
+      gap: 9px;
       align-items: center;
     }
 
     .badge {
       display: grid;
       place-items: center;
-      min-height: 62px;
+      min-height: 64px;
       border-radius: 8px;
       background: #172033;
       color: white;
@@ -170,7 +169,7 @@
 
     .lane-now strong {
       display: block;
-      font-size: .96rem;
+      font-size: .98rem;
       line-height: 1.25;
     }
 
@@ -182,7 +181,7 @@
 
     .go {
       min-height: 44px;
-      padding: 9px 11px;
+      padding: 9px 12px;
       display: grid;
       place-items: center;
       border-radius: 8px;
@@ -197,32 +196,30 @@
     .flow {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 5px;
+      gap: 6px;
     }
 
     .step {
-      padding: 7px;
+      padding: 7px 4px;
       border-radius: 7px;
       border: 1px solid var(--line);
-      background: #fbf8f0;
+      background: #f9fafb;
       font-size: .72rem;
       font-weight: 800;
       text-align: center;
     }
 
-    @media (max-width: 520px) {
-      .wrap { width: min(100% - 14px, 420px); }
-      header { padding-top: 9px; }
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 14px, 430px); }
+      .top { grid-template-columns: 1fr; }
+      .date { justify-self: start; }
       h1 { font-size: 1.85rem; }
-      .tagline { font-size: .7rem; }
-      main { gap: 6px; padding-top: 6px; }
-      section { padding: 8px; }
       .metrics { grid-template-columns: repeat(4, 1fr); }
       .metric { padding: 6px 5px; }
       .metric strong { font-size: 1.05rem; }
       .metric span { font-size: .62rem; }
       .shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .tile { min-height: 62px; padding: 7px; }
+      .tile { min-height: 66px; padding: 7px; }
       .lane-now { grid-template-columns: 58px 1fr 58px; gap: 6px; }
       .badge { min-height: 52px; font-size: .66rem; }
       .lane-now strong { font-size: .82rem; }
@@ -238,41 +235,54 @@
     <div class="wrap top">
       <div>
         <h1>CG</h1>
-        <p class="tagline">CODEX Gate / 一画面で見る開発入口</p>
+        <p class="tagline">CODEX Gate / 今日の成果物へすぐ入る入口</p>
       </div>
-      <div class="date">2026-07-24</div>
+      <div class="date">更新 2026-07-31</div>
     </div>
   </header>
 
   <main class="wrap">
     <section aria-label="status summary">
       <div class="metrics">
-        <div class="metric"><strong>11</strong><span>アプリ</span></div>
-        <div class="metric"><strong>12</strong><span>企画</span></div>
-        <div class="metric"><strong>17</strong><span>成果物</span></div>
-        <div class="metric"><strong>6</strong><span>レーン</span></div>
+        <div class="metric"><strong>15</strong><span>アプリ</span></div>
+        <div class="metric"><strong>16</strong><span>企画</span></div>
+        <div class="metric"><strong>21</strong><span>成果物</span></div>
+        <div class="metric"><strong>10</strong><span>レーン</span></div>
       </div>
     </section>
 
     <section>
-      <h2>棚から開く</h2>
+      <h2>すぐ開く</h2>
       <div class="shelf">
-        <a class="tile" href="./dashboard.html"><strong>CSD</strong><small>詳細チェック</small></a>
-        <a class="tile" href="./app-launcher.html"><strong>アプリ棚</strong><small>全アプリ</small></a>
-        <a class="tile" href="./cat-affinity-lane/index.html"><strong>猫レーン</strong><small>新しい体験</small></a>
-        <a class="tile" href="./csd-designer-showcase/index.html"><strong>デザイン</strong><small>見せ方の例</small></a>
+        <a class="tile" href="./dashboard.html"><strong>CSD</strong><small>状態と試行台帳を見る</small></a>
+        <a class="tile" href="./app-launcher.html"><strong>アプリ棚</strong><small>登録済みアプリ一覧</small></a>
+        <a class="tile" href="./daily-task-0731/index.html"><strong>0731 作業掲示板</strong><small>今日のタスクを整理して書き出す</small></a>
+        <a class="tile" href="./codex-data-pocket/index.html"><strong>Data Pocket</strong><small>小さな記録を保存、出力</small></a>
       </div>
     </section>
 
     <section>
       <h2>最新レーン</h2>
       <div class="lane-now">
-        <div class="badge">NEW<br>LANE</div>
+        <div class="badge">NEW<br>0731</div>
         <div>
-          <strong>猫が好きになるコンテンツ</strong>
-          <p>写真、短い観察、触れる反応で「猫を見てみたい」に寄せる小さな体験。</p>
+          <strong>外部AIブリーフ圧縮器</strong>
+          <p>スマホから目的、対象、出力形式、確認観点を選び、外部AIへ渡す短い依頼文を作ります。</p>
         </div>
-        <a class="go" href="./cat-affinity-lane/index.html">開く</a>
+        <a class="go" href="./external-ai-brief-compressor/index.html">開く</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>掲載済みコンテンツ</h2>
+      <div class="shelf">
+        <a class="tile" href="./external-ai-brief-compressor/index.html"><strong>外部AIブリーフ圧縮器</strong><small>選択式で依頼文を作る</small></a>
+        <a class="tile" href="./eco-lane-map/index.html"><strong>エコレーン実装マップ</strong><small>節約型CG開発を可視化</small></a>
+        <a class="tile" href="./focus-session-cards/index.html"><strong>集中セッションカード</strong><small>短時間集中ログを書き出す</small></a>
+        <a class="tile" href="./quick-notes-board/index.html"><strong>メモ整理板</strong><small>未着手、待ち、完了の小さな板</small></a>
+        <a class="tile" href="./cat-affinity-lane/index.html"><strong>猫が好きになるコンテンツ</strong><small>観察から入る体験レーン</small></a>
+        <a class="tile" href="./csd-designer-showcase/index.html"><strong>CSD Designer Showcase</strong><small>成果を見て判断する展示</small></a>
+        <a class="tile" href="./orbit-catcher/index.html"><strong>Orbit Catcher</strong><small>保存と書き出しつきミニゲーム</small></a>
       </div>
     </section>
 
@@ -280,11 +290,11 @@
       <h2>レーンの作り方</h2>
       <div class="flow" aria-label="lane flow">
         <div class="step">目的</div>
-        <div class="step">実作</div>
+        <div class="step">実体</div>
         <div class="step">検証</div>
         <div class="step">CG掲載</div>
       </div>
-      <p class="muted">共有Driveのレーン知見を反映。レーンは説明ではなく、CGに載る成果物まで作る単位。</p>
+      <p class="muted">レーンは説明だけで終わらせず、開ける成果物、台帳、QC、引き継ぎ出力までを小さくそろえます。</p>
     </section>
   </main>
 
