@@ -1,0 +1,44 @@
+{
+  "updated": "2026-07-21",
+  "purpose": "Use Codex as the control tower while assigning bounded work to external AI lanes to save Codex tokens.",
+  "rules": [
+    "Do not use Codex local LLM or GPU unless the user explicitly re-enables that lane.",
+    "Give external AI compact briefs, not whole project folders.",
+    "Bring results back as JSON, Markdown, CSV, command text, or small patches.",
+    "Codex owns integration, verification, registry updates, and dashboard visibility."
+  ],
+  "lanes": [
+    {
+      "id": "chatgpt-research",
+      "name": "ChatGPT Research Lane",
+      "best_for": ["short research", "comparison table", "test ideas", "copy draft"],
+      "input": "templates/EXTERNAL_AI_BRIEF.md",
+      "output": ["Markdown", "JSON bullets"],
+      "codex_role": "verify facts when needed, reduce to implementation steps, update dashboard artifacts"
+    },
+    {
+      "id": "claude-design-review",
+      "name": "Claude Design Review Lane",
+      "best_for": ["UI critique", "workflow review", "Japanese copy polish", "edge-case discovery"],
+      "input": "templates/EXTERNAL_AI_BRIEF.md",
+      "output": ["review note", "ranked findings"],
+      "codex_role": "apply only scoped fixes under C:\\Codex and avoid editing C:\\Claude shared data"
+    },
+    {
+      "id": "browser-human-check",
+      "name": "Human Browser Check Lane",
+      "best_for": ["mobile feel", "visual overlap", "actual workflow completion"],
+      "input": "dashboard link or app HTML path",
+      "output": ["short notes", "screenshots", "pass/fail"],
+      "codex_role": "convert notes into small implementation tasks"
+    },
+    {
+      "id": "local-ai-paused",
+      "name": "Local AI Lane",
+      "best_for": ["image", "music", "video", "local coding helper"],
+      "input": "disabled until explicit user instruction",
+      "output": ["Codex-owned files only"],
+      "codex_role": "keep lane visible but paused to avoid GPU and LLM congestion"
+    }
+  ]
+}

@@ -78,7 +78,7 @@
 <body>
   <header>
     <h1>Codex Status Dashboard</h1>
-    <div class="sub">C:\Codex / 更新 2026/8/1 6:33:50 / トークン節約で成果物を増やす作業環境</div>
+    <div class="sub">C:\Codex / 更新 2026/8/5 6:29:33 / トークン節約で成果物を増やす作業環境</div>
   </header>
   <main>
     <div class="hero">
@@ -177,7 +177,7 @@
               <td><span class="badge">できる</span></td>
               <td>出力</td>
               <td><a href="data/artifact-capabilities.json">成果物台帳</a></td>
-              <td>21件の成果物について、出力形式と次に渡せるAIを記録</td>
+              <td>25件の成果物について、出力形式と次に渡せるAIを記録</td>
             </tr>
             <tr class="ok">
               <td><span class="badge">できる</span></td>
@@ -189,7 +189,7 @@
               <td><span class="badge">できる</span></td>
               <td>司令塔</td>
               <td><a href="data/codex-lanes.json">CODEX PDCAレーン</a></td>
-              <td>11本のCODEX内レーンを可視化。チケットから検収記録まで小さく回す</td>
+              <td>15本のCODEX内レーンを可視化。チケットから検収記録まで小さく回す</td>
             </tr>
             <tr class="ok">
               <td><span class="badge">できる</span></td>
@@ -287,11 +287,11 @@
               <td><a href="data/token-budget.json">data/token-budget.json</a></td>
             </tr>
             <tr class="ok">
-              <td><span class="badge">ready-ticket</span></td>
+              <td><span class="badge">done</span></td>
               <td>CSD generator still contains mojibake labels</td>
               <td>Static Tool Lane</td>
-              <td>Replace visible mojibake labels in scripts\update-dashboard.mjs with readable Japanese labels.</td>
-              <td>Keep behavior unchanged; verify dashboard generation and public copy sync.</td>
+              <td>No further action needed unless new mojibake appears in generated dashboard text.</td>
+              <td>Verified generator and dashboard text through UTF-8 reads; keep behavior unchanged.</td>
               <td><a href="scripts/update-dashboard.mjs">scripts/update-dashboard.mjs</a></td>
             </tr>
             <tr class="ok">
@@ -415,11 +415,43 @@
               <td>Turn the compressor into a GO-ready task control panel.</td>
               <td>Run inline-script checks, JSON registry checks, CSD/status generation, public-copy sync, CG link checks, GitHub Pages publish, and Google Drive sync.</td>
               <td>Use this GO-ready compressor to create the next CG-listed artifact from a selected task.</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">done</span></td>
+              <td>csd-lane-trial-2026-08-03-001</td>
+              <td>CG Token-Saving Command Lane -&gt; External AI Brief Compressor Lane -&gt; Mobile Puzzle Eco Lane -&gt; Static Tool Lane</td>
+              <td>Create and test one complete CODEX eco-lane by building a serious smartphone puzzle game from command-tower brief to CG/CSD registration.</td>
+              <td>Run inline-script syntax check, solvable-level check for all six boards, JSON registry checks, CSD/status generation, public-copy sync, and CG visibility checks.</td>
+              <td>Use the generated external AI brief to design levels 7-12, daily challenge rules, and stronger feedback states.</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">done</span></td>
+              <td>csd-lane-trial-2026-08-03-002</td>
+              <td>CG Token-Saving Command Lane -&gt; External AI Brief Compressor Lane -&gt; Number Logic Eco Lane -&gt; Static Tool Lane</td>
+              <td>Create a completely different serious puzzle game app through the same CODEX eco-lane pattern while saving tokens.</td>
+              <td>Run inline-script syntax check, solution/zone consistency check for all levels, JSON registry checks, CSD/status generation, public-copy sync, and CG visibility checks.</td>
+              <td>Use the generated external AI brief to design 6x6/7x7 level packs, uniqueness checks, and stronger learning feedback.</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">done</span></td>
+              <td>csd-lane-trial-2026-08-03-003</td>
+              <td>CG Token-Saving Command Lane -&gt; External AI Brief Compressor Lane -&gt; Falling Block Eco Lane -&gt; Static Tool Lane</td>
+              <td>Create a serious falling-block puzzle app through the CODEX eco-lane while keeping external AI scope bounded to balance and mission ideas.</td>
+              <td>Run inline-script syntax check, piece definition check, JSON registry checks, CSD/status generation, public-copy sync, and CG visibility checks.</td>
+              <td>Use the generated external AI brief to design mission pack 2, special blocks, score curve tuning, and mobile control review.</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">done</span></td>
+              <td>csd-lane-trial-2026-08-05-001</td>
+              <td>CG Token-Saving Command Lane -&gt; External AI Brief Compressor Lane -&gt; Falling Block Eco Lane -&gt; External AI Lane Run Test Lane -&gt; Static Tool Lane</td>
+              <td>Test whether the latest CG-listed external AI lane path can execute from lane dataset to artifact creation and CG listing.</td>
+              <td>Run inline script syntax check, JSON registry checks, CSD/status generation, public-copy sync, and CG visibility checks.</td>
+              <td>Use the same dataset shape for a real external AI mission-pack request and integrate the returned JSON into Cascade Forge.</td>
             </tr></tbody>
         </table>
         <div class="subhead"><strong>Claude側から取得したノウハウ</strong><span>今回の試行に使った要点</span></div>
         <table>
-          <tbody><tr><td>A compressed brief should remove ambiguity before Codex starts work.</td></tr><tr><td>The user needs to see whether a task is only set or explicitly approved with GO.</td></tr><tr><td>Rough token estimates are useful as planning hints but must not pretend to be exact.</td></tr><tr><td>Genre lanes should work for apps, music, images, videos, MV, games, articles, and research using the same control model.</td></tr><tr><td>A mobile-first control panel should turn choices into target files, acceptance, checks, and handoff exports.</td></tr></tbody>
+          <tbody><tr><td>Keep external AI input compact and do not pass whole folders.</td></tr><tr><td>The return format should be JSON or Markdown that Codex can integrate deterministically.</td></tr><tr><td>A lane test is complete only when the artifact, ledgers, dashboard, public copy, and CG entry agree.</td></tr><tr><td>For token saving, the proof artifact should preserve the reusable dataset and handoff text.</td></tr><tr><td>No local LLM or GPU is needed for this static lane verification.</td></tr></tbody>
         </table>
       </div>
     </section>
@@ -513,27 +545,27 @@
             <tr>
               <td>dashboard.html</td>
               <td>司令塔HTML</td>
-              <td>2026/7/31 16:33:11</td>
+              <td>2026/8/3 19:53:55</td>
             </tr>
             <tr>
               <td>app-launcher.html</td>
               <td>アプリ入口</td>
-              <td>2026/8/1 6:33:47</td>
+              <td>2026/8/5 6:29:29</td>
             </tr>
             <tr>
               <td>public-mobile</td>
               <td>モバイル用latest素材</td>
-              <td>2026/8/1 6:33:02</td>
+              <td>2026/8/5 6:29:11</td>
             </tr>
             <tr>
               <td>pages-site</td>
               <td>GitHub Pages準備フォルダ</td>
-              <td>2026/7/31 16:33:13</td>
+              <td>2026/8/1 6:33:52</td>
             </tr>
             <tr>
               <td>artifact-capabilities.json</td>
               <td>AI handoff台帳</td>
-              <td>2026/8/1 6:33:02</td>
+              <td>2026/8/5 6:28:17</td>
             </tr>
             <tr>
               <td>external-ai-lanes.json</td>
@@ -543,7 +575,7 @@
             <tr>
               <td>codex-lanes.json</td>
               <td>CODEX PDCAレーン台帳</td>
-              <td>2026/8/1 6:33:02</td>
+              <td>2026/8/5 6:28:17</td>
             </tr></tbody>
         </table>
       </div>
@@ -555,9 +587,9 @@
         <div class="subhead"><strong>現在タスク</strong><a href="data/status.json">status.json</a></div>
         <table>
           <tbody>
-            <tr><td>Objective</td><td>2026-08-01 task - make External AI Brief Compressor a GO-ready task control panel.</td></tr>
-            <tr><td>Scope</td><td>`C:\Codex` External AI Brief Compressor, CG entry, public copies, CSD/status visibility, app/artifact ledgers, GitHub Pages, and Google Drive sync only. Shared Claude/HOSHI files are reference-only. No local LLM/GPU.</td></tr>
-            <tr><td>Acceptance</td><td>Compressor supports genre lanes, detailed target fields, ambiguity score, rough token estimate, GO readiness, set-complete task storage, GO-sign visualization, JSON/Markdown/task export, CG update, CSD/status generation, GitHub Pages publish, and inline script checks.</td></tr>
+            <tr><td>Objective</td><td>2026-08-03 task - create a serious falling-block puzzle app through the CODEX eco-lane.</td></tr>
+            <tr><td>Scope</td><td>`C:\Codex` Cascade Forge static game, falling-block eco-lane, external AI brief export, app/artifact/CODEX lane/CSD ledgers, public copies, dashboard/status, and progress log only. No local LLM/GPU.</td></tr>
+            <tr><td>Acceptance</td><td>Cascade Forge is a mobile-first falling-block puzzle with seven pieces, collision, rotation, soft/hard drop, hold, next queue, ghost, line clears, combo missions, local records, external AI brief copy, JSON/Markdown/result export, CG/CSD registration, public copies, dashboard/status generation, and deterministic checks.</td></tr>
           </tbody>
         </table>
         <div class="subhead"><strong>PDCA</strong><a href="data/codex-lanes.json">codex-lanes.json</a></div>
@@ -665,6 +697,30 @@
               <td>List the compressor on CG and use it as the pre-execution gate before external AI/Web/Codex handoffs.</td>
               <td>Use a GO-signed task from the compressor to create the next CG-listed content item.</td>
             </tr>
+            <tr class="ok">
+              <td><span class="badge">cg-listed</span></td>
+              <td><a href="data/codex-lanes.json">Mobile Puzzle Eco Lane</a></td>
+              <td>Create a serious smartphone puzzle game through the CODEX command tower, external AI brief loop, static implementation, verification, and CG/CSD registration.</td>
+              <td>Run inline script syntax, solvable-level check, JSON registry checks, dashboard generation, public-copy sync, and CG visibility checks.</td>
+              <td>Use Prism Relay as the first complete game eco-lane and ask external AI for levels 7-12, difficulty curve, daily challenge, and feedback improvements.</td>
+              <td>Send the generated Prism Relay brief to external AI and integrate level pack 2 with mobile browser visual checks.</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">cg-listed</span></td>
+              <td><a href="data/codex-lanes.json">Number Logic Eco Lane</a></td>
+              <td>Create a completely different serious smartphone puzzle app using CODEX command-tower planning, external AI level-pack briefs, static implementation, verification, and CG/CSD registration.</td>
+              <td>Run inline script syntax, solution/zone consistency checks, JSON registry checks, dashboard generation, public-copy sync, and CG visibility checks.</td>
+              <td>Use Sum Garden as the number-logic eco-lane pattern and ask external AI for 6x6/7x7 level packs and learning feedback text.</td>
+              <td>Send the generated Sum Garden brief to external AI and integrate a level pack with uniqueness review and mobile visual checks.</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">cg-listed</span></td>
+              <td><a href="data/codex-lanes.json">Falling Block Eco Lane</a></td>
+              <td>Create a serious smartphone falling-block puzzle through CODEX command-tower planning, external AI balance briefs, static implementation, verification, and CG/CSD registration.</td>
+              <td>Run inline script syntax, piece definition checks, JSON registry checks, dashboard generation, public-copy sync, and CG visibility checks.</td>
+              <td>Use Cascade Forge as the falling-block eco-lane pattern and ask external AI for mission pack 2, special blocks, score curve, and mobile control review.</td>
+              <td>Send the generated Cascade Forge brief to external AI and integrate mission pack 2 with mobile browser play checks.</td>
+            </tr>
             <tr class="stop">
               <td><span class="badge">paused</span></td>
               <td><a href="data/codex-lanes.json">Local AI Lane</a></td>
@@ -672,6 +728,14 @@
               <td>GPU lock, timeout, and no shared-data edits.</td>
               <td>Record outputs and keep the lane paused again unless told otherwise.</td>
               <td>No action while GPU policy is disabled.</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">cg-listed</span></td>
+              <td><a href="data/codex-lanes.json">External AI Lane Run Test Lane</a></td>
+              <td>Verify that a CG-listed external AI eco-lane can run from lane dataset through artifact creation and CG/CSD registration.</td>
+              <td>Run inline script syntax, JSON registry checks, dashboard generation, public-copy sync, and CG visibility checks.</td>
+              <td>Keep this run as the regression proof before using external AI for mission-pack integration.</td>
+              <td>Send a real compact mission-pack request to external AI and integrate only the returned JSON into Cascade Forge.</td>
             </tr></tbody>
         </table>
       </div>
@@ -795,7 +859,7 @@ Avoid: long preface, greeting, long background</pre>
     </section>
 
     <section id="apps" class="tab-panel">
-      <div class="title-row"><h2>登録済みアプリ</h2><span class="muted">15 apps / 16 projects</span></div>
+      <div class="title-row"><h2>登録済みアプリ</h2><span class="muted">19 apps / 20 projects</span></div>
       <div class="body mini-grid">
           <a class="mini-card" href="projects/token-flow-app/index.html">
             <strong>Token Flow</strong>
@@ -871,6 +935,26 @@ Avoid: long preface, greeting, long background</pre>
             <strong>External AI Brief Compressor</strong>
             <span>usable+export / productivity</span>
             <small>Mobile-first CG control panel for compressing external AI/Codex tasks with genre lanes, ambiguity scoring, rough token estimate, GO readiness, task set, copy, JSON, and Markdown export</small>
+          </a>
+          <a class="mini-card" href="projects/mobile-puzzle-eco-lane/index.html">
+            <strong>Prism Relay</strong>
+            <span>game+eco-lane+export / game</span>
+            <small>Mobile-first CODEX eco-lane puzzle game with rotating relay boards, stars, hints, undo, external AI brief generation, JSON export, and Markdown export</small>
+          </a>
+          <a class="mini-card" href="projects/sum-garden-eco-lane/index.html">
+            <strong>Sum Garden</strong>
+            <span>game+eco-lane+export / game</span>
+            <small>Mobile-first number logic puzzle with row/column uniqueness, zone sums, hints, undo, local records, external AI brief generation, JSON export, and Markdown export</small>
+          </a>
+          <a class="mini-card" href="projects/falling-block-eco-lane/index.html">
+            <strong>Cascade Forge</strong>
+            <span>game+eco-lane+export / game</span>
+            <small>Mobile-first falling block puzzle with hold, next queue, ghost, line clears, combo missions, touch controls, external AI brief generation, JSON export, and Markdown export</small>
+          </a>
+          <a class="mini-card" href="projects/external-ai-lane-run-0805/index.html">
+            <strong>0805 External AI Lane Run</strong>
+            <span>test+export+cg-listed / development</span>
+            <small>CG-listed end-to-end test for the latest external-AI eco-lane path: lane dataset, compact external AI brief shape, artifact creation, CSD registration, CG listing, JSON export, and Markdown export</small>
           </a></div>
     </section>
 
@@ -1027,6 +1111,34 @@ Avoid: long preface, greeting, long background</pre>
               <td>clipboard, Codex task list, GO status, rough token estimate, JSON, Markdown</td>
               <td>external AI, Codex, Claude, ChatGPT</td>
               <td>Use on mobile to remove ambiguity, estimate rough token cost, set a Codex task, and decide whether to give GO before implementation.</td>
+            </tr>
+            <tr>
+              <td><a href="projects/mobile-puzzle-eco-lane/index.html">Prism Relay</a></td>
+              <td>html-mobile-puzzle-game</td>
+              <td>external AI brief, result JSON, lane JSON, Markdown</td>
+              <td>external AI, Codex, Claude, ChatGPT, game-design AI</td>
+              <td>Use as the first complete CODEX eco-lane game artifact: command-tower brief, external AI improvement loop, implementation, verification, and CG/CSD registration.</td>
+            </tr>
+            <tr>
+              <td><a href="projects/sum-garden-eco-lane/index.html">Sum Garden</a></td>
+              <td>html-mobile-number-logic-game</td>
+              <td>external AI brief, result JSON, lane JSON, Markdown</td>
+              <td>external AI, Codex, Claude, ChatGPT, game-design AI</td>
+              <td>Use as the second complete CODEX eco-lane game artifact and as the pattern for number-logic level packs generated by external AI.</td>
+            </tr>
+            <tr>
+              <td><a href="projects/falling-block-eco-lane/index.html">Cascade Forge</a></td>
+              <td>html-mobile-falling-block-game</td>
+              <td>external AI brief, result JSON, lane JSON, Markdown</td>
+              <td>external AI, Codex, Claude, ChatGPT, game-design AI</td>
+              <td>Use as the falling-block eco-lane artifact for external AI balance review, mission design, special block ideas, and mobile control tuning.</td>
+            </tr>
+            <tr>
+              <td><a href="projects/external-ai-lane-run-0805/index.html">0805 External AI Lane Run</a></td>
+              <td>html-lane-execution-test</td>
+              <td>external AI dataset JSON, handoff Markdown, CG/CSD execution record</td>
+              <td>external AI, Codex, Claude, ChatGPT, human reviewer</td>
+              <td>Use as the compact proof that the CG-listed external AI lane path can run from dataset to artifact to CG registration.</td>
             </tr></tbody>
         </table>
         <div class="subhead"><strong>最近のローカルAI成果物</strong><a href="local_ai/gallery.html">gallery.html</a></div>
@@ -1368,6 +1480,10 @@ Avoid: long preface, greeting, long background</pre>
 |       +---external-ai-brief-compressor
 |       |       index.html
 |       |       
+|       +---external-ai-lane-run-0805
+|       |       index.html
+|       |       README.md
+|       |       
 |       +---focus-session-cards
 |       |       index.html
 |       |       
@@ -1403,6 +1519,10 @@ Avoid: long preface, greeting, long background</pre>
 |       |   |       README.md
 |       |   |       
 |       |   +---external-ai-brief-compressor
+|       |   |       index.html
+|       |   |       README.md
+|       |   |       
+|       |   +---external-ai-lane-run-0805
 |       |   |       index.html
 |       |   |       README.md
 |       |   |       
@@ -1464,7 +1584,13 @@ Avoid: long preface, greeting, long background</pre>
 |       +---external-ai-brief-compressor
 |       |       index.html
 |       |       
+|       +---falling-block-eco-lane
+|       |       index.html
+|       |       
 |       +---focus-session-cards
+|       |       index.html
+|       |       
+|       +---mobile-puzzle-eco-lane
 |       |       index.html
 |       |       
 |       +---orbit-catcher
@@ -1506,7 +1632,10 @@ Avoid: long preface, greeting, long background</pre>
 |       |           index.html
 |       |           README.md
 |       |           
-|       \---quick-notes-board
+|       +---quick-notes-board
+|       |       index.html
+|       |       
+|       \---sum-garden-eco-lane
 |               index.html
 |               
 +---projects
@@ -1549,6 +1678,13 @@ Avoid: long preface, greeting, long background</pre>
 |   |       index.html
 |   |       README.md
 |   |       
+|   +---external-ai-lane-run-0805
+|   |       index.html
+|   |       README.md
+|   |       
+|   +---falling-block-eco-lane
+|   |       index.html
+|   |       
 |   +---focus-session-cards
 |   |       index.html
 |   |       README.md
@@ -1569,6 +1705,9 @@ Avoid: long preface, greeting, long background</pre>
 |   |       index.html
 |   |       README.md
 |   |       
+|   +---mobile-puzzle-eco-lane
+|   |       index.html
+|   |       
 |   +---orbit-catcher
 |   |       index.html
 |   |       README.md
@@ -1576,6 +1715,9 @@ Avoid: long preface, greeting, long background</pre>
 |   +---quick-notes-board
 |   |       index.html
 |   |       README.md
+|   |       
+|   +---sum-garden-eco-lane
+|   |       index.html
 |   |       
 |   \---token-flow-app
 |           index.html
@@ -1614,6 +1756,7 @@ Avoid: long preface, greeting, long background</pre>
 |   |       index.html
 |   |       
 |   +---data
+|   |       cg-development-status-2026-08-01.md
 |   |       codex-data-schema.json
 |   |       README.md
 |   |       seed-records.json
@@ -1623,6 +1766,10 @@ Avoid: long preface, greeting, long background</pre>
 |   |       
 |   +---external-ai-brief-compressor
 |   |       index.html
+|   |       
+|   +---external-ai-lane-run-0805
+|   |       index.html
+|   |       README.md
 |   |       
 |   +---focus-session-cards
 |   |       index.html
@@ -1662,14 +1809,28 @@ Avoid: long preface, greeting, long background</pre>
 |   |   |       index.html
 |   |   |       README.md
 |   |   |       
-|   |   \---focus-session-cards
+|   |   +---external-ai-lane-run-0805
+|   |   |       index.html
+|   |   |       README.md
+|   |   |       
+|   |   +---falling-block-eco-lane
+|   |   |       index.html
+|   |   |       
+|   |   +---focus-session-cards
+|   |   |       index.html
+|   |   |       README.md
+|   |   |       
+|   |   +---mobile-puzzle-eco-lane
+|   |   |       index.html
+|   |   |       
+|   |   \---sum-garden-eco-lane
 |   |           index.html
-|   |           README.md
 |   |           
 |   \---quick-notes-board
 |           index.html
 |           
 +---reports
+|       cg-development-status-2026-08-01.md
 |       LOCAL_LLM_CAPABILITY_TEST_2026-07-07.md
 |       README.md
 |       SMALL_STEP_LOCAL_LLM_CODING_RESEARCH_2026-07-06.md

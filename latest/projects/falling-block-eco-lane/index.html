@@ -1,0 +1,792 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cascade Forge - CODEX Eco Lane Falling Puzzle</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f6fb;
+      --panel: #fff;
+      --ink: #172033;
+      --muted: #657084;
+      --line: #d9e0ec;
+      --blue: #2563eb;
+      --green: #17803d;
+      --amber: #a75d08;
+      --red: #b42318;
+      --cyan: #0891b2;
+      --violet: #7c3aed;
+      --shadow: 0 10px 24px rgba(31, 42, 68, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Segoe UI", system-ui, sans-serif;
+      letter-spacing: 0;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 4;
+      background: rgba(255,255,255,.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(8px);
+      padding: 10px 12px;
+    }
+    .top, main { width: min(1180px, 100%); margin: 0 auto; }
+    h1, h2, h3, p { margin: 0; }
+    h1 { font-size: 21px; line-height: 1.15; }
+    h2 { font-size: 16px; }
+    h3 { font-size: 13px; }
+    .sub, .meta, small { color: var(--muted); font-size: 12px; line-height: 1.45; }
+    .pills { display: flex; gap: 6px; overflow-x: auto; margin-top: 8px; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      white-space: nowrap;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 3px 9px;
+      background: #fbfcff;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .pill.ok { color: var(--green); border-color: #abefc6; background: #ecfdf3; }
+    .pill.go { color: var(--blue); border-color: #bfdbfe; background: #eff6ff; }
+    main {
+      padding: 10px;
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr) 330px;
+      gap: 10px;
+      align-items: start;
+    }
+    section, .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+    .panel, .game-panel {
+      padding: 10px;
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+    .hud {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 7px;
+    }
+    .stat {
+      min-height: 58px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcff;
+      padding: 8px;
+    }
+    .stat strong { display: block; font-size: 20px; line-height: 1.1; }
+    .stat span { display: block; margin-top: 3px; color: var(--muted); font-size: 11px; }
+    .game-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 144px;
+      gap: 10px;
+      align-items: start;
+    }
+    .well-wrap {
+      position: relative;
+      width: min(100%, 420px);
+      margin: 0 auto;
+      aspect-ratio: 10 / 20;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #101827;
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      image-rendering: pixelated;
+    }
+    .overlay {
+      position: absolute;
+      inset: 0;
+      display: none;
+      place-items: center;
+      background: rgba(15,23,42,.72);
+      color: #fff;
+      text-align: center;
+      padding: 18px;
+    }
+    .overlay.show { display: grid; }
+    .overlay strong { display: block; font-size: 24px; margin-bottom: 8px; }
+    .side-stack { display: grid; gap: 10px; }
+    .mini-canvas {
+      width: 100%;
+      aspect-ratio: 1;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #101827;
+    }
+    button, textarea, select {
+      font: inherit;
+    }
+    button {
+      min-height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--ink);
+      font-weight: 800;
+      cursor: pointer;
+    }
+    button.primary { color: #fff; border-color: var(--blue); background: var(--blue); }
+    button.good { color: var(--green); border-color: #abefc6; background: #ecfdf3; }
+    button.warn { color: var(--amber); border-color: #fedf89; background: #fffaeb; }
+    button:disabled { opacity: .55; cursor: not-allowed; }
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 7px;
+    }
+    .touch-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 7px;
+    }
+    .touch-grid button {
+      min-height: 54px;
+      font-size: 18px;
+    }
+    .mission {
+      display: grid;
+      gap: 6px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px;
+      background: #fbfcff;
+    }
+    .bar {
+      height: 10px;
+      border-radius: 999px;
+      background: #e5eaf2;
+      overflow: hidden;
+    }
+    .bar > span {
+      display: block;
+      height: 100%;
+      width: 0%;
+      background: var(--green);
+      transition: width .15s ease;
+    }
+    .lane {
+      display: grid;
+      gap: 7px;
+    }
+    .lane-item {
+      display: grid;
+      grid-template-columns: 30px 1fr;
+      gap: 8px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcff;
+      padding: 8px;
+    }
+    .lane-item b {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: var(--blue);
+    }
+    .exports {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 7px;
+    }
+    textarea {
+      width: 100%;
+      min-height: 170px;
+      resize: vertical;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcff;
+      color: var(--ink);
+      padding: 9px;
+      font: 12px/1.45 Consolas, "Courier New", monospace;
+    }
+    .toast {
+      min-height: 42px;
+      border-left: 4px solid var(--blue);
+      border-radius: 8px;
+      background: #eff6ff;
+      padding: 9px;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .toast.win { border-left-color: var(--green); background: #ecfdf3; }
+    .toast.warn { border-left-color: var(--amber); background: #fffaeb; }
+    .status { min-height: 20px; color: var(--muted); font-size: 12px; }
+    @media (max-width: 980px) {
+      main { grid-template-columns: 1fr; }
+      .info-left { order: 2; }
+      .game-panel { order: 1; }
+      .info-right { order: 3; }
+      .hud { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+    @media (max-width: 620px) {
+      header { padding: 8px 10px; }
+      main { padding: 8px; gap: 8px; }
+      .panel, .game-panel { padding: 8px; }
+      .game-shell { grid-template-columns: 1fr; }
+      .side-stack { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .hud { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .controls, .touch-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .touch-grid button { min-height: 50px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top">
+      <h1>Cascade Forge</h1>
+      <p class="sub">落下ピースを鍛えてラインを消し、ミッション達成を狙うスマホ向け落ちものパズル</p>
+      <div class="pills">
+        <span class="pill go">Eco Lane</span>
+        <span class="pill ok">Falling Puzzle</span>
+        <span class="pill ok">Touch Controls</span>
+        <span class="pill ok">Brief Export</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <aside class="panel info-left" aria-labelledby="missionTitle">
+      <h2 id="missionTitle">ミッション</h2>
+      <div class="mission">
+        <h3>Line Forge</h3>
+        <p class="meta">12ライン消去で達成。連続消去でスコアが伸びます。</p>
+        <div class="bar"><span id="lineBar"></span></div>
+        <small id="lineText">0 / 12</small>
+      </div>
+      <div class="mission">
+        <h3>Combo Heat</h3>
+        <p class="meta">最大コンボ3以上を狙います。</p>
+        <div class="bar"><span id="comboBar"></span></div>
+        <small id="comboText">0 / 3</small>
+      </div>
+      <div class="mission">
+        <h3>Score Seal</h3>
+        <p class="meta">4500点で達成。ホールドとハードドロップを使います。</p>
+        <div class="bar"><span id="scoreBar"></span></div>
+        <small id="scoreText">0 / 4500</small>
+      </div>
+      <div id="message" class="toast">Startで開始。スマホでは下の操作ボタンを使います。</div>
+    </aside>
+
+    <section class="game-panel" aria-labelledby="gameTitle">
+      <div>
+        <h2 id="gameTitle">落下炉</h2>
+        <p class="meta">ラインを揃えて消去。ゴースト位置を見ながら、安全に積みます。</p>
+      </div>
+      <div class="hud" aria-live="polite">
+        <div class="stat"><strong id="score">0</strong><span>Score</span></div>
+        <div class="stat"><strong id="lines">0</strong><span>Lines</span></div>
+        <div class="stat"><strong id="level">1</strong><span>Level</span></div>
+        <div class="stat"><strong id="combo">0</strong><span>Combo</span></div>
+      </div>
+      <div class="game-shell">
+        <div class="well-wrap">
+          <canvas id="well" width="300" height="600" aria-label="Cascade Forge well"></canvas>
+          <div id="overlay" class="overlay show"><div><strong>Cascade Forge</strong><span>Startを押して開始</span></div></div>
+        </div>
+        <div class="side-stack">
+          <div>
+            <h3>Hold</h3>
+            <canvas id="holdCanvas" class="mini-canvas" width="120" height="120"></canvas>
+          </div>
+          <div>
+            <h3>Next</h3>
+            <canvas id="nextCanvas" class="mini-canvas" width="120" height="120"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="primary" id="start" type="button">Start</button>
+        <button id="pause" type="button">Pause</button>
+        <button id="hold" type="button">Hold</button>
+        <button class="warn" id="reset" type="button">Reset</button>
+      </div>
+      <div class="touch-grid" aria-label="touch controls">
+        <button id="left" type="button">←</button>
+        <button id="rotate" type="button">↻</button>
+        <button id="right" type="button">→</button>
+        <button id="drop" type="button">⇣</button>
+        <button id="soft" type="button">↓</button>
+        <button id="hard" type="button">⇩</button>
+        <button id="briefNow" type="button">Brief</button>
+        <button id="resultNow" type="button">Result</button>
+      </div>
+    </section>
+
+    <aside class="panel info-right" aria-labelledby="laneTitle">
+      <h2 id="laneTitle">CODEXエコレーン</h2>
+      <div class="lane">
+        <div class="lane-item"><b>1</b><div><h3>司令塔</h3><p class="meta">落ちもの仕様、スマホ操作、合格条件を短く固定。</p></div></div>
+        <div class="lane-item"><b>2</b><div><h3>外部AI</h3><p class="meta">バランス案、ミッション案、上級ルールだけ依頼。</p></div></div>
+        <div class="lane-item"><b>3</b><div><h3>Codex</h3><p class="meta">単一HTML実装、検証、登録、公開コピーまで担当。</p></div></div>
+      </div>
+      <div class="exports">
+        <button class="primary" id="copyBrief" type="button">Briefコピー</button>
+        <button id="exportJson" type="button">JSON保存</button>
+        <button id="exportMarkdown" type="button">Markdown保存</button>
+        <button id="exportResult" type="button">結果保存</button>
+      </div>
+      <textarea id="exportBox" aria-label="export preview" readonly></textarea>
+      <div id="exportStatus" class="status" role="status" aria-live="polite"></div>
+    </aside>
+  </main>
+
+  <script>
+    const COLS = 10;
+    const ROWS = 20;
+    const CELL = 30;
+    const shapes = {
+      I: { color: "#22d3ee", cells: [[0,1],[1,1],[2,1],[3,1]] },
+      O: { color: "#facc15", cells: [[1,0],[2,0],[1,1],[2,1]] },
+      T: { color: "#a78bfa", cells: [[1,0],[0,1],[1,1],[2,1]] },
+      L: { color: "#fb923c", cells: [[2,0],[0,1],[1,1],[2,1]] },
+      J: { color: "#60a5fa", cells: [[0,0],[0,1],[1,1],[2,1]] },
+      S: { color: "#4ade80", cells: [[1,0],[2,0],[0,1],[1,1]] },
+      Z: { color: "#fb7185", cells: [[0,0],[1,0],[1,1],[2,1]] }
+    };
+    const names = Object.keys(shapes);
+    const canvas = document.getElementById("well");
+    const ctx = canvas.getContext("2d");
+    const holdCtx = document.getElementById("holdCanvas").getContext("2d");
+    const nextCtx = document.getElementById("nextCanvas").getContext("2d");
+    const overlay = document.getElementById("overlay");
+    const message = document.getElementById("message");
+    const exportBox = document.getElementById("exportBox");
+    const exportStatus = document.getElementById("exportStatus");
+    let state = initialState();
+
+    function initialState() {
+      return {
+        grid: Array.from({ length: ROWS }, () => Array(COLS).fill(null)),
+        active: null,
+        hold: null,
+        canHold: true,
+        queue: [],
+        score: 0,
+        lines: 0,
+        level: 1,
+        combo: 0,
+        maxCombo: 0,
+        drops: 0,
+        running: false,
+        paused: false,
+        gameOver: false,
+        lastTime: 0,
+        acc: 0,
+        records: JSON.parse(localStorage.getItem("cascadeForgeRecords") || "[]")
+      };
+    }
+
+    function makePiece(type = randomType()) {
+      return { type, x: 3, y: -1, rotation: 0, cells: shapes[type].cells.map(([x, y]) => [x, y]) };
+    }
+
+    function randomType() {
+      if (state.queue.length < 5) {
+        const bag = [...names].sort(() => Math.random() - 0.5);
+        state.queue.push(...bag);
+      }
+      return state.queue.shift();
+    }
+
+    function rotateCells(cells) {
+      return cells.map(([x, y]) => [2 - y, x]);
+    }
+
+    function collides(piece, dx = 0, dy = 0, cells = piece.cells) {
+      return cells.some(([cx, cy]) => {
+        const x = piece.x + cx + dx;
+        const y = piece.y + cy + dy;
+        if (x < 0 || x >= COLS || y >= ROWS) return true;
+        return y >= 0 && state.grid[y][x];
+      });
+    }
+
+    function spawn() {
+      state.active = makePiece();
+      state.canHold = true;
+      if (collides(state.active)) {
+        state.gameOver = true;
+        state.running = false;
+        overlay.classList.add("show");
+        overlay.innerHTML = "<div><strong>Game Over</strong><span>Result保存かResetへ</span></div>";
+        saveRecord();
+      }
+    }
+
+    function move(dx) {
+      if (!canPlay()) return;
+      if (!collides(state.active, dx, 0)) {
+        state.active.x += dx;
+        draw();
+      }
+    }
+
+    function rotate() {
+      if (!canPlay()) return;
+      const next = rotateCells(state.active.cells);
+      const kicks = [0, -1, 1, -2, 2];
+      for (const kick of kicks) {
+        if (!collides(state.active, kick, 0, next)) {
+          state.active.x += kick;
+          state.active.cells = next;
+          draw();
+          return;
+        }
+      }
+    }
+
+    function softDrop() {
+      if (!canPlay()) return;
+      if (!collides(state.active, 0, 1)) {
+        state.active.y += 1;
+        state.score += 1;
+      } else {
+        lockPiece();
+      }
+      draw();
+    }
+
+    function hardDrop() {
+      if (!canPlay()) return;
+      let distance = 0;
+      while (!collides(state.active, 0, 1)) {
+        state.active.y += 1;
+        distance += 1;
+      }
+      state.score += distance * 2;
+      state.drops += 1;
+      lockPiece();
+      draw();
+    }
+
+    function holdPiece() {
+      if (!canPlay() || !state.canHold) return;
+      const current = state.active.type;
+      if (!state.hold) {
+        state.hold = current;
+        spawn();
+      } else {
+        state.active = makePiece(state.hold);
+        state.hold = current;
+      }
+      state.canHold = false;
+      draw();
+    }
+
+    function lockPiece() {
+      state.active.cells.forEach(([cx, cy]) => {
+        const x = state.active.x + cx;
+        const y = state.active.y + cy;
+        if (y >= 0 && y < ROWS) state.grid[y][x] = state.active.type;
+      });
+      clearLines();
+      spawn();
+    }
+
+    function clearLines() {
+      let cleared = 0;
+      state.grid = state.grid.filter((row) => {
+        if (row.every(Boolean)) {
+          cleared += 1;
+          return false;
+        }
+        return true;
+      });
+      while (state.grid.length < ROWS) state.grid.unshift(Array(COLS).fill(null));
+      if (cleared) {
+        state.combo += 1;
+        state.maxCombo = Math.max(state.maxCombo, state.combo);
+        state.lines += cleared;
+        state.level = 1 + Math.floor(state.lines / 10);
+        state.score += [0, 120, 320, 520, 900][cleared] * state.level + state.combo * 70;
+        message.className = "toast win";
+        message.textContent = `${cleared}ライン消去。Combo ${state.combo}`;
+      } else {
+        state.combo = 0;
+      }
+    }
+
+    function canPlay() {
+      return state.running && !state.paused && !state.gameOver && state.active;
+    }
+
+    function tick(time) {
+      if (!state.running) return;
+      const delta = time - state.lastTime;
+      state.lastTime = time;
+      if (!state.paused && !state.gameOver) {
+        state.acc += delta;
+        const speed = Math.max(140, 760 - state.level * 54);
+        if (state.acc >= speed) {
+          state.acc = 0;
+          softDrop();
+        }
+      }
+      requestAnimationFrame(tick);
+    }
+
+    function start() {
+      if (state.running && !state.gameOver) return;
+      state.running = true;
+      state.paused = false;
+      state.gameOver = false;
+      overlay.classList.remove("show");
+      if (!state.active) spawn();
+      state.lastTime = performance.now();
+      requestAnimationFrame(tick);
+      message.className = "toast";
+      message.textContent = "開始。Holdとゴーストを使って安全に積みます。";
+      draw();
+    }
+
+    function pause() {
+      if (!state.running || state.gameOver) return;
+      state.paused = !state.paused;
+      overlay.classList.toggle("show", state.paused);
+      overlay.innerHTML = "<div><strong>Paused</strong><span>Pauseで再開</span></div>";
+    }
+
+    function reset() {
+      state = initialState();
+      overlay.classList.add("show");
+      overlay.innerHTML = "<div><strong>Cascade Forge</strong><span>Startを押して開始</span></div>";
+      message.className = "toast";
+      message.textContent = "リセットしました。";
+      draw();
+    }
+
+    function ghostPiece() {
+      const ghost = { ...state.active, cells: state.active.cells.map((cell) => [...cell]) };
+      while (!collides(ghost, 0, 1)) ghost.y += 1;
+      return ghost;
+    }
+
+    function drawCell(context, x, y, color, alpha = 1, size = CELL) {
+      context.globalAlpha = alpha;
+      context.fillStyle = color;
+      context.fillRect(x * size + 1, y * size + 1, size - 2, size - 2);
+      context.fillStyle = "rgba(255,255,255,.22)";
+      context.fillRect(x * size + 4, y * size + 4, size - 8, 4);
+      context.globalAlpha = 1;
+    }
+
+    function drawPiece(context, piece, alpha = 1, size = CELL, offsetX = 0, offsetY = 0) {
+      if (!piece) return;
+      const color = shapes[piece.type].color;
+      piece.cells.forEach(([cx, cy]) => drawCell(context, piece.x + cx + offsetX, piece.y + cy + offsetY, color, alpha, size));
+    }
+
+    function drawMini(context, type) {
+      context.clearRect(0, 0, 120, 120);
+      context.fillStyle = "#101827";
+      context.fillRect(0, 0, 120, 120);
+      if (!type) return;
+      const piece = makePiece(type);
+      piece.x = 0;
+      piece.y = 0;
+      drawPiece(context, piece, 1, 24, 1, 1);
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#101827";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.strokeStyle = "rgba(255,255,255,.06)";
+      for (let x = 0; x <= COLS; x += 1) {
+        ctx.beginPath(); ctx.moveTo(x * CELL, 0); ctx.lineTo(x * CELL, ROWS * CELL); ctx.stroke();
+      }
+      for (let y = 0; y <= ROWS; y += 1) {
+        ctx.beginPath(); ctx.moveTo(0, y * CELL); ctx.lineTo(COLS * CELL, y * CELL); ctx.stroke();
+      }
+      state.grid.forEach((row, y) => row.forEach((type, x) => {
+        if (type) drawCell(ctx, x, y, shapes[type].color);
+      }));
+      if (state.active) {
+        drawPiece(ctx, ghostPiece(), .25);
+        drawPiece(ctx, state.active, 1);
+      }
+      drawMini(holdCtx, state.hold);
+      drawMini(nextCtx, state.queue[0]);
+      updateHud();
+      setExport("brief", false);
+    }
+
+    function progress(value, max) {
+      return `${Math.min(100, Math.round((value / max) * 100))}%`;
+    }
+
+    function updateHud() {
+      document.getElementById("score").textContent = state.score;
+      document.getElementById("lines").textContent = state.lines;
+      document.getElementById("level").textContent = state.level;
+      document.getElementById("combo").textContent = state.combo;
+      document.getElementById("lineBar").style.width = progress(state.lines, 12);
+      document.getElementById("comboBar").style.width = progress(state.maxCombo, 3);
+      document.getElementById("scoreBar").style.width = progress(state.score, 4500);
+      document.getElementById("lineText").textContent = `${Math.min(state.lines, 12)} / 12`;
+      document.getElementById("comboText").textContent = `${Math.min(state.maxCombo, 3)} / 3`;
+      document.getElementById("scoreText").textContent = `${Math.min(state.score, 4500)} / 4500`;
+    }
+
+    function saveRecord() {
+      const record = {
+        playedAt: new Date().toISOString(),
+        score: state.score,
+        lines: state.lines,
+        level: state.level,
+        maxCombo: state.maxCombo,
+        drops: state.drops,
+        missions: {
+          lineForge: state.lines >= 12,
+          comboHeat: state.maxCombo >= 3,
+          scoreSeal: state.score >= 4500
+        }
+      };
+      state.records.unshift(record);
+      state.records = state.records.slice(0, 10);
+      localStorage.setItem("cascadeForgeRecords", JSON.stringify(state.records));
+    }
+
+    function snapshot() {
+      return {
+        schema: "codex-falling-block-eco-lane-v1",
+        title: "Cascade Forge",
+        exportedAt: new Date().toISOString(),
+        score: state.score,
+        lines: state.lines,
+        level: state.level,
+        combo: state.combo,
+        maxCombo: state.maxCombo,
+        drops: state.drops,
+        running: state.running,
+        paused: state.paused,
+        gameOver: state.gameOver,
+        records: state.records,
+        lane: {
+          command: "CODEX司令塔で落ちもの仕様、スマホ操作、合格条件を固定",
+          externalAI: "バランス案、ミッション案、上級ルール、UIレビューだけ外部AIへ依頼",
+          codex: "単一HTMLへ統合し、保存、出力、検証、CG/CSD登録まで担当",
+          nextTicket: "外部AIからミッション2、特殊ブロック、スコア曲線、スマホ操作レビューを受け取り統合"
+        }
+      };
+    }
+
+    function briefText() {
+      const data = snapshot();
+      return [
+        "目的: スマホ向け落ちものパズル Cascade Forge を本格化する。",
+        "現在: 10x20井戸、7種ピース、回転、左右移動、ソフト/ハードドロップ、ホールド、次キュー、ゴースト、ライン消去、コンボ、ミッション、結果保存、JSON/Markdown出力あり。",
+        `状態: score=${data.score} / lines=${data.lines} / level=${data.level} / maxCombo=${data.maxCombo}`,
+        "依頼: ミッション2、特殊ブロック、スコア曲線、速度曲線、片手スマホ操作の改善案を出す。",
+        "出力形式: JSON。missions, balance, specialBlocks, touchReview, acceptance を持つ。",
+        "制約: 単一HTML、外部通信なし、スマホ操作、WCAG 2.2 AA、JSON/Markdown export維持。",
+        "検証: ピースが衝突をすり抜けない、ライン消去が正しい、ホールドが1落下1回、ゲームオーバーが発火する。"
+      ].join("\n");
+    }
+
+    function markdown() {
+      const data = snapshot();
+      return [
+        "# Cascade Forge - CODEX Eco Lane",
+        "",
+        `- Score: ${data.score}`,
+        `- Lines: ${data.lines}`,
+        `- Level: ${data.level}`,
+        `- Max Combo: ${data.maxCombo}`,
+        "",
+        "## External AI Brief",
+        "",
+        briefText(),
+        "",
+        "## Next Ticket",
+        "",
+        data.lane.nextTicket
+      ].join("\n");
+    }
+
+    function downloadText(filename, text, type) {
+      const blob = new Blob([text], { type });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(url);
+      exportStatus.textContent = `${filename} を保存しました。`;
+    }
+
+    async function copyBrief() {
+      const text = briefText();
+      exportBox.value = text;
+      try {
+        await navigator.clipboard.writeText(text);
+        exportStatus.textContent = "Briefをコピーしました。";
+      } catch {
+        exportStatus.textContent = "コピーできない環境です。テキスト欄から選択してください。";
+      }
+    }
+
+    function setExport(mode, announce = true) {
+      if (mode === "json") exportBox.value = JSON.stringify(snapshot(), null, 2);
+      if (mode === "markdown") exportBox.value = markdown();
+      if (mode === "brief") exportBox.value = briefText();
+      if (announce) exportStatus.textContent = `${mode} を表示しました。`;
+    }
+
+    document.getElementById("start").addEventListener("click", start);
+    document.getElementById("pause").addEventListener("click", pause);
+    document.getElementById("hold").addEventListener("click", holdPiece);
+    document.getElementById("reset").addEventListener("click", reset);
+    document.getElementById("left").addEventListener("click", () => move(-1));
+    document.getElementById("right").addEventListener("click", () => move(1));
+    document.getElementById("rotate").addEventListener("click", rotate);
+    document.getElementById("soft").addEventListener("click", softDrop);
+    document.getElementById("drop").addEventListener("click", softDrop);
+    document.getElementById("hard").addEventListener("click", hardDrop);
+    document.getElementById("briefNow").addEventListener("click", () => setExport("brief"));
+    document.getElementById("resultNow").addEventListener("click", () => setExport("json"));
+    document.getElementById("copyBrief").addEventListener("click", copyBrief);
+    document.getElementById("exportJson").addEventListener("click", () => downloadText("cascade-forge-eco-lane.json", JSON.stringify(snapshot(), null, 2), "application/json;charset=utf-8"));
+    document.getElementById("exportMarkdown").addEventListener("click", () => downloadText("cascade-forge-eco-lane.md", markdown(), "text/markdown;charset=utf-8"));
+    document.getElementById("exportResult").addEventListener("click", () => downloadText("cascade-forge-result.json", JSON.stringify({ exportedAt: new Date().toISOString(), records: state.records }, null, 2), "application/json;charset=utf-8"));
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") move(-1);
+      if (event.key === "ArrowRight") move(1);
+      if (event.key === "ArrowUp") rotate();
+      if (event.key === "ArrowDown") softDrop();
+      if (event.key === " ") { event.preventDefault(); hardDrop(); }
+      if (event.key.toLowerCase() === "c") holdPiece();
+      if (event.key.toLowerCase() === "p") pause();
+    });
+
+    draw();
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+{
+  "updated": "2026-08-03",
+  "name": "CSD Action Items",
+  "definition": "CSD means CODEX Status Dashboard.",
+  "purpose": "Make CSD caution and not-yet items usable as lane tickets or review targets.",
+  "items": [
+    {
+      "id": "csd-token-budget-refresh",
+      "group": "caution",
+      "title": "Token budget period is stale",
+      "state": "needs-update",
+      "lane": "Static Tool Lane",
+      "next_action": "Refresh data\\token-budget.json for the current period or hide stale daily-cap wording.",
+      "ticket_hint": "Target data\\token-budget.json and dashboard token panel only.",
+      "reference": "data/token-budget.json"
+    },
+    {
+      "id": "csd-mojibake-cleanup",
+      "group": "caution",
+      "title": "CSD generator still contains mojibake labels",
+      "state": "done",
+      "lane": "Static Tool Lane",
+      "next_action": "No further action needed unless new mojibake appears in generated dashboard text.",
+      "ticket_hint": "Verified generator and dashboard text through UTF-8 reads; keep behavior unchanged.",
+      "reference": "scripts/update-dashboard.mjs"
+    },
+    {
+      "id": "csd-visual-review",
+      "group": "caution",
+      "title": "CSD visual readability needs human/browser check",
+      "state": "ready-ticket",
+      "lane": "Review Lane",
+      "next_action": "Open CSD on desktop and mobile widths and note overlap, unreadable labels, or low-value tabs.",
+      "ticket_hint": "Return findings as ranked bullets with screenshots if useful.",
+      "reference": "dashboard.html"
+    },
+    {
+      "id": "csd-full-automation",
+      "group": "not-yet",
+      "title": "Request-to-finished-quality automation is not implemented",
+      "state": "defer",
+      "lane": "Handoff Lane",
+      "next_action": "Use external AI brief plus CODEX integration rather than full automation.",
+      "ticket_hint": "Create one LANE_TICKET.md task per run.",
+      "reference": "templates/LANE_TICKET.md"
+    },
+    {
+      "id": "csd-productization",
+      "group": "not-yet",
+      "title": "Auth, database, and backend productization are not implemented",
+      "state": "defer",
+      "lane": "Review Lane",
+      "next_action": "Keep CSD as a local/static control surface unless a concrete productization ticket is approved.",
+      "ticket_hint": "Do not add backend scope to routine CSD work.",
+      "reference": "README.md"
+    },
+    {
+      "id": "csd-local-ai-reenable",
+      "group": "not-yet",
+      "title": "CODEX local AI/GPU lane remains paused",
+      "state": "blocked-by-policy",
+      "lane": "Local AI Lane",
+      "next_action": "Do nothing until explicit user re-enable instruction and fresh lock/route review.",
+      "ticket_hint": "Never make this an automatic follow-up.",
+      "reference": "data/gpu-policy.json"
+    }
+  ]
+}

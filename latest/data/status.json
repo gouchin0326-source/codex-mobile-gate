@@ -1,0 +1,48 @@
+{
+    "generated_at":  "2026-08-05T06:29:33",
+    "root":  "C:\\Codex",
+    "apps":  19,
+    "projects":  20,
+    "local_llm":  {
+                      "ollama":  "ok",
+                      "latest_check":  "ollama-check-20260707-145208.txt",
+                      "gpu_policy":  "disabled"
+                  },
+    "local_ai":  {
+                     "artifacts":  11,
+                     "ready":  11,
+                     "root":  "C:\\Codex\\local_ai",
+                     "protected_shared_data":  "observe-only",
+                     "gpu_policy":  "disabled"
+                 },
+    "gpu_policy":  {
+                       "path":  "C:\\Codex\\data\\gpu-policy.json",
+                       "codex_gpu_usage":  "disabled",
+                       "reason":  "Paused until the cause of GPU lock/session switching issues is understood.",
+                       "reenable_rule":  "Change codex_gpu_usage to enabled only after a clear user instruction and a fresh route/lock review."
+                   },
+    "token_budget":  {
+                         "path":  "C:\\Codex\\data\\token-budget.json",
+                         "period_deadline":  "2026-07-14",
+                         "used_percent":  87,
+                         "remaining_percent":  13,
+                         "remaining_days":  0,
+                         "daily_limit_percent":  13,
+                         "mode":  "extreme-saving",
+                         "local_llm_usage":  "disabled",
+                         "primitive_prompt_rule":  "Keep it short, but do not remove accuracy notes, cautions, or code uncertainty.",
+                         "primitive_prompt_template":  "Conclusion: \u003canswer first\u003e\nReason: \u003cone line\u003e\nSteps: \u003conly what is needed\u003e\nCaution: \u003cimportant unknowns only\u003e\nAvoid: long preface, greeting, long background"
+                     },
+    "config":  {
+                   "path":  "C:\\Users\\tsuyo\\.codex\\config.toml",
+                   "state":  "exists-codex-root-trusted",
+                   "codex_root_trusted":  true,
+                   "changed_by_codex":  true
+               },
+    "current_task":  {
+                         "date":  "2026-08-05",
+                         "objective":  "2026-08-03 task - create a serious falling-block puzzle app through the CODEX eco-lane.",
+                         "scope":  "`C:\\Codex` Cascade Forge static game, falling-block eco-lane, external AI brief export, app/artifact/CODEX lane/CSD ledgers, public copies, dashboard/status, and progress log only. No local LLM/GPU.",
+                         "acceptance":  "Cascade Forge is a mobile-first falling-block puzzle with seven pieces, collision, rotation, soft/hard drop, hold, next queue, ghost, line clears, combo missions, local records, external AI brief copy, JSON/Markdown/result export, CG/CSD registration, public copies, dashboard/status generation, and deterministic checks."
+                     }
+}

@@ -9,8 +9,10 @@
     * { box-sizing: border-box; }
     body { margin:0; font-family:"Segoe UI", system-ui, sans-serif; background:var(--bg); color:var(--ink); letter-spacing:0; }
     header { padding:14px 16px; background:var(--panel); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:1; }
+    .head-row { display:grid; grid-template-columns:1fr auto; gap:10px; align-items:center; }
     h1 { margin:0 0 4px; font-size:22px; }
     .sub { color:var(--muted); font-size:12px; }
+    .refresh { min-height:34px; border:1px solid var(--blue); border-radius:8px; background:#fff; color:var(--blue); padding:6px 10px; font:inherit; font-size:12px; font-weight:800; }
     main { padding:12px; display:grid; gap:10px; }
     .metrics { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
     .metric, .card { background:var(--panel); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow); }
@@ -41,12 +43,17 @@
 </head>
 <body>
   <header>
-    <h1>Codex Apps</h1>
-    <div class="sub">Generated from apps.json / Codex-owned local apps</div>
+    <div class="head-row">
+      <div>
+        <h1>Codex Apps</h1>
+        <div class="sub">Generated from apps.json / Codex-owned local apps</div>
+      </div>
+      <button class="refresh" id="force-update" type="button">最新版に更新</button>
+    </div>
   </header>
   <main>
     <div class="metrics">
-      <div class="metric"><b>15</b><span>Registered</span></div>
+      <div class="metric"><b>21</b><span>Registered</span></div>
       <div class="metric"><b>1</b><span>Prototype</span></div>
       <div class="metric"><b>0</b><span>Generated</span></div>
     </div>
@@ -100,12 +107,20 @@
         <a class="button" href="projects/quick-notes-board/index.html">Open</a>
       </article>
       <article class="card draft">
-        <h2>Orbit Catcher</h2>
-        <p>Canvas mini-game prototype with staged difficulty: collect sparks, avoid hazards, save a best score, and export result JSON or Markdown</p>
-        <span class="pill">prototype+export</span>
+        <h2>Gate Run</h2>
+        <p>CG shooting game with a huge map, boss gate, auto fire, ammo, allies, enemies, equipment slots, and export routes.</p>
+        <span class="pill">game+export</span>
         <span class="pill">game</span>
         <br>
-        <a class="button" href="projects/orbit-catcher/index.html">Open</a>
+        <a class="button" href="orbit-catcher/index.html">Play</a>
+      </article>
+      <article class="card draft">
+        <h2>Zombie Siege</h2>
+        <p>CG zombie action version with auto/manual aim, backpedal shooting, enterable buildings, obstacles, molotov fire zones, mines, and typed allies.</p>
+        <span class="pill">game+export</span>
+        <span class="pill">zombie</span>
+        <br>
+        <a class="button" href="orbit-catcher-zombie-siege/index.html">Play</a>
       </article>
       <article class="card draft">
         <h2>CODEX Data Pocket</h2>
@@ -171,6 +186,38 @@
         <br>
         <a class="button" href="projects/external-ai-brief-compressor/index.html">Open</a>
       </article>
+      <article class="card draft">
+        <h2>Prism Relay</h2>
+        <p>Mobile-first CODEX eco-lane puzzle game with rotating relay boards, stars, hints, undo, external AI brief generation, JSON export, and Markdown export</p>
+        <span class="pill">game+eco-lane+export</span>
+        <span class="pill">game</span>
+        <br>
+        <a class="button" href="projects/mobile-puzzle-eco-lane/index.html">Open</a>
+      </article>
+      <article class="card draft">
+        <h2>Sum Garden</h2>
+        <p>Mobile-first number logic puzzle with row/column uniqueness, zone sums, hints, undo, local records, external AI brief generation, JSON export, and Markdown export</p>
+        <span class="pill">game+eco-lane+export</span>
+        <span class="pill">game</span>
+        <br>
+        <a class="button" href="projects/sum-garden-eco-lane/index.html">Open</a>
+      </article>
+      <article class="card draft">
+        <h2>Cascade Forge</h2>
+        <p>Mobile-first falling block puzzle with hold, next queue, ghost, line clears, combo missions, touch controls, external AI brief generation, JSON export, and Markdown export</p>
+        <span class="pill">game+eco-lane+export</span>
+        <span class="pill">game</span>
+        <br>
+        <a class="button" href="projects/falling-block-eco-lane/index.html">Open</a>
+      </article>
+      <article class="card draft">
+        <h2>0805 External AI Lane Run</h2>
+        <p>CG-listed end-to-end test for the latest external-AI eco-lane path: lane dataset, compact external AI brief shape, artifact creation, CSD registration, CG listing, JSON export, and Markdown export</p>
+        <span class="pill">test+export+cg-listed</span>
+        <span class="pill">development</span>
+        <br>
+        <a class="button" href="projects/external-ai-lane-run-0805/index.html">Open</a>
+      </article>
     </section>
     <section class="card">
       <h2>App Request</h2>
@@ -209,6 +256,24 @@
     </section>
   </main>
   <script>
+    async function forceUpdate() {
+      const button = document.querySelector("#force-update");
+      if (button) button.textContent = "更新中";
+      if ("caches" in window) {
+        const names = await caches.keys();
+        await Promise.all(names.map((name) => caches.delete(name)));
+      }
+      if ("serviceWorker" in navigator) {
+        const regs = await navigator.serviceWorker.getRegistrations();
+        await Promise.all(regs.map((reg) => reg.update().catch(() => {})));
+      }
+      const url = new URL(location.href);
+      url.searchParams.set("v", Date.now().toString());
+      location.replace(url.toString());
+    }
+    document.querySelector("#force-update")?.addEventListener("click", () => {
+      forceUpdate().catch(() => location.reload());
+    });
     const key = "codex-app-requests-v1";
     let requests = JSON.parse(localStorage.getItem(key) || "[]");
     function save() { localStorage.setItem(key, JSON.stringify(requests)); }

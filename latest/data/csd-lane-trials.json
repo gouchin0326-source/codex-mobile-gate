@@ -1,0 +1,314 @@
+{
+  "updated": "2026-08-05",
+  "purpose": "Record actual CSD lane trials so the lane system is tested, not only described.",
+  "trials": [
+    {
+      "id": "csd-lane-trial-2026-07-23-001",
+      "status": "done",
+      "lanes_used": [
+        "Handoff Lane",
+        "Static Tool Lane",
+        "Review Lane"
+      ],
+      "objective": "Import Claude-side lane know-how and make one CSD lane trial visible.",
+      "claude_knowhow": [
+        "Dashboard acts as a control plane: purpose, state, progress, quality, and policy are visible in one place.",
+        "Use five-line/small-ticket instructions: purpose, input, output, verification, report shape.",
+        "Acceptance is not just generated output; use apply check, real artifact check, and occasional break-detection.",
+        "Do not stack work into the same lane; keep one bounded ticket per run.",
+        "Keep generated dashboards reproducible and avoid hand-editing generated output."
+      ],
+      "plan": "Create a compact CSD lane ticket from Claude references.",
+      "do": "Add this trial ledger and show it on CSD.",
+      "check": "Run generator, syntax, JSON, and visibility checks.",
+      "act": "Record the trial in HUB/progress and set the next lane ticket.",
+      "next_ticket": "Use Static Tool Lane to clean visible CSD mojibake labels in the dashboard generator."
+    },
+    {
+      "id": "csd-lane-trial-2026-07-23-002",
+      "status": "done",
+      "lanes_used": [
+        "Handoff Lane",
+        "Web Designer Sample Lane",
+        "Static Tool Lane"
+      ],
+      "objective": "Create sample content from GO/HOSHI shared web design know-how and show it on CSD.",
+      "claude_knowhow": [
+        "HTML First: deliver as a single readable HTML file.",
+        "Easy Japanese: short sentences, clear verbs, and concrete action labels.",
+        "Gentle slope: useful without settings, with optional controls only when needed.",
+        "Export path: every small tool should offer JSON or Markdown output.",
+        "Real artifact check: generated output is not complete until the actual page is opened and reviewed."
+      ],
+      "plan": "Use a compact read of shared upper_design references and create one CODEX-owned sample.",
+      "do": "Created projects\\csd-web-designer-sample\\index.html and registered it.",
+      "check": "Run syntax, JSON, dashboard, and public-copy visibility checks.",
+      "act": "Show Web Designer Sample Lane and sample artifact on CSD.",
+      "next_ticket": "Run browser visual check for CSD Web Designer Sample."
+    },
+    {
+      "id": "csd-lane-trial-2026-07-23-003",
+      "status": "done",
+      "lanes_used": [
+        "Web Designer Sample Lane",
+        "Static Tool Lane"
+      ],
+      "objective": "Create a stronger web-design showcase content artifact and make it visible through CSD.",
+      "claude_knowhow": [
+        "Lane output should become a usable artifact, not only a status note.",
+        "Visual control planes should make purpose, state, check, and next action visible quickly.",
+        "High-quality repeated output depends on a compact ticket, fixed acceptance, and reusable export shape.",
+        "Use actual visual material when judging web-design quality.",
+        "Keep the artifact portable so another AI or reviewer can continue from a small export."
+      ],
+      "plan": "Generate a visual asset and build one responsive HTML-first showcase.",
+      "do": "Created projects\\csd-designer-showcase with hero image, editorial layout, lane signal board, and JSON/Markdown export.",
+      "check": "Run inline-script checks, JSON registry checks, dashboard generation, and public-copy sync.",
+      "act": "Register the showcase in apps, artifacts, CSD lane trials, and progress logs.",
+      "next_ticket": "Run browser visual checks for CSD Designer Showcase and clean CSD mojibake labels."
+    },
+    {
+      "id": "csd-lane-trial-2026-07-24-001",
+      "status": "done",
+      "lanes_used": [
+        "Cat Affinity Lane",
+        "Static Tool Lane"
+      ],
+      "objective": "Create an actual content lane from the theme: make people more interested in cats.",
+      "claude_knowhow": [
+        "A lane is not an explanation; it includes the artifact, ledger update, QC, and dashboard listing.",
+        "Single HTML, offline-friendly content and export routes are preferred for cloud/GO-style lanes.",
+        "Reuse asset/design/response patterns so future lanes cost less and keep quality.",
+        "CG is the main listing surface; CSD remains the detailed check surface.",
+        "Small interaction should feel like response, not just decoration."
+      ],
+      "plan": "Read the shared lane notes and create one compact cat appreciation content artifact.",
+      "do": "Created projects\\cat-affinity-lane with generated cat visual, observation cards, intimacy meter, and JSON/Markdown export.",
+      "check": "Run inline-script checks, JSON registry checks, dashboard generation, public-copy sync, and CG visibility checks.",
+      "act": "Register Cat Affinity Lane in CG/CSD ledgers and leave the next response-pattern ticket.",
+      "next_ticket": "Add optional purr sound using shared procedural sound recipe and a too-much-touch response state."
+    },
+    {
+      "id": "csd-lane-trial-2026-07-31-001",
+      "status": "done",
+      "lanes_used": [
+        "Daily Task Board Lane",
+        "Static Tool Lane"
+      ],
+      "objective": "Confirm CG freshness and create one publishable content artifact for 2026-07-31.",
+      "claude_knowhow": [
+        "Keep the task bounded to one objective and one visible artifact.",
+        "CG should show the newest usable result first.",
+        "Every small app needs an export path so handoff does not require rereading context.",
+        "CSD/status ledgers should agree with the published entry.",
+        "Single HTML keeps mobile publication cheap and easy to inspect."
+      ],
+      "plan": "Create a 0731 task board that can organize today's work and export handoff notes.",
+      "do": "Created projects\\daily-task-0731 with browser-local task state, four columns, JSON export, Markdown export, and JSON import.",
+      "check": "Run inline-script checks, JSON registry checks, CSD/status generation, public-copy sync, CG link checks, and Google Drive sync.",
+      "act": "Register the board in CG/CSD ledgers and leave a clean next update ticket.",
+      "next_ticket": "Add a tiny CG freshness checker that flags when the entrance date is older than the current task date."
+    },
+    {
+      "id": "csd-lane-trial-2026-07-31-002",
+      "status": "done",
+      "lanes_used": [
+        "Focus Session Lane",
+        "Static Tool Lane"
+      ],
+      "objective": "Increase CG listed content with one more small usable artifact.",
+      "claude_knowhow": [
+        "A listed content item should be useful on first open.",
+        "Small tools need local save and export paths.",
+        "Keep controls familiar: preset buttons, start, pause, reset, complete.",
+        "Make the latest content visible on CG and the ledger visible on CSD.",
+        "Do not use GPU or local LLM for a simple static content lane."
+      ],
+      "plan": "Create one short focus-session tool and list it on CG.",
+      "do": "Created projects\\focus-session-cards with timer presets, session fields, completion log, JSON export, Markdown export, and JSON import.",
+      "check": "Run inline-script checks, JSON registry checks, CSD/status generation, public-copy sync, CG link checks, and Google Drive sync.",
+      "act": "Register Focus Session Cards in CG/CSD ledgers and keep the next content ticket visible.",
+      "next_ticket": "Add one visual learning or checklist content item so CG has a wider range than productivity tools."
+    },
+    {
+      "id": "csd-lane-trial-2026-07-31-003",
+      "status": "done",
+      "lanes_used": [
+        "CG Token-Saving Command Lane",
+        "Static Tool Lane"
+      ],
+      "objective": "Visualize Codex eco-lane implementation on CG.",
+      "claude_knowhow": [
+        "Claude/Codex should act as command tower for small tickets, acceptance, and checks.",
+        "Implementation should reuse narrow single-HTML patterns.",
+        "Token saving is strongest when the lane itself is visible and reusable.",
+        "CG is the public entry; CSD is the detailed control plane.",
+        "Each lane should leave a compact next ticket instead of a long retrospective."
+      ],
+      "plan": "Create one CG-visible map of the eco-lane implementation flow.",
+      "do": "Created projects\\eco-lane-map with command, implementation, verification, sync lanes and JSON/Markdown ticket export.",
+      "check": "Run inline-script checks, JSON registry checks, CSD/status generation, public-copy sync, CG link checks, and Google Drive sync.",
+      "act": "Register Eco Lane Map in CG/CSD ledgers so future CG content work can start from the visible lane.",
+      "next_ticket": "Use Eco Lane Map before creating the next CG-listed content item."
+    },
+    {
+      "id": "csd-lane-trial-2026-07-31-004",
+      "status": "done",
+      "lanes_used": [
+        "CG Token-Saving Command Lane",
+        "External AI Lane",
+        "Static Tool Lane"
+      ],
+      "objective": "Create a mobile-first compressor for external AI briefs.",
+      "claude_knowhow": [
+        "Smartphone-first input should favor choices over long typing.",
+        "Codex should prepare compact briefs before handing work to external AI or Web.",
+        "The prompt should include purpose, target, output format, tone, checks, and constraints.",
+        "Copy plus JSON/Markdown export keeps the handoff cheap.",
+        "The tool should work as a single HTML file with no external service."
+      ],
+      "plan": "Build a selectable brief compressor for the Codex to external AI/Web lane.",
+      "do": "Created projects\\external-ai-brief-compressor with selectable chips, short memo fields, generated brief, copy, JSON export, Markdown export, and browser save.",
+      "check": "Run inline-script checks, JSON registry checks, CSD/status generation, public-copy sync, CG link checks, and Google Drive sync.",
+      "act": "Register External AI Brief Compressor in CG/CSD ledgers as the first practical tool for the external AI lane.",
+      "next_ticket": "Use this compressor to create the next CG content brief before implementation."
+    },
+    {
+      "id": "csd-lane-trial-2026-07-31-005",
+      "status": "done",
+      "lanes_used": [
+        "CG Token-Saving Command Lane",
+        "External AI Brief Compressor Lane",
+        "Static Tool Lane"
+      ],
+      "objective": "Expand the brief compressor into a multi-genre lane selector with Codex task-list output.",
+      "claude_knowhow": [
+        "Smartphone operation benefits from preset lanes and short text fields.",
+        "Creative work needs many patterns: MV, music, lyrics, image, illustration, game, app, article, and research.",
+        "A compressor should decide whether the output goes to chat copy, external AI/Web, or a Codex task list.",
+        "Complex media such as MV should expose component lanes for music, lyrics, image, and video structure.",
+        "Local task-list storage reduces repeated prompt writing."
+      ],
+      "plan": "Add genre lane presets, production elements, destination selection, and local Codex task-list storage.",
+      "do": "Updated projects\\external-ai-brief-compressor with multi-genre lane cards, selectable production elements, destination chips, task-list add/export/clear, and richer generated briefs.",
+      "check": "Run inline-script checks, JSON registry checks, CSD/status generation, public-copy sync, CG link checks, and Google Drive sync.",
+      "act": "Use the compressor as the default intake tool for future Codex to external AI/Web CG content lanes.",
+      "next_ticket": "Use MV lane to create the next media-style CG content brief."
+    },
+    {
+      "id": "csd-lane-trial-2026-08-01-001",
+      "status": "done",
+      "lanes_used": [
+        "CG Token-Saving Command Lane",
+        "External AI Brief Compressor Lane",
+        "Static Tool Lane"
+      ],
+      "objective": "Turn the compressor into a GO-ready task control panel.",
+      "claude_knowhow": [
+        "A compressed brief should remove ambiguity before Codex starts work.",
+        "The user needs to see whether a task is only set or explicitly approved with GO.",
+        "Rough token estimates are useful as planning hints but must not pretend to be exact.",
+        "Genre lanes should work for apps, music, images, videos, MV, games, articles, and research using the same control model.",
+        "A mobile-first control panel should turn choices into target files, acceptance, checks, and handoff exports."
+      ],
+      "plan": "Add detailed target fields, ambiguity scoring, rough token estimates, readiness, set-complete, GO-sign, and task visualization.",
+      "do": "Updated projects\\external-ai-brief-compressor into a v3 control panel with detailed fields, meters, set task, GO task, and task export.",
+      "check": "Run inline-script checks, JSON registry checks, CSD/status generation, public-copy sync, CG link checks, GitHub Pages publish, and Google Drive sync.",
+      "act": "Use the compressor as the default pre-execution gate for future CG content creation.",
+      "next_ticket": "Use this GO-ready compressor to create the next CG-listed artifact from a selected task."
+    },
+    {
+      "id": "csd-lane-trial-2026-08-03-001",
+      "status": "done",
+      "lanes_used": [
+        "CG Token-Saving Command Lane",
+        "External AI Brief Compressor Lane",
+        "Mobile Puzzle Eco Lane",
+        "Static Tool Lane"
+      ],
+      "objective": "Create and test one complete CODEX eco-lane by building a serious smartphone puzzle game from command-tower brief to CG/CSD registration.",
+      "claude_knowhow": [
+        "A serious lane should finish with a usable artifact, not only a planning note.",
+        "External AI work should be framed as compact briefs, level ideas, review points, and bounded improvements.",
+        "Codex should integrate the result into single HTML, verify behavior, export handoff material, and register ledgers.",
+        "Smartphone-first games need tap controls, stable board dimensions, local progress, and no setup.",
+        "The next ticket should be a level-pack or review loop, not a broad ecosystem reread."
+      ],
+      "plan": "Create Mobile Puzzle Eco Lane and build Prism Relay as a mobile-first relay-connection puzzle.",
+      "do": "Created projects\\mobile-puzzle-eco-lane with six solvable levels, stars, hints, undo, local records, external AI brief copy, JSON export, Markdown export, result export, and lane visualization.",
+      "check": "Run inline-script syntax check, solvable-level check for all six boards, JSON registry checks, CSD/status generation, public-copy sync, and CG visibility checks.",
+      "act": "Register Prism Relay in apps, artifact capabilities, CODEX lanes, CSD trials, HUB, progress log, public-mobile, and pages-site latest.",
+      "next_ticket": "Use the generated external AI brief to design levels 7-12, daily challenge rules, and stronger feedback states."
+    },
+    {
+      "id": "csd-lane-trial-2026-08-03-002",
+      "status": "done",
+      "lanes_used": [
+        "CG Token-Saving Command Lane",
+        "External AI Brief Compressor Lane",
+        "Number Logic Eco Lane",
+        "Static Tool Lane"
+      ],
+      "objective": "Create a completely different serious puzzle game app through the same CODEX eco-lane pattern while saving tokens.",
+      "claude_knowhow": [
+        "Do not reuse the same core mechanic when the request asks for a different app.",
+        "For token saving, keep external AI scope to level packs, hint text, and bounded review, while Codex owns integration and verification.",
+        "A serious puzzle needs deterministic validation, not only visual play.",
+        "Smartphone-first number games need large tap targets, fixed board dimensions, Undo, Hint, and local records.",
+        "A completed eco-lane should register the artifact in CG/CSD and leave the next level-pack ticket."
+      ],
+      "plan": "Build Sum Garden as a number-logic puzzle using row/column uniqueness and zone sums.",
+      "do": "Created projects\\sum-garden-eco-lane with five levels, tap-cycling values, fixed clues, zone targets, row/column/zone validation, hints, undo, local records, external AI brief copy, JSON export, Markdown export, and result export.",
+      "check": "Run inline-script syntax check, solution/zone consistency check for all levels, JSON registry checks, CSD/status generation, public-copy sync, and CG visibility checks.",
+      "act": "Register Sum Garden in apps, artifact capabilities, CODEX lanes, CSD trials, HUB, progress log, public-mobile, and pages-site latest.",
+      "next_ticket": "Use the generated external AI brief to design 6x6/7x7 level packs, uniqueness checks, and stronger learning feedback."
+    },
+    {
+      "id": "csd-lane-trial-2026-08-03-003",
+      "status": "done",
+      "lanes_used": [
+        "CG Token-Saving Command Lane",
+        "External AI Brief Compressor Lane",
+        "Falling Block Eco Lane",
+        "Static Tool Lane"
+      ],
+      "objective": "Create a serious falling-block puzzle app through the CODEX eco-lane while keeping external AI scope bounded to balance and mission ideas.",
+      "claude_knowhow": [
+        "A new game lane should use a different core interaction from prior artifacts.",
+        "For token saving, Codex should implement and verify the playable core while external AI handles bounded balance and mission review.",
+        "Falling games need deterministic collision, line clearing, input, pause/reset, and result export before visual polish is considered done.",
+        "Smartphone-first play needs large touch controls and stable canvas framing.",
+        "The next ticket should be a mission pack or balance pass, not a broad redesign."
+      ],
+      "plan": "Build Cascade Forge as a smartphone falling-block puzzle with mission progression and exportable external AI brief.",
+      "do": "Created projects\\falling-block-eco-lane with seven pieces, collision, rotation kicks, soft and hard drop, hold, next queue, ghost, line clear scoring, combo missions, local records, external AI brief copy, JSON export, Markdown export, and result export.",
+      "check": "Run inline-script syntax check, piece definition check, JSON registry checks, CSD/status generation, public-copy sync, and CG visibility checks.",
+      "act": "Register Cascade Forge in apps, artifact capabilities, CODEX lanes, CSD trials, HUB, progress log, public-mobile, and pages-site latest.",
+      "next_ticket": "Use the generated external AI brief to design mission pack 2, special blocks, score curve tuning, and mobile control review."
+    },
+    {
+      "id": "csd-lane-trial-2026-08-05-001",
+      "status": "done",
+      "lanes_used": [
+        "CG Token-Saving Command Lane",
+        "External AI Brief Compressor Lane",
+        "Falling Block Eco Lane",
+        "External AI Lane Run Test Lane",
+        "Static Tool Lane"
+      ],
+      "objective": "Test whether the latest CG-listed external AI lane path can execute from lane dataset to artifact creation and CG listing.",
+      "claude_knowhow": [
+        "Keep external AI input compact and do not pass whole folders.",
+        "The return format should be JSON or Markdown that Codex can integrate deterministically.",
+        "A lane test is complete only when the artifact, ledgers, dashboard, public copy, and CG entry agree.",
+        "For token saving, the proof artifact should preserve the reusable dataset and handoff text.",
+        "No local LLM or GPU is needed for this static lane verification."
+      ],
+      "plan": "Use Cascade Forge as the newest CG-listed external-AI eco-lane source and create a small proof artifact.",
+      "do": "Created projects\\external-ai-lane-run-0805 with dataset JSON, simulated external AI return, Codex integration checklist, and exports.",
+      "check": "Run inline script syntax check, JSON registry checks, CSD/status generation, public-copy sync, and CG visibility checks.",
+      "act": "Register the run in apps, artifact capabilities, CODEX lanes, CSD trials, CG, public-mobile, and pages-site latest.",
+      "next_ticket": "Use the same dataset shape for a real external AI mission-pack request and integrate the returned JSON into Cascade Forge."
+    }
+  ]
+}

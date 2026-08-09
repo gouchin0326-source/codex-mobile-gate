@@ -23,6 +23,7 @@
     .grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
     .triple { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
     .quad { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:7px; }
+    .five { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:7px; }
     .chips, .tools { display:flex; flex-wrap:wrap; gap:7px; }
     button {
       min-height:38px; border:1px solid var(--line); border-radius:7px; background:#fff; color:var(--ink);
@@ -49,11 +50,19 @@
     .task { border-left:5px solid var(--amber); display:grid; gap:5px; }
     .task.ready { border-left-color:var(--green); }
     .task.go { border-left-color:var(--violet); }
+    .task.doing { border-left-color:var(--blue); }
+    .task.done { border-left-color:var(--green); background:#f0fdf4; }
     .task strong { font-size:.9rem; overflow-wrap:anywhere; }
     .task p { margin:0; color:var(--muted); font-size:.76rem; white-space:pre-wrap; overflow-wrap:anywhere; }
+    .task-actions { display:flex; flex-wrap:wrap; gap:6px; }
+    .task-actions button { min-height:32px; padding:4px 8px; font-size:.78rem; }
+    .board { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+    .stage { border:1px solid var(--line); border-radius:8px; padding:8px; background:#f9fafb; display:grid; align-content:start; gap:8px; min-height:120px; }
+    .stage h3 { display:flex; justify-content:space-between; align-items:center; margin:0; }
+    .stage h3 span { color:var(--muted); font-size:.72rem; }
     .pill { display:inline-block; border:1px solid var(--line); border-radius:999px; padding:3px 7px; font-size:.7rem; font-weight:800; background:#fff; }
     @media (max-width:860px) {
-      .grid, .triple, .quad { grid-template-columns:1fr; }
+      .grid, .triple, .quad, .five, .board { grid-template-columns:1fr; }
       button { min-height:42px; }
       .wrap { width:min(100% - 14px, 460px); }
     }
@@ -70,13 +79,19 @@
   <main class="wrap">
     <section>
       <h2>管制メーター</h2>
-      <div class="quad">
+      <div class="five">
         <div class="metric"><strong id="ambiguityScore">0</strong><span>曖昧さ</span></div>
         <div class="metric"><strong id="tokenEstimate">0</strong><span>超概算トークン</span></div>
         <div class="metric"><strong id="readiness">未設定</strong><span>GO判定</span></div>
         <div class="metric"><strong id="taskCount">0</strong><span>セット済み</span></div>
+        <div class="metric"><strong id="doneCount">0</strong><span>完成</span></div>
       </div>
       <p class="hint">トークン量は文字数と選択内容からの粗い目安です。正確な請求量ではありません。</p>
+    </section>
+
+    <section>
+      <h2>進行ボード</h2>
+      <div class="board" id="progressBoard"></div>
     </section>
 
     <section>
@@ -348,9 +363,25 @@
     function setTask(status) {
       const brief = document.getElementById("brief").value || buildBrief();
       const lane = lanePresets.find((item) => item.id === state.lane);
+      const snapshot = {
+        lane:state.lane,
+        purpose:state.purpose,
+        destination:state.destination,
+        depth:state.depth,
+        executor:state.executor,
+        elements:[...(state.elements || [])],
+        title:state.title,
+        audience:state.audience,
+        source:state.source,
+        constraints:state.constraints,
+        acceptance:state.acceptance,
+        checks:state.checks,
+        brief
+      };
       const item = {
         id:String(Date.now()),
         status,
+        progress:status === "go" ? "set" : status,
         title: state.title || `${lane ? lane.label : "制作"}タスク`,
         lane: lane ? lane.label : state.lane,
         destination: state.destination,
@@ -358,17 +389,19 @@
         ambiguity: ambiguity(),
         estimatedTokens: estimateTokens(),
         brief,
+        snapshot,
         createdAt:new Date().toISOString()
       };
       state.tasks.unshift(item);
       save();
+      renderProgress();
       renderTasks();
       setStatus(status === "go" ? "GOサイン済みタスクにしました。" : "タスクをセットしました。");
     }
 
     function payload() {
       save();
-      return { name:"外部AIブリーフ圧縮器", ...state, ambiguity:ambiguity(), estimatedTokens:estimateTokens(), updatedAt:new Date().toISOString() };
+      return { name:"外部AIブリーフ圧縮器", ...state, progress:progressSummary(), ambiguity:ambiguity(), estimatedTokens:estimateTokens(), updatedAt:new Date().toISOString() };
     }
 
     function exportJson() {
@@ -381,14 +414,79 @@
     }
 
     function exportTasks() {
-      downloadText("codex-task-list.json", JSON.stringify(state.tasks, null, 2), "application/json;charset=utf-8");
+      downloadText("codex-task-list.json", JSON.stringify({ progress:progressSummary(), tasks:state.tasks }, null, 2), "application/json;charset=utf-8");
     }
 
     function clearTasks() {
       state.tasks = [];
       save();
+      renderProgress();
       renderTasks();
       setStatus("タスクを消しました。");
+    }
+
+    async function copyTask(id) {
+      const task = state.tasks.find((item) => item.id === id);
+      if (!task) return;
+      try {
+        await navigator.clipboard.writeText(task.brief);
+        setStatus("保存タスクをコピーしました。");
+      } catch {
+        setStatus("コピーできませんでした。タスクを再開して本文欄から選択してください。");
+      }
+    }
+
+    function loadTask(id) {
+      const task = state.tasks.find((item) => item.id === id);
+      if (!task) return;
+      state = {
+        ...state,
+        ...(task.snapshot || {}),
+        title:task.snapshot?.title || task.title || state.title,
+        brief:task.brief || task.snapshot?.brief || state.brief,
+        elements:[...(task.snapshot?.elements || state.elements || [])]
+      };
+      applyFields();
+      renderAll();
+      save();
+      setStatus("保存タスクを入力欄へ戻しました。");
+    }
+
+    function deleteTask(id) {
+      state.tasks = state.tasks.filter((item) => item.id !== id);
+      save();
+      renderProgress();
+      renderTasks();
+      setStatus("保存タスクを1件削除しました。");
+    }
+
+    function taskProgress(task) {
+      if (task.progress) return task.progress;
+      if (task.status === "done") return "done";
+      if (task.status === "doing") return "doing";
+      return "set";
+    }
+
+    function moveTask(id, progress) {
+      const task = state.tasks.find((item) => item.id === id);
+      if (!task) return;
+      task.progress = progress;
+      task.status = progress === "done" ? "done" : progress === "doing" ? "doing" : task.status === "go" ? "go" : "set";
+      task.updatedAt = new Date().toISOString();
+      save();
+      renderProgress();
+      renderTasks();
+      const labels = { set:"セット", doing:"仕掛", done:"完成" };
+      setStatus(`「${task.title}」を${labels[progress]}に移しました。`);
+    }
+
+    function progressSummary() {
+      return {
+        set:state.tasks.filter((task) => taskProgress(task) === "set").length,
+        doing:state.tasks.filter((task) => taskProgress(task) === "doing").length,
+        done:state.tasks.filter((task) => taskProgress(task) === "done").length,
+        total:state.tasks.length
+      };
     }
 
     function downloadText(filename, text, type) {
@@ -436,7 +534,28 @@
 
     function renderTasks() {
       const box = document.getElementById("tasks");
-      box.innerHTML = state.tasks.length ? state.tasks.map((task) => `<article class="task ${task.status === "go" ? "go" : task.readiness === "GO可" ? "ready" : ""}"><strong>${escapeHtml(task.title)}</strong><p>${escapeHtml(task.status === "go" ? "GOサイン済み" : "セット済み")} / ${escapeHtml(task.lane)} / ${escapeHtml(task.readiness)} / 約${escapeHtml(task.estimatedTokens)} tokens</p><p>${escapeHtml(task.brief.slice(0, 220))}${task.brief.length > 220 ? "..." : ""}</p></article>`).join("") : '<p class="muted">まだタスクはありません。</p>';
+      box.innerHTML = state.tasks.length ? state.tasks.map((task) => taskCard(task, true)).join("") : '<p class="muted">まだタスクはありません。</p>';
+    }
+
+    function renderProgress() {
+      const box = document.getElementById("progressBoard");
+      const stages = [
+        { id:"set", label:"セット", hint:"GO前後の待機" },
+        { id:"doing", label:"仕掛", hint:"いま動かす" },
+        { id:"done", label:"完成", hint:"検収済み" }
+      ];
+      box.innerHTML = stages.map((stage) => {
+        const tasks = state.tasks.filter((task) => taskProgress(task) === stage.id);
+        return `<div class="stage"><h3>${stage.label}<span>${tasks.length}件</span></h3><p class="muted">${stage.hint}</p>${tasks.length ? tasks.map((task) => taskCard(task, false)).join("") : '<p class="muted">なし</p>'}</div>`;
+      }).join("");
+    }
+
+    function taskCard(task, showExcerpt) {
+      const progress = taskProgress(task);
+      const statusLabel = task.status === "go" ? "GOサイン済み" : progress === "doing" ? "仕掛中" : progress === "done" ? "完成" : "セット済み";
+      const cardClass = progress === "done" ? "done" : progress === "doing" ? "doing" : task.status === "go" ? "go" : task.readiness === "GO可" ? "ready" : "";
+      const excerpt = showExcerpt ? `<p>${escapeHtml(task.brief.slice(0, 220))}${task.brief.length > 220 ? "..." : ""}</p>` : "";
+      return `<article class="task ${cardClass}"><strong>${escapeHtml(task.title)}</strong><p>${escapeHtml(statusLabel)} / ${escapeHtml(task.lane)} / ${escapeHtml(task.readiness)} / 約${escapeHtml(task.estimatedTokens)} tokens</p>${excerpt}<div class="task-actions"><button type="button" data-task-action="move" data-progress="set" data-task-id="${escapeHtml(task.id)}">セット</button><button type="button" data-task-action="move" data-progress="doing" data-task-id="${escapeHtml(task.id)}">仕掛</button><button type="button" data-task-action="move" data-progress="done" data-task-id="${escapeHtml(task.id)}">完成</button><button type="button" data-task-action="load" data-task-id="${escapeHtml(task.id)}">再開</button><button type="button" data-task-action="copy" data-task-id="${escapeHtml(task.id)}">コピー</button><button class="warn" type="button" data-task-action="delete" data-task-id="${escapeHtml(task.id)}">削除</button></div></article>`;
     }
 
     function updateMeters() {
@@ -445,11 +564,13 @@
       document.getElementById("tokenEstimate").textContent = estimateTokens();
       document.getElementById("readiness").textContent = readinessLabel();
       document.getElementById("taskCount").textContent = state.tasks.length;
+      document.getElementById("doneCount").textContent = state.tasks.filter((task) => taskProgress(task) === "done").length;
     }
 
     function renderAll() {
       renderLanes();
       renderButtons();
+      renderProgress();
       renderTasks();
       updateMeters();
     }
@@ -474,6 +595,21 @@
     document.getElementById("exportMarkdown").addEventListener("click", exportMarkdown);
     document.getElementById("exportTasks").addEventListener("click", exportTasks);
     document.getElementById("clearTasks").addEventListener("click", clearTasks);
+    document.getElementById("tasks").addEventListener("click", (event) => {
+      handleTaskAction(event);
+    });
+    document.getElementById("progressBoard").addEventListener("click", (event) => {
+      handleTaskAction(event);
+    });
+    function handleTaskAction(event) {
+      const button = event.target.closest("[data-task-action]");
+      if (!button) return;
+      const { taskAction, taskId } = button.dataset;
+      if (taskAction === "load") loadTask(taskId);
+      if (taskAction === "copy") copyTask(taskId);
+      if (taskAction === "delete") deleteTask(taskId);
+      if (taskAction === "move") moveTask(taskId, button.dataset.progress);
+    }
     document.getElementById("reset").addEventListener("click", resetAll);
     applyFields();
     renderAll();

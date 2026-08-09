@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sum Garden - CODEX Eco Lane Puzzle</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7f3;
+      --panel: #fff;
+      --ink: #182033;
+      --muted: #657084;
+      --line: #d7dfd2;
+      --green: #16803c;
+      --blue: #2563eb;
+      --amber: #a75d08;
+      --red: #b42318;
+      --leaf: #eaf7ed;
+      --water: #e8f4ff;
+      --sun: #fff7d6;
+      --berry: #fce8ef;
+      --shadow: 0 10px 24px rgba(35, 48, 38, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Segoe UI", system-ui, sans-serif;
+      letter-spacing: 0;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: rgba(255,255,255,.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(8px);
+      padding: 10px 12px;
+    }
+    .top, main {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+    h1, h2, h3, p { margin: 0; }
+    h1 { font-size: 21px; line-height: 1.15; }
+    h2 { font-size: 16px; }
+    h3 { font-size: 13px; }
+    .sub, .meta, small {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+    .pills {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      margin-top: 8px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      white-space: nowrap;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fbfcfb;
+      color: var(--muted);
+      padding: 3px 9px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .pill.ok { background: #ecfdf3; border-color: #abefc6; color: var(--green); }
+    .pill.go { background: #eff6ff; border-color: #bfdbfe; color: var(--blue); }
+    main {
+      padding: 10px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 330px;
+      gap: 10px;
+    }
+    section, .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+    .panel, .game {
+      padding: 10px;
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+    .hud {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 7px;
+    }
+    .stat {
+      min-height: 58px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfb;
+      padding: 8px;
+    }
+    .stat strong { display: block; font-size: 19px; line-height: 1.1; }
+    .stat span { display: block; color: var(--muted); font-size: 11px; margin-top: 3px; }
+    .board-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 138px;
+      gap: 10px;
+      align-items: start;
+    }
+    .board {
+      width: min(100%, 620px);
+      aspect-ratio: 1;
+      margin: 0 auto;
+      display: grid;
+      gap: 5px;
+      touch-action: manipulation;
+      user-select: none;
+    }
+    button {
+      font: inherit;
+      min-height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--ink);
+      font-weight: 800;
+      cursor: pointer;
+    }
+    button.primary { background: var(--green); border-color: var(--green); color: #fff; }
+    button.warn { background: #fffaeb; border-color: #fedf89; color: var(--amber); }
+    button:disabled { opacity: .55; cursor: not-allowed; }
+    .cell {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-width: 0;
+      min-height: 0;
+      border: 2px solid #cfd8c9;
+      border-radius: 8px;
+      background: #f8faf7;
+      color: var(--ink);
+      font-size: clamp(18px, 8vw, 36px);
+      line-height: 1;
+      transition: transform .12s ease, border-color .12s ease, background .12s ease;
+    }
+    .cell:active { transform: scale(.96); }
+    .cell.fixed {
+      color: #0f5132;
+      background: #e7f6ed;
+      border-color: #8fd0a4;
+    }
+    .cell.empty { color: #9aa6b2; }
+    .cell.bad { border-color: #fca5a5; background: #fff1f2; }
+    .cell.good { border-color: #86efac; background: #ecfdf3; }
+    .zone-a { box-shadow: inset 0 0 0 999px rgba(234,247,237,.72); }
+    .zone-b { box-shadow: inset 0 0 0 999px rgba(232,244,255,.72); }
+    .zone-c { box-shadow: inset 0 0 0 999px rgba(255,247,214,.72); }
+    .zone-d { box-shadow: inset 0 0 0 999px rgba(252,232,239,.72); }
+    .cell small {
+      position: absolute;
+      top: 5px;
+      left: 6px;
+      font-size: 10px;
+      font-weight: 900;
+      color: var(--muted);
+    }
+    .targets {
+      display: grid;
+      gap: 7px;
+    }
+    .target {
+      display: grid;
+      gap: 3px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 7px;
+      background: #fbfcfb;
+    }
+    .target b { font-size: 12px; }
+    .target span { color: var(--muted); font-size: 11px; }
+    .target.ok { border-color: #abefc6; background: #ecfdf3; }
+    .target.bad { border-color: #fecdca; background: #fff1f2; }
+    .controls, .exports {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 7px;
+    }
+    .level-list {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 6px;
+    }
+    .level-btn.active {
+      color: var(--green);
+      border-color: var(--green);
+      background: #ecfdf3;
+    }
+    .side {
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+    .lane {
+      display: grid;
+      gap: 7px;
+    }
+    .lane-item {
+      display: grid;
+      grid-template-columns: 30px 1fr;
+      gap: 8px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfb;
+      padding: 8px;
+    }
+    .lane-item b {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: #ecfdf3;
+      color: var(--green);
+    }
+    textarea {
+      width: 100%;
+      min-height: 176px;
+      resize: vertical;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfb;
+      color: var(--ink);
+      padding: 9px;
+      font: 12px/1.45 Consolas, "Courier New", monospace;
+    }
+    .toast {
+      min-height: 42px;
+      border-left: 4px solid var(--blue);
+      border-radius: 8px;
+      background: #eff6ff;
+      padding: 9px;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .toast.win { border-left-color: var(--green); background: #ecfdf3; }
+    .toast.warn { border-left-color: var(--amber); background: #fffaeb; }
+    .status { min-height: 20px; color: var(--muted); font-size: 12px; }
+    @media (max-width: 900px) {
+      main { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      header { padding: 8px 10px; }
+      main { padding: 8px; gap: 8px; }
+      .game, .panel { padding: 8px; }
+      .hud { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .board-wrap { grid-template-columns: 1fr; }
+      .targets { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .controls, .exports { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .board { gap: 4px; }
+      .cell { border-radius: 7px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top">
+      <h1>Sum Garden</h1>
+      <p class="sub">数字を植えて、行・列・色ゾーンの条件を満たすスマホ向けロジックパズル</p>
+      <div class="pills">
+        <span class="pill go">Eco Lane</span>
+        <span class="pill ok">Different Puzzle</span>
+        <span class="pill ok">No Build</span>
+        <span class="pill ok">External AI Brief</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="game" aria-labelledby="gameTitle">
+      <div>
+        <h2 id="gameTitle">庭を完成させる</h2>
+        <p class="meta">空きマスをタップして数字を変更。各行・各列は 1..N を1回ずつ、色ゾーンは指定合計にします。</p>
+      </div>
+      <div class="hud" aria-live="polite">
+        <div class="stat"><strong id="levelName">1</strong><span>レベル</span></div>
+        <div class="stat"><strong id="moveCount">0</strong><span>手数</span></div>
+        <div class="stat"><strong id="mistakeCount">0</strong><span>警告</span></div>
+        <div class="stat"><strong id="starCount">---</strong><span>評価</span></div>
+        <div class="stat"><strong id="totalStars">0</strong><span>総スター</span></div>
+      </div>
+      <div class="board-wrap">
+        <div id="board" class="board" role="grid" aria-label="Sum Garden board"></div>
+        <div id="targets" class="targets" aria-label="zone targets"></div>
+      </div>
+      <div class="controls">
+        <button class="primary" id="check" type="button">Check</button>
+        <button id="hint" type="button">Hint</button>
+        <button id="undo" type="button">Undo</button>
+        <button class="warn" id="reset" type="button">Reset</button>
+      </div>
+      <div id="message" class="toast">空きマスをタップして数字を植えます。まずは固定数字が少ない行から。</div>
+    </section>
+
+    <aside class="side">
+      <section class="panel" aria-labelledby="levelsTitle">
+        <h2 id="levelsTitle">レベル</h2>
+        <div id="levelList" class="level-list"></div>
+      </section>
+
+      <section class="panel" aria-labelledby="laneTitle">
+        <h2 id="laneTitle">CODEXエコレーン</h2>
+        <div class="lane">
+          <div class="lane-item"><b>1</b><div><h3>司令塔</h3><p class="meta">数字ロジック、スマホ操作、検証条件だけを固定。</p></div></div>
+          <div class="lane-item"><b>2</b><div><h3>外部AI</h3><p class="meta">追加盤面、ヒント文、難易度曲線だけを依頼。</p></div></div>
+          <div class="lane-item"><b>3</b><div><h3>Codex</h3><p class="meta">単一HTML、保存、出力、登録、検証まで統合。</p></div></div>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="exportTitle">
+        <h2 id="exportTitle">外部AIへ投げる</h2>
+        <div class="exports">
+          <button class="primary" id="copyBrief" type="button">Briefコピー</button>
+          <button id="exportJson" type="button">JSON保存</button>
+          <button id="exportMarkdown" type="button">Markdown保存</button>
+          <button id="exportResult" type="button">結果保存</button>
+        </div>
+        <textarea id="exportBox" aria-label="export preview" readonly></textarea>
+        <div id="exportStatus" class="status" role="status" aria-live="polite"></div>
+      </section>
+    </aside>
+  </main>
+
+  <script>
+    const levels = [
+      {
+        name: "01 / Seedbed",
+        size: 4,
+        par: 10,
+        solution: [
+          [1, 2, 3, 4],
+          [3, 4, 1, 2],
+          [2, 1, 4, 3],
+          [4, 3, 2, 1]
+        ],
+        fixed: [[0, 0], [1, 2], [2, 3], [3, 1]],
+        zones: [
+          { id: "A", cells: [[0,0],[0,1],[1,0],[1,1]], sum: 10 },
+          { id: "B", cells: [[0,2],[0,3],[1,2],[1,3]], sum: 10 },
+          { id: "C", cells: [[2,0],[2,1],[3,0],[3,1]], sum: 10 },
+          { id: "D", cells: [[2,2],[2,3],[3,2],[3,3]], sum: 10 }
+        ],
+        hint: "4x4は各行が1,2,3,4の並びになります。固定数字の周りから埋めます。"
+      },
+      {
+        name: "02 / Terrace",
+        size: 4,
+        par: 12,
+        solution: [
+          [2, 4, 1, 3],
+          [1, 3, 4, 2],
+          [4, 2, 3, 1],
+          [3, 1, 2, 4]
+        ],
+        fixed: [[0, 1], [1, 3], [2, 0], [3, 2]],
+        zones: [
+          { id: "A", cells: [[0,0],[1,0],[2,0]], sum: 7 },
+          { id: "B", cells: [[0,1],[0,2],[0,3]], sum: 8 },
+          { id: "C", cells: [[1,1],[1,2],[2,1],[2,2]], sum: 12 },
+          { id: "D", cells: [[2,3],[3,0],[3,1],[3,2],[3,3]], sum: 11 }
+        ],
+        hint: "Aゾーンは縦3マスで合計7。固定の4から残りを絞れます。"
+      },
+      {
+        name: "03 / Glasshouse",
+        size: 5,
+        par: 20,
+        solution: [
+          [1, 2, 3, 4, 5],
+          [3, 4, 5, 1, 2],
+          [5, 1, 2, 3, 4],
+          [2, 3, 4, 5, 1],
+          [4, 5, 1, 2, 3]
+        ],
+        fixed: [[0,0], [0,4], [1,2], [2,0], [3,3], [4,1]],
+        zones: [
+          { id: "A", cells: [[0,0],[0,1],[1,0],[1,1]], sum: 10 },
+          { id: "B", cells: [[0,2],[0,3],[0,4],[1,2]], sum: 17 },
+          { id: "C", cells: [[1,3],[1,4],[2,3],[2,4]], sum: 10 },
+          { id: "D", cells: [[2,0],[2,1],[2,2],[3,0],[3,1]], sum: 13 },
+          { id: "E", cells: [[3,2],[3,3],[3,4],[4,2],[4,3],[4,4]], sum: 16 },
+          { id: "F", cells: [[4,0],[4,1]], sum: 9 }
+        ],
+        hint: "5x5では各行・列が1..5。Eゾーンは6マスで合計16なので小さい数字が多めです。"
+      },
+      {
+        name: "04 / Orchard",
+        size: 5,
+        par: 22,
+        solution: [
+          [2, 5, 1, 3, 4],
+          [4, 2, 3, 5, 1],
+          [1, 3, 5, 4, 2],
+          [5, 1, 4, 2, 3],
+          [3, 4, 2, 1, 5]
+        ],
+        fixed: [[0,3], [1,0], [1,4], [2,2], [3,1], [4,4]],
+        zones: [
+          { id: "A", cells: [[0,0],[0,1],[1,0]], sum: 11 },
+          { id: "B", cells: [[0,2],[0,3],[0,4],[1,3]], sum: 13 },
+          { id: "C", cells: [[1,1],[1,2],[2,1],[2,2]], sum: 13 },
+          { id: "D", cells: [[1,4],[2,3],[2,4],[3,4]], sum: 10 },
+          { id: "E", cells: [[2,0],[3,0],[3,1],[4,0]], sum: 10 },
+          { id: "F", cells: [[3,2],[3,3],[4,1],[4,2],[4,3],[4,4]], sum: 18 }
+        ],
+        hint: "中央Cゾーンの合計13と固定5を軸に、行3と列3を同時に絞ります。"
+      },
+      {
+        name: "05 / Night Bloom",
+        size: 6,
+        par: 34,
+        solution: [
+          [1, 2, 3, 4, 5, 6],
+          [3, 4, 5, 6, 1, 2],
+          [5, 6, 1, 2, 3, 4],
+          [2, 3, 4, 5, 6, 1],
+          [4, 5, 6, 1, 2, 3],
+          [6, 1, 2, 3, 4, 5]
+        ],
+        fixed: [[0,0], [0,5], [1,2], [2,1], [3,4], [4,3], [5,0], [5,5]],
+        zones: [
+          { id: "A", cells: [[0,0],[0,1],[1,0],[1,1]], sum: 10 },
+          { id: "B", cells: [[0,2],[0,3],[0,4],[0,5]], sum: 18 },
+          { id: "C", cells: [[1,2],[1,3],[2,2],[2,3]], sum: 14 },
+          { id: "D", cells: [[1,4],[1,5],[2,4],[2,5]], sum: 10 },
+          { id: "E", cells: [[2,0],[2,1],[3,0],[3,1]], sum: 16 },
+          { id: "F", cells: [[3,2],[3,3],[3,4],[3,5]], sum: 16 },
+          { id: "G", cells: [[4,0],[4,1],[5,0],[5,1]], sum: 16 },
+          { id: "H", cells: [[4,2],[4,3],[4,4],[4,5],[5,2],[5,3],[5,4],[5,5]], sum: 26 }
+        ],
+        hint: "6x6は1..6。Bゾーンは上段右4マスで18、上段の固定1と6を合わせて行合計21になります。"
+      }
+    ];
+
+    const zoneClasses = ["zone-a", "zone-b", "zone-c", "zone-d"];
+    const board = document.getElementById("board");
+    const targets = document.getElementById("targets");
+    const levelList = document.getElementById("levelList");
+    const message = document.getElementById("message");
+    const exportBox = document.getElementById("exportBox");
+    const exportStatus = document.getElementById("exportStatus");
+    let state = {
+      levelIndex: 0,
+      grid: [],
+      moves: 0,
+      history: [],
+      solved: false,
+      records: JSON.parse(localStorage.getItem("sumGardenRecords") || "{}")
+    };
+
+    function fixedSet(level) {
+      return new Set(level.fixed.map(([r, c]) => `${r},${c}`));
+    }
+
+    function zoneFor(level, r, c) {
+      return level.zones.find((zone) => zone.cells.some(([zr, zc]) => zr === r && zc === c));
+    }
+
+    function startGrid(level) {
+      const fixed = fixedSet(level);
+      return level.solution.map((row, r) => row.map((value, c) => fixed.has(`${r},${c}`) ? value : 0));
+    }
+
+    function totalStars() {
+      return Object.values(state.records).reduce((sum, record) => sum + (record.stars || 0), 0);
+    }
+
+    function rowOk(row, n) {
+      const nums = row.filter(Boolean);
+      return nums.length === n && new Set(nums).size === n && nums.every((v) => v >= 1 && v <= n);
+    }
+
+    function colValues(grid, c) {
+      return grid.map((row) => row[c]);
+    }
+
+    function zoneSum(level, zone) {
+      return zone.cells.reduce((sum, [r, c]) => sum + (state.grid[r][c] || 0), 0);
+    }
+
+    function validation() {
+      const level = levels[state.levelIndex];
+      const n = level.size;
+      const rows = state.grid.map((row) => rowOk(row, n));
+      const cols = Array.from({ length: n }, (_, c) => rowOk(colValues(state.grid, c), n));
+      const zones = level.zones.map((zone) => ({ id: zone.id, ok: zoneSum(level, zone) === zone.sum, current: zoneSum(level, zone), target: zone.sum }));
+      const complete = state.grid.every((row) => row.every(Boolean));
+      const solved = complete && rows.every(Boolean) && cols.every(Boolean) && zones.every((zone) => zone.ok);
+      const warnings = rows.filter((ok) => !ok).length + cols.filter((ok) => !ok).length + zones.filter((zone) => !zone.ok).length;
+      return { solved, warnings, rows, cols, zones };
+    }
+
+    function starRating() {
+      if (!state.solved) return 0;
+      const par = levels[state.levelIndex].par;
+      if (state.moves <= par) return 3;
+      if (state.moves <= par + 8) return 2;
+      return 1;
+    }
+
+    function saveRecord() {
+      const id = levels[state.levelIndex].name;
+      const previous = state.records[id] || { stars: 0, bestMoves: null };
+      state.records[id] = {
+        stars: Math.max(previous.stars || 0, starRating()),
+        bestMoves: previous.bestMoves === null ? state.moves : Math.min(previous.bestMoves, state.moves),
+        solvedAt: new Date().toISOString()
+      };
+      localStorage.setItem("sumGardenRecords", JSON.stringify(state.records));
+    }
+
+    function renderLevels() {
+      levelList.innerHTML = "";
+      levels.forEach((level, index) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = `level-btn ${index === state.levelIndex ? "active" : ""}`;
+        const stars = state.records[level.name]?.stars || 0;
+        button.textContent = `${index + 1} ${"★".repeat(stars)}`;
+        button.addEventListener("click", () => loadLevel(index));
+        levelList.append(button);
+      });
+    }
+
+    function renderBoard() {
+      const level = levels[state.levelIndex];
+      const fixed = fixedSet(level);
+      const check = validation();
+      board.style.gridTemplateColumns = `repeat(${level.size}, minmax(0, 1fr))`;
+      board.innerHTML = "";
+      state.grid.forEach((row, r) => {
+        row.forEach((value, c) => {
+          const zone = zoneFor(level, r, c);
+          const button = document.createElement("button");
+          const zoneClass = zoneClasses[(zone?.id.charCodeAt(0) || 65) % zoneClasses.length];
+          const good = value && value === level.solution[r][c];
+          const bad = value && value !== level.solution[r][c];
+          button.type = "button";
+          button.className = ["cell", zoneClass, fixed.has(`${r},${c}`) ? "fixed" : "", value ? "" : "empty", good ? "good" : "", bad ? "bad" : ""].filter(Boolean).join(" ");
+          button.innerHTML = `<small>${zone?.id || ""}</small>${value || "·"}`;
+          button.setAttribute("role", "gridcell");
+          button.setAttribute("aria-label", `row ${r + 1} column ${c + 1} value ${value || "empty"}`);
+          button.disabled = fixed.has(`${r},${c}`);
+          button.addEventListener("click", () => cycleCell(r, c, 1));
+          button.addEventListener("contextmenu", (event) => {
+            event.preventDefault();
+            cycleCell(r, c, -1);
+          });
+          board.append(button);
+        });
+      });
+      renderTargets(check);
+      updateHud(check);
+    }
+
+    function renderTargets(check) {
+      targets.innerHTML = "";
+      check.zones.forEach((zone) => {
+        const card = document.createElement("div");
+        card.className = `target ${zone.ok ? "ok" : zone.current > zone.target ? "bad" : ""}`;
+        card.innerHTML = `<b>Zone ${zone.id}</b><span>${zone.current} / ${zone.target}</span>`;
+        targets.append(card);
+      });
+    }
+
+    function updateHud(check) {
+      document.getElementById("levelName").textContent = String(state.levelIndex + 1);
+      document.getElementById("moveCount").textContent = state.moves;
+      document.getElementById("mistakeCount").textContent = check.warnings;
+      document.getElementById("starCount").textContent = state.solved ? "★".repeat(starRating()) : "---";
+      document.getElementById("totalStars").textContent = totalStars();
+      document.getElementById("undo").disabled = state.history.length === 0;
+      setExport("brief", false);
+    }
+
+    function cycleCell(r, c, direction) {
+      const level = levels[state.levelIndex];
+      state.history.push(state.grid.map((row) => [...row]));
+      const current = state.grid[r][c] || 0;
+      let next = current + direction;
+      if (next > level.size) next = 0;
+      if (next < 0) next = level.size;
+      state.grid[r][c] = next;
+      state.moves += 1;
+      state.solved = false;
+      renderBoard();
+    }
+
+    function checkPuzzle() {
+      const result = validation();
+      state.solved = result.solved;
+      if (result.solved) {
+        saveRecord();
+        message.className = "toast win";
+        message.textContent = `${levels[state.levelIndex].name} 完成。${starRating()}スター、${state.moves}手。次は外部AIに上位盤面を依頼できます。`;
+      } else {
+        message.className = result.warnings > 6 ? "toast warn" : "toast";
+        message.textContent = `未完成です。警告 ${result.warnings} 件。赤いマス、行列の重複、ゾーン合計を見直してください。`;
+      }
+      renderLevels();
+      renderBoard();
+    }
+
+    function hint() {
+      message.className = "toast warn";
+      message.textContent = levels[state.levelIndex].hint;
+    }
+
+    function undo() {
+      const previous = state.history.pop();
+      if (!previous) return;
+      state.grid = previous;
+      state.moves = Math.max(0, state.moves - 1);
+      state.solved = false;
+      message.className = "toast";
+      message.textContent = "1手戻しました。";
+      renderBoard();
+    }
+
+    function reset() {
+      loadLevel(state.levelIndex);
+    }
+
+    function loadLevel(index) {
+      const level = levels[index];
+      state.levelIndex = index;
+      state.grid = startGrid(level);
+      state.moves = 0;
+      state.history = [];
+      state.solved = false;
+      message.className = "toast";
+      message.textContent = `${level.name}: 空きマスをタップして条件を満たします。`;
+      renderLevels();
+      renderBoard();
+    }
+
+    function snapshot() {
+      const result = validation();
+      return {
+        schema: "codex-sum-garden-eco-lane-v1",
+        title: "Sum Garden",
+        exportedAt: new Date().toISOString(),
+        currentLevel: levels[state.levelIndex].name,
+        size: levels[state.levelIndex].size,
+        moves: state.moves,
+        solved: state.solved,
+        warnings: result.warnings,
+        stars: starRating(),
+        totalStars: totalStars(),
+        grid: state.grid,
+        records: state.records,
+        lane: {
+          command: "CODEX司令塔で数字ロジック、スマホ操作、検証条件を固定",
+          externalAI: "追加盤面、ヒント文、難易度曲線だけ外部AIへ依頼",
+          codex: "単一HTMLへ統合し、保存、出力、検証、CG/CSD登録まで担当",
+          nextTicket: "外部AIから6x6/7x7追加盤面とより自然なヒント文を受け取り、レベル6-10を追加"
+        }
+      };
+    }
+
+    function briefText() {
+      const data = snapshot();
+      return [
+        "目的: スマホ向け数字ロジックパズル Sum Garden を本格化する。",
+        "現在: 行・列は1..N重複なし、色ゾーンは指定合計。5レベル、Hint、Undo、localStorage、JSON/Markdown出力あり。",
+        `状態: ${data.currentLevel} / ${data.moves}手 / warnings=${data.warnings} / solved=${data.solved}`,
+        "依頼: 6x6と7x7の追加盤面、難易度曲線、ヒント文、初心者向け学習フィードバックを作る。",
+        "出力形式: JSON。levelは name, size, par, solution, fixed, zones, hint を持つ。",
+        "制約: 単一HTML、外部通信なし、スマホ片手操作、WCAG 2.2 AA、JSON/Markdown export維持。",
+        "検証: solutionは各行列が1..N、zonesのsumがsolutionと一致し、固定数字だけで一意性の手がかりがある。"
+      ].join("\n");
+    }
+
+    function markdown() {
+      const data = snapshot();
+      return [
+        "# Sum Garden - CODEX Eco Lane",
+        "",
+        `- Level: ${data.currentLevel}`,
+        `- Size: ${data.size}`,
+        `- Moves: ${data.moves}`,
+        `- Warnings: ${data.warnings}`,
+        `- Solved: ${data.solved}`,
+        `- Stars: ${data.stars}`,
+        "",
+        "## External AI Brief",
+        "",
+        briefText(),
+        "",
+        "## Next Ticket",
+        "",
+        data.lane.nextTicket
+      ].join("\n");
+    }
+
+    function downloadText(filename, text, type) {
+      const blob = new Blob([text], { type });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(url);
+      exportStatus.textContent = `${filename} を保存しました。`;
+    }
+
+    async function copyBrief() {
+      const text = briefText();
+      exportBox.value = text;
+      try {
+        await navigator.clipboard.writeText(text);
+        exportStatus.textContent = "Briefをコピーしました。";
+      } catch {
+        exportStatus.textContent = "コピーできない環境です。テキスト欄から選択してください。";
+      }
+    }
+
+    function setExport(mode, announce = true) {
+      if (mode === "json") exportBox.value = JSON.stringify(snapshot(), null, 2);
+      if (mode === "markdown") exportBox.value = markdown();
+      if (mode === "brief") exportBox.value = briefText();
+      if (announce) exportStatus.textContent = `${mode} を表示しました。`;
+    }
+
+    document.getElementById("check").addEventListener("click", checkPuzzle);
+    document.getElementById("hint").addEventListener("click", hint);
+    document.getElementById("undo").addEventListener("click", undo);
+    document.getElementById("reset").addEventListener("click", reset);
+    document.getElementById("copyBrief").addEventListener("click", copyBrief);
+    document.getElementById("exportJson").addEventListener("click", () => downloadText("sum-garden-eco-lane.json", JSON.stringify(snapshot(), null, 2), "application/json;charset=utf-8"));
+    document.getElementById("exportMarkdown").addEventListener("click", () => downloadText("sum-garden-eco-lane.md", markdown(), "text/markdown;charset=utf-8"));
+    document.getElementById("exportResult").addEventListener("click", () => downloadText("sum-garden-result.json", JSON.stringify({ exportedAt: new Date().toISOString(), records: state.records }, null, 2), "application/json;charset=utf-8"));
+
+    loadLevel(0);
+  </script>
+</body>
+</html>

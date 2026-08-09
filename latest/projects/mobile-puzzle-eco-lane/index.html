@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prism Relay - CODEX Eco Lane Puzzle</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f7fb;
+      --panel: #ffffff;
+      --ink: #172033;
+      --muted: #647087;
+      --line: #d9e0ec;
+      --blue: #2563eb;
+      --green: #17803d;
+      --amber: #b45309;
+      --red: #b42318;
+      --cyan: #0891b2;
+      --violet: #7c3aed;
+      --cell: #eef3f9;
+      --shadow: 0 10px 24px rgba(31, 42, 68, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Segoe UI", system-ui, sans-serif;
+      letter-spacing: 0;
+    }
+    button, textarea, select {
+      font: inherit;
+    }
+    button {
+      min-height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      color: var(--ink);
+      font-weight: 800;
+      cursor: pointer;
+    }
+    button.primary {
+      border-color: var(--blue);
+      background: var(--blue);
+      color: #fff;
+    }
+    button.good {
+      border-color: #abefc6;
+      background: #ecfdf3;
+      color: var(--green);
+    }
+    button.warn {
+      border-color: #fedf89;
+      background: #fffaeb;
+      color: var(--amber);
+    }
+    button:disabled {
+      opacity: .55;
+      cursor: not-allowed;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 4;
+      background: rgba(255, 255, 255, .94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(8px);
+      padding: 10px 12px;
+    }
+    .top {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      gap: 8px;
+    }
+    h1, h2, h3, p {
+      margin: 0;
+    }
+    h1 {
+      font-size: 21px;
+      line-height: 1.18;
+    }
+    h2 { font-size: 16px; }
+    h3 { font-size: 13px; }
+    .sub, .meta, small {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+    .pills {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      white-space: nowrap;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fbfcff;
+      padding: 3px 9px;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--muted);
+    }
+    .pill.ok { color: var(--green); border-color: #abefc6; background: #ecfdf3; }
+    .pill.go { color: var(--blue); border-color: #bfdbfe; background: #eff6ff; }
+    main {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      padding: 10px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 330px;
+      gap: 10px;
+    }
+    section, .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+    .panel {
+      padding: 10px;
+      display: grid;
+      gap: 10px;
+    }
+    .game-wrap {
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+    .board-shell {
+      padding: 10px;
+      display: grid;
+      gap: 10px;
+    }
+    .hud {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 7px;
+    }
+    .stat {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcff;
+      padding: 8px;
+      min-height: 58px;
+    }
+    .stat strong {
+      display: block;
+      font-size: 19px;
+      line-height: 1.1;
+    }
+    .stat span {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      margin-top: 3px;
+    }
+    .board {
+      width: min(100%, 620px);
+      aspect-ratio: 1;
+      margin: 0 auto;
+      display: grid;
+      gap: 5px;
+      touch-action: manipulation;
+      user-select: none;
+    }
+    .cell {
+      position: relative;
+      border: 1px solid #cfdae8;
+      border-radius: 8px;
+      background: var(--cell);
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      transition: transform .12s ease, border-color .12s ease, background .12s ease;
+      min-width: 0;
+      min-height: 0;
+    }
+    .cell:active { transform: scale(.97); }
+    .cell.fixed { border-color: #a7b4c8; background: #e8edf5; }
+    .cell.source { border-color: #7dd3fc; background: #ecfeff; }
+    .cell.goal { border-color: #c4b5fd; background: #f5f3ff; }
+    .cell.lit { border-color: #22c55e; background: #ecfdf3; }
+    .cell.error { border-color: #fca5a5; background: #fff1f2; }
+    .tile-svg {
+      width: 100%;
+      height: 100%;
+      transform-origin: 50% 50%;
+      transition: transform .18s ease;
+    }
+    .pipe {
+      fill: none;
+      stroke: #334155;
+      stroke-width: 10;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .cell.lit .pipe { stroke: var(--green); }
+    .cell.goal.lit .pipe { stroke: var(--violet); }
+    .node {
+      fill: #fff;
+      stroke: #334155;
+      stroke-width: 5;
+    }
+    .cell.lit .node { stroke: var(--green); }
+    .symbol {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      font-size: clamp(15px, 4.5vw, 24px);
+      font-weight: 900;
+      color: #0f172a;
+      pointer-events: none;
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 7px;
+    }
+    .level-list {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 6px;
+    }
+    .level-btn.active {
+      border-color: var(--blue);
+      color: var(--blue);
+      background: #eff6ff;
+    }
+    .side {
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+    .lane-steps {
+      display: grid;
+      gap: 7px;
+    }
+    .lane-step {
+      display: grid;
+      grid-template-columns: 30px 1fr;
+      gap: 8px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcff;
+      padding: 8px;
+    }
+    .lane-step b {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: var(--blue);
+    }
+    .export-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 7px;
+    }
+    textarea {
+      width: 100%;
+      min-height: 170px;
+      resize: vertical;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 9px;
+      color: var(--ink);
+      background: #fbfcff;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+    .status {
+      min-height: 20px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .toast {
+      border-left: 4px solid var(--blue);
+      background: #eff6ff;
+      padding: 9px;
+      border-radius: 8px;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .toast.win {
+      border-left-color: var(--green);
+      background: #ecfdf3;
+    }
+    .toast.warn {
+      border-left-color: var(--amber);
+      background: #fffaeb;
+    }
+    @media (max-width: 880px) {
+      main { grid-template-columns: 1fr; }
+      .side { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      header { padding: 8px 10px; }
+      main { padding: 8px; gap: 8px; }
+      .board-shell, .panel { padding: 8px; }
+      .hud { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .controls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .level-list { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .stat { min-height: 52px; padding: 7px; }
+      .stat strong { font-size: 17px; }
+      .board { gap: 4px; }
+      .cell { border-radius: 7px; }
+      .export-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top">
+      <div>
+        <h1>Prism Relay</h1>
+        <div class="sub">CODEX司令塔から外部AIへ投げ、戻った案を単一HTMLで統合するスマホ向けパズルゲームレーン</div>
+      </div>
+      <div class="pills" aria-label="lane status">
+        <span class="pill go">Eco Lane</span>
+        <span class="pill ok">Single HTML</span>
+        <span class="pill ok">Mobile Puzzle</span>
+        <span class="pill ok">JSON / Markdown</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="game-wrap">
+      <section class="board-shell" aria-labelledby="gameTitle">
+        <div>
+          <h2 id="gameTitle">光をつなぐ</h2>
+          <p class="meta">タイルをタップして回転。青い源から紫のゴールまで、すべての必要マスを光らせるとクリア。</p>
+        </div>
+        <div class="hud" aria-live="polite">
+          <div class="stat"><strong id="levelName">1</strong><span>レベル</span></div>
+          <div class="stat"><strong id="moveCount">0</strong><span>手数</span></div>
+          <div class="stat"><strong id="targetMoves">0</strong><span>星3目安</span></div>
+          <div class="stat"><strong id="starCount">---</strong><span>評価</span></div>
+          <div class="stat"><strong id="bestStars">0</strong><span>総スター</span></div>
+        </div>
+        <div id="board" class="board" role="grid" aria-label="Prism Relay puzzle board"></div>
+        <div class="controls">
+          <button class="primary" id="nextLevel" type="button">次の盤面</button>
+          <button id="undo" type="button">Undo</button>
+          <button id="hint" type="button">Hint</button>
+          <button class="warn" id="reset" type="button">Reset</button>
+        </div>
+        <div id="message" class="toast">まずは角タイルを回して、光の通り道を作ってください。</div>
+      </section>
+
+      <section class="panel" aria-labelledby="levelsTitle">
+        <h2 id="levelsTitle">レベル選択</h2>
+        <div id="levelList" class="level-list"></div>
+      </section>
+    </div>
+
+    <aside class="side">
+      <section class="panel" aria-labelledby="laneTitle">
+        <h2 id="laneTitle">CODEXエコレーン</h2>
+        <div class="lane-steps">
+          <div class="lane-step"><b>1</b><div><h3>司令塔</h3><p class="meta">目的、操作、合格条件、禁止範囲を短く固定。</p></div></div>
+          <div class="lane-step"><b>2</b><div><h3>外部AI</h3><p class="meta">難易度、盤面案、改善観点だけを投げる。</p></div></div>
+          <div class="lane-step"><b>3</b><div><h3>Codex統合</h3><p class="meta">単一HTML、保存、出力、検証をまとめて実装。</p></div></div>
+          <div class="lane-step"><b>4</b><div><h3>完成形</h3><p class="meta">CG/CSDに登録し、次の改善チケットを残す。</p></div></div>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="briefTitle">
+        <h2 id="briefTitle">外部AIへ投げる</h2>
+        <p class="meta">今のゲーム状態から、次に外部AIへ渡す改善依頼を生成します。</p>
+        <div class="export-grid">
+          <button class="primary" id="copyBrief" type="button">Briefコピー</button>
+          <button id="exportJson" type="button">JSON保存</button>
+          <button id="exportMarkdown" type="button">Markdown保存</button>
+          <button id="exportResult" type="button">結果保存</button>
+        </div>
+        <textarea id="exportBox" aria-label="export preview" readonly></textarea>
+        <div id="exportStatus" class="status" role="status" aria-live="polite"></div>
+      </section>
+    </aside>
+  </main>
+
+  <script>
+    const levels = [
+      {
+        name: "01 / Spark",
+        size: 5,
+        target: 8,
+        hint: "左上から右へ進み、中央で下へ曲げます。",
+        cells: [
+          "S0", "I1", "L2", "X0", "X0",
+          "X0", "X0", "I0", "X0", "X0",
+          "X0", "X0", "L0", "I1", "G0",
+          "X0", "X0", "I0", "X0", "X0",
+          "X0", "X0", "X0", "X0", "X0"
+        ]
+      },
+      {
+        name: "02 / Fork",
+        size: 5,
+        target: 11,
+        hint: "T字を中央で使い、右上の鍵マスと右下のゴールへ分けます。",
+        cells: [
+          "X0", "S0", "L2", "X0", "X0",
+          "X0", "X0", "I0", "X0", "X0",
+          "X0", "X0", "T0", "K0", "G0",
+          "X0", "X0", "I0", "X0", "X0",
+          "X0", "X0", "G0", "X0", "X0"
+        ]
+      },
+      {
+        name: "03 / Gate",
+        size: 6,
+        target: 14,
+        hint: "2つのゴールを同時に点灯。十字は最後に向きを決めます。",
+        cells: [
+          "S0", "I1", "I1", "L2", "X0", "X0",
+          "X0", "X0", "X0", "I0", "X0", "X0",
+          "G0", "I1", "I1", "C0", "K0", "G0",
+          "X0", "X0", "X0", "I0", "X0", "X0",
+          "X0", "X0", "X0", "G0", "X0", "X0",
+          "X0", "X0", "X0", "X0", "X0", "X0"
+        ]
+      },
+      {
+        name: "04 / Crosswind",
+        size: 6,
+        target: 17,
+        hint: "中央の十字から上下左右に分岐。鍵マスを先に含めます。",
+        cells: [
+          "X0", "X0", "S0", "X0", "X0", "X0",
+          "X0", "X0", "I0", "X0", "X0", "X0",
+          "G0", "I1", "C0", "I1", "K0", "G0",
+          "X0", "X0", "I0", "X0", "X0", "X0",
+          "X0", "X0", "K0", "I1", "I1", "G0",
+          "X0", "X0", "X0", "X0", "X0", "X0"
+        ]
+      },
+      {
+        name: "05 / Relay",
+        size: 7,
+        target: 22,
+        hint: "長い迂回路です。外周で伸ばして、中央で2回折り返します。",
+        cells: [
+          "S0", "I1", "I1", "L2", "X0", "X0", "X0",
+          "X0", "X0", "X0", "I0", "X0", "X0", "X0",
+          "G0", "I1", "I1", "C0", "I1", "K0", "G0",
+          "X0", "X0", "X0", "I0", "X0", "X0", "X0",
+          "X0", "X0", "X0", "C0", "I1", "I1", "G0",
+          "X0", "X0", "X0", "I0", "X0", "X0", "X0",
+          "X0", "X0", "X0", "X0", "X0", "X0", "X0"
+        ]
+      },
+      {
+        name: "06 / Prism",
+        size: 7,
+        target: 24,
+        hint: "3ゴール構成。中央の分岐を光らせ、上下に逃がします。",
+        cells: [
+          "X0", "X0", "G0", "X0", "K0", "I1", "G0",
+          "X0", "X0", "I0", "X0", "I0", "X0", "X0",
+          "S0", "I1", "C0", "I1", "C0", "I1", "G0",
+          "X0", "X0", "I0", "X0", "I0", "X0", "X0",
+          "G0", "I1", "C0", "X0", "T0", "I1", "K0",
+          "X0", "X0", "I0", "X0", "I0", "X0", "X0",
+          "X0", "X0", "G0", "X0", "G0", "X0", "X0"
+        ]
+      }
+    ];
+
+    const ports = {
+      S: [[0, -1], [1, 0], [0, 1], [-1, 0]],
+      G: [[0, -1], [1, 0], [0, 1], [-1, 0]],
+      K: [[0, -1], [1, 0], [0, 1], [-1, 0]],
+      I: [[0, -1], [0, 1]],
+      L: [[0, -1], [1, 0]],
+      T: [[0, -1], [1, 0], [0, 1]],
+      C: [[0, -1], [1, 0], [0, 1], [-1, 0]],
+      X: []
+    };
+    const fixedTypes = new Set(["S", "G"]);
+    const board = document.getElementById("board");
+    const levelList = document.getElementById("levelList");
+    const message = document.getElementById("message");
+    const exportBox = document.getElementById("exportBox");
+    const exportStatus = document.getElementById("exportStatus");
+    let state = {
+      levelIndex: 0,
+      rotations: [],
+      moves: 0,
+      history: [],
+      lit: new Set(),
+      solved: false,
+      records: JSON.parse(localStorage.getItem("prismRelayRecords") || "{}")
+    };
+
+    function parseCell(code) {
+      return { type: code[0], rotation: Number(code.slice(1) || 0) };
+    }
+
+    function rotatePort([x, y], turns) {
+      let point = [x, y];
+      for (let i = 0; i < turns; i += 1) {
+        point = [-point[1], point[0]];
+      }
+      return point;
+    }
+
+    function cellPorts(index) {
+      const cell = parseCell(levels[state.levelIndex].cells[index]);
+      const turns = (cell.rotation + state.rotations[index]) % 4;
+      return (ports[cell.type] || []).map((port) => rotatePort(port, turns));
+    }
+
+    function key(x, y) {
+      return `${x},${y}`;
+    }
+
+    function hasPort(index, dx, dy) {
+      return cellPorts(index).some(([x, y]) => x === dx && y === dy);
+    }
+
+    function traceLight() {
+      const level = levels[state.levelIndex];
+      const queue = [];
+      const lit = new Set();
+      level.cells.forEach((code, index) => {
+        if (parseCell(code).type === "S") {
+          queue.push(index);
+          lit.add(index);
+        }
+      });
+      while (queue.length) {
+        const index = queue.shift();
+        const x = index % level.size;
+        const y = Math.floor(index / level.size);
+        cellPorts(index).forEach(([dx, dy]) => {
+          const nx = x + dx;
+          const ny = y + dy;
+          if (nx < 0 || ny < 0 || nx >= level.size || ny >= level.size) return;
+          const nextIndex = ny * level.size + nx;
+          if (!hasPort(nextIndex, -dx, -dy)) return;
+          if (!lit.has(nextIndex)) {
+            lit.add(nextIndex);
+            queue.push(nextIndex);
+          }
+        });
+      }
+      state.lit = lit;
+      const required = level.cells
+        .map((code, index) => ({ type: parseCell(code).type, index }))
+        .filter((item) => item.type === "G" || item.type === "K");
+      const solved = required.every((item) => lit.has(item.index));
+      state.solved = solved;
+      return solved;
+    }
+
+    function starRating() {
+      const target = levels[state.levelIndex].target;
+      if (!state.solved) return 0;
+      if (state.moves <= target) return 3;
+      if (state.moves <= target + 4) return 2;
+      return 1;
+    }
+
+    function saveRecord() {
+      const id = levels[state.levelIndex].name;
+      const stars = starRating();
+      const previous = state.records[id] || { stars: 0, bestMoves: null };
+      state.records[id] = {
+        stars: Math.max(previous.stars || 0, stars),
+        bestMoves: previous.bestMoves === null ? state.moves : Math.min(previous.bestMoves, state.moves),
+        solvedAt: new Date().toISOString()
+      };
+      localStorage.setItem("prismRelayRecords", JSON.stringify(state.records));
+    }
+
+    function totalStars() {
+      return Object.values(state.records).reduce((sum, record) => sum + (record.stars || 0), 0);
+    }
+
+    function tileSvg(type, rotation) {
+      const paths = {
+        S: '<path class="pipe" d="M50 50 L86 50"/><circle class="node" cx="50" cy="50" r="12"/>',
+        G: '<path class="pipe" d="M14 50 L50 50"/><circle class="node" cx="50" cy="50" r="12"/>',
+        K: '<path class="pipe" d="M50 14 L50 86"/><circle class="node" cx="50" cy="50" r="9"/>',
+        I: '<path class="pipe" d="M50 14 L50 86"/><circle class="node" cx="50" cy="50" r="7"/>',
+        L: '<path class="pipe" d="M50 14 L50 50 L86 50"/><circle class="node" cx="50" cy="50" r="7"/>',
+        T: '<path class="pipe" d="M50 14 L50 50 L86 50 M50 50 L50 86"/><circle class="node" cx="50" cy="50" r="7"/>',
+        C: '<path class="pipe" d="M50 14 L50 86 M14 50 L86 50"/><circle class="node" cx="50" cy="50" r="7"/>',
+        X: ''
+      };
+      const label = type === "S" ? "S" : type === "G" ? "G" : type === "K" ? "K" : "";
+      return `<svg class="tile-svg" viewBox="0 0 100 100" style="transform:rotate(${rotation * 90}deg)" aria-hidden="true">${paths[type] || ""}</svg>${label ? `<span class="symbol">${label}</span>` : ""}`;
+    }
+
+    function renderLevels() {
+      levelList.innerHTML = "";
+      levels.forEach((level, index) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = `level-btn ${index === state.levelIndex ? "active" : ""}`;
+        const stars = state.records[level.name]?.stars || 0;
+        button.textContent = `${index + 1} ${"★".repeat(stars)}`;
+        button.addEventListener("click", () => loadLevel(index));
+        levelList.append(button);
+      });
+    }
+
+    function renderBoard() {
+      const level = levels[state.levelIndex];
+      traceLight();
+      board.style.gridTemplateColumns = `repeat(${level.size}, minmax(0, 1fr))`;
+      board.innerHTML = "";
+      level.cells.forEach((code, index) => {
+        const cell = parseCell(code);
+        const rotation = (cell.rotation + state.rotations[index]) % 4;
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = ["cell", cell.type === "X" ? "empty" : "", fixedTypes.has(cell.type) ? "fixed" : "", cell.type === "S" ? "source" : "", cell.type === "G" ? "goal" : "", state.lit.has(index) ? "lit" : ""].filter(Boolean).join(" ");
+        button.innerHTML = tileSvg(cell.type, rotation);
+        button.setAttribute("role", "gridcell");
+        button.setAttribute("aria-label", `${level.name} ${index + 1} ${cell.type} tile`);
+        button.disabled = cell.type === "X" || fixedTypes.has(cell.type);
+        button.addEventListener("click", () => rotateTile(index));
+        board.append(button);
+      });
+      updateHud();
+    }
+
+    function updateHud() {
+      const level = levels[state.levelIndex];
+      document.getElementById("levelName").textContent = level.name.split(" / ")[0];
+      document.getElementById("moveCount").textContent = state.moves;
+      document.getElementById("targetMoves").textContent = level.target;
+      document.getElementById("starCount").textContent = state.solved ? "★".repeat(starRating()) : "---";
+      document.getElementById("bestStars").textContent = totalStars();
+      document.getElementById("undo").disabled = state.history.length === 0;
+      document.getElementById("nextLevel").disabled = !state.solved && state.levelIndex < levels.length - 1;
+      if (state.solved) {
+        message.className = "toast win";
+        message.textContent = `${level.name} クリア。${starRating()}スター、${state.moves}手。次は外部AIに難化案を投げられます。`;
+      }
+      setExport("brief", false);
+    }
+
+    function rotateTile(index) {
+      state.history.push([...state.rotations]);
+      state.rotations[index] = (state.rotations[index] + 1) % 4;
+      state.moves += 1;
+      const solved = traceLight();
+      if (solved && !state.solvedSaved) {
+        state.solvedSaved = true;
+        saveRecord();
+      }
+      renderBoard();
+    }
+
+    function loadLevel(index) {
+      const level = levels[index];
+      state.levelIndex = index;
+      state.rotations = level.cells.map((code, index) => {
+        const type = parseCell(code).type;
+        if (type === "X" || fixedTypes.has(type)) return 0;
+        return index % 3 === 0 ? 1 : index % 4 === 0 ? 2 : 0;
+      });
+      state.moves = 0;
+      state.history = [];
+      state.solved = false;
+      state.solvedSaved = false;
+      message.className = "toast";
+      message.textContent = `${level.name}: タイルを回して全ての線をつなぎます。`;
+      renderLevels();
+      renderBoard();
+    }
+
+    function undo() {
+      const previous = state.history.pop();
+      if (!previous) return;
+      state.rotations = previous;
+      state.moves = Math.max(0, state.moves - 1);
+      state.solvedSaved = false;
+      message.className = "toast";
+      message.textContent = "1手戻しました。";
+      renderBoard();
+    }
+
+    function resetLevel() {
+      loadLevel(state.levelIndex);
+    }
+
+    function nextLevel() {
+      if (state.levelIndex < levels.length - 1) {
+        loadLevel(state.levelIndex + 1);
+      }
+    }
+
+    function showHint() {
+      message.className = "toast warn";
+      message.textContent = levels[state.levelIndex].hint;
+    }
+
+    function snapshot() {
+      return {
+        schema: "codex-mobile-puzzle-eco-lane-v1",
+        title: "Prism Relay",
+        exportedAt: new Date().toISOString(),
+        currentLevel: levels[state.levelIndex].name,
+        moves: state.moves,
+        solved: state.solved,
+        stars: starRating(),
+        totalStars: totalStars(),
+        records: state.records,
+        lane: {
+          command: "CODEX司令塔で目的、合格条件、禁止範囲を固定",
+          externalAI: "難易度設計、盤面案、改善レビューを外部AIへ依頼",
+          codex: "単一HTMLに統合し、保存、出力、検証、CG/CSD登録まで完了",
+          nextTicket: "外部AIから追加盤面案を受け取り、レベル7-12と日替わりチャレンジを追加"
+        },
+        acceptance: [
+          "スマホでタップ操作できる",
+          "複数レベル、星評価、Undo、Hint、保存がある",
+          "外部AIに投げるBriefを生成できる",
+          "JSON/Markdown/結果を出力できる"
+        ]
+      };
+    }
+
+    function markdown() {
+      const data = snapshot();
+      return [
+        "# Prism Relay - CODEX Eco Lane",
+        "",
+        `- Level: ${data.currentLevel}`,
+        `- Moves: ${data.moves}`,
+        `- Solved: ${data.solved}`,
+        `- Stars: ${data.stars}`,
+        `- Total Stars: ${data.totalStars}`,
+        "",
+        "## External AI Brief",
+        "",
+        briefText(),
+        "",
+        "## Next Ticket",
+        "",
+        data.lane.nextTicket
+      ].join("\n");
+    }
+
+    function briefText() {
+      const data = snapshot();
+      return [
+        "目的: スマホ向けHTMLパズルゲーム Prism Relay を本格化する。",
+        "現在: 回転接続パズル、6レベル、星評価、Undo、Hint、localStorage、JSON/Markdown出力あり。",
+        `プレイ状態: ${data.currentLevel} / ${data.moves}手 / solved=${data.solved} / stars=${data.stars}`,
+        "依頼: レベル7-12の盤面案、難易度曲線、日替わりチャレンジ、失敗時の学習フィードバック案を出す。",
+        "出力形式: JSONで levels 配列、各レベルは name, size, target, hint, cells を持つ。",
+        "制約: 単一HTML、外部通信なし、スマホ片手操作、WCAG 2.2 AA、JSON/Markdown export維持。",
+        "検証: タップで解ける、盤面がスマホ幅で崩れない、全ゴールが点灯してクリア判定になる。"
+      ].join("\n");
+    }
+
+    function downloadText(filename, text, type) {
+      const blob = new Blob([text], { type });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      a.click();
+      URL.revokeObjectURL(url);
+      exportStatus.textContent = `${filename} を保存しました。`;
+    }
+
+    async function copyBrief() {
+      const text = briefText();
+      exportBox.value = text;
+      try {
+        await navigator.clipboard.writeText(text);
+        exportStatus.textContent = "Briefをコピーしました。";
+      } catch {
+        exportStatus.textContent = "コピーできない環境です。テキスト欄から選択してください。";
+      }
+    }
+
+    function setExport(mode, announce = true) {
+      if (mode === "json") exportBox.value = JSON.stringify(snapshot(), null, 2);
+      if (mode === "markdown") exportBox.value = markdown();
+      if (mode === "brief") exportBox.value = briefText();
+      if (announce) exportStatus.textContent = `${mode} を表示しました。`;
+    }
+
+    document.getElementById("undo").addEventListener("click", undo);
+    document.getElementById("reset").addEventListener("click", resetLevel);
+    document.getElementById("hint").addEventListener("click", showHint);
+    document.getElementById("nextLevel").addEventListener("click", nextLevel);
+    document.getElementById("copyBrief").addEventListener("click", copyBrief);
+    document.getElementById("exportJson").addEventListener("click", () => downloadText("prism-relay-eco-lane.json", JSON.stringify(snapshot(), null, 2), "application/json;charset=utf-8"));
+    document.getElementById("exportMarkdown").addEventListener("click", () => downloadText("prism-relay-eco-lane.md", markdown(), "text/markdown;charset=utf-8"));
+    document.getElementById("exportResult").addEventListener("click", () => downloadText("prism-relay-result.json", JSON.stringify({ exportedAt: new Date().toISOString(), records: state.records }, null, 2), "application/json;charset=utf-8"));
+
+    loadLevel(0);
+  </script>
+</body>
+</html>

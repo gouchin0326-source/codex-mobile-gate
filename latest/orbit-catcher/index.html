@@ -1,16 +1,16 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>軌道キャッチャー</title>
+  <title>Orbit Catcher: Gate Run</title>
   <style>
-    :root { --bg:#10151f; --panel:#ffffff; --ink:#172033; --muted:#667085; --line:#d9dee7; --green:#16a34a; --red:#dc2626; --blue:#2563eb; --amber:#d97706; --cyan:#0891b2; }
+    :root { --bg:#0b1020; --panel:#ffffff; --ink:#172033; --muted:#667085; --line:#d9dee7; --blue:#2563eb; --cyan:#0891b2; --green:#16a34a; --red:#dc2626; --amber:#d97706; --violet:#7c3aed; }
     * { box-sizing:border-box; }
     body { margin:0; min-height:100vh; font-family:"Segoe UI", system-ui, sans-serif; background:var(--bg); color:var(--ink); letter-spacing:0; }
-    header { padding:12px 14px; background:var(--panel); border-bottom:1px solid var(--line); display:flex; justify-content:space-between; gap:10px; align-items:center; }
+    header { min-height:58px; padding:12px 14px; background:var(--panel); border-bottom:1px solid var(--line); display:flex; justify-content:space-between; gap:10px; align-items:center; }
     h1 { margin:0; font-size:20px; }
-    main { min-height:calc(100vh - 57px); display:grid; grid-template-columns:320px 1fr; }
+    main { min-height:calc(100vh - 58px); display:grid; grid-template-columns:330px 1fr; }
     aside { background:var(--panel); border-right:1px solid var(--line); padding:12px; display:grid; gap:10px; align-content:start; }
     .stats { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:8px; }
     .stat, .panel { border:1px solid var(--line); border-radius:8px; background:#fbfcfe; padding:10px; min-width:0; }
@@ -19,44 +19,72 @@
     .panel { display:grid; gap:8px; }
     button { min-height:42px; border:1px solid var(--blue); border-radius:8px; background:var(--blue); color:#fff; font:inherit; font-weight:700; cursor:pointer; touch-action:manipulation; }
     button.secondary { background:#fff; color:var(--ink); border-color:var(--line); }
+    .mission { border-color:#bae6fd; background:#f0f9ff; }
+    .mission-title { display:flex; justify-content:space-between; gap:8px; align-items:center; }
+    .mission-tag { color:#0369a1; font-size:12px; font-weight:800; }
+    .mission-meter { height:8px; border-radius:999px; background:#dbeafe; overflow:hidden; }
+    .mission-fill { height:100%; width:0%; background:#0891b2; transition:width .2s ease; }
+    .legend { display:grid; gap:6px; font-size:13px; }
+    .legend div { display:flex; align-items:center; gap:8px; }
+    .gauges { display:grid; gap:8px; }
+    .gauge-row { display:grid; grid-template-columns:54px 1fr auto; gap:8px; align-items:center; font-size:12px; color:var(--muted); }
+    .gauge { height:9px; border-radius:999px; background:#e5e7eb; overflow:hidden; }
+    .gauge-fill { height:100%; width:0%; background:var(--green); transition:width .18s ease; }
+    .gauge-fill.ammo { background:var(--amber); }
+    .loadout { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:8px; }
+    .slot { min-height:52px; border:1px solid var(--line); border-radius:8px; background:#fff; color:var(--ink); display:grid; gap:2px; place-items:center; padding:5px; }
+    .slot strong { font-size:16px; line-height:1; }
+    .slot span { color:var(--muted); font-size:11px; }
+    .equip-grid { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:8px; }
+    .equip { min-height:48px; border:1px solid #c7d2fe; border-radius:8px; background:#eef2ff; display:grid; place-items:center; gap:2px; padding:5px; text-align:center; }
+    .equip strong { font-size:14px; line-height:1; color:#3730a3; }
+    .equip span { color:var(--muted); font-size:10px; }
+    .dot { width:12px; height:12px; border-radius:999px; display:inline-block; }
+    .dot.player { background:#38bdf8; }
+    .dot.goal { background:var(--green); }
+    .dot.zombie { background:var(--red); }
+    .dot.item { background:var(--amber); }
     .play-wrap { min-height:100%; display:grid; grid-template-rows:minmax(0, 1fr) auto; gap:10px; padding:12px; }
-    .stage { width:min(100%, 860px); aspect-ratio:4/3; align-self:center; justify-self:center; border:1px solid rgba(255,255,255,.18); border-radius:8px; background:#111827; position:relative; overflow:hidden; box-shadow:0 16px 50px rgba(0,0,0,.28); }
-    canvas { width:100%; height:100%; display:block; background:#111827; }
+    .stage { width:min(100%, 920px); aspect-ratio:4/3; align-self:center; justify-self:center; border:1px solid rgba(255,255,255,.18); border-radius:8px; background:#08111f; position:relative; overflow:hidden; box-shadow:0 16px 50px rgba(0,0,0,.3); }
+    canvas { width:100%; height:100%; display:block; background:#08111f; }
     .overlay { position:absolute; inset:auto 12px 12px 12px; display:flex; justify-content:space-between; align-items:end; gap:8px; color:#dbeafe; pointer-events:none; font-size:12px; }
     .badge { display:inline-flex; align-items:center; min-height:26px; padding:3px 9px; border:1px solid rgba(255,255,255,.18); border-radius:999px; background:rgba(15,23,42,.72); backdrop-filter:blur(6px); }
     .status-line { min-height:18px; color:var(--muted); font-size:12px; }
-    .legend { display:grid; gap:6px; font-size:13px; }
-    .legend div { display:flex; align-items:center; gap:8px; }
-    .dot { width:12px; height:12px; border-radius:999px; display:inline-block; }
-    .dot.good { background:var(--green); }
-    .dot.bad { background:var(--red); }
-    .dot.player { background:#38bdf8; }
-    .dot.bonus { background:var(--amber); }
-    .controls { width:min(100%, 860px); justify-self:center; background:#fff; border:1px solid var(--line); border-radius:8px; padding:10px; display:grid; grid-template-columns:1fr auto; gap:12px; align-items:center; }
-    .stick { width:144px; height:144px; border:1px solid #cbd5e1; border-radius:999px; background:radial-gradient(circle at center, #eff6ff 0 30%, #dbeafe 31% 100%); position:relative; justify-self:center; touch-action:none; user-select:none; }
+    .controls { width:min(100%, 920px); justify-self:center; background:#fff; border:1px solid var(--line); border-radius:8px; padding:10px; display:grid; grid-template-columns:1fr auto auto; gap:10px; align-items:center; }
+    .stick { width:138px; height:138px; border:1px solid #cbd5e1; border-radius:999px; background:radial-gradient(circle at center, #eff6ff 0 30%, #dbeafe 31% 100%); position:relative; justify-self:center; touch-action:none; user-select:none; }
     .stick::before { content:""; position:absolute; inset:20px; border:1px dashed #93c5fd; border-radius:999px; }
-    .stick-knob { width:58px; height:58px; border-radius:999px; background:#1d4ed8; color:#fff; display:grid; place-items:center; font-size:12px; font-weight:800; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); box-shadow:0 8px 20px rgba(37,99,235,.28); pointer-events:none; }
-    .boost { width:112px; height:112px; border-radius:999px; background:var(--cyan); border-color:var(--cyan); font-size:16px; }
+    .stick-knob { width:56px; height:56px; border-radius:999px; background:#1d4ed8; color:#fff; display:grid; place-items:center; font-size:12px; font-weight:800; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); box-shadow:0 8px 20px rgba(37,99,235,.28); pointer-events:none; }
+    .round { width:86px; height:86px; border-radius:999px; font-size:14px; }
+    .use-slot { background:#334155; border-color:#334155; color:#fff; display:grid; place-items:center; line-height:1.1; padding:4px; }
+    .use-slot span { font-size:11px; font-weight:700; }
     .control-note { grid-column:1 / -1; color:var(--muted); font-size:12px; text-align:center; }
-    @media (max-width:920px) { main { grid-template-columns:1fr; } aside { border-right:0; border-bottom:1px solid var(--line); grid-template-columns:1fr; } .stats { grid-template-columns:repeat(4, minmax(0,1fr)); } .stat { padding:8px; } .stat strong { font-size:17px; } .panel { display:none; } .play-wrap { padding:8px; align-items:start; } .stage { width:100%; max-height:56vh; } }
-    @media (max-width:560px) { header { padding:10px 12px; } h1 { font-size:18px; } .stats { grid-template-columns:repeat(3, minmax(0,1fr)); } .controls { grid-template-columns:1fr 96px; padding:8px; gap:8px; } .stick { width:128px; height:128px; } .stick-knob { width:52px; height:52px; } .boost { width:88px; height:88px; font-size:14px; } }
+    @media (max-width:920px) { main { grid-template-columns:1fr; } aside { border-right:0; border-bottom:1px solid var(--line); } .stats { grid-template-columns:repeat(4, minmax(0,1fr)); } .stat { padding:8px; } .stat strong { font-size:17px; } .panel { display:none; } .panel.keep { display:grid; } .play-wrap { padding:8px; align-items:start; } .stage { width:100%; max-height:56vh; } }
+    @media (max-width:560px) { header { padding:10px 12px; } h1 { font-size:18px; } .stats { grid-template-columns:repeat(3, minmax(0,1fr)); } .controls { grid-template-columns:1fr 76px 72px; padding:8px; gap:7px; } .stick { width:124px; height:124px; } .stick-knob { width:50px; height:50px; } .round { width:68px; height:68px; font-size:13px; } }
   </style>
 </head>
 <body>
-  <header><h1>軌道キャッチャー</h1><div class="muted">スティックで自由に動く回避アクション</div></header>
+  <header><h1>Orbit Catcher: Gate Run</h1><div class="muted">巨大マップ探索シューティング</div></header>
   <main>
     <aside>
       <div class="stats">
-        <div class="stat"><strong id="score">0</strong><span>得点</span></div><div class="stat"><strong id="best">0</strong><span>最高</span></div><div class="stat"><strong id="time">60</strong><span>残り秒</span></div><div class="stat"><strong id="lives">3</strong><span>耐久</span></div><div class="stat"><strong id="level">1</strong><span id="stage-label">軌道</span></div><div class="stat"><strong id="combo">0</strong><span>連続回収</span></div>
+        <div class="stat"><strong id="score">0</strong><span>得点</span></div><div class="stat"><strong id="best">0</strong><span>最高</span></div>
+        <div class="stat"><strong id="wave">1</strong><span>周回</span></div><div class="stat"><strong id="hp">100</strong><span>耐久</span></div>
+        <div class="stat"><strong id="ammo">12/90</strong><span>装填/予備</span></div><div class="stat"><strong id="weapon">単発</strong><span>武器</span></div>
+        <div class="stat"><strong id="kills">0</strong><span>撃破</span></div><div class="stat"><strong id="distance">0m</strong><span>ゴール</span></div>
+        <div class="stat"><strong id="boss">未出現</strong><span>ゲート番人</span></div><div class="stat"><strong id="ally">0</strong><span>仲間</span></div>
       </div>
-      <button id="start">開始</button><button class="secondary" id="pause">一時停止</button><button class="secondary" id="export-result">JSONを書き出し</button><button class="secondary" id="export-markdown">Markdownを書き出し</button><button class="secondary" id="reset-best">最高記録をリセット</button>
+      <button id="start">開始</button><button class="secondary" id="pause">一時停止</button><button class="secondary" id="sound">音 ON</button><button class="secondary" id="export-result">JSONを書き出し</button><button class="secondary" id="export-markdown">Markdownを書き出し</button><button class="secondary" id="export-ai-prompt">AI改善プロンプト</button><button class="secondary" id="reset-mission">ミッション更新</button><button class="secondary" id="reset-best">最高記録をリセット</button>
       <div class="status-line" id="export-status" role="status" aria-live="polite"></div>
-      <div class="panel"><strong>遊び方</strong><div class="muted">スティックを倒した方向へ動きます。緑の粒を集め、赤い障害物を避け、金の粒でシールドと時間を得ます。</div></div>
-      <div class="panel legend"><div><span class="dot player"></span> 自機</div><div><span class="dot good"></span> 緑の粒: 得点</div><div><span class="dot bonus"></span> 金の粒: シールドと時間</div><div><span class="dot bad"></span> 赤い障害物: 耐久低下</div></div>
+      <div class="panel keep"><strong>状態</strong><div class="gauges"><div class="gauge-row"><span>耐久</span><div class="gauge"><div class="gauge-fill" id="hp-bar"></div></div><span id="hp-read">100</span></div><div class="gauge-row"><span>装填</span><div class="gauge"><div class="gauge-fill ammo" id="clip-bar"></div></div><span id="clip-read">12</span></div></div></div>
+      <div class="panel keep"><strong>道具箱</strong><div class="loadout"><button class="slot" id="bag-slot-0"><strong>-</strong><span>空</span></button><button class="slot" id="bag-slot-1"><strong>-</strong><span>空</span></button></div></div>
+      <div class="panel keep"><strong>装備</strong><div class="equip-grid"><div class="equip"><strong>DR</strong><span>ドローン</span></div><div class="equip"><strong>OR</strong><span>軌道弾</span></div><div class="equip"><strong>NV</strong><span>ノヴァ</span></div></div></div>
+      <div class="panel mission keep"><div class="mission-title"><strong>今日のミッション</strong><span class="mission-tag" id="mission-reward">+0</span></div><div id="mission-text" class="muted"></div><div class="mission-meter" aria-hidden="true"><div class="mission-fill" id="mission-fill"></div></div><div class="muted" id="mission-progress"></div></div>
+      <div class="panel keep"><strong>外部AI連携</strong><div class="muted">結果を書き出し、敵グラフィック・銃火器・音楽案は外部AIへ渡します。Codexは小さく確実に実装します。</div></div>
+      <div class="panel legend"><div><span class="dot player"></span> 自機</div><div><span class="dot goal"></span> ゲート: 到達でクリア</div><div><span class="dot zombie"></span> ゾンビ: 接触で耐久低下</div><div><span class="dot item"></span> 弾薬/武器/回復</div></div>
     </aside>
     <div class="play-wrap">
-      <div class="stage"><canvas id="game" width="800" height="600" aria-label="軌道キャッチャーのゲーム画面"></canvas><div class="overlay"><span class="badge" id="state">準備中</span><span class="badge" id="shield">シールド 0</span></div></div>
-      <div class="controls" aria-label="ゲーム操作パネル"><div class="stick" id="stick" aria-label="移動スティック" role="application"><div class="stick-knob" id="stickKnob">移動</div></div><button class="boost" data-control="boost" aria-label="加速">加速</button><div class="control-note">スティックを倒した方向へ自由に動きます。PCは矢印キー/WASDも使えます。</div></div>
+      <div class="stage"><canvas id="game" width="920" height="690" aria-label="Orbit Catcher Gate Runのゲーム画面"></canvas><div class="overlay"><span class="badge" id="state">準備中</span><span class="badge" id="effect">通常</span></div></div>
+      <div class="controls" aria-label="ゲーム操作パネル"><div class="stick" id="stick" aria-label="移動スティック" role="application"><div class="stick-knob" id="stickKnob">移動</div></div><button class="round use-slot" id="use-slot-0" aria-label="道具1"><strong>-</strong><span>道具1</span></button><button class="round use-slot" id="use-slot-1" aria-label="道具2"><strong>-</strong><span>道具2</span></button><div class="control-note">射撃とリロードは自動。右ボタンは道具箱のアイテム使用。PCはWASD/矢印、Shiftで加速、Ctrlで精密。</div></div>
     </div>
   </main>
   <script>
@@ -64,72 +92,352 @@
     const ctx = canvas.getContext("2d");
     const scoreEl = document.querySelector("#score");
     const bestEl = document.querySelector("#best");
-    const timeEl = document.querySelector("#time");
-    const livesEl = document.querySelector("#lives");
-    const levelEl = document.querySelector("#level");
-    const stageLabelEl = document.querySelector("#stage-label");
-    const comboEl = document.querySelector("#combo");
+    const waveEl = document.querySelector("#wave");
+    const hpEl = document.querySelector("#hp");
+    const ammoEl = document.querySelector("#ammo");
+    const weaponEl = document.querySelector("#weapon");
+    const killsEl = document.querySelector("#kills");
+    const distanceEl = document.querySelector("#distance");
+    const bossEl = document.querySelector("#boss");
+    const allyEl = document.querySelector("#ally");
+    const hpBarEl = document.querySelector("#hp-bar");
+    const clipBarEl = document.querySelector("#clip-bar");
+    const hpReadEl = document.querySelector("#hp-read");
+    const clipReadEl = document.querySelector("#clip-read");
+    const bagButtons = [document.querySelector("#bag-slot-0"), document.querySelector("#bag-slot-1")];
+    const useButtons = [document.querySelector("#use-slot-0"), document.querySelector("#use-slot-1")];
     const stateEl = document.querySelector("#state");
-    const shieldEl = document.querySelector("#shield");
+    const effectEl = document.querySelector("#effect");
     const startButton = document.querySelector("#start");
     const pauseButton = document.querySelector("#pause");
+    const soundButton = document.querySelector("#sound");
     const exportButton = document.querySelector("#export-result");
-    const exportStatusEl = document.querySelector("#export-status");
     const exportMarkdownButton = document.querySelector("#export-markdown");
+    const exportAiPromptButton = document.querySelector("#export-ai-prompt");
+    const resetMissionButton = document.querySelector("#reset-mission");
     const resetBestButton = document.querySelector("#reset-best");
+    const exportStatusEl = document.querySelector("#export-status");
+    const missionTextEl = document.querySelector("#mission-text");
+    const missionRewardEl = document.querySelector("#mission-reward");
+    const missionFillEl = document.querySelector("#mission-fill");
+    const missionProgressEl = document.querySelector("#mission-progress");
     const stick = document.querySelector("#stick");
     const stickKnob = document.querySelector("#stickKnob");
-    const bestKey = "codex.orbit-catcher.best.v2";
-    const stages = [
-      { min:0, name:"軌道", spark:.9, hazard:1.55, bonus:8.5, hazardSpeed:59 },
-      { min:180, name:"流星群", spark:.76, hazard:1.3, bonus:7.6, hazardSpeed:76 },
-      { min:420, name:"警戒宙域", spark:.62, hazard:1.08, bonus:6.7, hazardSpeed:94 },
-      { min:760, name:"赤色警報", spark:.5, hazard:.88, bonus:5.8, hazardSpeed:114 },
-      { min:1180, name:"終盤軌道", spark:.42, hazard:.72, bonus:5.2, hazardSpeed:136 }
+    const bestKey = "codex.orbit-catcher.best.v4";
+    const missionPool = [
+      { id:"reach-gate", label:"ゲートに1回到達する", target:1, reward:180, metric:"clears" },
+      { id:"zombie-25", label:"ゾンビを25体撃破する", target:25, reward:120, metric:"kills" },
+      { id:"ammo-care", label:"弾薬切れせず500点を超える", target:500, reward:160, metric:"ammoScore" },
+      { id:"wander-1200", label:"1200m以上進む", target:1200, reward:90, metric:"distance" },
+      { id:"elite-3", label:"大型ゾンビを3体倒す", target:3, reward:150, metric:"brutes" }
+    ];
+    const weaponNames = { single:"単発", burst:"連射", spread:"拡散", pierce:"貫通" };
+    const itemNames = { ammo:"弾薬", weapon:"武器", heal:"修理", medkit:"救急", bomb:"爆弾", shield:"防壁" };
+    const itemIcons = { ammo:"AM", weapon:"WP", heal:"HP", medkit:"MD", bomb:"BM", shield:"SH" };
+    const storedItemTypes = ["medkit", "bomb", "shield"];
+    const allyTypes = [
+      { type:"rookie", name:"ルーキー", color:"#60a5fa", hp:42, range:300, cooldown:.7, damage:10, speed:210 },
+      { type:"medic", name:"メディック", color:"#34d399", hp:34, range:260, cooldown:1.0, damage:7, speed:200, heal:true },
+      { type:"scout", name:"スカウト", color:"#fbbf24", hp:28, range:360, cooldown:.55, damage:8, speed:245 },
+      { type:"guard", name:"ガード", color:"#c084fc", hp:58, range:240, cooldown:.95, damage:12, speed:185 }
     ];
     const keys = new Set();
-    const controls = { boost:false };
+    const controls = { boost:false, focus:false };
     const stickState = { active:false, x:0, y:0, power:0, pointerId:null };
+    const pointer = { x:canvas.width / 2, y:canvas.height / 2, active:false };
+    const world = { w:3200, h:2400 };
+    const camera = { x:0, y:0 };
+    const audio = { ctx:null, music:null, enabled:false, nextBeat:0 };
+    const stars = Array.from({ length:180 }, () => ({ x:Math.random() * world.w, y:Math.random() * world.h, r:Math.random() * 1.8 + .4, a:Math.random() * .65 + .2 }));
     let best = readBest();
-    let running = false, paused = false, lastTime = 0, spawnGood = 0, spawnBad = 0, spawnBonus = 5;
-    let score = 0, lives = 3, level = 1, combo = 0, shield = 0, timeLeft = 60, stage = stages[0];
-    let player = { x:400, y:300, r:15, speed:250 };
-    let sparks = [], hazards = [], bonuses = [], lastResult = null, flashUntil = 0;
-    function flash(text) { stateEl.textContent = text; flashUntil = performance.now() + 700; }
-    function resetRound() { score = 0; lives = 3; level = 1; combo = 0; shield = 0; timeLeft = 60; stage = stages[0]; player = { x:400, y:300, r:15, speed:250 }; sparks = []; hazards = []; bonuses = []; spawnGood = 0; spawnBad = .8; spawnBonus = 5; running = true; paused = false; lastTime = performance.now(); stateEl.textContent = "プレイ中"; flashUntil = 0; startButton.textContent = "やり直す"; pauseButton.textContent = "一時停止"; updateHud(); }
+    let running = false, paused = false, lastTime = 0, score = 0, wave = 1, hp = 100, clip = 12, reserveAmmo = 90, shieldTime = 0, kills = 0, clears = 0, brutes = 0, alliesMet = 0, alliesLost = 0, distanceTravelled = 0, fireCooldown = 0, reloadTimer = 0, enemyTimer = 0, itemTimer = 2, recruitTimer = 7, droneCooldown = 0, orbitalCooldown = 0, novaCharge = 0, flashUntil = 0, missionAnnounced = false;
+    let weapon = { type:"single", level:1, ttl:0, damage:24 };
+    let player = { x:180, y:180, r:16, speed:255, angle:0 };
+    let goal = { x:2850, y:2050, r:46 };
+    let enemies = [], bullets = [], items = [], inventory = [], recruits = [], allies = [], particles = [], trail = [], boss = null, lastResult = null, mission = pickMission();
+    function rand(min, max) { return min + Math.random() * (max - min); }
+    function clamp(value, min, max) { return Math.max(min, Math.min(max, value)); }
     function readBest() { try { return Number(localStorage.getItem(bestKey) || "0"); } catch { return 0; } }
     function writeBest(value) { try { localStorage.setItem(bestKey, String(value)); } catch { stateEl.textContent = "保存不可"; } }
-    function updateHud() { scoreEl.textContent = score; bestEl.textContent = best; timeEl.textContent = Math.max(0, Math.ceil(timeLeft)); livesEl.textContent = lives; levelEl.textContent = level; stageLabelEl.textContent = stage.name; comboEl.textContent = combo; shieldEl.textContent = `シールド ${shield}`; }
-    function rand(min, max) { return min + Math.random() * (max - min); }
-    function getStage() { return stages.reduce((current, candidate) => score >= candidate.min ? candidate : current, stages[0]); }
-    function spawn(list, kind) { const radius = kind === "spark" ? 9 : kind === "bonus" ? 12 : 13; const speed = kind === "hazard" ? stage.hazardSpeed + level * 4 : kind === "bonus" ? 25 : 0; const angle = rand(0, Math.PI * 2); list.push({ x:rand(radius + 10, canvas.width - radius - 10), y:rand(radius + 10, canvas.height - radius - 10), r:radius, life:kind === "spark" ? 6.5 : kind === "bonus" ? 6 : 8, vx:kind === "spark" ? 0 : Math.cos(angle) * speed, vy:kind === "spark" ? 0 : Math.sin(angle) * speed }); }
-    function movePlayer(dt) { let dx = stickState.x; let dy = stickState.y; if (keys.has("arrowleft") || keys.has("a")) dx -= 1; if (keys.has("arrowright") || keys.has("d")) dx += 1; if (keys.has("arrowup") || keys.has("w")) dy -= 1; if (keys.has("arrowdown") || keys.has("s")) dy += 1; const length = Math.hypot(dx, dy); if (length > 0) { const normalized = Math.min(1, length); const boost = (keys.has("shift") || controls.boost) ? 1.55 : 1; player.x += (dx / length) * player.speed * normalized * boost * dt; player.y += (dy / length) * player.speed * normalized * boost * dt; } player.x = Math.max(player.r, Math.min(canvas.width - player.r, player.x)); player.y = Math.max(player.r, Math.min(canvas.height - player.r, player.y)); }
-    function updateObjects(list, dt) { list.forEach((item) => { item.life -= dt; item.x += item.vx * dt; item.y += item.vy * dt; if (item.x < item.r || item.x > canvas.width - item.r) item.vx *= -1; if (item.y < item.r || item.y > canvas.height - item.r) item.vy *= -1; }); return list.filter((item) => item.life > 0); }
-    function collide(a, b) { return Math.hypot(a.x - b.x, a.y - b.y) < a.r + b.r; }
-    function update(dt) { if (!running || paused) return; timeLeft -= dt; level = Math.max(1, Math.floor(score / 140) + 1); const nextStage = getStage(); if (nextStage !== stage) flash(nextStage.name); stage = nextStage; spawnGood -= dt; spawnBad -= dt; spawnBonus -= dt; if (spawnGood <= 0) { spawn(sparks, "spark"); spawnGood = Math.max(.28, stage.spark - level * .018); } if (spawnBad <= 0) { spawn(hazards, "hazard"); spawnBad = Math.max(.46, stage.hazard - level * .028); } if (spawnBonus <= 0) { spawn(bonuses, "bonus"); spawnBonus = Math.max(4.8, stage.bonus - level * .12); } movePlayer(dt); sparks = updateObjects(sparks, dt); hazards = updateObjects(hazards, dt); bonuses = updateObjects(bonuses, dt); sparks = sparks.filter((spark) => { if (collide(player, spark)) { combo += 1; score += 10 + Math.min(40, combo * 2); if (combo % 8 === 0) timeLeft += 2; return false; } return true; }); bonuses = bonuses.filter((bonus) => { if (collide(player, bonus)) { shield = Math.min(3, shield + 1); timeLeft += 4; score += 25; flash("ボーナス"); return false; } return true; }); hazards = hazards.filter((hazard) => { if (collide(player, hazard)) { if (shield > 0) { shield -= 1; score += 5; flash("防御"); } else { lives -= 1; combo = 0; score = Math.max(0, score - 20); flash("被弾"); } return false; } return true; }); if (running && performance.now() > flashUntil) stateEl.textContent = "プレイ中"; if (timeLeft <= 0 || lives <= 0) endRound(); updateHud(); }
-    function endRound() { running = false; paused = false; lastResult = { finishedAt:new Date().toISOString(), score, best:Math.max(best, score), level, stage:stage.name, combo, timeLeft:Math.max(0, Number(timeLeft.toFixed(2))), lives }; if (score > best) { best = score; writeBest(best); stateEl.textContent = "最高記録"; } else { stateEl.textContent = "終了"; } startButton.textContent = "開始"; pauseButton.textContent = "一時停止"; updateHud(); }
-    function downloadText(filename, text, type) { const blob = new Blob([text], { type }); const url = URL.createObjectURL(blob); const link = document.createElement("a"); link.href = url; link.download = filename; document.body.appendChild(link); link.click(); link.remove(); URL.revokeObjectURL(url); exportStatusEl.textContent = `${filename} を書き出しました`; }
-    function buildResultPayload() { const stageData = stages.map((item) => ({ ...item })); return { exportedAt:new Date().toISOString(), game:"軌道キャッチャー", current:{ score, best, level, stage:stage.name, stageData:{ ...stage }, combo, shield, timeLeft:Math.max(0, Number(timeLeft.toFixed(2))), lives, running, paused }, stages:stageData, lastResult }; }
-    function exportResult() { downloadText("orbit-catcher-result.json", JSON.stringify(buildResultPayload(), null, 2), "application/json;charset=utf-8"); }
-    function exportMarkdown() { const payload = buildResultPayload(); const result = payload.lastResult || payload.current; const lines = ["# 軌道キャッチャー 結果", "", `- 書き出し: ${payload.exportedAt}`, `- 得点: ${result.score}`, `- 最高: ${result.best}`, `- レベル: ${result.level}`, `- ステージ: ${result.stage}`, `- 連続回収: ${result.combo}`, `- 残り秒: ${result.timeLeft}`, `- 耐久: ${result.lives}`, "", "## 現在の状態", "", `- プレイ中: ${payload.current.running ? "はい" : "いいえ"}`, `- 一時停止: ${payload.current.paused ? "はい" : "いいえ"}`, `- シールド: ${payload.current.shield}`, "", "## ステージデータ", "", "| 最低点 | 名前 | 緑間隔 | 赤間隔 | 金間隔 | 赤速度 |", "| ---: | --- | ---: | ---: | ---: | ---: |", ...payload.stages.map((item) => `| ${item.min} | ${item.name} | ${item.spark} | ${item.hazard} | ${item.bonus} | ${item.hazardSpeed} |`)]; downloadText("orbit-catcher-result.md", lines.join("\n"), "text/markdown;charset=utf-8"); }
-    function togglePause() { if (!running) return; paused = !paused; stateEl.textContent = paused ? "一時停止" : "プレイ中"; pauseButton.textContent = paused ? "再開" : "一時停止"; lastTime = performance.now(); }
-    function drawBackground() { ctx.fillStyle = "#111827"; ctx.fillRect(0, 0, canvas.width, canvas.height); ctx.strokeStyle = "rgba(148,163,184,.14)"; ctx.lineWidth = 1; for (let x = 40; x < canvas.width; x += 40) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke(); } for (let y = 40; y < canvas.height; y += 40) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke(); } }
-    function drawCircle(item, color, glow) { ctx.save(); ctx.shadowColor = glow; ctx.shadowBlur = 14; ctx.fillStyle = color; ctx.beginPath(); ctx.arc(item.x, item.y, item.r, 0, Math.PI * 2); ctx.fill(); ctx.restore(); }
-    function drawPlayer() { if (shield > 0) { ctx.save(); ctx.strokeStyle = "rgba(250,204,21,.9)"; ctx.lineWidth = 4; ctx.beginPath(); ctx.arc(player.x, player.y, player.r + 8, 0, Math.PI * 2); ctx.stroke(); ctx.restore(); } drawCircle(player, "#38bdf8", "rgba(56,189,248,.95)"); }
+    function pickMission() { return missionPool[Math.floor(Math.random() * missionPool.length)]; }
+    function flash(text) { stateEl.textContent = text; flashUntil = performance.now() + 800; }
+    function missionValue() { if (mission.metric === "clears") return clears; if (mission.metric === "kills") return kills; if (mission.metric === "ammoScore") return clip + reserveAmmo > 0 ? score : 0; if (mission.metric === "distance") return distanceTravelled; if (mission.metric === "brutes") return brutes; return 0; }
+    function missionComplete() { return missionValue() >= mission.target; }
+    function updateMissionHud() { const value = Math.min(mission.target, Math.floor(missionValue())); const percent = clamp((value / mission.target) * 100, 0, 100); missionTextEl.textContent = mission.label; missionRewardEl.textContent = missionComplete() ? `達成 +${mission.reward}` : `+${mission.reward}`; missionFillEl.style.width = `${percent}%`; missionProgressEl.textContent = `${value} / ${mission.target}`; }
+    function resetRound() {
+      score = 0; wave = 1; hp = 100; clip = 12; reserveAmmo = 90; shieldTime = 0; kills = 0; clears = 0; brutes = 0; alliesMet = 0; alliesLost = 0; distanceTravelled = 0; fireCooldown = 0; reloadTimer = 0; enemyTimer = .16; itemTimer = 2; recruitTimer = 7; droneCooldown = .6; orbitalCooldown = 1.4; novaCharge = 0; flashUntil = 0; missionAnnounced = false;
+      weapon = { type:"single", level:1, ttl:0, damage:24 };
+      player = { x:180, y:180, r:16, speed:255, angle:0 };
+      goal = { x:rand(world.w - 520, world.w - 180), y:rand(world.h - 520, world.h - 180), r:46 };
+      enemies = []; bullets = []; items = []; inventory = []; recruits = []; allies = []; particles = []; trail = []; boss = spawnBoss(); running = true; paused = false; lastTime = performance.now();
+      startButton.textContent = "やり直す"; pauseButton.textContent = "一時停止"; flash("ゲートを目指せ"); updateHud(); ensureAudio();
+    }
+    function updateHud() {
+      scoreEl.textContent = score; bestEl.textContent = best; waveEl.textContent = wave; hpEl.textContent = Math.max(0, Math.ceil(hp)); ammoEl.textContent = reloadTimer > 0 ? `装填中/${reserveAmmo}` : `${clip}/${reserveAmmo}`; weaponEl.textContent = weaponNames[weapon.type]; killsEl.textContent = kills;
+      distanceEl.textContent = `${Math.max(0, Math.round(distance(player, goal) / 10))}m`;
+      bossEl.textContent = boss ? `${Math.ceil(boss.hp)}` : "撃破";
+      allyEl.textContent = allies.length;
+      const magazine = weaponStats().magazine; hpBarEl.style.width = `${clamp(hp, 0, 100)}%`; clipBarEl.style.width = `${clamp((clip / magazine) * 100, 0, 100)}%`; hpReadEl.textContent = Math.max(0, Math.ceil(hp)); clipReadEl.textContent = `${clip}/${magazine}`;
+      effectEl.textContent = shieldTime > 0 ? `防壁 ${shieldTime.toFixed(1)}s` : reloadTimer > 0 ? `リロード ${reloadTimer.toFixed(1)}s` : `${weaponNames[weapon.type]} Lv${weapon.level}`;
+      updateInventoryHud();
+      updateMissionHud();
+    }
+    function updateInventoryHud() { [0, 1].forEach((index) => { const item = inventory[index]; const label = item ? itemIcons[item] : "-"; const name = item ? itemNames[item] : "空"; bagButtons[index].innerHTML = `<strong>${label}</strong><span>${name}</span>`; useButtons[index].innerHTML = `<strong>${label}</strong><span>${name}</span>`; }); }
+    function ensureAudio() {
+      if (!audio.enabled || audio.ctx) return;
+      audio.ctx = new (window.AudioContext || window.webkitAudioContext)();
+      audio.music = audio.ctx.createGain(); audio.music.gain.value = .035; audio.music.connect(audio.ctx.destination);
+    }
+    function tone(freq, dur=.07, type="square", gain=.04) {
+      if (!audio.enabled) return; ensureAudio(); const now = audio.ctx.currentTime; const osc = audio.ctx.createOscillator(); const g = audio.ctx.createGain();
+      osc.type = type; osc.frequency.setValueAtTime(freq, now); g.gain.setValueAtTime(gain, now); g.gain.exponentialRampToValueAtTime(.001, now + dur); osc.connect(g); g.connect(audio.ctx.destination); osc.start(now); osc.stop(now + dur);
+    }
+    function updateMusic(nowMs) {
+      if (!audio.enabled || !running || paused) return; ensureAudio(); const now = audio.ctx.currentTime;
+      if (now < audio.nextBeat) return; audio.nextBeat = now + .32;
+      const notes = [110, 146.8, 164.8, 196, 220, 196, 164.8, 146.8]; const i = Math.floor(nowMs / 320) % notes.length;
+      const osc = audio.ctx.createOscillator(); const g = audio.ctx.createGain(); osc.type = "triangle"; osc.frequency.value = notes[i] * (wave > 2 ? 1.5 : 1); g.gain.value = .025; g.gain.exponentialRampToValueAtTime(.001, now + .22); osc.connect(g); g.connect(audio.music); osc.start(now); osc.stop(now + .22);
+    }
+    function distance(a, b) { return Math.hypot(a.x - b.x, a.y - b.y); }
+    function screenToWorld(x, y) { return { x:x + camera.x, y:y + camera.y }; }
+    function damagePlayer(amount) { hp -= shieldTime > 0 ? amount * .35 : amount; }
+    function burst(x, y, color, count=10) { for (let i = 0; i < count; i += 1) { const a = rand(0, Math.PI * 2); const s = rand(45, 180); particles.push({ x, y, vx:Math.cos(a) * s, vy:Math.sin(a) * s, r:rand(2, 5), life:rand(.25, .75), max:.75, color }); } }
+    function chooseEnemyType() {
+      const roll = Math.random();
+      if (wave >= 5 && roll > .88) return "summoner";
+      if (wave >= 4 && roll > .76) return "bloater";
+      if (wave >= 3 && roll > .62) return "armored";
+      if (wave >= 4 && roll < .12) return "stalker";
+      if (wave >= 4 && roll > .82) return "spitter";
+      if (wave >= 2 && roll > .68) return "runner";
+      if (wave >= 3 && roll < .16) return "brute";
+      return "walker";
+    }
+    function spawnEnemy(typeOverride, xOverride, yOverride) {
+      const side = Math.floor(rand(0, 4)); const margin = 160; let x = player.x, y = player.y;
+      if (side === 0) { x += rand(-520, 520); y -= margin; } else if (side === 1) { x += rand(-520, 520); y += margin; } else if (side === 2) { x -= margin; y += rand(-420, 420); } else { x += margin; y += rand(-420, 420); }
+      x = clamp(xOverride ?? x, 40, world.w - 40); y = clamp(yOverride ?? y, 40, world.h - 40);
+      const type = typeOverride || chooseEnemyType();
+      const table = {
+        walker:{ r:17, hp:38, speed:58, score:18, contact:12 },
+        runner:{ r:13, hp:25, speed:105, score:24, contact:13 },
+        brute:{ r:25, hp:95, speed:42, score:55, contact:22 },
+        spitter:{ r:16, hp:34, speed:50, score:34, contact:10 },
+        armored:{ r:20, hp:125, speed:36, score:62, contact:18, armor:.45 },
+        bloater:{ r:23, hp:58, speed:46, score:42, contact:16, explode:true },
+        summoner:{ r:19, hp:72, speed:38, score:68, contact:12, summon:true },
+        stalker:{ r:14, hp:32, speed:82, score:45, contact:20, evasive:true }
+      };
+      enemies.push({ x, y, ...table[type], type, hit:0, shoot:rand(1.3, 2.4), summonTimer:rand(3, 5) });
+    }
+    function spawnBoss() {
+      const angle = rand(0, Math.PI * 2);
+      return { x:clamp(goal.x + Math.cos(angle) * 120, 70, world.w - 70), y:clamp(goal.y + Math.sin(angle) * 120, 70, world.h - 70), r:36, hp:260 + wave * 120, maxHp:260 + wave * 120, speed:34 + wave * 4, type:"boss", hit:0, shoot:1.1 };
+    }
+    function spawnItem() {
+      const roll = Math.random();
+      const type = roll > .82 ? storedItemTypes[Math.floor(rand(0, storedItemTypes.length))] : roll > .64 ? "weapon" : roll > .35 ? "ammo" : "heal";
+      items.push({ x:clamp(player.x + rand(-520, 520), 60, world.w - 60), y:clamp(player.y + rand(-420, 420), 60, world.h - 60), r:15, type, life:18 });
+    }
+    function dropItemAt(x, y, type, life=16) { items.push({ x:clamp(x, 60, world.w - 60), y:clamp(y, 60, world.h - 60), r:type === "weapon" ? 16 : 14, type, life }); }
+    function rollEnemyDrop(enemy) {
+      const roll = Math.random();
+      if (enemy.type === "armored" && roll < .42) return "weapon";
+      if (enemy.type === "bloater" && roll < .34) return "heal";
+      if (enemy.type === "summoner" && roll < .48) return "ammo";
+      if (enemy.type === "stalker" && roll < .22) return "weapon";
+      if (roll < .24) return "ammo";
+      if (roll < .31) return "heal";
+      if (roll < .36) return storedItemTypes[Math.floor(rand(0, storedItemTypes.length))];
+      return null;
+    }
+    function handleEnemyDefeat(enemy) {
+      kills += 1; if (enemy.type === "brute" || enemy.type === "armored") brutes += 1; score += enemy.score + wave * 4;
+      const drop = rollEnemyDrop(enemy); if (drop) dropItemAt(enemy.x + rand(-18, 18), enemy.y + rand(-18, 18), drop);
+      if (enemy.explode) { burst(enemy.x, enemy.y, "#fb7185", 24); if (distance(enemy, player) < 96) damagePlayer(18); allies.forEach((ally) => { if (distance(enemy, ally) < 92) ally.hp -= 20; }); enemies.forEach((other) => { if (other !== enemy && distance(enemy, other) < 86) other.hp -= 28; }); }
+      else burst(enemy.x, enemy.y, "#ef4444", 15);
+      tone(enemy.explode ? 95 : 130, .08, enemy.explode ? "sawtooth" : "triangle", .045);
+    }
+    function collectItem(item) {
+      if (item.type === "ammo") { reserveAmmo = Math.min(260, reserveAmmo + 42); if (clip <= 0) startReload(); flash("弾薬補給"); tone(520, .07, "sine", .035); return; }
+      if (item.type === "heal") { hp = Math.min(100, hp + 28); flash("自動修理"); tone(420, .1, "sine", .035); return; }
+      if (item.type === "weapon") { const types = ["burst", "spread", "pierce"]; weapon.type = types[Math.floor(rand(0, types.length))]; weapon.level = Math.min(5, weapon.level + 1); weapon.damage = 24 + weapon.level * 7; weapon.ttl = 22; clip = Math.min(clip + 4, weaponStats().magazine); flash(`${weaponNames[weapon.type]} 強化`); tone(760, .12, "square", .04); return; }
+      if (inventory.length < 2) { inventory.push(item.type); flash(`${itemNames[item.type]} 入手`); tone(680, .08, "sine", .035); }
+      else { reserveAmmo = Math.min(260, reserveAmmo + 18); flash("道具箱満杯"); tone(180, .08, "triangle", .03); }
+    }
+    function useInventory(index) {
+      const item = inventory[index]; if (!item) return;
+      inventory.splice(index, 1);
+      if (item === "medkit") { hp = Math.min(100, hp + 48); flash("救急使用"); burst(player.x, player.y, "#22c55e", 16); tone(520, .12, "sine", .04); }
+      if (item === "bomb") { enemies.forEach((enemy) => { if (distance(player, enemy) < 220) enemy.hp -= 95; }); if (boss && distance(player, boss) < 240) boss.hp -= 85; flash("爆弾使用"); burst(player.x, player.y, "#f97316", 32); tone(100, .16, "sawtooth", .05); }
+      if (item === "shield") { shieldTime = 7; flash("防壁使用"); burst(player.x, player.y, "#38bdf8", 20); tone(780, .1, "sine", .04); }
+      updateHud();
+    }
+    function spawnRecruit() {
+      if (recruits.length + allies.length >= 4) return;
+      const base = allyTypes[Math.floor(rand(0, allyTypes.length))];
+      recruits.push({ ...base, x:clamp(player.x + rand(-620, 620), 80, world.w - 80), y:clamp(player.y + rand(-500, 500), 80, world.h - 80), r:13, life:24 });
+    }
+    function movePlayer(dt) {
+      let dx = stickState.x, dy = stickState.y; if (Math.hypot(dx, dy) < .08) { dx = 0; dy = 0; }
+      if (keys.has("arrowleft") || keys.has("a")) dx -= 1; if (keys.has("arrowright") || keys.has("d")) dx += 1; if (keys.has("arrowup") || keys.has("w")) dy -= 1; if (keys.has("arrowdown") || keys.has("s")) dy += 1;
+      const len = Math.hypot(dx, dy); const oldX = player.x, oldY = player.y;
+      if (len > 0) { const boost = (keys.has("shift") || controls.boost) ? 1.5 : 1; const focus = (keys.has("control") || controls.focus) ? .48 : 1; player.x += dx / len * player.speed * boost * focus * dt; player.y += dy / len * player.speed * boost * focus * dt; }
+      player.x = clamp(player.x, player.r, world.w - player.r); player.y = clamp(player.y, player.r, world.h - player.r); distanceTravelled += Math.hypot(player.x - oldX, player.y - oldY) / 10;
+      const aim = pointer.active ? screenToWorld(pointer.x, pointer.y) : { x:player.x + 1, y:player.y }; player.angle = Math.atan2(aim.y - player.y, aim.x - player.x);
+      trail.push({ x:player.x, y:player.y, life:.45, r:player.r }); if (trail.length > 32) trail.shift();
+    }
+    function weaponStats() { return { magazine:weapon.type === "burst" ? 18 : weapon.type === "spread" ? 10 : weapon.type === "pierce" ? 9 : 12, reload:Math.max(.65, 1.25 - weapon.level * .08), range:weapon.type === "pierce" ? 620 : 540 }; }
+    function findTarget(range) { let target = null, bestDistance = range; if (boss) { const d = distance(player, boss); if (d < bestDistance) { bestDistance = d; target = boss; } } enemies.forEach((enemy) => { const d = distance(player, enemy); if (d < bestDistance) { bestDistance = d; target = enemy; } }); return target; }
+    function findTargetFrom(source, range) { let target = null, bestDistance = range; if (boss) { const d = distance(source, boss); if (d < bestDistance) { bestDistance = d; target = boss; } } enemies.forEach((enemy) => { const d = distance(source, enemy); if (d < bestDistance) { bestDistance = d; target = enemy; } }); return target; }
+    function allyShoot(ally, target) { const a = Math.atan2(target.y - ally.y, target.x - ally.x); bullets.push({ x:ally.x + Math.cos(a) * 14, y:ally.y + Math.sin(a) * 14, vx:Math.cos(a) * 420, vy:Math.sin(a) * 420, r:4, life:.85, damage:ally.damage, pierce:1, ally:true }); ally.cool = ally.cooldown; }
+    function updateEquipment(dt) {
+      droneCooldown -= dt; orbitalCooldown -= dt; novaCharge = Math.min(100, novaCharge + dt * 4);
+      const target = findTarget(680);
+      if (target && droneCooldown <= 0) {
+        const a = Math.atan2(target.y - player.y, target.x - player.x) + rand(-.08, .08);
+        bullets.push({ x:player.x + Math.cos(a) * 32, y:player.y + Math.sin(a) * 32, vx:Math.cos(a) * 760, vy:Math.sin(a) * 760, r:4, life:.72, damage:18 + wave * 2, pierce:1, ally:true });
+        droneCooldown = Math.max(.16, .42 - wave * .012);
+      }
+      if (enemies.length > 10 && orbitalCooldown <= 0) {
+        const targetEnemy = enemies[Math.floor(rand(0, enemies.length))];
+        enemies.forEach((enemy) => { if (distance(enemy, targetEnemy) < 145) enemy.hp -= 34 + wave * 3; });
+        if (boss && distance(boss, targetEnemy) < 165) boss.hp -= 26 + wave * 3;
+        burst(targetEnemy.x, targetEnemy.y, "#a78bfa", 24);
+        orbitalCooldown = Math.max(.75, 1.8 - wave * .035);
+        tone(340, .09, "triangle", .035);
+      }
+      if (novaCharge >= 100 && enemies.length > 55) {
+        enemies.forEach((enemy) => { if (distance(enemy, player) < 360) enemy.hp -= 85; });
+        if (boss && distance(boss, player) < 400) boss.hp -= 70;
+        burst(player.x, player.y, "#38bdf8", 48);
+        flash("ノヴァ放射");
+        tone(720, .18, "sine", .05);
+        novaCharge = 0;
+      }
+    }
+    function startReload() { if (reloadTimer <= 0 && clip < weaponStats().magazine && reserveAmmo > 0) { reloadTimer = weaponStats().reload; flash("自動リロード"); } }
+    function finishReload() { const stats = weaponStats(); const need = stats.magazine - clip; const loaded = Math.min(need, reserveAmmo); clip += loaded; reserveAmmo -= loaded; reloadTimer = 0; tone(380, .05, "sine", .03); }
+    function autoShoot() {
+      if (fireCooldown > 0 || reloadTimer > 0 || !running || paused) return;
+      const stats = weaponStats(); const target = findTarget(stats.range);
+      if (!target) { if (clip <= 0) startReload(); return; }
+      if (clip <= 0) { startReload(); return; }
+      const type = weapon.type; const count = type === "spread" ? 5 : type === "burst" ? 2 : 1; const spread = type === "spread" ? .42 : type === "burst" ? .1 : 0; const pierce = type === "pierce" ? 2 + weapon.level : 1;
+      player.angle = Math.atan2(target.y - player.y, target.x - player.x);
+      for (let i = 0; i < count; i += 1) {
+        const offset = count === 1 ? 0 : (i - (count - 1) / 2) * spread; const a = player.angle + offset;
+        bullets.push({ x:player.x + Math.cos(a) * 20, y:player.y + Math.sin(a) * 20, vx:Math.cos(a) * 620, vy:Math.sin(a) * 620, r:5, life:.95, damage:weapon.damage + weapon.level * 7, pierce });
+      }
+      clip -= 1; fireCooldown = type === "burst" ? .12 : type === "spread" ? .22 : .18; tone(220 + weapon.level * 35, .045, "square", .035);
+      if (clip <= 0) startReload();
+    }
+    function update(dt, now) {
+      updateMusic(now); if (!running || paused) { updateParticles(dt); return; }
+      if (performance.now() > flashUntil) stateEl.textContent = "進行中"; shieldTime = Math.max(0, shieldTime - dt);
+      movePlayer(dt); fireCooldown = Math.max(0, fireCooldown - dt); if (reloadTimer > 0) { reloadTimer = Math.max(0, reloadTimer - dt); if (reloadTimer <= 0) finishReload(); } weapon.ttl = Math.max(0, weapon.ttl - dt); if (weapon.ttl <= 0 && weapon.type !== "single") { weapon = { type:"single", level:Math.max(1, weapon.level - 1), ttl:0, damage:24 }; clip = Math.min(clip, weaponStats().magazine); }
+      autoShoot();
+      updateEquipment(dt);
+      enemyTimer -= dt; itemTimer -= dt; recruitTimer -= dt; if (enemyTimer <= 0) { spawnEnemy(); if (wave > 2 && Math.random() < .55) spawnEnemy(); if (wave > 5 && Math.random() < .35) spawnEnemy(); enemyTimer = Math.max(.055, .34 - wave * .018); } if (itemTimer <= 0) { spawnItem(); itemTimer = rand(4.5, 7.5); } if (recruitTimer <= 0) { spawnRecruit(); recruitTimer = rand(12, 20); }
+      bullets.forEach((b) => { b.life -= dt; b.x += b.vx * dt; b.y += b.vy * dt; }); bullets = bullets.filter((b) => b.life > 0 && b.x > 0 && b.y > 0 && b.x < world.w && b.y < world.h && b.pierce > 0);
+      enemies.forEach((e) => {
+        e.hit = Math.max(0, e.hit - dt); const d = Math.max(1, distance(e, player)); const speed = e.speed * (1 + wave * .08); let tx = player.x, ty = player.y;
+        if (e.evasive && d < 220) { tx = e.x - (player.x - e.x); ty = e.y - (player.y - e.y); }
+        e.x += (tx - e.x) / d * speed * dt; e.y += (ty - e.y) / d * speed * dt;
+        if (e.type === "spitter") { e.shoot -= dt; if (e.shoot <= 0 && d < 520) { const a = Math.atan2(player.y - e.y, player.x - e.x); bullets.push({ x:e.x, y:e.y, vx:Math.cos(a) * 245, vy:Math.sin(a) * 245, r:7, life:2.2, damage:-18, pierce:1, enemy:true }); e.shoot = rand(1.4, 2.6); } }
+        if (e.summon) { e.summonTimer -= dt; if (e.summonTimer <= 0 && enemies.length < 80) { spawnEnemy("walker", e.x + rand(-45, 45), e.y + rand(-45, 45)); e.summonTimer = rand(4.2, 6.2); burst(e.x, e.y, "#84cc16", 8); } }
+        if (d < e.r + player.r) { damagePlayer(e.contact * dt); }
+      });
+      if (boss) {
+        boss.hit = Math.max(0, boss.hit - dt); const d = Math.max(1, distance(boss, player)); const guard = distance(boss, goal) > 96;
+        const tx = guard ? goal.x : player.x, ty = guard ? goal.y : player.y; const gd = Math.max(1, Math.hypot(tx - boss.x, ty - boss.y));
+        boss.x += (tx - boss.x) / gd * boss.speed * dt; boss.y += (ty - boss.y) / gd * boss.speed * dt;
+        boss.shoot -= dt; if (boss.shoot <= 0 && d < 620) { for (let i = -1; i <= 1; i += 1) { const a = Math.atan2(player.y - boss.y, player.x - boss.x) + i * .22; bullets.push({ x:boss.x, y:boss.y, vx:Math.cos(a) * 225, vy:Math.sin(a) * 225, r:8, life:2.4, damage:-22, pierce:1, enemy:true }); } boss.shoot = Math.max(.55, 1.25 - wave * .06); }
+        if (d < boss.r + player.r) damagePlayer(30 * dt);
+      }
+      recruits.forEach((recruit) => recruit.life -= dt); recruits = recruits.filter((recruit) => { if (recruit.life <= 0) return false; if (distance(recruit, player) > recruit.r + player.r + 6) return true; alliesMet += 1; allies.push({ ...recruit, hp:recruit.hp, maxHp:recruit.hp, cool:rand(.15, .5), slot:allies.length }); flash(`${recruit.name} 合流`); burst(recruit.x, recruit.y, recruit.color, 16); tone(620, .08, "sine", .035); return false; });
+      allies.forEach((ally, index) => {
+        const angle = index * 2.2 + performance.now() / 1200; const tx = player.x - Math.cos(angle) * (54 + index * 8); const ty = player.y - Math.sin(angle) * (54 + index * 8); const d = Math.max(1, Math.hypot(tx - ally.x, ty - ally.y));
+        ally.x += (tx - ally.x) / d * ally.speed * dt; ally.y += (ty - ally.y) / d * ally.speed * dt; ally.cool = Math.max(0, ally.cool - dt);
+        const target = findTargetFrom(ally, ally.range); if (target && ally.cool <= 0) allyShoot(ally, target);
+        if (ally.heal && hp < 78 && ally.cool <= .05) { hp = Math.min(100, hp + 4 * dt); }
+        enemies.forEach((enemy) => { if (distance(ally, enemy) < ally.r + enemy.r) ally.hp -= (enemy.type === "brute" ? 28 : 18) * dt; });
+        if (boss && distance(ally, boss) < ally.r + boss.r) ally.hp -= 34 * dt;
+      });
+      bullets.forEach((b) => {
+        if (b.enemy) { if (distance(b, player) < b.r + player.r) { damagePlayer(16); b.life = 0; burst(player.x, player.y, "#fb7185", 8); tone(90, .08, "sawtooth", .04); } allies.forEach((ally) => { if (b.life > 0 && distance(b, ally) < b.r + ally.r) { ally.hp -= 18; b.life = 0; burst(ally.x, ally.y, ally.color, 8); } }); return; }
+        enemies.forEach((e) => { if (b.pierce > 0 && distance(b, e) < b.r + e.r) { e.hp -= b.damage * (e.armor || 1); e.hit = .12; b.pierce -= 1; burst(e.x, e.y, "#f97316", 5); } });
+        if (boss && b.pierce > 0 && distance(b, boss) < b.r + boss.r) { boss.hp -= b.damage; boss.hit = .12; b.pierce -= 1; burst(boss.x, boss.y, "#f59e0b", 7); }
+      });
+      enemies = enemies.filter((e) => { if (e.hp > 0) return true; handleEnemyDefeat(e); return false; });
+      allies = allies.filter((ally) => { if (ally.hp > 0) return true; alliesLost += 1; burst(ally.x, ally.y, ally.color, 18); flash(`${ally.name} 離脱`); tone(120, .12, "sawtooth", .035); return false; });
+      items.forEach((item) => item.life -= dt); items = items.filter((item) => { if (item.life <= 0) return false; if (distance(item, player) > item.r + player.r) return true; collectItem(item); burst(item.x, item.y, item.type === "weapon" ? "#a78bfa" : item.type === "ammo" ? "#f59e0b" : item.type === "heal" ? "#22c55e" : "#38bdf8", 13); return false; });
+      if (boss && boss.hp <= 0) { score += 220 + wave * 80; brutes += 1; burst(boss.x, boss.y, "#f59e0b", 34); items.push({ x:boss.x, y:boss.y, r:16, type:"weapon", life:20 }, { x:boss.x + 28, y:boss.y + 18, r:15, type:"ammo", life:20 }); boss = null; flash("番人撃破: ゲート解放"); tone(980, .18, "sine", .05); }
+      updateParticles(dt); camera.x = clamp(player.x - canvas.width / 2, 0, world.w - canvas.width); camera.y = clamp(player.y - canvas.height / 2, 0, world.h - canvas.height);
+      if (distance(player, goal) < player.r + goal.r) { if (boss) flash("番人を倒せ"); else clearGate(); }
+      if (missionComplete() && !missionAnnounced) { missionAnnounced = true; flash("ミッション達成"); }
+      if (hp <= 0) endRound(false); updateHud();
+    }
+    function clearGate() { clears += 1; wave += 1; score += 250 + wave * 60; reserveAmmo = Math.min(260, reserveAmmo + 55); hp = Math.min(100, hp + 25); goal = { x:rand(180, world.w - 180), y:rand(180, world.h - 180), r:46 }; boss = spawnBoss(); enemies.push(...Array.from({ length:Math.min(18, 5 + wave) }, () => (spawnEnemy(), enemies.pop()))); flash(`ゲート突破 ${wave}`); burst(player.x, player.y, "#22c55e", 30); tone(880, .16, "sine", .05); }
+    function updateParticles(dt) { particles.forEach((p) => { p.life -= dt; p.x += p.vx * dt; p.y += p.vy * dt; p.vx *= .96; p.vy *= .96; }); particles = particles.filter((p) => p.life > 0); trail.forEach((t) => t.life -= dt); trail = trail.filter((t) => t.life > 0); }
+    function endRound(cleared) { running = false; paused = false; const missionDone = missionComplete(); if (missionDone) score += mission.reward; lastResult = { finishedAt:new Date().toISOString(), cleared, score, best:Math.max(best, score), wave, hp:Math.max(0, Number(hp.toFixed(1))), clip, reserveAmmo, inventory:[...inventory], kills, clears, brutes, distanceTravelled:Number(distanceTravelled.toFixed(1)), weapon:{ ...weapon }, mission:{ ...mission, complete:missionDone } }; if (score > best) { best = score; writeBest(best); stateEl.textContent = "最高記録"; } else { stateEl.textContent = "終了"; } startButton.textContent = "開始"; pauseButton.textContent = "一時停止"; updateHud(); }
+    function worldX(x) { return x - camera.x; }
+    function worldY(y) { return y - camera.y; }
+    function drawBackground() {
+      const g = ctx.createRadialGradient(canvas.width * .5, canvas.height * .45, 80, canvas.width * .5, canvas.height * .5, canvas.width * .75); g.addColorStop(0, "#172554"); g.addColorStop(.55, "#0f172a"); g.addColorStop(1, "#020617"); ctx.fillStyle = g; ctx.fillRect(0, 0, canvas.width, canvas.height);
+      stars.forEach((s) => { const x = ((s.x - camera.x * .42) % canvas.width + canvas.width) % canvas.width; const y = ((s.y - camera.y * .42) % canvas.height + canvas.height) % canvas.height; ctx.fillStyle = `rgba(219,234,254,${s.a})`; ctx.beginPath(); ctx.arc(x, y, s.r, 0, Math.PI * 2); ctx.fill(); });
+      ctx.strokeStyle = "rgba(148,163,184,.12)"; ctx.lineWidth = 1; const gx = -camera.x % 80; const gy = -camera.y % 80; for (let x = gx; x < canvas.width; x += 80) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke(); } for (let y = gy; y < canvas.height; y += 80) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke(); }
+    }
+    function drawCircle(obj, color, glow) { ctx.save(); ctx.shadowColor = glow; ctx.shadowBlur = 14; ctx.fillStyle = color; ctx.beginPath(); ctx.arc(worldX(obj.x), worldY(obj.y), obj.r, 0, Math.PI * 2); ctx.fill(); ctx.restore(); }
+    function pixelRect(x, y, px, py, w, h, size, color) { ctx.fillStyle = color; ctx.fillRect(Math.round(x + px * size), Math.round(y + py * size), w * size, h * size); }
+    function drawPixelSprite(x, y, size, color, kind) {
+      ctx.save(); ctx.translate(Math.round(x - 4 * size), Math.round(y - 4 * size));
+      const dark = "#111827", light = "#f8fafc";
+      if (kind === "player") { pixelRect(0,0,3,0,2,1,size,light); pixelRect(0,0,2,1,4,2,size,color); pixelRect(0,0,1,3,6,2,size,color); pixelRect(0,0,3,5,2,2,size,light); pixelRect(0,0,0,4,1,2,size,"#0ea5e9"); pixelRect(0,0,7,4,1,2,size,"#0ea5e9"); }
+      else if (kind === "item") { pixelRect(0,0,2,1,4,1,size,light); pixelRect(0,0,1,2,6,5,size,color); pixelRect(0,0,3,3,2,2,size,light); }
+      else { pixelRect(0,0,2,0,4,1,size,dark); pixelRect(0,0,1,1,6,4,size,color); pixelRect(0,0,2,5,1,2,size,color); pixelRect(0,0,5,5,1,2,size,color); pixelRect(0,0,2,2,1,1,size,dark); pixelRect(0,0,5,2,1,1,size,dark); if (kind === "boss") pixelRect(0,0,0,1,1,5,size,"#f59e0b"); }
+      ctx.restore();
+    }
+    function drawGoal() { ctx.save(); const x = worldX(goal.x), y = worldY(goal.y); const locked = Boolean(boss); ctx.strokeStyle = locked ? "#f97316" : "#22c55e"; ctx.lineWidth = 5; ctx.shadowColor = locked ? "rgba(249,115,22,.8)" : "rgba(34,197,94,.8)"; ctx.shadowBlur = 18; ctx.beginPath(); ctx.arc(x, y, goal.r + Math.sin(performance.now() / 170) * 4, 0, Math.PI * 2); ctx.stroke(); ctx.fillStyle = locked ? "rgba(249,115,22,.13)" : "rgba(34,197,94,.15)"; ctx.fill(); if (locked) { ctx.shadowBlur = 0; ctx.strokeStyle = "rgba(255,255,255,.65)"; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(x - 22, y - 22); ctx.lineTo(x + 22, y + 22); ctx.moveTo(x + 22, y - 22); ctx.lineTo(x - 22, y + 22); ctx.stroke(); } ctx.restore(); }
+    function enemyColor(type) { return type === "runner" ? "#fb7185" : type === "brute" ? "#991b1b" : type === "spitter" ? "#a78bfa" : type === "armored" ? "#64748b" : type === "bloater" ? "#84cc16" : type === "summoner" ? "#22c55e" : type === "stalker" ? "#f97316" : "#ef4444"; }
+    function drawEnemy(e) { const color = enemyColor(e.type); const x = worldX(e.x), y = worldY(e.y); drawPixelSprite(x, y, e.type === "brute" || e.type === "armored" ? 6 : 5, e.hit > 0 ? "#fff7ed" : color, "enemy"); if (e.type === "armored") { ctx.strokeStyle = "rgba(226,232,240,.8)"; ctx.lineWidth = 3; ctx.strokeRect(x - 19, y - 19, 38, 38); } if (e.type === "summoner") { ctx.strokeStyle = "rgba(132,204,22,.8)"; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x, y, e.r + 7, 0, Math.PI * 2); ctx.stroke(); } }
+    function drawRecruit(recruit) { const x = worldX(recruit.x), y = worldY(recruit.y); drawPixelSprite(x, y, 4, recruit.color, "player"); ctx.strokeStyle = "rgba(255,255,255,.75)"; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x, y, recruit.r + 8 + Math.sin(performance.now() / 180) * 2, 0, Math.PI * 2); ctx.stroke(); }
+    function drawAlly(ally) { const x = worldX(ally.x), y = worldY(ally.y); drawPixelSprite(x, y, 4, ally.color, "player"); const w = 30, hpw = w * clamp(ally.hp / ally.maxHp, 0, 1); ctx.fillStyle = "rgba(15,23,42,.8)"; ctx.fillRect(x - w / 2, y - ally.r - 14, w, 4); ctx.fillStyle = ally.color; ctx.fillRect(x - w / 2, y - ally.r - 14, hpw, 4); }
+    function drawBoss() { if (!boss) return; const x = worldX(boss.x), y = worldY(boss.y); drawPixelSprite(x, y, 9, boss.hit > 0 ? "#fff7ed" : "#7f1d1d", "boss"); ctx.save(); ctx.strokeStyle = "#f59e0b"; ctx.lineWidth = 4; ctx.beginPath(); ctx.arc(x, y, boss.r + 10 + Math.sin(performance.now() / 130) * 3, 0, Math.PI * 2); ctx.stroke(); const w = 92, hpw = w * clamp(boss.hp / boss.maxHp, 0, 1); ctx.fillStyle = "rgba(15,23,42,.82)"; ctx.fillRect(x - w / 2, y - boss.r - 24, w, 8); ctx.fillStyle = "#f59e0b"; ctx.fillRect(x - w / 2, y - boss.r - 24, hpw, 8); ctx.restore(); }
+    function drawPlayer() { trail.forEach((t) => { ctx.fillStyle = `rgba(56,189,248,${t.life * .36})`; ctx.beginPath(); ctx.arc(worldX(t.x), worldY(t.y), t.r * t.life, 0, Math.PI * 2); ctx.fill(); }); const x = worldX(player.x), y = worldY(player.y); if (shieldTime > 0) { ctx.strokeStyle = "rgba(56,189,248,.75)"; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(x, y, 30, 0, Math.PI * 2); ctx.stroke(); } ctx.save(); ctx.translate(x, y); ctx.rotate(player.angle); drawPixelSprite(0, 0, 5, "#38bdf8", "player"); ctx.restore(); }
+    function drawParticles() { particles.forEach((p) => { ctx.globalAlpha = Math.max(0, p.life / p.max); ctx.fillStyle = p.color; ctx.beginPath(); ctx.arc(worldX(p.x), worldY(p.y), p.r, 0, Math.PI * 2); ctx.fill(); ctx.globalAlpha = 1; }); }
+    function drawItem(item) { const color = item.type === "weapon" ? "#a78bfa" : item.type === "heal" || item.type === "medkit" ? "#22c55e" : item.type === "bomb" ? "#ef4444" : item.type === "shield" ? "#38bdf8" : "#f59e0b"; const x = worldX(item.x), y = worldY(item.y); drawPixelSprite(x, y, 4, color, "item"); ctx.strokeStyle = "rgba(255,255,255,.75)"; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x, y, item.r + 6, 0, Math.PI * 2); ctx.stroke(); }
     function drawTextCenter(text, subtext) { ctx.fillStyle = "rgba(219,234,254,.95)"; ctx.font = "700 30px Segoe UI, sans-serif"; ctx.textAlign = "center"; ctx.fillText(text, canvas.width / 2, canvas.height / 2 - 10); if (subtext) { ctx.font = "500 16px Segoe UI, sans-serif"; ctx.fillText(subtext, canvas.width / 2, canvas.height / 2 + 24); } }
-    function draw() { drawBackground(); sparks.forEach((spark) => drawCircle(spark, "#22c55e", "rgba(34,197,94,.9)")); bonuses.forEach((bonus) => drawCircle(bonus, "#f59e0b", "rgba(245,158,11,.9)")); hazards.forEach((hazard) => drawCircle(hazard, "#ef4444", "rgba(239,68,68,.9)")); drawPlayer(); ctx.fillStyle = "rgba(219,234,254,.9)"; ctx.font = "600 16px Segoe UI, sans-serif"; ctx.textAlign = "left"; ctx.fillText(`Lv ${level} ${stage.name}`, 16, 28); if (!running && score === 0) drawTextCenter("開始を押してください", "スティックを倒して移動します"); if (paused) drawTextCenter("一時停止中", "再開で続きから遊べます"); }
-    function loop(now) { const dt = Math.min(.033, (now - lastTime) / 1000 || 0); lastTime = now; update(dt); draw(); requestAnimationFrame(loop); }
+    function draw() { drawBackground(); drawGoal(); items.forEach(drawItem); recruits.forEach(drawRecruit); bullets.forEach((b) => drawCircle(b, b.enemy ? "#fb7185" : b.ally ? "#93c5fd" : "#f8fafc", b.enemy ? "rgba(251,113,133,.8)" : "rgba(226,232,240,.8)")); enemies.forEach(drawEnemy); drawBoss(); allies.forEach(drawAlly); drawPlayer(); drawParticles(); ctx.fillStyle = "rgba(219,234,254,.92)"; ctx.font = "600 16px Segoe UI, sans-serif"; ctx.textAlign = "left"; ctx.fillText(`Map ${Math.round(player.x)},${Math.round(player.y)}  Gate ${Math.round(goal.x)},${Math.round(goal.y)} ${boss ? "LOCK" : "OPEN"}`, 16, 28); if (!running && score === 0) drawTextCenter("開始を押してください", "巨大マップのゲートへ到達します"); if (paused) drawTextCenter("一時停止中", "再開で続きから遊べます"); }
+    function loop(now) { const dt = Math.min(.033, (now - lastTime) / 1000 || 0); lastTime = now; update(dt, now); draw(); requestAnimationFrame(loop); }
+    function togglePause() { if (!running) return; paused = !paused; stateEl.textContent = paused ? "一時停止" : "進行中"; pauseButton.textContent = paused ? "再開" : "一時停止"; lastTime = performance.now(); }
+    function downloadText(filename, text, type) { const blob = new Blob([text], { type }); const url = URL.createObjectURL(blob); const link = document.createElement("a"); link.href = url; link.download = filename; document.body.appendChild(link); link.click(); link.remove(); URL.revokeObjectURL(url); exportStatusEl.textContent = `${filename} を書き出しました`; }
+    function buildResultPayload() { return { exportedAt:new Date().toISOString(), game:"Orbit Catcher: Gate Run", codexGate:{ lane:"external-ai-assisted", policy:"Codexは小実装、敵グラフィック・銃・音楽案は外部AIへ渡す" }, world:{ ...world }, current:{ score, best, wave, hp:Number(hp.toFixed(1)), clip, reserveAmmo, inventory:[...inventory], shieldTime:Number(shieldTime.toFixed(1)), reloading:reloadTimer > 0, kills, clears, brutes, alliesMet, alliesLost, allies:allies.map((ally) => ({ type:ally.type, name:ally.name, hp:Number(ally.hp.toFixed(1)) })), boss:boss ? { hp:Number(boss.hp.toFixed(1)), maxHp:boss.maxHp, x:Math.round(boss.x), y:Math.round(boss.y) } : null, gateLocked:Boolean(boss), distanceTravelled:Number(distanceTravelled.toFixed(1)), weapon:{ ...weapon }, player:{ x:Math.round(player.x), y:Math.round(player.y) }, goal:{ x:Math.round(goal.x), y:Math.round(goal.y) }, enemyCount:enemies.length, running, paused, mission:{ ...mission, progress:Math.floor(missionValue()), complete:missionComplete() } }, lastResult }; }
+    function exportResult() { downloadText("orbit-catcher-gate-run-result.json", JSON.stringify(buildResultPayload(), null, 2), "application/json;charset=utf-8"); }
+    function exportMarkdown() { const payload = buildResultPayload(); const r = payload.lastResult || payload.current; const lines = ["# Orbit Catcher: Gate Run 結果", "", `- 書き出し: ${payload.exportedAt}`, `- 得点: ${r.score}`, `- 最高: ${r.best}`, `- 周回: ${r.wave}`, `- 耐久: ${r.hp}`, `- 装填: ${r.clip}`, `- 予備弾: ${r.reserveAmmo}`, `- 撃破: ${r.kills}`, `- ゲート突破: ${r.clears}`, `- 大型撃破: ${r.brutes}`, `- 仲間合流: ${r.alliesMet ?? alliesMet}`, `- 仲間離脱: ${r.alliesLost ?? alliesLost}`, `- 移動距離: ${r.distanceTravelled}`, `- 武器: ${weaponNames[r.weapon.type]} Lv${r.weapon.level}`, "", "## 次に外部AIへ聞く観点", "", "- 仲間キャラの見た目と性格づけ", "- 通常/走る/大型/遠距離/装甲/爆発/召喚/回避ゾンビの見た目バリエーション", "- 敵タイプ別のアイテムドロップ率", "- 自動射撃と自動リロード前提の弾薬バランス", "- 30秒で印象が残るBGMループ", "- CODEXGATEらしいゲート演出"]; downloadText("orbit-catcher-gate-run-result.md", lines.join("\n"), "text/markdown;charset=utf-8"); }
+    function exportAiPrompt() { const payload = buildResultPayload(); const text = `あなたはHTML5 Canvasの2D探索シューティング開発アドバイザーです。CODEXGATE/Orbit Catcherを、巨大マップ、ゾンビ、銃、弾薬補給、武器強化、効果音、ゲーム音楽を持つ作品へ育てています。Codexのトークンを節約するため、次の小さな実装単位を5つだけ、効果/難易度/仕様/外部AIに任せる素材案つきで提案してください。\n\n${JSON.stringify(payload, null, 2)}`; downloadText("orbit-catcher-gate-run-ai-prompt.txt", text, "text/plain;charset=utf-8"); }
     function setControl(name, value) { controls[name] = value; }
-    function updateStickFromPointer(event) { const rect = stick.getBoundingClientRect(); const cx = rect.left + rect.width / 2; const cy = rect.top + rect.height / 2; const max = rect.width / 2 - 29; const rawX = event.clientX - cx; const rawY = event.clientY - cy; const distance = Math.hypot(rawX, rawY); const limited = Math.min(max, distance || 0); const angle = Math.atan2(rawY, rawX); const knobX = Math.cos(angle) * limited; const knobY = Math.sin(angle) * limited; stickState.x = max ? knobX / max : 0; stickState.y = max ? knobY / max : 0; stickState.power = Math.min(1, distance / max); stickKnob.style.transform = `translate(calc(-50% + ${knobX}px), calc(-50% + ${knobY}px))`; }
+    function updateStickFromPointer(event) { const rect = stick.getBoundingClientRect(); const cx = rect.left + rect.width / 2; const cy = rect.top + rect.height / 2; const max = rect.width / 2 - 29; const rawX = event.clientX - cx; const rawY = event.clientY - cy; const dist = Math.hypot(rawX, rawY); const limited = Math.min(max, dist || 0); const angle = Math.atan2(rawY, rawX); const knobX = Math.cos(angle) * limited; const knobY = Math.sin(angle) * limited; stickState.x = max ? knobX / max : 0; stickState.y = max ? knobY / max : 0; stickState.power = Math.min(1, dist / max); stickKnob.style.transform = `translate(calc(-50% + ${knobX}px), calc(-50% + ${knobY}px))`; }
     function resetStick() { stickState.active = false; stickState.x = 0; stickState.y = 0; stickState.power = 0; stickState.pointerId = null; stickKnob.style.transform = "translate(-50%, -50%)"; }
-    window.addEventListener("keydown", (event) => { const key = event.key.toLowerCase(); if (["arrowleft", "arrowright", "arrowup", "arrowdown", "a", "d", "w", "s", "shift"].includes(key)) { event.preventDefault(); keys.add(key); } if (key === " " && running) { event.preventDefault(); togglePause(); } });
+    window.addEventListener("keydown", (event) => { const key = event.key.toLowerCase(); if (["arrowleft", "arrowright", "arrowup", "arrowdown", "a", "d", "w", "s", "shift", "control"].includes(key)) { event.preventDefault(); keys.add(key); } if (key === "p" && running) togglePause(); });
     window.addEventListener("keyup", (event) => keys.delete(event.key.toLowerCase()));
+    canvas.addEventListener("pointermove", (event) => { const rect = canvas.getBoundingClientRect(); pointer.x = (event.clientX - rect.left) * canvas.width / rect.width; pointer.y = (event.clientY - rect.top) * canvas.height / rect.height; pointer.active = true; });
+    canvas.addEventListener("pointerdown", (event) => { pointer.active = true; canvas.setPointerCapture(event.pointerId); });
     document.querySelectorAll("[data-control]").forEach((button) => { const name = button.dataset.control; button.addEventListener("pointerdown", (event) => { event.preventDefault(); setControl(name, true); button.setPointerCapture(event.pointerId); }); button.addEventListener("pointerup", () => setControl(name, false)); button.addEventListener("pointercancel", () => setControl(name, false)); button.addEventListener("pointerleave", () => setControl(name, false)); });
     stick.addEventListener("pointerdown", (event) => { event.preventDefault(); stickState.active = true; stickState.pointerId = event.pointerId; stick.setPointerCapture(event.pointerId); updateStickFromPointer(event); });
     stick.addEventListener("pointermove", (event) => { if (stickState.active && event.pointerId === stickState.pointerId) updateStickFromPointer(event); });
     stick.addEventListener("pointerup", (event) => { if (event.pointerId === stickState.pointerId) resetStick(); });
     stick.addEventListener("pointercancel", resetStick);
-    startButton.addEventListener("click", resetRound); pauseButton.addEventListener("click", togglePause); exportButton.addEventListener("click", exportResult); exportMarkdownButton.addEventListener("click", exportMarkdown); resetBestButton.addEventListener("click", () => { best = 0; writeBest(0); updateHud(); exportStatusEl.textContent = "最高記録をリセットしました"; });
+    startButton.addEventListener("click", resetRound);
+    pauseButton.addEventListener("click", togglePause);
+    soundButton.addEventListener("click", () => { audio.enabled = !audio.enabled; soundButton.textContent = audio.enabled ? "音 OFF" : "音 ON"; if (audio.enabled) { ensureAudio(); tone(660, .12, "sine", .045); } });
+    exportButton.addEventListener("click", exportResult);
+    exportMarkdownButton.addEventListener("click", exportMarkdown);
+    exportAiPromptButton.addEventListener("click", exportAiPrompt);
+    resetMissionButton.addEventListener("click", () => { mission = pickMission(); missionAnnounced = false; updateHud(); exportStatusEl.textContent = "ミッションを更新しました"; });
+    resetBestButton.addEventListener("click", () => { best = 0; writeBest(0); updateHud(); exportStatusEl.textContent = "最高記録をリセットしました"; });
+    bagButtons.forEach((button, index) => button.addEventListener("click", () => useInventory(index)));
+    useButtons.forEach((button, index) => button.addEventListener("click", () => useInventory(index)));
     updateHud(); draw(); requestAnimationFrame(loop);
   </script>
 </body>

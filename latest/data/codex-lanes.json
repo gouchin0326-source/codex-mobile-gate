@@ -1,0 +1,195 @@
+{
+  "updated": "2026-08-05",
+  "purpose": "Visualize CODEX-owned bounded PDCA lanes that turn compact tickets into verified artifacts.",
+  "rules": [
+    "One lane ticket per run.",
+    "Use long memory as RAG/context, but keep the active ticket compact.",
+    "CODEX integrates, verifies, exports, registers, and updates dashboard visibility.",
+    "No GPU/local LLM unless explicitly re-enabled."
+  ],
+  "lanes": [
+    {
+      "id": "cg-token-saving-command-lane",
+      "name": "CG Token-Saving Command Lane",
+      "state": "active",
+      "purpose": "Grow CG listed content while keeping Claude/Codex token use focused on command-tower decisions.",
+      "plan": "Choose one small content ticket, reuse existing single-HTML patterns, and define acceptance before editing.",
+      "do": "Implement only the target artifact plus required CG/CSD/app/artifact ledger entries.",
+      "check": "Use deterministic checks: inline script syntax, JSON parse, CG link visibility, CSD/status generation, and Drive sync.",
+      "act": "Record only compact next tickets; avoid broad rereads, long retrospectives, or re-explaining the ecosystem.",
+      "next_ticket": "Use this lane as the default wrapper for every new CG listed content item."
+    },
+    {
+      "id": "static-tool-lane",
+      "name": "Static Tool Lane",
+      "state": "ready",
+      "purpose": "Produce small HTML-first tools with import/export and deterministic checks.",
+      "plan": "Create a lane ticket with objective, target files, acceptance, and verification.",
+      "do": "Edit scoped files under C:\\Codex and sync public copies.",
+      "check": "Run inline script checks, generator checks, and browser/human checks when visual feel matters.",
+      "act": "Update HUB.md, logs\\PROGRESS.md, registry/dashboard, and next ticket.",
+      "next_ticket": "Clean stale mojibake/current-task state and align dashboard visibility."
+    },
+    {
+      "id": "review-lane",
+      "name": "Review Lane",
+      "state": "ready",
+      "purpose": "Use CODEX as a second-system reviewer for generated artifacts.",
+      "plan": "Pick one artifact and one review angle.",
+      "do": "Inspect only the target file and compact metadata.",
+      "check": "Return ranked findings with file references and missing verification.",
+      "act": "Convert accepted findings into a new implementation ticket.",
+      "next_ticket": "Review dashboard mojibake and navigation readability."
+    },
+    {
+      "id": "handoff-lane",
+      "name": "Handoff Lane",
+      "state": "ready",
+      "purpose": "Convert notes or external AI output into compact implementation tickets.",
+      "plan": "Receive Markdown, JSON bullets, CSV, command text, or small patch.",
+      "do": "Reduce to one bounded CODEX lane ticket.",
+      "check": "Confirm target files, forbidden scope, and acceptance are explicit.",
+      "act": "Place the ticket in inbox or execute it when small enough.",
+      "next_ticket": "Create the first concrete ticket from Claude lane references."
+    },
+    {
+      "id": "web-designer-sample-lane",
+      "name": "Web Designer Sample Lane",
+      "state": "showcase-done",
+      "purpose": "Use GO/HOSHI shared web-design know-how to create CODEX-owned sample content.",
+      "plan": "Read only the relevant shared design references and create one compact design artifact.",
+      "do": "Create HTML-first samples under C:\\Codex with visual assets and export controls.",
+      "check": "Run HTML inline-script checks, JSON checks, dashboard generation, and public copy sync.",
+      "act": "Register the sample and showcase in apps, artifacts, CSD lane trials, and progress logs.",
+      "next_ticket": "Run browser visual checks for the CSD design samples on desktop and mobile widths."
+    },
+    {
+      "id": "cat-affinity-lane",
+      "name": "Cat Affinity Lane",
+      "state": "cg-listed",
+      "purpose": "Create a small experience content lane that makes viewers more interested in cats.",
+      "plan": "Use shared lane knowledge: compact theme, reusable asset, single HTML, export path, and CG listing.",
+      "do": "Create projects\\cat-affinity-lane with generated visual, observation cards, touch-like intimacy response, and exports.",
+      "check": "Run HTML inline-script checks, JSON checks, CSD generation, public copy sync, and CG visibility checks.",
+      "act": "List the lane on CG, register app/artifact/trial ledgers, and keep the next improvement ticket visible.",
+      "next_ticket": "Add richer response patterns such as too-much-touch caution and optional procedural purr sound."
+    },
+    {
+      "id": "daily-task-board-lane",
+      "name": "Daily Task Board Lane",
+      "state": "cg-listed",
+      "purpose": "Create a same-day work board that turns a loose daily request into a visible CG artifact.",
+      "plan": "Confirm current CG date, build one single HTML task board, and make export/handoff explicit.",
+      "do": "Create projects\\daily-task-0731 with local task state, status columns, and JSON/Markdown output.",
+      "check": "Run inline-script checks, JSON checks, CSD/status generation, public copy sync, CG link checks, and Drive sync.",
+      "act": "List the board on CG, register app/artifact/trial ledgers, and keep a freshness-checker next ticket visible.",
+      "next_ticket": "Add a tiny CG freshness checker that warns when the published date is stale."
+    },
+    {
+      "id": "focus-session-lane",
+      "name": "Focus Session Lane",
+      "state": "cg-listed",
+      "purpose": "Add a compact focus tool to increase CG listed content with a reusable work-support artifact.",
+      "plan": "Build one single HTML timer/log tool with no external dependency.",
+      "do": "Create projects\\focus-session-cards with timer presets, local completion logs, and export/import controls.",
+      "check": "Run inline-script checks, JSON checks, CSD/status generation, public copy sync, CG link checks, and Drive sync.",
+      "act": "List the focus tool on CG and register it in app/artifact/trial ledgers.",
+      "next_ticket": "Create one non-productivity content item to diversify the CG shelf."
+    },
+    {
+      "id": "eco-lane-map-lane",
+      "name": "Eco Lane Map Lane",
+      "state": "cg-listed",
+      "purpose": "Make Codex eco-lane implementation visible in CG.",
+      "plan": "Build a single HTML lane map that shows command, implementation, verification, and sync.",
+      "do": "Create projects\\eco-lane-map with flow cards and exportable next-ticket fields.",
+      "check": "Run inline-script checks, JSON checks, CSD/status generation, public copy sync, CG link checks, and Drive sync.",
+      "act": "List the map on CG and use it as the visible reference for future token-saving CG work.",
+      "next_ticket": "Use this map to create the next CG content item without rereading broad context."
+    },
+    {
+      "id": "external-ai-brief-compressor-lane",
+      "name": "External AI Brief Compressor Lane",
+      "state": "cg-listed",
+      "purpose": "Support the Codex to external AI/Web main lane with mobile-first prompt compression and GO-ready task control.",
+      "plan": "Use choices plus detailed fields to remove ambiguity, estimate rough token cost, and decide set/GO before execution.",
+      "do": "Maintain projects\\external-ai-brief-compressor with generated execution brief, copy, local task storage, GO status, rough token estimate, JSON export, and Markdown export.",
+      "check": "Run inline-script checks, JSON checks, CSD/status generation, public copy sync, CG link checks, and Drive sync.",
+      "act": "List the compressor on CG and use it as the pre-execution gate before external AI/Web/Codex handoffs.",
+      "next_ticket": "Use a GO-signed task from the compressor to create the next CG-listed content item."
+    },
+    {
+      "id": "mobile-puzzle-eco-lane",
+      "name": "Mobile Puzzle Eco Lane",
+      "state": "cg-listed",
+      "purpose": "Create a serious smartphone puzzle game through the CODEX command tower, external AI brief loop, static implementation, verification, and CG/CSD registration.",
+      "plan": "Fix one game brief: mobile tap controls, relay puzzle rules, level progression, exports, acceptance, and no GPU/local LLM.",
+      "do": "Created projects\\mobile-puzzle-eco-lane with Prism Relay, six solvable boards, stars, hints, undo, external AI brief copy, result JSON, lane JSON, and Markdown export.",
+      "check": "Run inline script syntax, solvable-level check, JSON registry checks, dashboard generation, public-copy sync, and CG visibility checks.",
+      "act": "Use Prism Relay as the first complete game eco-lane and ask external AI for levels 7-12, difficulty curve, daily challenge, and feedback improvements.",
+      "next_ticket": "Send the generated Prism Relay brief to external AI and integrate level pack 2 with mobile browser visual checks."
+    },
+    {
+      "id": "sum-garden-eco-lane",
+      "name": "Number Logic Eco Lane",
+      "state": "cg-listed",
+      "purpose": "Create a completely different serious smartphone puzzle app using CODEX command-tower planning, external AI level-pack briefs, static implementation, verification, and CG/CSD registration.",
+      "plan": "Use a numeric logic brief: row/column uniqueness, zone sums, mobile tap cycling, hints, undo, local records, exports, and no GPU/local LLM.",
+      "do": "Created projects\\sum-garden-eco-lane with Sum Garden, five verified number-logic levels, row/column/zone validation, hints, undo, local records, external AI brief copy, JSON export, Markdown export, and result export.",
+      "check": "Run inline script syntax, solution/zone consistency checks, JSON registry checks, dashboard generation, public-copy sync, and CG visibility checks.",
+      "act": "Use Sum Garden as the number-logic eco-lane pattern and ask external AI for 6x6/7x7 level packs and learning feedback text.",
+      "next_ticket": "Send the generated Sum Garden brief to external AI and integrate a level pack with uniqueness review and mobile visual checks."
+    },
+    {
+      "id": "falling-block-eco-lane",
+      "name": "Falling Block Eco Lane",
+      "state": "cg-listed",
+      "purpose": "Create a serious smartphone falling-block puzzle through CODEX command-tower planning, external AI balance briefs, static implementation, verification, and CG/CSD registration.",
+      "plan": "Use a falling puzzle brief: touch controls, hold, next queue, ghost, line clears, combo missions, exports, and no GPU/local LLM.",
+      "do": "Created projects\\falling-block-eco-lane with Cascade Forge, seven falling pieces, collision, rotation kicks, soft/hard drop, hold, next queue, ghost, line clear scoring, combo missions, local records, external AI brief copy, JSON export, Markdown export, and result export.",
+      "check": "Run inline script syntax, piece definition checks, JSON registry checks, dashboard generation, public-copy sync, and CG visibility checks.",
+      "act": "Use Cascade Forge as the falling-block eco-lane pattern and ask external AI for mission pack 2, special blocks, score curve, and mobile control review.",
+      "next_ticket": "Send the generated Cascade Forge brief to external AI and integrate mission pack 2 with mobile browser play checks."
+    },
+    {
+      "id": "local-ai-lane",
+      "name": "Local AI Lane",
+      "state": "paused",
+      "purpose": "Image, music, video, or local coding helper work.",
+      "plan": "Use only after explicit user re-enable instruction and fresh route/lock review.",
+      "do": "Codex-owned outputs only.",
+      "check": "GPU lock, timeout, and no shared-data edits.",
+      "act": "Record outputs and keep the lane paused again unless told otherwise.",
+      "next_ticket": "No action while GPU policy is disabled."
+    },
+    {
+      "id": "external-ai-lane-run-test-lane",
+      "name": "External AI Lane Run Test Lane",
+      "state": "cg-listed",
+      "purpose": "Verify that a CG-listed external AI eco-lane can run from lane dataset through artifact creation and CG/CSD registration.",
+      "plan": "Use the latest CG-listed external-AI eco-lane data from Cascade Forge and convert it into a compact dataset and handoff artifact.",
+      "do": "Created projects\\external-ai-lane-run-0805 with external AI request JSON, simulated bounded return, Codex integration notes, and JSON/Markdown export.",
+      "check": "Run inline script syntax, JSON registry checks, dashboard generation, public-copy sync, and CG visibility checks.",
+      "act": "Keep this run as the regression proof before using external AI for mission-pack integration.",
+      "next_ticket": "Send a real compact mission-pack request to external AI and integrate only the returned JSON into Cascade Forge."
+    }
+  ],
+  "pdca": [
+    {
+      "step": "Plan",
+      "description": "One compact lane ticket: objective, target files, constraints, acceptance."
+    },
+    {
+      "step": "Do",
+      "description": "Scoped CODEX edits or integration only."
+    },
+    {
+      "step": "Check",
+      "description": "Deterministic checks first; browser or human check when needed."
+    },
+    {
+      "step": "Act",
+      "description": "Register result, update dashboard/logs, and write the next ticket."
+    }
+  ]
+}

@@ -1,0 +1,437 @@
+{
+  "updated": "2026-08-05",
+  "purpose": "Track Codex-made artifacts that can be reused or handed to other AI systems with minimal prompt cost.",
+  "handoff_rule": "Prefer exported JSON, Markdown, CSV, or command text. Do not ask Codex to re-read large folders when a compact artifact exists.",
+  "artifacts": [
+    {
+      "id": "dashboard",
+      "name": "Codex Status Dashboard",
+      "path": "C:\\Codex\\dashboard.html",
+      "type": "html-dashboard",
+      "exports": [
+        "visual status",
+        "capability matrix",
+        "token-saving workflow"
+      ],
+      "handoff_targets": [
+        "ChatGPT",
+        "Claude",
+        "local LLM"
+      ],
+      "next_use": "Show what Codex can do, what is risky, and what to build next."
+    },
+    {
+      "id": "app-launcher",
+      "name": "Codex Apps Launcher",
+      "path": "C:\\Codex\\app-launcher.html",
+      "type": "html-launcher",
+      "exports": [
+        "request JSON",
+        "brief markdown"
+      ],
+      "handoff_targets": [
+        "Codex",
+        "local LLM"
+      ],
+      "next_use": "Capture small app requests and convert them into short briefs."
+    },
+    {
+      "id": "codex-data-pocket",
+      "name": "CODEX Data Pocket",
+      "path": "C:\\Codex\\projects\\codex-data-pocket\\index.html",
+      "type": "html-data-tool",
+      "exports": [
+        "JSON",
+        "CSV",
+        "Markdown"
+      ],
+      "handoff_targets": [
+        "ChatGPT",
+        "Claude",
+        "Google Sheets"
+      ],
+      "next_use": "Collect small structured records and pass them to analysis or reporting tools."
+    },
+    {
+      "id": "quick-notes-board",
+      "name": "Quick Notes Board",
+      "path": "C:\\Codex\\projects\\quick-notes-board\\index.html",
+      "type": "html-productivity-tool",
+      "exports": [
+        "JSON",
+        "Markdown"
+      ],
+      "handoff_targets": [
+        "ChatGPT",
+        "Claude",
+        "Codex"
+      ],
+      "next_use": "Turn rough notes into compact briefs, checklists, or implementation tasks."
+    },
+    {
+      "id": "orbit-catcher",
+      "name": "Orbit Catcher",
+      "path": "C:\\Codex\\projects\\orbit-catcher\\index.html",
+      "type": "html-canvas-game",
+      "exports": [
+        "result JSON",
+        "result Markdown"
+      ],
+      "handoff_targets": [
+        "Codex",
+        "game-design AI"
+      ],
+      "next_use": "Use as the first small game pattern for controls, scoring, storage, and export."
+    },
+    {
+      "id": "media-control-panel",
+      "name": "Media Control Panel",
+      "path": "C:\\Codex\\projects\\media-control-panel\\index.html",
+      "type": "html-command-panel",
+      "exports": [
+        "generation command text"
+      ],
+      "handoff_targets": [
+        "ComfyUI workflow",
+        "Codex"
+      ],
+      "next_use": "Prepare image, music, and video generation commands without editing shared model data."
+    },
+    {
+      "id": "external-ai-lanes",
+      "name": "External AI Lanes",
+      "path": "C:\\Codex\\data\\external-ai-lanes.json",
+      "type": "coordination-ledger",
+      "exports": [
+        "lane JSON",
+        "role split"
+      ],
+      "handoff_targets": [
+        "ChatGPT",
+        "Claude",
+        "human reviewer"
+      ],
+      "next_use": "Choose the lowest-cost external lane before spending Codex tokens."
+    },
+    {
+      "id": "external-ai-brief",
+      "name": "External AI Brief Template",
+      "path": "C:\\Codex\\templates\\EXTERNAL_AI_BRIEF.md",
+      "type": "brief-template",
+      "exports": [
+        "compact prompt"
+      ],
+      "handoff_targets": [
+        "ChatGPT",
+        "Claude",
+        "local LLM when re-enabled"
+      ],
+      "next_use": "Ask for bounded research, review, or patch suggestions without sharing large folders."
+    },
+    {
+      "id": "codex-recipe-index",
+      "name": "Codex Recipe Index",
+      "path": "C:\\Codex\\knowledge\\RECIPE_INDEX.md",
+      "type": "knowledge-index",
+      "exports": [
+        "short entry point",
+        "operating recipe"
+      ],
+      "handoff_targets": [
+        "Codex",
+        "ChatGPT",
+        "Claude"
+      ],
+      "next_use": "Start ecosystem tasks from one short file instead of scanning the workspace."
+    },
+    {
+      "id": "codex-lanes",
+      "name": "CODEX Lane Ledger",
+      "path": "C:\\Codex\\data\\codex-lanes.json",
+      "type": "coordination-ledger",
+      "exports": [
+        "lane JSON",
+        "PDCA status",
+        "next tickets"
+      ],
+      "handoff_targets": [
+        "Codex",
+        "Claude",
+        "ChatGPT"
+      ],
+      "next_use": "Show which bounded CODEX lane should run next and what acceptance it needs."
+    },
+    {
+      "id": "codex-lane-ticket",
+      "name": "CODEX Lane Ticket Template",
+      "path": "C:\\Codex\\templates\\LANE_TICKET.md",
+      "type": "ticket-template",
+      "exports": [
+        "compact implementation ticket"
+      ],
+      "handoff_targets": [
+        "Codex",
+        "Claude",
+        "ChatGPT"
+      ],
+      "next_use": "Turn Claude lane output or user goals into one executable CODEX task."
+    },
+    {
+      "id": "codex-lane-restart",
+      "name": "CODEX Lane Restart Memo",
+      "path": "C:\\Codex\\memory\\CODEX_LANE_RESTART_2026-07-23.md",
+      "type": "restart-memo",
+      "exports": [
+        "latest state",
+        "Claude lane lessons",
+        "CODEX adaptation"
+      ],
+      "handoff_targets": [
+        "Codex",
+        "Claude",
+        "ChatGPT"
+      ],
+      "next_use": "Resume CODEX development without re-reading broad folders."
+    },
+    {
+      "id": "csd-action-items",
+      "name": "CSD Action Items",
+      "path": "C:\\Codex\\data\\csd-action-items.json",
+      "type": "action-ledger",
+      "exports": [
+        "caution actions",
+        "not-yet actions",
+        "lane ticket hints"
+      ],
+      "handoff_targets": [
+        "Codex",
+        "Claude",
+        "ChatGPT",
+        "human reviewer"
+      ],
+      "next_use": "Turn CSD caution and not-yet items into concrete lane tickets or explicit deferrals."
+    },
+    {
+      "id": "csd-lane-trials",
+      "name": "CSD Lane Trials",
+      "path": "C:\\Codex\\data\\csd-lane-trials.json",
+      "type": "trial-ledger",
+      "exports": [
+        "trial results",
+        "Claude know-how",
+        "next lane ticket"
+      ],
+      "handoff_targets": [
+        "Codex",
+        "Claude",
+        "ChatGPT",
+        "human reviewer"
+      ],
+      "next_use": "Confirm that CSD lanes have been exercised and decide the next bounded ticket."
+    },
+    {
+      "id": "csd-web-designer-sample",
+      "name": "CSD Web Designer Sample",
+      "path": "C:\\Codex\\projects\\csd-web-designer-sample\\index.html",
+      "type": "html-design-sample",
+      "exports": [
+        "JSON",
+        "Markdown"
+      ],
+      "handoff_targets": [
+        "Codex",
+        "Claude",
+        "ChatGPT",
+        "human reviewer"
+      ],
+      "next_use": "Use as the first CODEX-owned sample content made from GO/HOSHI web design know-how."
+    },
+    {
+      "id": "csd-designer-showcase",
+      "name": "CSD Designer Showcase",
+      "path": "C:\\Codex\\projects\\csd-designer-showcase\\index.html",
+      "type": "html-design-showcase",
+      "exports": [
+        "JSON",
+        "Markdown",
+        "visual content"
+      ],
+      "handoff_targets": [
+        "Codex",
+        "Claude",
+        "ChatGPT",
+        "human reviewer"
+      ],
+      "next_use": "Use as the stronger web-design example for CSD lane-created content and exportable handoff."
+    },
+    {
+      "id": "cat-affinity-lane",
+      "name": "Cat Affinity Lane",
+      "path": "C:\\Codex\\projects\\cat-affinity-lane\\index.html",
+      "type": "html-experience-lane",
+      "exports": [
+        "JSON",
+        "Markdown",
+        "visual content"
+      ],
+      "handoff_targets": [
+        "Codex",
+        "Claude",
+        "ChatGPT",
+        "human reviewer"
+      ],
+      "next_use": "Use as the first CG-listed content lane created from the shared lane production method."
+    },
+    {
+      "id": "daily-task-0731",
+      "name": "0731 作業掲示板",
+      "path": "C:\\Codex\\projects\\daily-task-0731\\index.html",
+      "type": "html-task-board",
+      "exports": [
+        "JSON",
+        "Markdown"
+      ],
+      "handoff_targets": [
+        "Codex",
+        "Claude",
+        "ChatGPT",
+        "human reviewer"
+      ],
+      "next_use": "Use to capture a same-day objective, acceptance criteria, task state, and handoff notes for CG work."
+    },
+    {
+      "id": "focus-session-cards",
+      "name": "Focus Session Cards",
+      "path": "C:\\Codex\\projects\\focus-session-cards\\index.html",
+      "type": "html-focus-session-tool",
+      "exports": [
+        "JSON",
+        "Markdown"
+      ],
+      "handoff_targets": [
+        "Codex",
+        "Claude",
+        "ChatGPT",
+        "human reviewer"
+      ],
+      "next_use": "Use to record short focus sessions and hand off completed goals, next actions, and notes."
+    },
+    {
+      "id": "eco-lane-map",
+      "name": "Eco Lane Map",
+      "path": "C:\\Codex\\projects\\eco-lane-map\\index.html",
+      "type": "html-lane-visualization",
+      "exports": [
+        "JSON",
+        "Markdown"
+      ],
+      "handoff_targets": [
+        "Codex",
+        "Claude",
+        "ChatGPT",
+        "human reviewer"
+      ],
+      "next_use": "Use as the CG-visible reference for token-saving Codex implementation lanes."
+    },
+    {
+      "id": "external-ai-brief-compressor",
+      "name": "External AI Brief Compressor",
+      "path": "C:\\Codex\\projects\\external-ai-brief-compressor\\index.html",
+      "type": "html-prompt-compressor",
+      "exports": [
+        "clipboard",
+        "Codex task list",
+        "GO status",
+        "rough token estimate",
+        "JSON",
+        "Markdown"
+      ],
+      "handoff_targets": [
+        "external AI",
+        "Codex",
+        "Claude",
+        "ChatGPT"
+      ],
+      "next_use": "Use on mobile to remove ambiguity, estimate rough token cost, set a Codex task, and decide whether to give GO before implementation."
+    },
+    {
+      "id": "mobile-puzzle-eco-lane",
+      "name": "Prism Relay",
+      "path": "C:\\Codex\\projects\\mobile-puzzle-eco-lane\\index.html",
+      "type": "html-mobile-puzzle-game",
+      "exports": [
+        "external AI brief",
+        "result JSON",
+        "lane JSON",
+        "Markdown"
+      ],
+      "handoff_targets": [
+        "external AI",
+        "Codex",
+        "Claude",
+        "ChatGPT",
+        "game-design AI"
+      ],
+      "next_use": "Use as the first complete CODEX eco-lane game artifact: command-tower brief, external AI improvement loop, implementation, verification, and CG/CSD registration."
+    },
+    {
+      "id": "sum-garden-eco-lane",
+      "name": "Sum Garden",
+      "path": "C:\\Codex\\projects\\sum-garden-eco-lane\\index.html",
+      "type": "html-mobile-number-logic-game",
+      "exports": [
+        "external AI brief",
+        "result JSON",
+        "lane JSON",
+        "Markdown"
+      ],
+      "handoff_targets": [
+        "external AI",
+        "Codex",
+        "Claude",
+        "ChatGPT",
+        "game-design AI"
+      ],
+      "next_use": "Use as the second complete CODEX eco-lane game artifact and as the pattern for number-logic level packs generated by external AI."
+    },
+    {
+      "id": "falling-block-eco-lane",
+      "name": "Cascade Forge",
+      "path": "C:\\Codex\\projects\\falling-block-eco-lane\\index.html",
+      "type": "html-mobile-falling-block-game",
+      "exports": [
+        "external AI brief",
+        "result JSON",
+        "lane JSON",
+        "Markdown"
+      ],
+      "handoff_targets": [
+        "external AI",
+        "Codex",
+        "Claude",
+        "ChatGPT",
+        "game-design AI"
+      ],
+      "next_use": "Use as the falling-block eco-lane artifact for external AI balance review, mission design, special block ideas, and mobile control tuning."
+    },
+    {
+      "id": "external-ai-lane-run-0805",
+      "name": "0805 External AI Lane Run",
+      "path": "C:\\Codex\\projects\\external-ai-lane-run-0805\\index.html",
+      "type": "html-lane-execution-test",
+      "exports": [
+        "external AI dataset JSON",
+        "handoff Markdown",
+        "CG/CSD execution record"
+      ],
+      "handoff_targets": [
+        "external AI",
+        "Codex",
+        "Claude",
+        "ChatGPT",
+        "human reviewer"
+      ],
+      "next_use": "Use as the compact proof that the CG-listed external AI lane path can run from dataset to artifact to CG registration."
+    }
+  ]
+}
