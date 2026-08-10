@@ -1,24 +1,21 @@
-const CACHE = "codex-gate-v15";
+const CACHE = "codex-gate-v16";
 const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
   "./icon.svg",
-  "./latest/dashboard.html",
-  "./latest/app-launcher.html",
-  "./latest/index.html",
-  "./latest/external-ai-lane-run-0805/index.html",
-  "./latest/projects/external-ai-lane-run-0805/index.html",
-  "./latest/quick-notes-board/index.html",
-  "./latest/orbit-catcher/index.html",
-  "./latest/orbit-catcher-zombie-siege/index.html",
-  "./latest/codex-data-pocket/index.html",
-  "./latest/cat-affinity-lane/index.html",
-  "./latest/cat-affinity-lane/assets/cat-hero.png",
-  "./latest/csd-web-designer-sample/index.html",
-  "./latest/csd-designer-showcase/index.html",
-  "./latest/csd-designer-showcase/assets/csd-hero.png",
-  "./latest/data/codex-data-schema.json",
-  "./latest/data/seed-records.json"
+  "./dashboard.html",
+  "./app-launcher.html",
+  "./quick-notes-board/index.html",
+  "./orbit-catcher/index.html",
+  "./orbit-catcher-zombie-siege/index.html",
+  "./codex-data-pocket/index.html",
+  "./cat-affinity-lane/index.html",
+  "./cat-affinity-lane/assets/cat-hero.png",
+  "./csd-web-designer-sample/index.html",
+  "./csd-designer-showcase/index.html",
+  "./csd-designer-showcase/assets/csd-hero.png",
+  "./data/codex-data-schema.json",
+  "./data/seed-records.json"
 ];
 
 self.addEventListener("install", (event) => {

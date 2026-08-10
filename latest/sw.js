@@ -1,12 +1,10 @@
-const CACHE = "codex-gate-v15";
+const CACHE = "codex-gate-v16";
 const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
   "./icon.svg",
   "./dashboard.html",
   "./app-launcher.html",
-  "./external-ai-lane-run-0805/index.html",
-  "./projects/external-ai-lane-run-0805/index.html",
   "./quick-notes-board/index.html",
   "./orbit-catcher/index.html",
   "./orbit-catcher-zombie-siege/index.html",
@@ -17,8 +15,7 @@ const ASSETS = [
   "./csd-designer-showcase/index.html",
   "./csd-designer-showcase/assets/csd-hero.png",
   "./data/codex-data-schema.json",
-  "./data/seed-records.json",
-  "./data/csd-lane-trials.json"
+  "./data/seed-records.json"
 ];
 
 self.addEventListener("install", (event) => {
