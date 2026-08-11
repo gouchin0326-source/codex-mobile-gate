@@ -27,6 +27,7 @@
 - Zombies now attack harder: timed horde rushes, closer rage spawns, short lunges, swarm speed pressure, and grab damage when they stay on the player.
 - On mobile, the main button row now includes a visible weapon cycle button, so weapons can be changed even when the weapon card row is hard to tap.
 - The mobile control layer is now compact and transparent: the game canvas fills the screen, a large translucent controller sits at the lower center, and weapon/tool ring commands surround it in real time.
+- The mobile canvas now syncs its drawing buffer to the real stage size, preventing vertical stretch and controller distortion after fullscreen layout changes.
 - Weapons include pistol, shotgun, and machine gun. Each gun has its own ammo count and can be switched with one tap.
 - Grenades explode, mines can be placed, and molotovs leave a burning area that damages and slows zombies over time.
 - Allies can join randomly. They have visible type colors/icons: POWER, SPEED, GUARD, TRAP, SLOW, and BLADE.

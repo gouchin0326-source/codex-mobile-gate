@@ -152,6 +152,7 @@
   <script>
     const canvas = document.querySelector("#game");
     const ctx = canvas.getContext("2d");
+    const stageEl = document.querySelector(".stage");
     const miniMap = document.querySelector("#mini-map");
     const miniCtx = miniMap.getContext("2d");
     const controlPanel = document.querySelector("aside");
@@ -207,6 +208,19 @@
     let zombies = [], bullets = [], enemyBullets = [], throwables = [], fires = [], mines = [], items = [], allies = [], recruits = [], particles = [], casings = [], stains = [], lightFlashes = [], buildings = [], obstacles = [];
     function rand(min, max) { return min + Math.random() * (max - min); }
     function clamp(v, min, max) { return Math.max(min, Math.min(max, v)); }
+    function syncCanvasSize() {
+      const rect = stageEl.getBoundingClientRect();
+      const width = Math.max(320, Math.round(rect.width));
+      const height = Math.max(320, Math.round(rect.height));
+      if (canvas.width === width && canvas.height === height) return;
+      canvas.width = width;
+      canvas.height = height;
+      pointer.x = canvas.width / 2;
+      pointer.y = canvas.height / 2;
+      camera.x = clamp(player.x - canvas.width / 2, 0, Math.max(0, world.w - canvas.width));
+      camera.y = clamp(player.y - canvas.height / 2, 0, Math.max(0, world.h - canvas.height));
+      resetCanvasStick();
+    }
     function distance(a, b) { return Math.hypot(a.x - b.x, a.y - b.y); }
     function zombieTraits(type) {
       return {
@@ -232,7 +246,7 @@
     function ensureAudio() { if (!audio.enabled || audio.ctx) return; audio.ctx = new (window.AudioContext || window.webkitAudioContext)(); }
     function tone(freq, dur=.07, type="square", gain=.04) { if (!audio.enabled) return; ensureAudio(); const now = audio.ctx.currentTime; const osc = audio.ctx.createOscillator(); const g = audio.ctx.createGain(); osc.type = type; osc.frequency.value = freq; g.gain.value = gain; g.gain.exponentialRampToValueAtTime(.001, now + dur); osc.connect(g); g.connect(audio.ctx.destination); osc.start(now); osc.stop(now + dur); }
     function updateMusic(nowMs) { if (!audio.enabled || !running || paused) return; ensureAudio(); const now = audio.ctx.currentTime; if (now < audio.nextBeat) return; audio.nextBeat = now + .38; const notes = [82, 98, 110, 98, 73, 82]; const i = Math.floor(nowMs / 380) % notes.length; tone(notes[i], .18, "triangle", .018); }
-    function resetRound() { score = 0; wave = 1; hp = 100; stamina = 100; sprinting = false; aimMode = "auto"; kills = 0; weaponIndex = 0; weaponLevels = weapons.map(() => 1); ammoState = weapons.map((w) => ({ clip:w.magazine, reserve:w.reserve })); tools = { bombard:2, barrier:1, ranger:1 }; reloadTimer = 0; fireCooldown = 0; spawnTimer = .2; itemTimer = 3; allyTimer = 7; waveTimer = 0; hordeTimer = 7; muzzle = 0; recoil = 0; direction = 0; dodgeTimer = 0; dodgeCooldown = 0; invulnTimer = 0; barrierTimer = 0; dodgeX = 0; dodgeY = 0; player = { x:world.w / 2, y:world.h / 2, r:16, speed:250 }; zombies = []; bullets = []; enemyBullets = []; throwables = []; fires = []; mines = []; items = []; allies = []; recruits = []; particles = []; casings = []; stains = []; lightFlashes = []; generateMap(); running = true; paused = false; lastTime = performance.now(); startButton.textContent = "やり直す"; flash("制圧開始"); updateHud(); ensureAudio(); }
+    function resetRound() { score = 0; wave = 1; hp = 100; stamina = 100; sprinting = false; aimMode = "auto"; kills = 0; weaponIndex = 0; weaponLevels = weapons.map(() => 1); ammoState = weapons.map((w) => ({ clip:w.magazine, reserve:w.reserve })); tools = { bombard:2, barrier:1, ranger:1 }; reloadTimer = 0; fireCooldown = 0; spawnTimer = .2; itemTimer = 3; allyTimer = 7; waveTimer = 0; hordeTimer = 7; muzzle = 0; recoil = 0; direction = 0; dodgeTimer = 0; dodgeCooldown = 0; invulnTimer = 0; barrierTimer = 0; dodgeX = 0; dodgeY = 0; player = { x:world.w / 2, y:world.h / 2, r:16, speed:250 }; zombies = []; bullets = []; enemyBullets = []; throwables = []; fires = []; mines = []; items = []; allies = []; recruits = []; particles = []; casings = []; stains = []; lightFlashes = []; generateMap(); syncCanvasSize(); running = true; paused = false; lastTime = performance.now(); startButton.textContent = "やり直す"; flash("制圧開始"); updateHud(); ensureAudio(); }
     function updateHud() { const w = weaponStats(), ammo = ammoState[weaponIndex], boss = zombies.find((z)=>z.type==="boss"), intel = tacticalIntel(); scoreEl.textContent = score; bestEl.textContent = best; waveEl.textContent = wave; hpEl.textContent = Math.max(0, Math.ceil(hp)); ammoEl.textContent = reloadTimer > 0 ? `装填中/${ammo.reserve}` : `${ammo.clip}/${ammo.reserve}`; weaponEl.textContent = w.name; grenadesEl.textContent = tools.bombard; killsEl.textContent = kills; hpBarEl.style.width = `${clamp(hp, 0, 100)}%`; clipBarEl.style.width = `${clamp((ammo.clip / w.magazine) * 100, 0, 100)}%`; staminaBarEl.style.width = `${clamp(stamina, 0, 100)}%`; hpReadEl.textContent = Math.max(0, Math.ceil(hp)); clipReadEl.textContent = `${ammo.clip}/${w.magazine}`; staminaReadEl.textContent = Math.ceil(stamina); const statusText = barrierTimer > 0 ? `バリア ${barrierTimer.toFixed(1)}s` : dodgeTimer > 0 ? "回避中" : dodgeCooldown > 0 ? `回避 ${dodgeCooldown.toFixed(1)}s` : sprinting ? "走行中" : reloadTimer > 0 ? `リロード ${reloadTimer.toFixed(1)}s` : `${aimMode === "auto" ? "自動照準" : "手動照準"}`; effectEl.textContent = `${statusText} ${w.name}`; statusDetailEl.textContent = statusText; dangerStatusEl.textContent = `${intel.danger}/${intel.area}`; supplyStatusEl.textContent = intel.supply ? `${intel.supply.type} ${intel.supply.distance}m` : "未確認"; weaponDetailEl.textContent = `${w.name} Lv${w.level} / ${w.ammo}`; weaponSpecEl.textContent = `DMG ${w.damage} / MAG ${w.magazine} / KB ${w.knock}`; bossStatusEl.textContent = boss ? `HP ${Math.ceil(boss.hp)}` : "未確認"; aimButton.textContent = aimMode === "auto" ? "自動" : "手動"; weaponCycleButton.textContent = w.code; weaponCycleMainButton.textContent = `武器 ${w.code}`; weaponCycleButton.title = `武器切替: ${w.name}`; weaponCycleMainButton.title = `武器切替: ${w.name}`; gunEls.forEach((el, i) => { const s=weaponStats(i), a=ammoState[i]; el.textContent = `${a.clip}/${a.reserve} Lv${s.level}`; el.style.setProperty("--ammo-pct", `${clamp((a.clip / s.magazine) * 100, 0, 100)}%`); }); weaponButtons.forEach((button, i) => button.classList.toggle("active", i === weaponIndex)); toolEls.bombard.textContent = `${tools.bombard}回`; toolEls.barrier.textContent = `${tools.barrier}回`; toolEls.ranger.textContent = `${tools.ranger}回`; }
     function burst(x, y, color, count=10) { for (let i = 0; i < count; i += 1) { const a = rand(0, Math.PI * 2), s = rand(40, 190); particles.push({ x, y, vx:Math.cos(a) * s, vy:Math.sin(a) * s, life:rand(.25, .8), max:.8, r:rand(2, 5), color }); } }
     function addGunEffects(w) {
@@ -550,7 +564,9 @@
     stick.addEventListener("pointerup",(e)=>{if(e.pointerId===stickState.pointerId)resetStick();});
     stick.addEventListener("pointercancel",resetStick);
     startButton.addEventListener("click",resetRound); pauseButton.addEventListener("click",togglePause); soundButton.addEventListener("click",()=>{audio.enabled=!audio.enabled; soundButton.textContent=audio.enabled?"音 OFF":"音 ON"; if(audio.enabled){ensureAudio();tone(660,.12,"sine",.04);}}); grenadeButton.addEventListener("click",()=>throwTool("bombard")); aimButton.addEventListener("click",toggleAim); weaponCycleButton.addEventListener("click",toggleRing); weaponCycleMainButton.addEventListener("click",toggleRing); backpedalButton.addEventListener("pointerdown",()=>controls.backpedal=true); backpedalButton.addEventListener("pointerup",()=>controls.backpedal=false); backpedalButton.addEventListener("pointercancel",()=>controls.backpedal=false); exportButton.addEventListener("click",exportResult); exportMarkdownButton.addEventListener("click",exportMarkdown); exportAiPromptButton.addEventListener("click",exportAiPrompt); resetBestButton.addEventListener("click",()=>{best=0;writeBest(0);updateHud();}); weaponButtons.forEach((button)=>{ const w=weapons[Number(button.dataset.weapon)]; button.title=w.name; button.addEventListener("click",()=>setWeapon(Number(button.dataset.weapon))); }); document.querySelectorAll("[data-tool]").forEach((button)=>{ button.title = button.querySelector("strong")?.textContent || button.dataset.tool; button.addEventListener("click",()=>throwTool(button.dataset.tool)); }); document.querySelectorAll("[data-ring-weapon]").forEach((button)=>button.addEventListener("click",()=>{ setWeapon(Number(button.dataset.ringWeapon)); setRingOpen(false); })); document.querySelectorAll("[data-ring-tool]").forEach((button)=>button.addEventListener("click",()=>{ throwTool(button.dataset.ringTool); setRingOpen(false); })); ringMenu.addEventListener("click",(e)=>{ if (e.target === ringMenu) setRingOpen(false); }); panelTabs.forEach((button)=>button.addEventListener("click",()=>setPanelTab(button.dataset.panelTab)));
-    updateHud(); draw(); requestAnimationFrame(loop);
+    window.addEventListener("resize", syncCanvasSize);
+    window.addEventListener("orientationchange", () => setTimeout(syncCanvasSize, 120));
+    syncCanvasSize(); updateHud(); draw(); requestAnimationFrame(loop);
   </script>
 </body>
 </html>
