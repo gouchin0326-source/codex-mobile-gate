@@ -1,4 +1,4 @@
-const CACHE = "codex-gate-v24";
+const CACHE = "codex-gate-v25";
 const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
