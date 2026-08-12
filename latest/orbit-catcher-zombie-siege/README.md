@@ -29,6 +29,8 @@
 - The mobile control layer is now compact and transparent: the game canvas fills the screen, a large translucent controller sits at the lower center, and weapon/tool ring commands surround it in real time.
 - The mobile canvas now syncs its drawing buffer to the real stage size, preventing vertical stretch and controller distortion after fullscreen layout changes.
 - The mobile panel now exposes 操作/マップ/設定 tabs, and settings include camera zoom plus overall game speed so the player can switch between close and pulled-back views.
+- The mobile controller is now centered around the MOVE pad: the old lower-right stick is hidden, ammo/HP/stamina are shown as compact circular controller gauges, and map/settings overlays open near the top so they do not cover movement.
+- Allies are tougher and more useful, with stronger role weapons, higher durability, faster support fire, stronger traps, and improved melee cleanup.
 - Weapons include pistol, shotgun, and machine gun. Each gun has its own ammo count and can be switched with one tap.
 - Grenades explode, mines can be placed, and molotovs leave a burning area that damages and slows zombies over time.
 - Allies can join randomly. They have visible type colors/icons: POWER, SPEED, GUARD, TRAP, SLOW, and BLADE.
