@@ -38,6 +38,9 @@
 - Mobile MOVE input now behaves like the earlier tilt stick again: touch position is read relative to the fixed center pad, and held touches keep movement active. Player animation now uses movement direction while moving and aim direction only while idle.
 - Mobile MOVE input now preserves the full analog vector: diagonal movement is continuous, light tilt walks, deep tilt runs, and the transparent ring base no longer steals the movement drag area.
 - The player silhouette now has a clearer tactical upper body, helmet/visor, arms, and longer rifle shape so it reads less like a round body and more like an armed survivor.
+- The mobile ring/controller layout is lifted away from the screen edge, while start/pause are parked on the lower-left side so they do not cover the MOVE pad.
+- Zombies now show a short close-range attack state with forward-reaching arms, a wider mouth, claw streaks, and a small pounce burst instead of only speeding up.
+- The player model has broader shoulders, a darker tactical vest, visor highlight, and clearer rifle line to move away from a stick-figure read.
 - Weapons include pistol, shotgun, and machine gun. Each gun has its own ammo count and can be switched with one tap.
 - Grenades explode, mines can be placed, and molotovs leave a burning area that damages and slows zombies over time.
 - Allies can join randomly. They have visible type colors/icons: POWER, SPEED, GUARD, TRAP, SLOW, and BLADE.
