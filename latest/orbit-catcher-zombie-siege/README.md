@@ -33,6 +33,7 @@
 - Allies are tougher and more useful, with stronger role weapons, higher durability, faster support fire, stronger traps, and improved melee cleanup.
 - Fixed the mobile MOVE pad hit target by preventing the transparent ring base from intercepting canvas touches.
 - The balance now starts with pistol only; weapon pickups unlock the next weapon before later pickups upgrade weapons. Early waves spawn fewer zombies and scale up more gradually.
+- Actor rendering now uses pseudo-3D bodies for the player, allies, zombies, bosses, and pickups: shaded ellipsoids/capsules, stronger foot shadows, walking bob, limb swing, damage marks, and Y-sorted depth overlap.
 - Weapons include pistol, shotgun, and machine gun. Each gun has its own ammo count and can be switched with one tap.
 - Grenades explode, mines can be placed, and molotovs leave a burning area that damages and slows zombies over time.
 - Allies can join randomly. They have visible type colors/icons: POWER, SPEED, GUARD, TRAP, SLOW, and BLADE.
