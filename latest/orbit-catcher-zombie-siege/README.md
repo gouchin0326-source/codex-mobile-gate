@@ -41,6 +41,7 @@
 - The mobile ring/controller layout is lifted away from the screen edge, while start/pause are parked on the lower-left side so they do not cover the MOVE pad.
 - Zombies now show a short close-range attack state with forward-reaching arms, a wider mouth, claw streaks, and a small pounce burst instead of only speeding up.
 - The player model has broader shoulders, a darker tactical vest, visor highlight, and clearer rifle line to move away from a stick-figure read.
+- The 10-feature gameplay pass adds wave objectives, hunt/survive/scavenge/rescue missions, building cache pickups, rescue survivors, ally proximity support, crawler zombies, boss slam/summon attacks, weapon-level performance mods, weapon-specific player silhouettes, hit stop, screen shake, stronger muzzle feedback, and a night-visibility light cone.
 - Weapons include pistol, shotgun, and machine gun. Each gun has its own ammo count and can be switched with one tap.
 - Grenades explode, mines can be placed, and molotovs leave a burning area that damages and slows zombies over time.
 - Allies can join randomly. They have visible type colors/icons: POWER, SPEED, GUARD, TRAP, SLOW, and BLADE.
