@@ -35,6 +35,7 @@
 - The balance now starts with pistol only; weapon pickups unlock the next weapon before later pickups upgrade weapons. Early waves spawn fewer zombies and scale up more gradually.
 - Actor rendering now uses pseudo-3D bodies for the player, allies, zombies, bosses, and pickups: shaded ellipsoids/capsules, stronger foot shadows, walking bob, limb swing, damage marks, and Y-sorted depth overlap.
 - Actor rendering was optimized to remove per-character gradient creation, reducing movement stutter. Bodies now use lighter 3D forms with elongated torsos, facing changes, limb swing, and less spherical silhouettes.
+- Mobile MOVE input now behaves like the earlier tilt stick again: touch position is read relative to the fixed center pad, and held touches keep movement active. Player animation now uses movement direction while moving and aim direction only while idle.
 - Weapons include pistol, shotgun, and machine gun. Each gun has its own ammo count and can be switched with one tap.
 - Grenades explode, mines can be placed, and molotovs leave a burning area that damages and slows zombies over time.
 - Allies can join randomly. They have visible type colors/icons: POWER, SPEED, GUARD, TRAP, SLOW, and BLADE.
