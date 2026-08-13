@@ -36,7 +36,7 @@
 - Actor rendering now uses pseudo-3D bodies for the player, allies, zombies, bosses, and pickups: shaded ellipsoids/capsules, stronger foot shadows, walking bob, limb swing, damage marks, and Y-sorted depth overlap.
 - Actor rendering was optimized to remove per-character gradient creation, reducing movement stutter. Bodies now use lighter 3D forms with elongated torsos, facing changes, limb swing, and less spherical silhouettes.
 - Mobile MOVE input now behaves like the earlier tilt stick again: touch position is read relative to the fixed center pad, and held touches keep movement active. Player animation now uses movement direction while moving and aim direction only while idle.
-- Mobile MOVE input now preserves the full analog vector: diagonal movement is continuous, light tilt walks, deep tilt runs, and ring command buttons no longer steal the movement drag area.
+- Mobile MOVE input now preserves the full analog vector: diagonal movement is continuous, light tilt walks, deep tilt runs, and the transparent ring base no longer steals the movement drag area.
 - The player silhouette now has a clearer tactical upper body, helmet/visor, arms, and longer rifle shape so it reads less like a round body and more like an armed survivor.
 - Weapons include pistol, shotgun, and machine gun. Each gun has its own ammo count and can be switched with one tap.
 - Grenades explode, mines can be placed, and molotovs leave a burning area that damages and slows zombies over time.
