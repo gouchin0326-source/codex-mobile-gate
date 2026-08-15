@@ -53,6 +53,7 @@
 - The external atlas pass adds `assets/actor-atlas-v1.png`, a real PNG sprite atlas for player, walker, runner, heavy/boss, and spitter frames. The game loads it when available and falls back to internal generated sprites if the image fails.
 - The action-sheet pass adds `assets/actor-atlas-v2.png`, expanding actors to idle, walk, attack, hit, and death cells so the player and close mobs can switch visual states without heavy runtime drawing.
 - The action-sheet v3 pass replaces the actor atlas with smoother anti-aliased cells, denser survivor gear, stronger zombie wounds/attack poses, and uses the death cells as corpse overlays in play.
+- The action-sheet v4 pass moves away from stick-like sprites with thicker human silhouettes, filled arms/legs, broader torsos, heavier zombie attack poses, and more opaque in-game atlas rendering.
 - Weapons include pistol, shotgun, and machine gun. Each gun has its own ammo count and can be switched with one tap.
 - Grenades explode, mines can be placed, and molotovs leave a burning area that damages and slows zombies over time.
 - Allies can join randomly. They have visible type colors/icons: POWER, SPEED, GUARD, TRAP, SLOW, and BLADE.
