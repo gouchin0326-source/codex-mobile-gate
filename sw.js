@@ -1,4 +1,4 @@
-const CACHE = "codex-gate-v46";
+const CACHE = "codex-gate-v47";
 const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
@@ -8,7 +8,7 @@ const ASSETS = [
   "./latest/quick-notes-board/index.html",
   "./latest/orbit-catcher/index.html",
   "./latest/orbit-catcher-zombie-siege/index.html",
-  "./latest/orbit-catcher-zombie-siege/assets/actor-atlas-v5.png",
+  "./latest/orbit-catcher-zombie-siege/assets/actor-atlas-v6.png",
   "./latest/codex-data-pocket/index.html",
   "./latest/cat-affinity-lane/index.html",
   "./latest/cat-affinity-lane/assets/cat-hero.png",

@@ -55,6 +55,7 @@
 - The action-sheet v3 pass replaces the actor atlas with smoother anti-aliased cells, denser survivor gear, stronger zombie wounds/attack poses, and uses the death cells as corpse overlays in play.
 - The action-sheet v4 pass moves away from stick-like sprites with thicker human silhouettes, filled arms/legs, broader torsos, heavier zombie attack poses, and more opaque in-game atlas rendering.
 - The action-sheet v5 pass makes the mobs read more like zombies with hunched forward posture, decayed skin, torn natural clothing, open-mouth attack faces, asymmetric arms, wounds, and cleaner tactical survivor clothing.
+- The character-select pass adds `assets/actor-atlas-v6.png` with four selectable survivors: Vanguard, Medic, Scout, and Engineer. Each survivor has a distinct atlas row plus different HP, speed, stamina recovery, and starting tools.
 - Weapons include pistol, shotgun, and machine gun. Each gun has its own ammo count and can be switched with one tap.
 - Grenades explode, mines can be placed, and molotovs leave a burning area that damages and slows zombies over time.
 - Allies can join randomly. They have visible type colors/icons: POWER, SPEED, GUARD, TRAP, SLOW, and BLADE.
