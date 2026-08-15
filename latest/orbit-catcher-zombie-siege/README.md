@@ -65,6 +65,7 @@
 - The level 6/7 character-motion pass adds `assets/actor-atlas-v11-level7.png`: a 4-direction action-sheet layout plus lightweight runtime part-rig overlays for close actors, so heads, arms, weapons, zombie reach, side/back facing, and diagonal movement read more naturally while preserving 60fps mobile play.
 - The level 8 player-character pass adds `assets/player-atlas-v12-level8.png`: a dedicated 128x160, 8-direction action sheet for the four playable survivors. The player now renders from this higher-resolution atlas first, with the v11 actor atlas kept as fallback for reliability.
 - The player-cleanup pass adds `assets/player-atlas-v13-clean.png`, a normalized Level 8 sheet with consistent foot anchors and centered transparent bounds. The player-specific rig overlay was removed so movement no longer shows stale helper parts from the previous frame style.
+- The level 9 player-art pass adds `assets/player-atlas-v14-level9.png`, a larger 160x200 player-only atlas with stronger outlines, cleaner armor readability, unified foot anchors, and fewer helper lines so movement does not leave stale-looking visual fragments.
 - Weapons include pistol, shotgun, and machine gun. Each gun has its own ammo count and can be switched with one tap.
 - Grenades explode, mines can be placed, and molotovs leave a burning area that damages and slows zombies over time.
 - Allies can join randomly. They have visible type colors/icons: POWER, SPEED, GUARD, TRAP, SLOW, and BLADE.

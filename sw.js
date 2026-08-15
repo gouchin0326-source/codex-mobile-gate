@@ -1,4 +1,4 @@
-﻿const CACHE = "codex-gate-v58";
+﻿const CACHE = "codex-gate-v59";
 const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
@@ -9,7 +9,7 @@ const ASSETS = [
   "./latest/orbit-catcher/index.html",
   "./latest/orbit-catcher-zombie-siege/index.html",
   "./latest/orbit-catcher-zombie-siege/assets/actor-atlas-v11-level7.png",
-  "./latest/orbit-catcher-zombie-siege/assets/player-atlas-v13-clean.png",
+  "./latest/orbit-catcher-zombie-siege/assets/player-atlas-v14-level9.png",
   "./latest/codex-data-pocket/index.html",
   "./latest/cat-affinity-lane/index.html",
   "./latest/cat-affinity-lane/assets/cat-hero.png",
@@ -35,6 +35,7 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   event.respondWith(fetch(event.request).catch(() => caches.match(event.request)));
 });
+
 
 
 
