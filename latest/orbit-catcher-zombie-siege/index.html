@@ -192,11 +192,12 @@
     const actorAtlas = new Image();
     actorAtlas.src = "assets/actor-atlas-v11-level7.png";
     const playerAtlas = new Image();
-    playerAtlas.src = "assets/player-atlas-v14-level9.png";
+    const playerAtlasFiles = ["player-atlas-v15-vanguard.png", "player-atlas-v15-medic.png", "player-atlas-v15-scout.png", "player-atlas-v15-engineer.png"];
+    playerAtlas.src = `assets/${playerAtlasFiles[0]}`;
     const actorAtlasCells = { player:0, walker:4, runner:5, heavy:6, spitter:7 };
     const actorAtlasActions = { idle:0, walk:1, attack:2, hit:3, death:4 };
     const actorAtlasRowsPerDirection = 8;
-    const playerAtlasCell = { w:160, h:200, rowsPerDirection:4 };
+    const playerAtlasCell = { w:160, h:200, rowsPerDirection:1 };
     const playerAtlasAnchorX = [80, 80, 80, 80, 80, 80, 80, 80];
     const playerAtlasFootY = 191;
     const playerCharacters = [
@@ -327,7 +328,8 @@
     function updateSettingsUi() { zoomInput.value = viewSettings.zoom; speedInput.value = viewSettings.speed; zoomValueEl.textContent = viewSettings.zoom.toFixed(2); speedValueEl.textContent = viewSettings.speed.toFixed(2); }
     function selectedCharacter() { return playerCharacters[selectedCharacterIndex] || playerCharacters[0]; }
     function playerHpMax() { return Math.round(playerMaxHp * selectedCharacter().hp); }
-    function updateCharacterUi() { const pc = selectedCharacter(); characterButtons.forEach((button, i)=>button.classList.toggle("active", i === selectedCharacterIndex)); if (characterSelect) characterSelect.classList.toggle("hidden", running); if (!running) effectEl.textContent = `${pc.name} ready`; }
+    function updatePlayerAtlas() { const src = `assets/${playerAtlasFiles[selectedCharacterIndex] || playerAtlasFiles[0]}`; if (!playerAtlas.src.endsWith(src)) playerAtlas.src = src; }
+    function updateCharacterUi() { const pc = selectedCharacter(); updatePlayerAtlas(); characterButtons.forEach((button, i)=>button.classList.toggle("active", i === selectedCharacterIndex)); if (characterSelect) characterSelect.classList.toggle("hidden", running); if (!running) effectEl.textContent = `${pc.name} ready`; }
     function flash(text) { stateEl.textContent = text; }
     function addShake(amount=.8, stop=.025) { screenShake = Math.max(screenShake, amount); hitStop = Math.max(hitStop, stop); }
     function activeSkillLabel() {
@@ -783,7 +785,7 @@
     }
     function drawPlayerAtlasActor(x, y, size, faceAngle, alpha=.98, action="idle", frame=0) {
       if (!playerAtlas.complete || playerAtlas.naturalWidth <= 0) return false;
-      const dir = playerDirectionIndex8(faceAngle), row = dir * playerAtlasCell.rowsPerDirection + selectedCharacter().row, actionIndex = actorAtlasActions[action] ?? 0;
+      const dir = playerDirectionIndex8(faceAngle), row = dir * playerAtlasCell.rowsPerDirection, actionIndex = actorAtlasActions[action] ?? 0;
       const scale = size / 4.7, w = sc(58) * scale, h = sc(72) * scale, ox = ((playerAtlasCell.w / 2 - (playerAtlasAnchorX[dir] || playerAtlasCell.w / 2)) / playerAtlasCell.w) * w, top = -h * (playerAtlasFootY / playerAtlasCell.h);
       ctx.save();
       ctx.globalAlpha *= alpha;
