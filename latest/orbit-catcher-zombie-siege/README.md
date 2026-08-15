@@ -44,6 +44,7 @@
 - The 10-feature gameplay pass adds wave objectives, hunt/survive/scavenge/rescue missions, building cache pickups, rescue survivors, ally proximity support, crawler zombies, boss slam/summon attacks, weapon-level performance mods, weapon-specific player silhouettes, hit stop, screen shake, stronger muzzle feedback, and a night-visibility light cone.
 - The mob realism pass adds lightweight LOD rendering: off-screen actors are culled, distant mobs use simpler bodies, and close mobs gain torn clothing, shirt color variation, exposed ribs, jaw damage, packs, crawler posture, and stronger survivor/zombie silhouette differences without adding bitmap asset overhead.
 - The animation pass adds player sprint lean, reload pose, dodge tilt, recoil lean, and enemy hit-stagger, lunge, spit, crawler, and boss attack poses through the existing lightweight LOD renderer.
+- The actor graphics pass improves readability beyond stick-figure silhouettes: the player now has broader tactical shoulders, segmented armor, helmet/visor, pouches, hands, and clearer weapon hold, while zombies gain hunched posture, asymmetric shoulders, ragged clothing, damaged hands, and closer face/body decay details.
 - Weapons include pistol, shotgun, and machine gun. Each gun has its own ammo count and can be switched with one tap.
 - Grenades explode, mines can be placed, and molotovs leave a burning area that damages and slows zombies over time.
 - Allies can join randomly. They have visible type colors/icons: POWER, SPEED, GUARD, TRAP, SLOW, and BLADE.
