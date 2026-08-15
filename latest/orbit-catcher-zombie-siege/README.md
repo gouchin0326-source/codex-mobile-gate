@@ -48,6 +48,7 @@
 - The direction/type graphics pass adds front/back-aware leg, head, visor, weapon, and muzzle placement plus clearer runner, spitter, carrier, crawler, heavy, and boss silhouettes for stronger mob readability.
 - The death/bite animation pass adds short-lived fallen zombie bodies and stronger close-range bite poses with forward head, arms, mouth, claw streaks, and contact shadow changes.
 - The level 3 LOD pass adds close-range-only high detail for player and nearby mobs: armor straps, visor lines, body seams, torn wounds, teeth, face damage, and clothing cuts are drawn only when distance and crowd count allow it.
+- The player-detail pass adds close-range survivor equipment: chest magazines, crossed harness straps, radio light, backpack/radio pack, antenna, knee pads, helmet side module, optic, rail, and small weapon indicator while keeping the same distance-gated LOD rules.
 - Weapons include pistol, shotgun, and machine gun. Each gun has its own ammo count and can be switched with one tap.
 - Grenades explode, mines can be placed, and molotovs leave a burning area that damages and slows zombies over time.
 - Allies can join randomly. They have visible type colors/icons: POWER, SPEED, GUARD, TRAP, SLOW, and BLADE.

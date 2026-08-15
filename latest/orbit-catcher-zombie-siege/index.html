@@ -743,10 +743,29 @@
           for (let i=0;i<3;i+=1) { ctx.beginPath(); ctx.moveTo(-bodyW*.34, chestY-bodyH*(.22-i*.16)); ctx.lineTo(bodyW*.34, chestY-bodyH*(.18-i*.16)); ctx.stroke(); }
           ctx.fillStyle = "#020617";
           ctx.fillRect(-bodyW*.42, chestY+bodyH*.16, bodyW*.84, Math.max(1,s*.34));
+          ctx.fillStyle = "#334155";
+          ctx.fillRect(-bodyW*.36, chestY-bodyH*.04, bodyW*.18, bodyH*.18);
+          ctx.fillRect(-bodyW*.1, chestY-bodyH*.02, bodyW*.18, bodyH*.18);
+          ctx.fillRect(bodyW*.16, chestY, bodyW*.18, bodyH*.18);
+          ctx.fillStyle = "#0ea5e9";
+          ctx.fillRect(bodyW*.28, chestY-bodyH*.34, Math.max(1,s*.26), Math.max(1,s*.42));
+          ctx.strokeStyle = "rgba(203,213,225,.75)";
+          ctx.beginPath(); ctx.moveTo(-bodyW*.48, chestY-bodyH*.34); ctx.lineTo(bodyW*.44, chestY+bodyH*.28); ctx.stroke();
+          ctx.beginPath(); ctx.moveTo(bodyW*.48, chestY-bodyH*.34); ctx.lineTo(-bodyW*.36, chestY+bodyH*.28); ctx.stroke();
         }
         ctx.fillStyle = "#475569";
         ctx.fillRect(-bodyW*.55, chestY+bodyH*.28, bodyW*.26, Math.max(1,s*.46));
         ctx.fillRect(bodyW*.28, chestY+bodyH*.28, bodyW*.26, Math.max(1,s*.46));
+        if (closeDetail) {
+          ellipsoid3d(-bodyW*.82, chestY+bodyH*.12, bodyW*.22, bodyH*.36, "#020617", -.08, .88);
+          ellipsoid3d(bodyW*.82, chestY+bodyH*.1, bodyW*.22, bodyH*.34, "#020617", .08, .88);
+          capsule3d(-bodyW*.48, hipY + 2.2*s*scale, 1.7*s, .34*s, Math.PI/2 + step*.05, "#0f172a", .9);
+          capsule3d(bodyW*.5, hipY + 2.2*s*scale, 1.7*s, .34*s, Math.PI/2 - step*.05, "#0f172a", .9);
+          ellipsoid3d(-bodyW*.98, chestY+bodyH*.02, bodyW*.22, bodyH*.52, "#111827", -.18, .78);
+          ctx.strokeStyle = "rgba(125,211,252,.68)";
+          ctx.lineWidth = Math.max(1, s*.08);
+          ctx.beginPath(); ctx.moveTo(-bodyW*.98, chestY-bodyH*.44); ctx.lineTo(-bodyW*1.18, chestY-bodyH*.9); ctx.stroke();
+        }
         ellipsoid3d(0, headY - headR*.92 - back*s*.24, headR*1.16, headR*.32, "#0f172a", 0, .97);
         ellipsoid3d(0, headY - headR*.18 + front*s*.18, headR*1.02, headR*.44, "#1e293b", 0, .96);
         ellipsoid3d(headR*.18*turn, headY - headR*.08 + front*s*.36 - back*s*.2, headR*(.54 + turn*.24), headR*.24, "#67e8f9", 0, front > .55 ? .92 : .72);
@@ -754,11 +773,21 @@
           ctx.strokeStyle = "rgba(186,230,253,.8)";
           ctx.lineWidth = Math.max(1, s*.08);
           ctx.beginPath(); ctx.moveTo(-headR*.55, headY-headR*.08); ctx.lineTo(headR*.62, headY-headR*.02); ctx.stroke();
+          ctx.fillStyle = "#020617";
+          ctx.fillRect(-headR*.88, headY-headR*.58, headR*.36, Math.max(1,s*.28));
+          ctx.fillStyle = "#38bdf8";
+          ctx.fillRect(headR*.58, headY-headR*.2, Math.max(1,s*.18), Math.max(1,s*.18));
         }
         const gunDrop = front*s*.82 - back*s*.7, gunTurn = .42 + turn*.58;
         capsule3d(bodyW*.76*gunTurn, chestY - s*.55 + gunDrop*.22, longGun ? 6.6*s : 4.4*s, .78*s, -.22 + aimY*.18, "#e5e7eb");
         capsule3d(bodyW*1.52*gunTurn, chestY - s*.66 + gunDrop*.28, weaponKind === "rocket" ? 8.6*s : longGun ? 7.6*s : 3.8*s, weaponKind === "shotgun" || weaponKind === "rocket" ? .72*s : .54*s, -.03 + aimY*.2, weaponKind === "laser" ? "#0e7490" : "#111827");
         capsule3d(bodyW*(longGun ? 2.74 : 2.1)*gunTurn, chestY - s*.7 + gunDrop*.32, weaponKind === "rocket" ? 5*s : longGun ? 3.9*s : 1.9*s, weaponKind === "rocket" ? .5*s : .3*s, aimY*.18, weaponKind === "laser" ? "#67e8f9" : "#64748b");
+        if (closeDetail) {
+          capsule3d(bodyW*1.76*gunTurn, chestY - s*1.18 + gunDrop*.28, longGun ? 2.9*s : 1.5*s, .16*s, -.03 + aimY*.2, "#64748b", .9);
+          ellipsoid3d(bodyW*1.18*gunTurn, chestY - s*.98 + gunDrop*.22, .58*s, .32*s, "#0f172a", 0, .86);
+          ctx.fillStyle = weaponKind === "laser" ? "#67e8f9" : "#fbbf24";
+          ctx.fillRect(bodyW*2.24*gunTurn, chestY-s*.86+gunDrop*.3, Math.max(1,s*.32), Math.max(1,s*.18));
+        }
         if (weaponLevel >= 3) { ctx.strokeStyle="rgba(167,139,250,.65)"; ctx.lineWidth=Math.max(1,s*.18); ctx.beginPath(); ctx.arc(bodyW*.18,chestY,bodyW*.7,0,Math.PI*2); ctx.stroke(); }
         ellipsoid3d(bodyW*1.24*gunTurn, chestY + s*.18 + gunDrop*.18, 1.35*s, .75*s, "#94a3b8", .1, .9);
         ellipsoid3d(bodyW*.7*gunTurn, chestY + s*.12 + gunDrop*.16, .7*s, .48*s, skin, -.15, .94);
