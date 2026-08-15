@@ -170,6 +170,9 @@
   <script>
     const canvas = document.querySelector("#game");
     const ctx = canvas.getContext("2d");
+    const actorAtlas = new Image();
+    actorAtlas.src = "assets/actor-atlas-v1.png";
+    const actorAtlasCells = { player:0, walker:1, runner:2, heavy:3, spitter:4 };
     const stageEl = document.querySelector(".stage");
     const miniMap = document.querySelector("#mini-map");
     const miniCtx = miniMap.getContext("2d");
@@ -648,9 +651,14 @@
       return c;
     }
     function drawRasterActor(x, y, size, kind, faceAngle, alpha=.72, frame=0) {
-      const img = rasterSprite(kind === "player" ? "player" : kind === "runner" ? "runner" : kind === "heavy" || kind === "boss" ? "heavy" : kind === "spitter" ? "spitter" : "walker", frame);
+      const actorKind = kind === "player" ? "player" : kind === "runner" ? "runner" : kind === "heavy" || kind === "boss" ? "heavy" : kind === "spitter" ? "spitter" : "walker";
+      const img = rasterSprite(actorKind, frame);
       const scale = size / 4.7, w = sc(46) * scale, h = sc(62) * scale, face = Math.cos(faceAngle) < 0 ? -1 : 1;
-      ctx.save(); ctx.globalAlpha *= alpha; ctx.translate(x, y - h * .28); ctx.scale(face, 1); ctx.drawImage(img, -w / 2, -h / 2, w, h); ctx.restore();
+      ctx.save(); ctx.globalAlpha *= alpha; ctx.translate(x, y - h * .28); ctx.scale(face, 1);
+      const row = actorAtlasCells[actorKind];
+      if (row !== undefined && actorAtlas.complete && actorAtlas.naturalWidth > 0) ctx.drawImage(actorAtlas, (frame % 2) * 96, row * 128, 96, 128, -w / 2, -h / 2, w, h);
+      else ctx.drawImage(img, -w / 2, -h / 2, w, h);
+      ctx.restore();
     }
     function mobDetailLevel(screenX, screenY, size, worldDist=9999) {
       if (screenX < -80 || screenY < -100 || screenX > canvas.width + 80 || screenY > canvas.height + 110) return 0;

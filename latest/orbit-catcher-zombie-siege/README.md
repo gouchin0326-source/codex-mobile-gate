@@ -50,6 +50,7 @@
 - The level 3 LOD pass adds close-range-only high detail for player and nearby mobs: armor straps, visor lines, body seams, torn wounds, teeth, face damage, and clothing cuts are drawn only when distance and crowd count allow it.
 - The player-detail pass adds close-range survivor equipment: chest magazines, crossed harness straps, radio light, backpack/radio pack, antenna, knee pads, helmet side module, optic, rail, and small weapon indicator while keeping the same distance-gated LOD rules.
 - The level 4 hybrid raster pass adds an internal cached image-sprite lane: player and close-range mobs now receive pre-rendered raster overlays via `drawImage`, while the existing procedural Canvas actors remain as fallback and distant/crowded rendering stays lightweight.
+- The external atlas pass adds `assets/actor-atlas-v1.png`, a real PNG sprite atlas for player, walker, runner, heavy/boss, and spitter frames. The game loads it when available and falls back to internal generated sprites if the image fails.
 - Weapons include pistol, shotgun, and machine gun. Each gun has its own ammo count and can be switched with one tap.
 - Grenades explode, mines can be placed, and molotovs leave a burning area that damages and slows zombies over time.
 - Allies can join randomly. They have visible type colors/icons: POWER, SPEED, GUARD, TRAP, SLOW, and BLADE.
