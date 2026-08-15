@@ -171,7 +171,7 @@
     const canvas = document.querySelector("#game");
     const ctx = canvas.getContext("2d");
     const actorAtlas = new Image();
-    actorAtlas.src = "assets/actor-atlas-v2.png";
+    actorAtlas.src = "assets/actor-atlas-v3.png";
     const actorAtlasCells = { player:0, walker:1, runner:2, heavy:3, spitter:4 };
     const actorAtlasActions = { idle:0, walk:1, attack:2, hit:3, death:4 };
     const stageEl = document.querySelector(".stage");
@@ -662,6 +662,14 @@
       else ctx.drawImage(img, -w / 2, -h / 2, w, h);
       ctx.restore();
     }
+    function drawRasterCorpseOverlay(c, fade, s) {
+      const actorKind = c.type === "runner" ? "runner" : c.type === "heavy" || c.type === "boss" ? "heavy" : c.type === "spitter" ? "spitter" : "walker";
+      const row = actorAtlasCells[actorKind], actionIndex = actorAtlasActions.death;
+      if (row === undefined || !actorAtlas.complete || actorAtlas.naturalWidth <= 0) return false;
+      const frame = Math.floor((1 - fade) * 8) % 2, w = s * 11.4, h = s * 7.4;
+      ctx.save(); ctx.globalAlpha *= .68; ctx.drawImage(actorAtlas, (actionIndex * 2 + frame) * 96, row * 128, 96, 128, -w / 2, -h / 2, w, h); ctx.restore();
+      return true;
+    }
     function mobDetailLevel(screenX, screenY, size, worldDist=9999) {
       if (screenX < -80 || screenY < -100 || screenX > canvas.width + 80 || screenY > canvas.height + 110) return 0;
       if (size < 2.8 || zombies.length > 125) return 0;
@@ -917,7 +925,7 @@
       actors.sort((a,b)=>a.y-b.y).forEach((actor)=>actor.draw());
     }
     function drawItem(item) { const color = item.type === "weapon" ? "#a78bfa" : item.type === "cache" ? "#fde68a" : item.type === "bombard" ? "#f97316" : item.type === "barrier" ? "#67e8f9" : item.type === "ranger" ? "#10b981" : item.type === "heal" ? "#ef4444" : "#f59e0b"; const x=sx(item.x), y=sy(item.y); sprite(x, y, sc(item.type === "cache" ? 5 : 4), color, "item"); ctx.fillStyle="#0f172a"; ctx.font=`700 ${Math.max(7,sc(8))}px Segoe UI, sans-serif`; const label = item.type === "heal" ? "+" : item.type === "ammo" ? weaponStats().ammo : item.type === "weapon" ? "UP" : item.type === "cache" ? "BOX" : item.type === "bombard" ? "B" : item.type === "barrier" ? "V" : item.type === "ranger" ? "R" : "?"; ctx.fillText(label, x - sc(10), y + sc(3)); }
-    function drawCorpse(c) { const x=sx(c.x), y=sy(c.y); if (x < -90 || y < -90 || x > canvas.width + 90 || y > canvas.height + 90) return; const fade=clamp(c.life/c.max,0,1), s=sc(c.type==="boss"?6.5:c.type==="heavy"?5.3:c.type==="crawler"?3.5:4.3)*c.size; ctx.save(); ctx.globalAlpha=.18+.58*fade; ctx.translate(x,y); ctx.rotate(c.a); shadow(0,s*1.8,s*4.6,s*.95); ellipsoid3d(0,0,s*3.2,s*1.18,c.color,.04,.92); ellipsoid3d(s*2.7,-s*.2,s*1.05,s*.88,c.traits?.decay || "#a3a3a3",-.2,.88); capsule3d(-s*2.6,-s*.65,s*3.2,s*.42,-2.7,c.traits?.pants || "#334155",.82); capsule3d(-s*2.3,s*.65,s*3.4,s*.42,2.55,c.traits?.pants || "#334155",.82); capsule3d(s*.6,-s*1.25,s*3.2,s*.38,-.3,c.traits?.decay || "#cbd5e1",.82); capsule3d(s*.5,s*1.2,s*2.7,s*.38,.34,c.traits?.decay || "#cbd5e1",.82); ctx.fillStyle="rgba(69,10,10,.7)"; ctx.fillRect(-s*.9,-s*.35,s*2.4,Math.max(1,s*.25)); ctx.restore(); }
+    function drawCorpse(c) { const x=sx(c.x), y=sy(c.y); if (x < -90 || y < -90 || x > canvas.width + 90 || y > canvas.height + 90) return; const fade=clamp(c.life/c.max,0,1), s=sc(c.type==="boss"?6.5:c.type==="heavy"?5.3:c.type==="crawler"?3.5:4.3)*c.size; ctx.save(); ctx.globalAlpha=.18+.58*fade; ctx.translate(x,y); ctx.rotate(c.a); shadow(0,s*1.8,s*4.6,s*.95); ellipsoid3d(0,0,s*3.2,s*1.18,c.color,.04,.92); ellipsoid3d(s*2.7,-s*.2,s*1.05,s*.88,c.traits?.decay || "#a3a3a3",-.2,.88); capsule3d(-s*2.6,-s*.65,s*3.2,s*.42,-2.7,c.traits?.pants || "#334155",.82); capsule3d(-s*2.3,s*.65,s*3.4,s*.42,2.55,c.traits?.pants || "#334155",.82); capsule3d(s*.6,-s*1.25,s*3.2,s*.38,-.3,c.traits?.decay || "#cbd5e1",.82); capsule3d(s*.5,s*1.2,s*2.7,s*.38,.34,c.traits?.decay || "#cbd5e1",.82); if (c.type !== "crawler") drawRasterCorpseOverlay(c, fade, s); ctx.fillStyle="rgba(69,10,10,.7)"; ctx.fillRect(-s*.9,-s*.35,s*2.4,Math.max(1,s*.25)); ctx.restore(); }
     function drawFire(f){ const pulse=Math.sin(performance.now()/120+(f.phase||0))*8; ctx.globalAlpha=.25; ctx.fillStyle="#f97316"; ctx.beginPath();ctx.arc(sx(f.x),sy(f.y),sc(f.r+pulse),0,Math.PI*2);ctx.fill();ctx.globalAlpha=.55;ctx.fillStyle="#facc15";ctx.beginPath();ctx.arc(sx(f.x),sy(f.y),sc(f.r*.55+pulse*.4),0,Math.PI*2);ctx.fill();ctx.globalAlpha=1; }
     function drawStainsAndCasings() {
       stains.forEach((s)=>{ const x=sx(s.x), y=sy(s.y); if (x < -60 || y < -60 || x > canvas.width + 60 || y > canvas.height + 60) return; ctx.save(); ctx.globalAlpha=s.alpha; ctx.translate(x,y); ctx.rotate(s.a); ctx.fillStyle=s.color; ctx.beginPath(); ctx.ellipse(0,0,sc(s.r),sc(s.r*.45),0,0,Math.PI*2); ctx.fill(); ctx.fillStyle="rgba(20,0,0,.35)"; ctx.beginPath(); ctx.ellipse(sc(s.r*.25),sc(-s.r*.04),sc(s.r*.35),sc(s.r*.12),0,0,Math.PI*2); ctx.fill(); ctx.restore(); });
