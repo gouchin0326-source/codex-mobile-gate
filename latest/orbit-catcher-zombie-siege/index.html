@@ -190,9 +190,10 @@
     const canvas = document.querySelector("#game");
     const ctx = canvas.getContext("2d");
     const actorAtlas = new Image();
-    actorAtlas.src = "assets/actor-atlas-v10-level5.png";
+    actorAtlas.src = "assets/actor-atlas-v11-level7.png";
     const actorAtlasCells = { player:0, walker:4, runner:5, heavy:6, spitter:7 };
     const actorAtlasActions = { idle:0, walk:1, attack:2, hit:3, death:4 };
+    const actorAtlasRowsPerDirection = 8;
     const playerCharacters = [
       { id:"vanguard", name:"Vanguard", row:0, hp:1.08, speed:1, stamina:1, tools:{ bombard:1, barrier:1, ranger:1 } },
       { id:"medic", name:"Medic", row:1, hp:1.22, speed:.94, stamina:1.08, tools:{ bombard:1, barrier:2, ranger:1 } },
@@ -718,16 +719,56 @@
       rasterSpriteCache.set(key, c);
       return c;
     }
+    function actorDirectionIndex(faceAngle) {
+      const ax = Math.abs(Math.cos(faceAngle)), sy = Math.sin(faceAngle);
+      if (Math.abs(sy) > .78) return sy < 0 ? 2 : 0;
+      if (ax > .82) return 1;
+      return 3;
+    }
+    function drawRigOverlay(x, y, size, kind, faceAngle, phase=0, action="idle") {
+      if (action === "death" || size < 3.7) return;
+      const actorKind = kind === "player" ? "player" : kind === "runner" ? "runner" : kind === "heavy" || kind === "boss" ? "heavy" : kind === "spitter" ? "spitter" : "walker";
+      const dir = actorDirectionIndex(faceAngle), side = Math.cos(faceAngle) < 0 ? -1 : 1, s = sc(size), step = Math.sin(phase * 2.2), attack = action === "attack" ? 1 : 0, hit = action === "hit" ? 1 : 0;
+      ctx.save();
+      ctx.translate(x, y - s * 2.6);
+      ctx.scale((dir === 1 || dir === 3) ? side : 1, 1);
+      ctx.globalAlpha *= actorKind === "player" ? .52 : .42;
+      if (actorKind === "player") {
+        const accent = selectedCharacter().id === "medic" ? "#f87171" : selectedCharacter().id === "scout" ? "#86efac" : selectedCharacter().id === "engineer" ? "#fde047" : "#38bdf8";
+        capsule3d(-s * 2.8, s * 1.8 + step * s * .22, s * (4.6 + attack * 1.6), s * .42, -.15 - attack * .12, "#334155", .86);
+        capsule3d(s * 1.4, s * 1.3 - step * s * .16, s * (5.8 + attack * 2.2), s * .34, -.05 + attack * .08, "#e5e7eb", .9);
+        capsule3d(s * 3.7, s * 1.1 - step * s * .12, s * (4.6 + attack * 1.8), s * .28, .02, "#0f172a", .92);
+        ellipsoid3d(-s * .2 + hit * s * .5, -s * 5.6 + step * s * .08, s * 1.65, s * .58, "#0f172a", 0, .92);
+        ctx.fillStyle = accent;
+        ctx.fillRect(s * 4.9, s * .65, Math.max(1, s * .5), Math.max(1, s * .22));
+      } else {
+        const skin = actorKind === "spitter" ? "#d9f99d" : actorKind === "heavy" ? "#c7d2fe" : "#d6d3a7";
+        const reach = attack ? s * 2.4 : 0;
+        capsule3d(-s * 2.6 + reach, s * 2.1 - attack * s * 1.4 + step * s * .18, s * (3.8 + attack * 1.8), s * .42, -.35 - attack * .18, skin, .76);
+        capsule3d(s * 1.6 + reach, s * 2.0 - attack * s * 1.2 - step * s * .14, s * (4.1 + attack * 1.7), s * .42, .18 + attack * .14, skin, .76);
+        ellipsoid3d(hit * s * .7, -s * 5.3 + attack * s * .7, s * 1.25, s * .9, skin, hit * .22 - attack * .08, .72);
+        if (attack) {
+          ctx.strokeStyle = "rgba(248,113,113,.9)";
+          ctx.lineWidth = Math.max(1, s * .16);
+          ctx.beginPath(); ctx.moveTo(s * 4.6, s * .6); ctx.lineTo(s * 6.2, -s * .15); ctx.stroke();
+          ctx.beginPath(); ctx.moveTo(s * 4.5, s * 1.8); ctx.lineTo(s * 6.1, s * 2.35); ctx.stroke();
+        }
+      }
+      ctx.restore();
+    }
     function drawRasterActor(x, y, size, kind, faceAngle, alpha=.72, action="idle", frame=0) {
       const actorKind = kind === "player" ? "player" : kind === "runner" ? "runner" : kind === "heavy" || kind === "boss" ? "heavy" : kind === "spitter" ? "spitter" : "walker";
       const img = rasterSprite(actorKind, frame);
-      const scale = size / 4.7, w = sc(46) * scale, h = sc(62) * scale, face = Math.cos(faceAngle) < 0 ? -1 : 1;
+      const scale = size / 4.7, w = sc(46) * scale, h = sc(62) * scale, dir = actorDirectionIndex(faceAngle), face = (dir === 1 || dir === 3) && Math.cos(faceAngle) < 0 ? -1 : 1;
       ctx.save(); ctx.globalAlpha *= alpha; ctx.translate(x, y - h * .28); ctx.scale(face, 1);
-      const row = actorKind === "player" ? selectedCharacter().row : actorAtlasCells[actorKind];
+      const baseRow = actorKind === "player" ? selectedCharacter().row : actorAtlasCells[actorKind];
+      const directional = actorAtlas.complete && actorAtlas.naturalHeight >= 128 * actorAtlasRowsPerDirection * 4;
+      const row = (directional ? dir * actorAtlasRowsPerDirection : 0) + baseRow;
       const actionIndex = actorAtlasActions[action] ?? 0;
       if (row !== undefined && actorAtlas.complete && actorAtlas.naturalWidth > 0) ctx.drawImage(actorAtlas, (actionIndex * 2 + (frame % 2)) * 96, row * 128, 96, 128, -w / 2, -h / 2, w, h);
       else ctx.drawImage(img, -w / 2, -h / 2, w, h);
       ctx.restore();
+      if (directional && alpha > .88) drawRigOverlay(x, y, size, actorKind, faceAngle, performance.now() / 260 + frame, action);
     }
     function drawRasterCorpseOverlay(c, fade, s) {
       const actorKind = c.type === "runner" ? "runner" : c.type === "heavy" || c.type === "boss" ? "heavy" : c.type === "spitter" ? "spitter" : "walker";

@@ -62,6 +62,7 @@
 - The fun/scale pass makes the player character smaller to match other actors, reduces player collision radius, and adds a kill combo system that can trigger ADRENALINE for faster movement, firing cadence, and reload tempo.
 - The gameplay expansion pass implements every proposed feature except the run-time 3-choice upgrade screen: survivor active skills, rotating area modifiers, elite mutated zombies, cache ambushes, weapon mastery XP, stronger skill-readable HUD, Engineer auto turrets, wave pressure events, and richer export telemetry.
 - The level 5 character-art pass adds `assets/actor-atlas-v10-level5.png`: heavier non-stick limbs, clearer tactical vests, helmets, magazines, colored class silhouettes, bulkier zombie bodies, attack jaws, wounds, and readable death poses while keeping the same lightweight 96x128 action-sheet grid.
+- The level 6/7 character-motion pass adds `assets/actor-atlas-v11-level7.png`: a 4-direction action-sheet layout plus lightweight runtime part-rig overlays for close actors, so heads, arms, weapons, zombie reach, side/back facing, and diagonal movement read more naturally while preserving 60fps mobile play.
 - Weapons include pistol, shotgun, and machine gun. Each gun has its own ammo count and can be switched with one tap.
 - Grenades explode, mines can be placed, and molotovs leave a burning area that damages and slows zombies over time.
 - Allies can join randomly. They have visible type colors/icons: POWER, SPEED, GUARD, TRAP, SLOW, and BLADE.
