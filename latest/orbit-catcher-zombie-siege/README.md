@@ -57,6 +57,7 @@
 - The action-sheet v5 pass makes the mobs read more like zombies with hunched forward posture, decayed skin, torn natural clothing, open-mouth attack faces, asymmetric arms, wounds, and cleaner tactical survivor clothing.
 - The character-select pass adds `assets/actor-atlas-v6.png` with four selectable survivors: Vanguard, Medic, Scout, and Engineer. Each survivor has a distinct atlas row plus different HP, speed, stamina recovery, and starting tools.
 - The character-atlas v7 fix replaces the broken recolor-generated survivor rows with clean hand-drawn variant rows, keeping shadows and body parts separate so each selectable character renders without collapsed shapes.
+- The joint-atlas v8 pass adds visible shoulder, elbow, knee, and boot volumes to survivors and mobs so limbs read as connected body parts instead of simple sticks.
 - Weapons include pistol, shotgun, and machine gun. Each gun has its own ammo count and can be switched with one tap.
 - Grenades explode, mines can be placed, and molotovs leave a burning area that damages and slows zombies over time.
 - Allies can join randomly. They have visible type colors/icons: POWER, SPEED, GUARD, TRAP, SLOW, and BLADE.
