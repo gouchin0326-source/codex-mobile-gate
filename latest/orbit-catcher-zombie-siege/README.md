@@ -60,6 +60,7 @@
 - The joint-atlas v8 pass adds visible shoulder, elbow, knee, and boot volumes to survivors and mobs so limbs read as connected body parts instead of simple sticks.
 - The anime-atlas v9 pass switches the actor taste to cleaner anime-style silhouettes with thick outlines, simplified faces, high-contrast survivor outfits, readable zombie faces, and smooth canvas image rendering.
 - The fun/scale pass makes the player character smaller to match other actors, reduces player collision radius, and adds a kill combo system that can trigger ADRENALINE for faster movement, firing cadence, and reload tempo.
+- The gameplay expansion pass implements every proposed feature except the run-time 3-choice upgrade screen: survivor active skills, rotating area modifiers, elite mutated zombies, cache ambushes, weapon mastery XP, stronger skill-readable HUD, Engineer auto turrets, wave pressure events, and richer export telemetry.
 - Weapons include pistol, shotgun, and machine gun. Each gun has its own ammo count and can be switched with one tap.
 - Grenades explode, mines can be placed, and molotovs leave a burning area that damages and slows zombies over time.
 - Allies can join randomly. They have visible type colors/icons: POWER, SPEED, GUARD, TRAP, SLOW, and BLADE.
