@@ -435,9 +435,11 @@
 
     function openHaTicket(payload) {
       const url = new URL(HA_CG_URL);
-      url.searchParams.set("g", payload.goal);
-      url.searchParams.set("f", payload.files);
-      url.searchParams.set("a", payload.accept);
+      url.hash = new URLSearchParams({
+        g: payload.goal,
+        f: payload.files,
+        a: payload.accept
+      }).toString();
       window.location.href = url.toString();
     }
 
