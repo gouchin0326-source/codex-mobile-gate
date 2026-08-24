@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
@@ -109,7 +109,8 @@
     }
 
     .metrics,
-    .shelf {
+    .shelf,
+    .bridge {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 7px;
@@ -158,6 +159,11 @@
       color: var(--muted);
       font-size: .69rem;
       line-height: 1.25;
+    }
+
+    .bridge .tile {
+      min-height: 86px;
+      border-top-color: var(--green);
     }
 
     .lane-now {
@@ -222,6 +228,78 @@
       text-align: center;
     }
 
+    .ha-line {
+      border-top: 5px solid var(--green);
+    }
+
+    .ha-line p {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: .76rem;
+      line-height: 1.45;
+    }
+
+    .ha-form {
+      display: grid;
+      gap: 7px;
+    }
+
+    .ha-form label {
+      display: grid;
+      gap: 3px;
+      color: var(--ink);
+      font-size: .76rem;
+      font-weight: 900;
+    }
+
+    .ha-form input,
+    .ha-form textarea {
+      width: 100%;
+      min-height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px;
+      color: var(--ink);
+      background: #ffffff;
+      font: inherit;
+      font-size: .78rem;
+      line-height: 1.35;
+    }
+
+    .ha-form textarea {
+      min-height: 64px;
+      resize: vertical;
+    }
+
+    .ha-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+    }
+
+    .ha-actions button,
+    .ha-actions a {
+      min-height: 44px;
+      border: 1px solid var(--blue);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      padding: 8px;
+      background: var(--blue);
+      color: #ffffff;
+      text-decoration: none;
+      font: inherit;
+      font-size: .76rem;
+      font-weight: 900;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .ha-actions .secondary {
+      background: #ffffff;
+      color: var(--blue);
+    }
+
     @media (max-width: 560px) {
       .wrap { width: min(100% - 14px, 430px); }
       .top { grid-template-columns: 1fr auto; }
@@ -232,7 +310,8 @@
       .metric { padding: 6px 5px; }
       .metric strong { font-size: 1.05rem; }
       .metric span { font-size: .62rem; }
-      .shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .shelf,
+      .bridge { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .tile { min-height: 66px; padding: 7px; }
       .lane-now { grid-template-columns: 58px 1fr 58px; gap: 6px; }
       .badge { min-height: 52px; font-size: .66rem; }
@@ -241,6 +320,7 @@
       .go { min-height: 42px; padding: 7px; font-size: .68rem; }
       .flow { grid-template-columns: repeat(4, 1fr); }
       .step { padding: 6px 2px; font-size: .62rem; }
+      .ha-actions { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -252,17 +332,43 @@
         <p class="tagline">CODEX Gate / 今日の成果物へすぐ入る入口</p>
       </div>
       <button class="refresh" id="force-update" type="button">最新版に更新</button>
-      <div class="date">更新 2026-08-11</div>
+      <div class="date">更新 2026-08-24</div>
     </div>
   </header>
 
   <main class="wrap">
     <section aria-label="status summary">
       <div class="metrics">
-        <div class="metric"><strong>19</strong><span>アプリ</span></div>
-        <div class="metric"><strong>17</strong><span>企画</span></div>
-        <div class="metric"><strong>25</strong><span>成果物</span></div>
-        <div class="metric"><strong>15</strong><span>レーン</span></div>
+        <div class="metric"><strong>17</strong><span>アプリ</span></div>
+        <div class="metric"><strong>16</strong><span>企画</span></div>
+        <div class="metric"><strong>21</strong><span>成果物</span></div>
+        <div class="metric"><strong>10</strong><span>レーン</span></div>
+      </div>
+    </section>
+
+    <section class="ha-line">
+      <h2>HA協働開発ライン</h2>
+      <p>CGで見つけた改善を、HAのCodex依頼へそのまま渡します。HA側で検査してからCodexを動かします。</p>
+      <form class="ha-form" id="ha-dev-form">
+        <label>作りたいこと
+          <input id="ha-goal" value="Zombie Siegeをスマホ実機で遊びやすく改善する">
+        </label>
+        <label>対象ファイル
+          <input id="ha-files" value="C:/CODEX/projects/orbit-catcher-zombie-siege/index.html,C:/CODEX/public-mobile/orbit-catcher-zombie-siege/index.html">
+        </label>
+        <label>終わりの条件
+          <textarea id="ha-accept">スマホCGで開けること。操作部品が重ならず、結果を書き出せること。public-mobile と pages-site に同期されていること。</textarea>
+        </label>
+        <div class="ha-actions">
+          <button type="submit">HAで検査チケットを作る</button>
+          <button class="secondary" type="button" id="ha-export">ブリーフを書き出す</button>
+        </div>
+      </form>
+      <div class="flow" aria-label="HA Codex development flow" style="margin-top:8px">
+        <div class="step">CGで確認</div>
+        <div class="step">HAへ送る</div>
+        <div class="step">Codex実装</div>
+        <div class="step">CG掲載</div>
       </div>
     </section>
 
@@ -279,19 +385,18 @@
     <section>
       <h2>最新レーン</h2>
       <div class="lane-now">
-        <div class="badge">NEW<br>0805</div>
+        <div class="badge">NEW<br>0731</div>
         <div>
-          <strong>0805 外部AIレーン通し実行テスト</strong>
-          <p>CG掲載済みの外部AI系レーンを起点に、データセット、成果物作成、CSD登録、CG掲載までを確認します。</p>
+          <strong>外部AIブリーフ圧縮器</strong>
+          <p>スマホから成果物の詳細をセットし、曖昧さ、超概算トークン、GOサインまで見える化します。</p>
         </div>
-        <a class="go" href="./latest/external-ai-lane-run-0805/index.html">開く</a>
+        <a class="go" href="./latest/external-ai-brief-compressor/index.html">開く</a>
       </div>
     </section>
 
     <section>
       <h2>掲載済みコンテンツ</h2>
       <div class="shelf">
-        <a class="tile" href="./latest/external-ai-lane-run-0805/index.html"><strong>0805 外部AIレーン通し実行テスト</strong><small>データセットからCG掲載まで検証</small></a>
         <a class="tile" href="./latest/external-ai-brief-compressor/index.html"><strong>外部AIブリーフ圧縮器</strong><small>詳細セットとGO判定</small></a>
         <a class="tile" href="./latest/eco-lane-map/index.html"><strong>エコレーン実装マップ</strong><small>節約型CG開発を可視化</small></a>
         <a class="tile" href="./latest/focus-session-cards/index.html"><strong>集中セッションカード</strong><small>短時間集中ログを書き出す</small></a>
@@ -316,6 +421,47 @@
   </main>
 
   <script>
+    const HA_CG_URL = "https://node.taile51672.ts.net/cg/";
+
+    function haPayload() {
+      return {
+        source: "smartphone-cg",
+        updatedAt: new Date().toISOString(),
+        goal: document.querySelector("#ha-goal")?.value.trim() || "",
+        files: document.querySelector("#ha-files")?.value.trim() || "",
+        accept: document.querySelector("#ha-accept")?.value.trim() || ""
+      };
+    }
+
+    function openHaTicket(payload) {
+      const url = new URL(HA_CG_URL);
+      url.searchParams.set("g", payload.goal);
+      url.searchParams.set("f", payload.files);
+      url.searchParams.set("a", payload.accept);
+      window.location.href = url.toString();
+    }
+
+    function downloadHaBrief(payload) {
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "cg-ha-codex-brief.json";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    document.querySelector("#ha-dev-form")?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      openHaTicket(haPayload());
+    });
+
+    document.querySelector("#ha-export")?.addEventListener("click", () => {
+      downloadHaBrief(haPayload());
+    });
+
     async function forceUpdate() {
       const button = document.querySelector("#force-update");
       if (button) button.textContent = "更新中";
@@ -340,4 +486,3 @@
   </script>
 </body>
 </html>
-
