@@ -1,18 +1,16 @@
-const CACHE = "codex-gate-v70";
+const CACHE = "codex-gate-v71-20260903";
 const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
   "./icon.svg",
   "./latest/dashboard.html",
   "./latest/app-launcher.html",
+  "./latest/index.html",
+  "./latest/external-ai-lane-run-0805/index.html",
+  "./latest/projects/external-ai-lane-run-0805/index.html",
   "./latest/quick-notes-board/index.html",
   "./latest/orbit-catcher/index.html",
   "./latest/orbit-catcher-zombie-siege/index.html",
-  "./latest/orbit-catcher-zombie-siege/assets/actor-atlas-v11-level7.png",
-  "./latest/orbit-catcher-zombie-siege/assets/player-atlas-v15-vanguard.png",
-  "./latest/orbit-catcher-zombie-siege/assets/player-atlas-v15-medic.png",
-  "./latest/orbit-catcher-zombie-siege/assets/player-atlas-v15-scout.png",
-  "./latest/orbit-catcher-zombie-siege/assets/player-atlas-v15-engineer.png",
   "./latest/codex-data-pocket/index.html",
   "./latest/cat-affinity-lane/index.html",
   "./latest/cat-affinity-lane/assets/cat-hero.png",

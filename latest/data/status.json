@@ -1,8 +1,8 @@
 {
-    "generated_at":  "2026-08-05T06:29:33",
+    "generated_at":  "2026-09-03T00:00:00",
     "root":  "C:\\Codex",
-    "apps":  19,
-    "projects":  20,
+    "apps":  20,
+    "projects":  21,
     "local_llm":  {
                       "ollama":  "ok",
                       "latest_check":  "ollama-check-20260707-145208.txt",
@@ -30,8 +30,8 @@
                          "daily_limit_percent":  13,
                          "mode":  "extreme-saving",
                          "local_llm_usage":  "disabled",
-                         "primitive_prompt_rule":  "Keep it short, but do not remove accuracy notes, cautions, or code uncertainty.",
-                         "primitive_prompt_template":  "Conclusion: \u003canswer first\u003e\nReason: \u003cone line\u003e\nSteps: \u003conly what is needed\u003e\nCaution: \u003cimportant unknowns only\u003e\nAvoid: long preface, greeting, long background"
+                         "primitive_prompt_rule":  "Use symbol commands, no honorifics, shortest words, and route progress to CG/files.",
+                         "primitive_prompt_template":  "状態: 実行中|完了|詰まり\n成果: <1行>\n次: <1行>"
                      },
     "config":  {
                    "path":  "C:\\Users\\tsuyo\\.codex\\config.toml",
@@ -40,9 +40,9 @@
                    "changed_by_codex":  true
                },
     "current_task":  {
-                         "date":  "2026-08-05",
-                         "objective":  "2026-08-03 task - create a serious falling-block puzzle app through the CODEX eco-lane.",
-                         "scope":  "`C:\\Codex` Cascade Forge static game, falling-block eco-lane, external AI brief export, app/artifact/CODEX lane/CSD ledgers, public copies, dashboard/status, and progress log only. No local LLM/GPU.",
-                         "acceptance":  "Cascade Forge is a mobile-first falling-block puzzle with seven pieces, collision, rotation, soft/hard drop, hold, next queue, ghost, line clears, combo missions, local records, external AI brief copy, JSON/Markdown/result export, CG/CSD registration, public copies, dashboard/status generation, and deterministic checks."
+                         "date":  "2026-09-03",
+                         "objective":  "Refresh CG development status for symbol-command, low-token Codex operation.",
+                         "scope":  "`C:\\Codex` CG console, reports, status data, progress log only. No local LLM/GPU.",
+                         "acceptance":  "CG shows 0903 progress, symbol commands, no-honorific low-output rules, and linked status report."
                      }
 }
