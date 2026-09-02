@@ -304,26 +304,34 @@
       border-top: 5px solid var(--amber);
     }
 
-    .codexgate-status .status-grid,
-    .codexgate-status .cmd-grid {
+    .codexgate-status .icon-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 7px;
     }
 
-    .codexgate-status .cmd-grid {
-      margin-top: 8px;
-    }
-
-    .codexgate-status button {
-      min-height: 42px;
+    .icon-tile {
+      min-height: 82px;
+      display: grid;
+      place-items: center;
+      gap: 4px;
       border: 1px solid var(--line);
       border-radius: 8px;
-      background: #ffffff;
+      background: #f9fafb;
+      text-align: center;
+      text-decoration: none;
       color: var(--ink);
-      font: inherit;
-      font-size: .76rem;
+    }
+
+    .icon-tile b {
+      font-size: 1.35rem;
+      line-height: 1;
+    }
+
+    .icon-tile span {
+      font-size: .7rem;
       font-weight: 900;
+      line-height: 1.15;
     }
 
     @media (max-width: 560px) {
@@ -347,8 +355,7 @@
       .flow { grid-template-columns: repeat(4, 1fr); }
       .step { padding: 6px 2px; font-size: .62rem; }
       .ha-actions { grid-template-columns: 1fr; }
-      .codexgate-status .status-grid,
-      .codexgate-status .cmd-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .codexgate-status .icon-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
   </style>
 </head>
@@ -357,64 +364,23 @@
     <div class="wrap top">
       <div>
         <h1>CG</h1>
-        <p class="tagline">CODEX Gate / 今日の成果物へすぐ入る入口 / 更新 2026-09-03 08:25 JST</p>
+        <p class="tagline">CODEX Gate / 今日の成果物へすぐ入る入口 / 更新 2026-09-03 08:50 JST</p>
       </div>
       <button class="refresh" id="force-update" type="button">最新版に更新</button>
-      <div class="date">更新 2026-09-03 08:25 JST</div>
+      <div class="date">更新 2026-09-03 08:50 JST</div>
     </div>
   </header>
 
   <main class="wrap">
     <section class="codexgate-status">
-      <h2>CODEXGATE 0903</h2>
-      <div class="status-grid">
-        <div class="metric"><strong>完了</strong><span>低出力</span></div>
-        <div class="metric"><strong>敬語なし</strong><span>返答</span></div>
-        <div class="metric"><strong>20行</strong><span>外部AI</span></div>
-        <div class="metric"><strong>3行</strong><span>Codex</span></div>
+      <h2>CODEXGATE</h2>
+      <div class="icon-grid">
+        <a class="icon-tile" href="./app-launcher.html"><b>▦</b><span>棚</span></a>
+        <a class="icon-tile" href="./dashboard.html"><b>◎</b><span>状態</span></a>
+        <a class="icon-tile" href="./external-ai-brief-compressor/index.html"><b>⇄</b><span>圧縮</span></a>
+        <a class="icon-tile" href="./orbit-catcher-zombie-siege/index.html"><b>▶</b><span>体験</span></a>
       </div>
-      <div class="cmd-grid">
-        <button type="button" data-symbol="b1実行">b1実行</button>
-        <button type="button" data-symbol="b1検収">b1検収</button>
-        <button type="button" data-symbol="b1修正">b1修正</button>
-        <button type="button" data-symbol="s">s</button>
-      </div>
-      <p class="muted">最終更新: 2026-09-03 08:25 JST / CG=CODEXGATE / 進捗は reports/codex_progress_0903.jsonl</p>
-    </section>
-
-    <section aria-label="status summary">
-      <div class="metrics">
-        <div class="metric"><strong>17</strong><span>アプリ</span></div>
-        <div class="metric"><strong>16</strong><span>企画</span></div>
-        <div class="metric"><strong>21</strong><span>成果物</span></div>
-        <div class="metric"><strong>10</strong><span>レーン</span></div>
-      </div>
-    </section>
-
-    <section class="ha-line">
-      <h2>HA協働開発ライン</h2>
-      <p>CGで見つけた改善を、HAのCodex依頼へそのまま渡します。HA側で検査してからCodexを動かします。</p>
-      <form class="ha-form" id="ha-dev-form">
-        <label>作りたいこと
-          <input id="ha-goal" value="Zombie Siegeをスマホ実機で遊びやすく改善する">
-        </label>
-        <label>対象ファイル
-          <input id="ha-files" value="C:/CODEX/projects/orbit-catcher-zombie-siege/index.html,C:/CODEX/public-mobile/orbit-catcher-zombie-siege/index.html">
-        </label>
-        <label>終わりの条件
-          <textarea id="ha-accept">スマホCGで開けること。操作部品が重ならず、結果を書き出せること。public-mobile と pages-site に同期されていること。</textarea>
-        </label>
-        <div class="ha-actions">
-          <button type="submit">HAで検査チケットを作る</button>
-          <button class="secondary" type="button" id="ha-export">ブリーフを書き出す</button>
-        </div>
-      </form>
-      <div class="flow" aria-label="HA Codex development flow" style="margin-top:8px">
-        <div class="step">CGで確認</div>
-        <div class="step">HAへ送る</div>
-        <div class="step">Codex実装</div>
-        <div class="step">CG掲載</div>
-      </div>
+      <p class="muted">最終更新: 2026-09-03 08:50 JST / CG=CODEXGATE / 独自開発入口</p>
     </section>
 
     <section>
@@ -500,20 +466,6 @@
       URL.revokeObjectURL(url);
     }
 
-    function setSymbolCommand(cmd) {
-      const map = {
-        "b1実行": ["b1実行 / 次の1件", "C:/Codex/inbox", "受入条件を満たし、metaとprogressを更新"],
-        "b1検収": ["b1検収 / 直近成果物", "C:/Codex/reports/codex_progress_0903.jsonl", "合否だけ出る"],
-        "b1修正": ["b1修正 / NGだけ", "C:/Codex", "NGが消える"],
-        "s": ["s / 状態", "C:/Codex/reports/codex_progress_0903.jsonl", "3行以内"]
-      };
-      const v = map[cmd];
-      if (!v) return;
-      document.querySelector("#ha-goal").value = v[0];
-      document.querySelector("#ha-files").value = v[1];
-      document.querySelector("#ha-accept").value = v[2];
-    }
-
     document.querySelector("#ha-dev-form")?.addEventListener("submit", (event) => {
       event.preventDefault();
       openHaTicket(haPayload());
@@ -521,10 +473,6 @@
 
     document.querySelector("#ha-export")?.addEventListener("click", () => {
       downloadHaBrief(haPayload());
-    });
-
-    document.querySelectorAll("[data-symbol]").forEach((button) => {
-      button.addEventListener("click", () => setSymbolCommand(button.dataset.symbol || ""));
     });
 
     async function forceUpdate() {
@@ -551,3 +499,4 @@
   </script>
 </body>
 </html>
+
