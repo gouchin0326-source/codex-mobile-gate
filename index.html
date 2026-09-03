@@ -409,6 +409,52 @@
       overflow-wrap: anywhere;
     }
 
+    .info-feed {
+      display: grid;
+      gap: 7px;
+      margin-top: 8px;
+    }
+
+    .feed-item {
+      display: grid;
+      grid-template-columns: 42px 1fr auto;
+      gap: 8px;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 7px;
+      color: var(--ink);
+      text-decoration: none;
+      background: #f9fafb;
+    }
+
+    .feed-item b {
+      display: grid;
+      place-items: center;
+      min-height: 34px;
+      border-radius: 10px;
+      background: #172033;
+      color: white;
+      font-size: .72rem;
+    }
+
+    .feed-item span {
+      min-width: 0;
+      font-size: .74rem;
+      font-weight: 900;
+      line-height: 1.2;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    .feed-item i {
+      font-style: normal;
+      color: var(--rose);
+      font-weight: 900;
+    }
+
     .updated::after {
       content: "!";
       position: absolute;
@@ -453,6 +499,7 @@
       .glyph { width: 42px; height: 42px; border-radius: 12px; font-size: 1.15rem; }
       .app-icon { min-height: 76px; padding: 4px 2px; }
       .app-icon span { font-size: .6rem; }
+      .feed-item { grid-template-columns: 36px 1fr auto; }
     }
   </style>
 </head>
@@ -491,6 +538,9 @@
         <a class="app-icon updated" href="https://openai.com/"><b class="glyph g-dev">O</b><span>OpenAI</span></a>
         <a class="app-icon updated" href="https://learn.chatgpt.com/docs/whats-new"><b class="glyph g-dev">i</b><span>iOS改善</span></a>
         <a class="app-icon updated" href="https://blog.jetbrains.com/research/2026/08/ai-coding-agent-adoption-2026/"><b class="glyph g-data">率</b><span>利用率</span></a>
+      </div>
+      <div class="info-feed" id="free-info-feed">
+        <a class="feed-item" href="./latest/data/free-info.json"><b>待</b><span>無料取得データ待ち</span><i>!</i></a>
       </div>
     </section>
 
@@ -553,6 +603,18 @@
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("sw.js").catch(() => {});
     }
+    fetch("./latest/data/free-info.json?v=" + Date.now())
+      .then((res) => res.ok ? res.json() : null)
+      .then((data) => {
+        if (!data || !Array.isArray(data.items)) return;
+        const box = document.querySelector("#free-info-feed");
+        if (!box) return;
+        box.innerHTML = data.items.slice(0, 5).map((item) => {
+          const mark = item.score >= 3 ? "!" : "";
+          return `<a class="feed-item" href="${item.url || './data/free-info.json'}"><b>${item.genre || item.label || '情'}</b><span>${item.title || '無題'}</span><i>${mark}</i></a>`;
+        }).join("");
+      })
+      .catch(() => {});
   </script>
 </body>
 </html>

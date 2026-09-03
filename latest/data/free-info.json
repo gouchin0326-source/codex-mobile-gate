@@ -1,0 +1,398 @@
+{
+  "updatedAt": "2026-09-03T14:36:18.406625+00:00",
+  "mode": "free-fetch",
+  "codexTokenUse": "0 when run by GitHub Actions",
+  "sources": [
+    {
+      "id": "openai",
+      "label": "OpenAI",
+      "genre": "AI",
+      "type": "rss",
+      "url": "https://openai.com/news/rss.xml"
+    },
+    {
+      "id": "github-blog",
+      "label": "GitHub",
+      "genre": "開発",
+      "type": "rss",
+      "url": "https://github.blog/feed/"
+    },
+    {
+      "id": "github-changelog",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "type": "rss",
+      "url": "https://github.blog/changelog/feed/"
+    },
+    {
+      "id": "hn",
+      "label": "HN",
+      "genre": "技術",
+      "type": "rss",
+      "url": "https://hnrss.org/frontpage"
+    },
+    {
+      "id": "arxiv-ai",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "type": "rss",
+      "url": "https://export.arxiv.org/rss/cs.AI"
+    },
+    {
+      "id": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "type": "json",
+      "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
+    }
+  ],
+  "items": [
+    {
+      "source": "github-changelog",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "title": "Claude Fable 5.1 is generally available in GitHub Copilot",
+      "summary": "Claude Fable 5.1 from Anthropic is now available in GitHub Copilot. The latest model in Anthropic’s Mythos class, Claude Fable 5.1 is designed for long-horizon, autonomous coding and knowledge-work tasks.… The post Claud",
+      "url": "https://github.blog/changelog/2026-09-01-claude-fable-5-1-generally-available-in-github-copilot",
+      "published": "2026-09-01T14:29:23+00:00",
+      "score": 5,
+      "tags": [
+        "開発",
+        "重要",
+        "制作",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "title": "Architecting Conversational Data Systems for Stateless LLM APIs: The Hydration Proxy Pattern",
+      "summary": "arXiv:2609.01834v1 Announce Type: new Abstract: As enterprise platforms transition to conversational reasoning interfaces, the stateless nature of LLM APIs creates an architectural gap. While statelessness enables horizo",
+      "url": "https://arxiv.org/abs/2609.01834",
+      "published": "2026-09-03T04:00:00+00:00",
+      "score": 4,
+      "tags": [
+        "論文",
+        "重要",
+        "開発",
+        "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "title": "Enterprise-managed settings support any default model",
+      "summary": "You can now set your preferred GitHub Copilot model as the default for new conversations through enterprise-managed settings. This lets you choose the default model that best fits your workflows.… The post Enterprise-man",
+      "url": "https://github.blog/changelog/2026-09-02-enterprise-managed-settings-support-any-default-model",
+      "published": "2026-09-02T18:51:12+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "title": "CodeQL 2.26.4 improves GitHub actions security detections",
+      "summary": "CodeQL is the static analysis engine behind GitHub code scanning, which finds and remediates security issues in your code. We’ve recently released CodeQL 2.26.4, which adds support for Go 1.27,… The post CodeQL 2.26.4 im",
+      "url": "https://github.blog/changelog/2026-09-03-codeql-2-26-4-improves-github-actions-security-detections",
+      "published": "2026-09-03T14:04:59+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "hn",
+      "label": "HN",
+      "genre": "技術",
+      "title": "Audacity 4.0",
+      "summary": "Article URL: https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0 Comments URL: https://news.ycombinator.com/item?id=49548395 Points: 450 # Comments: 110",
+      "url": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0",
+      "published": "2026-09-03T10:53:08+00:00",
+      "score": 3,
+      "tags": [
+        "技術",
+        "重要",
+        "開発"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "title": "The Memory Trust Gap: Capability-Dependent Failures in Persistent-Memory Agents",
+      "summary": "arXiv:2609.01852v1 Announce Type: new Abstract: Persistent memory supports personalized agents, but a stale stored fact can override current authoritative evidence without warning. We study when this harm begins as model",
+      "url": "https://arxiv.org/abs/2609.01852",
+      "published": "2026-09-03T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "label": "GitHub",
+      "genre": "開発",
+      "title": "Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh my!",
+      "summary": "From loop engineering to harnesses, squads, and open weights, the GitHub Podcast breaks down the AI terms showing up in developer conversations. The post Decoding the new AI lingo: Loops, harnesses, squads, hill climbing",
+      "url": "https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/",
+      "published": "2026-09-02T21:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "title": "Content exclusions generally available in Copilot app and CLI",
+      "summary": "The GitHub Copilot app and Copilot CLI now respect content exclusion policies configured by enterprise, organization, and repository administrators. Copilot won’t use excluded files as context, helping you protect sensit",
+      "url": "https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-copilot-app-and-cli",
+      "published": "2026-09-02T18:14:23+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "label": "GitHub",
+      "genre": "開発",
+      "title": "How we make AI coding more cost efficient without sacrificing task quality",
+      "summary": "Why shorter outputs can cost more, and how GitHub Copilot reduces wasted work across the complete coding task. The post How we make AI coding more cost efficient without sacrificing task quality appeared first on The Git",
+      "url": "https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/",
+      "published": "2026-09-02T18:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "title": "Enterprise Live Migrations from GHES to ghe.com generally available",
+      "summary": "Enterprise Live Migrations (ELM) is now generally available, enabling near-zero-downtime repository migrations from GitHub Enterprise Server (GHES) to GitHub Enterprise Cloud with Data Residency (GHEC DR), so you can mov",
+      "url": "https://github.blog/changelog/2026-09-01-enterprise-live-migrations-from-ghes-to-ghe-com-generally-available",
+      "published": "2026-09-01T22:24:27+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "title": "Set an expiration date for individual user budgets",
+      "summary": "You can now set an optional expiration date on an individual user budget, and GitHub removes the budget on that date. This capability is generally available. The user then falls… The post Set an expiration date for indiv",
+      "url": "https://github.blog/changelog/2026-09-01-set-an-expiration-date-for-individual-user-budgets",
+      "published": "2026-09-01T20:23:13+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "label": "OpenAI",
+      "genre": "AI",
+      "title": "How AI-native companies turn workflows into operating capability",
+      "summary": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
+      "url": "https://openai.com/index/ai-native-company-workflows",
+      "published": "2026-09-01T17:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "開発"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "title": "Block users from discussion comments in personal repositories",
+      "summary": "You can now block or unblock users directly from discussion comments in repositories owned by personal GitHub accounts, extending the in-context blocking controls already available for issue and pull request… The post Bl",
+      "url": "https://github.blog/changelog/2026-09-01-block-users-from-discussion-comments-in-personal-repositories",
+      "published": "2026-09-01T16:30:01+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "label": "OpenAI",
+      "genre": "AI",
+      "title": "Path to Astra: critical capabilities and frontier safeguards",
+      "summary": "Astra is the first OpenAI model to meet the Critical cybersecurity capability threshold under the Preparedness Framework, with stronger safeguards for release.",
+      "url": "https://openai.com/index/path-to-astra",
+      "published": "2026-09-01T13:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "openai",
+      "label": "OpenAI",
+      "genre": "AI",
+      "title": "Polimill builds Japan's next-generation public AI infrastructure",
+      "summary": "Polimill uses OpenAI GPT models and Codex to help municipalities search and use administrative knowledge while accelerating development.",
+      "url": "https://openai.com/index/polimill",
+      "published": "2026-08-31T07:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "label": "GitHub",
+      "genre": "開発",
+      "title": "OpenClaw went viral. Meet the maintainers building and securing it.",
+      "summary": "OpenClaw is the fastest-growing project in GitHub history. Peter Steinberger and several maintainers share what they learned in the project's first six months. The post OpenClaw went viral. Meet the maintainers building ",
+      "url": "https://github.blog/open-source/maintainers/openclaw-went-viral-meet-the-maintainers-building-and-securing-it/",
+      "published": "2026-08-27T16:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "label": "GitHub",
+      "genre": "開発",
+      "title": "GitHub Copilot app for Beginners: Automate Dependabot pull request triage",
+      "summary": "Managing library updates can be tedious at times. Learn how the GitHub Copilot app can handle this type of repetitive task. The post GitHub Copilot app for Beginners: Automate Dependabot pull request triage appeared firs",
+      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/",
+      "published": "2026-08-26T20:12:53+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "label": "GitHub",
+      "genre": "開発",
+      "title": "How to evaluate LLMs before production",
+      "summary": "These are the lessons we learned evaluating LLMs for real-world secret scanning. The post How to evaluate LLMs before production appeared first on The GitHub Blog .",
+      "url": "https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/",
+      "published": "2026-08-25T21:35:11+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "label": "GitHub",
+      "genre": "開発",
+      "title": "Your alt text passes automated checks. That doesn’t mean it’s any good.",
+      "summary": "We built a plugin for the GitHub Accessibility Scanner to make sure your alt text is actually accessible. Here's how it works. The post Your alt text passes automated checks. That doesn’t mean it’s any good. appeared fir",
+      "url": "https://github.blog/engineering/user-experience/your-alt-text-passes-automated-checks-that-doesnt-mean-its-any-good/",
+      "published": "2026-08-24T20:56:32+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "label": "GitHub",
+      "genre": "開発",
+      "title": "The August 17 outage, and the work ahead",
+      "summary": "An update on the August 17 outage and the steps we're taking to improve reliability. The post The August 17 outage, and the work ahead appeared first on The GitHub Blog .",
+      "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
+      "published": "2026-08-20T18:36:11+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "label": "GitHub",
+      "genre": "開発",
+      "title": "GitHub Copilot app for Beginners: Managing your work",
+      "summary": "If you’re juggling multiple Copilot sessions, use the My work pane to track what's in flight, what's done, and what's next. The post GitHub Copilot app for Beginners: Managing your work appeared first on The GitHub Blog ",
+      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-managing-your-work/",
+      "published": "2026-08-19T17:50:23+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "hn",
+      "label": "HN",
+      "genre": "技術",
+      "title": "Elevated Errors for Multiple Models",
+      "summary": "Article URL: https://status.claude.com/incidents/461yvfrzpwtt Comments URL: https://news.ycombinator.com/item?id=49549676 Points: 73 # Comments: 48",
+      "url": "https://status.claude.com/incidents/461yvfrzpwtt",
+      "published": "2026-09-03T13:29:12+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "研究"
+      ]
+    },
+    {
+      "source": "hn",
+      "label": "HN",
+      "genre": "技術",
+      "title": "A dark horse enters China's AI race: StartLux",
+      "summary": "Article URL: https://chinaonchina.com/article/chen-dawei-returns-enters-the-large-model-sector Comments URL: https://news.ycombinator.com/item?id=49548530 Points: 39 # Comments: 18",
+      "url": "https://chinaonchina.com/article/chen-dawei-returns-enters-the-large-model-sector",
+      "published": "2026-09-03T11:12:57+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "title": "EvalDetectBench: A Benchmark for Measuring Evaluation Awareness in Frontier Language Models",
+      "summary": "arXiv:2609.01611v1 Announce Type: new Abstract: Frontier large language models can often recognize when they are being evaluated, a capability known as evaluation awareness. If models behave differently in evaluations th",
+      "url": "https://arxiv.org/abs/2609.01611",
+      "published": "2026-09-03T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    }
+  ],
+  "errors": []
+}

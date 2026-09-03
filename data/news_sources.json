@@ -1,0 +1,44 @@
+[
+  {
+    "id": "openai",
+    "label": "OpenAI",
+    "genre": "AI",
+    "type": "rss",
+    "url": "https://openai.com/news/rss.xml"
+  },
+  {
+    "id": "github-blog",
+    "label": "GitHub",
+    "genre": "開発",
+    "type": "rss",
+    "url": "https://github.blog/feed/"
+  },
+  {
+    "id": "github-changelog",
+    "label": "GitHub更新",
+    "genre": "開発",
+    "type": "rss",
+    "url": "https://github.blog/changelog/feed/"
+  },
+  {
+    "id": "hn",
+    "label": "HN",
+    "genre": "技術",
+    "type": "rss",
+    "url": "https://hnrss.org/frontpage"
+  },
+  {
+    "id": "arxiv-ai",
+    "label": "arXiv AI",
+    "genre": "論文",
+    "type": "rss",
+    "url": "https://export.arxiv.org/rss/cs.AI"
+  },
+  {
+    "id": "usgs",
+    "label": "地震",
+    "genre": "災害",
+    "type": "json",
+    "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
+  }
+]

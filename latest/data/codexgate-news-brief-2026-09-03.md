@@ -1,19 +1,16 @@
-# CODEXGATE News Brief - 2026-09-03
+# CODEXGATE News Brief
 
-## 20行圧縮
+- 更新: 2026-09-03T14:36:18.406625+00:00
+- 取得: GitHub Actions/Python
+- Codex: 0%想定（自動実行時）
 
-1. AIエージェント規制: 米議員がAI agent安全指針案。CGは「勝手に動く機能」を抑制。
-2. OpenAI更新: 公式Release NotesはCodex/API/ChatGPT更新確認先。
-3. OpenAI告知: DevDay、画像API、Office Hoursなど開発者向け告知あり。
-4. iOS Codex: Codexタスク可視化の改善情報あり。スマホCG設計に近い。
-5. AI coding agent利用: JetBrains調査で業務利用が高い。CGは「使う物だけ上へ」が妥当。
-6. 採決: Newsアイコンは「外部AI取得→20行圧縮→CGアイコン化」で継続。
-7. 注意: 長文ニュース本文はCGへ置かない。アイコンと1行判断だけ。
-
-## Sources
-
-- https://www.axios.com/2026/09/03/house-bill-ai-agents-security
-- https://openai.com/
-- https://community.openai.com/c/announcements/6
-- https://learn.chatgpt.com/docs/whats-new
-- https://blog.jetbrains.com/research/2026/08/ai-coding-agent-adoption-2026/
+- [開発] Claude Fable 5.1 is generally available in GitHub Copilot
+- [論文] Architecting Conversational Data Systems for Stateless LLM APIs: The H
+- [開発] Enterprise-managed settings support any default model
+- [開発] CodeQL 2.26.4 improves GitHub actions security detections
+- [技術] Audacity 4.0
+- [論文] The Memory Trust Gap: Capability-Dependent Failures in Persistent-Memo
+- [開発] Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh
+- [開発] Content exclusions generally available in Copilot app and CLI
+- [開発] How we make AI coding more cost efficient without sacrificing task qua
+- [開発] Enterprise Live Migrations from GHES to ghe.com generally available
