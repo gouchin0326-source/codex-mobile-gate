@@ -1,22 +1,19 @@
 # CODEXGATE News Brief - 2026-09-03
 
-## 役割
+## 20行圧縮
 
-- Codex: 何を集めるか指示し、CGアイコンへ配置する。
-- 外部AI: ニュース、変更点、候補、要約を取得する。
-- CG: アイコン内に短い判断情報だけ出す。
+1. AIエージェント規制: 米議員がAI agent安全指針案。CGは「勝手に動く機能」を抑制。
+2. OpenAI更新: 公式Release NotesはCodex/API/ChatGPT更新確認先。
+3. OpenAI告知: DevDay、画像API、Office Hoursなど開発者向け告知あり。
+4. iOS Codex: Codexタスク可視化の改善情報あり。スマホCG設計に近い。
+5. AI coding agent利用: JetBrains調査で業務利用が高い。CGは「使う物だけ上へ」が妥当。
+6. 採決: Newsアイコンは「外部AI取得→20行圧縮→CGアイコン化」で継続。
+7. 注意: 長文ニュース本文はCGへ置かない。アイコンと1行判断だけ。
 
-## 外部AIへ渡す形
+## Sources
 
-```text
-CODEXGATE用。20行以内。
-対象: <ニュース/技術/制作/AI>
-出力: アイコン名、1行要約、重要度、採決材料、更新日
-禁止: 長文、雑談、URL大量列挙
-```
-
-## 今日の状態
-
-- News: 外部AI待ち。
-- 反映先: CGホームの `News` アイコン。
-- 更新あり: `!` バッジ。
+- https://www.axios.com/2026/09/03/house-bill-ai-agents-security
+- https://openai.com/
+- https://community.openai.com/c/announcements/6
+- https://learn.chatgpt.com/docs/whats-new
+- https://blog.jetbrains.com/research/2026/08/ai-coding-agent-adoption-2026/
