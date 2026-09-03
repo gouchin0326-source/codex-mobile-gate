@@ -1,10 +1,12 @@
-const CACHE = "codex-gate-v82-20260904";
+const CACHE = "codex-gate-v83-20260904";
 const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
   "./icon.svg",
   "./dashboard.html",
   "./app-launcher.html",
+  "./free-info-lab/index.html",
+  "./zero-token-army/index.html",
   "./quick-notes-board/index.html",
   "./orbit-catcher/index.html",
   "./orbit-catcher-zombie-siege/index.html",
@@ -20,7 +22,9 @@ const ASSETS = [
   "./csd-designer-showcase/index.html",
   "./csd-designer-showcase/assets/csd-hero.png",
   "./data/codex-data-schema.json",
-  "./data/seed-records.json"
+  "./data/seed-records.json",
+  "./data/free-info.json",
+  "./data/zero-token-capabilities.json"
 ];
 
 self.addEventListener("install", (event) => {
@@ -38,6 +42,9 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   event.respondWith(fetch(event.request).catch(() => caches.match(event.request)));
 });
+
+
+
 
 
 

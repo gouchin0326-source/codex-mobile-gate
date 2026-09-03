@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>完全無料アプリ軍団 | CODEXGATE</title>
+  <style>
+    :root{--bg:#f4f6f8;--panel:#fff;--ink:#172033;--muted:#667085;--line:#d9dee7;--blue:#2563eb;--green:#15803d;--amber:#b45309;--rose:#b4235a;--tool:#0f766e;font-family:"Segoe UI","Meiryo",system-ui,sans-serif}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);line-height:1.45;letter-spacing:0}.wrap{width:min(940px,calc(100% - 18px));margin:auto}
+    header{background:#172033;color:#fff;padding:14px 0;border-bottom:4px solid var(--green)}h1{margin:0;font-size:1.7rem;line-height:1.1}.sub{margin:4px 0 0;color:#dce5f3;font-size:.9rem;font-weight:900}
+    main{display:grid;gap:10px;padding:10px 0 26px}section{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px}h2{font-size:1.04rem;margin:0 0 8px}
+    .hero{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.metric{border:1px solid var(--line);border-radius:8px;background:#f9fafb;padding:10px}.metric b{display:block;font-size:1.45rem;line-height:1}.metric span{color:var(--muted);font-size:.9rem;font-weight:800}
+    .apps{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.app{min-height:92px;display:grid;align-content:center;justify-items:center;gap:6px;border:1px solid transparent;border-radius:8px;color:var(--ink);text-decoration:none;text-align:center}.app:focus-visible,.app:hover{background:#fff;border-color:var(--blue)}
+    .glyph{position:relative;width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--green);color:#fff;font-size:1.35rem;font-weight:900;box-shadow:0 6px 16px rgba(23,32,51,.14)}.g1{background:var(--blue)}.g2{background:var(--amber)}.g3{background:var(--rose)}.g4{background:var(--tool)}
+    .new .glyph::after{content:"!";position:absolute;right:-5px;top:-5px;width:20px;height:20px;border-radius:999px;background:var(--rose);display:grid;place-items:center;font-size:.8rem}.app span{font-size:.82rem;font-weight:900;line-height:1.15}
+    .feed{display:grid;gap:8px}.item{display:grid;grid-template-columns:54px 1fr auto;gap:10px;align-items:center;border:1px solid var(--line);border-radius:8px;padding:10px;background:#f9fafb;color:var(--ink);text-decoration:none}.item b{display:grid;place-items:center;min-height:44px;border-radius:10px;background:#172033;color:#fff;font-size:.9rem}.item span{font-size:1.05rem;font-weight:900;line-height:1.32;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}.item i{font-style:normal;color:var(--rose);font-weight:900;font-size:1.1rem}
+    .muted{color:var(--muted);font-size:.9rem;font-weight:800}.back{display:inline-grid;place-items:center;min-height:40px;padding:8px 12px;border-radius:8px;background:var(--blue);color:#fff;text-decoration:none;font-weight:900}
+    @media(max-width:560px){.wrap{width:min(100% - 14px,430px)}h1{font-size:1.45rem}.sub{font-size:.82rem}.hero{grid-template-columns:1fr}.apps{grid-template-columns:repeat(4,1fr);gap:5px}.app{min-height:82px}.glyph{width:44px;height:44px;border-radius:12px;font-size:1.12rem}.app span{font-size:.7rem}.item{grid-template-columns:44px 1fr 18px;padding:9px;gap:8px}.item b{min-height:38px;font-size:.78rem}.item span{font-size:1.04rem}.muted{font-size:.84rem}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><h1>完全無料アプリ軍団</h1><p class="sub">ネット接続だけで動く / GitHub Actions運用時 Codex 0%</p></div></header>
+  <main class="wrap">
+    <section>
+      <div class="hero">
+        <div class="metric"><b>0%</b><span>Codex運用トークン</span></div>
+        <div class="metric"><b>6h</b><span>自動更新</span></div>
+        <div class="metric"><b id="count">読込中</b><span>無料取得件数</span></div>
+      </div>
+    </section>
+    <section>
+      <h2>アプリ</h2>
+      <div class="apps">
+        <a class="app new" href="../free-info-lab/index.html"><b class="glyph">新</b><span>無料ニュース</span></a>
+        <a class="app new" href="../data/free-info.json"><b class="glyph g1">全</b><span>JSON</span></a>
+        <a class="app new" href="../data/codexgate-news-brief-2026-09-03.md"><b class="glyph g2">要</b><span>要約板</span></a>
+        <a class="app" href="https://github.blog/changelog/feed/"><b class="glyph g1">開</b><span>開発更新</span></a>
+        <a class="app" href="https://info.arxiv.org/help/rss.html"><b class="glyph g3">論</b><span>論文</span></a>
+        <a class="app" href="https://open-meteo.com/"><b class="glyph g4">天</b><span>天気</span></a>
+        <a class="app" href="https://earthquake.usgs.gov/earthquakes/feed/"><b class="glyph g2">揺</b><span>地震</span></a>
+        <a class="app" href="../data/zero-token-capabilities.json"><b class="glyph g4">証</b><span>証明</span></a>
+      </div>
+    </section>
+    <section>
+      <h2>最新</h2>
+      <div class="feed" id="feed"><a class="item" href="../data/free-info.json"><b>待</b><span>無料情報を読込中</span><i>!</i></a></div>
+      <p class="muted" id="meta">更新 2026-09-04 07:57 JST / 条件: ネット接続</p>
+    </section>
+    <a class="back" href="../index.html">CGへ戻る</a>
+  </main>
+  <script>
+    fetch("../data/free-info.json?v="+Date.now()).then(r=>r.ok?r.json():null).then(data=>{
+      if(!data||!Array.isArray(data.items))return;
+      document.querySelector("#count").textContent=String(data.items.length);
+      document.querySelector("#meta").textContent=`更新 ${data.updatedAt} / error ${data.errors.length} / Codex 0%運用`;
+      document.querySelector("#feed").innerHTML=data.items.slice(0,12).map(item=>`<a class="item" href="${item.url||'../data/free-info.json'}"><b>${item.genre||item.label||'情'}</b><span>${item.title||'無題'}</span><i>${item.score>=3?'!':''}</i></a>`).join("");
+    }).catch(()=>{});
+  </script>
+</body>
+</html>

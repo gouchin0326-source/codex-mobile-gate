@@ -1,0 +1,66 @@
+{
+  "updatedAt": "2026-09-04T07:57:00+09:00",
+  "operation": "Codex token 0 when GitHub Actions runs the fetch/update job",
+  "condition": "Network connection and public free sources are reachable",
+  "apps": [
+    {
+      "id": "free-news",
+      "name": "無料ニュース",
+      "type": "RSS",
+      "codexToken": 0,
+      "output": "latest/data/free-info.json"
+    },
+    {
+      "id": "developer-updates",
+      "name": "開発更新",
+      "type": "RSS",
+      "codexToken": 0,
+      "output": "GitHub Blog / Changelog items"
+    },
+    {
+      "id": "paper-watch",
+      "name": "論文",
+      "type": "RSS",
+      "codexToken": 0,
+      "output": "arXiv AI feed"
+    },
+    {
+      "id": "weather",
+      "name": "天気",
+      "type": "JSON API",
+      "codexToken": 0,
+      "output": "Open-Meteo current weather"
+    },
+    {
+      "id": "earthquake",
+      "name": "地震",
+      "type": "GeoJSON API",
+      "codexToken": 0,
+      "output": "USGS earthquake feed"
+    },
+    {
+      "id": "static-brief",
+      "name": "要約板",
+      "type": "Static markdown",
+      "codexToken": 0,
+      "output": "latest/data/codexgate-news-brief-2026-09-03.md"
+    }
+  ],
+  "levels": [
+    {
+      "name": "完全無料",
+      "codexToken": 0,
+      "method": "GitHub Actions + Python + free RSS/API"
+    },
+    {
+      "name": "少量",
+      "codexToken": "small",
+      "method": "Codex reads only compact JSON/20-line brief"
+    },
+    {
+      "name": "外部AI節約",
+      "codexToken": "controlled",
+      "method": "External AI researches; Codex implements from compact memo"
+    }
+  ]
+}

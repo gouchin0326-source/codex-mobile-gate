@@ -417,12 +417,12 @@
 
     .feed-item {
       display: grid;
-      grid-template-columns: 42px 1fr auto;
-      gap: 8px;
+      grid-template-columns: 50px 1fr auto;
+      gap: 10px;
       align-items: center;
       border: 1px solid var(--line);
       border-radius: 8px;
-      padding: 7px;
+      padding: 10px;
       color: var(--ink);
       text-decoration: none;
       background: #f9fafb;
@@ -431,21 +431,21 @@
     .feed-item b {
       display: grid;
       place-items: center;
-      min-height: 34px;
+      min-height: 42px;
       border-radius: 10px;
       background: #172033;
       color: white;
-      font-size: .72rem;
+      font-size: .88rem;
     }
 
     .feed-item span {
       min-width: 0;
-      font-size: .74rem;
+      font-size: 1rem;
       font-weight: 900;
-      line-height: 1.2;
+      line-height: 1.3;
       overflow: hidden;
       display: -webkit-box;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
     }
 
@@ -499,7 +499,9 @@
       .glyph { width: 42px; height: 42px; border-radius: 12px; font-size: 1.15rem; }
       .app-icon { min-height: 76px; padding: 4px 2px; }
       .app-icon span { font-size: .6rem; }
-      .feed-item { grid-template-columns: 36px 1fr auto; }
+      .feed-item { grid-template-columns: 44px 1fr 18px; padding: 9px; gap: 8px; }
+      .feed-item b { min-height: 38px; font-size: .78rem; }
+      .feed-item span { font-size: 1.02rem; line-height: 1.32; }
     }
   </style>
 </head>
@@ -508,10 +510,10 @@
     <div class="wrap top">
       <div>
         <h1>CG</h1>
-        <p class="tagline">CODEX Gate / 独自開発ホーム / 更新 2026-09-03 21:25 JST</p>
+        <p class="tagline">CODEX Gate / 独自開発ホーム / 更新 2026-09-04 07:57 JST</p>
       </div>
       <button class="refresh" id="force-update" type="button">最新版に更新</button>
-      <div class="date">更新 2026-09-03 21:25 JST</div>
+      <div class="date">更新 2026-09-04 07:57 JST</div>
     </div>
   </header>
 
@@ -526,10 +528,11 @@
         <a class="app-icon updated" href="./external-ai-brief-compressor/index.html"><b class="glyph g-tool">⇄</b><span>AI圧縮</span></a>
         <a class="app-icon updated" href="./orbit-catcher-zombie-siege/index.html"><b class="glyph g-game">▶</b><span>ゾンビ</span></a>
         <a class="app-icon updated" href="./data/codexgate-app-audit-2026-09-03.md"><b class="glyph g-dev">!</b><span>点検</span></a>
+        <a class="app-icon updated" href="./zero-token-army/index.html"><b class="glyph g-data">0</b><span>完全無料</span></a>
         <a class="app-icon updated" href="./free-info-lab/index.html"><b class="glyph g-data">無</b><span>無料情報</span></a>
         <a class="app-icon updated" href="./data/codexgate-news-brief-2026-09-03.md"><b class="glyph g-data">N</b><span>ニュース</span></a>
       </div>
-      <p class="muted">! = 更新あり / 最終更新 2026-09-03 21:25 JST</p>
+      <p class="muted">! = 更新あり / 最終更新 2026-09-04 07:57 JST</p>
     </section>
 
     <section>
@@ -575,10 +578,11 @@
     <section>
       <h2>更新</h2>
       <div class="phone-grid">
+        <a class="app-icon updated" href="./zero-token-army/index.html"><b class="glyph g-data">0</b><span>完全無料</span></a>
         <a class="app-icon updated" href="./free-info-lab/index.html"><b class="glyph g-data">無</b><span>無料情報</span></a>
         <a class="app-icon updated" href="./data/codexgate-news-brief-2026-09-03.md"><b class="glyph g-data">N</b><span>外部AI</span></a>
         <a class="app-icon updated" href="./data/codexgate-app-audit-2026-09-03.md"><b class="glyph g-dev">!</b><span>点検</span></a>
-        <a class="app-icon updated" href="./index.html?v=202609032125"><b class="glyph g-dev">↻</b><span>21:25</span></a>
+        <a class="app-icon updated" href="./index.html?v=202609040757"><b class="glyph g-dev">↻</b><span>07:57</span></a>
       </div>
     </section>
   </main>
