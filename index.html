@@ -311,6 +311,7 @@
     }
 
     .icon-tile {
+      position: relative;
       min-height: 82px;
       display: grid;
       place-items: center;
@@ -370,6 +371,7 @@
     }
 
     .app-icon {
+      position: relative;
       min-height: 88px;
       display: grid;
       align-content: center;
@@ -417,6 +419,24 @@
       overflow-wrap: anywhere;
     }
 
+    .updated::after {
+      content: "!";
+      position: absolute;
+      top: 4px;
+      right: 7px;
+      width: 18px;
+      height: 18px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--rose);
+      color: #ffffff;
+      font-size: .78rem;
+      font-weight: 900;
+      line-height: 1;
+      box-shadow: 0 2px 8px rgba(180, 35, 90, .25);
+    }
+
     @media (max-width: 560px) {
       .wrap { width: min(100% - 14px, 430px); }
       .top { grid-template-columns: 1fr auto; }
@@ -452,10 +472,10 @@
     <div class="wrap top">
       <div>
         <h1>CG</h1>
-        <p class="tagline">CODEX Gate / 独自開発ホーム / 更新 2026-09-03 09:10 JST</p>
+        <p class="tagline">CODEX Gate / 独自開発ホーム / 更新 2026-09-03 09:20 JST</p>
       </div>
       <button class="refresh" id="force-update" type="button">最新版に更新</button>
-      <div class="date">更新 2026-09-03 09:10 JST</div>
+      <div class="date">更新 2026-09-03 09:20 JST</div>
     </div>
   </header>
 
@@ -463,30 +483,21 @@
     <section class="codexgate-status">
       <h2>CODEXGATE</h2>
       <div class="icon-grid">
-        <a class="icon-tile" href="./latest/app-launcher.html"><b>▦</b><span>棚</span></a>
-        <a class="icon-tile" href="./latest/dashboard.html"><b>◎</b><span>状態</span></a>
-        <a class="icon-tile" href="./latest/external-ai-brief-compressor/index.html"><b>⇄</b><span>圧縮</span></a>
-        <a class="icon-tile" href="./latest/orbit-catcher-zombie-siege/index.html"><b>▶</b><span>体験</span></a>
+        <a class="icon-tile updated" href="./latest/app-launcher.html"><b>▦</b></a>
+        <a class="icon-tile updated" href="./latest/dashboard.html"><b>◎</b></a>
+        <a class="icon-tile updated" href="./latest/external-ai-brief-compressor/index.html"><b>⇄</b></a>
+        <a class="icon-tile updated" href="./latest/orbit-catcher-zombie-siege/index.html"><b>▶</b></a>
       </div>
-      <p class="muted">最終更新: 2026-09-03 09:10 JST / CG=CODEXGATE / 独自開発入口</p>
-    </section>
-
-    <section class="decision">
-      <h2>採決</h2>
-      <div class="decision-grid">
-        <div class="decision-card"><b>進める</b><span>CG独自ホーム化。HA線は外す。</span></div>
-        <div class="decision-card"><b>見る</b><span>使う頻度、スマホ操作、完成度。</span></div>
-        <div class="decision-card"><b>次</b><span>上位4アイコンを日次で入替。</span></div>
-      </div>
+      <p class="muted">最終更新: 2026-09-03 09:20 JST / CG=CODEXGATE / ! = 更新あり</p>
     </section>
 
     <section>
       <h2>全コンテンツ</h2>
       <div class="phone-grid">
-        <a class="app-icon" href="./latest/app-launcher.html"><b class="glyph g-dev">▦</b><span>アプリ棚</span></a>
-        <a class="app-icon" href="./latest/dashboard.html"><b class="glyph g-dev">◎</b><span>CSD</span></a>
-        <a class="app-icon" href="./latest/external-ai-brief-compressor/index.html"><b class="glyph g-tool">⇄</b><span>AI圧縮</span></a>
-        <a class="app-icon" href="./latest/orbit-catcher-zombie-siege/index.html"><b class="glyph g-game">▶</b><span>Siege</span></a>
+        <a class="app-icon updated" href="./latest/app-launcher.html"><b class="glyph g-dev">▦</b><span>アプリ棚</span></a>
+        <a class="app-icon updated" href="./latest/dashboard.html"><b class="glyph g-dev">◎</b><span>CSD</span></a>
+        <a class="app-icon updated" href="./latest/external-ai-brief-compressor/index.html"><b class="glyph g-tool">⇄</b><span>AI圧縮</span></a>
+        <a class="app-icon updated" href="./latest/orbit-catcher-zombie-siege/index.html"><b class="glyph g-game">▶</b><span>Siege</span></a>
         <a class="app-icon" href="./latest/orbit-catcher/index.html"><b class="glyph g-game">◆</b><span>Gate Run</span></a>
         <a class="app-icon" href="./latest/quick-notes-board/index.html"><b class="glyph g-tool">□</b><span>メモ</span></a>
         <a class="app-icon" href="./latest/codex-data-pocket/index.html"><b class="glyph g-data">◇</b><span>Data</span></a>
@@ -506,7 +517,7 @@
     <section>
       <h2>更新情報</h2>
       <div class="decision-grid">
-        <div class="decision-card"><b>09:10</b><span>全コンテンツをアイコン化。</span></div>
+        <div class="decision-card"><b>09:20</b><span>更新ありは！付き。</span></div>
         <div class="decision-card"><b>接続</b><span>rootはlatestへ接続。404回避。</span></div>
         <div class="decision-card"><b>表示</b><span>採決情報を先頭付近に固定。</span></div>
       </div>
