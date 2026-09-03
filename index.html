@@ -334,6 +334,89 @@
       line-height: 1.15;
     }
 
+    .decision {
+      border-top: 5px solid var(--green);
+    }
+
+    .decision-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 7px;
+    }
+
+    .decision-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #f9fafb;
+      padding: 8px;
+    }
+
+    .decision-card b {
+      display: block;
+      font-size: .85rem;
+      line-height: 1.15;
+    }
+
+    .decision-card span {
+      color: var(--muted);
+      font-size: .68rem;
+      line-height: 1.2;
+    }
+
+    .phone-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .app-icon {
+      min-height: 88px;
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      gap: 5px;
+      color: var(--ink);
+      text-decoration: none;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      padding: 6px 4px;
+      text-align: center;
+    }
+
+    .app-icon:focus-visible,
+    .app-icon:hover {
+      border-color: var(--blue);
+      background: #ffffff;
+    }
+
+    .glyph {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: #172033;
+      color: #ffffff;
+      font-size: 1.35rem;
+      font-weight: 900;
+      box-shadow: 0 6px 16px rgba(23, 32, 51, .14);
+    }
+
+    .g-dev { background: #2563eb; }
+    .g-game { background: #15803d; }
+    .g-data { background: #b45309; }
+    .g-view { background: #b4235a; }
+    .g-tool { background: #0f766e; }
+
+    .app-icon span {
+      max-width: 100%;
+      color: var(--ink);
+      font-size: .68rem;
+      font-weight: 900;
+      line-height: 1.12;
+      overflow-wrap: anywhere;
+    }
+
     @media (max-width: 560px) {
       .wrap { width: min(100% - 14px, 430px); }
       .top { grid-template-columns: 1fr auto; }
@@ -356,6 +439,11 @@
       .step { padding: 6px 2px; font-size: .62rem; }
       .ha-actions { grid-template-columns: 1fr; }
       .codexgate-status .icon-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .decision-grid { grid-template-columns: 1fr; }
+      .phone-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; }
+      .glyph { width: 42px; height: 42px; border-radius: 12px; font-size: 1.15rem; }
+      .app-icon { min-height: 76px; padding: 4px 2px; }
+      .app-icon span { font-size: .6rem; }
     }
   </style>
 </head>
@@ -364,10 +452,10 @@
     <div class="wrap top">
       <div>
         <h1>CG</h1>
-        <p class="tagline">CODEX Gate / 今日の成果物へすぐ入る入口 / 更新 2026-09-03 08:50 JST</p>
+        <p class="tagline">CODEX Gate / 独自開発ホーム / 更新 2026-09-03 09:10 JST</p>
       </div>
       <button class="refresh" id="force-update" type="button">最新版に更新</button>
-      <div class="date">更新 2026-09-03 08:50 JST</div>
+      <div class="date">更新 2026-09-03 09:10 JST</div>
     </div>
   </header>
 
@@ -375,106 +463,57 @@
     <section class="codexgate-status">
       <h2>CODEXGATE</h2>
       <div class="icon-grid">
-        <a class="icon-tile" href="./app-launcher.html"><b>▦</b><span>棚</span></a>
-        <a class="icon-tile" href="./dashboard.html"><b>◎</b><span>状態</span></a>
-        <a class="icon-tile" href="./external-ai-brief-compressor/index.html"><b>⇄</b><span>圧縮</span></a>
-        <a class="icon-tile" href="./orbit-catcher-zombie-siege/index.html"><b>▶</b><span>体験</span></a>
+        <a class="icon-tile" href="./latest/app-launcher.html"><b>▦</b><span>棚</span></a>
+        <a class="icon-tile" href="./latest/dashboard.html"><b>◎</b><span>状態</span></a>
+        <a class="icon-tile" href="./latest/external-ai-brief-compressor/index.html"><b>⇄</b><span>圧縮</span></a>
+        <a class="icon-tile" href="./latest/orbit-catcher-zombie-siege/index.html"><b>▶</b><span>体験</span></a>
       </div>
-      <p class="muted">最終更新: 2026-09-03 08:50 JST / CG=CODEXGATE / 独自開発入口</p>
+      <p class="muted">最終更新: 2026-09-03 09:10 JST / CG=CODEXGATE / 独自開発入口</p>
     </section>
 
-    <section>
-      <h2>すぐ開く</h2>
-      <div class="shelf">
-        <a class="tile" href="./dashboard.html"><strong>CSD</strong><small>状態と試行台帳を見る</small></a>
-        <a class="tile" href="./app-launcher.html"><strong>アプリ棚</strong><small>登録済みアプリ一覧</small></a>
-        <a class="tile" href="./orbit-catcher-zombie-siege/index.html"><strong>Zombie Siege</strong><small>下部中央の透明コントローラーと周囲リングコマンドつき最新版</small></a>
-        <a class="tile" href="./orbit-catcher/index.html"><strong>Gate Run</strong><small>装備スロットで大量せん滅するシューティング版を遊ぶ</small></a>
-      </div>
-    </section>
-
-    <section>
-      <h2>最新レーン</h2>
-      <div class="lane-now">
-        <div class="badge">NEW<br>0731</div>
-        <div>
-          <strong>外部AIブリーフ圧縮器</strong>
-          <p>スマホから成果物の詳細をセットし、曖昧さ、超概算トークン、GOサインまで見える化します。</p>
-        </div>
-        <a class="go" href="./external-ai-brief-compressor/index.html">開く</a>
+    <section class="decision">
+      <h2>採決</h2>
+      <div class="decision-grid">
+        <div class="decision-card"><b>進める</b><span>CG独自ホーム化。HA線は外す。</span></div>
+        <div class="decision-card"><b>見る</b><span>使う頻度、スマホ操作、完成度。</span></div>
+        <div class="decision-card"><b>次</b><span>上位4アイコンを日次で入替。</span></div>
       </div>
     </section>
 
     <section>
-      <h2>掲載済みコンテンツ</h2>
-      <div class="shelf">
-        <a class="tile" href="./external-ai-brief-compressor/index.html"><strong>外部AIブリーフ圧縮器</strong><small>詳細セットとGO判定</small></a>
-        <a class="tile" href="./eco-lane-map/index.html"><strong>エコレーン実装マップ</strong><small>節約型CG開発を可視化</small></a>
-        <a class="tile" href="./focus-session-cards/index.html"><strong>集中セッションカード</strong><small>短時間集中ログを書き出す</small></a>
-        <a class="tile" href="./quick-notes-board/index.html"><strong>メモ整理板</strong><small>未着手、待ち、完了の小さな板</small></a>
-        <a class="tile" href="./cat-affinity-lane/index.html"><strong>猫が好きになるコンテンツ</strong><small>観察から入る体験レーン</small></a>
-        <a class="tile" href="./csd-designer-showcase/index.html"><strong>CSD Designer Showcase</strong><small>成果を見て判断する展示</small></a>
-        <a class="tile" href="./orbit-catcher/index.html"><strong>Gate Run</strong><small>巨大マップ、ボス、装備スロット、範囲攻撃のCGゲーム</small></a>
-        <a class="tile" href="./orbit-catcher-zombie-siege/index.html"><strong>Zombie Siege</strong><small>全画面ゲーム、透明MOVE、武器/道具リングの制圧ゲーム</small></a>
+      <h2>全コンテンツ</h2>
+      <div class="phone-grid">
+        <a class="app-icon" href="./latest/app-launcher.html"><b class="glyph g-dev">▦</b><span>アプリ棚</span></a>
+        <a class="app-icon" href="./latest/dashboard.html"><b class="glyph g-dev">◎</b><span>CSD</span></a>
+        <a class="app-icon" href="./latest/external-ai-brief-compressor/index.html"><b class="glyph g-tool">⇄</b><span>AI圧縮</span></a>
+        <a class="app-icon" href="./latest/orbit-catcher-zombie-siege/index.html"><b class="glyph g-game">▶</b><span>Siege</span></a>
+        <a class="app-icon" href="./latest/orbit-catcher/index.html"><b class="glyph g-game">◆</b><span>Gate Run</span></a>
+        <a class="app-icon" href="./latest/quick-notes-board/index.html"><b class="glyph g-tool">□</b><span>メモ</span></a>
+        <a class="app-icon" href="./latest/codex-data-pocket/index.html"><b class="glyph g-data">◇</b><span>Data</span></a>
+        <a class="app-icon" href="./latest/focus-session-cards/index.html"><b class="glyph g-tool">◷</b><span>集中</span></a>
+        <a class="app-icon" href="./latest/eco-lane-map/index.html"><b class="glyph g-dev">⌁</b><span>Eco Map</span></a>
+        <a class="app-icon" href="./latest/external-ai-lane-run-0805/index.html"><b class="glyph g-dev">↗</b><span>0805 Run</span></a>
+        <a class="app-icon" href="./latest/daily-task-0731/index.html"><b class="glyph g-tool">✓</b><span>0731板</span></a>
+        <a class="app-icon" href="./latest/cat-affinity-lane/index.html"><b class="glyph g-view">○</b><span>観察</span></a>
+        <a class="app-icon" href="./latest/csd-designer-showcase/index.html"><b class="glyph g-view">▣</b><span>Showcase</span></a>
+        <a class="app-icon" href="./latest/csd-web-designer-sample/index.html"><b class="glyph g-view">▤</b><span>Design</span></a>
+        <a class="app-icon" href="./latest/projects/mobile-puzzle-eco-lane/index.html"><b class="glyph g-game">◇</b><span>Prism</span></a>
+        <a class="app-icon" href="./latest/projects/sum-garden-eco-lane/index.html"><b class="glyph g-game">＋</b><span>Sum</span></a>
+        <a class="app-icon" href="./latest/projects/falling-block-eco-lane/index.html"><b class="glyph g-game">▥</b><span>Cascade</span></a>
       </div>
     </section>
 
     <section>
-      <h2>レーンの作り方</h2>
-      <div class="flow" aria-label="lane flow">
-        <div class="step">目的</div>
-        <div class="step">実体</div>
-        <div class="step">検証</div>
-        <div class="step">CG掲載</div>
+      <h2>更新情報</h2>
+      <div class="decision-grid">
+        <div class="decision-card"><b>09:10</b><span>全コンテンツをアイコン化。</span></div>
+        <div class="decision-card"><b>接続</b><span>rootはlatestへ接続。404回避。</span></div>
+        <div class="decision-card"><b>表示</b><span>採決情報を先頭付近に固定。</span></div>
       </div>
-      <p class="muted">レーンは説明だけで終わらせず、開ける成果物、台帳、QC、引き継ぎ出力までを小さくそろえます。</p>
     </section>
   </main>
 
   <script>
-    const HA_CG_URL = "https://node.taile51672.ts.net/cg/";
-
-    function haPayload() {
-      return {
-        source: "smartphone-cg",
-        updatedAt: new Date().toISOString(),
-        goal: document.querySelector("#ha-goal")?.value.trim() || "",
-        files: document.querySelector("#ha-files")?.value.trim() || "",
-        accept: document.querySelector("#ha-accept")?.value.trim() || ""
-      };
-    }
-
-    function openHaTicket(payload) {
-      const url = new URL(HA_CG_URL);
-      url.hash = new URLSearchParams({
-        g: payload.goal,
-        f: payload.files,
-        a: payload.accept
-      }).toString();
-      window.location.href = url.toString();
-    }
-
-    function downloadHaBrief(payload) {
-      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json;charset=utf-8" });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = "cg-ha-codex-brief.json";
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-      URL.revokeObjectURL(url);
-    }
-
-    document.querySelector("#ha-dev-form")?.addEventListener("submit", (event) => {
-      event.preventDefault();
-      openHaTicket(haPayload());
-    });
-
-    document.querySelector("#ha-export")?.addEventListener("click", () => {
-      downloadHaBrief(haPayload());
-    });
-
     async function forceUpdate() {
       const button = document.querySelector("#force-update");
       if (button) button.textContent = "更新中";
@@ -499,4 +538,6 @@
   </script>
 </body>
 </html>
+
+
 
