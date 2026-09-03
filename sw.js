@@ -1,4 +1,4 @@
-const CACHE = "codex-gate-v77-20260903";
+const CACHE = "codex-gate-v78-20260903";
 const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
@@ -36,6 +36,7 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   event.respondWith(fetch(event.request).catch(() => caches.match(event.request)));
 });
+
 
 
 
