@@ -107,6 +107,27 @@ def parse_json(source, blob):
     return items
 
 
+def parse_weather(source, blob):
+    data = json.loads(blob)
+    current = data.get("current", {})
+    temp = current.get("temperature_2m")
+    rain = current.get("precipitation")
+    wind = current.get("wind_speed_10m")
+    title = f"東京 {temp}℃ / 雨 {rain}mm / 風 {wind}km/h"
+    score, tags = score_item(title, "", source["genre"])
+    return [{
+        "source": source["id"],
+        "label": source["label"],
+        "genre": source["genre"],
+        "title": title,
+        "summary": "Open-Meteo no-key weather fetch",
+        "url": source["url"],
+        "published": current.get("time", ""),
+        "score": score,
+        "tags": tags,
+    }]
+
+
 def main():
     sources = json.loads(SOURCES.read_text(encoding="utf-8"))
     collected = []
@@ -114,19 +135,36 @@ def main():
     for source in sources:
         try:
             blob = fetch(source["url"])
-            if source["type"] == "json":
+            if source["type"] == "weather":
+                collected.extend(parse_weather(source, blob))
+            elif source["type"] == "json":
                 collected.extend(parse_json(source, blob))
             else:
                 collected.extend(parse_rss(source, blob))
         except Exception as exc:
             errors.append({"source": source["id"], "error": str(exc)[:160]})
     collected.sort(key=lambda x: (x["score"], x["published"]), reverse=True)
-    top = collected[:24]
+    top = []
+    seen_sources = set()
+    for item in collected:
+        if item["source"] not in seen_sources:
+            top.append(item)
+            seen_sources.add(item["source"])
+    for item in collected:
+        if item not in top:
+            top.append(item)
+        if len(top) >= 32:
+            break
     now = datetime.now(timezone.utc).isoformat()
     payload = {
         "updatedAt": now,
         "mode": "free-fetch",
         "codexTokenUse": "0 when run by GitHub Actions",
+        "levels": [
+            {"id": "zero", "label": "完全無料", "cost": "Codex 0%", "route": "GitHub Actions + RSS/API + JSON"},
+            {"id": "small", "label": "少量", "cost": "Codex少量", "route": "20行メモだけCodexで反映"},
+            {"id": "external", "label": "外部AI節約", "cost": "Codex小", "route": "外部AIで調査/圧縮、Codexは実装"}
+        ],
         "sources": sources,
         "items": top,
         "errors": errors,

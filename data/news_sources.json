@@ -21,11 +21,11 @@
     "url": "https://github.blog/changelog/feed/"
   },
   {
-    "id": "hn",
-    "label": "HN",
+    "id": "lobsters",
+    "label": "技術RSS",
     "genre": "技術",
     "type": "rss",
-    "url": "https://hnrss.org/frontpage"
+    "url": "https://lobste.rs/rss"
   },
   {
     "id": "arxiv-ai",
@@ -40,5 +40,12 @@
     "genre": "災害",
     "type": "json",
     "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
+  },
+  {
+    "id": "open-meteo-tokyo",
+    "label": "東京天気",
+    "genre": "天気",
+    "type": "weather",
+    "url": "https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo"
   }
 ]

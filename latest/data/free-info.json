@@ -1,7 +1,27 @@
 {
-  "updatedAt": "2026-09-03T21:02:32.545692+00:00",
+  "updatedAt": "2026-09-03T22:35:13.943136+00:00",
   "mode": "free-fetch",
   "codexTokenUse": "0 when run by GitHub Actions",
+  "levels": [
+    {
+      "id": "zero",
+      "label": "完全無料",
+      "cost": "Codex 0%",
+      "route": "GitHub Actions + RSS/API + JSON"
+    },
+    {
+      "id": "small",
+      "label": "少量",
+      "cost": "Codex少量",
+      "route": "20行メモだけCodexで反映"
+    },
+    {
+      "id": "external",
+      "label": "外部AI節約",
+      "cost": "Codex小",
+      "route": "外部AIで調査/圧縮、Codexは実装"
+    }
+  ],
   "sources": [
     {
       "id": "openai",
@@ -25,11 +45,11 @@
       "url": "https://github.blog/changelog/feed/"
     },
     {
-      "id": "hn",
-      "label": "HN",
+      "id": "lobsters",
+      "label": "技術RSS",
       "genre": "技術",
       "type": "rss",
-      "url": "https://hnrss.org/frontpage"
+      "url": "https://lobste.rs/rss"
     },
     {
       "id": "arxiv-ai",
@@ -44,6 +64,13 @@
       "genre": "災害",
       "type": "json",
       "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
+    },
+    {
+      "id": "open-meteo-tokyo",
+      "label": "東京天気",
+      "genre": "天気",
+      "type": "weather",
+      "url": "https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo"
     }
   ],
   "items": [
@@ -55,21 +82,6 @@
       "summary": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on October 2nd, 2026: Model Deprecation date… The post Upcomi",
       "url": "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models",
       "published": "2026-09-03T19:40:14+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "title": "Gemini 3.8 Flash is now available in GitHub Copilot",
-      "summary": "Gemini 3.8 Flash, Google’s latest Flash model, is now available in GitHub Copilot. In our early testing, Gemini 3.8 Flash performed strongly on complex terminal-based coding tasks and demonstrated rigorous… The post Gemi",
-      "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot",
-      "published": "2026-09-03T18:50:38+00:00",
       "score": 4,
       "tags": [
         "開発",
@@ -90,6 +102,90 @@
         "論文",
         "重要",
         "開発",
+        "研究"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "label": "GitHub",
+      "genre": "開発",
+      "title": "GitHub Copilot app for Beginners: Run several agents at once",
+      "summary": "Learn how to run parallel agents in the GitHub Copilot app, and experience the moment it stops feeling scary and starts feeling powerful. The post GitHub Copilot app for Beginners: Run several agents at once appeared fir",
+      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/",
+      "published": "2026-09-03T16:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "label": "OpenAI",
+      "genre": "AI",
+      "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+      "summary": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
+      "url": "https://openai.com/index/daybreak-for-frontline-defenders",
+      "published": "2026-09-03T13:15:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "label": "技術RSS",
+      "genre": "技術",
+      "title": "Audacity 4.0.0 Released",
+      "summary": "Comments",
+      "url": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0",
+      "published": "2026-09-03T13:52:43+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "重要"
+      ]
+    },
+    {
+      "source": "open-meteo-tokyo",
+      "label": "東京天気",
+      "genre": "天気",
+      "title": "東京 22.2℃ / 雨 0.1mm / 風 2.6km/h",
+      "summary": "Open-Meteo no-key weather fetch",
+      "url": "https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
+      "published": "2026-09-04T07:30",
+      "score": 1,
+      "tags": [
+        "天気"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.9 - 4 km SW of Lytle Creek, CA",
+      "summary": "4 km SW of Lytle Creek, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41541504",
+      "published": "2026-09-03T22:16:38.220000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "title": "Gemini 3.8 Flash is now available in GitHub Copilot",
+      "summary": "Gemini 3.8 Flash, Google’s latest Flash model, is now available in GitHub Copilot. In our early testing, Gemini 3.8 Flash performed strongly on complex terminal-based coding tasks and demonstrated rigorous… The post Gemi",
+      "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot",
+      "published": "2026-09-03T18:50:38+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
         "研究"
       ]
     },
@@ -137,20 +233,6 @@
       ]
     },
     {
-      "source": "github-blog",
-      "label": "GitHub",
-      "genre": "開発",
-      "title": "GitHub Copilot app for Beginners: Run several agents at once",
-      "summary": "Learn how to run parallel agents in the GitHub Copilot app, and experience the moment it stops feeling scary and starts feeling powerful. The post GitHub Copilot app for Beginners: Run several agents at once appeared fir",
-      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/",
-      "published": "2026-09-03T16:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-changelog",
       "label": "GitHub更新",
       "genre": "開発",
@@ -162,21 +244,6 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "label": "OpenAI",
-      "genre": "AI",
-      "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
-      "summary": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
-      "url": "https://openai.com/index/daybreak-for-frontline-defenders",
-      "published": "2026-09-03T13:15:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "研究"
       ]
     },
     {
@@ -366,31 +433,100 @@
       ]
     },
     {
-      "source": "hn",
-      "label": "HN",
-      "genre": "技術",
-      "title": "OpenAI's GPT-6 Astra on ARC-AGI-3",
-      "summary": "Article URL: https://arcprize.org/blog/astra Comments URL: https://news.ycombinator.com/item?id=49555691 Points: 58 # Comments: 25",
-      "url": "https://arcprize.org/blog/astra",
-      "published": "2026-09-03T19:45:00+00:00",
+      "source": "arxiv-ai",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "title": "EvalDetectBench: A Benchmark for Measuring Evaluation Awareness in Frontier Language Models",
+      "summary": "arXiv:2609.01611v1 Announce Type: new Abstract: Frontier large language models can often recognize when they are being evaluated, a capability known as evaluation awareness. If models behave differently in evaluations th",
+      "url": "https://arxiv.org/abs/2609.01611",
+      "published": "2026-09-03T04:00:00+00:00",
       "score": 2,
       "tags": [
-        "技術",
-        "重要"
+        "論文",
+        "研究"
       ]
     },
     {
-      "source": "hn",
-      "label": "HN",
-      "genre": "技術",
-      "title": "GPT-6 Astra",
-      "summary": "System Card: https://deploymentsafety.openai.com/gpt-6-astra Related ongoing threads: OpenAI's GPT-6 Astra on ARC-AGI-3 - https://news.ycombinator.com/item?id=49555691 GPT-6 Astra makes major gains in the Artificial Anal",
-      "url": "https://openai.com/index/gpt-6-astra/",
-      "published": "2026-09-03T18:41:05+00:00",
+      "source": "arxiv-ai",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "title": "Meta-ethics and AI: exploring the novel meta-ethical questions in the era of AI",
+      "summary": "arXiv:2609.01685v1 Announce Type: new Abstract: With the development of artificial intelligence (AI), the landscape of meta-ethics, which has largely centred on human ethics, faces pressures that may significantly reconf",
+      "url": "https://arxiv.org/abs/2609.01685",
+      "published": "2026-09-03T04:00:00+00:00",
       "score": 2,
       "tags": [
-        "技術",
-        "重要"
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "title": "When Can a Machine Trust a Statute? A Survival Certificate for Machine-Extracted Legal Logic",
+      "summary": "arXiv:2609.01741v1 Announce Type: new Abstract: Statutes are increasingly parsed by machines before people read them, and the parsers disagree: on Missouri's statutes, two independently written extractors diverge on nume",
+      "url": "https://arxiv.org/abs/2609.01741",
+      "published": "2026-09-03T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "title": "When Does Information Sharing Improve Decentralized Discovery? Aggregation, Independent Rescue, and Equilibrium Selection",
+      "summary": "arXiv:2609.01814v1 Announce Type: new Abstract: Information sharing can improve a pooled estimate while eliminating independent rescue actions. This paper separates those effects in exact finite discovery models. A centr",
+      "url": "https://arxiv.org/abs/2609.01814",
+      "published": "2026-09-03T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "title": "Induction and Inquiry via Probabilistic Reasoning over Language and Code",
+      "summary": "arXiv:2609.01815v1 Announce Type: new Abstract: How humans grow and maintain abstract knowledge from the sparse, streaming noisy data of experience is a longstanding challenge in cognitive science. Any computational acco",
+      "url": "https://arxiv.org/abs/2609.01815",
+      "published": "2026-09-03T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "title": "SSAKG 2.0: An Open-Source Package for Structural Associative Sequence Memory and Context-Based Retrieval",
+      "summary": "arXiv:2609.01849v1 Announce Type: new Abstract: This article presents SSAKG 2.0, an open-source software package for constructing and operating Structural Sequential Associative Knowledge Graphs (SSAKGs). An SSAKG repres",
+      "url": "https://arxiv.org/abs/2609.01849",
+      "published": "2026-09-03T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.8 - 10 km WNW of The Geysers, CA",
+      "summary": "10 km WNW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429377",
+      "published": "2026-09-03T22:13:30.950000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
       ]
     }
   ],
