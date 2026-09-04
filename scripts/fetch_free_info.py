@@ -14,8 +14,10 @@ SOURCES = ROOT / "data" / "news_sources.json"
 OUT = ROOT / "latest" / "data" / "free-info.json"
 AI_OUT = ROOT / "latest" / "data" / "ai-info.json"
 WEATHER_OUT = ROOT / "latest" / "data" / "weather-info.json"
+HEALTH_OUT = ROOT / "latest" / "data" / "gate-health.json"
 BRIEF = ROOT / "latest" / "data" / "codexgate-news-brief-2026-09-03.md"
 JMA_TOYAMA_WARNING = "https://www.jma.go.jp/bosai/warning/data/warning/160000.json"
+GITHUB_RUNS = "https://api.github.com/repos/gouchin0326-source/codex-mobile-gate/actions/runs?per_page=8"
 
 KEYWORDS = {
     "重要": ["codex", "agent", "openai", "github", "security", "safety", "release", "api"],
@@ -300,6 +302,66 @@ def build_weather_payload(sources, now):
     }
 
 
+def parse_utc(value):
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(timezone.utc)
+    except Exception:
+        return None
+
+
+def build_health_payload(now, free_payload, ai_payload, weather_payload):
+    errors = []
+    runs = []
+    try:
+        data = json.loads(fetch(GITHUB_RUNS))
+        for run in data.get("workflow_runs", [])[:8]:
+            runs.append({
+                "name": run.get("name", ""),
+                "status": run.get("status", ""),
+                "conclusion": run.get("conclusion", ""),
+                "createdAt": run.get("created_at", ""),
+                "updatedAt": run.get("updated_at", ""),
+                "url": run.get("html_url", ""),
+            })
+    except Exception as exc:
+        errors.append({"source": "github-actions", "error": str(exc)[:160]})
+    now_dt = parse_utc(now) or datetime.now(timezone.utc)
+    datasets = [
+        {"id": "free-info", "label": "全体", "updatedAt": free_payload.get("updatedAt"), "errors": len(free_payload.get("errors", [])), "count": len(free_payload.get("items", []))},
+        {"id": "ai-info", "label": "AI", "updatedAt": ai_payload.get("updatedAt"), "errors": 0, "count": len(ai_payload.get("items", []))},
+        {"id": "weather-info", "label": "天気", "updatedAt": weather_payload.get("updatedAt"), "errors": len(weather_payload.get("errors", [])), "count": len(weather_payload.get("locations", []))},
+    ]
+    health_level = "normal"
+    lines = ["CG: 自動更新正常", "Actions/JSONを監視中"]
+    for ds in datasets:
+        updated = parse_utc(ds.get("updatedAt"))
+        ds["ageHours"] = round((now_dt - updated).total_seconds() / 3600, 1) if updated else None
+        if ds["errors"] or ds["ageHours"] is None or ds["ageHours"] > 12:
+            health_level = "warning"
+    failed_runs = [r for r in runs if r.get("conclusion") in {"failure", "cancelled", "timed_out"}]
+    active_runs = [r for r in runs if r.get("status") != "completed"]
+    if failed_runs:
+        health_level = "warning"
+        lines = [f"CG: Actions失敗 {len(failed_runs)}件", "詳細はCG監視を確認"]
+    elif active_runs:
+        health_level = "caution"
+        lines = ["CG: Actions実行中", "更新完了待ち"]
+    elif health_level == "warning":
+        lines = ["CG: データ更新に注意", "JSON鮮度/errorを確認"]
+    return {
+        "updatedAt": now,
+        "mode": "operation-zero-gate-health",
+        "codexTokenUse": "0 when run by GitHub Actions",
+        "level": health_level,
+        "lines": lines,
+        "datasets": datasets,
+        "runs": runs,
+        "errors": errors,
+    }
+
+
 def main():
     sources = json.loads(SOURCES.read_text(encoding="utf-8"))
     collected = []
@@ -329,6 +391,8 @@ def main():
             break
     now = datetime.now(timezone.utc).isoformat()
     contexts = build_contexts(top)
+    ai_payload = build_ai_payload(top, now)
+    weather_payload = build_weather_payload(sources, now)
     payload = {
         "updatedAt": now,
         "mode": "free-fetch-context",
@@ -350,8 +414,9 @@ def main():
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    AI_OUT.write_text(json.dumps(build_ai_payload(top, now), ensure_ascii=False, indent=2), encoding="utf-8")
-    WEATHER_OUT.write_text(json.dumps(build_weather_payload(sources, now), ensure_ascii=False, indent=2), encoding="utf-8")
+    AI_OUT.write_text(json.dumps(ai_payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    WEATHER_OUT.write_text(json.dumps(weather_payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    HEALTH_OUT.write_text(json.dumps(build_health_payload(now, payload, ai_payload, weather_payload), ensure_ascii=False, indent=2), encoding="utf-8")
     lines = ["# CODEXGATE News Brief", "", f"- 更新: {now}", "- 取得: GitHub Actions/Python", "- Codex: 0%想定（自動実行時）", "- 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。", ""]
     for ctx in contexts[:8]:
         lines.append(f"- [{ctx['genre']}] {ctx['decision']} / {ctx['signal'][:70]}")

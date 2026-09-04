@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CG監視 | CODEXGATE</title>
+  <style>
+    :root{--bg:#f4f6f8;--panel:#fff;--ink:#172033;--muted:#667085;--line:#d9dee7;--blue:#2563eb;--green:#15803d;--amber:#b45309;--rose:#b4235a;font-family:"Segoe UI","Meiryo",system-ui,sans-serif}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);line-height:1.45}.wrap{width:min(920px,calc(100% - 18px));margin:auto}header{background:#172033;color:#fff;padding:14px 0;border-bottom:4px solid var(--green)}h1{margin:0;font-size:1.6rem}.sub{margin:4px 0 0;color:#dce5f3;font-weight:900;font-size:.9rem}main{display:grid;gap:10px;padding:10px 0 26px}section{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px}h2{font-size:1.05rem;margin:0 0 8px}.status{border:1px solid var(--line);border-radius:8px;background:#f0fdf4;padding:10px}.status.caution{background:#fff7ed}.status.warning{background:#fff1f2}.status b{display:block;font-size:1.2rem}.status span{display:block;font-size:1rem;font-weight:900}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.box{border:1px solid var(--line);border-radius:8px;background:#f9fafb;padding:10px}.box b{display:block;font-size:1.2rem}.box span{color:var(--muted);font-size:.86rem;font-weight:800}.list{display:grid;gap:7px}.row{display:grid;grid-template-columns:76px 1fr 72px;gap:8px;align-items:center;border:1px solid var(--line);border-radius:8px;background:#f9fafb;padding:8px;font-size:.9rem;font-weight:900;color:var(--ink);text-decoration:none}.meta{color:var(--muted);font-size:.88rem;font-weight:800}.back{display:inline-grid;place-items:center;min-height:40px;padding:8px 12px;border-radius:8px;background:var(--blue);color:#fff;text-decoration:none;font-weight:900}@media(max-width:560px){.grid{grid-template-columns:1fr}.row{grid-template-columns:64px 1fr 58px;font-size:.86rem}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><h1>CG監視</h1><p class="sub">Actions / JSON鮮度 / error / Codex 0%運用</p></div></header>
+  <main class="wrap">
+    <section><h2>状態</h2><div class="status" id="status"><b>読込中</b><span>CG自動更新を確認中</span></div><p class="meta" id="meta">GitHub API + 静的JSON</p></section>
+    <section><h2>データ鮮度</h2><div class="grid" id="datasets"></div></section>
+    <section><h2>Actions</h2><div class="list" id="runs"></div></section>
+    <a class="back" href="../index.html">CGへ戻る</a>
+  </main>
+  <script>
+    fetch("../data/gate-health.json?v="+Date.now()).then(r=>r.ok?r.json():null).then(data=>{
+      if(!data)return;
+      const box=document.querySelector("#status");
+      box.className=`status ${data.level||"normal"}`;
+      box.innerHTML=`<b>${data.level||"normal"}</b><span>${(data.lines||[]).join(" / ")}</span>`;
+      document.querySelector("#meta").textContent=`更新 ${data.updatedAt} / ${data.mode} / ${data.codexTokenUse}`;
+      document.querySelector("#datasets").innerHTML=(data.datasets||[]).map(x=>`<div class="box"><b>${x.label}</b><span>${x.count}件 / error ${x.errors} / ${x.ageHours}h前</span></div>`).join("");
+      document.querySelector("#runs").innerHTML=(data.runs||[]).map(x=>`<a class="row" href="${x.url||'#'}"><span>${x.name}</span><span>${x.status}</span><span>${x.conclusion||'-'}</span></a>`).join("");
+    }).catch(()=>{});
+  </script>
+</body>
+</html>

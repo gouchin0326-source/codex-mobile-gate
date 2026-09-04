@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T01:33:57.446656+00:00",
+  "updatedAt": "2026-09-04T02:58:08.697100+00:00",
   "mode": "primary-api-weather-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "Open-Meteo documented no-key API + JMA warning JSON; no scraping",
@@ -8,12 +8,12 @@
     "label": "注意",
     "lines": [
       "富山: 雨16%/最大0mm",
-      "風12.4km/h・週間雨量最大95.4mm"
+      "風15.8km/h・週間雨量最大95.4mm"
     ],
     "maxRainProbability": 16,
     "maxHourlyRain": 0,
     "maxDailyRain": 95.4,
-    "maxWind": 12.4,
+    "maxWind": 15.8,
     "jmaWarnings": []
   },
   "locations": [
@@ -21,24 +21,17 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "location": "富山県",
-      "updatedAt": "2026-09-04T01:33:57.446656+00:00",
+      "updatedAt": "2026-09-04T02:58:08.697100+00:00",
       "current": {
-        "time": "2026-09-04T10:30",
+        "time": "2026-09-04T11:45",
         "interval": 900,
-        "temperature_2m": 25.1,
-        "relative_humidity_2m": 72,
+        "temperature_2m": 25.6,
+        "relative_humidity_2m": 67,
         "precipitation": 0.0,
         "weather_code": 3,
-        "wind_speed_10m": 9.8
+        "wind_speed_10m": 10.9
       },
       "hourly": [
-        {
-          "time": "2026-09-04T11:00",
-          "temp": 25.5,
-          "rainProb": 11,
-          "rain": 0.0,
-          "wind": 11.2
-        },
         {
           "time": "2026-09-04T12:00",
           "temp": 25.7,
@@ -199,6 +192,13 @@
           "rainProb": 0,
           "rain": 0.0,
           "wind": 12.4
+        },
+        {
+          "time": "2026-09-05T11:00",
+          "temp": 27.5,
+          "rainProb": 0,
+          "rain": 0.0,
+          "wind": 15.8
         }
       ],
       "daily": [

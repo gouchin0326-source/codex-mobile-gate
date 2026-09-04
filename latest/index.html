@@ -576,10 +576,10 @@
     <div class="wrap top">
       <div>
         <h1>CG</h1>
-        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-04 11:52 JST</p>
+        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-04 11:56 JST</p>
       </div>
       <button class="refresh" id="force-update" type="button">最新版に更新</button>
-      <div class="date">更新 2026-09-04 11:52 JST</div>
+      <div class="date">更新 2026-09-04 11:56 JST</div>
     </div>
   </header>
 
@@ -589,6 +589,10 @@
       <div class="notice" id="weather-notice">
         <div class="notice-line">富山: 天気警戒を読込中</div>
         <div class="notice-line">一次API/RSSで自動更新</div>
+      </div>
+      <div class="notice" id="health-notice">
+        <div class="notice-line">CG: 自動更新を確認中</div>
+        <div class="notice-line">Actions/JSON監視</div>
       </div>
     </section>
 
@@ -610,6 +614,7 @@
       <div class="phone-grid">
         <a class="app-icon updated" data-weather-icon href="./weather-info/index.html"><b class="glyph g-data">天</b><span>富山天気</span></a>
         <a class="app-icon updated" href="./ai-info/index.html"><b class="glyph g-dev">AI</b><span>AI動向</span></a>
+        <a class="app-icon updated" data-health-icon href="./gate-health/index.html"><b class="glyph g-tool">監</b><span>CG監視</span></a>
         <a class="app-icon updated" href="./zero-token-army/index.html"><b class="glyph g-data">0</b><span>無料管理</span></a>
       </div>
       <div class="info-feed" id="free-info-feed">
@@ -670,6 +675,7 @@
         <a class="app-icon updated" href="./data/weather-info.json"><b class="glyph g-data">警</b><span>警戒設定</span></a>
         <a class="app-icon updated" href="./data/free-info.json"><b class="glyph g-data">全</b><span>全JSON</span></a>
         <a class="app-icon updated" href="./data/ai-info.json"><b class="glyph g-dev">AJ</b><span>AI JSON</span></a>
+        <a class="app-icon updated" href="./data/gate-health.json"><b class="glyph g-tool">HJ</b><span>監視JSON</span></a>
       </div>
     </section>
   </main>
@@ -739,6 +745,18 @@
         if (notice) notice.innerHTML = lines.slice(0, 2).map((line) => `<div class="notice-line">${line}</div>`).join("");
         if (risk.level && risk.level !== "normal") {
           document.querySelectorAll("[data-weather-icon]").forEach((el) => el.classList.add("danger"));
+        }
+      })
+      .catch(() => {});
+    fetch("./data/gate-health.json?v=" + Date.now())
+      .then((res) => res.ok ? res.json() : null)
+      .then((data) => {
+        if (!data) return;
+        const notice = document.querySelector("#health-notice");
+        const lines = data.lines || ["CG: 監視情報あり", "詳細はCG監視"];
+        if (notice) notice.innerHTML = lines.slice(0, 2).map((line) => `<div class="notice-line">${line}</div>`).join("");
+        if (data.level && data.level !== "normal") {
+          document.querySelectorAll("[data-health-icon]").forEach((el) => el.classList.add("danger"));
         }
       })
       .catch(() => {});
