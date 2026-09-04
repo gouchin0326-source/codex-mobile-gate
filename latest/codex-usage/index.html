@@ -6,15 +6,16 @@
   <title>Codex残量 | CODEXGATE</title>
   <style>
     :root{--bg:#f4f6f8;--panel:#fff;--ink:#172033;--muted:#667085;--line:#d9dee7;--blue:#2563eb;--green:#15803d;--amber:#b45309;--rose:#b4235a;font-family:"Segoe UI","Meiryo",system-ui,sans-serif}
-    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);line-height:1.45}.wrap{width:min(920px,calc(100% - 18px));margin:auto}header{background:#172033;color:#fff;padding:14px 0;border-bottom:4px solid var(--blue)}h1{margin:0;font-size:1.6rem}.sub{margin:4px 0 0;color:#dce5f3;font-weight:900;font-size:.9rem}main{display:grid;gap:10px;padding:10px 0 26px}section{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px}h2{font-size:1.05rem;margin:0 0 8px}.decision{border:1px solid var(--line);border-radius:8px;background:#f0fdf4;padding:10px}.decision b{display:block;font-size:1.2rem}.decision span{font-size:1rem;font-weight:900}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.box{border:1px solid var(--line);border-radius:8px;background:#f9fafb;padding:10px}.box b{display:block;font-size:1.5rem}.box span{display:block;color:var(--muted);font-size:.9rem;font-weight:800}.meter{height:14px;border-radius:8px;background:#e5e7eb;overflow:hidden;margin-top:8px}.fill{height:100%;background:var(--green)}.meta{color:var(--muted);font-size:.88rem;font-weight:800}.back{display:inline-grid;place-items:center;min-height:40px;padding:8px 12px;border-radius:8px;background:var(--blue);color:#fff;text-decoration:none;font-weight:900}@media(max-width:560px){.grid{grid-template-columns:1fr}}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);line-height:1.45}.wrap{width:min(920px,calc(100% - 18px));margin:auto}header{background:#172033;color:#fff;padding:14px 0;border-bottom:4px solid var(--blue)}h1{margin:0;font-size:1.6rem}.sub{margin:4px 0 0;color:#dce5f3;font-weight:900;font-size:.9rem}main{display:grid;gap:10px;padding:10px 0 26px}section{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px}h2{font-size:1.05rem;margin:0 0 8px}.decision{border:1px solid var(--line);border-radius:8px;background:#f0fdf4;padding:10px}.decision b{display:block;font-size:1.2rem}.decision span{font-size:1rem;font-weight:900}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.box{border:1px solid var(--line);border-radius:8px;background:#f9fafb;padding:10px}.box b{display:block;font-size:1.5rem}.box span{display:block;color:var(--muted);font-size:.9rem;font-weight:800}.plan{display:grid;gap:8px}.task{border:1px solid var(--line);border-radius:8px;background:#f9fafb;padding:10px}.task b{display:block;font-size:1.04rem}.task span{display:block;font-size:.94rem;font-weight:900}.task small{display:block;color:var(--muted);font-size:.84rem;font-weight:800;margin-top:4px}.meter{height:14px;border-radius:8px;background:#e5e7eb;overflow:hidden;margin-top:8px}.fill{height:100%;background:var(--green)}.meta{color:var(--muted);font-size:.88rem;font-weight:800}.back{display:inline-grid;place-items:center;min-height:40px;padding:8px 12px;border-radius:8px;background:var(--blue);color:#fff;text-decoration:none;font-weight:900}@media(max-width:560px){.grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
-  <header><div class="wrap"><h1>Codex残量</h1><p class="sub">手動スナップショット / 自動更新は未対応</p></div></header>
+  <header><div class="wrap"><h1>Codex残量</h1><p class="sub">3時間ごと監視 / GitHub Actions自動取得は不可</p></div></header>
   <main class="wrap">
     <section><h2>判断</h2><div class="decision" id="decision"><b>読込中</b><span>残量確認中</span></div></section>
     <section><h2>枠</h2><div class="grid" id="limits"></div></section>
-    <section><h2>扱い</h2><p class="meta" id="meta">GitHub ActionsからCodex残量は取れない。Codexが必要時に更新。</p></section>
+    <section><h2>指示出し</h2><div class="plan" id="plan"></div></section>
+    <section><h2>扱い</h2><p class="meta" id="meta">Codex内部状態を定期監視。軽く使い、指示出し判断に回す。</p></section>
     <a class="back" href="../index.html">CGへ戻る</a>
   </main>
   <script>
@@ -22,6 +23,7 @@
       if(!data)return;
       document.querySelector("#decision").innerHTML=`<b>${data.decision.line1}</b><span>${data.decision.line2}</span>`;
       document.querySelector("#limits").innerHTML=[data.primary,data.secondary].map(x=>`<div class="box"><b>${x.remainingPercent}%残</b><span>${x.label} / 使用${x.usedPercent}% / reset ${x.resetsAt.slice(5,16).replace("T"," ")}</span><div class="meter"><div class="fill" style="width:${x.remainingPercent}%"></div></div></div>`).join("");
+      document.querySelector("#plan").innerHTML=(data.taskPlan||[]).map(x=>`<div class="task"><b>${x.label}</b><span>${x.action}</span><small>${x.condition}</small></div>`).join("");
       document.querySelector("#meta").textContent=`更新 ${data.updatedAt} / ${data.source} / reset権 ${data.resetCredits.availableCount}`;
     }).catch(()=>{});
   </script>

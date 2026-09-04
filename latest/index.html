@@ -576,10 +576,10 @@
     <div class="wrap top">
       <div>
         <h1>CG</h1>
-        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-04 13:21 JST</p>
+        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-04 13:25 JST</p>
       </div>
       <button class="refresh" id="force-update" type="button">最新版に更新</button>
-      <div class="date">更新 2026-09-04 13:21 JST</div>
+      <div class="date">更新 2026-09-04 13:25 JST</div>
     </div>
   </header>
 
@@ -593,6 +593,10 @@
       <div class="notice" id="health-notice">
         <div class="notice-line">CG: 自動更新を確認中</div>
         <div class="notice-line">Actions/JSON監視</div>
+      </div>
+      <div class="notice" id="usage-notice">
+        <div class="notice-line">Codex: 残量を確認中</div>
+        <div class="notice-line">指示出し余力を計算</div>
       </div>
     </section>
 
@@ -626,11 +630,11 @@
       <h2>Codexトークン使用</h2>
       <div class="auto-list">
         <div class="auto-line">役割: Codexが司令塔、外部AI調査、実装だけ短く使う</div>
-        <div class="auto-line">運用: なるべく自動化。メンテ時だけCodex消費</div>
+        <div class="auto-line">定期監視: 残量を見て、重開発/節約/軽作業を判断</div>
       </div>
       <div class="phone-grid">
         <a class="app-icon updated" href="./external-ai-brief-compressor/index.html"><b class="glyph g-tool">圧</b><span>AI圧縮</span></a>
-        <a class="app-icon updated" href="./codex-usage/index.html"><b class="glyph g-dev">残</b><span>Codex残量</span></a>
+        <a class="app-icon updated" data-usage-icon href="./codex-usage/index.html"><b class="glyph g-dev">残</b><span>Codex残量</span></a>
         <a class="app-icon updated" href="./dashboard.html"><b class="glyph g-dev">状</b><span>状態盤</span></a>
         <a class="app-icon updated" href="./app-launcher.html"><b class="glyph g-dev">棚</b><span>アプリ棚</span></a>
         <a class="app-icon" href="./eco-lane-map/index.html"><b class="glyph g-dev">図</b><span>節約図</span></a>
@@ -670,13 +674,14 @@
         <div class="auto-line">管理: 表示分類、データ取得、警告表示、GitHub Pages公開</div>
       </div>
       <div class="phone-grid">
-        <a class="app-icon updated" href="./index.html?v=202609041152"><b class="glyph g-dev">更</b><span>最新版</span></a>
+        <a class="app-icon updated" href="./index.html?v=202609041325"><b class="glyph g-dev">更</b><span>最新版</span></a>
         <a class="app-icon updated" href="./index.html"><b class="glyph g-dev">CG</b><span>ホーム</span></a>
         <a class="app-icon updated" href="./data/zero-token-capabilities.json"><b class="glyph g-data">証</b><span>0証明</span></a>
         <a class="app-icon updated" href="./data/weather-info.json"><b class="glyph g-data">警</b><span>警戒設定</span></a>
         <a class="app-icon updated" href="./data/free-info.json"><b class="glyph g-data">全</b><span>全JSON</span></a>
         <a class="app-icon updated" href="./data/ai-info.json"><b class="glyph g-dev">AJ</b><span>AI JSON</span></a>
         <a class="app-icon updated" href="./data/gate-health.json"><b class="glyph g-tool">HJ</b><span>監視JSON</span></a>
+        <a class="app-icon updated" href="./data/codex-usage-snapshot.json"><b class="glyph g-dev">CJ</b><span>残量JSON</span></a>
       </div>
     </section>
   </main>
@@ -758,6 +763,19 @@
         if (notice) notice.innerHTML = lines.slice(0, 2).map((line) => `<div class="notice-line">${line}</div>`).join("");
         if (data.level && data.level !== "normal") {
           document.querySelectorAll("[data-health-icon]").forEach((el) => el.classList.add("danger"));
+        }
+      })
+      .catch(() => {});
+    fetch("./data/codex-usage-snapshot.json?v=" + Date.now())
+      .then((res) => res.ok ? res.json() : null)
+      .then((data) => {
+        if (!data || !data.decision) return;
+        const notice = document.querySelector("#usage-notice");
+        if (notice) {
+          notice.innerHTML = `<div class="notice-line">${data.decision.line1}</div><div class="notice-line">${data.decision.line2}</div>`;
+        }
+        if ((data.primary && data.primary.remainingPercent < 30) || (data.secondary && data.secondary.remainingPercent < 25)) {
+          document.querySelectorAll("[data-usage-icon]").forEach((el) => el.classList.add("danger"));
         }
       })
       .catch(() => {});

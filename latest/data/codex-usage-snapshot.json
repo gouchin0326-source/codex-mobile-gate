@@ -1,18 +1,18 @@
 {
-  "updatedAt": "2026-09-04T13:21:00+09:00",
-  "source": "Codex internal usage tool; manual snapshot",
-  "automation": "not available from GitHub Actions",
+  "updatedAt": "2026-09-04T13:25:00+09:00",
+  "source": "Codex internal usage tool",
+  "automation": "Codex heartbeat every 3 hours; not available from GitHub Actions",
   "planType": "plus",
   "primary": {
     "label": "5時間枠",
-    "usedPercent": 4,
-    "remainingPercent": 96,
+    "usedPercent": 14,
+    "remainingPercent": 86,
     "resetsAt": "2026-09-04T16:59:00+09:00"
   },
   "secondary": {
     "label": "週枠",
-    "usedPercent": 28,
-    "remainingPercent": 72,
+    "usedPercent": 29,
+    "remainingPercent": 71,
     "resetsAt": "2026-09-07T11:31:00+09:00"
   },
   "resetCredits": {
@@ -20,7 +20,24 @@
   },
   "decision": {
     "level": "green",
-    "line1": "Codex余力あり: 5時間枠96%残",
-    "line2": "週枠72%残。重い開発も可能"
-  }
+    "line1": "Codex余力あり: 5時間枠86%残",
+    "line2": "週枠71%残。重い開発も可能"
+  },
+  "taskPlan": [
+    {
+      "label": "重開発OK",
+      "condition": "5時間枠70%以上、週枠50%以上",
+      "action": "新機能実装、画面改修、データ設計"
+    },
+    {
+      "label": "節約運用",
+      "condition": "5時間枠30-69%",
+      "action": "外部AIメモ化、1目的ずつ実装"
+    },
+    {
+      "label": "軽作業のみ",
+      "condition": "5時間枠30%未満 または 週枠25%未満",
+      "action": "修正、確認、GitHub Actions中心"
+    }
+  ]
 }
