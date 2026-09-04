@@ -2,11 +2,11 @@ name: free-info
 
 on:
   schedule:
-    - cron: "17 * * * *"
+    - cron: "*/10 * * * *"
   workflow_dispatch:
     inputs:
-      cadence_hours:
-        description: "Fetch cadence hours: 1, 3, 6, 12, 24"
+      cadence_minutes:
+        description: "Fetch cadence minutes: 10, 30, 60, 180, 360, 720, 1440"
         required: false
         default: ""
       force:
@@ -26,18 +26,18 @@ jobs:
         with:
           python-version: "3.12"
       - name: Apply cadence input
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.cadence_hours != '' }}
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.cadence_minutes != '' }}
         run: |
           python - <<'PY'
           import json
           from datetime import datetime, timezone
           from pathlib import Path
-          value = int("${{ inputs.cadence_hours }}")
-          if value not in {1, 3, 6, 12, 24}:
-              raise SystemExit("cadence_hours must be one of 1,3,6,12,24")
+          value = int("${{ inputs.cadence_minutes }}")
+          if value not in {10, 30, 60, 180, 360, 720, 1440}:
+              raise SystemExit("cadence_minutes must be one of 10,30,60,180,360,720,1440")
           path = Path("data/free_info_schedule.json")
           data = json.loads(path.read_text(encoding="utf-8"))
-          data["cadenceHours"] = value
+          data["cadenceMinutes"] = value
           data["updatedAt"] = datetime.now(timezone.utc).isoformat()
           path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
           PY

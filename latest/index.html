@@ -640,10 +640,10 @@
     <div class="wrap top">
       <div>
         <h1>CG</h1>
-        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-04 16:26 JST</p>
+        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-04 17:07 JST</p>
       </div>
       <button class="refresh" id="force-update" type="button">最新版に更新</button>
-      <div class="date">更新 2026-09-04 16:26 JST</div>
+      <div class="date">更新 2026-09-04 17:07 JST</div>
     </div>
   </header>
 
@@ -727,15 +727,15 @@
     <section class="tab-panel" id="tab-settings">
       <h2>設定</h2>
       <div class="setting-row">
-        <div class="setting-pill" id="cadence-pill"><b>取得 6h</b><span>毎時判定</span></div>
+        <div class="setting-pill" id="cadence-pill"><b>取得 10分</b><span>10分判定</span></div>
         <div class="setting-pill" id="traffic-pill"><b>通信 計測中</b><span>今回読込</span></div>
         <div class="setting-pill"><b>変更 可</b><span>手動実行入力</span></div>
       </div>
       <div class="auto-list">
-        <div class="auto-line" id="cadence-note">推奨: 通常6h。天気警戒時だけ1h。Actionsは毎時起動し、期限到達時だけ取得。</div>
+        <div class="auto-line" id="cadence-note">設定: 通常10分。GitHub公式最短5分の範囲内。公開repo標準runnerは無料。</div>
       </div>
       <div class="phone-grid">
-        <a class="app-icon updated" href="./index.html?v=202609041626"><b class="glyph g-dev">更</b><span>最新版</span></a>
+        <a class="app-icon updated" href="./index.html?v=202609041707"><b class="glyph g-dev">更</b><span>最新版</span></a>
         <a class="app-icon updated" href="./index.html"><b class="glyph g-dev">CG</b><span>ホーム</span></a>
         <a class="app-icon updated" href="./data/zero-token-capabilities.json"><b class="glyph g-data">証</b><span>0証明</span></a>
         <a class="app-icon updated" href="./data/weather-info.json"><b class="glyph g-data">警</b><span>警戒設定</span></a>
@@ -850,7 +850,7 @@
       .then((data) => {
         if (!data) return;
         const pill = document.querySelector("#cadence-pill");
-        if (pill) pill.innerHTML = `<b>取得 ${data.cadenceHours}h</b><span>警戒時${data.weatherRiskCadenceHours}h</span>`;
+        if (pill) pill.innerHTML = `<b>取得 ${data.cadenceMinutes}分</b><span>警戒時${data.weatherRiskCadenceMinutes}分</span>`;
       })
       .catch(() => {});
     setTimeout(() => {

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T07:27:38.893734+00:00",
+  "updatedAt": "2026-09-04T08:07:34.915476+00:00",
   "mode": "primary-api-weather-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "Open-Meteo documented no-key API + JMA warning JSON; no scraping",
@@ -8,11 +8,11 @@
     "label": "注意",
     "lines": [
       "富山: 雨4%/最大0mm",
-      "風16.9km/h・週間雨量最大95.4mm"
+      "風16.9km/h・週間雨量最大101.6mm"
     ],
     "maxRainProbability": 4,
     "maxHourlyRain": 0,
-    "maxDailyRain": 95.4,
+    "maxDailyRain": 101.6,
     "maxWind": 16.9,
     "jmaWarnings": []
   },
@@ -21,15 +21,15 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "location": "富山県",
-      "updatedAt": "2026-09-04T07:27:38.893734+00:00",
+      "updatedAt": "2026-09-04T08:07:34.915476+00:00",
       "current": {
-        "time": "2026-09-04T16:15",
+        "time": "2026-09-04T17:00",
         "interval": 900,
-        "temperature_2m": 25.3,
+        "temperature_2m": 25.1,
         "relative_humidity_2m": 72,
         "precipitation": 0.0,
         "weather_code": 3,
-        "wind_speed_10m": 11.2
+        "wind_speed_10m": 11.6
       },
       "hourly": [
         {
@@ -225,31 +225,31 @@
         },
         {
           "date": "2026-09-07",
-          "max": 24.6,
-          "min": 22.2,
-          "rain": 54.4,
-          "code": 82
+          "max": 25.9,
+          "min": 22.3,
+          "rain": 12.53,
+          "code": 63
         },
         {
           "date": "2026-09-08",
-          "max": 26.0,
-          "min": 22.7,
-          "rain": 95.4,
+          "max": 26.9,
+          "min": 22.6,
+          "rain": 24.1,
           "code": 95
         },
         {
           "date": "2026-09-09",
-          "max": 26.8,
-          "min": 21.8,
-          "rain": 2.9,
-          "code": 53
+          "max": 24.4,
+          "min": 22.2,
+          "rain": 101.6,
+          "code": 95
         },
         {
           "date": "2026-09-10",
-          "max": 21.6,
-          "min": 20.0,
-          "rain": 22.4,
-          "code": 80
+          "max": 24.4,
+          "min": 21.4,
+          "rain": 0.6,
+          "code": 51
         }
       ],
       "decision": "雨確率と風を見て外出/作業判断",
