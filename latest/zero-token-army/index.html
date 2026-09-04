@@ -15,6 +15,7 @@
     .new .glyph::after{content:"!";position:absolute;right:-5px;top:-5px;width:20px;height:20px;border-radius:999px;background:var(--rose);display:grid;place-items:center;font-size:.8rem}.app span{font-size:.82rem;font-weight:900;line-height:1.15}
     .feed{display:grid;gap:8px}.item{display:grid;grid-template-columns:54px 1fr auto;gap:10px;align-items:center;border:1px solid var(--line);border-radius:8px;padding:10px;background:#f9fafb;color:var(--ink);text-decoration:none}.item b{display:grid;place-items:center;min-height:44px;border-radius:10px;background:#172033;color:#fff;font-size:.9rem}.item span{font-size:1.05rem;font-weight:900;line-height:1.32;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}.item i{font-style:normal;color:var(--rose);font-weight:900;font-size:1.1rem}
     .context{display:grid;gap:8px}.ctx{border:1px solid var(--line);border-radius:8px;background:#f9fafb;padding:10px}.ctx b{display:block;font-size:1.08rem}.ctx span{display:block;font-size:1rem;font-weight:900;line-height:1.35}.ctx small{display:block;color:var(--muted);font-size:.88rem;font-weight:800;margin-top:4px}
+    .source-grid{display:grid;gap:8px}.src{border:1px solid var(--line);border-left:5px solid var(--amber);border-radius:8px;background:#f9fafb;padding:10px}.src.active{border-left-color:var(--green)}.src b{display:block;font-size:1rem}.src span{display:block;font-size:.95rem;font-weight:900;line-height:1.32}.src small{display:block;color:var(--muted);font-size:.82rem;font-weight:800;margin-top:4px}
     .muted{color:var(--muted);font-size:.9rem;font-weight:800}.back{display:inline-grid;place-items:center;min-height:40px;padding:8px 12px;border-radius:8px;background:var(--blue);color:#fff;text-decoration:none;font-weight:900}
     @media(max-width:560px){.wrap{width:min(100% - 14px,430px)}h1{font-size:1.45rem}.sub{font-size:.82rem}.hero{grid-template-columns:1fr}.apps{grid-template-columns:repeat(4,1fr);gap:5px}.app{min-height:82px}.glyph{width:44px;height:44px;border-radius:12px;font-size:1.12rem}.app span{font-size:.7rem}.item{grid-template-columns:44px 1fr 18px;padding:9px;gap:8px}.item b{min-height:38px;font-size:.78rem}.item span{font-size:1.04rem}.muted{font-size:.84rem}}
   </style>
@@ -38,6 +39,7 @@
         <a class="app new" href="#feed"><b class="glyph g1">分</b><span>分類</span></a>
         <a class="app new" href="../data/codexgate-news-brief-2026-09-03.md"><b class="glyph g2">採</b><span>採決メモ</span></a>
         <a class="app" href="../data/free-info.json"><b class="glyph g1">全</b><span>取得JSON</span></a>
+        <a class="app new" href="#sources"><b class="glyph g4">源</b><span>取得源</span></a>
         <a class="app" href="#policy"><b class="glyph g3">守</b><span>合法方針</span></a>
         <a class="app" href="#feed"><b class="glyph g2">揺</b><span>地震処理</span></a>
         <a class="app" href="../data/zero-token-capabilities.json"><b class="glyph g4">証</b><span>証明JSON</span></a>
@@ -53,6 +55,10 @@
         <div class="ctx"><b>取得</b><span>公開RSS/API/GeoJSONをプログラムで取得</span><small>通常ページの無断スクレイピングはしない</small></div>
         <div class="ctx"><b>加工</b><span>分類・重要度・採決メモをJSON化</span><small>GitHub ActionsならCodex運用0%</small></div>
       </div>
+    </section>
+    <section id="sources">
+      <h2>取得源</h2>
+      <div class="source-grid" id="sources-box"><div class="src"><b>読込中</b><span>取得元と手段を確認</span><small>RSS/API/GeoJSON</small></div></div>
     </section>
     <section>
       <h2>取得データ</h2>
@@ -70,6 +76,11 @@
         document.querySelector("#contexts").innerHTML=data.contexts.map(ctx=>`<div class="ctx"><b>${ctx.genre} ${ctx.count}件</b><span>${ctx.decision}</span><small>${ctx.signal}</small></div>`).join("");
       }
       document.querySelector("#feed").innerHTML=data.items.slice(0,12).map(item=>`<a class="item" href="${item.url||'../data/free-info.json'}"><b>${item.genre||item.label||'情'}</b><span>${item.title||'無題'}</span><i>${item.score>=3?'!':''}</i></a>`).join("");
+    }).catch(()=>{});
+    fetch("../data/free-source-catalog.json?v="+Date.now()).then(r=>r.ok?r.json():null).then(data=>{
+      if(!data)return;
+      const rows=[...(data.active||[]),...(data.candidate||[])].slice(0,10);
+      document.querySelector("#sources-box").innerHTML=rows.map(x=>`<div class="src ${x.status}"><b>${x.genre} / ${x.provider}</b><span>${x.value}</span><small>${x.method} / ${x.status} / ${x.nextApp}</small></div>`).join("");
     }).catch(()=>{});
   </script>
 </body>
