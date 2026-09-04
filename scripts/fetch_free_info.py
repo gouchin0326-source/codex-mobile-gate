@@ -65,6 +65,17 @@ SOCIAL_SOURCES = [
 ]
 
 
+def is_japanese_text(text):
+    return bool(re.search(r"[\u3040-\u30ff\u3400-\u9fff]", text or ""))
+
+
+def social_region_score(text, source):
+    score = 2 if is_japanese_text(text) else 0
+    if ".jp" in source.get("url", "") or source.get("id", "").startswith("mastodon"):
+        score += 1
+    return score
+
+
 def load_schedule():
     default = {
         "cadenceMinutes": 10,
@@ -389,6 +400,7 @@ def parse_mastodon(source, blob):
         boosts = row.get("reblogs_count") or 0
         favs = row.get("favourites_count") or 0
         score, tags = score_item(title, acct, "SNS")
+        region_score = social_region_score(title, source)
         items.append({
             "source": source["id"],
             "platform": source["platform"],
@@ -397,6 +409,8 @@ def parse_mastodon(source, blob):
             "author": acct,
             "title": title[:140],
             "summary": f"boost {boosts} / fav {favs}",
+            "region": "日本語優先" if region_score else "海外",
+            "regionScore": region_score,
             "url": row.get("url") or "",
             "published": row.get("created_at") or "",
             "score": min(5, score + (1 if boosts or favs else 0)),
@@ -413,6 +427,7 @@ def parse_bluesky(source, blob):
         text = clean(record.get("text", ""))
         author = (row.get("author") or {}).get("handle", "")
         score, tags = score_item(text, author, "SNS")
+        region_score = social_region_score(text, source)
         items.append({
             "source": source["id"],
             "platform": source["platform"],
@@ -421,6 +436,8 @@ def parse_bluesky(source, blob):
             "author": author,
             "title": text[:140],
             "summary": f"reply {row.get('replyCount', 0)} / repost {row.get('repostCount', 0)} / like {row.get('likeCount', 0)}",
+            "region": "日本語優先" if region_score else "海外",
+            "regionScore": region_score,
             "url": f"https://bsky.app/profile/{author}/post/{row.get('uri','').split('/')[-1]}" if author and row.get("uri") else "",
             "published": record.get("createdAt") or row.get("indexedAt") or "",
             "score": min(5, score + (1 if row.get("likeCount") else 0)),
@@ -443,7 +460,15 @@ def build_social_payload(now):
                 items.extend(parse_rss(source, blob))
         except Exception as exc:
             errors.append({"source": source["id"], "platform": source["platform"], "error": str(exc)[:160]})
-    items = sorted(items, key=lambda x: (x.get("score", 0), x.get("published", "")), reverse=True)[:36]
+    for item in items:
+        if "regionScore" not in item:
+            item["regionScore"] = social_region_score(item.get("title", ""), {"url": item.get("url", ""), "id": item.get("source", "")})
+            item["region"] = "日本語優先" if item["regionScore"] else "海外"
+    japanese = [x for x in items if x.get("regionScore", 0) > 0]
+    overseas = [x for x in items if x.get("regionScore", 0) <= 0]
+    ranked = sorted(japanese, key=lambda x: (x.get("regionScore", 0), x.get("score", 0), x.get("published", "")), reverse=True)
+    ranked.extend(sorted(overseas, key=lambda x: (x.get("score", 0), x.get("published", "")), reverse=True))
+    items = ranked[:36]
     platforms = {}
     for item in items:
         platforms.setdefault(item.get("platform", "SNS"), 0)
@@ -452,7 +477,7 @@ def build_social_payload(now):
     for item in items:
         text = f"{item.get('title','')} {item.get('summary','')}".lower()
         for word in re.findall(r"[a-zA-Z][a-zA-Z0-9_-]{2,}", text):
-            if word in {"https", "http", "www", "com", "the", "and", "for", "with", "that"}:
+            if word in {"https", "http", "www", "com", "the", "and", "for", "with", "that", "boost", "fav"}:
                 continue
             top_words[word] = top_words.get(word, 0) + 1
     trends = [{"word": k, "count": v} for k, v in sorted(top_words.items(), key=lambda x: (-x[1], x[0]))[:12]]
@@ -460,9 +485,14 @@ def build_social_payload(now):
         "updatedAt": now,
         "mode": "zero-token-social-trends",
         "codexTokenUse": "0 when run by GitHub Actions",
-        "policy": "public API/RSS only; no login bypass; no unauthorized scraping; short excerpts only",
+        "policy": "public API/RSS only; no login bypass; no unauthorized scraping; short excerpts + URL only",
         "cadence": "10m",
-        "decision": "Xは有料寄り。Mastodon/Redditを主力、Blueskyは取得可否を監視。",
+        "decision": "日本語優先。URL掲載は可、本文転載は短い抜粋だけ。",
+        "region": {
+            "target": "Japan/Japanese first",
+            "japaneseCount": len(japanese),
+            "overseasCount": len(overseas),
+        },
         "platformCounts": platforms,
         "trends": trends,
         "items": items,

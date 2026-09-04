@@ -1,40 +1,38 @@
 {
-  "updatedAt": "2026-09-04T09:41:48.907847+00:00",
+  "updatedAt": "2026-09-04T09:49:06.501388+00:00",
   "mode": "zero-token-social-trends",
   "codexTokenUse": "0 when run by GitHub Actions",
-  "policy": "public API/RSS only; no login bypass; no unauthorized scraping; short excerpts only",
+  "policy": "public API/RSS only; no login bypass; no unauthorized scraping; short excerpts + URL only",
   "cadence": "10m",
-  "decision": "Xは有料寄り。Mastodon/Redditを主力、Blueskyは取得可否を監視。",
+  "decision": "日本語優先。URL掲載は可、本文転載は短い抜粋だけ。",
+  "region": {
+    "target": "Japan/Japanese first",
+    "japaneseCount": 24,
+    "overseasCount": 8
+  },
   "platformCounts": {
-    "Mastodon": 24
+    "Mastodon": 24,
+    "Reddit": 8
   },
   "trends": [
     {
-      "word": "boost",
-      "count": 24
+      "word": "astra",
+      "count": 6
     },
     {
-      "word": "fav",
-      "count": 24
+      "word": "claude",
+      "count": 6
     },
     {
       "word": "codex",
       "count": 6
     },
     {
-      "word": "astra",
-      "count": 5
-    },
-    {
-      "word": "claude",
+      "word": "gpt-6",
       "count": 5
     },
     {
       "word": "blog",
-      "count": 4
-    },
-    {
-      "word": "gpt-6",
       "count": 4
     },
     {
@@ -56,27 +54,17 @@
     {
       "word": "baseten",
       "count": 2
+    },
+    {
+      "word": "china",
+      "count": 2
+    },
+    {
+      "word": "content",
+      "count": 2
     }
   ],
   "items": [
-    {
-      "source": "mastodon-ai",
-      "platform": "Mastodon",
-      "label": "Mastodon #AI",
-      "genre": "SNS",
-      "author": "bananapi@mastodon.social",
-      "title": "Banana Pi BPI-M8 with Allwinner A733 chip design.3TOPS NPU,4GB of LPDDR5 RAM, 32GB of eMMC. PoE function support. https:// forum.banana-pi.o",
-      "summary": "boost 1 / fav 0",
-      "url": "https://mastodon.social/@bananapi/117212092139414283",
-      "published": "2026-09-04T09:36:29.000Z",
-      "score": 5,
-      "tags": [
-        "SNS",
-        "重要",
-        "制作",
-        "開発"
-      ]
-    },
     {
       "source": "mastodon-codex",
       "platform": "Mastodon",
@@ -85,6 +73,8 @@
       "author": "gslin@abpe.org",
       "title": "https:// blog.gslin.org/archives/2026/0 9/04/13180/gpt-6-astra-%e7%9a%84%e4%b8%80%e4%ba%9b%e6%b6%88%e6%81%af/ GPT-6 Astra 的一些消息 # ai # astra",
       "summary": "boost 1 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 3,
       "url": "https://abpe.org/@gslin/117210658352259025",
       "published": "2026-09-04T03:31:51.000Z",
       "score": 4,
@@ -95,54 +85,6 @@
       ]
     },
     {
-      "source": "mastodon-ai",
-      "platform": "Mastodon",
-      "label": "Mastodon #AI",
-      "genre": "SNS",
-      "author": "techwire@gamefan.net",
-      "title": "Russian Starlink rival flounders after entire batch of satellites fails to reach operational altitude — many of the 16 launched hit less tha",
-      "summary": "boost 1 / fav 0",
-      "url": "https://social.gamefan.net/@techwire/117212103751473113",
-      "published": "2026-09-04T09:39:26.000Z",
-      "score": 3,
-      "tags": [
-        "SNS",
-        "制作"
-      ]
-    },
-    {
-      "source": "mastodon-ai",
-      "platform": "Mastodon",
-      "label": "Mastodon #AI",
-      "genre": "SNS",
-      "author": "feed@igeek.gamer-geek-news.com",
-      "title": "🤖 Should AI ever be fully autonomous for content aimed at children? We chose not to, and it's slowed us down a lot. We built an AI content g",
-      "summary": "boost 1 / fav 0",
-      "url": "https://igeek.gamer-geek-news.com/@feed/statuses/01M1NWCVM6HX4H7TQ64RYYQS4A",
-      "published": "2026-09-04T09:36:01.000Z",
-      "score": 3,
-      "tags": [
-        "SNS",
-        "制作"
-      ]
-    },
-    {
-      "source": "mastodon-ai",
-      "platform": "Mastodon",
-      "label": "Mastodon #AI",
-      "genre": "SNS",
-      "author": "techwire@gamefan.net",
-      "title": "China's EUV technology 'at a similar stage to ASML in 2004,' analyst claims — Beijing's semiconductor industry remains well behind Western r",
-      "summary": "boost 1 / fav 0",
-      "url": "https://social.gamefan.net/@techwire/117212084195550504",
-      "published": "2026-09-04T09:34:28.000Z",
-      "score": 3,
-      "tags": [
-        "SNS",
-        "制作"
-      ]
-    },
-    {
       "source": "mastodon-codex",
       "platform": "Mastodon",
       "label": "Mastodon #Codex",
@@ -150,40 +92,10 @@
       "author": "gihyo@rss-mstdn.studiofreesia.com",
       "title": "OpenAI、GPT-6 Astraを発表 ——PC操作の精度や速度を向上、サイバー能力は同社初の「重大」水準 https:// gihyo.jp/article/2026/09/gpt-6 -astra?utm_source=feed # gihyo # 技術評論社 # gih",
       "summary": "boost 1 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 3,
       "url": "https://rss-mstdn.studiofreesia.com/@gihyo/117210923020186360",
       "published": "2026-09-04T04:39:10.000Z",
-      "score": 3,
-      "tags": [
-        "SNS",
-        "重要"
-      ]
-    },
-    {
-      "source": "mastodon-codex",
-      "platform": "Mastodon",
-      "label": "Mastodon #Codex",
-      "genre": "SNS",
-      "author": "13@2137.social",
-      "title": "From a Ten-Line Script to a Real Utility with Codex https:// hackaday.com/2026/09/03/from-a -ten-line-script-to-a-real-utility-with-codex/ #",
-      "summary": "boost 1 / fav 0",
-      "url": "https://2137.social/@13/117207785502941493",
-      "published": "2026-09-03T15:21:15.000Z",
-      "score": 3,
-      "tags": [
-        "SNS",
-        "重要"
-      ]
-    },
-    {
-      "source": "mastodon-codex",
-      "platform": "Mastodon",
-      "label": "Mastodon #Codex",
-      "genre": "SNS",
-      "author": "hackaday.com@web.brid.gy",
-      "title": "From a Ten-Line Script to a Real Utility with Codex https:// web.brid.gy/r/https://hackaday .com/2026/09/03/from-a-ten-line-script-to-a-real",
-      "summary": "boost 1 / fav 0",
-      "url": "https://web.brid.gy/r/https://hackaday.com/2026/09/03/from-a-ten-line-script-to-a-real-utility-with-codex/",
-      "published": "2026-09-03T14:00:20.000Z",
       "score": 3,
       "tags": [
         "SNS",
@@ -198,6 +110,8 @@
       "author": "tkhunt@jpmstdn.com",
       "title": "https://www. tkhunt.com/2528545/ 『Claude Code』と『Codex』どっちが良い？AIガチ勢の場合は… # AgenticAi # AI # AIエージェント # ArtificialIntelligence # Claude # clau",
       "summary": "boost 1 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 3,
       "url": "https://jpmstdn.com/@tkhunt/117200958960723688",
       "published": "2026-09-02T10:25:10.000Z",
       "score": 3,
@@ -214,6 +128,8 @@
       "author": "ymbot@mastodon.social",
       "title": "【ヌンチャクの4ビット拡散推論を拡散器に導入する】 https:// huggingface.co/blog/nunchaku-d iffusers ※AI生成の自動投稿（見出し＋リンク） # AI # 生成AI # LLM # AIGenerated",
       "summary": "boost 1 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 3,
       "url": "https://mastodon.social/@ymbot/117212102604289068",
       "published": "2026-09-04T09:39:09.000Z",
       "score": 2,
@@ -229,6 +145,8 @@
       "author": "ymbot@mastodon.social",
       "title": "【Basetenがハグ顔推論プロバイダーに注目🔥】 https:// huggingface.co/blog/baseten ※AI生成の自動投稿（見出し＋リンク） # AI # 生成AI # LLM # AIGenerated",
       "summary": "boost 1 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 3,
       "url": "https://mastodon.social/@ymbot/117212102427561585",
       "published": "2026-09-04T09:39:06.000Z",
       "score": 2,
@@ -244,53 +162,10 @@
       "author": "ymbot@mastodon.social",
       "title": "【LFM2.5-DSparkにより推論速度が最大3.2倍向上】 https:// huggingface.co/blog/LiquidAI/l fm25-dspark ※AI生成の自動投稿（見出し＋リンク） # AI # 生成AI # LLM # AIGenerated",
       "summary": "boost 1 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 3,
       "url": "https://mastodon.social/@ymbot/117212102234473201",
       "published": "2026-09-04T09:39:03.000Z",
-      "score": 2,
-      "tags": [
-        "SNS"
-      ]
-    },
-    {
-      "source": "mastodon-ai",
-      "platform": "Mastodon",
-      "label": "Mastodon #AI",
-      "genre": "SNS",
-      "author": "PulseOfNations@mastodon.social",
-      "title": "IFA 2026 Berlin Opens With 1,900 Brands, AI Everywhere Europe's largest tech show kicks off with Xiaomi foldables, Samsung AI appliances, Mi",
-      "summary": "boost 1 / fav 0",
-      "url": "https://mastodon.social/@PulseOfNations/117212082488974391",
-      "published": "2026-09-04T09:34:02.000Z",
-      "score": 2,
-      "tags": [
-        "SNS"
-      ]
-    },
-    {
-      "source": "mastodon-ai",
-      "platform": "Mastodon",
-      "label": "Mastodon #AI",
-      "genre": "SNS",
-      "author": "doberman_core@mastodon.social",
-      "title": "Doberman's audit log stores verdicts, reason codes, and HMAC-SHA256 fingerprints in local SQLite, never raw secrets or payloads. Telemetry i",
-      "summary": "boost 1 / fav 0",
-      "url": "https://mastodon.social/@doberman_core/117212073507294394",
-      "published": "2026-09-04T09:31:45.000Z",
-      "score": 2,
-      "tags": [
-        "SNS"
-      ]
-    },
-    {
-      "source": "mastodon-ai",
-      "platform": "Mastodon",
-      "label": "Mastodon #AI",
-      "genre": "SNS",
-      "author": "aiandemily@mastodon.social",
-      "title": "【無料で始める創作革命】AIで画像・動画・音声ぜんぶ生成！ アドビのオールインワンAI「Firefly」徹底解説！ https://www. aiandemily.com/%e3%80%90%e7%84 %a1%e6%96%99%e3%81%a7%e5%a7%8b%e3%82%8",
-      "summary": "boost 1 / fav 0",
-      "url": "https://mastodon.social/@aiandemily/117212071012917591",
-      "published": "2026-09-04T09:31:07.000Z",
       "score": 2,
       "tags": [
         "SNS"
@@ -304,6 +179,8 @@
       "author": "sayzard@mastodon.sayzard.org",
       "title": "新清士@AIコンテンツ開発者 (@kiyoshi_shin) AI Night Market 전시용 뮤직비디오 제작 과정에서 Codex와 논의한 로컬 H3 활용 경험이다. H3를 로컬에서 쓸 수 있어 초당 24프레임 단위의 연출을 고려하고, 장면을 3초 길이 ",
       "summary": "boost 0 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 3,
       "url": "https://mastodon.sayzard.org/@sayzard/117210745973521239",
       "published": "2026-09-04T03:54:08.000Z",
       "score": 2,
@@ -320,6 +197,8 @@
       "author": "qiita@rss-mstdn.studiofreesia.com",
       "title": "モノレポの `frontend/CLAUDE.md`、本当に読まれてる？ Claude Code のネストしたメモリ読み込みを検証してみた https:// qiita.com/yomu_n/items/ccab4aa 629a74b3231d1?utm_campaign=pop",
       "summary": "boost 0 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 3,
       "url": "https://rss-mstdn.studiofreesia.com/@qiita/117209861924391551",
       "published": "2026-09-04T00:09:19.000Z",
       "score": 2,
@@ -336,9 +215,138 @@
       "author": "forest_watch_impress@rss-mstdn.studiofreesia.com",
       "title": "OpenAI、次世代モデル「GPT-6 Astra」を発表 ～「PCでできることは、すべて代行できる」／科学研究、ビジネス業務、高度な数学、コンピューター操作などの分野で新境地を拓く https:// forest.watch.impress.co.jp/doc s/news/2",
       "summary": "boost 0 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 3,
       "url": "https://rss-mstdn.studiofreesia.com/@forest_watch_impress/117209469636655694",
       "published": "2026-09-03T22:29:33.000Z",
       "score": 2,
+      "tags": [
+        "SNS",
+        "重要"
+      ]
+    },
+    {
+      "source": "mastodon-ai",
+      "platform": "Mastodon",
+      "label": "Mastodon #AI",
+      "genre": "SNS",
+      "author": "random_miku@mastodon.social",
+      "title": "Yeah / パソータ / September 6, 2025 # AI # 初音ミク # VOCALOID # ふつくしい https://www. pixiv.net/en/artworks/134775153",
+      "summary": "boost 0 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 3,
+      "url": "https://mastodon.social/@random_miku/117212102491895816",
+      "published": "2026-09-04T09:39:07.000Z",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ]
+    },
+    {
+      "source": "mastodon-ai",
+      "platform": "Mastodon",
+      "label": "Mastodon #AI",
+      "genre": "SNS",
+      "author": "bananapi@mastodon.social",
+      "title": "Banana Pi BPI-M8 with Allwinner A733 chip design.3TOPS NPU,4GB of LPDDR5 RAM, 32GB of eMMC. PoE function support. https:// forum.banana-pi.o",
+      "summary": "boost 1 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 1,
+      "url": "https://mastodon.social/@bananapi/117212092139414283",
+      "published": "2026-09-04T09:36:29.000Z",
+      "score": 5,
+      "tags": [
+        "SNS",
+        "重要",
+        "制作",
+        "開発"
+      ]
+    },
+    {
+      "source": "mastodon-ai",
+      "platform": "Mastodon",
+      "label": "Mastodon #AI",
+      "genre": "SNS",
+      "author": "techwire@gamefan.net",
+      "title": "Oklahoma city tries to charge farmer arrested at data center debate $17,000 for body cam footage of the incident — accused faces trespassing",
+      "summary": "boost 1 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 1,
+      "url": "https://social.gamefan.net/@techwire/117212123486895881",
+      "published": "2026-09-04T09:44:27.000Z",
+      "score": 3,
+      "tags": [
+        "SNS",
+        "制作"
+      ]
+    },
+    {
+      "source": "mastodon-ai",
+      "platform": "Mastodon",
+      "label": "Mastodon #AI",
+      "genre": "SNS",
+      "author": "techwire@gamefan.net",
+      "title": "Russian Starlink rival flounders after entire batch of satellites fails to reach operational altitude — many of the 16 launched hit less tha",
+      "summary": "boost 1 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 1,
+      "url": "https://social.gamefan.net/@techwire/117212103751473113",
+      "published": "2026-09-04T09:39:26.000Z",
+      "score": 3,
+      "tags": [
+        "SNS",
+        "制作"
+      ]
+    },
+    {
+      "source": "mastodon-ai",
+      "platform": "Mastodon",
+      "label": "Mastodon #AI",
+      "genre": "SNS",
+      "author": "feed@igeek.gamer-geek-news.com",
+      "title": "🤖 Should AI ever be fully autonomous for content aimed at children? We chose not to, and it's slowed us down a lot. We built an AI content g",
+      "summary": "boost 1 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 1,
+      "url": "https://igeek.gamer-geek-news.com/@feed/statuses/01M1NWCVM6HX4H7TQ64RYYQS4A",
+      "published": "2026-09-04T09:36:01.000Z",
+      "score": 3,
+      "tags": [
+        "SNS",
+        "制作"
+      ]
+    },
+    {
+      "source": "mastodon-ai",
+      "platform": "Mastodon",
+      "label": "Mastodon #AI",
+      "genre": "SNS",
+      "author": "techwire@gamefan.net",
+      "title": "China's EUV technology 'at a similar stage to ASML in 2004,' analyst claims — Beijing's semiconductor industry remains well behind Western r",
+      "summary": "boost 1 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 1,
+      "url": "https://social.gamefan.net/@techwire/117212084195550504",
+      "published": "2026-09-04T09:34:28.000Z",
+      "score": 3,
+      "tags": [
+        "SNS",
+        "制作"
+      ]
+    },
+    {
+      "source": "mastodon-codex",
+      "platform": "Mastodon",
+      "label": "Mastodon #Codex",
+      "genre": "SNS",
+      "author": "13@2137.social",
+      "title": "From a Ten-Line Script to a Real Utility with Codex https:// hackaday.com/2026/09/03/from-a -ten-line-script-to-a-real-utility-with-codex/ #",
+      "summary": "boost 1 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 1,
+      "url": "https://2137.social/@13/117207785502941493",
+      "published": "2026-09-03T15:21:15.000Z",
+      "score": 3,
       "tags": [
         "SNS",
         "重要"
@@ -349,9 +357,63 @@
       "platform": "Mastodon",
       "label": "Mastodon #Codex",
       "genre": "SNS",
+      "author": "hackaday.com@web.brid.gy",
+      "title": "From a Ten-Line Script to a Real Utility with Codex https:// web.brid.gy/r/https://hackaday .com/2026/09/03/from-a-ten-line-script-to-a-real",
+      "summary": "boost 1 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 1,
+      "url": "https://web.brid.gy/r/https://hackaday.com/2026/09/03/from-a-ten-line-script-to-a-real-utility-with-codex/",
+      "published": "2026-09-03T14:00:20.000Z",
+      "score": 3,
+      "tags": [
+        "SNS",
+        "重要"
+      ]
+    },
+    {
+      "source": "mastodon-ai",
+      "platform": "Mastodon",
+      "label": "Mastodon #AI",
+      "genre": "SNS",
+      "author": "dumnezero@piefed.social",
+      "title": "What is AI, and why is it harmful? What is AI, and why is it harmful? https:// piefed.social/c/fuck_ai@lemmy. world/p/2349418/what-is-ai-and",
+      "summary": "boost 1 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 1,
+      "url": "https://piefed.social/c/fuck_ai@lemmy.world/p/2349418/what-is-ai-and-why-is-it-harmful-what-is-ai-and-why-is-it-harmful",
+      "published": "2026-09-04T09:42:42.870Z",
+      "score": 2,
+      "tags": [
+        "SNS"
+      ]
+    },
+    {
+      "source": "mastodon-ai",
+      "platform": "Mastodon",
+      "label": "Mastodon #AI",
+      "genre": "SNS",
+      "author": "PulseOfNations@mastodon.social",
+      "title": "IFA 2026 Berlin Opens With 1,900 Brands, AI Everywhere Europe's largest tech show kicks off with Xiaomi foldables, Samsung AI appliances, Mi",
+      "summary": "boost 1 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 1,
+      "url": "https://mastodon.social/@PulseOfNations/117212082488974391",
+      "published": "2026-09-04T09:34:02.000Z",
+      "score": 2,
+      "tags": [
+        "SNS"
+      ]
+    },
+    {
+      "source": "mastodon-codex",
+      "platform": "Mastodon",
+      "label": "Mastodon #Codex",
+      "genre": "SNS",
       "author": "sayzard@mastodon.sayzard.org",
       "title": "Developing Adventures (@DevAdventur3s) Codex가 장시간 실행되는 작업 단위 기능으로 보이는 ‘Aeon’을 준비 중이라는 관측입니다. 목표 하나를 장기 태스크로 유지하며 일시정지·재개·추가 지시할 수 있고, Gated ",
       "summary": "boost 0 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 1,
       "url": "https://mastodon.sayzard.org/@sayzard/117207918664338175",
       "published": "2026-09-03T15:55:07.000Z",
       "score": 2,
@@ -368,6 +430,8 @@
       "author": "Belzebubik@mastodon.com.pl",
       "title": "CourtMind WTA Lab #1 Zacząłem nowy projekt. Chcę sprawdzić, czy da się stworzyć program, który będzie analizował mecze kobiecego tenisa i sa",
       "summary": "boost 2 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 1,
       "url": "https://mastodon.com.pl/@Belzebubik/117202374455345884",
       "published": "2026-09-02T16:25:09.000Z",
       "score": 2,
@@ -383,6 +447,8 @@
       "author": "sayzard@mastodon.sayzard.org",
       "title": "Dan McAteer (@daniel_mac8) pstack을 Grok Bot, Claude Code, Codex에 설치해 에이전트용 스킬 45개를 활용하자는 제안이다. 에이전트 기반 코딩 워크플로에서 재사용 가능한 작업 능력 확장 도구로 소개된다. ",
       "summary": "boost 0 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 1,
       "url": "https://mastodon.sayzard.org/@sayzard/117195402060043734",
       "published": "2026-09-01T10:51:59.000Z",
       "score": 2,
@@ -399,6 +465,8 @@
       "author": "Belzebubik@mastodon.com.pl",
       "title": "Local LLM Arena #6 Udało mi się już mniej więcej ustalić, co wydarzyło się podczas wczorajszej awarii Maca. I najważniejsze: problemem nie b",
       "summary": "boost 2 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 1,
       "url": "https://mastodon.com.pl/@Belzebubik/117194945371098156",
       "published": "2026-09-01T08:55:50.000Z",
       "score": 2,
@@ -414,6 +482,8 @@
       "author": "us@newsbeep.org",
       "title": "US urged to consider military strikes to stop China achieving AGI first The United States should start prepa… # NewsBeep # News # US # USA #",
       "summary": "boost 0 / fav 0",
+      "region": "日本語優先",
+      "regionScore": 1,
       "url": "https://newsbeep.org/@us/117212107020654047",
       "published": "2026-09-04T09:40:16.000Z",
       "score": 1,
@@ -422,19 +492,136 @@
       ]
     },
     {
-      "source": "mastodon-ai",
-      "platform": "Mastodon",
-      "label": "Mastodon #AI",
+      "source": "reddit-localllama",
+      "platform": "Reddit",
+      "label": "Reddit LocalLLaMA",
       "genre": "SNS",
-      "author": "random_miku@mastodon.social",
-      "title": "Yeah / パソータ / September 6, 2025 # AI # 初音ミク # VOCALOID # ふつくしい https://www. pixiv.net/en/artworks/134775153",
-      "summary": "boost 0 / fav 0",
-      "url": "https://mastodon.social/@random_miku/117212102491895816",
-      "published": "2026-09-04T09:39:07.000Z",
+      "title": "I released sanoTTS: smallest complete TTS stack in 294k params (337 KB) that runs on $3 microcontroller and a 1.46m one that beats models 3x and 10x it's size",
+      "summary": "",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w6lmmg/i_released_sanotts_smallest_complete_tts_stack_in/",
+      "published": "2026-09-03T22:01:27+00:00",
+      "score": 3,
+      "tags": [
+        "SNS",
+        "重要",
+        "研究"
+      ],
+      "regionScore": 0,
+      "region": "海外"
+    },
+    {
+      "source": "reddit-localllama",
+      "platform": "Reddit",
+      "label": "Reddit LocalLLaMA",
+      "genre": "SNS",
+      "title": "The benchmarks the big labs don't want you to see",
+      "summary": "",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w6myn6/the_benchmarks_the_big_labs_dont_want_you_to_see/",
+      "published": "2026-09-03T22:54:58+00:00",
+      "score": 2,
+      "tags": [
+        "SNS",
+        "研究"
+      ],
+      "regionScore": 0,
+      "region": "海外"
+    },
+    {
+      "source": "reddit-localllama",
+      "platform": "Reddit",
+      "label": "Reddit LocalLLaMA",
+      "genre": "SNS",
+      "title": "Best Local Vision Language Models - August 2026",
+      "summary": "",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vx7ei1/best_local_vision_language_models_august_2026/",
+      "published": "2026-08-24T16:18:56+00:00",
+      "score": 2,
+      "tags": [
+        "SNS",
+        "研究"
+      ],
+      "regionScore": 0,
+      "region": "海外"
+    },
+    {
+      "source": "reddit-localllama",
+      "platform": "Reddit",
+      "label": "Reddit LocalLLaMA",
+      "genre": "SNS",
+      "title": "On GPT-6 Astra 98.6% ARC AGI-3: don't fall for the hype",
+      "summary": "",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w6z731/on_gpt6_astra_986_arc_agi3_dont_fall_for_the_hype/",
+      "published": "2026-09-04T09:11:33+00:00",
       "score": 1,
       "tags": [
         "SNS"
-      ]
+      ],
+      "regionScore": 0,
+      "region": "海外"
+    },
+    {
+      "source": "reddit-localllama",
+      "platform": "Reddit",
+      "label": "Reddit LocalLLaMA",
+      "genre": "SNS",
+      "title": "Can the bubble pop please?",
+      "summary": "",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w6nihk/can_the_bubble_pop_please/",
+      "published": "2026-09-03T23:18:09+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 0,
+      "region": "海外"
+    },
+    {
+      "source": "reddit-localllama",
+      "platform": "Reddit",
+      "label": "Reddit LocalLLaMA",
+      "genre": "SNS",
+      "title": "Bernie Sanders proposes to ban AI",
+      "summary": "",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w6egid/bernie_sanders_proposes_to_ban_ai/",
+      "published": "2026-09-03T17:44:45+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 0,
+      "region": "海外"
+    },
+    {
+      "source": "reddit-localllama",
+      "platform": "Reddit",
+      "label": "Reddit LocalLLaMA",
+      "genre": "SNS",
+      "title": "Apparently ChatGPT, Claude, and Grok were down",
+      "summary": "",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w6aw2a/apparently_chatgpt_claude_and_grok_were_down/",
+      "published": "2026-09-03T15:38:06+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 0,
+      "region": "海外"
+    },
+    {
+      "source": "reddit-localllama",
+      "platform": "Reddit",
+      "label": "Reddit LocalLLaMA",
+      "genre": "SNS",
+      "title": "It's official! Nvidia to acquire Hugging Face for 12.9 billion dollars.",
+      "summary": "",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w65uhf/its_official_nvidia_to_acquire_hugging_face_for/",
+      "published": "2026-09-03T12:22:05+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 0,
+      "region": "海外"
     }
   ],
   "sources": [
@@ -463,11 +650,5 @@
       "url": "https://www.reddit.com/r/LocalLLaMA/.rss"
     }
   ],
-  "errors": [
-    {
-      "source": "reddit-localllama",
-      "platform": "Reddit",
-      "error": "HTTP Error 429: Too Many Requests"
-    }
-  ]
+  "errors": []
 }

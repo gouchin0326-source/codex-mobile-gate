@@ -10,9 +10,9 @@
   </style>
 </head>
 <body>
-  <header><div class="wrap"><h1>SNS動向</h1><p class="sub">Mastodon + Reddit RSS / 10分更新 / Codex 0%運用</p></div></header>
+  <header><div class="wrap"><h1>SNS動向</h1><p class="sub">日本語優先 / Mastodon + Reddit RSS / 10分更新</p></div></header>
   <main class="wrap">
-    <section><h2>概要</h2><div class="metrics" id="metrics"><div class="metric"><b>読込</b><span>SNS</span></div></div><p class="meta" id="meta">公開API/RSSのみ</p></section>
+    <section><h2>概要</h2><div class="metrics" id="metrics"><div class="metric"><b>読込</b><span>SNS</span></div></div><p class="meta" id="meta">公開API/RSSのみ。URL掲載OK、本文は短縮。</p></section>
     <section><h2>急上昇語</h2><div class="words" id="words"></div></section>
     <section><h2>投稿</h2><div class="feed" id="feed"></div></section>
     <section><h2>取得エラー</h2><div class="feed" id="errors"><div class="item err"><b>待</b><span>確認中</span></div></div></section>
@@ -21,11 +21,11 @@
   <script>
     fetch("../data/social-trends.json?v="+Date.now()).then(r=>r.ok?r.json():null).then(data=>{
       if(!data)return;
-      const pc=data.platformCounts||{};
-      document.querySelector("#metrics").innerHTML=Object.keys(pc).map(k=>`<div class="metric"><b>${pc[k]}</b><span>${k}</span></div>`).join("")||'<div class="metric"><b>0</b><span>取得なし</span></div>';
+      const pc=data.platformCounts||{}, rg=data.region||{};
+      document.querySelector("#metrics").innerHTML=`<div class="metric"><b>${rg.japaneseCount||0}</b><span>日本語優先</span></div><div class="metric"><b>${rg.overseasCount||0}</b><span>海外</span></div>`+Object.keys(pc).slice(0,1).map(k=>`<div class="metric"><b>${pc[k]}</b><span>${k}</span></div>`).join("");
       document.querySelector("#meta").textContent=`更新 ${data.updatedAt} / ${data.cadence} / ${data.policy}`;
       document.querySelector("#words").innerHTML=(data.trends||[]).slice(0,9).map(x=>`<div class="word"><b>${x.word}</b><span>${x.count}件</span></div>`).join("");
-      document.querySelector("#feed").innerHTML=(data.items||[]).slice(0,24).map(x=>`<a class="item" href="${x.url||'../data/social-trends.json'}"><b>${x.platform||'SNS'}</b><span>${x.title||'無題'}<small>${x.label||''} / ${x.summary||''}</small></span></a>`).join("");
+      document.querySelector("#feed").innerHTML=(data.items||[]).slice(0,24).map(x=>`<a class="item" href="${x.url||'../data/social-trends.json'}"><b>${x.region==='日本語優先'?'日':(x.platform||'SNS')}</b><span>${x.title||'無題'}<small>${x.label||''} / ${x.region||''} / URL保持</small></span></a>`).join("");
       document.querySelector("#errors").innerHTML=(data.errors||[]).length?(data.errors||[]).map(x=>`<div class="item err"><b>${x.platform||'ERR'}</b><span>${x.source}: ${x.error}</span></div>`).join(""):'<div class="item"><b>OK</b><span>取得エラーなし</span></div>';
     }).catch(()=>{});
   </script>
