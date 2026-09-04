@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T08:07:34.915476+00:00",
+  "updatedAt": "2026-09-04T09:28:55.937277+00:00",
   "mode": "primary-api-weather-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "Open-Meteo documented no-key API + JMA warning JSON; no scraping",
@@ -21,34 +21,23 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "location": "富山県",
-      "updatedAt": "2026-09-04T08:07:34.915476+00:00",
+      "updatedAt": "2026-09-04T09:28:55.937277+00:00",
       "current": {
-        "time": "2026-09-04T17:00",
+        "time": "2026-09-04T18:15",
         "interval": 900,
-        "temperature_2m": 25.1,
-        "relative_humidity_2m": 72,
+        "temperature_2m": 24.9,
+        "relative_humidity_2m": 69,
+        "apparent_temperature": 26.6,
         "precipitation": 0.0,
-        "weather_code": 3,
-        "wind_speed_10m": 11.6
+        "weather_code": 2,
+        "wind_speed_10m": 10.5
       },
       "hourly": [
         {
-          "time": "2026-09-04T17:00",
-          "temp": 25.1,
-          "rainProb": 3,
-          "rain": 0.0,
-          "wind": 11.6
-        },
-        {
-          "time": "2026-09-04T18:00",
-          "temp": 24.9,
-          "rainProb": 4,
-          "rain": 0.0,
-          "wind": 11.0
-        },
-        {
           "time": "2026-09-04T19:00",
           "temp": 24.8,
+          "humidity": 70,
+          "feelsLike": 26.8,
           "rainProb": 4,
           "rain": 0.0,
           "wind": 9.3
@@ -56,6 +45,8 @@
         {
           "time": "2026-09-04T20:00",
           "temp": 24.8,
+          "humidity": 72,
+          "feelsLike": 26.9,
           "rainProb": 3,
           "rain": 0.0,
           "wind": 9.6
@@ -63,6 +54,8 @@
         {
           "time": "2026-09-04T21:00",
           "temp": 24.7,
+          "humidity": 73,
+          "feelsLike": 27.1,
           "rainProb": 2,
           "rain": 0.0,
           "wind": 8.2
@@ -70,6 +63,8 @@
         {
           "time": "2026-09-04T22:00",
           "temp": 24.3,
+          "humidity": 74,
+          "feelsLike": 27.0,
           "rainProb": 1,
           "rain": 0.0,
           "wind": 5.7
@@ -77,6 +72,8 @@
         {
           "time": "2026-09-04T23:00",
           "temp": 23.4,
+          "humidity": 84,
+          "feelsLike": 27.2,
           "rainProb": 1,
           "rain": 0.0,
           "wind": 1.8
@@ -84,6 +81,8 @@
         {
           "time": "2026-09-05T00:00",
           "temp": 23.3,
+          "humidity": 82,
+          "feelsLike": 26.7,
           "rainProb": 0,
           "rain": 0.0,
           "wind": 2.5
@@ -91,6 +90,8 @@
         {
           "time": "2026-09-05T01:00",
           "temp": 22.6,
+          "humidity": 85,
+          "feelsLike": 25.9,
           "rainProb": 0,
           "rain": 0.0,
           "wind": 3.7
@@ -98,6 +99,8 @@
         {
           "time": "2026-09-05T02:00",
           "temp": 22.1,
+          "humidity": 84,
+          "feelsLike": 25.1,
           "rainProb": 0,
           "rain": 0.0,
           "wind": 3.1
@@ -105,6 +108,8 @@
         {
           "time": "2026-09-05T03:00",
           "temp": 21.5,
+          "humidity": 86,
+          "feelsLike": 24.4,
           "rainProb": 0,
           "rain": 0.0,
           "wind": 3.1
@@ -112,6 +117,8 @@
         {
           "time": "2026-09-05T04:00",
           "temp": 21.1,
+          "humidity": 86,
+          "feelsLike": 23.8,
           "rainProb": 0,
           "rain": 0.0,
           "wind": 3.3
@@ -119,6 +126,8 @@
         {
           "time": "2026-09-05T05:00",
           "temp": 20.8,
+          "humidity": 86,
+          "feelsLike": 23.4,
           "rainProb": 0,
           "rain": 0.0,
           "wind": 3.1
@@ -126,6 +135,8 @@
         {
           "time": "2026-09-05T06:00",
           "temp": 20.7,
+          "humidity": 85,
+          "feelsLike": 23.1,
           "rainProb": 0,
           "rain": 0.0,
           "wind": 4.0
@@ -133,6 +144,8 @@
         {
           "time": "2026-09-05T07:00",
           "temp": 21.8,
+          "humidity": 79,
+          "feelsLike": 24.2,
           "rainProb": 0,
           "rain": 0.0,
           "wind": 2.9
@@ -140,6 +153,8 @@
         {
           "time": "2026-09-05T08:00",
           "temp": 24.3,
+          "humidity": 67,
+          "feelsLike": 26.4,
           "rainProb": 0,
           "rain": 0.0,
           "wind": 5.1
@@ -147,6 +162,8 @@
         {
           "time": "2026-09-05T09:00",
           "temp": 26.1,
+          "humidity": 61,
+          "feelsLike": 27.2,
           "rainProb": 0,
           "rain": 0.0,
           "wind": 12.0
@@ -154,6 +171,8 @@
         {
           "time": "2026-09-05T10:00",
           "temp": 26.7,
+          "humidity": 60,
+          "feelsLike": 27.9,
           "rainProb": 0,
           "rain": 0.0,
           "wind": 14.7
@@ -161,6 +180,8 @@
         {
           "time": "2026-09-05T11:00",
           "temp": 27.0,
+          "humidity": 61,
+          "feelsLike": 29.0,
           "rainProb": 0,
           "rain": 0.0,
           "wind": 16.0
@@ -168,6 +189,8 @@
         {
           "time": "2026-09-05T12:00",
           "temp": 27.1,
+          "humidity": 62,
+          "feelsLike": 29.5,
           "rainProb": 0,
           "rain": 0.0,
           "wind": 16.8
@@ -175,6 +198,8 @@
         {
           "time": "2026-09-05T13:00",
           "temp": 27.2,
+          "humidity": 62,
+          "feelsLike": 29.4,
           "rainProb": 0,
           "rain": 0.0,
           "wind": 16.9
@@ -182,6 +207,8 @@
         {
           "time": "2026-09-05T14:00",
           "temp": 27.1,
+          "humidity": 61,
+          "feelsLike": 28.7,
           "rainProb": 0,
           "rain": 0.0,
           "wind": 16.9
@@ -189,6 +216,8 @@
         {
           "time": "2026-09-05T15:00",
           "temp": 26.9,
+          "humidity": 62,
+          "feelsLike": 27.8,
           "rainProb": 0,
           "rain": 0.0,
           "wind": 16.9
@@ -196,9 +225,29 @@
         {
           "time": "2026-09-05T16:00",
           "temp": 26.4,
+          "humidity": 64,
+          "feelsLike": 27.5,
           "rainProb": 0,
           "rain": 0.0,
           "wind": 15.3
+        },
+        {
+          "time": "2026-09-05T17:00",
+          "temp": 25.8,
+          "humidity": 65,
+          "feelsLike": 26.8,
+          "rainProb": 0,
+          "rain": 0.0,
+          "wind": 15.1
+        },
+        {
+          "time": "2026-09-05T18:00",
+          "temp": 25.2,
+          "humidity": 66,
+          "feelsLike": 26.4,
+          "rainProb": 0,
+          "rain": 0.0,
+          "wind": 13.2
         }
       ],
       "daily": [
@@ -253,7 +302,7 @@
         }
       ],
       "decision": "雨確率と風を見て外出/作業判断",
-      "url": "https://api.open-meteo.com/v1/forecast?latitude=36.6953&longitude=137.2113&current=temperature_2m%2Crelative_humidity_2m%2Cprecipitation%2Cweather_code%2Cwind_speed_10m&timezone=Asia%2FTokyo&hourly=temperature_2m%2Cprecipitation_probability%2Cprecipitation%2Cwind_speed_10m&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum&forecast_days=7"
+      "url": "https://api.open-meteo.com/v1/forecast?latitude=36.6953&longitude=137.2113&current=temperature_2m%2Crelative_humidity_2m%2Capparent_temperature%2Cprecipitation%2Cweather_code%2Cwind_speed_10m&timezone=Asia%2FTokyo&hourly=temperature_2m%2Crelative_humidity_2m%2Capparent_temperature%2Cprecipitation_probability%2Cprecipitation%2Cwind_speed_10m&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum&forecast_days=7"
     }
   ],
   "errors": []

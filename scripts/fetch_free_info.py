@@ -406,8 +406,8 @@ def build_weather_payload(sources, now):
     for source in weather_sources:
         parsed = urllib.parse.urlparse(source["url"])
         qs = urllib.parse.parse_qs(parsed.query)
-        qs["current"] = ["temperature_2m,relative_humidity_2m,precipitation,weather_code,wind_speed_10m"]
-        qs["hourly"] = ["temperature_2m,precipitation_probability,precipitation,wind_speed_10m"]
+        qs["current"] = ["temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m"]
+        qs["hourly"] = ["temperature_2m,relative_humidity_2m,apparent_temperature,precipitation_probability,precipitation,wind_speed_10m"]
         qs["daily"] = ["weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum"]
         qs["forecast_days"] = ["7"]
         hourly_url = urllib.parse.urlunparse(parsed._replace(query=urllib.parse.urlencode(qs, doseq=True)))
@@ -424,6 +424,8 @@ def build_weather_payload(sources, now):
                 hours.append({
                     "time": t,
                     "temp": hourly.get("temperature_2m", [None] * 24)[i],
+                    "humidity": hourly.get("relative_humidity_2m", [None] * 24)[i],
+                    "feelsLike": hourly.get("apparent_temperature", [None] * 24)[i],
                     "rainProb": hourly.get("precipitation_probability", [None] * 24)[i],
                     "rain": hourly.get("precipitation", [None] * 24)[i],
                     "wind": hourly.get("wind_speed_10m", [None] * 24)[i],

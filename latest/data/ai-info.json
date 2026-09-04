@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T08:07:34.915476+00:00",
+  "updatedAt": "2026-09-04T09:28:55.937277+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -24,11 +24,19 @@
     },
     {
       "genre": "論文",
-      "count": 5,
+      "count": 4,
       "decision": "必要時だけ確認",
       "signal": "Speculative Macro Commit for Faster Tool-Using Agents / Fresh Memory, Stale Plans: Dependency-Scoped Validation for Distributed LLM-Agent Memory / Dude: A Dual-Detection Multi-Agent System for Paper-Code Discrepancy Dete",
       "topUrl": "https://arxiv.org/abs/2609.03236",
       "score": 3
+    },
+    {
+      "genre": "技術",
+      "count": 1,
+      "decision": "必要時だけ確認",
+      "signal": "The NX bit is not just about security",
+      "topUrl": "https://purplesyringa.moe/blog/guest/the-nx-bit-is-not-just-about-security/",
+      "score": 2
     }
   ],
   "focus": [
@@ -425,17 +433,17 @@
       ]
     },
     {
-      "source": "arxiv-ai",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "title": "Structure and Implementation of New Practical English Textbooks Driven by Artificial Intelligence",
-      "summary": "arXiv:2609.02981v1 Announce Type: new Abstract: Artificial intelligence is changing the form of applied English materials from fixed paper sequences to adaptive learning systems that can diagnose learners, recommend task",
-      "url": "https://arxiv.org/abs/2609.02981",
-      "published": "2026-09-04T04:00:00+00:00",
+      "source": "lobsters",
+      "label": "技術RSS",
+      "genre": "技術",
+      "title": "The NX bit is not just about security",
+      "summary": "Comments",
+      "url": "https://purplesyringa.moe/blog/guest/the-nx-bit-is-not-just-about-security/",
+      "published": "2026-09-04T06:27:04+00:00",
       "score": 2,
       "tags": [
-        "論文",
-        "研究"
+        "技術",
+        "重要"
       ]
     }
   ]
