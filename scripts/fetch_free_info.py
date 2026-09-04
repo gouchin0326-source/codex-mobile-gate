@@ -1,6 +1,7 @@
 import email.utils
 import html
 import json
+import math
 import re
 import sys
 import urllib.request
@@ -20,7 +21,10 @@ SOURCE_CATALOG_OUT = ROOT / "latest" / "data" / "free-source-catalog.json"
 SOCIAL_OUT = ROOT / "latest" / "data" / "social-trends.json"
 BRIEF = ROOT / "latest" / "data" / "codexgate-news-brief-2026-09-03.md"
 JMA_TOYAMA_WARNING = "https://www.jma.go.jp/bosai/warning/data/warning/160000.json"
+JMA_NOWCAST_TARGETS = "https://www.jma.go.jp/bosai/jmatile/data/nowc/targetTimes_N2.json"
 GITHUB_RUNS = "https://api.github.com/repos/gouchin0326-source/codex-mobile-gate/actions/runs?per_page=8"
+TOYAMA_LAT = 36.6953
+TOYAMA_LON = 137.2113
 
 KEYWORDS = {
     "重要": ["codex", "agent", "openai", "github", "security", "safety", "release", "api"],
@@ -669,6 +673,39 @@ def build_weather_payload(sources, now):
     except Exception as exc:
         errors.append({"source": "jma-toyama-warning", "error": str(exc)[:160]})
 
+    nowcast = {
+        "label": "気象庁ナウキャスト",
+        "source": JMA_NOWCAST_TARGETS,
+        "link": "https://www.jma.go.jp/bosai/nowc/",
+        "note": "公式タイル。降水なしの場合は透明表示。",
+        "tiles": [],
+        "times": [],
+    }
+    try:
+        targets = json.loads(fetch(JMA_NOWCAST_TARGETS))
+        z = 8
+        x0 = int((TOYAMA_LON + 180) / 360 * (2 ** z))
+        lat_rad = math.radians(TOYAMA_LAT)
+        y0 = int((1 - math.log(math.tan(lat_rad) + 1 / math.cos(lat_rad)) / math.pi) / 2 * (2 ** z))
+        for target in targets[:4]:
+            basetime = target.get("basetime", "")
+            validtime = target.get("validtime", "")
+            nowcast["times"].append({"basetime": basetime, "validtime": validtime})
+        if nowcast["times"]:
+            t0 = nowcast["times"][0]
+            for dy in [-1, 0, 1]:
+                for dx in [-1, 0, 1]:
+                    x = x0 + dx
+                    y = y0 + dy
+                    nowcast["tiles"].append({
+                        "x": x,
+                        "y": y,
+                        "z": z,
+                        "url": f"https://www.jma.go.jp/bosai/jmatile/data/nowc/{t0['basetime']}/none/{t0['validtime']}/surf/hrpns/{z}/{x}/{y}.png",
+                    })
+    except Exception as exc:
+        errors.append({"source": "jma-nowcast", "error": str(exc)[:160]})
+
     for source in weather_sources:
         parsed = urllib.parse.urlparse(source["url"])
         qs = urllib.parse.parse_qs(parsed.query)
@@ -749,6 +786,7 @@ def build_weather_payload(sources, now):
             "maxWind": max_wind,
             "jmaWarnings": jma_warnings[:12],
         },
+        "nowcast": nowcast,
         "locations": rows,
         "errors": errors,
     }
