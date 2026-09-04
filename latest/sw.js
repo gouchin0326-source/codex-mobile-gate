@@ -1,4 +1,4 @@
-const CACHE = "codex-gate-v89-20260904";
+const CACHE = "codex-gate-v90-20260904";
 const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
@@ -9,6 +9,7 @@ const ASSETS = [
   "./zero-token-army/index.html",
   "./weather-info/index.html",
   "./gate-health/index.html",
+  "./codex-usage/index.html",
   "./ai-info/index.html",
   "./quick-notes-board/index.html",
   "./orbit-catcher/index.html",
@@ -29,6 +30,7 @@ const ASSETS = [
   "./data/free-info.json",
   "./data/weather-info.json",
   "./data/gate-health.json",
+  "./data/codex-usage-snapshot.json",
   "./data/ai-info.json",
   "./data/zero-token-capabilities.json"
 ];
@@ -48,6 +50,7 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   event.respondWith(fetch(event.request).catch(() => caches.match(event.request)));
 });
+
 
 
 
