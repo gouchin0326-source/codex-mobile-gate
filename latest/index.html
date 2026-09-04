@@ -39,14 +39,14 @@
     header {
       background: #172033;
       color: white;
-      padding: 14px 0 12px;
+      padding: 10px 0 9px;
       border-bottom: 4px solid var(--green);
     }
 
     .top {
       display: grid;
       grid-template-columns: 1fr auto;
-      gap: 10px;
+      gap: 8px;
       align-items: center;
     }
 
@@ -57,7 +57,7 @@
     }
 
     .tagline {
-      margin: 4px 0 0;
+      margin: 3px 0 0;
       color: #dce5f3;
       font-size: .8rem;
       font-weight: 700;
@@ -73,7 +73,7 @@
     }
 
     .refresh {
-      min-height: 34px;
+      min-height: 32px;
       border: 1px solid rgba(255, 255, 255, .35);
       border-radius: 8px;
       background: #ffffff;
@@ -87,8 +87,8 @@
 
     main {
       display: grid;
-      gap: 9px;
-      padding: 9px 0 22px;
+      gap: 6px;
+      padding: 6px 0 18px;
     }
 
     section,
@@ -100,10 +100,10 @@
       text-decoration: none;
     }
 
-    section { padding: 10px; }
+    section { padding: 7px; }
 
     h2 {
-      margin: 0 0 8px;
+      margin: 0 0 5px;
       font-size: .96rem;
       line-height: 1.2;
     }
@@ -509,7 +509,7 @@
       background: var(--rose);
     }
 
-    .status-section { padding: 8px; }
+    .status-section { padding: 6px; }
 
     .status-strip {
       display: grid;
@@ -518,13 +518,13 @@
     }
 
     .notice {
-      min-height: 78px;
+      min-height: 68px;
       display: grid;
       grid-template-columns: 34px 1fr;
       grid-template-rows: auto auto;
       align-items: center;
       column-gap: 7px;
-      padding: 8px;
+      padding: 6px;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: #ffffff;
@@ -591,19 +591,48 @@
     .auto-list {
       display: grid;
       gap: 7px;
-      margin-bottom: 10px;
+      margin-bottom: 6px;
     }
 
     .auto-line {
-      min-height: 36px;
+      min-height: 28px;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: #f9fafb;
-      padding: 8px;
-      font-size: .84rem;
+      padding: 6px 7px;
+      font-size: .78rem;
       font-weight: 900;
       line-height: 1.25;
     }
+
+    .setting-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .setting-pill {
+      min-height: 54px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #f9fafb;
+      padding: 7px;
+      font-weight: 900;
+      line-height: 1.15;
+    }
+
+    .setting-pill b,
+    .setting-pill span {
+      display: block;
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .setting-pill b { font-size: .86rem; }
+    .setting-pill span { color: var(--muted); font-size: .68rem; margin-top: 3px; }
+
+    @media(max-width:560px){.setting-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.setting-pill{padding:6px;min-height:58px}.setting-pill b{font-size:.76rem}.setting-pill span{font-size:.62rem}}
   </style>
 </head>
 <body>
@@ -611,10 +640,10 @@
     <div class="wrap top">
       <div>
         <h1>CG</h1>
-        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-04 13:58 JST</p>
+        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-04 14:23 JST</p>
       </div>
       <button class="refresh" id="force-update" type="button">最新版に更新</button>
-      <div class="date">更新 2026-09-04 13:58 JST</div>
+      <div class="date">更新 2026-09-04 14:23 JST</div>
     </div>
   </header>
 
@@ -697,12 +726,16 @@
 
     <section class="tab-panel" id="tab-settings">
       <h2>設定</h2>
+      <div class="setting-row">
+        <div class="setting-pill"><b>取得 6h</b><span>Actions側</span></div>
+        <div class="setting-pill"><b>通信 小</b><span>開いた時だけ</span></div>
+        <div class="setting-pill"><b>変更 Git</b><span>workflow編集</span></div>
+      </div>
       <div class="auto-list">
-        <div class="auto-line">更新: キャッシュ削除 + 最新版再読込</div>
-        <div class="auto-line">管理: 表示分類、データ取得、警告表示、GitHub Pages公開</div>
+        <div class="auto-line">推奨: 通常6h。天気警戒時だけ1-3h。スマホ通信は閲覧時JSON量が主因。</div>
       </div>
       <div class="phone-grid">
-        <a class="app-icon updated" href="./index.html?v=202609041358"><b class="glyph g-dev">更</b><span>最新版</span></a>
+        <a class="app-icon updated" href="./index.html?v=202609041423"><b class="glyph g-dev">更</b><span>最新版</span></a>
         <a class="app-icon updated" href="./index.html"><b class="glyph g-dev">CG</b><span>ホーム</span></a>
         <a class="app-icon updated" href="./data/zero-token-capabilities.json"><b class="glyph g-data">証</b><span>0証明</span></a>
         <a class="app-icon updated" href="./data/weather-info.json"><b class="glyph g-data">警</b><span>警戒設定</span></a>
