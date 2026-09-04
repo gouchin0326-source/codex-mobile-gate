@@ -76,6 +76,21 @@ def social_region_score(text, source):
     return score
 
 
+def social_topic(title):
+    text = (title or "").lower()
+    rules = [
+        ("AI", ["ai", "gpt", "llm", "openai", "claude", "gemini", "model", "huggingface", "生成ai", "人工知能"]),
+        ("開発", ["github", "python", "javascript", "api", "code", "codex", "developer", "npm", "oss"]),
+        ("ガジェット", ["npu", "gpu", "ram", "chip", "pc", "device", "banana pi", "server"]),
+        ("制作", ["image", "video", "audio", "design", "comic", "game", "画像", "動画"]),
+        ("ニュース", ["news", "発表", "release", "launched", "announced", "公開", "更新"]),
+    ]
+    for label, words in rules:
+        if any(word in text for word in words):
+            return label
+    return "その他"
+
+
 def load_schedule():
     default = {
         "cadenceMinutes": 10,
@@ -297,6 +312,15 @@ def clean(text):
     return text[:220]
 
 
+def clean_social_title(text):
+    text = clean(text)
+    if re.search(r"https?://", text):
+        text = re.split(r"https?://", text, maxsplit=1)[0]
+    text = re.sub(r"https?://\s*\S+", " ", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return (text or "SNS更新")[:140]
+
+
 def parse_date(value):
     if not value:
         return ""
@@ -395,7 +419,8 @@ def parse_mastodon(source, blob):
     data = json.loads(blob)
     items = []
     for row in data[:12]:
-        title = clean(row.get("content", ""))
+        raw_title = clean(row.get("content", ""))
+        title = clean_social_title(raw_title)
         acct = ((row.get("account") or {}).get("acct") or "").strip()
         boosts = row.get("reblogs_count") or 0
         favs = row.get("favourites_count") or 0
@@ -407,10 +432,11 @@ def parse_mastodon(source, blob):
             "label": source["label"],
             "genre": "SNS",
             "author": acct,
-            "title": title[:140],
+            "title": title,
             "summary": f"boost {boosts} / fav {favs}",
             "region": "日本語優先" if region_score else "海外",
             "regionScore": region_score,
+            "topic": social_topic(title),
             "url": row.get("url") or "",
             "published": row.get("created_at") or "",
             "score": min(5, score + (1 if boosts or favs else 0)),
@@ -424,7 +450,7 @@ def parse_bluesky(source, blob):
     items = []
     for row in data.get("posts", [])[:12]:
         record = row.get("record") or {}
-        text = clean(record.get("text", ""))
+        text = clean_social_title(record.get("text", ""))
         author = (row.get("author") or {}).get("handle", "")
         score, tags = score_item(text, author, "SNS")
         region_score = social_region_score(text, source)
@@ -438,6 +464,7 @@ def parse_bluesky(source, blob):
             "summary": f"reply {row.get('replyCount', 0)} / repost {row.get('repostCount', 0)} / like {row.get('likeCount', 0)}",
             "region": "日本語優先" if region_score else "海外",
             "regionScore": region_score,
+            "topic": social_topic(text),
             "url": f"https://bsky.app/profile/{author}/post/{row.get('uri','').split('/')[-1]}" if author and row.get("uri") else "",
             "published": record.get("createdAt") or row.get("indexedAt") or "",
             "score": min(5, score + (1 if row.get("likeCount") else 0)),
@@ -449,6 +476,14 @@ def parse_bluesky(source, blob):
 def build_social_payload(now):
     items = []
     errors = []
+    previous_by_source = {}
+    if SOCIAL_OUT.exists():
+        try:
+            previous = json.loads(SOCIAL_OUT.read_text(encoding="utf-8"))
+            for item in previous.get("items", []):
+                previous_by_source.setdefault(item.get("source", ""), []).append(item)
+        except Exception:
+            previous_by_source = {}
     for source in SOCIAL_SOURCES:
         try:
             blob = fetch(source["url"])
@@ -459,11 +494,17 @@ def build_social_payload(now):
             else:
                 items.extend(parse_rss(source, blob))
         except Exception as exc:
-            errors.append({"source": source["id"], "platform": source["platform"], "error": str(exc)[:160]})
+            fallback = previous_by_source.get(source["id"], [])
+            if fallback:
+                for item in fallback:
+                    item["stale"] = True
+                items.extend(fallback)
+            errors.append({"source": source["id"], "platform": source["platform"], "error": str(exc)[:160], "fallbackItems": len(fallback)})
     for item in items:
         if "regionScore" not in item:
             item["regionScore"] = social_region_score(item.get("title", ""), {"url": item.get("url", ""), "id": item.get("source", "")})
             item["region"] = "日本語優先" if item["regionScore"] else "海外"
+        item["topic"] = item.get("topic") or social_topic(item.get("title", ""))
     japanese = [x for x in items if x.get("regionScore", 0) > 0]
     overseas = [x for x in items if x.get("regionScore", 0) <= 0]
     ranked = sorted(japanese, key=lambda x: (x.get("regionScore", 0), x.get("score", 0), x.get("published", "")), reverse=True)
@@ -481,6 +522,21 @@ def build_social_payload(now):
                 continue
             top_words[word] = top_words.get(word, 0) + 1
     trends = [{"word": k, "count": v} for k, v in sorted(top_words.items(), key=lambda x: (-x[1], x[0]))[:12]]
+    topic_map = {}
+    for item in items:
+        topic = item.get("topic") or "その他"
+        topic_map.setdefault(topic, []).append(item)
+    topics = []
+    for topic, rows in sorted(topic_map.items(), key=lambda x: (-len(x[1]), x[0])):
+        ranked_rows = sorted(rows, key=lambda x: (x.get("regionScore", 0), x.get("score", 0), x.get("published", "")), reverse=True)
+        top = ranked_rows[:3]
+        topics.append({
+            "topic": topic,
+            "count": len(rows),
+            "attention": sum(x.get("score", 0) + x.get("regionScore", 0) for x in rows),
+            "headline": top[0].get("title", "") if top else "",
+            "urls": [{"title": x.get("title", "")[:80], "url": x.get("url", ""), "platform": x.get("platform", "")} for x in top],
+        })
     return {
         "updatedAt": now,
         "mode": "zero-token-social-trends",
@@ -494,6 +550,7 @@ def build_social_payload(now):
             "overseasCount": len(overseas),
         },
         "platformCounts": platforms,
+        "topics": topics,
         "trends": trends,
         "items": items,
         "sources": SOCIAL_SOURCES,

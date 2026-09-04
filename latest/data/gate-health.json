@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T09:49:06.501388+00:00",
+  "updatedAt": "2026-09-04T09:57:43.748538+00:00",
   "mode": "operation-zero-gate-health",
   "codexTokenUse": "0 when run by GitHub Actions",
   "level": "normal",
@@ -11,7 +11,7 @@
     {
       "id": "free-info",
       "label": "全体",
-      "updatedAt": "2026-09-04T09:49:06.501388+00:00",
+      "updatedAt": "2026-09-04T09:57:43.748538+00:00",
       "errors": 0,
       "count": 32,
       "ageHours": 0.0
@@ -19,7 +19,7 @@
     {
       "id": "ai-info",
       "label": "AI",
-      "updatedAt": "2026-09-04T09:49:06.501388+00:00",
+      "updatedAt": "2026-09-04T09:57:43.748538+00:00",
       "errors": 0,
       "count": 24,
       "ageHours": 0.0
@@ -27,13 +27,21 @@
     {
       "id": "weather-info",
       "label": "天気",
-      "updatedAt": "2026-09-04T09:49:06.501388+00:00",
+      "updatedAt": "2026-09-04T09:57:43.748538+00:00",
       "errors": 0,
       "count": 1,
       "ageHours": 0.0
     }
   ],
   "runs": [
+    {
+      "name": "pages build and deployment",
+      "status": "completed",
+      "conclusion": "success",
+      "createdAt": "2026-09-04T09:50:17Z",
+      "updatedAt": "2026-09-04T09:50:40Z",
+      "url": "https://github.com/gouchin0326-source/codex-mobile-gate/actions/runs/33860304656"
+    },
     {
       "name": "pages build and deployment",
       "status": "completed",
@@ -89,14 +97,6 @@
       "createdAt": "2026-09-04T05:27:57Z",
       "updatedAt": "2026-09-04T05:28:22Z",
       "url": "https://github.com/gouchin0326-source/codex-mobile-gate/actions/runs/33840580392"
-    },
-    {
-      "name": "pages build and deployment",
-      "status": "completed",
-      "conclusion": "success",
-      "createdAt": "2026-09-04T05:00:43Z",
-      "updatedAt": "2026-09-04T05:01:11Z",
-      "url": "https://github.com/gouchin0326-source/codex-mobile-gate/actions/runs/33838902086"
     }
   ],
   "errors": []
