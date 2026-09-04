@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T10:30:44.507596+00:00",
+  "updatedAt": "2026-09-04T12:43:00.982405+00:00",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "freeMeaning": "Public RSS/API data is fetched by program, categorized, scored, and summarized into local static JSON. It is not a bookmark list and does not scrape ordinary web pages.",
@@ -122,7 +122,7 @@
     {
       "genre": "技術",
       "count": 2,
-      "signal": "The NX bit is not just about security / Audacity 4.0.0 Released",
+      "signal": "The NX bit is not just about security / An image only some users can see",
       "decision": "更新あり。必要時だけ確認",
       "topUrl": "https://purplesyringa.moe/blog/guest/the-nx-bit-is-not-just-about-security/",
       "score": 2
@@ -130,7 +130,7 @@
     {
       "genre": "天気",
       "count": 1,
-      "signal": "富山 24.8℃ / 雨 0.0mm / 風 9.6km/h",
+      "signal": "富山 23.2℃ / 雨 0.0mm / 風 8.7km/h",
       "decision": "今日の作業環境メモ",
       "topUrl": "https://api.open-meteo.com/v1/forecast?latitude=36.6953&longitude=137.2113&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
       "score": 1
@@ -138,10 +138,10 @@
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 0.8 - 5 km SE of Ontario, CA",
+      "signal": "M 2.0 - 24 km NNW of Tehachapi, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41541648",
-      "score": 1
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41541656",
+      "score": 3
     }
   ],
   "items": [
@@ -160,6 +160,21 @@
         "開発",
         "重要",
         "研究"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 2.0 - 24 km NNW of Tehachapi, CA",
+      "summary": "24 km NNW of Tehachapi, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41541656",
+      "published": "2026-09-04T12:04:58.220000+00:00",
+      "score": 3,
+      "tags": [
+        "災害",
+        "重要",
+        "開発"
       ]
     },
     {
@@ -232,26 +247,13 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "genre": "天気",
-      "title": "富山 24.8℃ / 雨 0.0mm / 風 9.6km/h",
+      "title": "富山 23.2℃ / 雨 0.0mm / 風 8.7km/h",
       "summary": "Open-Meteo no-key weather fetch",
       "url": "https://api.open-meteo.com/v1/forecast?latitude=36.6953&longitude=137.2113&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
-      "published": "2026-09-04T19:30",
+      "published": "2026-09-04T21:30",
       "score": 1,
       "tags": [
         "天気"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.8 - 5 km SE of Ontario, CA",
-      "summary": "5 km SE of Ontario, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41541648",
-      "published": "2026-09-04T10:11:57.610000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
       ]
     },
     {
@@ -632,6 +634,22 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "topic": "制作",
+      "title": "An image only some users can see",
+      "summary": "Try opening in different browser FF v Chrome. Or phone v desktop. Same image file but only sometimes renders. Comments",
+      "url": "https://d.erenrich.net/apple.avif",
+      "published": "2026-09-03T21:44:17+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "制作"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -644,22 +662,6 @@
       "score": 2,
       "tags": [
         "開発"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "ニュース",
-      "title": "Audacity 4.0.0 Released",
-      "summary": "Comments",
-      "url": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0",
-      "published": "2026-09-03T13:52:43+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "重要"
       ]
     }
   ],
