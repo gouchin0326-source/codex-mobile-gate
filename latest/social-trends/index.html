@@ -21,25 +21,28 @@
     <a class="back" href="../index.html">CGへ戻る</a>
   </main>
   <script>
-    fetch("../data/social-trends.json?v="+Date.now()).then(r=>r.ok?r.json():null).then(data=>{
-      if(!data)return;
-      const pc=data.platformCounts||{}, rg=data.region||{};
+    const make=(tag,className,text)=>{const el=document.createElement(tag);if(className)el.className=className;if(text!==undefined)el.textContent=String(text);return el};
+    const safeUrl=(value,fallback="#")=>{try{const url=new URL(String(value||""),location.href);return ["http:","https:"].includes(url.protocol)?url.href:fallback}catch{return fallback}};
+    const dataState=(data)=>{const stamp=Date.parse(data.lastSuccessAt||data.updatedAt||"");const old=!Number.isFinite(stamp)||Date.now()-stamp>6*60*60*1000;return data.status==="unavailable"?"取得不能":data.status==="stale"||old?"更新遅れ":"最新"};
+    fetch("../data/social-trends.json?v="+Date.now()).then(r=>r.ok?r.json():Promise.reject(new Error(`HTTP ${r.status}`))).then(data=>{
+      const pc=data.platformCounts||{}, region=data.region||{};
       let active="全部";
       const render=()=>{
         const topics=(data.topics||[]).filter(x=>active==="全部"||x.topic===active);
         const items=(data.items||[]).filter(x=>active==="全部"||x.topic===active);
-        document.querySelector("#topics").innerHTML=topics.slice(0,10).map(x=>`<div class="topic"><b>${x.topic}</b><span>${x.headline||'話題なし'}<small>${x.count}件 / 注目${x.attention} / ${(x.urls||[]).map(u=>`<a href="${u.url}">${u.platform}</a>`).join(' ')}</small></span></div>`).join("");
-        document.querySelector("#feed").innerHTML=items.slice(0,24).map(x=>`<a class="item" href="${x.url||'../data/social-trends.json'}"><b>${x.topic||'話'}</b><span>${x.title||'無題'}<small>${x.label||''} / URL保持</small></span></a>`).join("");
+        const topicBox=document.querySelector("#topics");topicBox.replaceChildren();
+        topics.slice(0,10).forEach(x=>{const row=make("div","topic"),badge=make("b","",x.topic||"その他"),body=make("span","",x.headline||"話題なし"),small=make("small","",`${Number(x.count)||0}件 / 注目${Number(x.attention)||0}`);(x.urls||[]).forEach(u=>{const link=make("a","",u.platform||"元URL");link.href=safeUrl(u.url);link.rel="noreferrer";small.append(" ",link)});body.append(small);row.append(badge,body);topicBox.append(row)});
+        const feed=document.querySelector("#feed");feed.replaceChildren();
+        items.slice(0,24).forEach(x=>{const row=make("a","item");row.href=safeUrl(x.url,"../data/social-trends.json");row.rel="noreferrer";const body=make("span","",x.title||"無題");body.append(make("small","",`${x.label||x.platform||"情報源"} / ${x.stale?"更新遅れ":"URL保持"}`));row.append(make("b","",x.topic||"話"),body);feed.append(row)});
       };
-      document.querySelector("#metrics").innerHTML=`<div class="metric"><b>${rg.japaneseCount||0}</b><span>日本語</span></div><div class="metric"><b>${(data.topics||[]).length}</b><span>ジャンル</span></div>`+Object.keys(pc).slice(0,1).map(k=>`<div class="metric"><b>${pc[k]}</b><span>${k}</span></div>`).join("");
-      document.querySelector("#meta").textContent=`更新 ${data.updatedAt} / ${data.cadence} / ${data.policy}`;
-      const labels=["全部",...(data.topics||[]).map(x=>x.topic)];
-      document.querySelector("#filters").innerHTML=labels.map(x=>`<button class="filter ${x===active?'on':''}" type="button" data-filter="${x}">${x}</button>`).join("");
-      document.querySelector("#filters").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;active=b.dataset.filter;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("on",x.dataset.filter===active));render();});
-      document.querySelector("#words").innerHTML=(data.trends||[]).slice(0,9).map(x=>`<div class="word"><b>${x.word}</b><span>${x.count}件</span></div>`).join("");
-      document.querySelector("#errors").innerHTML=(data.errors||[]).length?(data.errors||[]).map(x=>`<div class="item err"><b>${x.platform||'ERR'}</b><span>${x.source}: ${x.error}</span></div>`).join(""):'<div class="item"><b>OK</b><span>取得エラーなし</span></div>';
+      const metrics=document.querySelector("#metrics");metrics.replaceChildren();[[region.japaneseCount||0,"日本語"],[(data.topics||[]).length,"ジャンル"],...Object.keys(pc).slice(0,1).map(k=>[pc[k],k])].forEach(x=>{const box=make("div","metric");box.append(make("b","",x[0]),make("span","",x[1]));metrics.append(box)});
+      document.querySelector("#meta").textContent=`${dataState(data)} / 最終成功 ${data.lastSuccessAt||data.updatedAt||"不明"} / ニュースRSSと公開SNSを別集計`;
+      const filters=document.querySelector("#filters");filters.replaceChildren();["全部",...(data.topics||[]).map(x=>x.topic)].forEach(label=>{const button=make("button",`filter ${label===active?"on":""}`,label);button.type="button";button.dataset.filter=label;filters.append(button)});
+      filters.addEventListener("click",e=>{const button=e.target.closest("button");if(!button)return;active=button.dataset.filter;filters.querySelectorAll(".filter").forEach(x=>x.classList.toggle("on",x.dataset.filter===active));render()});
+      const words=document.querySelector("#words");words.replaceChildren();(data.trends||[]).slice(0,9).forEach(x=>{const box=make("div","word");box.append(make("b","",x.word),make("span","",`${Number(x.count)||0}件`));words.append(box)});
+      const errors=document.querySelector("#errors");errors.replaceChildren();const errorRows=data.errors||[];(errorRows.length?errorRows:[{platform:"OK",source:"取得エラーなし",error:""}]).forEach(x=>{const row=make("div",`item ${x.error?"err":""}`);row.append(make("b","",x.platform||"ERR"),make("span","",x.error?`${x.source}: ${x.error}`:x.source));errors.append(row)});
       render();
-    }).catch(()=>{});
+    }).catch(error=>{document.querySelector("#meta").textContent="取得不能 / 前回情報も確認できません";const box=document.querySelector("#errors");box.replaceChildren();const row=make("div","item err");row.append(make("b","","ERR"),make("span","",error.message));box.append(row)});
   </script>
 </body>
 </html>

@@ -575,6 +575,8 @@ def parse_bluesky(source, blob):
 def build_social_payload(now):
     items = []
     errors = []
+    source_states = []
+    previous = {}
     previous_by_source = {}
     if SOCIAL_OUT.exists():
         try:
@@ -592,13 +594,21 @@ def build_social_payload(now):
                 items.extend(parse_bluesky(source, blob))
             else:
                 items.extend(parse_rss(source, blob))
+            source_states.append({"id": source["id"], "status": "fresh", "lastSuccessAt": now})
         except Exception as exc:
             fallback = previous_by_source.get(source["id"], [])
             if fallback:
-                for item in fallback:
+                for previous_item in fallback:
+                    item = dict(previous_item)
                     item["stale"] = True
-                items.extend(fallback)
+                    items.append(item)
             errors.append({"source": source["id"], "platform": source["platform"], "error": str(exc)[:160], "fallbackItems": len(fallback)})
+            previous_state = next((x for x in previous.get("sourceStates", []) if x.get("id") == source["id"]), {})
+            source_states.append({
+                "id": source["id"],
+                "status": "stale" if fallback else "unavailable",
+                "lastSuccessAt": previous_state.get("lastSuccessAt"),
+            })
     for item in items:
         if "regionScore" not in item:
             item["regionScore"] = social_region_score(item.get("title", ""), {"url": item.get("url", ""), "id": item.get("source", "")})
@@ -637,8 +647,12 @@ def build_social_payload(now):
             "headline": top[0].get("title", "") if top else "",
             "urls": [{"title": x.get("title", "")[:80], "url": x.get("url", ""), "platform": x.get("platform", "")} for x in top],
         })
+    dataset_status = "fresh" if not errors else ("stale" if items else "unavailable")
+    last_success_at = now if not errors else previous.get("lastSuccessAt")
     return {
         "updatedAt": now,
+        "lastSuccessAt": last_success_at,
+        "status": dataset_status,
         "mode": "zero-token-social-trends",
         "codexTokenUse": "0 when run by GitHub Actions",
         "policy": "public API/RSS only; no login bypass; no unauthorized scraping; short excerpts + URL only",
@@ -654,6 +668,7 @@ def build_social_payload(now):
         "trends": trends,
         "items": items,
         "sources": SOCIAL_SOURCES,
+        "sourceStates": source_states,
         "errors": errors,
     }
 
@@ -723,8 +738,18 @@ def build_weather_payload(sources, now):
     rows = []
     errors = []
     jma_warnings = []
+    source_states = []
+    previous = {}
+    if WEATHER_OUT.exists():
+        try:
+            previous = json.loads(WEATHER_OUT.read_text(encoding="utf-8"))
+        except Exception:
+            previous = {}
+    warning_ok = False
     try:
         warning_data = json.loads(fetch(JMA_TOYAMA_WARNING))
+        if not isinstance(warning_data, dict) or not isinstance(warning_data.get("areaTypes"), list):
+            raise ValueError("unexpected JMA warning schema")
         for area_type in warning_data.get("areaTypes", []):
             for area in area_type.get("areas", []):
                 area_name = area.get("name", "")
@@ -733,8 +758,12 @@ def build_weather_payload(sources, now):
                     kind = warning.get("kind", {}).get("name", "") if isinstance(warning.get("kind"), dict) else ""
                     if kind and status not in {"解除", "発表警報・注意報はなし"}:
                         jma_warnings.append({"area": area_name, "kind": kind, "status": status})
+        warning_ok = True
+        source_states.append({"id": "jma-toyama-warning", "status": "fresh", "lastSuccessAt": now})
     except Exception as exc:
         errors.append({"source": "jma-toyama-warning", "error": str(exc)[:160]})
+        previous_state = next((x for x in previous.get("sourceStates", []) if x.get("id") == "jma-toyama-warning"), {})
+        source_states.append({"id": "jma-toyama-warning", "status": "unavailable", "lastSuccessAt": previous_state.get("lastSuccessAt")})
 
     nowcast = {
         "label": "気象庁ナウキャスト",
@@ -746,6 +775,8 @@ def build_weather_payload(sources, now):
     }
     try:
         targets = json.loads(fetch(JMA_NOWCAST_TARGETS))
+        if not isinstance(targets, list):
+            raise ValueError("unexpected JMA nowcast schema")
         z = 9
         x0 = int((TOYAMA_LON + 180) / 360 * (2 ** z))
         lat_rad = math.radians(TOYAMA_LAT)
@@ -766,9 +797,13 @@ def build_weather_payload(sources, now):
                         "z": z,
                         "url": f"https://www.jma.go.jp/bosai/jmatile/data/nowc/{t0['basetime']}/none/{t0['validtime']}/surf/hrpns/{z}/{x}/{y}.png",
                     })
+        source_states.append({"id": "jma-nowcast", "status": "fresh", "lastSuccessAt": now})
     except Exception as exc:
         errors.append({"source": "jma-nowcast", "error": str(exc)[:160]})
+        previous_state = next((x for x in previous.get("sourceStates", []) if x.get("id") == "jma-nowcast"), {})
+        source_states.append({"id": "jma-nowcast", "status": "unavailable", "lastSuccessAt": previous_state.get("lastSuccessAt")})
 
+    forecast_successes = 0
     for source in weather_sources:
         parsed = urllib.parse.urlparse(source["url"])
         qs = urllib.parse.parse_qs(parsed.query)
@@ -782,6 +817,8 @@ def build_weather_payload(sources, now):
             current = data.get("current", {})
             hourly = data.get("hourly", {})
             daily = data.get("daily", {})
+            if not isinstance(current, dict) or not isinstance(hourly.get("time"), list) or not isinstance(daily.get("time"), list):
+                raise ValueError("unexpected weather schema")
             hours = []
             current_time = current.get("time", "")
             future_indexes = [i for i, t in enumerate(hourly.get("time", [])) if not current_time or t >= current_time]
@@ -816,15 +853,21 @@ def build_weather_payload(sources, now):
                 "decision": "雨確率と風を見て外出/作業判断",
                 "url": hourly_url,
             })
+            forecast_successes += 1
+            source_states.append({"id": source["id"], "status": "fresh", "lastSuccessAt": now})
         except Exception as exc:
             errors.append({"source": source["id"], "error": str(exc)[:160]})
+            previous_state = next((x for x in previous.get("sourceStates", []) if x.get("id") == source["id"]), {})
+            source_states.append({"id": source["id"], "status": "unavailable", "lastSuccessAt": previous_state.get("lastSuccessAt")})
+    if not rows and previous.get("locations"):
+        rows = [dict(row, stale=True) for row in previous["locations"]]
     max_hourly_rain = max([x.get("rain") or 0 for row in rows for x in row.get("hourly", [])] or [0])
     max_rain_prob = max([x.get("rainProb") or 0 for row in rows for x in row.get("hourly", [])] or [0])
     max_wind = max([x.get("wind") or 0 for row in rows for x in row.get("hourly", [])] or [0])
     max_daily_rain = max([x.get("rain") or 0 for row in rows for x in row.get("daily", [])] or [0])
-    risk_level = "normal"
-    risk_label = "通常"
-    risk_lines = ["富山: 通常", "警戒情報なし"]
+    risk_level = "unknown"
+    risk_label = "確認できず"
+    risk_lines = ["富山: 情報を確認できません", "公式情報を直接確認してください"]
     if jma_warnings:
         risk_level = "warning"
         risk_label = "警戒"
@@ -834,8 +877,18 @@ def build_weather_payload(sources, now):
         risk_level = "caution"
         risk_label = "注意"
         risk_lines = [f"富山: 雨{max_rain_prob}%/最大{max_hourly_rain}mm", f"風{max_wind}km/h・週間雨量最大{max_daily_rain}mm"]
+        if not warning_ok:
+            risk_lines.append("気象庁警報は確認できず")
+    elif warning_ok and forecast_successes:
+        risk_level = "normal"
+        risk_label = "通常"
+        risk_lines = ["富山: 通常", "警戒情報なし"]
+    dataset_status = "fresh" if warning_ok and forecast_successes else ("stale" if rows else "unavailable")
+    last_success_at = now if dataset_status == "fresh" else previous.get("lastSuccessAt")
     return {
         "updatedAt": now,
+        "lastSuccessAt": last_success_at,
+        "status": dataset_status,
         "mode": "primary-api-weather-context",
         "codexTokenUse": "0 when run by GitHub Actions",
         "policy": "Open-Meteo documented no-key API + JMA warning JSON; no scraping",
@@ -848,9 +901,11 @@ def build_weather_payload(sources, now):
             "maxDailyRain": max_daily_rain,
             "maxWind": max_wind,
             "jmaWarnings": jma_warnings[:12],
+            "officialWarningStatus": "fresh" if warning_ok else "unavailable",
         },
         "nowcast": nowcast,
         "locations": rows,
+        "sourceStates": source_states,
         "errors": errors,
     }
 
@@ -881,17 +936,18 @@ def build_health_payload(now, free_payload, ai_payload, weather_payload):
     except Exception as exc:
         errors.append({"source": "github-actions", "error": str(exc)[:160]})
     now_dt = parse_utc(now) or datetime.now(timezone.utc)
+    free_status = "fresh" if not free_payload.get("errors") else ("stale" if free_payload.get("items") else "unavailable")
     datasets = [
-        {"id": "free-info", "label": "全体", "updatedAt": free_payload.get("updatedAt"), "errors": len(free_payload.get("errors", [])), "count": len(free_payload.get("items", []))},
-        {"id": "ai-info", "label": "AI", "updatedAt": ai_payload.get("updatedAt"), "errors": 0, "count": len(ai_payload.get("items", []))},
-        {"id": "weather-info", "label": "天気", "updatedAt": weather_payload.get("updatedAt"), "errors": len(weather_payload.get("errors", [])), "count": len(weather_payload.get("locations", []))},
+        {"id": "free-info", "label": "全体", "updatedAt": free_payload.get("lastSuccessAt") or free_payload.get("updatedAt"), "status": free_payload.get("status") or free_status, "errors": len(free_payload.get("errors", [])), "count": len(free_payload.get("items", []))},
+        {"id": "ai-info", "label": "AI", "updatedAt": ai_payload.get("lastSuccessAt") or ai_payload.get("updatedAt"), "status": ai_payload.get("status") or free_status, "errors": len(free_payload.get("errors", [])), "count": len(ai_payload.get("items", []))},
+        {"id": "weather-info", "label": "天気", "updatedAt": weather_payload.get("lastSuccessAt") or weather_payload.get("updatedAt"), "status": weather_payload.get("status") or "unavailable", "errors": len(weather_payload.get("errors", [])), "count": len(weather_payload.get("locations", []))},
     ]
     health_level = "normal"
     lines = ["CG: 自動更新正常", "Actions/JSONを監視中"]
     for ds in datasets:
         updated = parse_utc(ds.get("updatedAt"))
         ds["ageHours"] = round((now_dt - updated).total_seconds() / 3600, 1) if updated else None
-        if ds["errors"] or ds["ageHours"] is None or ds["ageHours"] > 12:
+        if ds["status"] != "fresh" or ds["errors"] or ds["ageHours"] is None or ds["ageHours"] > 12:
             health_level = "warning"
     failed_runs = [r for r in runs if r.get("conclusion") in {"failure", "cancelled", "timed_out"}]
     active_runs = [r for r in runs if r.get("status") != "completed"]
@@ -923,8 +979,18 @@ def main():
         print(f"skip free-info: {reason}")
         return
     sources = json.loads(SOURCES.read_text(encoding="utf-8"))
+    previous_free = {}
+    previous_by_source = {}
+    if OUT.exists():
+        try:
+            previous_free = json.loads(OUT.read_text(encoding="utf-8"))
+            for previous_item in previous_free.get("items", []):
+                previous_by_source.setdefault(previous_item.get("source", ""), []).append(previous_item)
+        except Exception:
+            previous_free = {}
     collected = []
     errors = []
+    source_states = []
     for source in sources:
         try:
             blob = fetch(source["url"])
@@ -934,8 +1000,14 @@ def main():
                 collected.extend(parse_json(source, blob))
             else:
                 collected.extend(parse_rss(source, blob))
+            source_states.append({"id": source["id"], "status": "fresh", "lastSuccessAt": now_dt.isoformat()})
         except Exception as exc:
-            errors.append({"source": source["id"], "error": str(exc)[:160]})
+            fallback = previous_by_source.get(source["id"], [])
+            for previous_item in fallback:
+                collected.append(dict(previous_item, stale=True))
+            previous_state = next((x for x in previous_free.get("sourceStates", []) if x.get("id") == source["id"]), {})
+            source_states.append({"id": source["id"], "status": "stale" if fallback else "unavailable", "lastSuccessAt": previous_state.get("lastSuccessAt")})
+            errors.append({"source": source["id"], "error": str(exc)[:160], "fallbackItems": len(fallback)})
     collected.sort(key=lambda x: (x["score"], x["published"]), reverse=True)
     top = []
     seen_sources = set()
@@ -952,8 +1024,14 @@ def main():
     contexts = build_contexts(top)
     ai_payload = build_ai_payload(top, now)
     weather_payload = build_weather_payload(sources, now)
+    dataset_status = "fresh" if not errors else ("stale" if top else "unavailable")
+    last_success_at = now if not errors else previous_free.get("lastSuccessAt")
+    ai_payload["status"] = dataset_status
+    ai_payload["lastSuccessAt"] = last_success_at
     payload = {
         "updatedAt": now,
+        "lastSuccessAt": last_success_at,
+        "status": dataset_status,
         "mode": "free-fetch-context",
         "codexTokenUse": "0 when run by GitHub Actions",
         "freeMeaning": "Public RSS/API data is fetched by program, categorized, scored, and summarized into local static JSON. It is not a bookmark list and does not scrape ordinary web pages.",
@@ -975,6 +1053,7 @@ def main():
         },
         "contexts": contexts,
         "items": top,
+        "sourceStates": source_states,
         "errors": errors,
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)

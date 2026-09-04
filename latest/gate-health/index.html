@@ -18,15 +18,15 @@
     <a class="back" href="../index.html">CGへ戻る</a>
   </main>
   <script>
-    fetch("../data/gate-health.json?v="+Date.now()).then(r=>r.ok?r.json():null).then(data=>{
-      if(!data)return;
-      const box=document.querySelector("#status");
-      box.className=`status ${data.level||"normal"}`;
-      box.innerHTML=`<b>${data.level||"normal"}</b><span>${(data.lines||[]).join(" / ")}</span>`;
-      document.querySelector("#meta").textContent=`更新 ${data.updatedAt} / ${data.mode} / ${data.codexTokenUse}`;
-      document.querySelector("#datasets").innerHTML=(data.datasets||[]).map(x=>`<div class="box"><b>${x.label}</b><span>${x.count}件 / error ${x.errors} / ${x.ageHours}h前</span></div>`).join("");
-      document.querySelector("#runs").innerHTML=(data.runs||[]).map(x=>`<a class="row" href="${x.url||'#'}"><span>${x.name}</span><span>${x.status}</span><span>${x.conclusion||'-'}</span></a>`).join("");
-    }).catch(()=>{});
+    const make=(tag,className,text)=>{const el=document.createElement(tag);if(className)el.className=className;if(text!==undefined)el.textContent=String(text);return el};
+    const safeUrl=(value)=>{try{const url=new URL(String(value||""),location.href);return ["http:","https:"].includes(url.protocol)?url.href:"#"}catch{return "#"}};
+    fetch("../data/gate-health.json?v="+Date.now()).then(r=>r.ok?r.json():Promise.reject(new Error(`HTTP ${r.status}`))).then(data=>{
+      const box=document.querySelector("#status"),level=["normal","caution","warning"].includes(data.level)?data.level:"warning";
+      box.className=`status ${level}`;box.replaceChildren(make("b","",level),make("span","",(data.lines||[]).join(" / ")||"状態説明なし"));
+      document.querySelector("#meta").textContent=`更新 ${data.updatedAt||"不明"} / ${data.mode||"状態不明"} / ${data.codexTokenUse||"AI使用状態不明"}`;
+      const datasets=document.querySelector("#datasets");datasets.replaceChildren();(data.datasets||[]).forEach(x=>{const item=make("div","box"),age=x.ageHours===null||x.ageHours===undefined?"不明":`${x.ageHours}h前`;item.append(make("b","",`${x.label||x.id||"データ"}：${x.status||"状態不明"}`),make("span","",`${Number(x.count)||0}件 / error ${Number(x.errors)||0} / ${age}`));datasets.append(item)});
+      const runs=document.querySelector("#runs");runs.replaceChildren();(data.runs||[]).forEach(x=>{const row=make("a","row");row.href=safeUrl(x.url);row.rel="noreferrer";row.append(make("span","",x.name||"Action"),make("span","",x.status||"不明"),make("span","",x.conclusion||"-"));runs.append(row)});
+    }).catch(error=>{const box=document.querySelector("#status");box.className="status warning";box.replaceChildren(make("b","","取得不能"),make("span","",`監視データを確認できません：${error.message}`))});
   </script>
 </body>
 </html>
