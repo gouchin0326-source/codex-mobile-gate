@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T01:33:57.446656+00:00",
+  "updatedAt": "2026-09-04T02:47:47.392868+00:00",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "freeMeaning": "Public RSS/API data is fetched by program, categorized, scored, and summarized into local static JSON. It is not a bookmark list and does not scrape ordinary web pages.",
@@ -116,15 +116,15 @@
     {
       "genre": "災害",
       "count": 2,
-      "signal": "M 1.5 - 8 km NW of The Geysers, CA / M 2.1 - 88 km W of Akhiok, Alaska",
+      "signal": "M 0.8 - 10 km NW of The Geysers, CA / M 0.9 - 10 km NW of The Geysers, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429432",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429452",
       "score": 1
     },
     {
       "genre": "天気",
       "count": 1,
-      "signal": "富山 25.1℃ / 雨 0.0mm / 風 9.8km/h",
+      "signal": "富山 25.6℃ / 雨 0.0mm / 風 10.9km/h",
       "decision": "今日の作業環境メモ",
       "topUrl": "https://api.open-meteo.com/v1/forecast?latitude=36.6953&longitude=137.2113&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
       "score": 1
@@ -217,10 +217,10 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "genre": "天気",
-      "title": "富山 25.1℃ / 雨 0.0mm / 風 9.8km/h",
+      "title": "富山 25.6℃ / 雨 0.0mm / 風 10.9km/h",
       "summary": "Open-Meteo no-key weather fetch",
       "url": "https://api.open-meteo.com/v1/forecast?latitude=36.6953&longitude=137.2113&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
-      "published": "2026-09-04T10:30",
+      "published": "2026-09-04T11:45",
       "score": 1,
       "tags": [
         "天気"
@@ -230,10 +230,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.5 - 8 km NW of The Geysers, CA",
-      "summary": "8 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429432",
-      "published": "2026-09-04T01:29:42.290000+00:00",
+      "title": "M 0.8 - 10 km NW of The Geysers, CA",
+      "summary": "10 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429452",
+      "published": "2026-09-04T02:41:39.490000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -585,10 +585,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.1 - 88 km W of Akhiok, Alaska",
-      "summary": "88 km W of Akhiok, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rmmgxg",
-      "published": "2026-09-04T01:26:35.505000+00:00",
+      "title": "M 0.9 - 10 km NW of The Geysers, CA",
+      "summary": "10 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429447",
+      "published": "2026-09-04T02:40:35.450000+00:00",
       "score": 1,
       "tags": [
         "災害"

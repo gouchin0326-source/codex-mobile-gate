@@ -172,12 +172,28 @@ def build_ai_payload(items, now):
             "source": item.get("label", ""),
             "url": item.get("url", ""),
         })
+    groups = {}
+    for item in ai_rows:
+        groups.setdefault(item.get("genre", "AI"), []).append(item)
+    cards = []
+    for genre, rows in sorted(groups.items(), key=lambda x: (-len(x[1]), x[0])):
+        top = sorted(rows, key=lambda x: (x.get("score", 0), x.get("published", "")), reverse=True)[:3]
+        cards.append({
+            "genre": genre,
+            "count": len(rows),
+            "decision": DECISION_HINTS.get(genre, "必要時だけ確認"),
+            "signal": " / ".join([x.get("title", "") for x in top])[:220],
+            "topUrl": top[0].get("url", "") if top else "",
+            "score": max([x.get("score", 1) for x in rows] or [1]),
+        })
     return {
         "updatedAt": now,
         "mode": "primary-rss-ai-context",
         "codexTokenUse": "0 when run by GitHub Actions",
         "policy": "official/public RSS only; no unauthorized scraping",
-        "decision": "高scoreだけ確認。低scoreは保留。",
+        "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
+        "topLine": focus[0]["title"] if focus else "AI一次情報なし",
+        "cards": cards,
         "focus": focus,
         "items": ai_rows,
     }

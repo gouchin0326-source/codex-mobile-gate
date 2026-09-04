@@ -576,10 +576,10 @@
     <div class="wrap top">
       <div>
         <h1>CG</h1>
-        <p class="tagline">CODEX Gate / 4タブ管理 / 更新 2026-09-04 11:27 JST</p>
+        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-04 11:52 JST</p>
       </div>
       <button class="refresh" id="force-update" type="button">最新版に更新</button>
-      <div class="date">更新 2026-09-04 11:27 JST</div>
+      <div class="date">更新 2026-09-04 11:52 JST</div>
     </div>
   </header>
 
@@ -594,7 +594,7 @@
 
     <section>
       <div class="tabs" role="tablist" aria-label="CGアプリ分類">
-        <button class="tab" type="button" role="tab" aria-selected="true" data-tab="zero">0消費</button>
+        <button class="tab" type="button" role="tab" aria-selected="true" data-tab="zero">無料運用</button>
         <button class="tab" type="button" role="tab" aria-selected="false" data-tab="codex">Codex</button>
         <button class="tab" type="button" role="tab" aria-selected="false" data-tab="archive">書庫</button>
         <button class="tab" type="button" role="tab" aria-selected="false" data-tab="settings">設定</button>
@@ -602,20 +602,15 @@
     </section>
 
     <section class="tab-panel active" id="tab-zero">
-      <h2>トークン消費なし</h2>
+      <h2>無料運用アプリ</h2>
       <div class="auto-list">
-        <div class="auto-line">自動: GitHub Actionsが6時間ごとにRSS/API取得</div>
-        <div class="auto-line">出力: AI一次 / 富山天気 / 警戒通知 / 文脈JSON</div>
+        <div class="auto-line">前面: クリックして役立つ完成アプリだけ表示</div>
+        <div class="auto-line">自動: GitHub Actionsが一次API/RSSを取得、Codex運用0</div>
       </div>
       <div class="phone-grid">
-        <a class="app-icon updated" href="./zero-token-army/index.html"><b class="glyph g-data">0</b><span>完全無料</span></a>
-        <a class="app-icon updated" href="./ai-info/index.html"><b class="glyph g-dev">AI</b><span>AI一次</span></a>
         <a class="app-icon updated" data-weather-icon href="./weather-info/index.html"><b class="glyph g-data">天</b><span>富山天気</span></a>
-        <a class="app-icon updated" href="./free-info-lab/index.html"><b class="glyph g-data">文</b><span>文脈情報</span></a>
-        <a class="app-icon updated" href="./data/free-info.json"><b class="glyph g-data">全</b><span>全JSON</span></a>
-        <a class="app-icon updated" href="./data/ai-info.json"><b class="glyph g-dev">J</b><span>AI JSON</span></a>
-        <a class="app-icon updated" href="./data/weather-info.json"><b class="glyph g-data">W</b><span>天気JSON</span></a>
-        <a class="app-icon updated" href="./data/codexgate-news-brief-2026-09-03.md"><b class="glyph g-dev">採</b><span>採決メモ</span></a>
+        <a class="app-icon updated" href="./ai-info/index.html"><b class="glyph g-dev">AI</b><span>AI動向</span></a>
+        <a class="app-icon updated" href="./zero-token-army/index.html"><b class="glyph g-data">0</b><span>無料管理</span></a>
       </div>
       <div class="info-feed" id="free-info-feed">
         <a class="feed-item" href="./data/free-info.json"><b>待</b><span>無料取得データ待ち</span><i>!</i></a>
@@ -642,9 +637,11 @@
       <h2>書庫</h2>
       <div class="auto-list">
         <div class="auto-line">データ: JSON/Markdown/過去成果物を整理</div>
-        <div class="auto-line">分類: データ / ゲーム / 制作 / 作業板</div>
+        <div class="auto-line">素材: 前面に出さない一次データもここで保管</div>
       </div>
       <div class="phone-grid">
+        <a class="app-icon updated" href="./free-info-lab/index.html"><b class="glyph g-data">文</b><span>文脈情報</span></a>
+        <a class="app-icon updated" href="./data/codexgate-news-brief-2026-09-03.md"><b class="glyph g-dev">採</b><span>採決メモ</span></a>
         <a class="app-icon" href="./codex-data-pocket/index.html"><b class="glyph g-data">DB</b><span>データ</span></a>
         <a class="app-icon" href="./quick-notes-board/index.html"><b class="glyph g-tool">メ</b><span>メモ</span></a>
         <a class="app-icon" href="./daily-task-0731/index.html"><b class="glyph g-tool">板</b><span>0731板</span></a>
@@ -667,10 +664,12 @@
         <div class="auto-line">管理: 表示分類、データ取得、警告表示、GitHub Pages公開</div>
       </div>
       <div class="phone-grid">
-        <a class="app-icon updated" href="./index.html?v=202609041127"><b class="glyph g-dev">更</b><span>最新版</span></a>
+        <a class="app-icon updated" href="./index.html?v=202609041152"><b class="glyph g-dev">更</b><span>最新版</span></a>
         <a class="app-icon updated" href="./index.html"><b class="glyph g-dev">CG</b><span>ホーム</span></a>
         <a class="app-icon updated" href="./data/zero-token-capabilities.json"><b class="glyph g-data">証</b><span>0証明</span></a>
         <a class="app-icon updated" href="./data/weather-info.json"><b class="glyph g-data">警</b><span>警戒設定</span></a>
+        <a class="app-icon updated" href="./data/free-info.json"><b class="glyph g-data">全</b><span>全JSON</span></a>
+        <a class="app-icon updated" href="./data/ai-info.json"><b class="glyph g-dev">AJ</b><span>AI JSON</span></a>
       </div>
     </section>
   </main>

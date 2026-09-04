@@ -1,9 +1,44 @@
 {
-  "updatedAt": "2026-09-04T01:15:13.743378+00:00",
+  "updatedAt": "2026-09-04T02:47:47.392868+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
-  "decision": "高scoreだけ確認。低scoreは保留。",
+  "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
+  "topLine": "Upcoming deprecation of selected GitHub Copilot models",
+  "cards": [
+    {
+      "genre": "開発",
+      "count": 15,
+      "decision": "CG開発・GitHub運用へ反映候補",
+      "signal": "Upcoming deprecation of selected GitHub Copilot models / Gemini 3.8 Flash is now available in GitHub Copilot / Enterprise-managed settings support any default model",
+      "topUrl": "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models",
+      "score": 4
+    },
+    {
+      "genre": "AI",
+      "count": 5,
+      "decision": "AI/Codex運用の変化を確認",
+      "signal": "Daybreak for Frontline Defenders: $1B to protect essential services / Playco cut manual fixes 50% prototyping games with GPT-6 Astra / Safety overview: GPT-6 Astra",
+      "topUrl": "https://openai.com/index/daybreak-for-frontline-defenders",
+      "score": 3
+    },
+    {
+      "genre": "論文",
+      "count": 3,
+      "decision": "必要時だけ確認",
+      "signal": "Architecting Conversational Data Systems for Stateless LLM APIs: The Hydration Proxy Pattern / The Memory Trust Gap: Capability-Dependent Failures in Persistent-Memory Agents / EvalDetectBench: A Benchmark for Measuring ",
+      "topUrl": "https://arxiv.org/abs/2609.01834",
+      "score": 4
+    },
+    {
+      "genre": "技術",
+      "count": 1,
+      "decision": "必要時だけ確認",
+      "signal": "Audacity 4.0.0 Released",
+      "topUrl": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0",
+      "score": 2
+    }
+  ],
   "focus": [
     {
       "label": "開発",
