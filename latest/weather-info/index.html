@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>天気予報 | CODEXGATE</title>
+  <style>
+    :root{--bg:#f4f6f8;--panel:#fff;--ink:#172033;--muted:#667085;--line:#d9dee7;--blue:#2563eb;--green:#15803d;font-family:"Segoe UI","Meiryo",system-ui,sans-serif}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);line-height:1.45}.wrap{width:min(920px,calc(100% - 18px));margin:auto}header{background:#172033;color:white;padding:14px 0;border-bottom:4px solid var(--green)}h1{margin:0;font-size:1.6rem}.sub{margin:4px 0 0;color:#dce5f3;font-weight:900;font-size:.9rem}main{display:grid;gap:10px;padding:10px 0 26px}section{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px}h2{font-size:1.05rem;margin:0 0 8px}.now{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.box{border:1px solid var(--line);border-radius:8px;background:#f9fafb;padding:10px}.box b{display:block;font-size:1.35rem}.box span{color:var(--muted);font-size:.88rem;font-weight:800}.list{display:grid;gap:7px}.row{display:grid;grid-template-columns:88px repeat(4,1fr);gap:6px;align-items:center;border:1px solid var(--line);border-radius:8px;background:#f9fafb;padding:8px;font-size:.94rem;font-weight:900}.meta{color:var(--muted);font-size:.88rem;font-weight:800}.back{display:inline-grid;place-items:center;min-height:40px;padding:8px 12px;border-radius:8px;background:var(--blue);color:#fff;text-decoration:none;font-weight:900}@media(max-width:560px){.now{grid-template-columns:1fr}.row{grid-template-columns:74px repeat(2,1fr);font-size:.9rem}.row span:nth-child(n+4){display:none}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><h1>天気予報</h1><p class="sub">Open-Meteo一次API / 時間・週間 / Codex 0%運用</p></div></header>
+  <main class="wrap">
+    <section><h2>現在</h2><div class="now" id="now"><div class="box"><b>読込中</b><span>東京</span></div></div><p class="meta" id="meta">スクレイピングなし</p></section>
+    <section><h2>24時間</h2><div class="list" id="hourly"></div></section>
+    <section><h2>7日</h2><div class="list" id="daily"></div></section>
+    <a class="back" href="../index.html">CGへ戻る</a>
+  </main>
+  <script>
+    fetch("../data/weather-info.json?v="+Date.now()).then(r=>r.ok?r.json():null).then(data=>{
+      const loc=(data&&data.locations&&data.locations[0])||null; if(!loc)return;
+      const c=loc.current||{};
+      document.querySelector("#meta").textContent=`更新 ${data.updatedAt} / ${data.mode} / ${data.codexTokenUse}`;
+      document.querySelector("#now").innerHTML=`<div class="box"><b>${c.temperature_2m??"-"}℃</b><span>気温</span></div><div class="box"><b>${c.precipitation??"-"}mm</b><span>雨</span></div><div class="box"><b>${c.wind_speed_10m??"-"}km/h</b><span>風</span></div>`;
+      document.querySelector("#hourly").innerHTML=(loc.hourly||[]).slice(0,24).map(x=>`<div class="row"><span>${String(x.time).slice(11,16)}</span><span>${x.temp}℃</span><span>雨${x.rainProb??"-"}%</span><span>${x.rain}mm</span><span>${x.wind}km/h</span></div>`).join("");
+      document.querySelector("#daily").innerHTML=(loc.daily||[]).map(x=>`<div class="row"><span>${String(x.date).slice(5)}</span><span>${x.min}℃</span><span>${x.max}℃</span><span>雨${x.rain}mm</span><span>code ${x.code}</span></div>`).join("");
+    }).catch(()=>{});
+  </script>
+</body>
+</html>

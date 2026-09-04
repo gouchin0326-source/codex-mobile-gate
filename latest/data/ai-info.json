@@ -1,141 +1,65 @@
 {
   "updatedAt": "2026-09-04T01:15:13.743378+00:00",
-  "mode": "free-fetch-context",
+  "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
-  "freeMeaning": "Public RSS/API data is fetched by program, categorized, scored, and summarized into local static JSON. It is not a bookmark list and does not scrape ordinary web pages.",
-  "accessPolicy": {
-    "allowed": [
-      "official RSS",
-      "public JSON API",
-      "public GeoJSON API",
-      "provider documented no-key API"
-    ],
-    "blocked": [
-      "unauthorized scraping",
-      "login bypass",
-      "paywall extraction",
-      "bulk copying article text"
-    ]
-  },
-  "levels": [
+  "policy": "official/public RSS only; no unauthorized scraping",
+  "decision": "高scoreだけ確認。低scoreは保留。",
+  "focus": [
     {
-      "id": "zero",
-      "label": "完全無料",
-      "cost": "Codex 0%",
-      "route": "GitHub Actions + RSS/API + JSON"
+      "label": "開発",
+      "title": "Upcoming deprecation of selected GitHub Copilot models",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models"
     },
     {
-      "id": "small",
-      "label": "少量",
-      "cost": "Codex少量",
-      "route": "20行メモだけCodexで反映"
+      "label": "開発",
+      "title": "Gemini 3.8 Flash is now available in GitHub Copilot",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot"
     },
     {
-      "id": "external",
-      "label": "外部AI節約",
-      "cost": "Codex小",
-      "route": "外部AIで調査/圧縮、Codexは実装"
-    }
-  ],
-  "sources": [
-    {
-      "id": "openai",
-      "label": "OpenAI",
-      "genre": "AI",
-      "type": "rss",
-      "url": "https://openai.com/news/rss.xml"
+      "label": "論文",
+      "title": "Architecting Conversational Data Systems for Stateless LLM APIs: The Hydration Proxy Pattern",
+      "why": "Codex/AI開発判断に関係",
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2609.01834"
     },
     {
-      "id": "github-blog",
-      "label": "GitHub",
-      "genre": "開発",
-      "type": "rss",
-      "url": "https://github.blog/feed/"
+      "label": "開発",
+      "title": "Enterprise-managed settings support any default model",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-02-enterprise-managed-settings-support-any-default-model"
     },
     {
-      "id": "github-changelog",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "type": "rss",
-      "url": "https://github.blog/changelog/feed/"
+      "label": "開発",
+      "title": "GitHub Actions: Early September 2026 updates",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-03-github-actions-early-september-2026-updates"
     },
     {
-      "id": "lobsters",
-      "label": "技術RSS",
-      "genre": "技術",
-      "type": "rss",
-      "url": "https://lobste.rs/rss"
+      "label": "開発",
+      "title": "GitHub CLI Linux package signing key expires September 5",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-03-github-cli-linux-package-signing-key-expires-september-5"
     },
     {
-      "id": "arxiv-ai",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "type": "rss",
-      "url": "https://export.arxiv.org/rss/cs.AI"
+      "label": "開発",
+      "title": "GitHub Copilot app for Beginners: Run several agents at once",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub",
+      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/"
     },
     {
-      "id": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "type": "json",
-      "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
-    },
-    {
-      "id": "open-meteo-tokyo",
-      "label": "東京天気",
-      "genre": "天気",
-      "type": "weather",
-      "url": "https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo"
-    }
-  ],
-  "contexts": [
-    {
-      "genre": "開発",
-      "count": 15,
-      "signal": "Upcoming deprecation of selected GitHub Copilot models / Gemini 3.8 Flash is now available in GitHub Copilot / Enterprise-managed settings support any default model",
-      "decision": "CG開発・GitHub運用へ反映候補",
-      "topUrl": "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models",
-      "score": 4
-    },
-    {
-      "genre": "論文",
-      "count": 8,
-      "signal": "Architecting Conversational Data Systems for Stateless LLM APIs: The Hydration Proxy Pattern / The Memory Trust Gap: Capability-Dependent Failures in Persistent-Memory Agents / Eva",
-      "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://arxiv.org/abs/2609.01834",
-      "score": 4
-    },
-    {
-      "genre": "AI",
-      "count": 5,
-      "signal": "Daybreak for Frontline Defenders: $1B to protect essential services / Playco cut manual fixes 50% prototyping games with GPT-6 Astra / Safety overview: GPT-6 Astra",
-      "decision": "AI/Codex運用の変化を確認",
-      "topUrl": "https://openai.com/index/daybreak-for-frontline-defenders",
-      "score": 3
-    },
-    {
-      "genre": "災害",
-      "count": 2,
-      "signal": "M 2.6 - 81 km E of Chignik, Alaska / M 2.3 - 5 km NE of Nellis Air Force Base, Nevada",
-      "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rmlprj",
-      "score": 1
-    },
-    {
-      "genre": "天気",
-      "count": 1,
-      "signal": "東京 23.5℃ / 雨 0.1mm / 風 3.2km/h",
-      "decision": "今日の作業環境メモ",
-      "topUrl": "https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
-      "score": 1
-    },
-    {
-      "genre": "技術",
-      "count": 1,
-      "signal": "Audacity 4.0.0 Released",
-      "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0",
-      "score": 2
+      "label": "開発",
+      "title": "CodeQL 2.26.4 improves GitHub actions security detections",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-03-codeql-2-26-4-improves-github-actions-security-detections"
     }
   ],
   "items": [
@@ -147,6 +71,21 @@
       "summary": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on October 2nd, 2026: Model Deprecation date… The post Upcomi",
       "url": "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models",
       "published": "2026-09-03T19:40:14+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "title": "Gemini 3.8 Flash is now available in GitHub Copilot",
+      "summary": "Gemini 3.8 Flash, Google’s latest Flash model, is now available in GitHub Copilot. In our early testing, Gemini 3.8 Flash performed strongly on complex terminal-based coding tasks and demonstrated rigorous… The post Gemi",
+      "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot",
+      "published": "2026-09-03T18:50:38+00:00",
       "score": 4,
       "tags": [
         "開発",
@@ -167,90 +106,6 @@
         "論文",
         "重要",
         "開発",
-        "研究"
-      ]
-    },
-    {
-      "source": "github-blog",
-      "label": "GitHub",
-      "genre": "開発",
-      "title": "GitHub Copilot app for Beginners: Run several agents at once",
-      "summary": "Learn how to run parallel agents in the GitHub Copilot app, and experience the moment it stops feeling scary and starts feeling powerful. The post GitHub Copilot app for Beginners: Run several agents at once appeared fir",
-      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/",
-      "published": "2026-09-03T16:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "label": "OpenAI",
-      "genre": "AI",
-      "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
-      "summary": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
-      "url": "https://openai.com/index/daybreak-for-frontline-defenders",
-      "published": "2026-09-03T13:15:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "label": "技術RSS",
-      "genre": "技術",
-      "title": "Audacity 4.0.0 Released",
-      "summary": "Comments",
-      "url": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0",
-      "published": "2026-09-03T13:52:43+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "重要"
-      ]
-    },
-    {
-      "source": "open-meteo-tokyo",
-      "label": "東京天気",
-      "genre": "天気",
-      "title": "東京 23.5℃ / 雨 0.1mm / 風 3.2km/h",
-      "summary": "Open-Meteo no-key weather fetch",
-      "url": "https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
-      "published": "2026-09-04T10:15",
-      "score": 1,
-      "tags": [
-        "天気"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.6 - 81 km E of Chignik, Alaska",
-      "summary": "81 km E of Chignik, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rmlprj",
-      "published": "2026-09-04T01:06:50.279000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "title": "Gemini 3.8 Flash is now available in GitHub Copilot",
-      "summary": "Gemini 3.8 Flash, Google’s latest Flash model, is now available in GitHub Copilot. In our early testing, Gemini 3.8 Flash performed strongly on complex terminal-based coding tasks and demonstrated rigorous… The post Gemi",
-      "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot",
-      "published": "2026-09-03T18:50:38+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
         "研究"
       ]
     },
@@ -298,6 +153,20 @@
       ]
     },
     {
+      "source": "github-blog",
+      "label": "GitHub",
+      "genre": "開発",
+      "title": "GitHub Copilot app for Beginners: Run several agents at once",
+      "summary": "Learn how to run parallel agents in the GitHub Copilot app, and experience the moment it stops feeling scary and starts feeling powerful. The post GitHub Copilot app for Beginners: Run several agents at once appeared fir",
+      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/",
+      "published": "2026-09-03T16:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
       "source": "github-changelog",
       "label": "GitHub更新",
       "genre": "開発",
@@ -309,6 +178,21 @@
       "tags": [
         "開発",
         "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "label": "OpenAI",
+      "genre": "AI",
+      "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+      "summary": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
+      "url": "https://openai.com/index/daybreak-for-frontline-defenders",
+      "published": "2026-09-03T13:15:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
       ]
     },
     {
@@ -498,6 +382,20 @@
       ]
     },
     {
+      "source": "lobsters",
+      "label": "技術RSS",
+      "genre": "技術",
+      "title": "Audacity 4.0.0 Released",
+      "summary": "Comments",
+      "url": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0",
+      "published": "2026-09-03T13:52:43+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "重要"
+      ]
+    },
+    {
       "source": "arxiv-ai",
       "label": "arXiv AI",
       "genre": "論文",
@@ -510,90 +408,6 @@
         "論文",
         "研究"
       ]
-    },
-    {
-      "source": "arxiv-ai",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "title": "Meta-ethics and AI: exploring the novel meta-ethical questions in the era of AI",
-      "summary": "arXiv:2609.01685v1 Announce Type: new Abstract: With the development of artificial intelligence (AI), the landscape of meta-ethics, which has largely centred on human ethics, faces pressures that may significantly reconf",
-      "url": "https://arxiv.org/abs/2609.01685",
-      "published": "2026-09-03T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "title": "When Can a Machine Trust a Statute? A Survival Certificate for Machine-Extracted Legal Logic",
-      "summary": "arXiv:2609.01741v1 Announce Type: new Abstract: Statutes are increasingly parsed by machines before people read them, and the parsers disagree: on Missouri's statutes, two independently written extractors diverge on nume",
-      "url": "https://arxiv.org/abs/2609.01741",
-      "published": "2026-09-03T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "title": "When Does Information Sharing Improve Decentralized Discovery? Aggregation, Independent Rescue, and Equilibrium Selection",
-      "summary": "arXiv:2609.01814v1 Announce Type: new Abstract: Information sharing can improve a pooled estimate while eliminating independent rescue actions. This paper separates those effects in exact finite discovery models. A centr",
-      "url": "https://arxiv.org/abs/2609.01814",
-      "published": "2026-09-03T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "title": "Induction and Inquiry via Probabilistic Reasoning over Language and Code",
-      "summary": "arXiv:2609.01815v1 Announce Type: new Abstract: How humans grow and maintain abstract knowledge from the sparse, streaming noisy data of experience is a longstanding challenge in cognitive science. Any computational acco",
-      "url": "https://arxiv.org/abs/2609.01815",
-      "published": "2026-09-03T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "title": "SSAKG 2.0: An Open-Source Package for Structural Associative Sequence Memory and Context-Based Retrieval",
-      "summary": "arXiv:2609.01849v1 Announce Type: new Abstract: This article presents SSAKG 2.0, an open-source software package for constructing and operating Structural Sequential Associative Knowledge Graphs (SSAKGs). An SSAKG repres",
-      "url": "https://arxiv.org/abs/2609.01849",
-      "published": "2026-09-03T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.3 - 5 km NE of Nellis Air Force Base, Nevada",
-      "summary": "5 km NE of Nellis Air Force Base, Nevada",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00924179",
-      "published": "2026-09-04T00:52:09.177000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
-  ],
-  "errors": []
+  ]
 }

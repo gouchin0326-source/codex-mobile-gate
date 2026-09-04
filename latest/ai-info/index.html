@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI一次情報 | CODEXGATE</title>
+  <style>
+    :root{--bg:#f4f6f8;--panel:#fff;--ink:#172033;--muted:#667085;--line:#d9dee7;--blue:#2563eb;--green:#15803d;--rose:#b4235a;font-family:"Segoe UI","Meiryo",system-ui,sans-serif}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);line-height:1.45}.wrap{width:min(920px,calc(100% - 18px));margin:auto}header{background:#172033;color:white;padding:14px 0;border-bottom:4px solid var(--blue)}h1{margin:0;font-size:1.6rem}.sub{margin:4px 0 0;color:#dce5f3;font-weight:900;font-size:.9rem}main{display:grid;gap:10px;padding:10px 0 26px}section{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px}h2{font-size:1.05rem;margin:0 0 8px}.feed{display:grid;gap:8px}.item{display:grid;grid-template-columns:54px 1fr;gap:10px;border:1px solid var(--line);border-radius:8px;background:#f9fafb;padding:10px;color:var(--ink);text-decoration:none}.item b{display:grid;place-items:center;min-height:44px;border-radius:10px;background:#172033;color:#fff;font-size:.88rem}.item span{font-size:1.04rem;font-weight:900;line-height:1.32}.item small{display:block;color:var(--muted);font-size:.86rem;margin-top:4px;font-weight:800}.meta{color:var(--muted);font-size:.88rem;font-weight:800}.back{display:inline-grid;place-items:center;min-height:40px;padding:8px 12px;border-radius:8px;background:var(--blue);color:#fff;text-decoration:none;font-weight:900}@media(max-width:560px){.item{grid-template-columns:44px 1fr}.item b{min-height:38px;font-size:.78rem}.item span{font-size:1.04rem}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap"><h1>AI一次情報</h1><p class="sub">公開RSSを取得、Codex 0%運用で判断用に整理</p></div></header>
+  <main class="wrap">
+    <section><h2>判断</h2><p class="meta" id="decision">読込中</p></section>
+    <section><h2>重要</h2><div class="feed" id="focus"><a class="item" href="../data/ai-info.json"><b>待</b><span>AI情報を読込中</span></a></div></section>
+    <section><h2>全件</h2><div class="feed" id="items"></div><p class="meta" id="meta">一次データ: RSS / スクレイピングなし</p></section>
+    <a class="back" href="../index.html">CGへ戻る</a>
+  </main>
+  <script>
+    fetch("../data/ai-info.json?v="+Date.now()).then(r=>r.ok?r.json():null).then(data=>{
+      if(!data)return;
+      document.querySelector("#decision").textContent=data.decision||"高scoreだけ確認";
+      document.querySelector("#meta").textContent=`更新 ${data.updatedAt} / ${data.mode} / ${data.codexTokenUse}`;
+      document.querySelector("#focus").innerHTML=(data.focus||[]).map(x=>`<a class="item" href="${x.url||'../data/ai-info.json'}"><b>${x.label}</b><span>${x.title}<small>${x.why} / ${x.source}</small></span></a>`).join("");
+      document.querySelector("#items").innerHTML=(data.items||[]).slice(0,16).map(x=>`<a class="item" href="${x.url||'../data/ai-info.json'}"><b>${x.genre}</b><span>${x.title}<small>${x.label} / score ${x.score}</small></span></a>`).join("");
+    }).catch(()=>{});
+  </script>
+</body>
+</html>

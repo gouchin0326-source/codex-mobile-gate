@@ -1,4 +1,4 @@
-const CACHE = "codex-gate-v84-20260904";
+const CACHE = "codex-gate-v85-20260904";
 const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
@@ -7,6 +7,8 @@ const ASSETS = [
   "./latest/app-launcher.html",
   "./latest/free-info-lab/index.html",
   "./latest/zero-token-army/index.html",
+  "./latest/weather-info/index.html",
+  "./latest/ai-info/index.html",
   "./latest/index.html",
   "./latest/external-ai-lane-run-0805/index.html",
   "./latest/projects/external-ai-lane-run-0805/index.html",
@@ -22,6 +24,8 @@ const ASSETS = [
   "./latest/data/codex-data-schema.json",
   "./latest/data/seed-records.json",
   "./latest/data/free-info.json",
+  "./latest/data/weather-info.json",
+  "./latest/data/ai-info.json",
   "./latest/data/zero-token-capabilities.json"
 ];
 
@@ -40,6 +44,8 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   event.respondWith(fetch(event.request).catch(() => caches.match(event.request)));
 });
+
+
 
 
 

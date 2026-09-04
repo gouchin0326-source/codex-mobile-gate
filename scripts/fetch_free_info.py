@@ -4,6 +4,7 @@ import json
 import re
 import sys
 import urllib.request
+import urllib.parse
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from pathlib import Path
@@ -11,6 +12,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES = ROOT / "data" / "news_sources.json"
 OUT = ROOT / "latest" / "data" / "free-info.json"
+AI_OUT = ROOT / "latest" / "data" / "ai-info.json"
+WEATHER_OUT = ROOT / "latest" / "data" / "weather-info.json"
 BRIEF = ROOT / "latest" / "data" / "codexgate-news-brief-2026-09-03.md"
 
 KEYWORDS = {
@@ -156,6 +159,89 @@ def parse_weather(source, blob):
     }]
 
 
+def build_ai_payload(items, now):
+    ai_rows = [x for x in items if x.get("genre") in {"AI", "論文", "開発", "技術"}]
+    ai_rows = sorted(ai_rows, key=lambda x: (x.get("score", 0), x.get("published", "")), reverse=True)[:24]
+    focus = []
+    for item in ai_rows[:8]:
+        focus.append({
+            "label": item.get("genre", "AI"),
+            "title": item.get("title", ""),
+            "why": "Codex/AI開発判断に関係" if item.get("score", 0) >= 3 else "観察枠",
+            "source": item.get("label", ""),
+            "url": item.get("url", ""),
+        })
+    return {
+        "updatedAt": now,
+        "mode": "primary-rss-ai-context",
+        "codexTokenUse": "0 when run by GitHub Actions",
+        "policy": "official/public RSS only; no unauthorized scraping",
+        "decision": "高scoreだけ確認。低scoreは保留。",
+        "focus": focus,
+        "items": ai_rows,
+    }
+
+
+def build_weather_payload(sources, now):
+    weather_sources = [s for s in sources if s["type"] == "weather"]
+    rows = []
+    errors = []
+    for source in weather_sources:
+        parsed = urllib.parse.urlparse(source["url"])
+        qs = urllib.parse.parse_qs(parsed.query)
+        qs["current"] = ["temperature_2m,relative_humidity_2m,precipitation,weather_code,wind_speed_10m"]
+        qs["hourly"] = ["temperature_2m,precipitation_probability,precipitation,wind_speed_10m"]
+        qs["daily"] = ["weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum"]
+        qs["forecast_days"] = ["7"]
+        hourly_url = urllib.parse.urlunparse(parsed._replace(query=urllib.parse.urlencode(qs, doseq=True)))
+        try:
+            data = json.loads(fetch(hourly_url))
+            current = data.get("current", {})
+            hourly = data.get("hourly", {})
+            daily = data.get("daily", {})
+            hours = []
+            current_time = current.get("time", "")
+            future_indexes = [i for i, t in enumerate(hourly.get("time", [])) if not current_time or t >= current_time]
+            for i in future_indexes[:24]:
+                t = hourly.get("time", [])[i]
+                hours.append({
+                    "time": t,
+                    "temp": hourly.get("temperature_2m", [None] * 24)[i],
+                    "rainProb": hourly.get("precipitation_probability", [None] * 24)[i],
+                    "rain": hourly.get("precipitation", [None] * 24)[i],
+                    "wind": hourly.get("wind_speed_10m", [None] * 24)[i],
+                })
+            days = []
+            for i, t in enumerate(daily.get("time", [])[:7]):
+                days.append({
+                    "date": t,
+                    "max": daily.get("temperature_2m_max", [None] * 7)[i],
+                    "min": daily.get("temperature_2m_min", [None] * 7)[i],
+                    "rain": daily.get("precipitation_sum", [None] * 7)[i],
+                    "code": daily.get("weather_code", [None] * 7)[i],
+                })
+            rows.append({
+                "source": source["id"],
+                "label": source["label"],
+                "updatedAt": now,
+                "current": current,
+                "hourly": hours,
+                "daily": days,
+                "decision": "雨確率と風を見て外出/作業判断",
+                "url": hourly_url,
+            })
+        except Exception as exc:
+            errors.append({"source": source["id"], "error": str(exc)[:160]})
+    return {
+        "updatedAt": now,
+        "mode": "primary-api-weather-context",
+        "codexTokenUse": "0 when run by GitHub Actions",
+        "policy": "Open-Meteo documented no-key API; no scraping",
+        "locations": rows,
+        "errors": errors,
+    }
+
+
 def main():
     sources = json.loads(SOURCES.read_text(encoding="utf-8"))
     collected = []
@@ -206,6 +292,8 @@ def main():
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    AI_OUT.write_text(json.dumps(build_ai_payload(top, now), ensure_ascii=False, indent=2), encoding="utf-8")
+    WEATHER_OUT.write_text(json.dumps(build_weather_payload(sources, now), ensure_ascii=False, indent=2), encoding="utf-8")
     lines = ["# CODEXGATE News Brief", "", f"- 更新: {now}", "- 取得: GitHub Actions/Python", "- Codex: 0%想定（自動実行時）", "- 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。", ""]
     for ctx in contexts[:8]:
         lines.append(f"- [{ctx['genre']}] {ctx['decision']} / {ctx['signal'][:70]}")

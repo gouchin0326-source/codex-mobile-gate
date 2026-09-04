@@ -1,0 +1,246 @@
+{
+  "updatedAt": "2026-09-04T01:15:13.743378+00:00",
+  "mode": "primary-api-weather-context",
+  "codexTokenUse": "0 when run by GitHub Actions",
+  "policy": "Open-Meteo documented no-key API; no scraping",
+  "locations": [
+    {
+      "source": "open-meteo-tokyo",
+      "label": "東京天気",
+      "updatedAt": "2026-09-04T01:15:13.743378+00:00",
+      "current": {
+        "time": "2026-09-04T10:15",
+        "interval": 900,
+        "temperature_2m": 23.5,
+        "relative_humidity_2m": 92,
+        "precipitation": 0.1,
+        "weather_code": 51,
+        "wind_speed_10m": 3.2
+      },
+      "hourly": [
+        {
+          "time": "2026-09-04T11:00",
+          "temp": 23.9,
+          "rainProb": 66,
+          "rain": 0.3,
+          "wind": 2.3
+        },
+        {
+          "time": "2026-09-04T12:00",
+          "temp": 23.9,
+          "rainProb": 67,
+          "rain": 0.6,
+          "wind": 1.3
+        },
+        {
+          "time": "2026-09-04T13:00",
+          "temp": 23.8,
+          "rainProb": 67,
+          "rain": 0.9,
+          "wind": 1.0
+        },
+        {
+          "time": "2026-09-04T14:00",
+          "temp": 23.3,
+          "rainProb": 66,
+          "rain": 0.9,
+          "wind": 2.1
+        },
+        {
+          "time": "2026-09-04T15:00",
+          "temp": 23.0,
+          "rainProb": 65,
+          "rain": 1.2,
+          "wind": 2.3
+        },
+        {
+          "time": "2026-09-04T16:00",
+          "temp": 22.6,
+          "rainProb": 66,
+          "rain": 0.5,
+          "wind": 2.4
+        },
+        {
+          "time": "2026-09-04T17:00",
+          "temp": 22.4,
+          "rainProb": 67,
+          "rain": 0.9,
+          "wind": 1.9
+        },
+        {
+          "time": "2026-09-04T18:00",
+          "temp": 22.0,
+          "rainProb": 69,
+          "rain": 1.2,
+          "wind": 2.4
+        },
+        {
+          "time": "2026-09-04T19:00",
+          "temp": 21.8,
+          "rainProb": 73,
+          "rain": 1.4,
+          "wind": 0.4
+        },
+        {
+          "time": "2026-09-04T20:00",
+          "temp": 21.6,
+          "rainProb": 77,
+          "rain": 1.3,
+          "wind": 0.7
+        },
+        {
+          "time": "2026-09-04T21:00",
+          "temp": 21.6,
+          "rainProb": 78,
+          "rain": 1.0,
+          "wind": 2.3
+        },
+        {
+          "time": "2026-09-04T22:00",
+          "temp": 21.4,
+          "rainProb": 74,
+          "rain": 1.3,
+          "wind": 1.1
+        },
+        {
+          "time": "2026-09-04T23:00",
+          "temp": 21.4,
+          "rainProb": 68,
+          "rain": 0.7,
+          "wind": 1.8
+        },
+        {
+          "time": "2026-09-05T00:00",
+          "temp": 21.3,
+          "rainProb": 63,
+          "rain": 0.5,
+          "wind": 1.9
+        },
+        {
+          "time": "2026-09-05T01:00",
+          "temp": 21.3,
+          "rainProb": 61,
+          "rain": 0.7,
+          "wind": 2.2
+        },
+        {
+          "time": "2026-09-05T02:00",
+          "temp": 21.4,
+          "rainProb": 59,
+          "rain": 1.0,
+          "wind": 2.1
+        },
+        {
+          "time": "2026-09-05T03:00",
+          "temp": 21.4,
+          "rainProb": 57,
+          "rain": 0.4,
+          "wind": 3.3
+        },
+        {
+          "time": "2026-09-05T04:00",
+          "temp": 21.4,
+          "rainProb": 52,
+          "rain": 0.1,
+          "wind": 3.1
+        },
+        {
+          "time": "2026-09-05T05:00",
+          "temp": 21.2,
+          "rainProb": 47,
+          "rain": 0.1,
+          "wind": 3.3
+        },
+        {
+          "time": "2026-09-05T06:00",
+          "temp": 21.0,
+          "rainProb": 41,
+          "rain": 0.0,
+          "wind": 4.3
+        },
+        {
+          "time": "2026-09-05T07:00",
+          "temp": 20.9,
+          "rainProb": 35,
+          "rain": 0.0,
+          "wind": 4.7
+        },
+        {
+          "time": "2026-09-05T08:00",
+          "temp": 21.1,
+          "rainProb": 29,
+          "rain": 0.0,
+          "wind": 5.4
+        },
+        {
+          "time": "2026-09-05T09:00",
+          "temp": 21.6,
+          "rainProb": 24,
+          "rain": 0.0,
+          "wind": 5.0
+        },
+        {
+          "time": "2026-09-05T10:00",
+          "temp": 22.2,
+          "rainProb": 22,
+          "rain": 0.0,
+          "wind": 5.1
+        }
+      ],
+      "daily": [
+        {
+          "date": "2026-09-04",
+          "max": 23.9,
+          "min": 21.4,
+          "rain": 13.1,
+          "code": 61
+        },
+        {
+          "date": "2026-09-05",
+          "max": 24.5,
+          "min": 20.9,
+          "rain": 3.0,
+          "code": 55
+        },
+        {
+          "date": "2026-09-06",
+          "max": 24.3,
+          "min": 20.8,
+          "rain": 79.9,
+          "code": 65
+        },
+        {
+          "date": "2026-09-07",
+          "max": 27.4,
+          "min": 22.6,
+          "rain": 83.05,
+          "code": 96
+        },
+        {
+          "date": "2026-09-08",
+          "max": 31.1,
+          "min": 26.2,
+          "rain": 2.4,
+          "code": 95
+        },
+        {
+          "date": "2026-09-09",
+          "max": 26.7,
+          "min": 22.5,
+          "rain": 7.7,
+          "code": 55
+        },
+        {
+          "date": "2026-09-10",
+          "max": 22.5,
+          "min": 20.3,
+          "rain": 0.4,
+          "code": 51
+        }
+      ],
+      "decision": "雨確率と風を見て外出/作業判断",
+      "url": "https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&current=temperature_2m%2Crelative_humidity_2m%2Cprecipitation%2Cweather_code%2Cwind_speed_10m&timezone=Asia%2FTokyo&hourly=temperature_2m%2Cprecipitation_probability%2Cprecipitation%2Cwind_speed_10m&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum&forecast_days=7"
+    }
+  ],
+  "errors": []
+}

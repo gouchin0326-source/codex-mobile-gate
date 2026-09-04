@@ -1,4 +1,4 @@
-const CACHE = "codex-gate-v84-20260904";
+const CACHE = "codex-gate-v85-20260904";
 const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
@@ -7,6 +7,8 @@ const ASSETS = [
   "./app-launcher.html",
   "./free-info-lab/index.html",
   "./zero-token-army/index.html",
+  "./weather-info/index.html",
+  "./ai-info/index.html",
   "./quick-notes-board/index.html",
   "./orbit-catcher/index.html",
   "./orbit-catcher-zombie-siege/index.html",
@@ -24,6 +26,8 @@ const ASSETS = [
   "./data/codex-data-schema.json",
   "./data/seed-records.json",
   "./data/free-info.json",
+  "./data/weather-info.json",
+  "./data/ai-info.json",
   "./data/zero-token-capabilities.json"
 ];
 
@@ -42,6 +46,8 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   event.respondWith(fetch(event.request).catch(() => caches.match(event.request)));
 });
+
+
 
 
 
