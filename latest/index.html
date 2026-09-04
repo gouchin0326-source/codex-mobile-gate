@@ -576,10 +576,10 @@
     <div class="wrap top">
       <div>
         <h1>CG</h1>
-        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-04 13:25 JST</p>
+        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-04 13:37 JST</p>
       </div>
       <button class="refresh" id="force-update" type="button">最新版に更新</button>
-      <div class="date">更新 2026-09-04 13:25 JST</div>
+      <div class="date">更新 2026-09-04 13:37 JST</div>
     </div>
   </header>
 
@@ -674,7 +674,7 @@
         <div class="auto-line">管理: 表示分類、データ取得、警告表示、GitHub Pages公開</div>
       </div>
       <div class="phone-grid">
-        <a class="app-icon updated" href="./index.html?v=202609041325"><b class="glyph g-dev">更</b><span>最新版</span></a>
+        <a class="app-icon updated" href="./index.html?v=202609041337"><b class="glyph g-dev">更</b><span>最新版</span></a>
         <a class="app-icon updated" href="./index.html"><b class="glyph g-dev">CG</b><span>ホーム</span></a>
         <a class="app-icon updated" href="./data/zero-token-capabilities.json"><b class="glyph g-data">証</b><span>0証明</span></a>
         <a class="app-icon updated" href="./data/weather-info.json"><b class="glyph g-data">警</b><span>警戒設定</span></a>
@@ -774,7 +774,7 @@
         if (notice) {
           notice.innerHTML = `<div class="notice-line">${data.decision.line1}</div><div class="notice-line">${data.decision.line2}</div>`;
         }
-        if ((data.primary && data.primary.remainingPercent < 30) || (data.secondary && data.secondary.remainingPercent < 25)) {
+        if ((data.primary && data.primary.remainingPercent < 30) || (data.secondary && data.secondary.remainingPercent < 25) || (data.resetCredits && data.resetCredits.nearestDaysLeft <= 3)) {
           document.querySelectorAll("[data-usage-icon]").forEach((el) => el.classList.add("danger"));
         }
       })
