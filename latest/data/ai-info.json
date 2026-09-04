@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T21:26:27.637991+00:00",
+  "updatedAt": "2026-09-04T23:05:14.934705+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -8,9 +8,9 @@
   "cards": [
     {
       "genre": "開発",
-      "count": 14,
+      "count": 15,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "GPT-6 Astra is generally available in GitHub Copilot / Project HydraFusion: Frontier quality via multi-model orchestration / Upcoming deprecation of selected GitHub Copilot models",
+      "signal": "GPT-6 Astra is generally available in GitHub Copilot / GitHub Copilot weekly releases — August 31 / Project HydraFusion: Frontier quality via multi-model orchestration",
       "topUrl": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot",
       "score": 5
     },
@@ -29,14 +29,6 @@
       "signal": "Speculative Macro Commit for Faster Tool-Using Agents / Fresh Memory, Stale Plans: Dependency-Scoped Validation for Distributed LLM-Agent Memory / Dude: A Dual-Detection Multi-Agent System for Paper-Code Discrepancy Dete",
       "topUrl": "https://arxiv.org/abs/2609.03236",
       "score": 3
-    },
-    {
-      "genre": "技術",
-      "count": 1,
-      "decision": "必要時だけ確認",
-      "signal": "Discovery of a new OpenAI agent message board",
-      "topUrl": "https://collusion.wiki/",
-      "score": 2
     }
   ],
   "focus": [
@@ -46,6 +38,13 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot"
+    },
+    {
+      "label": "開発",
+      "title": "GitHub Copilot weekly releases — August 31",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-04-github-copilot-weekly-releases-august-31"
     },
     {
       "label": "開発",
@@ -88,13 +87,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2609.03340"
-    },
-    {
-      "label": "論文",
-      "title": "Dude: A Dual-Detection Multi-Agent System for Paper-Code Discrepancy Detection",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.03416"
     }
   ],
   "items": [
@@ -114,6 +106,24 @@
         "開発",
         "重要",
         "制作",
+        "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "GitHub Copilot weekly releases — August 31",
+      "summary": "This week, GitHub Copilot expands model choice and content protections, while VS Code adds new ways to manage agent sessions and get pull requests merge-ready. GitHub Copilot, general Claude Fable… The post GitHub Copilo",
+      "url": "https://github.blog/changelog/2026-09-04-github-copilot-weekly-releases-august-31",
+      "published": "2026-09-04T21:05:01+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
         "研究"
       ]
     },
@@ -502,23 +512,8 @@
         "開発",
         "重要"
       ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Discovery of a new OpenAI agent message board",
-      "summary": "Originally: https://www.reuters.com/world/europe/openai-agents-hijacked-german-website-previously-undisclosed-ai-breakout-this-2026-09-04/ Comments",
-      "url": "https://collusion.wiki/",
-      "published": "2026-09-04T11:43:06+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "重要"
-      ]
     }
-  ]
+  ],
+  "status": "fresh",
+  "lastSuccessAt": "2026-09-04T23:05:14.934705+00:00"
 }
