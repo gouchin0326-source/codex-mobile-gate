@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T14:12:44.635949+00:00",
+  "updatedAt": "2026-09-04T14:28:13.894854+00:00",
   "mode": "primary-api-weather-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "Open-Meteo documented no-key API + JMA warning JSON; no scraping",
@@ -7,10 +7,10 @@
     "level": "caution",
     "label": "注意",
     "lines": [
-      "富山: 雨5%/最大0mm",
+      "富山: 雨4%/最大0mm",
       "風16.8km/h・週間雨量最大85.0mm"
     ],
-    "maxRainProbability": 5,
+    "maxRainProbability": 4,
     "maxHourlyRain": 0,
     "maxDailyRain": 85.0,
     "maxWind": 16.8,
@@ -23,76 +23,76 @@
     "note": "公式タイル。降水なしの場合は透明表示。",
     "tiles": [
       {
-        "x": 224,
-        "y": 98,
-        "z": 8,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904141000/none/20260904151000/surf/hrpns/8/224/98.png"
+        "x": 450,
+        "y": 198,
+        "z": 9,
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904142500/none/20260904152500/surf/hrpns/9/450/198.png"
       },
       {
-        "x": 225,
-        "y": 98,
-        "z": 8,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904141000/none/20260904151000/surf/hrpns/8/225/98.png"
+        "x": 451,
+        "y": 198,
+        "z": 9,
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904142500/none/20260904152500/surf/hrpns/9/451/198.png"
       },
       {
-        "x": 226,
-        "y": 98,
-        "z": 8,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904141000/none/20260904151000/surf/hrpns/8/226/98.png"
+        "x": 452,
+        "y": 198,
+        "z": 9,
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904142500/none/20260904152500/surf/hrpns/9/452/198.png"
       },
       {
-        "x": 224,
-        "y": 99,
-        "z": 8,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904141000/none/20260904151000/surf/hrpns/8/224/99.png"
+        "x": 450,
+        "y": 199,
+        "z": 9,
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904142500/none/20260904152500/surf/hrpns/9/450/199.png"
       },
       {
-        "x": 225,
-        "y": 99,
-        "z": 8,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904141000/none/20260904151000/surf/hrpns/8/225/99.png"
+        "x": 451,
+        "y": 199,
+        "z": 9,
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904142500/none/20260904152500/surf/hrpns/9/451/199.png"
       },
       {
-        "x": 226,
-        "y": 99,
-        "z": 8,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904141000/none/20260904151000/surf/hrpns/8/226/99.png"
+        "x": 452,
+        "y": 199,
+        "z": 9,
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904142500/none/20260904152500/surf/hrpns/9/452/199.png"
       },
       {
-        "x": 224,
-        "y": 100,
-        "z": 8,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904141000/none/20260904151000/surf/hrpns/8/224/100.png"
+        "x": 450,
+        "y": 200,
+        "z": 9,
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904142500/none/20260904152500/surf/hrpns/9/450/200.png"
       },
       {
-        "x": 225,
-        "y": 100,
-        "z": 8,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904141000/none/20260904151000/surf/hrpns/8/225/100.png"
+        "x": 451,
+        "y": 200,
+        "z": 9,
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904142500/none/20260904152500/surf/hrpns/9/451/200.png"
       },
       {
-        "x": 226,
-        "y": 100,
-        "z": 8,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904141000/none/20260904151000/surf/hrpns/8/226/100.png"
+        "x": 452,
+        "y": 200,
+        "z": 9,
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904142500/none/20260904152500/surf/hrpns/9/452/200.png"
       }
     ],
     "times": [
       {
-        "basetime": "20260904141000",
+        "basetime": "20260904142500",
+        "validtime": "20260904152500"
+      },
+      {
+        "basetime": "20260904142500",
+        "validtime": "20260904152000"
+      },
+      {
+        "basetime": "20260904142500",
+        "validtime": "20260904151500"
+      },
+      {
+        "basetime": "20260904142500",
         "validtime": "20260904151000"
-      },
-      {
-        "basetime": "20260904141000",
-        "validtime": "20260904150500"
-      },
-      {
-        "basetime": "20260904141000",
-        "validtime": "20260904150000"
-      },
-      {
-        "basetime": "20260904141000",
-        "validtime": "20260904145500"
       }
     ]
   },
@@ -101,27 +101,18 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "location": "富山県",
-      "updatedAt": "2026-09-04T14:12:44.635949+00:00",
+      "updatedAt": "2026-09-04T14:28:13.894854+00:00",
       "current": {
-        "time": "2026-09-04T23:00",
+        "time": "2026-09-04T23:15",
         "interval": 900,
-        "temperature_2m": 23.4,
-        "relative_humidity_2m": 79,
+        "temperature_2m": 23.5,
+        "relative_humidity_2m": 77,
         "apparent_temperature": 25.5,
         "precipitation": 0.0,
         "weather_code": 3,
         "wind_speed_10m": 9.9
       },
       "hourly": [
-        {
-          "time": "2026-09-04T23:00",
-          "temp": 23.4,
-          "humidity": 79,
-          "feelsLike": 25.5,
-          "rainProb": 5,
-          "rain": 0.0,
-          "wind": 9.9
-        },
         {
           "time": "2026-09-05T00:00",
           "temp": 23.8,
@@ -328,6 +319,15 @@
           "rainProb": 0,
           "rain": 0.0,
           "wind": 3.1
+        },
+        {
+          "time": "2026-09-05T23:00",
+          "temp": 22.2,
+          "humidity": 80,
+          "feelsLike": 24.8,
+          "rainProb": 0,
+          "rain": 0.0,
+          "wind": 3.6
         }
       ],
       "daily": [

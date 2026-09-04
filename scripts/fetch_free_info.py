@@ -70,6 +70,42 @@ SOCIAL_SOURCES = [
         "url": "https://news.google.com/rss/search?q=%E7%81%BD%E5%AE%B3%20%E8%AD%A6%E5%A0%B1%20when:1d&hl=ja&gl=JP&ceid=JP:ja",
     },
     {
+        "id": "news-politics-jp",
+        "label": "日本ニュース 政治",
+        "platform": "Google News",
+        "type": "rss",
+        "genre": "SNS",
+        "topic": "政治",
+        "url": "https://news.google.com/rss/search?q=%E6%94%BF%E6%B2%BB%20%E6%94%BF%E5%BA%9C%20when:1d&hl=ja&gl=JP&ceid=JP:ja",
+    },
+    {
+        "id": "news-society-jp",
+        "label": "日本ニュース 社会",
+        "platform": "Google News",
+        "type": "rss",
+        "genre": "SNS",
+        "topic": "社会",
+        "url": "https://news.google.com/rss/search?q=%E7%A4%BE%E4%BC%9A%20%E4%BA%8B%E4%BB%B6%20when:1d&hl=ja&gl=JP&ceid=JP:ja",
+    },
+    {
+        "id": "news-world-jp",
+        "label": "日本ニュース 国際",
+        "platform": "Google News",
+        "type": "rss",
+        "genre": "SNS",
+        "topic": "国際",
+        "url": "https://news.google.com/rss/search?q=%E5%9B%BD%E9%9A%9B%20%E4%B8%96%E7%95%8C%20when:1d&hl=ja&gl=JP&ceid=JP:ja",
+    },
+    {
+        "id": "news-tech-jp",
+        "label": "日本ニュース 技術",
+        "platform": "Google News",
+        "type": "rss",
+        "genre": "SNS",
+        "topic": "技術",
+        "url": "https://news.google.com/rss/search?q=%E6%8A%80%E8%A1%93%20IT%20%E3%82%B9%E3%83%9E%E3%83%9B%20when:1d&hl=ja&gl=JP&ceid=JP:ja",
+    },
+    {
         "id": "news-sports-jp",
         "label": "日本ニュース スポーツ",
         "platform": "Google News",
@@ -77,6 +113,24 @@ SOCIAL_SOURCES = [
         "genre": "SNS",
         "topic": "スポーツ",
         "url": "https://news.google.com/rss/search?q=%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84%20when:1d&hl=ja&gl=JP&ceid=JP:ja",
+    },
+    {
+        "id": "news-health-jp",
+        "label": "日本ニュース 健康",
+        "platform": "Google News",
+        "type": "rss",
+        "genre": "SNS",
+        "topic": "健康",
+        "url": "https://news.google.com/rss/search?q=%E5%81%A5%E5%BA%B7%20%E5%8C%BB%E7%99%82%20when:1d&hl=ja&gl=JP&ceid=JP:ja",
+    },
+    {
+        "id": "news-toyama-jp",
+        "label": "日本ニュース 富山",
+        "platform": "Google News",
+        "type": "rss",
+        "genre": "SNS",
+        "topic": "富山",
+        "url": "https://news.google.com/rss/search?q=%E5%AF%8C%E5%B1%B1%20when:1d&hl=ja&gl=JP&ceid=JP:ja",
     },
     {
         "id": "mastodon-ai",
@@ -112,9 +166,15 @@ def social_topic(title):
     text = (title or "").lower()
     rules = [
         ("AI", ["ai", "gpt", "llm", "openai", "claude", "gemini", "model", "huggingface", "生成ai", "人工知能"]),
+        ("政治", ["政治", "政府", "首相", "選挙", "国会", "与党", "野党"]),
+        ("社会", ["社会", "事件", "事故", "裁判", "警察", "教育"]),
+        ("国際", ["国際", "世界", "米国", "中国", "韓国", "欧州", "外交"]),
         ("経済", ["経済", "株", "市場", "為替", "金利", "物価", "企業", "決算"]),
         ("スポーツ", ["スポーツ", "野球", "サッカー", "大谷", "試合", "勝利", "リーグ"]),
         ("災害", ["災害", "警報", "大雨", "線状降水帯", "地震", "台風", "避難"]),
+        ("健康", ["健康", "医療", "病院", "感染", "薬", "熱中症"]),
+        ("富山", ["富山", "高岡", "射水", "魚津", "氷見", "砺波"]),
+        ("技術", ["技術", "it", "スマホ", "半導体", "アプリ", "ソフト"]),
         ("開発", ["github", "python", "javascript", "api", "code", "codex", "developer", "npm", "oss"]),
         ("ガジェット", ["npu", "gpu", "ram", "chip", "pc", "device", "banana pi", "server"]),
         ("制作", ["image", "video", "audio", "design", "comic", "game", "画像", "動画"]),
@@ -419,6 +479,7 @@ def parse_rss(source, blob):
             "label": source["label"],
             "genre": source["genre"],
             "topic": source.get("topic") or social_topic(title),
+            "sourceWeight": 3 if source.get("platform") == "Google News" else 1,
             "title": title,
             "summary": summary,
             "url": link,
@@ -473,6 +534,7 @@ def parse_mastodon(source, blob):
             "region": "日本語優先" if region_score else "海外",
             "regionScore": region_score,
             "topic": social_topic(title),
+            "sourceWeight": 1,
             "url": row.get("url") or "",
             "published": row.get("created_at") or "",
             "score": min(5, score + (1 if boosts or favs else 0)),
@@ -501,6 +563,7 @@ def parse_bluesky(source, blob):
             "region": "日本語優先" if region_score else "海外",
             "regionScore": region_score,
             "topic": social_topic(text),
+            "sourceWeight": 1,
             "url": f"https://bsky.app/profile/{author}/post/{row.get('uri','').split('/')[-1]}" if author and row.get("uri") else "",
             "published": record.get("createdAt") or row.get("indexedAt") or "",
             "score": min(5, score + (1 if row.get("likeCount") else 0)),
@@ -544,7 +607,7 @@ def build_social_payload(now):
     items = [item for item in items if is_japanese_text(item.get("title", ""))]
     japanese = [x for x in items if x.get("regionScore", 0) > 0]
     overseas = []
-    ranked = sorted(japanese, key=lambda x: (x.get("regionScore", 0), x.get("score", 0), x.get("published", "")), reverse=True)
+    ranked = sorted(japanese, key=lambda x: (x.get("sourceWeight", 1), x.get("regionScore", 0), x.get("score", 0), x.get("published", "")), reverse=True)
     ranked.extend(sorted(overseas, key=lambda x: (x.get("score", 0), x.get("published", "")), reverse=True))
     items = ranked[:36]
     platforms = {}
@@ -564,8 +627,8 @@ def build_social_payload(now):
         topic = item.get("topic") or "その他"
         topic_map.setdefault(topic, []).append(item)
     topics = []
-    for topic, rows in sorted(topic_map.items(), key=lambda x: (-len(x[1]), x[0])):
-        ranked_rows = sorted(rows, key=lambda x: (x.get("regionScore", 0), x.get("score", 0), x.get("published", "")), reverse=True)
+    for topic, rows in sorted(topic_map.items(), key=lambda x: (-sum(r.get("sourceWeight", 1) + r.get("score", 0) for r in x[1]), x[0])):
+        ranked_rows = sorted(rows, key=lambda x: (x.get("sourceWeight", 1), x.get("regionScore", 0), x.get("score", 0), x.get("published", "")), reverse=True)
         top = ranked_rows[:3]
         topics.append({
             "topic": topic,
@@ -683,7 +746,7 @@ def build_weather_payload(sources, now):
     }
     try:
         targets = json.loads(fetch(JMA_NOWCAST_TARGETS))
-        z = 8
+        z = 9
         x0 = int((TOYAMA_LON + 180) / 360 * (2 ** z))
         lat_rad = math.radians(TOYAMA_LAT)
         y0 = int((1 - math.log(math.tan(lat_rad) + 1 / math.cos(lat_rad)) / math.pi) / 2 * (2 ** z))
