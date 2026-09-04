@@ -1,7 +1,22 @@
 {
-  "updatedAt": "2026-09-03T23:00:50.717436+00:00",
-  "mode": "free-fetch",
+  "updatedAt": "2026-09-04T00:21:18.301634+00:00",
+  "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
+  "freeMeaning": "Public RSS/API data is fetched by program, categorized, scored, and summarized into local static JSON. It is not a bookmark list and does not scrape ordinary web pages.",
+  "accessPolicy": {
+    "allowed": [
+      "official RSS",
+      "public JSON API",
+      "public GeoJSON API",
+      "provider documented no-key API"
+    ],
+    "blocked": [
+      "unauthorized scraping",
+      "login bypass",
+      "paywall extraction",
+      "bulk copying article text"
+    ]
+  },
   "levels": [
     {
       "id": "zero",
@@ -71,6 +86,56 @@
       "genre": "天気",
       "type": "weather",
       "url": "https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo"
+    }
+  ],
+  "contexts": [
+    {
+      "genre": "開発",
+      "count": 15,
+      "signal": "Upcoming deprecation of selected GitHub Copilot models / Gemini 3.8 Flash is now available in GitHub Copilot / Enterprise-managed settings support any default model",
+      "decision": "CG開発・GitHub運用へ反映候補",
+      "topUrl": "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models",
+      "score": 4
+    },
+    {
+      "genre": "論文",
+      "count": 8,
+      "signal": "Architecting Conversational Data Systems for Stateless LLM APIs: The Hydration Proxy Pattern / The Memory Trust Gap: Capability-Dependent Failures in Persistent-Memory Agents / Eva",
+      "decision": "更新あり。必要時だけ確認",
+      "topUrl": "https://arxiv.org/abs/2609.01834",
+      "score": 4
+    },
+    {
+      "genre": "AI",
+      "count": 5,
+      "signal": "Daybreak for Frontline Defenders: $1B to protect essential services / Playco cut manual fixes 50% prototyping games with GPT-6 Astra / Safety overview: GPT-6 Astra",
+      "decision": "AI/Codex運用の変化を確認",
+      "topUrl": "https://openai.com/index/daybreak-for-frontline-defenders",
+      "score": 3
+    },
+    {
+      "genre": "災害",
+      "count": 2,
+      "signal": "M 1.9 - 73 km E of Ugashik, Alaska / M 1.1 - 3 km W of Cobb, CA",
+      "decision": "更新あり。必要時だけ確認",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rmkbgh",
+      "score": 1
+    },
+    {
+      "genre": "天気",
+      "count": 1,
+      "signal": "東京 23.1℃ / 雨 0.1mm / 風 2.7km/h",
+      "decision": "今日の作業環境メモ",
+      "topUrl": "https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
+      "score": 1
+    },
+    {
+      "genre": "技術",
+      "count": 1,
+      "signal": "Audacity 4.0.0 Released",
+      "decision": "更新あり。必要時だけ確認",
+      "topUrl": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0",
+      "score": 2
     }
   ],
   "items": [
@@ -152,10 +217,10 @@
       "source": "open-meteo-tokyo",
       "label": "東京天気",
       "genre": "天気",
-      "title": "東京 22.4℃ / 雨 0.1mm / 風 2.4km/h",
+      "title": "東京 23.1℃ / 雨 0.1mm / 風 2.7km/h",
       "summary": "Open-Meteo no-key weather fetch",
       "url": "https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
-      "published": "2026-09-04T08:00",
+      "published": "2026-09-04T09:15",
       "score": 1,
       "tags": [
         "天気"
@@ -165,10 +230,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 3.4 - 19 km SE of Pāhala, Hawaii",
-      "summary": "19 km SE of Pāhala, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75028917",
-      "published": "2026-09-03T22:39:02.050000+00:00",
+      "title": "M 1.9 - 73 km E of Ugashik, Alaska",
+      "summary": "73 km E of Ugashik, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rmkbgh",
+      "published": "2026-09-04T00:20:06.038000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -520,10 +585,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.2 - 40 km W of Anchor Point, Alaska",
-      "summary": "40 km W of Anchor Point, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rmgnym",
-      "published": "2026-09-03T22:35:07.826000+00:00",
+      "title": "M 1.1 - 3 km W of Cobb, CA",
+      "summary": "3 km W of Cobb, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429402",
+      "published": "2026-09-04T00:18:41.020000+00:00",
       "score": 1,
       "tags": [
         "災害"

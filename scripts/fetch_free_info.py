@@ -20,6 +20,14 @@ KEYWORDS = {
     "研究": ["paper", "arxiv", "model", "benchmark", "training"],
 }
 
+DECISION_HINTS = {
+    "AI": "AI/Codex運用の変化を確認",
+    "開発": "CG開発・GitHub運用へ反映候補",
+    "研究": "すぐ実装せず観察",
+    "天気": "今日の作業環境メモ",
+    "地震": "影響がある時だけ確認",
+}
+
 
 def fetch(url):
     req = urllib.request.Request(url, headers={"User-Agent": "CODEXGATE-FreeInfo/1.0"})
@@ -52,6 +60,26 @@ def score_item(title, summary, genre):
             score += 1
             tags.append(tag)
     return min(score, 5), list(dict.fromkeys(tags))[:4]
+
+
+def build_contexts(items):
+    groups = {}
+    for item in items:
+        genre = item.get("genre") or "情報"
+        groups.setdefault(genre, []).append(item)
+    contexts = []
+    for genre, rows in sorted(groups.items(), key=lambda x: (-len(x[1]), x[0])):
+        rows = sorted(rows, key=lambda x: (x.get("score", 0), x.get("published", "")), reverse=True)
+        top_titles = [r.get("title", "") for r in rows[:3] if r.get("title")]
+        contexts.append({
+            "genre": genre,
+            "count": len(rows),
+            "signal": " / ".join(top_titles)[:180],
+            "decision": DECISION_HINTS.get(genre, "更新あり。必要時だけ確認"),
+            "topUrl": rows[0].get("url", "") if rows else "",
+            "score": max([r.get("score", 1) for r in rows] or [1]),
+        })
+    return contexts
 
 
 def parse_rss(source, blob):
@@ -156,24 +184,31 @@ def main():
         if len(top) >= 32:
             break
     now = datetime.now(timezone.utc).isoformat()
+    contexts = build_contexts(top)
     payload = {
         "updatedAt": now,
-        "mode": "free-fetch",
+        "mode": "free-fetch-context",
         "codexTokenUse": "0 when run by GitHub Actions",
+        "freeMeaning": "Public RSS/API data is fetched by program, categorized, scored, and summarized into local static JSON. It is not a bookmark list and does not scrape ordinary web pages.",
+        "accessPolicy": {
+            "allowed": ["official RSS", "public JSON API", "public GeoJSON API", "provider documented no-key API"],
+            "blocked": ["unauthorized scraping", "login bypass", "paywall extraction", "bulk copying article text"],
+        },
         "levels": [
             {"id": "zero", "label": "完全無料", "cost": "Codex 0%", "route": "GitHub Actions + RSS/API + JSON"},
             {"id": "small", "label": "少量", "cost": "Codex少量", "route": "20行メモだけCodexで反映"},
             {"id": "external", "label": "外部AI節約", "cost": "Codex小", "route": "外部AIで調査/圧縮、Codexは実装"}
         ],
         "sources": sources,
+        "contexts": contexts,
         "items": top,
         "errors": errors,
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    lines = ["# CODEXGATE News Brief", "", f"- 更新: {now}", "- 取得: GitHub Actions/Python", "- Codex: 0%想定（自動実行時）", ""]
-    for item in top[:10]:
-        lines.append(f"- [{item['genre']}] {item['title'][:70]}")
+    lines = ["# CODEXGATE News Brief", "", f"- 更新: {now}", "- 取得: GitHub Actions/Python", "- Codex: 0%想定（自動実行時）", "- 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。", ""]
+    for ctx in contexts[:8]:
+        lines.append(f"- [{ctx['genre']}] {ctx['decision']} / {ctx['signal'][:70]}")
     BRIEF.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
