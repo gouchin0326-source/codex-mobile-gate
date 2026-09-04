@@ -39,6 +39,42 @@ DECISION_HINTS = {
 
 SOCIAL_SOURCES = [
     {
+        "id": "news-ai-jp",
+        "label": "日本ニュース AI",
+        "platform": "Google News",
+        "type": "rss",
+        "genre": "SNS",
+        "topic": "AI",
+        "url": "https://news.google.com/rss/search?q=AI%20OpenAI%20Claude%20Anthropic%20when:1d&hl=ja&gl=JP&ceid=JP:ja",
+    },
+    {
+        "id": "news-economy-jp",
+        "label": "日本ニュース 経済",
+        "platform": "Google News",
+        "type": "rss",
+        "genre": "SNS",
+        "topic": "経済",
+        "url": "https://news.google.com/rss/search?q=%E7%B5%8C%E6%B8%88%20when:1d&hl=ja&gl=JP&ceid=JP:ja",
+    },
+    {
+        "id": "news-disaster-jp",
+        "label": "日本ニュース 災害",
+        "platform": "Google News",
+        "type": "rss",
+        "genre": "SNS",
+        "topic": "災害",
+        "url": "https://news.google.com/rss/search?q=%E7%81%BD%E5%AE%B3%20%E8%AD%A6%E5%A0%B1%20when:1d&hl=ja&gl=JP&ceid=JP:ja",
+    },
+    {
+        "id": "news-sports-jp",
+        "label": "日本ニュース スポーツ",
+        "platform": "Google News",
+        "type": "rss",
+        "genre": "SNS",
+        "topic": "スポーツ",
+        "url": "https://news.google.com/rss/search?q=%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84%20when:1d&hl=ja&gl=JP&ceid=JP:ja",
+    },
+    {
         "id": "mastodon-ai",
         "label": "Mastodon #AI",
         "platform": "Mastodon",
@@ -53,14 +89,6 @@ SOCIAL_SOURCES = [
         "type": "mastodon",
         "genre": "SNS",
         "url": "https://mstdn.jp/api/v1/timelines/tag/Codex?limit=20",
-    },
-    {
-        "id": "reddit-localllama",
-        "label": "Reddit LocalLLaMA",
-        "platform": "Reddit",
-        "type": "rss",
-        "genre": "SNS",
-        "url": "https://www.reddit.com/r/LocalLLaMA/.rss",
     },
 ]
 
@@ -80,6 +108,9 @@ def social_topic(title):
     text = (title or "").lower()
     rules = [
         ("AI", ["ai", "gpt", "llm", "openai", "claude", "gemini", "model", "huggingface", "生成ai", "人工知能"]),
+        ("経済", ["経済", "株", "市場", "為替", "金利", "物価", "企業", "決算"]),
+        ("スポーツ", ["スポーツ", "野球", "サッカー", "大谷", "試合", "勝利", "リーグ"]),
+        ("災害", ["災害", "警報", "大雨", "線状降水帯", "地震", "台風", "避難"]),
         ("開発", ["github", "python", "javascript", "api", "code", "codex", "developer", "npm", "oss"]),
         ("ガジェット", ["npu", "gpu", "ram", "chip", "pc", "device", "banana pi", "server"]),
         ("制作", ["image", "video", "audio", "design", "comic", "game", "画像", "動画"]),
@@ -383,6 +414,7 @@ def parse_rss(source, blob):
             "platform": source.get("platform", source.get("genre", "")),
             "label": source["label"],
             "genre": source["genre"],
+            "topic": source.get("topic") or social_topic(title),
             "title": title,
             "summary": summary,
             "url": link,
@@ -505,8 +537,9 @@ def build_social_payload(now):
             item["regionScore"] = social_region_score(item.get("title", ""), {"url": item.get("url", ""), "id": item.get("source", "")})
             item["region"] = "日本語優先" if item["regionScore"] else "海外"
         item["topic"] = item.get("topic") or social_topic(item.get("title", ""))
+    items = [item for item in items if is_japanese_text(item.get("title", ""))]
     japanese = [x for x in items if x.get("regionScore", 0) > 0]
-    overseas = [x for x in items if x.get("regionScore", 0) <= 0]
+    overseas = []
     ranked = sorted(japanese, key=lambda x: (x.get("regionScore", 0), x.get("score", 0), x.get("published", "")), reverse=True)
     ranked.extend(sorted(overseas, key=lambda x: (x.get("score", 0), x.get("published", "")), reverse=True))
     items = ranked[:36]
@@ -543,11 +576,11 @@ def build_social_payload(now):
         "codexTokenUse": "0 when run by GitHub Actions",
         "policy": "public API/RSS only; no login bypass; no unauthorized scraping; short excerpts + URL only",
         "cadence": "10m",
-        "decision": "日本語優先。URL掲載は可、本文転載は短い抜粋だけ。",
+        "decision": "日本語のみ。URL掲載は可、本文転載は短い抜粋だけ。",
         "region": {
-            "target": "Japan/Japanese first",
-            "japaneseCount": len(japanese),
-            "overseasCount": len(overseas),
+            "target": "Japanese only",
+            "japaneseCount": len(items),
+            "overseasCount": 0,
         },
         "platformCounts": platforms,
         "topics": topics,

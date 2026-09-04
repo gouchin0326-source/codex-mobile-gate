@@ -1,24 +1,24 @@
 {
-  "updatedAt": "2026-09-04T09:57:43.748538+00:00",
+  "updatedAt": "2026-09-04T10:30:44.507596+00:00",
   "mode": "zero-token-social-trends",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "public API/RSS only; no login bypass; no unauthorized scraping; short excerpts + URL only",
   "cadence": "10m",
-  "decision": "日本語優先。URL掲載は可、本文転載は短い抜粋だけ。",
+  "decision": "日本語のみ。URL掲載は可、本文転載は短い抜粋だけ。",
   "region": {
-    "target": "Japan/Japanese first",
-    "japaneseCount": 24,
-    "overseasCount": 8
+    "target": "Japanese only",
+    "japaneseCount": 36,
+    "overseasCount": 0
   },
   "platformCounts": {
-    "Mastodon": 24,
-    "Reddit": 8
+    "Mastodon": 7,
+    "Google News": 29
   },
   "topics": [
     {
       "topic": "AI",
-      "count": 18,
-      "attention": 65,
+      "count": 11,
+      "attention": 43,
       "headline": "OpenAI、GPT-6 Astraを発表 ——PC操作の精度や速度を向上、サイバー能力は同社初の「重大」水準",
       "urls": [
         {
@@ -39,55 +39,78 @@
       ]
     },
     {
-      "topic": "その他",
-      "count": 6,
-      "attention": 13,
-      "headline": "Acer's Swift Blade 14 weighs just 1.76 pounds and uses Wildcat Lake — company introduces new sub-brand ahead of IFA tradeshow Acer is increa",
+      "topic": "スポーツ",
+      "count": 8,
+      "attention": 24,
+      "headline": "第79回大分県民スポーツ大会 竹田市選手団結団式 - city.taketa.oita.jp",
       "urls": [
         {
-          "title": "Acer's Swift Blade 14 weighs just 1.76 pounds and uses Wildcat Lake — company in",
-          "url": "https://social.gamefan.net/@techwire/117212142920518590",
-          "platform": "Mastodon"
+          "title": "第79回大分県民スポーツ大会 竹田市選手団結団式 - city.taketa.oita.jp",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUGZlY0ZoUDZXMFJJMU9PTzBDUHpERjNjWW83N1hRTjdHbmk3ZzRzc0NkTGVxb21lclNEVVRrSEZPUjRySXNmQjVpZVE3aEhiNW8zUVhBS204MFhDbUNuWldWdXZab21HWEo1MUlLTWktS2ExYkZZd2xnQVIxdEEyakxpUWNOLW44dE5Yc0Jsb0Fsa3hlMXIxaGZpbTU5a2UxOHdKNHdReUstV3ppNTVoaUE4UTJFbmM?oc=5",
+          "platform": "Google News"
         },
         {
-          "title": "Oklahoma city tries to charge farmer arrested at data center debate $17,000 for ",
-          "url": "https://social.gamefan.net/@techwire/117212123486895881",
-          "platform": "Mastodon"
+          "title": "【無料】親子で多様なスポーツを楽しむ「川崎市スポーツフェスタ2026」を、10月12日(月・祝)に等々力緑地で開催します！ - PR TIMES",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5iNW55c0xwc2hwSURpQkoyUUdOVElDUW93Yk5HNEh5d09KdmRVOXNnOTlVeG9LbWlOX0s0bkQ0RE1IVzhGdktiMDdlYjJ1OU1vWnhsOFpFcWlxT0ZlUXpSNjFwck1Lc0p0b3c?oc=5",
+          "platform": "Google News"
         },
         {
-          "title": "The benchmarks the big labs don't want you to see",
-          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w6myn6/the_benchmarks_the_big_labs_dont_want_you_to_see/",
-          "platform": "Reddit"
+          "title": "「TOKYOわくわく ウォータースポーツ チャレンジ」開催|9月 - metro.tokyo.lg.jp",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9RMHBWclAwbk9HNkdvX3h6YmEyRXliTUlXamlQME9pa3lITlYzWWwwdU1FTExnYVVHbGF6YkFTNU9JcEhyMGJkd2l5Q3pPX0pvYUhIWUpDalgxNm81aWZ1blZHWGxRaVBEVmo4M1FIeVRPODRm?oc=5",
+          "platform": "Google News"
         }
       ]
     },
     {
-      "topic": "開発",
-      "count": 4,
-      "attention": 15,
-      "headline": "Acer launches seven new gaming monitors across Nitro and Predator families — tri-mode panels, QD-OLEDs, Mini LEDs, 1,000 Hz, and more Acer h",
+      "topic": "災害",
+      "count": 8,
+      "attention": 24,
+      "headline": "鹿児島・西之表市にレベル4土砂災害危険警報 早めの避難を心がけて - テレ朝NEWS",
       "urls": [
         {
-          "title": "Acer launches seven new gaming monitors across Nitro and Predator families — tri",
-          "url": "https://social.gamefan.net/@techwire/117212162748769774",
-          "platform": "Mastodon"
+          "title": "鹿児島・西之表市にレベル4土砂災害危険警報 早めの避難を心がけて - テレ朝NEWS",
+          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE8yRy1WZ1VoSFJ0cHhBajh5TXgzMVllNjVLTHZ2VGdObnkwb2RZNXJyTDUtdjR6M0VXaTZBc1NqRTZHazQwT0JqdGxTRjJqNGZlM2FyMGNpNkM5bHV6VTlxRlFNMFkxYlpJcEVKNWFVX0VHdw?oc=5",
+          "platform": "Google News"
         },
         {
-          "title": "From a Ten-Line Script to a Real Utility with Codex",
-          "url": "https://2137.social/@13/117207785502941493",
-          "platform": "Mastodon"
+          "title": "鹿児島・西之表市にレベル4土砂災害危険警報 早めの避難を心がけて - KSBニュース",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1WVHRPSFhJM2RfaldLZDlKRXFkMld5WHNlUHlmdTI3VFBYWUxPdmpkMk1EOHRKWXRUZXA2Z0V4dU1yUTZxTVdGMks5TW1ULXlsQVBKMmJB?oc=5",
+          "platform": "Google News"
         },
         {
-          "title": "From a Ten-Line Script to a Real Utility with Codex",
-          "url": "https://web.brid.gy/r/https://hackaday.com/2026/09/03/from-a-ten-line-script-to-a-real-utility-with-codex/",
-          "platform": "Mastodon"
+          "title": "西之表市 レベル４土砂災害危険警報 （１８：３６） - NHKニュース",
+          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9qY0huZkpWMzQ4ZTZjY2tkSjRSSVhoazdkaDNMd1BFdFV1M01IelNHeTFCejkxNXdDWkZuSWtnQXl0OU1HZTZKQjJ4TUdBQWg1QVF6b1laVXg?oc=5",
+          "platform": "Google News"
+        }
+      ]
+    },
+    {
+      "topic": "経済",
+      "count": 7,
+      "attention": 21,
+      "headline": "「東洋経済オンライン」に、「STARTUP DB」がデータ提供いたしました - forstartups.com",
+      "urls": [
+        {
+          "title": "「東洋経済オンライン」に、「STARTUP DB」がデータ提供いたしました - forstartups.com",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9YbldjSEZGNFFEbGE1c2ttNVloUWFNM3NkQU9yN3BLWjdFOWdrcWJDZkR0WnV2cDU5OGplY1ZuNTRqUHlYcldGa2YyMUpQd2pXaDFUOF9CZDNwYzFTRy1KRktn?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "小野田経済安全保障相、選挙事務所巡る文春報道を否定…「選挙活動には利用していない」 - 読売新聞",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE02RkRPSzJmWTNtUl9jakptTGRpOUl4Z0ExWGhPUFMzTW1NbnBhaV9JQ0xPbjMteEhsMjlEYl9UbzVYZTZ2R1JRa3pseG85enRpN254X0lHWFFSV1dMRjFrT0djd3phUQ?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "日経平均構成銘柄、ＪＸ金属など3銘柄採用＝日本経済新聞 - ロイター",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNV3hIZmVCR0lObFZpbnNial8xTmN5LV9wSFRWUFFjMkg0ODZWTFNBSkVKXzA4Z05IVmxtTnVYbmpGQzFpQk05bFQzc1kwdWlnVUlxalRFaGxHRl9Edmd6ai1ISzVpQ1hZSmloZlJ3Um5oeUNCakZNdllKUWViM0RxVw?oc=5",
+          "platform": "Google News"
         }
       ]
     },
     {
       "topic": "ニュース",
-      "count": 3,
-      "attention": 12,
+      "count": 2,
+      "attention": 10,
       "headline": "SNS更新",
       "urls": [
         {
@@ -99,76 +122,58 @@
           "title": "SNS更新",
           "url": "https://jpmstdn.com/@tkhunt/117200958960723688",
           "platform": "Mastodon"
-        },
-        {
-          "title": "US urged to consider military strikes to stop China achieving AGI first The Unit",
-          "url": "https://newsbeep.org/@us/117212107020654047",
-          "platform": "Mastodon"
-        }
-      ]
-    },
-    {
-      "topic": "ガジェット",
-      "count": 1,
-      "attention": 3,
-      "headline": "CourtMind WTA Lab #1 Zacząłem nowy projekt. Chcę sprawdzić, czy da się stworzyć program, który będzie analizował mecze kobiecego tenisa i sa",
-      "urls": [
-        {
-          "title": "CourtMind WTA Lab #1 Zacząłem nowy projekt. Chcę sprawdzić, czy da się stworzyć ",
-          "url": "https://mastodon.com.pl/@Belzebubik/117202374455345884",
-          "platform": "Mastodon"
         }
       ]
     }
   ],
   "trends": [
     {
-      "word": "codex",
-      "count": 5
-    },
-    {
-      "word": "acer",
-      "count": 4
-    },
-    {
       "word": "claude",
+      "count": 10
+    },
+    {
+      "word": "news",
+      "count": 8
+    },
+    {
+      "word": "anthropic",
+      "count": 6
+    },
+    {
+      "word": "chatgpt",
+      "count": 6
+    },
+    {
+      "word": "dig",
+      "count": 6
+    },
+    {
+      "word": "grok",
+      "count": 6
+    },
+    {
+      "word": "nhk",
+      "count": 6
+    },
+    {
+      "word": "tbs",
+      "count": 6
+    },
+    {
+      "word": "chosunbiz",
       "count": 4
     },
     {
-      "word": "new",
+      "word": "city",
       "count": 4
     },
     {
-      "word": "astra",
-      "count": 3
+      "word": "openai",
+      "count": 4
     },
     {
-      "word": "from",
-      "count": 3
-    },
-    {
-      "word": "gpt-6",
-      "count": 3
-    },
-    {
-      "word": "models",
-      "count": 3
-    },
-    {
-      "word": "why",
-      "count": 3
-    },
-    {
-      "word": "billion",
-      "count": 2
-    },
-    {
-      "word": "climate",
-      "count": 2
-    },
-    {
-      "word": "code",
-      "count": 2
+      "word": "tokyo",
+      "count": 4
     }
   ],
   "items": [
@@ -270,14 +275,14 @@
       "platform": "Mastodon",
       "label": "Mastodon #AI",
       "genre": "SNS",
-      "author": "random_miku@mastodon.social",
-      "title": "Yeah / パソータ / September 6, 2025 # AI # 初音ミク # VOCALOID # ふつくしい",
+      "author": "nazology@rss-mstdn.studiofreesia.com",
+      "title": "AI広告の成功と失敗を分ける要因がみえてきた",
       "summary": "boost 0 / fav 0",
       "region": "日本語優先",
       "regionScore": 3,
       "topic": "AI",
-      "url": "https://mastodon.social/@random_miku/117212102491895816",
-      "published": "2026-09-04T09:39:07.000Z",
+      "url": "https://rss-mstdn.studiofreesia.com/@nazology/117212286756085021",
+      "published": "2026-09-04T10:25:59.000Z",
       "score": 1,
       "tags": [
         "SNS"
@@ -302,467 +307,537 @@
       ]
     },
     {
-      "source": "mastodon-ai",
-      "platform": "Mastodon",
-      "label": "Mastodon #AI",
+      "source": "news-ai-jp",
+      "platform": "Google News",
+      "label": "日本ニュース AI",
       "genre": "SNS",
-      "author": "daoxe@mastodon.social",
-      "title": "«А ту ли модель вернули?» — разобрали по шагам, как проверить любого API-посредника (и нас в том числе): GET /v1/models → поведенческие тест",
-      "summary": "boost 1 / fav 0",
-      "region": "日本語優先",
-      "regionScore": 1,
       "topic": "AI",
-      "url": "https://mastodon.social/@daoxe/117212141051274068",
-      "published": "2026-09-04T09:48:55.000Z",
-      "score": 5,
-      "tags": [
-        "SNS",
-        "重要",
-        "開発",
-        "研究"
-      ]
-    },
-    {
-      "source": "mastodon-ai",
-      "platform": "Mastodon",
-      "label": "Mastodon #AI",
-      "genre": "SNS",
-      "author": "techwire@gamefan.net",
-      "title": "Acer launches seven new gaming monitors across Nitro and Predator families — tri-mode panels, QD-OLEDs, Mini LEDs, 1,000 Hz, and more Acer h",
-      "summary": "boost 1 / fav 0",
-      "region": "日本語優先",
-      "regionScore": 1,
-      "topic": "開発",
-      "url": "https://social.gamefan.net/@techwire/117212162748769774",
-      "published": "2026-09-04T09:54:26.000Z",
-      "score": 3,
-      "tags": [
-        "SNS",
-        "制作"
-      ]
-    },
-    {
-      "source": "mastodon-ai",
-      "platform": "Mastodon",
-      "label": "Mastodon #AI",
-      "genre": "SNS",
-      "author": "thedailyfathom@mastodon.social",
-      "title": "AI · Nvidia buys Hugging Face for nearly $13 billion The chip giant's second-biggest deal ever hands it the hub millions of AI developers us",
-      "summary": "boost 1 / fav 0",
-      "region": "日本語優先",
-      "regionScore": 1,
-      "topic": "AI",
-      "url": "https://mastodon.social/@thedailyfathom/117212149637858840",
-      "published": "2026-09-04T09:51:06.000Z",
-      "score": 3,
-      "tags": [
-        "SNS",
-        "開発"
-      ]
-    },
-    {
-      "source": "mastodon-ai",
-      "platform": "Mastodon",
-      "label": "Mastodon #AI",
-      "genre": "SNS",
-      "author": "feed@igeek.gamer-geek-news.com",
-      "title": "📰 Data from drones in Ukraine is fueling a new Wild West marketplace Battlefields in Ukraine are littered with the remnants of drones, which",
-      "summary": "boost 1 / fav 0",
-      "region": "日本語優先",
-      "regionScore": 1,
-      "topic": "AI",
-      "url": "https://igeek.gamer-geek-news.com/@feed/statuses/01M1NX5W45Y24C833VDW1BC07X",
-      "published": "2026-09-04T09:49:41.000Z",
-      "score": 3,
-      "tags": [
-        "SNS",
-        "制作"
-      ]
-    },
-    {
-      "source": "mastodon-ai",
-      "platform": "Mastodon",
-      "label": "Mastodon #AI",
-      "genre": "SNS",
-      "author": "techwire@gamefan.net",
-      "title": "Acer's Swift Blade 14 weighs just 1.76 pounds and uses Wildcat Lake — company introduces new sub-brand ahead of IFA tradeshow Acer is increa",
-      "summary": "boost 1 / fav 0",
-      "region": "日本語優先",
-      "regionScore": 1,
-      "topic": "その他",
-      "url": "https://social.gamefan.net/@techwire/117212142920518590",
-      "published": "2026-09-04T09:49:24.000Z",
-      "score": 3,
-      "tags": [
-        "SNS",
-        "制作"
-      ]
-    },
-    {
-      "source": "mastodon-ai",
-      "platform": "Mastodon",
-      "label": "Mastodon #AI",
-      "genre": "SNS",
-      "author": "feed@igeek.gamer-geek-news.com",
-      "title": "📊 Estimating a much stronger than usual El Niño For Climate.us, Emily Becker explains why it looks like El Niño is going…Tags: Climate.us, E",
-      "summary": "boost 1 / fav 0",
-      "region": "日本語優先",
-      "regionScore": 1,
-      "topic": "AI",
-      "url": "https://igeek.gamer-geek-news.com/@feed/statuses/01M1NX2MAW2446QRX98C53629H",
-      "published": "2026-09-04T09:47:55.000Z",
-      "score": 3,
-      "tags": [
-        "SNS",
-        "制作"
-      ]
-    },
-    {
-      "source": "mastodon-ai",
-      "platform": "Mastodon",
-      "label": "Mastodon #AI",
-      "genre": "SNS",
-      "author": "techwire@gamefan.net",
-      "title": "Oklahoma city tries to charge farmer arrested at data center debate $17,000 for body cam footage of the incident — accused faces trespassing",
-      "summary": "boost 1 / fav 0",
-      "region": "日本語優先",
-      "regionScore": 1,
-      "topic": "その他",
-      "url": "https://social.gamefan.net/@techwire/117212123486895881",
-      "published": "2026-09-04T09:44:27.000Z",
-      "score": 3,
-      "tags": [
-        "SNS",
-        "制作"
-      ]
-    },
-    {
-      "source": "mastodon-ai",
-      "platform": "Mastodon",
-      "label": "Mastodon #AI",
-      "genre": "SNS",
-      "author": "techwire@gamefan.net",
-      "title": "Russian Starlink rival flounders after entire batch of satellites fails to reach operational altitude — many of the 16 launched hit less tha",
-      "summary": "boost 1 / fav 0",
-      "region": "日本語優先",
-      "regionScore": 1,
-      "topic": "AI",
-      "url": "https://social.gamefan.net/@techwire/117212103751473113",
-      "published": "2026-09-04T09:39:26.000Z",
-      "score": 3,
-      "tags": [
-        "SNS",
-        "制作"
-      ]
-    },
-    {
-      "source": "mastodon-codex",
-      "platform": "Mastodon",
-      "label": "Mastodon #Codex",
-      "genre": "SNS",
-      "author": "13@2137.social",
-      "title": "From a Ten-Line Script to a Real Utility with Codex",
-      "summary": "boost 1 / fav 0",
-      "region": "日本語優先",
-      "regionScore": 1,
-      "topic": "開発",
-      "url": "https://2137.social/@13/117207785502941493",
-      "published": "2026-09-03T15:21:15.000Z",
-      "score": 3,
-      "tags": [
-        "SNS",
-        "重要"
-      ]
-    },
-    {
-      "source": "mastodon-codex",
-      "platform": "Mastodon",
-      "label": "Mastodon #Codex",
-      "genre": "SNS",
-      "author": "hackaday.com@web.brid.gy",
-      "title": "From a Ten-Line Script to a Real Utility with Codex",
-      "summary": "boost 1 / fav 0",
-      "region": "日本語優先",
-      "regionScore": 1,
-      "topic": "開発",
-      "url": "https://web.brid.gy/r/https://hackaday.com/2026/09/03/from-a-ten-line-script-to-a-real-utility-with-codex/",
-      "published": "2026-09-03T14:00:20.000Z",
-      "score": 3,
-      "tags": [
-        "SNS",
-        "重要"
-      ]
-    },
-    {
-      "source": "mastodon-ai",
-      "platform": "Mastodon",
-      "label": "Mastodon #AI",
-      "genre": "SNS",
-      "author": "Meenakshi12@mastodon.social",
-      "title": "Qatar AI in Aerospace & Defense Market is accelerating as AI moves deeper into mission systems, intelligent sensors and analytics. The marke",
-      "summary": "boost 1 / fav 0",
-      "region": "日本語優先",
-      "regionScore": 1,
-      "topic": "AI",
-      "url": "https://mastodon.social/@Meenakshi12/117212137409298905",
-      "published": "2026-09-04T09:48:00.000Z",
-      "score": 2,
-      "tags": [
-        "SNS"
-      ]
-    },
-    {
-      "source": "mastodon-ai",
-      "platform": "Mastodon",
-      "label": "Mastodon #AI",
-      "genre": "SNS",
-      "author": "dumnezero@piefed.social",
-      "title": "What is AI, and why is it harmful? What is AI, and why is it harmful?",
-      "summary": "boost 1 / fav 0",
-      "region": "日本語優先",
-      "regionScore": 1,
-      "topic": "AI",
-      "url": "https://piefed.social/c/fuck_ai@lemmy.world/p/2349418/what-is-ai-and-why-is-it-harmful-what-is-ai-and-why-is-it-harmful",
-      "published": "2026-09-04T09:42:42.870Z",
-      "score": 2,
-      "tags": [
-        "SNS"
-      ]
-    },
-    {
-      "source": "mastodon-codex",
-      "platform": "Mastodon",
-      "label": "Mastodon #Codex",
-      "genre": "SNS",
-      "author": "sayzard@mastodon.sayzard.org",
-      "title": "Developing Adventures (@DevAdventur3s) Codex가 장시간 실행되는 작업 단위 기능으로 보이는 ‘Aeon’을 준비 중이라는 관측입니다. 목표 하나를 장기 태스크로 유지하며 일시정지·재개·추가 지시할 수 있고, Gated ",
-      "summary": "boost 0 / fav 0",
-      "region": "日本語優先",
-      "regionScore": 1,
-      "topic": "開発",
-      "url": "https://mastodon.sayzard.org/@sayzard/117207918664338175",
-      "published": "2026-09-03T15:55:07.000Z",
+      "title": "OpenAIとAnthropicがAGI主張グーグルとMetaは軽量で効率競う - CHOSUNBIZ - Chosunbiz",
+      "summary": "OpenAIとAnthropicがAGI主張グーグルとMetaは軽量で効率競う - CHOSUNBIZ Chosunbiz",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBsYWpmSkVNbWQydm5tcjhJaTBBcXhYTWpmXzBPc1pWRm9KV2NGSGVYUEMtblRERE8yTU1zQ1NSWnVHaGwwZnprR3hhMGp6QlFheVpmUTRFRFV3VEJPQVlsSENTOXIxS2YtZ3J3U0c5TkNGc2FxVmsycENn0gGOAUFVX3lxTFBiVjRMS0dsc0JmazI4ZC02cjhGS2pMUzdwdUJkN0gzMFBkdTVSLXpBdVc2Y182WTlHbXRTcE9teFRhS3VOLWhHd0Y4WHBkYzhOZFpOSHgtUldUekhZSTFQVlNKb3NlQmZZcTZaUkRrNk9tVUJhZ2ZEZkc3WEpmRWxQTkdMU0xIdXFaQWx6V1E?oc=5",
+      "published": "2026-09-04T05:52:00+00:00",
       "score": 2,
       "tags": [
         "SNS",
         "重要"
-      ]
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
     },
     {
-      "source": "mastodon-codex",
-      "platform": "Mastodon",
-      "label": "Mastodon #Codex",
+      "source": "news-economy-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 経済",
       "genre": "SNS",
-      "author": "Belzebubik@mastodon.com.pl",
-      "title": "CourtMind WTA Lab #1 Zacząłem nowy projekt. Chcę sprawdzić, czy da się stworzyć program, który będzie analizował mecze kobiecego tenisa i sa",
-      "summary": "boost 2 / fav 0",
-      "region": "日本語優先",
-      "regionScore": 1,
-      "topic": "ガジェット",
-      "url": "https://mastodon.com.pl/@Belzebubik/117202374455345884",
-      "published": "2026-09-02T16:25:09.000Z",
-      "score": 2,
+      "topic": "経済",
+      "title": "「東洋経済オンライン」に、「STARTUP DB」がデータ提供いたしました - forstartups.com",
+      "summary": "「東洋経済オンライン」に、「STARTUP DB」がデータ提供いたしました forstartups.com",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9YbldjSEZGNFFEbGE1c2ttNVloUWFNM3NkQU9yN3BLWjdFOWdrcWJDZkR0WnV2cDU5OGplY1ZuNTRqUHlYcldGa2YyMUpQd2pXaDFUOF9CZDNwYzFTRy1KRktn?oc=5",
+      "published": "2026-09-04T10:08:04+00:00",
+      "score": 1,
       "tags": [
         "SNS"
-      ]
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
     },
     {
-      "source": "mastodon-codex",
-      "platform": "Mastodon",
-      "label": "Mastodon #Codex",
+      "source": "news-disaster-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 災害",
       "genre": "SNS",
-      "author": "sayzard@mastodon.sayzard.org",
-      "title": "Dan McAteer (@daniel_mac8) pstack을 Grok Bot, Claude Code, Codex에 설치해 에이전트용 스킬 45개를 활용하자는 제안이다. 에이전트 기반 코딩 워크플로에서 재사용 가능한 작업 능력 확장 도구로 소개된다.",
-      "summary": "boost 0 / fav 0",
-      "region": "日本語優先",
-      "regionScore": 1,
+      "topic": "災害",
+      "title": "鹿児島・西之表市にレベル4土砂災害危険警報 早めの避難を心がけて - テレ朝NEWS",
+      "summary": "鹿児島・西之表市にレベル4土砂災害危険警報 早めの避難を心がけて テレ朝NEWS",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE8yRy1WZ1VoSFJ0cHhBajh5TXgzMVllNjVLTHZ2VGdObnkwb2RZNXJyTDUtdjR6M0VXaTZBc1NqRTZHazQwT0JqdGxTRjJqNGZlM2FyMGNpNkM5bHV6VTlxRlFNMFkxYlpJcEVKNWFVX0VHdw?oc=5",
+      "published": "2026-09-04T10:03:07+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-disaster-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 災害",
+      "genre": "SNS",
+      "topic": "災害",
+      "title": "鹿児島・西之表市にレベル4土砂災害危険警報 早めの避難を心がけて - KSBニュース",
+      "summary": "鹿児島・西之表市にレベル4土砂災害危険警報 早めの避難を心がけて KSBニュース",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1WVHRPSFhJM2RfaldLZDlKRXFkMld5WHNlUHlmdTI3VFBYWUxPdmpkMk1EOHRKWXRUZXA2Z0V4dU1yUTZxTVdGMks5TW1ULXlsQVBKMmJB?oc=5",
+      "published": "2026-09-04T10:03:07+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-ai-jp",
+      "platform": "Google News",
+      "label": "日本ニュース AI",
+      "genre": "SNS",
       "topic": "AI",
-      "url": "https://mastodon.sayzard.org/@sayzard/117195402060043734",
-      "published": "2026-09-01T10:51:59.000Z",
-      "score": 2,
+      "title": "ChatGPT・Claude・Grokがほぼ同時刻にダウン - gigazine.net",
+      "summary": "ChatGPT・Claude・Grokがほぼ同時刻にダウン gigazine.net",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5OSVJUT2JBUkZUOHRlLTEtbDZCSDVjdUJZaHQ1Tm9JSDJ1X3JKMmRUUmVyRmFkTFkwTFNLaFFLaktET2JxVTJQdXRIS3B6N0ljNU1BTlBZbWc2RVM0MU1FSXpiOTlyb2d0VENxcHh6Z3o5cFZC?oc=5",
+      "published": "2026-09-04T10:01:02+00:00",
+      "score": 1,
       "tags": [
-        "SNS",
-        "重要"
-      ]
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
     },
     {
-      "source": "mastodon-codex",
-      "platform": "Mastodon",
-      "label": "Mastodon #Codex",
+      "source": "news-ai-jp",
+      "platform": "Google News",
+      "label": "日本ニュース AI",
       "genre": "SNS",
-      "author": "Belzebubik@mastodon.com.pl",
-      "title": "Local LLM Arena #6 Udało mi się już mniej więcej ustalić, co wydarzyło się podczas wczorajszej awarii Maca. I najważniejsze: problemem nie b",
-      "summary": "boost 2 / fav 0",
-      "region": "日本語優先",
-      "regionScore": 1,
       "topic": "AI",
-      "url": "https://mastodon.com.pl/@Belzebubik/117194945371098156",
-      "published": "2026-09-01T08:55:50.000Z",
-      "score": 2,
-      "tags": [
-        "SNS"
-      ]
-    },
-    {
-      "source": "mastodon-ai",
-      "platform": "Mastodon",
-      "label": "Mastodon #AI",
-      "genre": "SNS",
-      "author": "us@newsbeep.org",
-      "title": "US urged to consider military strikes to stop China achieving AGI first The United States should start prepa… # NewsBeep # News # US # USA #",
-      "summary": "boost 0 / fav 0",
-      "region": "日本語優先",
-      "regionScore": 1,
-      "topic": "ニュース",
-      "url": "https://newsbeep.org/@us/117212107020654047",
-      "published": "2026-09-04T09:40:16.000Z",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ]
-    },
-    {
-      "source": "reddit-localllama",
-      "platform": "Reddit",
-      "label": "Reddit LocalLLaMA",
-      "genre": "SNS",
-      "title": "I released sanoTTS: smallest complete TTS stack in 294k params (337 KB) that runs on $3 microcontroller and a 1.46m one that beats models 3x and 10x it's size",
-      "summary": "",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w6lmmg/i_released_sanotts_smallest_complete_tts_stack_in/",
-      "published": "2026-09-03T22:01:27+00:00",
-      "score": 3,
-      "tags": [
-        "SNS",
-        "重要",
-        "研究"
-      ],
-      "regionScore": 0,
-      "region": "海外",
-      "topic": "AI"
-    },
-    {
-      "source": "reddit-localllama",
-      "platform": "Reddit",
-      "label": "Reddit LocalLLaMA",
-      "genre": "SNS",
-      "title": "The benchmarks the big labs don't want you to see",
-      "summary": "",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w6myn6/the_benchmarks_the_big_labs_dont_want_you_to_see/",
-      "published": "2026-09-03T22:54:58+00:00",
-      "score": 2,
-      "tags": [
-        "SNS",
-        "研究"
-      ],
-      "regionScore": 0,
-      "region": "海外",
-      "topic": "その他"
-    },
-    {
-      "source": "reddit-localllama",
-      "platform": "Reddit",
-      "label": "Reddit LocalLLaMA",
-      "genre": "SNS",
-      "title": "Best Local Vision Language Models - August 2026",
-      "summary": "",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vx7ei1/best_local_vision_language_models_august_2026/",
-      "published": "2026-08-24T16:18:56+00:00",
-      "score": 2,
-      "tags": [
-        "SNS",
-        "研究"
-      ],
-      "regionScore": 0,
-      "region": "海外",
-      "topic": "AI"
-    },
-    {
-      "source": "reddit-localllama",
-      "platform": "Reddit",
-      "label": "Reddit LocalLLaMA",
-      "genre": "SNS",
-      "title": "On GPT-6 Astra 98.6% ARC AGI-3: don't fall for the hype",
-      "summary": "",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w6z731/on_gpt6_astra_986_arc_agi3_dont_fall_for_the_hype/",
-      "published": "2026-09-04T09:11:33+00:00",
+      "title": "ChatGPT、Claude、Grokの3社が一夜にして同時に障害に見舞われ、世界のAIコミュニティは驚きを隠せなかった。 - Vietnam.vn",
+      "summary": "ChatGPT、Claude、Grokの3社が一夜にして同時に障害に見舞われ、世界のAIコミュニティは驚きを隠せなかった。 Vietnam.vn",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNSkthSTVFUEVMU2hlT2FFVFNsN1Vyb1ZRWEV1U3JiTzNTdnJYN1k4bHh1SFl6M3lHemJMZThuSEl6YzJFeWtYTjNZZ1ZXS3hLZVFhZnlNbHFUU3gtalpMaUdKOFgtYkd2R1FWNWxETjNwMkZEQ2hFa0N5VmcySHN6NERHNzVwa1RMRGlQbDQtRWZXTVkxVE54T2ljbmR0MWxENFBpQVVSZHVZcmlLU3N5cGZSZGE?oc=5",
+      "published": "2026-09-04T09:56:20+00:00",
       "score": 1,
       "tags": [
         "SNS"
       ],
-      "regionScore": 0,
-      "region": "海外",
-      "topic": "AI"
+      "regionScore": 2,
+      "region": "日本語優先"
     },
     {
-      "source": "reddit-localllama",
-      "platform": "Reddit",
-      "label": "Reddit LocalLLaMA",
+      "source": "news-disaster-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 災害",
       "genre": "SNS",
-      "title": "Has anyone already tried IFM's new K2-Horizon-MoVA-36B-A4B?",
-      "summary": "",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w6t0a9/has_anyone_already_tried_ifms_new/",
-      "published": "2026-09-04T03:31:37+00:00",
+      "topic": "災害",
+      "title": "西之表市 レベル４土砂災害危険警報 （１８：３６） - NHKニュース",
+      "summary": "西之表市 レベル４土砂災害危険警報 （１８：３６） NHKニュース",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9qY0huZkpWMzQ4ZTZjY2tkSjRSSVhoazdkaDNMd1BFdFV1M01IelNHeTFCejkxNXdDWkZuSWtnQXl0OU1HZTZKQjJ4TUdBQWg1QVF6b1laVXg?oc=5",
+      "published": "2026-09-04T09:45:00+00:00",
       "score": 1,
       "tags": [
         "SNS"
       ],
-      "regionScore": 0,
-      "region": "海外",
-      "topic": "その他"
+      "regionScore": 2,
+      "region": "日本語優先"
     },
     {
-      "source": "reddit-localllama",
-      "platform": "Reddit",
-      "label": "Reddit LocalLLaMA",
+      "source": "news-disaster-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 災害",
       "genre": "SNS",
-      "title": "Can the bubble pop please?",
-      "summary": "",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w6nihk/can_the_bubble_pop_please/",
-      "published": "2026-09-03T23:18:09+00:00",
+      "topic": "災害",
+      "title": "【速報】鹿児島・西之表市にレベル4土砂災害危険警報を追加発表 宮崎・宮崎市、都城市、小林市、国富町、綾町、都農町、鹿児島・十島村も継続中 気象庁 - FNNプライムオンライン",
+      "summary": "【速報】鹿児島・西之表市にレベル4土砂災害危険警報を追加発表 宮崎・宮崎市、都城市、小林市、国富町、綾町、都農町、鹿児島・十島村も継続中 気象庁 FNNプライムオンライン",
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE95alJVb2FFM0I3b3ZnSWNSMzcwRGtzNHJtS0cxQ3A0MEJDbkhQc2F6NmxBUXo5T0FvY2Q0VGJwT196MnRHLUcyMDFjeHhUQQ?oc=5",
+      "published": "2026-09-04T09:45:00+00:00",
       "score": 1,
       "tags": [
         "SNS"
       ],
-      "regionScore": 0,
-      "region": "海外",
-      "topic": "その他"
+      "regionScore": 2,
+      "region": "日本語優先"
     },
     {
-      "source": "reddit-localllama",
-      "platform": "Reddit",
-      "label": "Reddit LocalLLaMA",
+      "source": "news-ai-jp",
+      "platform": "Google News",
+      "label": "日本ニュース AI",
       "genre": "SNS",
-      "title": "Apparently ChatGPT, Claude, and Grok were down",
-      "summary": "",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w6aw2a/apparently_chatgpt_claude_and_grok_were_down/",
-      "published": "2026-09-03T15:38:06+00:00",
+      "topic": "AI",
+      "title": "ChatGPT、Claude、Grokなど、複数のAIチャットボットが昨夜、同時にサービス停止に見舞われた。 - Vietnam.vn",
+      "summary": "ChatGPT、Claude、Grokなど、複数のAIチャットボットが昨夜、同時にサービス停止に見舞われた。 Vietnam.vn",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQaEV5NmgweTJKYnJfYUxoQXpxaWtyNUUtTXFaREpaWEl3OFlGcXJCcWIwRS0zZkVUSG5ZWVlDNGJrb2pYaThIYlpkeWxRbzl5c29ndFk2ZENJa0UtQk5DV0JPR0IwZ2U0THFHeFpGT2JsNG53czd0eTdVc0ZUN2FobjFmdXdtcGdZNWVDSHE0dllOVEZDLXUxTG5tNVFOMGk2enpPNVhNUkxMdWQwWlhkMC1Nbw?oc=5",
+      "published": "2026-09-04T09:44:17+00:00",
       "score": 1,
       "tags": [
         "SNS"
       ],
-      "regionScore": 0,
-      "region": "海外",
-      "topic": "AI"
+      "regionScore": 2,
+      "region": "日本語優先"
     },
     {
-      "source": "reddit-localllama",
-      "platform": "Reddit",
-      "label": "Reddit LocalLLaMA",
+      "source": "news-disaster-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 災害",
       "genre": "SNS",
-      "title": "It's official! Nvidia to acquire Hugging Face for 12.9 billion dollars.",
-      "summary": "",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1w65uhf/its_official_nvidia_to_acquire_hugging_face_for/",
-      "published": "2026-09-03T12:22:05+00:00",
+      "topic": "災害",
+      "title": "【レベル4土砂災害危険警報】鹿児島県・西之表市に発表 18:36時点（TBS NEWS DIG Powered by JNN） - Yahoo!ニュース",
+      "summary": "【レベル4土砂災害危険警報】鹿児島県・西之表市に発表 18:36時点（TBS NEWS DIG Powered by JNN） Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9CbkVTeUZ4d0J2TmR5NS1BUFdjNjZiX2k5RThkX1VaZWlGdzE3RExuZGlZVFVTa1RCX3FZWlNaY3N6aUFXOWtOTlJyMHpiVl9JcjZ2RzBsZXptQTlIMnhCMlhIXzZKTElyT1RQbDZ5UDBkY0dmUmtFbEtLcllIWjA?oc=5",
+      "published": "2026-09-04T09:38:12+00:00",
       "score": 1,
       "tags": [
         "SNS"
       ],
-      "regionScore": 0,
-      "region": "海外",
-      "topic": "その他"
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-disaster-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 災害",
+      "genre": "SNS",
+      "topic": "災害",
+      "title": "レベル３土砂災害警報が中種子町に発表、十島村へのレベル４土砂災害危険警報は継続 - ｄメニューニュース",
+      "summary": "レベル３土砂災害警報が中種子町に発表、十島村へのレベル４土砂災害危険警報は継続 ｄメニューニュース",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBPV29jNGNjaEVHekRBWFo3Mm9taG9jQzRvUWVYZTAzWno0TWJGWDE2YzNBeWRJcE9GUWpCZzZKRlZlRHFUd1AxT0paV2RDV3l4bUhpalRMeno5MkFnSzZ4U1ZVNFBDTHo4NERsUFQwY9IBdEFVX3lxTE5vTWxFYk5sdkd3VlMwNWpZSUFJV1NvYmhLODhlcWhfQTM0Ym5fM21kZmJ4VG5ySzJfbDBsb2p1eWhYYXl2TlRodVVxVnl1cWYxSGd6Yk9yVTZxM0dlNkp6MXh6alZNbXV1aEhtXzBCRXB0UG02?oc=5",
+      "published": "2026-09-04T09:15:00+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-sports-jp",
+      "platform": "Google News",
+      "label": "日本ニュース スポーツ",
+      "genre": "SNS",
+      "topic": "スポーツ",
+      "title": "第79回大分県民スポーツ大会 竹田市選手団結団式 - city.taketa.oita.jp",
+      "summary": "第79回大分県民スポーツ大会 竹田市選手団結団式 city.taketa.oita.jp",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUGZlY0ZoUDZXMFJJMU9PTzBDUHpERjNjWW83N1hRTjdHbmk3ZzRzc0NkTGVxb21lclNEVVRrSEZPUjRySXNmQjVpZVE3aEhiNW8zUVhBS204MFhDbUNuWldWdXZab21HWEo1MUlLTWktS2ExYkZZd2xnQVIxdEEyakxpUWNOLW44dE5Yc0Jsb0Fsa3hlMXIxaGZpbTU5a2UxOHdKNHdReUstV3ppNTVoaUE4UTJFbmM?oc=5",
+      "published": "2026-09-04T09:03:09+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-sports-jp",
+      "platform": "Google News",
+      "label": "日本ニュース スポーツ",
+      "genre": "SNS",
+      "topic": "スポーツ",
+      "title": "【無料】親子で多様なスポーツを楽しむ「川崎市スポーツフェスタ2026」を、10月12日(月・祝)に等々力緑地で開催します！ - PR TIMES",
+      "summary": "【無料】親子で多様なスポーツを楽しむ「川崎市スポーツフェスタ2026」を、10月12日(月・祝)に等々力緑地で開催します！ PR TIMES",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5iNW55c0xwc2hwSURpQkoyUUdOVElDUW93Yk5HNEh5d09KdmRVOXNnOTlVeG9LbWlOX0s0bkQ0RE1IVzhGdktiMDdlYjJ1OU1vWnhsOFpFcWlxT0ZlUXpSNjFwck1Lc0p0b3c?oc=5",
+      "published": "2026-09-04T09:00:39+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-economy-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 経済",
+      "genre": "SNS",
+      "topic": "経済",
+      "title": "小野田経済安全保障相、選挙事務所巡る文春報道を否定…「選挙活動には利用していない」 - 読売新聞",
+      "summary": "小野田経済安全保障相、選挙事務所巡る文春報道を否定…「選挙活動には利用していない」 読売新聞",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE02RkRPSzJmWTNtUl9jakptTGRpOUl4Z0ExWGhPUFMzTW1NbnBhaV9JQ0xPbjMteEhsMjlEYl9UbzVYZTZ2R1JRa3pseG85enRpN254X0lHWFFSV1dMRjFrT0djd3phUQ?oc=5",
+      "published": "2026-09-04T08:09:00+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-disaster-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 災害",
+      "genre": "SNS",
+      "topic": "災害",
+      "title": "鳥取県大山町にレベル4土砂災害危険警報が出されました - やさしい朝日新聞",
+      "summary": "鳥取県大山町にレベル4土砂災害危険警報が出されました やさしい朝日新聞",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA2NG5oMU9BU1hUd0FTMS1XU2VSM3BBVGhBZ0VERUxhM1k5NHB2djlFalRqVTh1QkFJSFBtNUE0NHFrRlVWQlVQMU1GTnp3VmtxYzUwc3RNajlWaDdZNFlUOUJhakhSd3c?oc=5",
+      "published": "2026-09-04T08:03:45+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-economy-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 経済",
+      "genre": "SNS",
+      "topic": "経済",
+      "title": "日経平均構成銘柄、ＪＸ金属など3銘柄採用＝日本経済新聞 - ロイター",
+      "summary": "日経平均構成銘柄、ＪＸ金属など3銘柄採用＝日本経済新聞 ロイター",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNV3hIZmVCR0lObFZpbnNial8xTmN5LV9wSFRWUFFjMkg0ODZWTFNBSkVKXzA4Z05IVmxtTnVYbmpGQzFpQk05bFQzc1kwdWlnVUlxalRFaGxHRl9Edmd6ai1ISzVpQ1hZSmloZlJ3Um5oeUNCakZNdllKUWViM0RxVw?oc=5",
+      "published": "2026-09-04T08:03:43+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-sports-jp",
+      "platform": "Google News",
+      "label": "日本ニュース スポーツ",
+      "genre": "SNS",
+      "topic": "スポーツ",
+      "title": "「TOKYOわくわく ウォータースポーツ チャレンジ」開催|9月 - metro.tokyo.lg.jp",
+      "summary": "「TOKYOわくわく ウォータースポーツ チャレンジ」開催|9月 metro.tokyo.lg.jp",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9RMHBWclAwbk9HNkdvX3h6YmEyRXliTUlXamlQME9pa3lITlYzWWwwdU1FTExnYVVHbGF6YkFTNU9JcEhyMGJkd2l5Q3pPX0pvYUhIWUpDalgxNm81aWZ1blZHWGxRaVBEVmo4M1FIeVRPODRm?oc=5",
+      "published": "2026-09-04T07:58:52+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-economy-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 経済",
+      "genre": "SNS",
+      "topic": "経済",
+      "title": "座談会・対談：夏季フォーラム2026 投資牽引型経済の実現に向けて ─将来世代に明るい未来を (2026年9月号) - keidanren.or.jp",
+      "summary": "座談会・対談：夏季フォーラム2026 投資牽引型経済の実現に向けて ─将来世代に明るい未来を (2026年9月号) keidanren.or.jp",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1MVVVXeGVKMjBJeWJPUzJqUHkyeVpkNXE3VGZWNGNGOHFoaU9xZGU3WjVhOWZ4bEpyWkdyYkJQTERKMFdDdlh3Y0Z5UzlNb0czN2lQbFg3NHVKNS1NNHVMQlQydFZYcllEWG1RV0FmWQ?oc=5",
+      "published": "2026-09-04T07:47:32+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-sports-jp",
+      "platform": "Google News",
+      "label": "日本ニュース スポーツ",
+      "genre": "SNS",
+      "topic": "スポーツ",
+      "title": "事前申込のお知らせ｜スポーツフェスタ古河2026陸上教室（ゲスト：中島ひとみさん） - city.ibaraki-koga.lg.jp",
+      "summary": "事前申込のお知らせ｜スポーツフェスタ古河2026陸上教室（ゲスト：中島ひとみさん） city.ibaraki-koga.lg.jp",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOMkkzNVNBOFlfUXBwZDB3TzFnVHpNai1ZeWY2OGVNQ0xNdHlKcDVnXzc4SWxnN2taaDFIRGF1VTlzUUF3TG5UVVVyRmRrQzcyc3ZEdUJNUlh3NDJCQldwbzh4dlFOUnpNMVJIQjVEUS1xaURabmNhbDJNWlp3NVJsNQ?oc=5",
+      "published": "2026-09-04T07:12:38+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-sports-jp",
+      "platform": "Google News",
+      "label": "日本ニュース スポーツ",
+      "genre": "SNS",
+      "topic": "スポーツ",
+      "title": "神戸市トップスポーツ4チームの「優勝記念パネル展」をTOTTEIで開催 - TOTTEI | GLION ARENA KOBE",
+      "summary": "神戸市トップスポーツ4チームの「優勝記念パネル展」をTOTTEIで開催 TOTTEI | GLION ARENA KOBE",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9JVmtQWWl6a1lOS2wzM3ZwLUJTcEx6YVk4enV6MGtpQmtFQXZnZWVEeC1tNjhvZnlRUGVQUHd4aEszNTNQR0tBVWc1QXR5QUxHdmJtb05DSQ?oc=5",
+      "published": "2026-09-04T07:11:57+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-sports-jp",
+      "platform": "Google News",
+      "label": "日本ニュース スポーツ",
+      "genre": "SNS",
+      "topic": "スポーツ",
+      "title": "10/4（日）「ノエスタスポーツチャレンジパーク2026」開催のお知らせ - ヴィッセル神戸",
+      "summary": "10/4（日）「ノエスタスポーツチャレンジパーク2026」開催のお知らせ ヴィッセル神戸",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE42WGRmN29kZENFek1JOWR4WGxMQl9KcHhpMnlzNk4tZjdfNDJFU1BZZWl6MzdsSUJKaXU1YlQtWm5aU1NaYmhqZzZ2SERVRmRFbldmSTBfaHkxakRaRjE0ZENqVQ?oc=5",
+      "published": "2026-09-04T07:08:07+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-sports-jp",
+      "platform": "Google News",
+      "label": "日本ニュース スポーツ",
+      "genre": "SNS",
+      "topic": "スポーツ",
+      "title": "【(一社)ヴァンフォーレスポーツクラブ】Ventforet ELITE PROGRAM 、セレクション開催のお知らせ - ventforet.jp",
+      "summary": "【(一社)ヴァンフォーレスポーツクラブ】Ventforet ELITE PROGRAM 、セレクション開催のお知らせ ventforet.jp",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5kb2EwOUhZLXJYX2RJNGlnSFJWV055dUZIR01TQ1VCbE5nVjM0ZG14U1I3d3dyV1kwSE5WekJTSkVjUXRSTThPX1dVZTVwTkh2dWxEMg?oc=5",
+      "published": "2026-09-04T07:00:19+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-economy-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 経済",
+      "genre": "SNS",
+      "topic": "経済",
+      "title": "小野田経済安保相 公選法違反疑い報道で “指摘あたらず” | NHKニュース | 選挙、岡山県 - NHKニュース",
+      "summary": "小野田経済安保相 公選法違反疑い報道で “指摘あたらず” | NHKニュース | 選挙、岡山県 NHKニュース",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1Yb0NuUUNpTkpQVGJRU0ZUWDVyR1NFSFphb2REQlZGMjYybWpTWjdKaWh2X19aWlR0TUphdHR1RkpUbkRpdlkzSlpOczZtQTVTRUhfckNYX1BqelNNZ1Q0?oc=5",
+      "published": "2026-09-04T06:45:45+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-economy-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 経済",
+      "genre": "SNS",
+      "topic": "経済",
+      "title": "高市総理「強い経済と財政両立の予算編成をしていく」 令和9年度予算取りまとめ公表受け 自身のX更新 - TBS NEWS DIG",
+      "summary": "高市総理「強い経済と財政両立の予算編成をしていく」 令和9年度予算取りまとめ公表受け 自身のX更新 TBS NEWS DIG",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9SNDB0b1VZRjlnekdFdUFJb0lhMGhiMjVLT1ZReWVLQXY5aWFGeEs5bGdvb1JsQVBsNjR2bzFJMnkwZXBpdUYyNlBkTWJiQ1lhVlh6bGwzTQ?oc=5",
+      "published": "2026-09-04T06:38:22+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-disaster-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 災害",
+      "genre": "SNS",
+      "topic": "災害",
+      "title": "【レベル４土砂災害危険警報】宮崎県・国富町、都農町に発表 13:54時点 - TBS NEWS DIG",
+      "summary": "【レベル４土砂災害危険警報】宮崎県・国富町、都農町に発表 13:54時点 TBS NEWS DIG",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE4wZF9nSmJ6V0h2N2FuSnRia3Y0VU9CdC1XTDcwdElEQkZuRDR3TV9nM1hIcGxfZlFoT2lmYTZSWDl2WUZkZnQ1RnhXTnZlUXpzeW41VDQwYw?oc=5",
+      "published": "2026-09-04T04:54:00+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-sports-jp",
+      "platform": "Google News",
+      "label": "日本ニュース スポーツ",
+      "genre": "SNS",
+      "topic": "スポーツ",
+      "title": "スズキ新型「スイフトスポーツ」が2027年に復活!?48Vマイルドハイブリッド採用で150ps＆245万円前後に？【大予想】 - Yahoo!ニュース",
+      "summary": "スズキ新型「スイフトスポーツ」が2027年に復活!?48Vマイルドハイブリッド採用で150ps＆245万円前後に？【大予想】 Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBIa1l5aVdZX3gySldERjFrbWltaXVkZWVYNThBWjZnSUxLQ2pkdUZlVy1mdm9fTXY3LW1kYnVZSzNPRl9wN1hfdGZtZ0tZUkV5OU5MdlBKVkFvOEZtWERPQkFVRFVyVGh6TjAzdGFHQ3Ruc04ycERIa3l5OF9fVG8?oc=5",
+      "published": "2026-09-04T03:40:42+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-ai-jp",
+      "platform": "Google News",
+      "label": "日本ニュース AI",
+      "genre": "SNS",
+      "topic": "AI",
+      "title": "「Claude」Anthropicが開発したAIモデル／AIチャットボット - 窓の杜",
+      "summary": "「Claude」Anthropicが開発したAIモデル／AIチャットボット 窓の杜",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5ISHduLXZ3bE9ERkx1a1YzX1l0SVNZNmZCbHhQLVlPXy05XzhPQkpzYm12cnJiOGZxajI4dnl6dHlWbFhBZ3FVQjAtVUEybk5ZOVBGYmNHVzF6WF9FMmhQUUZpUnZZVmVjT2Jr?oc=5",
+      "published": "2026-09-04T03:05:00+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-economy-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 経済",
+      "genre": "SNS",
+      "topic": "経済",
+      "title": "経済学部「特設Webサイト」のご案内 - setsunan.ac.jp",
+      "summary": "経済学部「特設Webサイト」のご案内 setsunan.ac.jp",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE52d2ZmVUdjNWliNjM4eU1XWW5WWVBTVHRabmZiZWJwR243VzlaZF9SV0VSTWpOVmQ2RUhhb0g2QVh4MFpkOXZNVnNRYkdfSFFWb2ZoUklB?oc=5",
+      "published": "2026-09-04T02:32:04+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-ai-jp",
+      "platform": "Google News",
+      "label": "日本ニュース AI",
+      "genre": "SNS",
+      "topic": "AI",
+      "title": "Anthropic最高商務責任者：価格競争を拒否、企業価値とIPO前の資金調達に注力 - BigGo ファイナンス",
+      "summary": "Anthropic最高商務責任者：価格競争を拒否、企業価値とIPO前の資金調達に注力 BigGo ファイナンス",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBmcXgxTzBtcU9vREhCeUxudUpVd1RLQzhUMkl1Tm1pM2YtamxIN0FDZkN5cU01N1NrQUd5amo1WGZPalVfMDI5RWxZcDAwbGQweHBRY0x2MFQ1YXQwUVdKZUVTRm5IUEVPWEQtRmM1cUFmRjk5?oc=5",
+      "published": "2026-09-04T00:36:00+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
     }
   ],
   "sources": [
+    {
+      "id": "news-ai-jp",
+      "label": "日本ニュース AI",
+      "platform": "Google News",
+      "type": "rss",
+      "genre": "SNS",
+      "topic": "AI",
+      "url": "https://news.google.com/rss/search?q=AI%20OpenAI%20Claude%20Anthropic%20when:1d&hl=ja&gl=JP&ceid=JP:ja"
+    },
+    {
+      "id": "news-economy-jp",
+      "label": "日本ニュース 経済",
+      "platform": "Google News",
+      "type": "rss",
+      "genre": "SNS",
+      "topic": "経済",
+      "url": "https://news.google.com/rss/search?q=%E7%B5%8C%E6%B8%88%20when:1d&hl=ja&gl=JP&ceid=JP:ja"
+    },
+    {
+      "id": "news-disaster-jp",
+      "label": "日本ニュース 災害",
+      "platform": "Google News",
+      "type": "rss",
+      "genre": "SNS",
+      "topic": "災害",
+      "url": "https://news.google.com/rss/search?q=%E7%81%BD%E5%AE%B3%20%E8%AD%A6%E5%A0%B1%20when:1d&hl=ja&gl=JP&ceid=JP:ja"
+    },
+    {
+      "id": "news-sports-jp",
+      "label": "日本ニュース スポーツ",
+      "platform": "Google News",
+      "type": "rss",
+      "genre": "SNS",
+      "topic": "スポーツ",
+      "url": "https://news.google.com/rss/search?q=%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84%20when:1d&hl=ja&gl=JP&ceid=JP:ja"
+    },
     {
       "id": "mastodon-ai",
       "label": "Mastodon #AI",
@@ -778,14 +853,6 @@
       "type": "mastodon",
       "genre": "SNS",
       "url": "https://mstdn.jp/api/v1/timelines/tag/Codex?limit=20"
-    },
-    {
-      "id": "reddit-localllama",
-      "label": "Reddit LocalLLaMA",
-      "platform": "Reddit",
-      "type": "rss",
-      "genre": "SNS",
-      "url": "https://www.reddit.com/r/LocalLLaMA/.rss"
     }
   ],
   "errors": []
