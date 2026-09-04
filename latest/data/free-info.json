@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T09:28:55.937277+00:00",
+  "updatedAt": "2026-09-04T09:41:48.907847+00:00",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "freeMeaning": "Public RSS/API data is fetched by program, categorized, scored, and summarized into local static JSON. It is not a bookmark list and does not scrape ordinary web pages.",
@@ -130,7 +130,7 @@
     {
       "genre": "天気",
       "count": 1,
-      "signal": "富山 24.9℃ / 雨 0.0mm / 風 10.5km/h",
+      "signal": "富山 24.9℃ / 雨 0.0mm / 風 10.0km/h",
       "decision": "今日の作業環境メモ",
       "topUrl": "https://api.open-meteo.com/v1/forecast?latitude=36.6953&longitude=137.2113&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
       "score": 1
@@ -147,6 +147,7 @@
   "items": [
     {
       "source": "github-changelog",
+      "platform": "開発",
       "label": "GitHub更新",
       "genre": "開発",
       "title": "Upcoming deprecation of selected GitHub Copilot models",
@@ -162,6 +163,7 @@
     },
     {
       "source": "arxiv-ai",
+      "platform": "論文",
       "label": "arXiv AI",
       "genre": "論文",
       "title": "Speculative Macro Commit for Faster Tool-Using Agents",
@@ -177,6 +179,7 @@
     },
     {
       "source": "github-blog",
+      "platform": "開発",
       "label": "GitHub",
       "genre": "開発",
       "title": "GitHub Copilot app for Beginners: Run several agents at once",
@@ -191,6 +194,7 @@
     },
     {
       "source": "openai",
+      "platform": "AI",
       "label": "OpenAI",
       "genre": "AI",
       "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
@@ -206,6 +210,7 @@
     },
     {
       "source": "lobsters",
+      "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
       "title": "The NX bit is not just about security",
@@ -222,10 +227,10 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "genre": "天気",
-      "title": "富山 24.9℃ / 雨 0.0mm / 風 10.5km/h",
+      "title": "富山 24.9℃ / 雨 0.0mm / 風 10.0km/h",
       "summary": "Open-Meteo no-key weather fetch",
       "url": "https://api.open-meteo.com/v1/forecast?latitude=36.6953&longitude=137.2113&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
-      "published": "2026-09-04T18:15",
+      "published": "2026-09-04T18:30",
       "score": 1,
       "tags": [
         "天気"
@@ -246,6 +251,7 @@
     },
     {
       "source": "github-changelog",
+      "platform": "開発",
       "label": "GitHub更新",
       "genre": "開発",
       "title": "Gemini 3.8 Flash is now available in GitHub Copilot",
@@ -261,6 +267,7 @@
     },
     {
       "source": "github-changelog",
+      "platform": "開発",
       "label": "GitHub更新",
       "genre": "開発",
       "title": "Enterprise-managed settings support any default model",
@@ -276,6 +283,7 @@
     },
     {
       "source": "arxiv-ai",
+      "platform": "論文",
       "label": "arXiv AI",
       "genre": "論文",
       "title": "Fresh Memory, Stale Plans: Dependency-Scoped Validation for Distributed LLM-Agent Memory",
@@ -291,6 +299,7 @@
     },
     {
       "source": "arxiv-ai",
+      "platform": "論文",
       "label": "arXiv AI",
       "genre": "論文",
       "title": "Dude: A Dual-Detection Multi-Agent System for Paper-Code Discrepancy Detection",
@@ -306,6 +315,7 @@
     },
     {
       "source": "arxiv-ai",
+      "platform": "論文",
       "label": "arXiv AI",
       "genre": "論文",
       "title": "DuplexSpeechBench-IFEval: Evaluating Implicit Instruction Following in Full-Duplex Voice Agents",
@@ -321,6 +331,7 @@
     },
     {
       "source": "github-changelog",
+      "platform": "開発",
       "label": "GitHub更新",
       "genre": "開発",
       "title": "GitHub Actions: Early September 2026 updates",
@@ -335,6 +346,7 @@
     },
     {
       "source": "github-changelog",
+      "platform": "開発",
       "label": "GitHub更新",
       "genre": "開発",
       "title": "GitHub CLI Linux package signing key expires September 5",
@@ -349,6 +361,7 @@
     },
     {
       "source": "github-changelog",
+      "platform": "開発",
       "label": "GitHub更新",
       "genre": "開発",
       "title": "CodeQL 2.26.4 improves GitHub actions security detections",
@@ -363,6 +376,7 @@
     },
     {
       "source": "openai",
+      "platform": "AI",
       "label": "OpenAI",
       "genre": "AI",
       "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
@@ -378,6 +392,7 @@
     },
     {
       "source": "openai",
+      "platform": "AI",
       "label": "OpenAI",
       "genre": "AI",
       "title": "Safety overview: GPT-6 Astra",
@@ -393,6 +408,7 @@
     },
     {
       "source": "github-blog",
+      "platform": "開発",
       "label": "GitHub",
       "genre": "開発",
       "title": "Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh my!",
@@ -407,6 +423,7 @@
     },
     {
       "source": "github-blog",
+      "platform": "開発",
       "label": "GitHub",
       "genre": "開発",
       "title": "How we make AI coding more cost efficient without sacrificing task quality",
@@ -421,6 +438,7 @@
     },
     {
       "source": "openai",
+      "platform": "AI",
       "label": "OpenAI",
       "genre": "AI",
       "title": "How AI-native companies turn workflows into operating capability",
@@ -436,6 +454,7 @@
     },
     {
       "source": "openai",
+      "platform": "AI",
       "label": "OpenAI",
       "genre": "AI",
       "title": "Path to Astra: critical capabilities and frontier safeguards",
@@ -451,6 +470,7 @@
     },
     {
       "source": "github-blog",
+      "platform": "開発",
       "label": "GitHub",
       "genre": "開発",
       "title": "OpenClaw went viral. Meet the maintainers building and securing it.",
@@ -465,6 +485,7 @@
     },
     {
       "source": "github-blog",
+      "platform": "開発",
       "label": "GitHub",
       "genre": "開発",
       "title": "GitHub Copilot app for Beginners: Automate Dependabot pull request triage",
@@ -479,6 +500,7 @@
     },
     {
       "source": "github-blog",
+      "platform": "開発",
       "label": "GitHub",
       "genre": "開発",
       "title": "How to evaluate LLMs before production",
@@ -493,6 +515,7 @@
     },
     {
       "source": "github-blog",
+      "platform": "開発",
       "label": "GitHub",
       "genre": "開発",
       "title": "Your alt text passes automated checks. That doesn’t mean it’s any good.",
@@ -507,6 +530,7 @@
     },
     {
       "source": "github-blog",
+      "platform": "開発",
       "label": "GitHub",
       "genre": "開発",
       "title": "The August 17 outage, and the work ahead",
@@ -521,6 +545,7 @@
     },
     {
       "source": "arxiv-ai",
+      "platform": "論文",
       "label": "arXiv AI",
       "genre": "論文",
       "title": "Structure and Implementation of New Practical English Textbooks Driven by Artificial Intelligence",
@@ -535,6 +560,7 @@
     },
     {
       "source": "arxiv-ai",
+      "platform": "論文",
       "label": "arXiv AI",
       "genre": "論文",
       "title": "MasterControl Seventeen Every Time",
@@ -549,6 +575,7 @@
     },
     {
       "source": "arxiv-ai",
+      "platform": "論文",
       "label": "arXiv AI",
       "genre": "論文",
       "title": "A Prompt-Engineering Approach to Develop Scalable, Flexible, and Real-Time Hybrid Micro-Level Personalization in a General Purpose AI Teaching Assistant",
@@ -563,6 +590,7 @@
     },
     {
       "source": "arxiv-ai",
+      "platform": "論文",
       "label": "arXiv AI",
       "genre": "論文",
       "title": "Caught in the Story: Narrative Captivity in Multi-turn LLMs Conversation",
@@ -577,6 +605,7 @@
     },
     {
       "source": "github-changelog",
+      "platform": "開発",
       "label": "GitHub更新",
       "genre": "開発",
       "title": "Multiple trusted publishing configurations for npm",
@@ -590,6 +619,7 @@
     },
     {
       "source": "lobsters",
+      "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
       "title": "Audacity 4.0.0 Released",

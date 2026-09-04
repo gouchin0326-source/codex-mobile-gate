@@ -17,6 +17,7 @@ AI_OUT = ROOT / "latest" / "data" / "ai-info.json"
 WEATHER_OUT = ROOT / "latest" / "data" / "weather-info.json"
 HEALTH_OUT = ROOT / "latest" / "data" / "gate-health.json"
 SOURCE_CATALOG_OUT = ROOT / "latest" / "data" / "free-source-catalog.json"
+SOCIAL_OUT = ROOT / "latest" / "data" / "social-trends.json"
 BRIEF = ROOT / "latest" / "data" / "codexgate-news-brief-2026-09-03.md"
 JMA_TOYAMA_WARNING = "https://www.jma.go.jp/bosai/warning/data/warning/160000.json"
 GITHUB_RUNS = "https://api.github.com/repos/gouchin0326-source/codex-mobile-gate/actions/runs?per_page=8"
@@ -35,6 +36,33 @@ DECISION_HINTS = {
     "天気": "今日の作業環境メモ",
     "地震": "影響がある時だけ確認",
 }
+
+SOCIAL_SOURCES = [
+    {
+        "id": "mastodon-ai",
+        "label": "Mastodon #AI",
+        "platform": "Mastodon",
+        "type": "mastodon",
+        "genre": "SNS",
+        "url": "https://mstdn.jp/api/v1/timelines/tag/AI?limit=20",
+    },
+    {
+        "id": "mastodon-codex",
+        "label": "Mastodon #Codex",
+        "platform": "Mastodon",
+        "type": "mastodon",
+        "genre": "SNS",
+        "url": "https://mstdn.jp/api/v1/timelines/tag/Codex?limit=20",
+    },
+    {
+        "id": "reddit-localllama",
+        "label": "Reddit LocalLLaMA",
+        "platform": "Reddit",
+        "type": "rss",
+        "genre": "SNS",
+        "url": "https://www.reddit.com/r/LocalLLaMA/.rss",
+    },
+]
 
 
 def load_schedule():
@@ -164,6 +192,19 @@ SOURCE_CATALOG = [
         "score": 3,
     },
     {
+        "id": "social-trends",
+        "status": "active",
+        "genre": "SNS",
+        "provider": "Mastodon/Reddit",
+        "method": "public timeline API + RSS",
+        "url": "https://docs.joinmastodon.org/methods/timelines/",
+        "cadence": "10m",
+        "value": "AI/SNS動向を無料取得し、短い判断カードへ圧縮",
+        "legalPoint": "公開API/RSS。全文保存せず短い抜粋とURL中心。",
+        "nextApp": "急上昇語の推移とX代替監視",
+        "score": 4,
+    },
+    {
         "id": "estat",
         "status": "candidate",
         "genre": "統計",
@@ -175,6 +216,19 @@ SOURCE_CATALOG = [
         "legalPoint": "API利用。キー要件あり。",
         "nextApp": "富山/全国の統計カード",
         "score": 4,
+    },
+    {
+        "id": "bluesky-social",
+        "status": "candidate",
+        "genre": "SNS",
+        "provider": "Bluesky",
+        "method": "AT Protocol public API",
+        "url": "https://bsky.network/docs/bluesky-api/",
+        "cadence": "30m-1h",
+        "value": "Bluesky公開投稿のAI動向取得",
+        "legalPoint": "公式API利用。現環境では検索APIが403のため候補。",
+        "nextApp": "取得可能endpointの再確認",
+        "score": 3,
     },
     {
         "id": "local-archive-index",
@@ -291,6 +345,7 @@ def parse_rss(source, blob):
         score, tags = score_item(title, summary, source["genre"])
         items.append({
             "source": source["id"],
+            "platform": source.get("platform", source.get("genre", "")),
             "label": source["label"],
             "genre": source["genre"],
             "title": title,
@@ -323,6 +378,97 @@ def parse_json(source, blob):
             "tags": tags,
         })
     return items
+
+
+def parse_mastodon(source, blob):
+    data = json.loads(blob)
+    items = []
+    for row in data[:12]:
+        title = clean(row.get("content", ""))
+        acct = ((row.get("account") or {}).get("acct") or "").strip()
+        boosts = row.get("reblogs_count") or 0
+        favs = row.get("favourites_count") or 0
+        score, tags = score_item(title, acct, "SNS")
+        items.append({
+            "source": source["id"],
+            "platform": source["platform"],
+            "label": source["label"],
+            "genre": "SNS",
+            "author": acct,
+            "title": title[:140],
+            "summary": f"boost {boosts} / fav {favs}",
+            "url": row.get("url") or "",
+            "published": row.get("created_at") or "",
+            "score": min(5, score + (1 if boosts or favs else 0)),
+            "tags": tags,
+        })
+    return items
+
+
+def parse_bluesky(source, blob):
+    data = json.loads(blob)
+    items = []
+    for row in data.get("posts", [])[:12]:
+        record = row.get("record") or {}
+        text = clean(record.get("text", ""))
+        author = (row.get("author") or {}).get("handle", "")
+        score, tags = score_item(text, author, "SNS")
+        items.append({
+            "source": source["id"],
+            "platform": source["platform"],
+            "label": source["label"],
+            "genre": "SNS",
+            "author": author,
+            "title": text[:140],
+            "summary": f"reply {row.get('replyCount', 0)} / repost {row.get('repostCount', 0)} / like {row.get('likeCount', 0)}",
+            "url": f"https://bsky.app/profile/{author}/post/{row.get('uri','').split('/')[-1]}" if author and row.get("uri") else "",
+            "published": record.get("createdAt") or row.get("indexedAt") or "",
+            "score": min(5, score + (1 if row.get("likeCount") else 0)),
+            "tags": tags,
+        })
+    return items
+
+
+def build_social_payload(now):
+    items = []
+    errors = []
+    for source in SOCIAL_SOURCES:
+        try:
+            blob = fetch(source["url"])
+            if source["type"] == "mastodon":
+                items.extend(parse_mastodon(source, blob))
+            elif source["type"] == "bluesky":
+                items.extend(parse_bluesky(source, blob))
+            else:
+                items.extend(parse_rss(source, blob))
+        except Exception as exc:
+            errors.append({"source": source["id"], "platform": source["platform"], "error": str(exc)[:160]})
+    items = sorted(items, key=lambda x: (x.get("score", 0), x.get("published", "")), reverse=True)[:36]
+    platforms = {}
+    for item in items:
+        platforms.setdefault(item.get("platform", "SNS"), 0)
+        platforms[item.get("platform", "SNS")] += 1
+    top_words = {}
+    for item in items:
+        text = f"{item.get('title','')} {item.get('summary','')}".lower()
+        for word in re.findall(r"[a-zA-Z][a-zA-Z0-9_-]{2,}", text):
+            if word in {"https", "http", "www", "com", "the", "and", "for", "with", "that"}:
+                continue
+            top_words[word] = top_words.get(word, 0) + 1
+    trends = [{"word": k, "count": v} for k, v in sorted(top_words.items(), key=lambda x: (-x[1], x[0]))[:12]]
+    return {
+        "updatedAt": now,
+        "mode": "zero-token-social-trends",
+        "codexTokenUse": "0 when run by GitHub Actions",
+        "policy": "public API/RSS only; no login bypass; no unauthorized scraping; short excerpts only",
+        "cadence": "10m",
+        "decision": "Xは有料寄り。Mastodon/Redditを主力、Blueskyは取得可否を監視。",
+        "platformCounts": platforms,
+        "trends": trends,
+        "items": items,
+        "sources": SOCIAL_SOURCES,
+        "errors": errors,
+    }
 
 
 def parse_weather(source, blob):
@@ -616,6 +762,7 @@ def main():
     WEATHER_OUT.write_text(json.dumps(weather_payload, ensure_ascii=False, indent=2), encoding="utf-8")
     HEALTH_OUT.write_text(json.dumps(build_health_payload(now, payload, ai_payload, weather_payload), ensure_ascii=False, indent=2), encoding="utf-8")
     SOURCE_CATALOG_OUT.write_text(json.dumps(build_source_catalog(now, sources, schedule), ensure_ascii=False, indent=2), encoding="utf-8")
+    SOCIAL_OUT.write_text(json.dumps(build_social_payload(now), ensure_ascii=False, indent=2), encoding="utf-8")
     lines = ["# CODEXGATE News Brief", "", f"- 更新: {now}", "- 取得: GitHub Actions/Python", "- Codex: 0%想定（自動実行時）", "- 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。", ""]
     for ctx in contexts[:8]:
         lines.append(f"- [{ctx['genre']}] {ctx['decision']} / {ctx['signal'][:70]}")
