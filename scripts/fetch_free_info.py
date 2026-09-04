@@ -15,6 +15,7 @@ OUT = ROOT / "latest" / "data" / "free-info.json"
 AI_OUT = ROOT / "latest" / "data" / "ai-info.json"
 WEATHER_OUT = ROOT / "latest" / "data" / "weather-info.json"
 BRIEF = ROOT / "latest" / "data" / "codexgate-news-brief-2026-09-03.md"
+JMA_TOYAMA_WARNING = "https://www.jma.go.jp/bosai/warning/data/warning/160000.json"
 
 KEYWORDS = {
     "重要": ["codex", "agent", "openai", "github", "security", "safety", "release", "api"],
@@ -144,7 +145,7 @@ def parse_weather(source, blob):
     temp = current.get("temperature_2m")
     rain = current.get("precipitation")
     wind = current.get("wind_speed_10m")
-    title = f"東京 {temp}℃ / 雨 {rain}mm / 風 {wind}km/h"
+    title = f"富山 {temp}℃ / 雨 {rain}mm / 風 {wind}km/h"
     score, tags = score_item(title, "", source["genre"])
     return [{
         "source": source["id"],
@@ -186,6 +187,20 @@ def build_weather_payload(sources, now):
     weather_sources = [s for s in sources if s["type"] == "weather"]
     rows = []
     errors = []
+    jma_warnings = []
+    try:
+        warning_data = json.loads(fetch(JMA_TOYAMA_WARNING))
+        for area_type in warning_data.get("areaTypes", []):
+            for area in area_type.get("areas", []):
+                area_name = area.get("name", "")
+                for warning in area.get("warnings", []):
+                    status = warning.get("status", "")
+                    kind = warning.get("kind", {}).get("name", "") if isinstance(warning.get("kind"), dict) else ""
+                    if kind and status not in {"解除", "発表警報・注意報はなし"}:
+                        jma_warnings.append({"area": area_name, "kind": kind, "status": status})
+    except Exception as exc:
+        errors.append({"source": "jma-toyama-warning", "error": str(exc)[:160]})
+
     for source in weather_sources:
         parsed = urllib.parse.urlparse(source["url"])
         qs = urllib.parse.parse_qs(parsed.query)
@@ -223,6 +238,7 @@ def build_weather_payload(sources, now):
             rows.append({
                 "source": source["id"],
                 "label": source["label"],
+                "location": "富山県",
                 "updatedAt": now,
                 "current": current,
                 "hourly": hours,
@@ -232,11 +248,37 @@ def build_weather_payload(sources, now):
             })
         except Exception as exc:
             errors.append({"source": source["id"], "error": str(exc)[:160]})
+    max_hourly_rain = max([x.get("rain") or 0 for row in rows for x in row.get("hourly", [])] or [0])
+    max_rain_prob = max([x.get("rainProb") or 0 for row in rows for x in row.get("hourly", [])] or [0])
+    max_wind = max([x.get("wind") or 0 for row in rows for x in row.get("hourly", [])] or [0])
+    max_daily_rain = max([x.get("rain") or 0 for row in rows for x in row.get("daily", [])] or [0])
+    risk_level = "normal"
+    risk_label = "通常"
+    risk_lines = ["富山: 通常", "警戒情報なし"]
+    if jma_warnings:
+        risk_level = "warning"
+        risk_label = "警戒"
+        kinds = "、".join(sorted({w["kind"] for w in jma_warnings})[:4])
+        risk_lines = [f"富山: 気象庁 {kinds}", "詳細は天気アプリで確認"]
+    elif max_hourly_rain >= 10 or max_daily_rain >= 50 or max_rain_prob >= 80 or max_wind >= 15:
+        risk_level = "caution"
+        risk_label = "注意"
+        risk_lines = [f"富山: 雨{max_rain_prob}%/最大{max_hourly_rain}mm", f"風{max_wind}km/h・週間雨量最大{max_daily_rain}mm"]
     return {
         "updatedAt": now,
         "mode": "primary-api-weather-context",
         "codexTokenUse": "0 when run by GitHub Actions",
-        "policy": "Open-Meteo documented no-key API; no scraping",
+        "policy": "Open-Meteo documented no-key API + JMA warning JSON; no scraping",
+        "risk": {
+            "level": risk_level,
+            "label": risk_label,
+            "lines": risk_lines,
+            "maxRainProbability": max_rain_prob,
+            "maxHourlyRain": max_hourly_rain,
+            "maxDailyRain": max_daily_rain,
+            "maxWind": max_wind,
+            "jmaWarnings": jma_warnings[:12],
+        },
         "locations": rows,
         "errors": errors,
     }

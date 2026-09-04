@@ -6,13 +6,15 @@
   <title>天気予報 | CODEXGATE</title>
   <style>
     :root{--bg:#f4f6f8;--panel:#fff;--ink:#172033;--muted:#667085;--line:#d9dee7;--blue:#2563eb;--green:#15803d;font-family:"Segoe UI","Meiryo",system-ui,sans-serif}
-    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);line-height:1.45}.wrap{width:min(920px,calc(100% - 18px));margin:auto}header{background:#172033;color:white;padding:14px 0;border-bottom:4px solid var(--green)}h1{margin:0;font-size:1.6rem}.sub{margin:4px 0 0;color:#dce5f3;font-weight:900;font-size:.9rem}main{display:grid;gap:10px;padding:10px 0 26px}section{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px}h2{font-size:1.05rem;margin:0 0 8px}.now{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.box{border:1px solid var(--line);border-radius:8px;background:#f9fafb;padding:10px}.box b{display:block;font-size:1.35rem}.box span{color:var(--muted);font-size:.88rem;font-weight:800}.list{display:grid;gap:7px}.row{display:grid;grid-template-columns:88px repeat(4,1fr);gap:6px;align-items:center;border:1px solid var(--line);border-radius:8px;background:#f9fafb;padding:8px;font-size:.94rem;font-weight:900}.meta{color:var(--muted);font-size:.88rem;font-weight:800}.back{display:inline-grid;place-items:center;min-height:40px;padding:8px 12px;border-radius:8px;background:var(--blue);color:#fff;text-decoration:none;font-weight:900}@media(max-width:560px){.now{grid-template-columns:1fr}.row{grid-template-columns:74px repeat(2,1fr);font-size:.9rem}.row span:nth-child(n+4){display:none}}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);line-height:1.45}.wrap{width:min(920px,calc(100% - 18px));margin:auto}header{background:#172033;color:white;padding:14px 0;border-bottom:4px solid var(--green)}h1{margin:0;font-size:1.6rem}.sub{margin:4px 0 0;color:#dce5f3;font-weight:900;font-size:.9rem}main{display:grid;gap:10px;padding:10px 0 26px}section{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px}h2{font-size:1.05rem;margin:0 0 8px}.now{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.box{border:1px solid var(--line);border-radius:8px;background:#f9fafb;padding:10px}.box b{display:block;font-size:1.35rem}.box span{color:var(--muted);font-size:.88rem;font-weight:800}.risk{border-color:#f59e0b;background:#fff7ed}.risk.warn{border-color:#b4235a;background:#fff1f2}.weather-art{font-size:2.4rem;line-height:1}.bars{display:grid;gap:6px}.bar{display:grid;grid-template-columns:54px 1fr 54px;gap:7px;align-items:center;font-size:.88rem;font-weight:900}.track{height:16px;border-radius:8px;background:#e5e7eb;overflow:hidden}.fill{height:100%;background:var(--blue)}.list{display:grid;gap:7px}.row{display:grid;grid-template-columns:88px repeat(4,1fr);gap:6px;align-items:center;border:1px solid var(--line);border-radius:8px;background:#f9fafb;padding:8px;font-size:.94rem;font-weight:900}.meta{color:var(--muted);font-size:.88rem;font-weight:800}.back{display:inline-grid;place-items:center;min-height:40px;padding:8px 12px;border-radius:8px;background:var(--blue);color:#fff;text-decoration:none;font-weight:900}@media(max-width:560px){.now{grid-template-columns:repeat(2,1fr)}.row{grid-template-columns:74px repeat(2,1fr);font-size:.9rem}.row span:nth-child(n+4){display:none}.bar{grid-template-columns:48px 1fr 46px}}
   </style>
 </head>
 <body>
-  <header><div class="wrap"><h1>天気予報</h1><p class="sub">Open-Meteo一次API / 時間・週間 / Codex 0%運用</p></div></header>
+  <header><div class="wrap"><h1>天気予報</h1><p class="sub">富山県 / Open-Meteo + 気象庁一次データ / Codex 0%運用</p></div></header>
   <main class="wrap">
-    <section><h2>現在</h2><div class="now" id="now"><div class="box"><b>読込中</b><span>東京</span></div></div><p class="meta" id="meta">スクレイピングなし</p></section>
+    <section><h2>警戒</h2><div class="box risk" id="risk"><b>読込中</b><span>富山県</span></div></section>
+    <section><h2>現在</h2><div class="now" id="now"><div class="box"><b>読込中</b><span>富山</span></div></div><p class="meta" id="meta">スクレイピングなし</p></section>
+    <section><h2>雨グラフ</h2><div class="bars" id="bars"></div></section>
     <section><h2>24時間</h2><div class="list" id="hourly"></div></section>
     <section><h2>7日</h2><div class="list" id="daily"></div></section>
     <a class="back" href="../index.html">CGへ戻る</a>
@@ -21,8 +23,13 @@
     fetch("../data/weather-info.json?v="+Date.now()).then(r=>r.ok?r.json():null).then(data=>{
       const loc=(data&&data.locations&&data.locations[0])||null; if(!loc)return;
       const c=loc.current||{};
+      const risk=data.risk||{};
+      const icon=(code)=> code>=80?"☔":code>=61?"🌧":code>=51?"🌦":code>=45?"🌫":code>=3?"☁":"☀";
+      document.querySelector("#risk").className=`box risk ${risk.level==='warning'?'warn':''}`;
+      document.querySelector("#risk").innerHTML=`<b>${risk.label||"通常"}</b><span>${(risk.lines||[]).join(" / ")}</span>`;
       document.querySelector("#meta").textContent=`更新 ${data.updatedAt} / ${data.mode} / ${data.codexTokenUse}`;
-      document.querySelector("#now").innerHTML=`<div class="box"><b>${c.temperature_2m??"-"}℃</b><span>気温</span></div><div class="box"><b>${c.precipitation??"-"}mm</b><span>雨</span></div><div class="box"><b>${c.wind_speed_10m??"-"}km/h</b><span>風</span></div>`;
+      document.querySelector("#now").innerHTML=`<div class="box"><b class="weather-art">${icon(c.weather_code)}</b><span>天気</span></div><div class="box"><b>${c.temperature_2m??"-"}℃</b><span>気温</span></div><div class="box"><b>${c.precipitation??"-"}mm</b><span>雨</span></div><div class="box"><b>${c.wind_speed_10m??"-"}km/h</b><span>風</span></div>`;
+      document.querySelector("#bars").innerHTML=(loc.hourly||[]).slice(0,12).map(x=>`<div class="bar"><span>${String(x.time).slice(11,16)}</span><div class="track"><div class="fill" style="width:${Math.min(100,x.rainProb||0)}%"></div></div><span>${x.rainProb??"-"}%</span></div>`).join("");
       document.querySelector("#hourly").innerHTML=(loc.hourly||[]).slice(0,24).map(x=>`<div class="row"><span>${String(x.time).slice(11,16)}</span><span>${x.temp}℃</span><span>雨${x.rainProb??"-"}%</span><span>${x.rain}mm</span><span>${x.wind}km/h</span></div>`).join("");
       document.querySelector("#daily").innerHTML=(loc.daily||[]).map(x=>`<div class="row"><span>${String(x.date).slice(5)}</span><span>${x.min}℃</span><span>${x.max}℃</span><span>雨${x.rain}mm</span><span>code ${x.code}</span></div>`).join("");
     }).catch(()=>{});

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T01:15:13.743378+00:00",
+  "updatedAt": "2026-09-04T01:33:57.446656+00:00",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "freeMeaning": "Public RSS/API data is fetched by program, categorized, scored, and summarized into local static JSON. It is not a bookmark list and does not scrape ordinary web pages.",
@@ -81,11 +81,11 @@
       "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
     },
     {
-      "id": "open-meteo-tokyo",
-      "label": "東京天気",
+      "id": "open-meteo-toyama",
+      "label": "富山天気",
       "genre": "天気",
       "type": "weather",
-      "url": "https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo"
+      "url": "https://api.open-meteo.com/v1/forecast?latitude=36.6953&longitude=137.2113&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo"
     }
   ],
   "contexts": [
@@ -116,17 +116,17 @@
     {
       "genre": "災害",
       "count": 2,
-      "signal": "M 2.6 - 81 km E of Chignik, Alaska / M 2.3 - 5 km NE of Nellis Air Force Base, Nevada",
+      "signal": "M 1.5 - 8 km NW of The Geysers, CA / M 2.1 - 88 km W of Akhiok, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rmlprj",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429432",
       "score": 1
     },
     {
       "genre": "天気",
       "count": 1,
-      "signal": "東京 23.5℃ / 雨 0.1mm / 風 3.2km/h",
+      "signal": "富山 25.1℃ / 雨 0.0mm / 風 9.8km/h",
       "decision": "今日の作業環境メモ",
-      "topUrl": "https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
+      "topUrl": "https://api.open-meteo.com/v1/forecast?latitude=36.6953&longitude=137.2113&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
       "score": 1
     },
     {
@@ -214,13 +214,13 @@
       ]
     },
     {
-      "source": "open-meteo-tokyo",
-      "label": "東京天気",
+      "source": "open-meteo-toyama",
+      "label": "富山天気",
       "genre": "天気",
-      "title": "東京 23.5℃ / 雨 0.1mm / 風 3.2km/h",
+      "title": "富山 25.1℃ / 雨 0.0mm / 風 9.8km/h",
       "summary": "Open-Meteo no-key weather fetch",
-      "url": "https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
-      "published": "2026-09-04T10:15",
+      "url": "https://api.open-meteo.com/v1/forecast?latitude=36.6953&longitude=137.2113&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
+      "published": "2026-09-04T10:30",
       "score": 1,
       "tags": [
         "天気"
@@ -230,10 +230,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.6 - 81 km E of Chignik, Alaska",
-      "summary": "81 km E of Chignik, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rmlprj",
-      "published": "2026-09-04T01:06:50.279000+00:00",
+      "title": "M 1.5 - 8 km NW of The Geysers, CA",
+      "summary": "8 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429432",
+      "published": "2026-09-04T01:29:42.290000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -585,10 +585,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.3 - 5 km NE of Nellis Air Force Base, Nevada",
-      "summary": "5 km NE of Nellis Air Force Base, Nevada",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00924179",
-      "published": "2026-09-04T00:52:09.177000+00:00",
+      "title": "M 2.1 - 88 km W of Akhiok, Alaska",
+      "summary": "88 km W of Akhiok, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rmmgxg",
+      "published": "2026-09-04T01:26:35.505000+00:00",
       "score": 1,
       "tags": [
         "災害"

@@ -503,6 +503,28 @@
       .feed-item b { min-height: 38px; font-size: .78rem; }
       .feed-item span { font-size: 1.02rem; line-height: 1.32; }
     }
+
+    .danger::after {
+      content: "警";
+      background: var(--rose);
+    }
+
+    .notice {
+      display: grid;
+      gap: 5px;
+    }
+
+    .notice-line {
+      min-height: 34px;
+      padding: 7px 9px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff7ed;
+      color: var(--ink);
+      font-size: .92rem;
+      font-weight: 900;
+      line-height: 1.25;
+    }
   </style>
 </head>
 <body>
@@ -510,14 +532,22 @@
     <div class="wrap top">
       <div>
         <h1>CG</h1>
-        <p class="tagline">CODEX Gate / 独自開発ホーム / 更新 2026-09-04 10:11 JST</p>
+        <p class="tagline">CODEX Gate / 独自開発ホーム / 更新 2026-09-04 10:32 JST</p>
       </div>
       <button class="refresh" id="force-update" type="button">最新版に更新</button>
-      <div class="date">更新 2026-09-04 10:11 JST</div>
+      <div class="date">更新 2026-09-04 10:32 JST</div>
     </div>
   </header>
 
   <main class="wrap">
+    <section>
+      <h2>お知らせ</h2>
+      <div class="notice" id="weather-notice">
+        <div class="notice-line">富山: 天気警戒を読込中</div>
+        <div class="notice-line">一次API/RSSで自動更新</div>
+      </div>
+    </section>
+
     <section>
       <h2>主力</h2>
       <div class="phone-grid">
@@ -530,11 +560,11 @@
         <a class="app-icon updated" href="./latest/data/codexgate-app-audit-2026-09-03.md"><b class="glyph g-dev">!</b><span>点検</span></a>
         <a class="app-icon updated" href="./latest/zero-token-army/index.html"><b class="glyph g-data">0</b><span>完全無料</span></a>
         <a class="app-icon updated" href="./latest/ai-info/index.html"><b class="glyph g-dev">AI</b><span>AI一次</span></a>
-        <a class="app-icon updated" href="./latest/weather-info/index.html"><b class="glyph g-data">天</b><span>天気</span></a>
+        <a class="app-icon updated" data-weather-icon href="./latest/weather-info/index.html"><b class="glyph g-data">天</b><span>天気</span></a>
         <a class="app-icon updated" href="./latest/free-info-lab/index.html"><b class="glyph g-data">無</b><span>無料情報</span></a>
         <a class="app-icon updated" href="./latest/data/codexgate-news-brief-2026-09-03.md"><b class="glyph g-data">N</b><span>ニュース</span></a>
       </div>
-      <p class="muted">! = 更新あり / 最終更新 2026-09-04 10:11 JST</p>
+      <p class="muted">! = 更新あり / 最終更新 2026-09-04 10:32 JST</p>
     </section>
 
     <section>
@@ -542,7 +572,7 @@
       <div class="phone-grid">
         <a class="app-icon updated" href="./latest/zero-token-army/index.html#context"><b class="glyph g-data">文</b><span>文脈</span></a>
         <a class="app-icon updated" href="./latest/ai-info/index.html"><b class="glyph g-dev">AI</b><span>AI一次</span></a>
-        <a class="app-icon updated" href="./latest/weather-info/index.html"><b class="glyph g-data">天</b><span>天気</span></a>
+        <a class="app-icon updated" data-weather-icon href="./latest/weather-info/index.html"><b class="glyph g-data">天</b><span>天気</span></a>
         <a class="app-icon updated" href="./latest/data/free-info.json"><b class="glyph g-data">分</b><span>分類JSON</span></a>
         <a class="app-icon updated" href="./latest/data/codexgate-news-brief-2026-09-03.md"><b class="glyph g-dev">採</b><span>採決メモ</span></a>
         <a class="app-icon updated" href="./latest/zero-token-army/index.html#policy"><b class="glyph g-tool">守</b><span>合法取得</span></a>
@@ -583,12 +613,12 @@
       <h2>更新</h2>
       <div class="phone-grid">
         <a class="app-icon updated" href="./latest/ai-info/index.html"><b class="glyph g-dev">AI</b><span>AI一次</span></a>
-        <a class="app-icon updated" href="./latest/weather-info/index.html"><b class="glyph g-data">天</b><span>天気</span></a>
+        <a class="app-icon updated" data-weather-icon href="./latest/weather-info/index.html"><b class="glyph g-data">天</b><span>天気</span></a>
         <a class="app-icon updated" href="./latest/zero-token-army/index.html"><b class="glyph g-data">0</b><span>完全無料</span></a>
         <a class="app-icon updated" href="./latest/free-info-lab/index.html"><b class="glyph g-data">無</b><span>無料情報</span></a>
         <a class="app-icon updated" href="./latest/data/codexgate-news-brief-2026-09-03.md"><b class="glyph g-data">N</b><span>外部AI</span></a>
         <a class="app-icon updated" href="./latest/data/codexgate-app-audit-2026-09-03.md"><b class="glyph g-dev">!</b><span>点検</span></a>
-        <a class="app-icon updated" href="./latest/index.html?v=202609041011"><b class="glyph g-dev">↻</b><span>10:11</span></a>
+        <a class="app-icon updated" href="./latest/index.html?v=202609041032"><b class="glyph g-dev">↻</b><span>10:32</span></a>
       </div>
     </section>
   </main>
@@ -633,6 +663,19 @@
           const mark = item.score >= 3 ? "!" : "";
           return `<a class="feed-item" href="${item.url || './data/free-info.json'}"><b>${item.genre || item.label || '情'}</b><span>${item.title || '無題'}</span><i>${mark}</i></a>`;
         }).join("");
+      })
+      .catch(() => {});
+    fetch("./latest/data/weather-info.json?v=" + Date.now())
+      .then((res) => res.ok ? res.json() : null)
+      .then((data) => {
+        const risk = data && data.risk;
+        if (!risk) return;
+        const lines = risk.lines || ["富山: 天気情報あり", "詳細は天気アプリ"];
+        const notice = document.querySelector("#weather-notice");
+        if (notice) notice.innerHTML = lines.slice(0, 2).map((line) => `<div class="notice-line">${line}</div>`).join("");
+        if (risk.level && risk.level !== "normal") {
+          document.querySelectorAll("[data-weather-icon]").forEach((el) => el.classList.add("danger"));
+        }
       })
       .catch(() => {});
   </script>

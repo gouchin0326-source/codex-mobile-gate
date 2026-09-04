@@ -1,245 +1,259 @@
 {
-  "updatedAt": "2026-09-04T01:15:13.743378+00:00",
+  "updatedAt": "2026-09-04T01:33:57.446656+00:00",
   "mode": "primary-api-weather-context",
   "codexTokenUse": "0 when run by GitHub Actions",
-  "policy": "Open-Meteo documented no-key API; no scraping",
+  "policy": "Open-Meteo documented no-key API + JMA warning JSON; no scraping",
+  "risk": {
+    "level": "caution",
+    "label": "注意",
+    "lines": [
+      "富山: 雨16%/最大0mm",
+      "風12.4km/h・週間雨量最大95.4mm"
+    ],
+    "maxRainProbability": 16,
+    "maxHourlyRain": 0,
+    "maxDailyRain": 95.4,
+    "maxWind": 12.4,
+    "jmaWarnings": []
+  },
   "locations": [
     {
-      "source": "open-meteo-tokyo",
-      "label": "東京天気",
-      "updatedAt": "2026-09-04T01:15:13.743378+00:00",
+      "source": "open-meteo-toyama",
+      "label": "富山天気",
+      "location": "富山県",
+      "updatedAt": "2026-09-04T01:33:57.446656+00:00",
       "current": {
-        "time": "2026-09-04T10:15",
+        "time": "2026-09-04T10:30",
         "interval": 900,
-        "temperature_2m": 23.5,
-        "relative_humidity_2m": 92,
-        "precipitation": 0.1,
-        "weather_code": 51,
-        "wind_speed_10m": 3.2
+        "temperature_2m": 25.1,
+        "relative_humidity_2m": 72,
+        "precipitation": 0.0,
+        "weather_code": 3,
+        "wind_speed_10m": 9.8
       },
       "hourly": [
         {
           "time": "2026-09-04T11:00",
-          "temp": 23.9,
-          "rainProb": 66,
-          "rain": 0.3,
-          "wind": 2.3
+          "temp": 25.5,
+          "rainProb": 11,
+          "rain": 0.0,
+          "wind": 11.2
         },
         {
           "time": "2026-09-04T12:00",
-          "temp": 23.9,
-          "rainProb": 67,
-          "rain": 0.6,
-          "wind": 1.3
+          "temp": 25.7,
+          "rainProb": 6,
+          "rain": 0.0,
+          "wind": 10.6
         },
         {
           "time": "2026-09-04T13:00",
-          "temp": 23.8,
-          "rainProb": 67,
-          "rain": 0.9,
-          "wind": 1.0
+          "temp": 26.0,
+          "rainProb": 6,
+          "rain": 0.0,
+          "wind": 9.8
         },
         {
           "time": "2026-09-04T14:00",
-          "temp": 23.3,
-          "rainProb": 66,
-          "rain": 0.9,
-          "wind": 2.1
+          "temp": 25.7,
+          "rainProb": 9,
+          "rain": 0.0,
+          "wind": 9.5
         },
         {
           "time": "2026-09-04T15:00",
-          "temp": 23.0,
-          "rainProb": 65,
-          "rain": 1.2,
-          "wind": 2.3
+          "temp": 25.5,
+          "rainProb": 12,
+          "rain": 0.0,
+          "wind": 9.0
         },
         {
           "time": "2026-09-04T16:00",
-          "temp": 22.6,
-          "rainProb": 66,
-          "rain": 0.5,
-          "wind": 2.4
+          "temp": 25.3,
+          "rainProb": 14,
+          "rain": 0.0,
+          "wind": 8.3
         },
         {
           "time": "2026-09-04T17:00",
-          "temp": 22.4,
-          "rainProb": 67,
-          "rain": 0.9,
-          "wind": 1.9
+          "temp": 24.9,
+          "rainProb": 15,
+          "rain": 0.0,
+          "wind": 8.2
         },
         {
           "time": "2026-09-04T18:00",
-          "temp": 22.0,
-          "rainProb": 69,
-          "rain": 1.2,
-          "wind": 2.4
+          "temp": 24.7,
+          "rainProb": 16,
+          "rain": 0.0,
+          "wind": 8.5
         },
         {
           "time": "2026-09-04T19:00",
-          "temp": 21.8,
-          "rainProb": 73,
-          "rain": 1.4,
-          "wind": 0.4
+          "temp": 24.6,
+          "rainProb": 16,
+          "rain": 0.0,
+          "wind": 8.4
         },
         {
           "time": "2026-09-04T20:00",
-          "temp": 21.6,
-          "rainProb": 77,
-          "rain": 1.3,
-          "wind": 0.7
+          "temp": 24.4,
+          "rainProb": 15,
+          "rain": 0.0,
+          "wind": 6.7
         },
         {
           "time": "2026-09-04T21:00",
-          "temp": 21.6,
-          "rainProb": 78,
-          "rain": 1.0,
-          "wind": 2.3
+          "temp": 23.9,
+          "rainProb": 14,
+          "rain": 0.0,
+          "wind": 3.5
         },
         {
           "time": "2026-09-04T22:00",
-          "temp": 21.4,
-          "rainProb": 74,
-          "rain": 1.3,
-          "wind": 1.1
-        },
-        {
-          "time": "2026-09-04T23:00",
-          "temp": 21.4,
-          "rainProb": 68,
-          "rain": 0.7,
-          "wind": 1.8
-        },
-        {
-          "time": "2026-09-05T00:00",
-          "temp": 21.3,
-          "rainProb": 63,
-          "rain": 0.5,
-          "wind": 1.9
-        },
-        {
-          "time": "2026-09-05T01:00",
-          "temp": 21.3,
-          "rainProb": 61,
-          "rain": 0.7,
-          "wind": 2.2
-        },
-        {
-          "time": "2026-09-05T02:00",
-          "temp": 21.4,
-          "rainProb": 59,
-          "rain": 1.0,
-          "wind": 2.1
-        },
-        {
-          "time": "2026-09-05T03:00",
-          "temp": 21.4,
-          "rainProb": 57,
-          "rain": 0.4,
+          "temp": 23.2,
+          "rainProb": 11,
+          "rain": 0.0,
           "wind": 3.3
         },
         {
+          "time": "2026-09-04T23:00",
+          "temp": 22.5,
+          "rainProb": 7,
+          "rain": 0.0,
+          "wind": 2.9
+        },
+        {
+          "time": "2026-09-05T00:00",
+          "temp": 22.1,
+          "rainProb": 4,
+          "rain": 0.0,
+          "wind": 2.6
+        },
+        {
+          "time": "2026-09-05T01:00",
+          "temp": 21.8,
+          "rainProb": 3,
+          "rain": 0.0,
+          "wind": 3.4
+        },
+        {
+          "time": "2026-09-05T02:00",
+          "temp": 21.5,
+          "rainProb": 2,
+          "rain": 0.0,
+          "wind": 3.6
+        },
+        {
+          "time": "2026-09-05T03:00",
+          "temp": 21.1,
+          "rainProb": 2,
+          "rain": 0.0,
+          "wind": 3.2
+        },
+        {
           "time": "2026-09-05T04:00",
-          "temp": 21.4,
-          "rainProb": 52,
-          "rain": 0.1,
-          "wind": 3.1
+          "temp": 20.8,
+          "rainProb": 2,
+          "rain": 0.0,
+          "wind": 4.1
         },
         {
           "time": "2026-09-05T05:00",
-          "temp": 21.2,
-          "rainProb": 47,
-          "rain": 0.1,
+          "temp": 20.5,
+          "rainProb": 2,
+          "rain": 0.0,
           "wind": 3.3
         },
         {
           "time": "2026-09-05T06:00",
-          "temp": 21.0,
-          "rainProb": 41,
+          "temp": 20.5,
+          "rainProb": 2,
           "rain": 0.0,
           "wind": 4.3
         },
         {
           "time": "2026-09-05T07:00",
-          "temp": 20.9,
-          "rainProb": 35,
+          "temp": 21.6,
+          "rainProb": 1,
           "rain": 0.0,
-          "wind": 4.7
+          "wind": 3.6
         },
         {
           "time": "2026-09-05T08:00",
-          "temp": 21.1,
-          "rainProb": 29,
+          "temp": 23.6,
+          "rainProb": 1,
           "rain": 0.0,
-          "wind": 5.4
+          "wind": 2.5
         },
         {
           "time": "2026-09-05T09:00",
-          "temp": 21.6,
-          "rainProb": 24,
+          "temp": 25.7,
+          "rainProb": 0,
           "rain": 0.0,
-          "wind": 5.0
+          "wind": 9.2
         },
         {
           "time": "2026-09-05T10:00",
-          "temp": 22.2,
-          "rainProb": 22,
+          "temp": 27.1,
+          "rainProb": 0,
           "rain": 0.0,
-          "wind": 5.1
+          "wind": 12.4
         }
       ],
       "daily": [
         {
           "date": "2026-09-04",
-          "max": 23.9,
-          "min": 21.4,
-          "rain": 13.1,
-          "code": 61
+          "max": 26.0,
+          "min": 21.5,
+          "rain": 7.2,
+          "code": 63
         },
         {
           "date": "2026-09-05",
-          "max": 24.5,
-          "min": 20.9,
-          "rain": 3.0,
-          "code": 55
+          "max": 27.5,
+          "min": 20.5,
+          "rain": 0.0,
+          "code": 3
         },
         {
           "date": "2026-09-06",
-          "max": 24.3,
-          "min": 20.8,
-          "rain": 79.9,
-          "code": 65
+          "max": 27.6,
+          "min": 21.5,
+          "rain": 6.6,
+          "code": 63
         },
         {
           "date": "2026-09-07",
-          "max": 27.4,
-          "min": 22.6,
-          "rain": 83.05,
-          "code": 96
+          "max": 24.5,
+          "min": 21.2,
+          "rain": 68.7,
+          "code": 95
         },
         {
           "date": "2026-09-08",
-          "max": 31.1,
-          "min": 26.2,
-          "rain": 2.4,
+          "max": 26.0,
+          "min": 22.7,
+          "rain": 95.4,
           "code": 95
         },
         {
           "date": "2026-09-09",
-          "max": 26.7,
-          "min": 22.5,
-          "rain": 7.7,
-          "code": 55
+          "max": 26.8,
+          "min": 21.8,
+          "rain": 2.9,
+          "code": 53
         },
         {
           "date": "2026-09-10",
-          "max": 22.5,
-          "min": 20.3,
-          "rain": 0.4,
-          "code": 51
+          "max": 21.6,
+          "min": 20.0,
+          "rain": 22.4,
+          "code": 80
         }
       ],
       "decision": "雨確率と風を見て外出/作業判断",
-      "url": "https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&current=temperature_2m%2Crelative_humidity_2m%2Cprecipitation%2Cweather_code%2Cwind_speed_10m&timezone=Asia%2FTokyo&hourly=temperature_2m%2Cprecipitation_probability%2Cprecipitation%2Cwind_speed_10m&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum&forecast_days=7"
+      "url": "https://api.open-meteo.com/v1/forecast?latitude=36.6953&longitude=137.2113&current=temperature_2m%2Crelative_humidity_2m%2Cprecipitation%2Cweather_code%2Cwind_speed_10m&timezone=Asia%2FTokyo&hourly=temperature_2m%2Cprecipitation_probability%2Cprecipitation%2Cwind_speed_10m&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_sum&forecast_days=7"
     }
   ],
   "errors": []
