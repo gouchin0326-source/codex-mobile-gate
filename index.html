@@ -518,10 +518,10 @@
     }
 
     .notice {
-      min-height: 66px;
+      min-height: 78px;
       display: grid;
       grid-template-columns: 34px 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: auto auto;
       align-items: center;
       column-gap: 7px;
       padding: 8px;
@@ -530,7 +530,7 @@
       background: #ffffff;
       color: var(--ink);
       text-decoration: none;
-      overflow: hidden;
+      overflow: visible;
     }
 
     .notice b {
@@ -549,16 +549,16 @@
     .notice i {
       display: block;
       min-width: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      overflow: visible;
+      white-space: normal;
+      overflow-wrap: anywhere;
       font-style: normal;
       font-weight: 900;
       line-height: 1.1;
     }
 
-    .notice span { font-size: .82rem; }
-    .notice i { color: var(--muted); font-size: .68rem; }
+    .notice span { font-size: .78rem; }
+    .notice i { color: var(--muted); font-size: .66rem; }
     .notice.warn b { background: var(--rose); }
 
     .tabs {
@@ -611,10 +611,10 @@
     <div class="wrap top">
       <div>
         <h1>CG</h1>
-        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-04 13:47 JST</p>
+        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-04 13:58 JST</p>
       </div>
       <button class="refresh" id="force-update" type="button">最新版に更新</button>
-      <div class="date">更新 2026-09-04 13:47 JST</div>
+      <div class="date">更新 2026-09-04 13:58 JST</div>
     </div>
   </header>
 
@@ -702,7 +702,7 @@
         <div class="auto-line">管理: 表示分類、データ取得、警告表示、GitHub Pages公開</div>
       </div>
       <div class="phone-grid">
-        <a class="app-icon updated" href="./latest/index.html?v=202609041347"><b class="glyph g-dev">更</b><span>最新版</span></a>
+        <a class="app-icon updated" href="./latest/index.html?v=202609041358"><b class="glyph g-dev">更</b><span>最新版</span></a>
         <a class="app-icon updated" href="./latest/index.html"><b class="glyph g-dev">CG</b><span>ホーム</span></a>
         <a class="app-icon updated" href="./latest/data/zero-token-capabilities.json"><b class="glyph g-data">証</b><span>0証明</span></a>
         <a class="app-icon updated" href="./latest/data/weather-info.json"><b class="glyph g-data">警</b><span>警戒設定</span></a>
