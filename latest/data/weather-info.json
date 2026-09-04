@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T19:07:50.188929+00:00",
+  "updatedAt": "2026-09-04T21:26:27.637991+00:00",
   "mode": "primary-api-weather-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "Open-Meteo documented no-key API + JMA warning JSON; no scraping",
@@ -26,73 +26,73 @@
         "x": 450,
         "y": 198,
         "z": 9,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904190500/none/20260904200500/surf/hrpns/9/450/198.png"
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904212000/none/20260904222000/surf/hrpns/9/450/198.png"
       },
       {
         "x": 451,
         "y": 198,
         "z": 9,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904190500/none/20260904200500/surf/hrpns/9/451/198.png"
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904212000/none/20260904222000/surf/hrpns/9/451/198.png"
       },
       {
         "x": 452,
         "y": 198,
         "z": 9,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904190500/none/20260904200500/surf/hrpns/9/452/198.png"
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904212000/none/20260904222000/surf/hrpns/9/452/198.png"
       },
       {
         "x": 450,
         "y": 199,
         "z": 9,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904190500/none/20260904200500/surf/hrpns/9/450/199.png"
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904212000/none/20260904222000/surf/hrpns/9/450/199.png"
       },
       {
         "x": 451,
         "y": 199,
         "z": 9,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904190500/none/20260904200500/surf/hrpns/9/451/199.png"
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904212000/none/20260904222000/surf/hrpns/9/451/199.png"
       },
       {
         "x": 452,
         "y": 199,
         "z": 9,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904190500/none/20260904200500/surf/hrpns/9/452/199.png"
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904212000/none/20260904222000/surf/hrpns/9/452/199.png"
       },
       {
         "x": 450,
         "y": 200,
         "z": 9,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904190500/none/20260904200500/surf/hrpns/9/450/200.png"
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904212000/none/20260904222000/surf/hrpns/9/450/200.png"
       },
       {
         "x": 451,
         "y": 200,
         "z": 9,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904190500/none/20260904200500/surf/hrpns/9/451/200.png"
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904212000/none/20260904222000/surf/hrpns/9/451/200.png"
       },
       {
         "x": 452,
         "y": 200,
         "z": 9,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904190500/none/20260904200500/surf/hrpns/9/452/200.png"
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260904212000/none/20260904222000/surf/hrpns/9/452/200.png"
       }
     ],
     "times": [
       {
-        "basetime": "20260904190500",
-        "validtime": "20260904200500"
+        "basetime": "20260904212000",
+        "validtime": "20260904222000"
       },
       {
-        "basetime": "20260904190500",
-        "validtime": "20260904200000"
+        "basetime": "20260904212000",
+        "validtime": "20260904221500"
       },
       {
-        "basetime": "20260904190500",
-        "validtime": "20260904195500"
+        "basetime": "20260904212000",
+        "validtime": "20260904221000"
       },
       {
-        "basetime": "20260904190500",
-        "validtime": "20260904195000"
+        "basetime": "20260904212000",
+        "validtime": "20260904220500"
       }
     ]
   },
@@ -101,45 +101,18 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "location": "富山県",
-      "updatedAt": "2026-09-04T19:07:50.188929+00:00",
+      "updatedAt": "2026-09-04T21:26:27.637991+00:00",
       "current": {
-        "time": "2026-09-05T04:00",
+        "time": "2026-09-05T06:15",
         "interval": 900,
-        "temperature_2m": 22.5,
-        "relative_humidity_2m": 77,
-        "apparent_temperature": 24.6,
+        "temperature_2m": 21.8,
+        "relative_humidity_2m": 80,
+        "apparent_temperature": 24.2,
         "precipitation": 0.0,
-        "weather_code": 2,
-        "wind_speed_10m": 5.7
+        "weather_code": 1,
+        "wind_speed_10m": 4.3
       },
       "hourly": [
-        {
-          "time": "2026-09-05T04:00",
-          "temp": 22.5,
-          "humidity": 77,
-          "feelsLike": 24.6,
-          "rainProb": 0,
-          "rain": 0.0,
-          "wind": 5.7
-        },
-        {
-          "time": "2026-09-05T05:00",
-          "temp": 22.1,
-          "humidity": 79,
-          "feelsLike": 24.3,
-          "rainProb": 0,
-          "rain": 0.0,
-          "wind": 5.0
-        },
-        {
-          "time": "2026-09-05T06:00",
-          "temp": 21.7,
-          "humidity": 81,
-          "feelsLike": 24.0,
-          "rainProb": 0,
-          "rain": 0.0,
-          "wind": 4.3
-        },
         {
           "time": "2026-09-05T07:00",
           "temp": 22.7,
@@ -328,6 +301,33 @@
           "rainProb": 0,
           "rain": 0.0,
           "wind": 2.7
+        },
+        {
+          "time": "2026-09-06T04:00",
+          "temp": 20.1,
+          "humidity": 84,
+          "feelsLike": 22.3,
+          "rainProb": 0,
+          "rain": 0.0,
+          "wind": 2.8
+        },
+        {
+          "time": "2026-09-06T05:00",
+          "temp": 19.9,
+          "humidity": 83,
+          "feelsLike": 21.9,
+          "rainProb": 0,
+          "rain": 0.0,
+          "wind": 3.3
+        },
+        {
+          "time": "2026-09-06T06:00",
+          "temp": 19.9,
+          "humidity": 84,
+          "feelsLike": 21.9,
+          "rainProb": 0,
+          "rain": 0.0,
+          "wind": 3.3
         }
       ],
       "daily": [
@@ -354,29 +354,29 @@
         },
         {
           "date": "2026-09-08",
-          "max": 26.4,
-          "min": 19.7,
+          "max": 29.6,
+          "min": 21.3,
           "rain": 45.05,
           "code": 95
         },
         {
           "date": "2026-09-09",
-          "max": 23.3,
-          "min": 21.3,
+          "max": 23.7,
+          "min": 21.9,
           "rain": 69.4,
           "code": 95
         },
         {
           "date": "2026-09-10",
-          "max": 24.1,
-          "min": 20.5,
+          "max": 21.8,
+          "min": 19.0,
           "rain": 45.2,
           "code": 81
         },
         {
           "date": "2026-09-11",
-          "max": 26.1,
-          "min": 21.3,
+          "max": 23.3,
+          "min": 19.2,
           "rain": 23.2,
           "code": 80
         }

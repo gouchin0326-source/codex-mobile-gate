@@ -1,18 +1,18 @@
 {
-  "updatedAt": "2026-09-04T19:07:50.188929+00:00",
+  "updatedAt": "2026-09-04T21:26:27.637991+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "Project HydraFusion: Frontier quality via multi-model orchestration",
+  "topLine": "GPT-6 Astra is generally available in GitHub Copilot",
   "cards": [
     {
       "genre": "開発",
       "count": 14,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "Project HydraFusion: Frontier quality via multi-model orchestration / Upcoming deprecation of selected GitHub Copilot models / Gemini 3.8 Flash is now available in GitHub Copilot",
-      "topUrl": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/",
-      "score": 4
+      "signal": "GPT-6 Astra is generally available in GitHub Copilot / Project HydraFusion: Frontier quality via multi-model orchestration / Upcoming deprecation of selected GitHub Copilot models",
+      "topUrl": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot",
+      "score": 5
     },
     {
       "genre": "AI",
@@ -42,6 +42,13 @@
   "focus": [
     {
       "label": "開発",
+      "title": "GPT-6 Astra is generally available in GitHub Copilot",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot"
+    },
+    {
+      "label": "開発",
       "title": "Project HydraFusion: Frontier quality via multi-model orchestration",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
@@ -63,10 +70,10 @@
     },
     {
       "label": "開発",
-      "title": "Enterprise-managed settings support any default model",
+      "title": "New API endpoint provides privacy-safe star history data",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-02-enterprise-managed-settings-support-any-default-model"
+      "url": "https://github.blog/changelog/2026-09-04-new-api-endpoint-provides-privacy-safe-star-history-data"
     },
     {
       "label": "論文",
@@ -88,16 +95,28 @@
       "why": "Codex/AI開発判断に関係",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2609.03416"
-    },
-    {
-      "label": "論文",
-      "title": "DuplexSpeechBench-IFEval: Evaluating Implicit Instruction Following in Full-Duplex Voice Agents",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.03423"
     }
   ],
   "items": [
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "GPT-6 Astra is generally available in GitHub Copilot",
+      "summary": "GPT-6 Astra from OpenAI is now available in GitHub Copilot. OpenAI’s latest general-purpose model, GPT-6 Astra, is designed for long-horizon, autonomous coding and agentic tasks. In our internal testing, GPT-6… The post ",
+      "url": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot",
+      "published": "2026-09-04T18:59:51+00:00",
+      "score": 5,
+      "tags": [
+        "開発",
+        "重要",
+        "制作",
+        "研究"
+      ]
+    },
     {
       "source": "github-blog",
       "platform": "開発",
@@ -157,17 +176,16 @@
       "platform": "開発",
       "label": "GitHub更新",
       "genre": "開発",
-      "topic": "AI",
+      "topic": "開発",
       "sourceWeight": 1,
-      "title": "Enterprise-managed settings support any default model",
-      "summary": "You can now set your preferred GitHub Copilot model as the default for new conversations through enterprise-managed settings. This lets you choose the default model that best fits your workflows.… The post Enterprise-man",
-      "url": "https://github.blog/changelog/2026-09-02-enterprise-managed-settings-support-any-default-model",
-      "published": "2026-09-02T18:51:12+00:00",
-      "score": 4,
+      "title": "New API endpoint provides privacy-safe star history data",
+      "summary": "Track repository star growth over time with the new star history REST API endpoint without exposing stargazer identities. Earlier this year, stargazer listing endpoints were restricted to admins and collaborators… The po",
+      "url": "https://github.blog/changelog/2026-09-04-new-api-endpoint-provides-privacy-safe-star-history-data",
+      "published": "2026-09-04T16:43:56+00:00",
+      "score": 3,
       "tags": [
         "開発",
-        "重要",
-        "研究"
+        "重要"
       ]
     },
     {
@@ -287,23 +305,6 @@
       "summary": "Learn how to run parallel agents in the GitHub Copilot app, and experience the moment it stops feeling scary and starts feeling powerful. The post GitHub Copilot app for Beginners: Run several agents at once appeared fir",
       "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/",
       "published": "2026-09-03T16:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "CodeQL 2.26.4 improves GitHub actions security detections",
-      "summary": "CodeQL is the static analysis engine behind GitHub code scanning, which finds and remediates security issues in your code. We’ve recently released CodeQL 2.26.4, which adds support for Go 1.27,… The post CodeQL 2.26.4 im",
-      "url": "https://github.blog/changelog/2026-09-03-codeql-2-26-4-improves-github-actions-security-detections",
-      "published": "2026-09-03T14:04:59+00:00",
       "score": 3,
       "tags": [
         "開発",
