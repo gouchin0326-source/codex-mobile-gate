@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T02:58:08.697100+00:00",
+  "updatedAt": "2026-09-04T04:33:30.745975+00:00",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "freeMeaning": "Public RSS/API data is fetched by program, categorized, scored, and summarized into local static JSON. It is not a bookmark list and does not scrape ordinary web pages.",
@@ -100,10 +100,10 @@
     {
       "genre": "論文",
       "count": 8,
-      "signal": "Architecting Conversational Data Systems for Stateless LLM APIs: The Hydration Proxy Pattern / The Memory Trust Gap: Capability-Dependent Failures in Persistent-Memory Agents / Eva",
+      "signal": "Speculative Macro Commit for Faster Tool-Using Agents / Fresh Memory, Stale Plans: Dependency-Scoped Validation for Distributed LLM-Agent Memory / Dude: A Dual-Detection Multi-Agen",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://arxiv.org/abs/2609.01834",
-      "score": 4
+      "topUrl": "https://arxiv.org/abs/2609.03236",
+      "score": 3
     },
     {
       "genre": "AI",
@@ -114,28 +114,28 @@
       "score": 3
     },
     {
-      "genre": "災害",
+      "genre": "技術",
       "count": 2,
-      "signal": "M 0.8 - 10 km NW of The Geysers, CA / M 0.9 - 10 km NW of The Geysers, CA",
+      "signal": "NES dumping over audio / Audacity 4.0.0 Released",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429452",
-      "score": 1
+      "topUrl": "https://mathstodon.xyz/@JordiGH/117209252363385093",
+      "score": 2
     },
     {
       "genre": "天気",
       "count": 1,
-      "signal": "富山 25.6℃ / 雨 0.0mm / 風 10.9km/h",
+      "signal": "富山 25.9℃ / 雨 0.0mm / 風 9.7km/h",
       "decision": "今日の作業環境メモ",
       "topUrl": "https://api.open-meteo.com/v1/forecast?latitude=36.6953&longitude=137.2113&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
       "score": 1
     },
     {
-      "genre": "技術",
+      "genre": "災害",
       "count": 1,
-      "signal": "Audacity 4.0.0 Released",
+      "signal": "M 0.8 - 8 km NW of The Geysers, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0",
-      "score": 2
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429492",
+      "score": 1
     }
   ],
   "items": [
@@ -158,15 +158,14 @@
       "source": "arxiv-ai",
       "label": "arXiv AI",
       "genre": "論文",
-      "title": "Architecting Conversational Data Systems for Stateless LLM APIs: The Hydration Proxy Pattern",
-      "summary": "arXiv:2609.01834v1 Announce Type: new Abstract: As enterprise platforms transition to conversational reasoning interfaces, the stateless nature of LLM APIs creates an architectural gap. While statelessness enables horizo",
-      "url": "https://arxiv.org/abs/2609.01834",
-      "published": "2026-09-03T04:00:00+00:00",
-      "score": 4,
+      "title": "Speculative Macro Commit for Faster Tool-Using Agents",
+      "summary": "arXiv:2609.03236v1 Announce Type: new Abstract: Tool-using LLM agents spend wall-clock time not only on model inference but also in serial action--observation turns, where each tool call, environment transition, and obse",
+      "url": "https://arxiv.org/abs/2609.03236",
+      "published": "2026-09-04T04:00:00+00:00",
+      "score": 3,
       "tags": [
         "論文",
         "重要",
-        "開発",
         "研究"
       ]
     },
@@ -203,24 +202,24 @@
       "source": "lobsters",
       "label": "技術RSS",
       "genre": "技術",
-      "title": "Audacity 4.0.0 Released",
+      "title": "NES dumping over audio",
       "summary": "Comments",
-      "url": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0",
-      "published": "2026-09-03T13:52:43+00:00",
+      "url": "https://mathstodon.xyz/@JordiGH/117209252363385093",
+      "published": "2026-09-03T21:40:36+00:00",
       "score": 2,
       "tags": [
         "技術",
-        "重要"
+        "制作"
       ]
     },
     {
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "genre": "天気",
-      "title": "富山 25.6℃ / 雨 0.0mm / 風 10.9km/h",
+      "title": "富山 25.9℃ / 雨 0.0mm / 風 9.7km/h",
       "summary": "Open-Meteo no-key weather fetch",
       "url": "https://api.open-meteo.com/v1/forecast?latitude=36.6953&longitude=137.2113&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
-      "published": "2026-09-04T11:45",
+      "published": "2026-09-04T13:30",
       "score": 1,
       "tags": [
         "天気"
@@ -230,10 +229,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.8 - 10 km NW of The Geysers, CA",
-      "summary": "10 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429452",
-      "published": "2026-09-04T02:41:39.490000+00:00",
+      "title": "M 0.8 - 8 km NW of The Geysers, CA",
+      "summary": "8 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429492",
+      "published": "2026-09-04T04:28:02.060000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -265,6 +264,51 @@
       "score": 4,
       "tags": [
         "開発",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "title": "Fresh Memory, Stale Plans: Dependency-Scoped Validation for Distributed LLM-Agent Memory",
+      "summary": "arXiv:2609.03340v1 Announce Type: new Abstract: Distributed LLM-agent teams can read the latest shared facts and still act on an obsolete plan. A planner may derive an action from requirement $r_3$, another agent may com",
+      "url": "https://arxiv.org/abs/2609.03340",
+      "published": "2026-09-04T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "title": "Dude: A Dual-Detection Multi-Agent System for Paper-Code Discrepancy Detection",
+      "summary": "arXiv:2609.03416v1 Announce Type: new Abstract: LLM-empowered paper-code discrepancy detection has received growing concern since the scaling of research submissions exceeds the manual review capability. However, the lim",
+      "url": "https://arxiv.org/abs/2609.03416",
+      "published": "2026-09-04T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "title": "DuplexSpeechBench-IFEval: Evaluating Implicit Instruction Following in Full-Duplex Voice Agents",
+      "summary": "arXiv:2609.03423v1 Announce Type: new Abstract: Full-duplex voice agents must continuously decide when to listen, backchannel, interrupt, handle speech overlaps, take the floor, and yield. Existing benchmarks largely tes",
+      "url": "https://arxiv.org/abs/2609.03423",
+      "published": "2026-09-04T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
         "重要",
         "研究"
       ]
@@ -323,21 +367,6 @@
       "tags": [
         "AI",
         "制作",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "title": "The Memory Trust Gap: Capability-Dependent Failures in Persistent-Memory Agents",
-      "summary": "arXiv:2609.01852v1 Announce Type: new Abstract: Persistent memory supports personalized agents, but a stale stored fact can override current authoritative evidence without warning. We study when this harm begins as model",
-      "url": "https://arxiv.org/abs/2609.01852",
-      "published": "2026-09-03T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
         "研究"
       ]
     },
@@ -485,6 +514,62 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "title": "Structure and Implementation of New Practical English Textbooks Driven by Artificial Intelligence",
+      "summary": "arXiv:2609.02981v1 Announce Type: new Abstract: Artificial intelligence is changing the form of applied English materials from fixed paper sequences to adaptive learning systems that can diagnose learners, recommend task",
+      "url": "https://arxiv.org/abs/2609.02981",
+      "published": "2026-09-04T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "title": "MasterControl Seventeen Every Time",
+      "summary": "arXiv:2609.03209v1 Announce Type: new Abstract: We study a governed approach to enterprise analytics: a language model interprets the question, while deterministic policy selects and runs a pre-approved analytical progra",
+      "url": "https://arxiv.org/abs/2609.03209",
+      "published": "2026-09-04T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "title": "A Prompt-Engineering Approach to Develop Scalable, Flexible, and Real-Time Hybrid Micro-Level Personalization in a General Purpose AI Teaching Assistant",
+      "summary": "arXiv:2609.03402v1 Announce Type: new Abstract: Artificial intelligence (AI) teaching assistants powered by large language models (LLMs) offer scalable educational support but often provide limited personalization. This ",
+      "url": "https://arxiv.org/abs/2609.03402",
+      "published": "2026-09-04T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "title": "Caught in the Story: Narrative Captivity in Multi-turn LLMs Conversation",
+      "summary": "arXiv:2609.03407v1 Announce Type: new Abstract: People increasingly turn to large language models (LLMs) for everyday advice, making ethically charged interpersonal problems a practical moral-advisory context. Most prior",
+      "url": "https://arxiv.org/abs/2609.03407",
+      "published": "2026-09-04T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
       "source": "github-changelog",
       "label": "GitHub更新",
       "genre": "開発",
@@ -498,100 +583,17 @@
       ]
     },
     {
-      "source": "arxiv-ai",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "title": "EvalDetectBench: A Benchmark for Measuring Evaluation Awareness in Frontier Language Models",
-      "summary": "arXiv:2609.01611v1 Announce Type: new Abstract: Frontier large language models can often recognize when they are being evaluated, a capability known as evaluation awareness. If models behave differently in evaluations th",
-      "url": "https://arxiv.org/abs/2609.01611",
-      "published": "2026-09-03T04:00:00+00:00",
+      "source": "lobsters",
+      "label": "技術RSS",
+      "genre": "技術",
+      "title": "Audacity 4.0.0 Released",
+      "summary": "Comments",
+      "url": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0",
+      "published": "2026-09-03T13:52:43+00:00",
       "score": 2,
       "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "title": "Meta-ethics and AI: exploring the novel meta-ethical questions in the era of AI",
-      "summary": "arXiv:2609.01685v1 Announce Type: new Abstract: With the development of artificial intelligence (AI), the landscape of meta-ethics, which has largely centred on human ethics, faces pressures that may significantly reconf",
-      "url": "https://arxiv.org/abs/2609.01685",
-      "published": "2026-09-03T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "title": "When Can a Machine Trust a Statute? A Survival Certificate for Machine-Extracted Legal Logic",
-      "summary": "arXiv:2609.01741v1 Announce Type: new Abstract: Statutes are increasingly parsed by machines before people read them, and the parsers disagree: on Missouri's statutes, two independently written extractors diverge on nume",
-      "url": "https://arxiv.org/abs/2609.01741",
-      "published": "2026-09-03T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "title": "When Does Information Sharing Improve Decentralized Discovery? Aggregation, Independent Rescue, and Equilibrium Selection",
-      "summary": "arXiv:2609.01814v1 Announce Type: new Abstract: Information sharing can improve a pooled estimate while eliminating independent rescue actions. This paper separates those effects in exact finite discovery models. A centr",
-      "url": "https://arxiv.org/abs/2609.01814",
-      "published": "2026-09-03T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "title": "Induction and Inquiry via Probabilistic Reasoning over Language and Code",
-      "summary": "arXiv:2609.01815v1 Announce Type: new Abstract: How humans grow and maintain abstract knowledge from the sparse, streaming noisy data of experience is a longstanding challenge in cognitive science. Any computational acco",
-      "url": "https://arxiv.org/abs/2609.01815",
-      "published": "2026-09-03T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "title": "SSAKG 2.0: An Open-Source Package for Structural Associative Sequence Memory and Context-Based Retrieval",
-      "summary": "arXiv:2609.01849v1 Announce Type: new Abstract: This article presents SSAKG 2.0, an open-source software package for constructing and operating Structural Sequential Associative Knowledge Graphs (SSAKGs). An SSAKG repres",
-      "url": "https://arxiv.org/abs/2609.01849",
-      "published": "2026-09-03T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.9 - 10 km NW of The Geysers, CA",
-      "summary": "10 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429447",
-      "published": "2026-09-04T02:40:35.450000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
+        "技術",
+        "重要"
       ]
     }
   ],
