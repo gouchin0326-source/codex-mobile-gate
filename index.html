@@ -640,10 +640,10 @@
     <div class="wrap top">
       <div>
         <h1>CG</h1>
-        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-04 14:29 JST</p>
+        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-04 16:26 JST</p>
       </div>
       <button class="refresh" id="force-update" type="button">最新版に更新</button>
-      <div class="date">更新 2026-09-04 14:29 JST</div>
+      <div class="date">更新 2026-09-04 16:26 JST</div>
     </div>
   </header>
 
@@ -727,15 +727,15 @@
     <section class="tab-panel" id="tab-settings">
       <h2>設定</h2>
       <div class="setting-row">
-        <div class="setting-pill"><b>取得 6h</b><span>Actions側</span></div>
+        <div class="setting-pill" id="cadence-pill"><b>取得 6h</b><span>毎時判定</span></div>
         <div class="setting-pill" id="traffic-pill"><b>通信 計測中</b><span>今回読込</span></div>
-        <div class="setting-pill"><b>変更 Git</b><span>workflow編集</span></div>
+        <div class="setting-pill"><b>変更 可</b><span>手動実行入力</span></div>
       </div>
       <div class="auto-list">
-        <div class="auto-line">推奨: 通常6h。天気警戒時だけ1-3h。スマホ通信は閲覧時JSON量が主因。</div>
+        <div class="auto-line" id="cadence-note">推奨: 通常6h。天気警戒時だけ1h。Actionsは毎時起動し、期限到達時だけ取得。</div>
       </div>
       <div class="phone-grid">
-        <a class="app-icon updated" href="./latest/index.html?v=202609041429"><b class="glyph g-dev">更</b><span>最新版</span></a>
+        <a class="app-icon updated" href="./latest/index.html?v=202609041626"><b class="glyph g-dev">更</b><span>最新版</span></a>
         <a class="app-icon updated" href="./latest/index.html"><b class="glyph g-dev">CG</b><span>ホーム</span></a>
         <a class="app-icon updated" href="./latest/data/zero-token-capabilities.json"><b class="glyph g-data">証</b><span>0証明</span></a>
         <a class="app-icon updated" href="./latest/data/weather-info.json"><b class="glyph g-data">警</b><span>警戒設定</span></a>
@@ -744,6 +744,7 @@
         <a class="app-icon updated" href="./latest/data/gate-health.json"><b class="glyph g-tool">HJ</b><span>監視JSON</span></a>
         <a class="app-icon updated" href="./latest/data/codex-usage-snapshot.json"><b class="glyph g-dev">CJ</b><span>残量JSON</span></a>
         <a class="app-icon updated" href="./latest/data/free-source-catalog.json"><b class="glyph g-data">源</b><span>取得源</span></a>
+        <a class="app-icon updated" href="./data/free_info_schedule.json"><b class="glyph g-tool">頻</b><span>取得頻度</span></a>
       </div>
     </section>
   </main>
@@ -842,6 +843,14 @@
           if (notice) notice.classList.add("warn");
           document.querySelectorAll("[data-usage-icon]").forEach((el) => el.classList.add("danger"));
         }
+      })
+      .catch(() => {});
+    fetch("./data/free_info_schedule.json?v=" + Date.now())
+      .then((res) => res.ok ? res.json() : null)
+      .then((data) => {
+        if (!data) return;
+        const pill = document.querySelector("#cadence-pill");
+        if (pill) pill.innerHTML = `<b>取得 ${data.cadenceHours}h</b><span>警戒時${data.weatherRiskCadenceHours}h</span>`;
       })
       .catch(() => {});
     setTimeout(() => {

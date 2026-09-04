@@ -1,0 +1,10 @@
+{
+  "cadenceHours": 6,
+  "allowedCadenceHours": [1, 3, 6, 12, 24],
+  "adaptiveWeather": true,
+  "weatherRiskCadenceHours": 1,
+  "minCadenceHours": 1,
+  "maxCadenceHours": 24,
+  "updatedAt": "2026-09-04T16:26:00+09:00",
+  "note": "GitHub Actions runs hourly. Python fetches only when this setting is due."
+}
