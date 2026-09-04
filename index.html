@@ -509,22 +509,57 @@
       background: var(--rose);
     }
 
-    .notice {
+    .status-section { padding: 8px; }
+
+    .status-strip {
       display: grid;
-      gap: 5px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 6px;
     }
 
-    .notice-line {
-      min-height: 34px;
-      padding: 7px 9px;
+    .notice {
+      min-height: 66px;
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      grid-template-rows: 1fr 1fr;
+      align-items: center;
+      column-gap: 7px;
+      padding: 8px;
       border: 1px solid var(--line);
       border-radius: 8px;
-      background: #fff7ed;
+      background: #ffffff;
       color: var(--ink);
-      font-size: .92rem;
-      font-weight: 900;
-      line-height: 1.25;
+      text-decoration: none;
+      overflow: hidden;
     }
+
+    .notice b {
+      grid-row: 1 / 3;
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: #172033;
+      color: #fff;
+      font-size: .9rem;
+    }
+
+    .notice span,
+    .notice i {
+      display: block;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 1.1;
+    }
+
+    .notice span { font-size: .82rem; }
+    .notice i { color: var(--muted); font-size: .68rem; }
+    .notice.warn b { background: var(--rose); }
 
     .tabs {
       display: grid;
@@ -576,27 +611,20 @@
     <div class="wrap top">
       <div>
         <h1>CG</h1>
-        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-04 13:37 JST</p>
+        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-04 13:47 JST</p>
       </div>
       <button class="refresh" id="force-update" type="button">最新版に更新</button>
-      <div class="date">更新 2026-09-04 13:37 JST</div>
+      <div class="date">更新 2026-09-04 13:47 JST</div>
     </div>
   </header>
 
   <main class="wrap">
-    <section>
-      <h2>お知らせ</h2>
-      <div class="notice" id="weather-notice">
-        <div class="notice-line">富山: 天気警戒を読込中</div>
-        <div class="notice-line">一次API/RSSで自動更新</div>
-      </div>
-      <div class="notice" id="health-notice">
-        <div class="notice-line">CG: 自動更新を確認中</div>
-        <div class="notice-line">Actions/JSON監視</div>
-      </div>
-      <div class="notice" id="usage-notice">
-        <div class="notice-line">Codex: 残量を確認中</div>
-        <div class="notice-line">指示出し余力を計算</div>
+    <section class="status-section">
+      <h2>状態</h2>
+      <div class="status-strip">
+        <a class="notice" id="weather-notice" href="./latest/weather-info/index.html"><b>天</b><span>富山</span><i>読込中</i></a>
+        <a class="notice" id="health-notice" href="./latest/gate-health/index.html"><b>CG</b><span>更新</span><i>確認中</i></a>
+        <a class="notice" id="usage-notice" href="./latest/codex-usage/index.html"><b>残</b><span>Codex</span><i>確認中</i></a>
       </div>
     </section>
 
@@ -674,7 +702,7 @@
         <div class="auto-line">管理: 表示分類、データ取得、警告表示、GitHub Pages公開</div>
       </div>
       <div class="phone-grid">
-        <a class="app-icon updated" href="./latest/index.html?v=202609041337"><b class="glyph g-dev">更</b><span>最新版</span></a>
+        <a class="app-icon updated" href="./latest/index.html?v=202609041347"><b class="glyph g-dev">更</b><span>最新版</span></a>
         <a class="app-icon updated" href="./latest/index.html"><b class="glyph g-dev">CG</b><span>ホーム</span></a>
         <a class="app-icon updated" href="./latest/data/zero-token-capabilities.json"><b class="glyph g-data">証</b><span>0証明</span></a>
         <a class="app-icon updated" href="./latest/data/weather-info.json"><b class="glyph g-data">警</b><span>警戒設定</span></a>
@@ -748,8 +776,9 @@
         if (!risk) return;
         const lines = risk.lines || ["富山: 天気情報あり", "詳細は天気アプリ"];
         const notice = document.querySelector("#weather-notice");
-        if (notice) notice.innerHTML = lines.slice(0, 2).map((line) => `<div class="notice-line">${line}</div>`).join("");
+        if (notice) notice.innerHTML = `<b>天</b><span>${lines[0] || "富山"}</span><i>${lines[1] || "天気"}</i>`;
         if (risk.level && risk.level !== "normal") {
+          if (notice) notice.classList.add("warn");
           document.querySelectorAll("[data-weather-icon]").forEach((el) => el.classList.add("danger"));
         }
       })
@@ -760,8 +789,9 @@
         if (!data) return;
         const notice = document.querySelector("#health-notice");
         const lines = data.lines || ["CG: 監視情報あり", "詳細はCG監視"];
-        if (notice) notice.innerHTML = lines.slice(0, 2).map((line) => `<div class="notice-line">${line}</div>`).join("");
+        if (notice) notice.innerHTML = `<b>CG</b><span>${lines[0] || "CG"}</span><i>${lines[1] || "監視"}</i>`;
         if (data.level && data.level !== "normal") {
+          if (notice) notice.classList.add("warn");
           document.querySelectorAll("[data-health-icon]").forEach((el) => el.classList.add("danger"));
         }
       })
@@ -772,9 +802,10 @@
         if (!data || !data.decision) return;
         const notice = document.querySelector("#usage-notice");
         if (notice) {
-          notice.innerHTML = `<div class="notice-line">${data.decision.line1}</div><div class="notice-line">${data.decision.line2}</div>`;
+          notice.innerHTML = `<b>残</b><span>${data.primary.remainingPercent}% / 週${data.secondary.remainingPercent}%</span><i>券${data.resetCredits.availableCount} 最短${String(data.resetCredits.nearestExpiresAt || "").slice(5, 10)}</i>`;
         }
         if ((data.primary && data.primary.remainingPercent < 30) || (data.secondary && data.secondary.remainingPercent < 25) || (data.resetCredits && data.resetCredits.nearestDaysLeft <= 3)) {
+          if (notice) notice.classList.add("warn");
           document.querySelectorAll("[data-usage-icon]").forEach((el) => el.classList.add("danger"));
         }
       })
