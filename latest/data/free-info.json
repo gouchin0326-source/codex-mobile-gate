@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T16:37:08.676517+00:00",
+  "updatedAt": "2026-09-04T19:07:50.188929+00:00",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "freeMeaning": "Public RSS/API data is fetched by program, categorized, scored, and summarized into local static JSON. It is not a bookmark list and does not scrape ordinary web pages.",
@@ -130,7 +130,7 @@
     {
       "genre": "天気",
       "count": 1,
-      "signal": "富山 23.2℃ / 雨 0.0mm / 風 6.2km/h",
+      "signal": "富山 22.5℃ / 雨 0.0mm / 風 5.7km/h",
       "decision": "今日の作業環境メモ",
       "topUrl": "https://api.open-meteo.com/v1/forecast?latitude=36.6953&longitude=137.2113&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
       "score": 1
@@ -138,9 +138,9 @@
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.3 - 102 km S of McCarthy, Alaska",
+      "signal": "M 1.8 - 5 km S of Pāhala, Hawaii",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rnqlnn",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75029362",
       "score": 1
     }
   ],
@@ -238,10 +238,10 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "genre": "天気",
-      "title": "富山 23.2℃ / 雨 0.0mm / 風 6.2km/h",
+      "title": "富山 22.5℃ / 雨 0.0mm / 風 5.7km/h",
       "summary": "Open-Meteo no-key weather fetch",
       "url": "https://api.open-meteo.com/v1/forecast?latitude=36.6953&longitude=137.2113&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
-      "published": "2026-09-05T01:30",
+      "published": "2026-09-05T04:00",
       "score": 1,
       "tags": [
         "天気"
@@ -251,10 +251,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.3 - 102 km S of McCarthy, Alaska",
-      "summary": "102 km S of McCarthy, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rnqlnn",
-      "published": "2026-09-04T16:31:32.547000+00:00",
+      "title": "M 1.8 - 5 km S of Pāhala, Hawaii",
+      "summary": "5 km S of Pāhala, Hawaii",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75029362",
+      "published": "2026-09-04T18:50:08.910000+00:00",
       "score": 1,
       "tags": [
         "災害"
