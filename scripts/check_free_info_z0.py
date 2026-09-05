@@ -52,14 +52,16 @@ def run():
     original_fetch = MODULE.fetch
     original_weather_out = MODULE.WEATHER_OUT
     original_social_out = MODULE.SOCIAL_OUT
+    original_health_out = MODULE.HEALTH_OUT
     original_social_sources = MODULE.SOCIAL_SOURCES
     try:
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
             MODULE.WEATHER_OUT = root / "weather.json"
             MODULE.SOCIAL_OUT = root / "social.json"
+            MODULE.HEALTH_OUT = root / "health.json"
 
-            MODULE.fetch = lambda _url: (_ for _ in ()).throw(OSError("offline"))
+            MODULE.fetch = lambda _url, *_args, **_kwargs: (_ for _ in ()).throw(OSError("offline"))
             empty = MODULE.build_weather_payload(weather_source(), now)
             require(empty["status"] == "unavailable", "all-source failure must be unavailable")
             require(empty["risk"]["level"] == "unknown", "all-source failure must not be normal")
@@ -76,7 +78,7 @@ def run():
             require(stale["locations"][0]["stale"] is True, "fallback row must be marked stale")
             require(stale["lastSuccessAt"] == previous["lastSuccessAt"], "failure must preserve last success")
 
-            def good_fetch(url):
+            def good_fetch(url, *_args, **_kwargs):
                 if url == MODULE.JMA_TOYAMA_WARNING:
                     return b'{"areaTypes":[]}'
                 if url == MODULE.JMA_NOWCAST_TARGETS:
@@ -89,7 +91,7 @@ def run():
             require(fresh["risk"]["level"] == "normal", "valid empty warning and mild forecast may be normal")
             require(fresh["lastSuccessAt"] == now, "fresh data must update last success")
 
-            MODULE.fetch = lambda url: b"[]" if url == MODULE.JMA_TOYAMA_WARNING else good_fetch(url)
+            MODULE.fetch = lambda url, *args, **kwargs: b"[]" if url == MODULE.JMA_TOYAMA_WARNING else good_fetch(url, *args, **kwargs)
             schema_error = MODULE.build_weather_payload(weather_source(), now)
             require(schema_error["risk"]["level"] == "unknown", "bad warning schema must not become normal")
             require(schema_error["status"] == "stale", "partial schema failure must be stale")
@@ -100,7 +102,7 @@ def run():
                 "items": [{"source": "social-test", "title": "日本語の前回情報", "regionScore": 1}],
                 "sourceStates": [{"id": "social-test", "lastSuccessAt": "2026-09-04T00:00:00+00:00"}],
             }, ensure_ascii=False), encoding="utf-8")
-            MODULE.fetch = lambda _url: (_ for _ in ()).throw(OSError("offline"))
+            MODULE.fetch = lambda _url, *_args, **_kwargs: (_ for _ in ()).throw(OSError("offline"))
             social = MODULE.build_social_payload(now)
             require(social["status"] == "stale", "social fallback must be stale")
             require(social["items"][0]["stale"] is True, "social fallback item must be marked stale")
@@ -114,6 +116,7 @@ def run():
         MODULE.fetch = original_fetch
         MODULE.WEATHER_OUT = original_weather_out
         MODULE.SOCIAL_OUT = original_social_out
+        MODULE.HEALTH_OUT = original_health_out
         MODULE.SOCIAL_SOURCES = original_social_sources
     print("Z0 checks passed")
 

@@ -10,9 +10,13 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from pathlib import Path
 
+from free_fetch_runtime import FetchController, SourceReuse
+
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES = ROOT / "data" / "news_sources.json"
 SCHEDULE = ROOT / "data" / "free_info_schedule.json"
+SOURCE_POLICY = ROOT / "data" / "free_sources_v2.json"
+FETCH_STATE = ROOT / "data" / "free_info_state.json"
 OUT = ROOT / "latest" / "data" / "free-info.json"
 AI_OUT = ROOT / "latest" / "data" / "ai-info.json"
 WEATHER_OUT = ROOT / "latest" / "data" / "weather-info.json"
@@ -25,6 +29,7 @@ JMA_NOWCAST_TARGETS = "https://www.jma.go.jp/bosai/jmatile/data/nowc/targetTimes
 GITHUB_RUNS = "https://api.github.com/repos/gouchin0326-source/codex-mobile-gate/actions/runs?per_page=8"
 TOYAMA_LAT = 36.6953
 TOYAMA_LON = 137.2113
+FETCH_CONTROLLER = None
 
 KEYWORDS = {
     "重要": ["codex", "agent", "openai", "github", "security", "safety", "release", "api"],
@@ -370,6 +375,7 @@ SOURCE_CATALOG = [
 def build_source_catalog(now, sources, schedule):
     active = [x for x in SOURCE_CATALOG if x["status"] == "active"]
     candidate = [x for x in SOURCE_CATALOG if x["status"] == "candidate"]
+    fetch_policy = json.loads(SOURCE_POLICY.read_text(encoding="utf-8"))
     return {
         "updatedAt": now,
         "mode": "zero-token-source-catalog",
@@ -389,15 +395,41 @@ def build_source_catalog(now, sources, schedule):
             "candidate": len(candidate),
             "configuredSources": len(sources),
         },
+        "fetchPolicy": {
+            "budgets": fetch_policy["budgets"],
+            "sources": [
+                {
+                    "id": row["id"],
+                    "enabled": row.get("enabled", True),
+                    "intervalMinutes": row["intervalMinutes"],
+                    "ttlMinutes": row["ttlMinutes"],
+                    "maxBytes": row["maxBytes"],
+                }
+                for row in fetch_policy["sources"]
+            ],
+        },
         "active": sorted(active, key=lambda x: (-x["score"], x["genre"], x["id"])),
         "candidate": sorted(candidate, key=lambda x: (-x["score"], x["genre"], x["id"])),
     }
 
 
-def fetch(url):
+def fetch(url, source_id=None, has_previous=False):
+    if FETCH_CONTROLLER is not None and source_id:
+        return FETCH_CONTROLLER.fetch(source_id, url, has_previous=has_previous)
     req = urllib.request.Request(url, headers={"User-Agent": "CODEXGATE-FreeInfo/1.0"})
     with urllib.request.urlopen(req, timeout=25) as res:
         return res.read()
+
+
+def source_state(source_id, has_previous, previous_state=None, now=None):
+    if FETCH_CONTROLLER is not None:
+        return FETCH_CONTROLLER.public_state(source_id, has_previous=has_previous)
+    previous_state = previous_state or {}
+    return {
+        "id": source_id,
+        "status": "stale" if has_previous else "unavailable",
+        "lastSuccessAt": previous_state.get("lastSuccessAt"),
+    }
 
 
 def clean(text):
@@ -586,29 +618,35 @@ def build_social_payload(now):
         except Exception:
             previous_by_source = {}
     for source in SOCIAL_SOURCES:
+        fallback = previous_by_source.get(source["id"], [])
+        previous_state = next((x for x in previous.get("sourceStates", []) if x.get("id") == source["id"]), {})
         try:
-            blob = fetch(source["url"])
+            blob = fetch(source["url"], source["id"], has_previous=bool(fallback))
             if source["type"] == "mastodon":
                 items.extend(parse_mastodon(source, blob))
             elif source["type"] == "bluesky":
                 items.extend(parse_bluesky(source, blob))
             else:
                 items.extend(parse_rss(source, blob))
-            source_states.append({"id": source["id"], "status": "fresh", "lastSuccessAt": now})
+            source_states.append(source_state(source["id"], False, now=now) if FETCH_CONTROLLER else {"id": source["id"], "status": "fresh", "lastSuccessAt": now})
+        except SourceReuse:
+            state = source_state(source["id"], bool(fallback), previous_state, now)
+            for previous_item in fallback:
+                item = dict(previous_item)
+                if state["status"] != "fresh":
+                    item["stale"] = True
+                else:
+                    item.pop("stale", None)
+                items.append(item)
+            source_states.append(state)
         except Exception as exc:
-            fallback = previous_by_source.get(source["id"], [])
             if fallback:
                 for previous_item in fallback:
                     item = dict(previous_item)
                     item["stale"] = True
                     items.append(item)
             errors.append({"source": source["id"], "platform": source["platform"], "error": str(exc)[:160], "fallbackItems": len(fallback)})
-            previous_state = next((x for x in previous.get("sourceStates", []) if x.get("id") == source["id"]), {})
-            source_states.append({
-                "id": source["id"],
-                "status": "stale" if fallback else "unavailable",
-                "lastSuccessAt": previous_state.get("lastSuccessAt"),
-            })
+            source_states.append(source_state(source["id"], bool(fallback), previous_state, now))
     for item in items:
         if "regionScore" not in item:
             item["regionScore"] = social_region_score(item.get("title", ""), {"url": item.get("url", ""), "id": item.get("source", "")})
@@ -647,8 +685,10 @@ def build_social_payload(now):
             "headline": top[0].get("title", "") if top else "",
             "urls": [{"title": x.get("title", "")[:80], "url": x.get("url", ""), "platform": x.get("platform", "")} for x in top],
         })
-    dataset_status = "fresh" if not errors else ("stale" if items else "unavailable")
-    last_success_at = now if not errors else previous.get("lastSuccessAt")
+    all_fresh = bool(source_states) and all(state.get("status") == "fresh" for state in source_states)
+    dataset_status = "fresh" if all_fresh and not errors else ("stale" if items else "unavailable")
+    success_times = [state.get("lastSuccessAt") for state in source_states if state.get("lastSuccessAt")]
+    last_success_at = max(success_times) if success_times else previous.get("lastSuccessAt")
     return {
         "updatedAt": now,
         "lastSuccessAt": last_success_at,
@@ -746,8 +786,10 @@ def build_weather_payload(sources, now):
         except Exception:
             previous = {}
     warning_ok = False
+    previous_warning_state = next((x for x in previous.get("sourceStates", []) if x.get("id") == "jma-toyama-warning"), {})
+    previous_warnings = (previous.get("risk") or {}).get("jmaWarnings", [])
     try:
-        warning_data = json.loads(fetch(JMA_TOYAMA_WARNING))
+        warning_data = json.loads(fetch(JMA_TOYAMA_WARNING, "jma-toyama-warning", has_previous=bool(previous)))
         if not isinstance(warning_data, dict) or not isinstance(warning_data.get("areaTypes"), list):
             raise ValueError("unexpected JMA warning schema")
         for area_type in warning_data.get("areaTypes", []):
@@ -759,11 +801,15 @@ def build_weather_payload(sources, now):
                     if kind and status not in {"解除", "発表警報・注意報はなし"}:
                         jma_warnings.append({"area": area_name, "kind": kind, "status": status})
         warning_ok = True
-        source_states.append({"id": "jma-toyama-warning", "status": "fresh", "lastSuccessAt": now})
+        source_states.append(source_state("jma-toyama-warning", False, now=now) if FETCH_CONTROLLER else {"id": "jma-toyama-warning", "status": "fresh", "lastSuccessAt": now})
+    except SourceReuse:
+        warning_state = source_state("jma-toyama-warning", bool(previous), previous_warning_state, now)
+        jma_warnings = list(previous_warnings)
+        warning_ok = warning_state["status"] == "fresh"
+        source_states.append(warning_state)
     except Exception as exc:
         errors.append({"source": "jma-toyama-warning", "error": str(exc)[:160]})
-        previous_state = next((x for x in previous.get("sourceStates", []) if x.get("id") == "jma-toyama-warning"), {})
-        source_states.append({"id": "jma-toyama-warning", "status": "unavailable", "lastSuccessAt": previous_state.get("lastSuccessAt")})
+        source_states.append(source_state("jma-toyama-warning", bool(previous), previous_warning_state, now))
 
     nowcast = {
         "label": "気象庁ナウキャスト",
@@ -773,8 +819,9 @@ def build_weather_payload(sources, now):
         "tiles": [],
         "times": [],
     }
+    previous_nowcast_state = next((x for x in previous.get("sourceStates", []) if x.get("id") == "jma-nowcast"), {})
     try:
-        targets = json.loads(fetch(JMA_NOWCAST_TARGETS))
+        targets = json.loads(fetch(JMA_NOWCAST_TARGETS, "jma-nowcast", has_previous=bool(previous.get("nowcast"))))
         if not isinstance(targets, list):
             raise ValueError("unexpected JMA nowcast schema")
         z = 9
@@ -797,14 +844,19 @@ def build_weather_payload(sources, now):
                         "z": z,
                         "url": f"https://www.jma.go.jp/bosai/jmatile/data/nowc/{t0['basetime']}/none/{t0['validtime']}/surf/hrpns/{z}/{x}/{y}.png",
                     })
-        source_states.append({"id": "jma-nowcast", "status": "fresh", "lastSuccessAt": now})
+        source_states.append(source_state("jma-nowcast", False, now=now) if FETCH_CONTROLLER else {"id": "jma-nowcast", "status": "fresh", "lastSuccessAt": now})
+    except SourceReuse:
+        if previous.get("nowcast"):
+            nowcast = dict(previous["nowcast"])
+        source_states.append(source_state("jma-nowcast", bool(previous.get("nowcast")), previous_nowcast_state, now))
     except Exception as exc:
         errors.append({"source": "jma-nowcast", "error": str(exc)[:160]})
-        previous_state = next((x for x in previous.get("sourceStates", []) if x.get("id") == "jma-nowcast"), {})
-        source_states.append({"id": "jma-nowcast", "status": "unavailable", "lastSuccessAt": previous_state.get("lastSuccessAt")})
+        source_states.append(source_state("jma-nowcast", bool(previous.get("nowcast")), previous_nowcast_state, now))
 
     forecast_successes = 0
     for source in weather_sources:
+        previous_row = next((row for row in previous.get("locations", []) if row.get("source") == source["id"]), None)
+        previous_state = next((x for x in previous.get("sourceStates", []) if x.get("id") == source["id"]), {})
         parsed = urllib.parse.urlparse(source["url"])
         qs = urllib.parse.parse_qs(parsed.query)
         qs["current"] = ["temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m"]
@@ -813,7 +865,7 @@ def build_weather_payload(sources, now):
         qs["forecast_days"] = ["7"]
         hourly_url = urllib.parse.urlunparse(parsed._replace(query=urllib.parse.urlencode(qs, doseq=True)))
         try:
-            data = json.loads(fetch(hourly_url))
+            data = json.loads(fetch(hourly_url, source["id"], has_previous=bool(previous_row)))
             current = data.get("current", {})
             hourly = data.get("hourly", {})
             daily = data.get("daily", {})
@@ -854,11 +906,24 @@ def build_weather_payload(sources, now):
                 "url": hourly_url,
             })
             forecast_successes += 1
-            source_states.append({"id": source["id"], "status": "fresh", "lastSuccessAt": now})
+            source_states.append(source_state(source["id"], False, now=now) if FETCH_CONTROLLER else {"id": source["id"], "status": "fresh", "lastSuccessAt": now})
+        except SourceReuse:
+            state = source_state(source["id"], bool(previous_row), previous_state, now)
+            if previous_row:
+                row = dict(previous_row)
+                if state["status"] != "fresh":
+                    row["stale"] = True
+                else:
+                    row.pop("stale", None)
+                rows.append(row)
+            if state["status"] == "fresh":
+                forecast_successes += 1
+            source_states.append(state)
         except Exception as exc:
             errors.append({"source": source["id"], "error": str(exc)[:160]})
-            previous_state = next((x for x in previous.get("sourceStates", []) if x.get("id") == source["id"]), {})
-            source_states.append({"id": source["id"], "status": "unavailable", "lastSuccessAt": previous_state.get("lastSuccessAt")})
+            if previous_row:
+                rows.append(dict(previous_row, stale=True))
+            source_states.append(source_state(source["id"], bool(previous_row), previous_state, now))
     if not rows and previous.get("locations"):
         rows = [dict(row, stale=True) for row in previous["locations"]]
     max_hourly_rain = max([x.get("rain") or 0 for row in rows for x in row.get("hourly", [])] or [0])
@@ -922,8 +987,14 @@ def parse_utc(value):
 def build_health_payload(now, free_payload, ai_payload, weather_payload):
     errors = []
     runs = []
+    previous = {}
+    if HEALTH_OUT.exists():
+        try:
+            previous = json.loads(HEALTH_OUT.read_text(encoding="utf-8"))
+        except Exception:
+            previous = {}
     try:
-        data = json.loads(fetch(GITHUB_RUNS))
+        data = json.loads(fetch(GITHUB_RUNS, "github-actions", has_previous=bool(previous.get("runs"))))
         for run in data.get("workflow_runs", [])[:8]:
             runs.append({
                 "name": run.get("name", ""),
@@ -933,7 +1004,10 @@ def build_health_payload(now, free_payload, ai_payload, weather_payload):
                 "updatedAt": run.get("updated_at", ""),
                 "url": run.get("html_url", ""),
             })
+    except SourceReuse:
+        runs = list(previous.get("runs", []))
     except Exception as exc:
+        runs = list(previous.get("runs", []))
         errors.append({"source": "github-actions", "error": str(exc)[:160]})
     now_dt = parse_utc(now) or datetime.now(timezone.utc)
     free_status = "fresh" if not free_payload.get("errors") else ("stale" if free_payload.get("items") else "unavailable")
@@ -972,11 +1046,13 @@ def build_health_payload(now, free_payload, ai_payload, weather_payload):
 
 
 def main():
+    global FETCH_CONTROLLER
     schedule = load_schedule()
     now_dt = datetime.now(timezone.utc)
-    due, reason = should_fetch(now_dt, schedule)
-    if not due:
-        print(f"skip free-info: {reason}")
+    force = "--force" in sys.argv or str(__import__("os").environ.get("FREE_INFO_FORCE", "")).lower() == "true"
+    FETCH_CONTROLLER = FetchController(SOURCE_POLICY, FETCH_STATE, now_dt, force=force)
+    if not FETCH_CONTROLLER.has_due_sources():
+        print("skip free-info: no source is due")
         return
     sources = json.loads(SOURCES.read_text(encoding="utf-8"))
     previous_free = {}
@@ -992,21 +1068,31 @@ def main():
     errors = []
     source_states = []
     for source in sources:
+        if source["type"] == "weather":
+            continue
+        fallback = previous_by_source.get(source["id"], [])
+        previous_state = next((x for x in previous_free.get("sourceStates", []) if x.get("id") == source["id"]), {})
         try:
-            blob = fetch(source["url"])
-            if source["type"] == "weather":
-                collected.extend(parse_weather(source, blob))
-            elif source["type"] == "json":
+            blob = fetch(source["url"], source["id"], has_previous=bool(fallback))
+            if source["type"] == "json":
                 collected.extend(parse_json(source, blob))
             else:
                 collected.extend(parse_rss(source, blob))
-            source_states.append({"id": source["id"], "status": "fresh", "lastSuccessAt": now_dt.isoformat()})
+            source_states.append(source_state(source["id"], False, now=now_dt.isoformat()))
+        except SourceReuse:
+            state = source_state(source["id"], bool(fallback), previous_state, now_dt.isoformat())
+            for previous_item in fallback:
+                item = dict(previous_item)
+                if state["status"] != "fresh":
+                    item["stale"] = True
+                else:
+                    item.pop("stale", None)
+                collected.append(item)
+            source_states.append(state)
         except Exception as exc:
-            fallback = previous_by_source.get(source["id"], [])
             for previous_item in fallback:
                 collected.append(dict(previous_item, stale=True))
-            previous_state = next((x for x in previous_free.get("sourceStates", []) if x.get("id") == source["id"]), {})
-            source_states.append({"id": source["id"], "status": "stale" if fallback else "unavailable", "lastSuccessAt": previous_state.get("lastSuccessAt")})
+            source_states.append(source_state(source["id"], bool(fallback), previous_state, now_dt.isoformat()))
             errors.append({"source": source["id"], "error": str(exc)[:160], "fallbackItems": len(fallback)})
     collected.sort(key=lambda x: (x["score"], x["published"]), reverse=True)
     top = []
@@ -1024,8 +1110,10 @@ def main():
     contexts = build_contexts(top)
     ai_payload = build_ai_payload(top, now)
     weather_payload = build_weather_payload(sources, now)
-    dataset_status = "fresh" if not errors else ("stale" if top else "unavailable")
-    last_success_at = now if not errors else previous_free.get("lastSuccessAt")
+    all_fresh = bool(source_states) and all(state.get("status") == "fresh" for state in source_states)
+    dataset_status = "fresh" if all_fresh and not errors else ("stale" if top else "unavailable")
+    successful_times = [state.get("lastSuccessAt") for state in source_states if state.get("lastSuccessAt")]
+    last_success_at = max(successful_times) if successful_times else previous_free.get("lastSuccessAt")
     ai_payload["status"] = dataset_status
     ai_payload["lastSuccessAt"] = last_success_at
     payload = {
@@ -1050,6 +1138,8 @@ def main():
             "effectiveCadenceMinutes": effective_cadence_minutes(schedule),
             "adaptiveWeather": bool(schedule.get("adaptiveWeather")),
             "weatherRiskCadenceMinutes": schedule.get("weatherRiskCadenceMinutes"),
+            "sourcePolicyFile": "data/free_sources_v2.json",
+            "budgets": FETCH_CONTROLLER.config["budgets"],
         },
         "contexts": contexts,
         "items": top,
@@ -1067,6 +1157,8 @@ def main():
     for ctx in contexts[:8]:
         lines.append(f"- [{ctx['genre']}] {ctx['decision']} / {ctx['signal'][:70]}")
     BRIEF.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    FETCH_CONTROLLER.save()
+    print(f"free-info requests={FETCH_CONTROLLER.run_requests} bytes={FETCH_CONTROLLER.run_bytes}")
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-05T01:03:15.332609+00:00",
-  "lastSuccessAt": "2026-09-05T01:03:15.332609+00:00",
+  "updatedAt": "2026-09-05T03:44:42.754605+00:00",
+  "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -94,7 +94,16 @@
     "cadenceMinutes": 10,
     "effectiveCadenceMinutes": 10,
     "adaptiveWeather": true,
-    "weatherRiskCadenceMinutes": 10
+    "weatherRiskCadenceMinutes": 10,
+    "sourcePolicyFile": "data/free_sources_v2.json",
+    "budgets": {
+      "maxRequestsPerRun": 20,
+      "maxRequestsPerDay": 600,
+      "maxBytesPerDay": 52428800,
+      "defaultMaxBytesPerResponse": 2097152,
+      "maxConcurrency": 3,
+      "timeoutSeconds": 10
+    }
   },
   "contexts": [
     {
@@ -115,8 +124,8 @@
     },
     {
       "genre": "AI",
-      "count": 5,
-      "signal": "Daybreak for Frontline Defenders: $1B to protect essential services / Playco cut manual fixes 50% prototyping games with GPT-6 Astra / Safety overview: GPT-6 Astra",
+      "count": 6,
+      "signal": "Daybreak for Frontline Defenders: $1B to protect essential services / Playco cut manual fixes 50% prototyping games with GPT-6 Astra / GPT-6 Astra: A new generation of intelligence",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/daybreak-for-frontline-defenders",
       "score": 3
@@ -130,19 +139,11 @@
       "score": 2
     },
     {
-      "genre": "天気",
-      "count": 1,
-      "signal": "富山 26.4℃ / 雨 0.0mm / 風 14.5km/h",
-      "decision": "今日の作業環境メモ",
-      "topUrl": "https://api.open-meteo.com/v1/forecast?latitude=36.6953&longitude=137.2113&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
-      "score": 1
-    },
-    {
       "genre": "災害",
       "count": 1,
-      "signal": "M 2.0 - 10 km NNE of Toyah, Texas",
+      "signal": "M 0.7 - 7 km W of Cobb, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026rllhns",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430012",
       "score": 1
     }
   ],
@@ -238,26 +239,13 @@
       ]
     },
     {
-      "source": "open-meteo-toyama",
-      "label": "富山天気",
-      "genre": "天気",
-      "title": "富山 26.4℃ / 雨 0.0mm / 風 14.5km/h",
-      "summary": "Open-Meteo no-key weather fetch",
-      "url": "https://api.open-meteo.com/v1/forecast?latitude=36.6953&longitude=137.2113&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
-      "published": "2026-09-05T10:00",
-      "score": 1,
-      "tags": [
-        "天気"
-      ]
-    },
-    {
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.0 - 10 km NNE of Toyah, Texas",
-      "summary": "10 km NNE of Toyah, Texas",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026rllhns",
-      "published": "2026-09-05T00:28:07.947000+00:00",
+      "title": "M 0.7 - 7 km W of Cobb, CA",
+      "summary": "7 km W of Cobb, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430012",
+      "published": "2026-09-05T03:31:35.850000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -454,6 +442,24 @@
       "tags": [
         "AI",
         "制作",
+        "研究"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "GPT-6 Astra: A new generation of intelligence",
+      "summary": "Introducing GPT-6 Astra, our most intelligent and aligned model yet, with state-of-the-art capabilities across computer use, coding, cybersecurity, and science.",
+      "url": "https://openai.com/index/gpt-6-astra",
+      "published": "2026-09-03T11:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
         "研究"
       ]
     },
@@ -703,37 +709,50 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T01:03:15.332609+00:00"
+      "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastAttemptAt": "2026-09-05T03:44:09.088385+00:00",
+      "retryAfterAt": null,
+      "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T01:03:15.332609+00:00"
+      "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastAttemptAt": "2026-09-05T03:44:09.088385+00:00",
+      "retryAfterAt": null,
+      "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T01:03:15.332609+00:00"
+      "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastAttemptAt": "2026-09-05T03:44:09.088385+00:00",
+      "retryAfterAt": null,
+      "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T01:03:15.332609+00:00"
+      "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastAttemptAt": "2026-09-05T03:44:09.088385+00:00",
+      "retryAfterAt": null,
+      "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T01:03:15.332609+00:00"
+      "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastAttemptAt": "2026-09-05T03:44:09.088385+00:00",
+      "retryAfterAt": null,
+      "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T01:03:15.332609+00:00"
-    },
-    {
-      "id": "open-meteo-toyama",
-      "status": "fresh",
-      "lastSuccessAt": "2026-09-05T01:03:15.332609+00:00"
+      "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastAttemptAt": "2026-09-05T03:44:09.088385+00:00",
+      "retryAfterAt": null,
+      "errorCode": null
     }
   ],
   "errors": []

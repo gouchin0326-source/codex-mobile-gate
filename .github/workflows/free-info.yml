@@ -2,7 +2,7 @@ name: free-info
 
 on:
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "7-57/10 * * * *"
   workflow_dispatch:
     inputs:
       cadence_minutes:
@@ -12,7 +12,11 @@ on:
       force:
         description: "Force fetch now"
         required: false
-        default: "true"
+        default: "false"
+
+concurrency:
+  group: free-info-${{ github.ref }}
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -20,11 +24,14 @@ permissions:
 jobs:
   fetch:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Check fetch policy
+        run: python scripts/check_free_info_z1.py
       - name: Apply cadence input
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.cadence_minutes != '' }}
         run: |
@@ -48,6 +55,28 @@ jobs:
         run: |
           git config user.name "codexgate-bot"
           git config user.email "codexgate-bot@users.noreply.github.com"
-          git add data/free_info_schedule.json latest/data/free-info.json latest/data/ai-info.json latest/data/weather-info.json latest/data/gate-health.json latest/data/free-source-catalog.json latest/data/social-trends.json latest/data/codexgate-news-brief-2026-09-03.md
+          git add data/free_info_schedule.json data/free_sources_v2.json data/free_info_state.json latest/data/free-info.json latest/data/ai-info.json latest/data/weather-info.json latest/data/gate-health.json latest/data/free-source-catalog.json latest/data/social-trends.json latest/data/codexgate-news-brief-2026-09-03.md
           git diff --cached --quiet || git commit -m "update free info"
           git push
+      - name: Verify Pages source route
+        run: |
+          python - <<'PY'
+          import json
+          import time
+          import urllib.request
+          expected = json.load(open("latest/data/free-info.json", encoding="utf-8"))["updatedAt"]
+          url = "https://gouchin0326-source.github.io/codex-mobile-gate/latest/data/free-info.json"
+          for attempt in range(12):
+              try:
+                  request = urllib.request.Request(f"{url}?z1={time.time_ns()}", headers={"User-Agent": "CODEXGATE-PagesCheck/1.0"})
+                  with urllib.request.urlopen(request, timeout=10) as response:
+                      actual = json.load(response).get("updatedAt")
+                  if actual == expected:
+                      print(f"Pages published: {actual}")
+                      break
+              except Exception as exc:
+                  print(f"Pages check {attempt + 1}: {exc}")
+              time.sleep(10)
+          else:
+              raise SystemExit(f"Pages did not publish expected updatedAt={expected}")
+          PY

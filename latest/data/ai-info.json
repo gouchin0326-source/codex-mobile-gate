@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T01:03:15.332609+00:00",
+  "updatedAt": "2026-09-05T03:44:42.754605+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -8,7 +8,7 @@
   "cards": [
     {
       "genre": "開発",
-      "count": 15,
+      "count": 14,
       "decision": "CG開発・GitHub運用へ反映候補",
       "signal": "GPT-6 Astra is generally available in GitHub Copilot / GitHub Copilot weekly releases — August 31 / Project HydraFusion: Frontier quality via multi-model orchestration",
       "topUrl": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot",
@@ -16,9 +16,9 @@
     },
     {
       "genre": "AI",
-      "count": 5,
+      "count": 6,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "Daybreak for Frontline Defenders: $1B to protect essential services / Playco cut manual fixes 50% prototyping games with GPT-6 Astra / Safety overview: GPT-6 Astra",
+      "signal": "Daybreak for Frontline Defenders: $1B to protect essential services / Playco cut manual fixes 50% prototyping games with GPT-6 Astra / GPT-6 Astra: A new generation of intelligence",
       "topUrl": "https://openai.com/index/daybreak-for-frontline-defenders",
       "score": 3
     },
@@ -364,6 +364,24 @@
       "genre": "AI",
       "topic": "AI",
       "sourceWeight": 1,
+      "title": "GPT-6 Astra: A new generation of intelligence",
+      "summary": "Introducing GPT-6 Astra, our most intelligent and aligned model yet, with state-of-the-art capabilities across computer use, coding, cybersecurity, and science.",
+      "url": "https://openai.com/index/gpt-6-astra",
+      "published": "2026-09-03T11:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
       "title": "Safety overview: GPT-6 Astra",
       "summary": "GPT-6 Astra is our most capable broadly deployed model and our first to reach the Critical level of cybersecurity capability under our Preparedness Framework.",
       "url": "https://openai.com/index/safety-overview-gpt-6-astra",
@@ -495,25 +513,8 @@
         "開発",
         "重要"
       ]
-    },
-    {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Your alt text passes automated checks. That doesn’t mean it’s any good.",
-      "summary": "We built a plugin for the GitHub Accessibility Scanner to make sure your alt text is actually accessible. Here's how it works. The post Your alt text passes automated checks. That doesn’t mean it’s any good. appeared fir",
-      "url": "https://github.blog/engineering/user-experience/your-alt-text-passes-automated-checks-that-doesnt-mean-its-any-good/",
-      "published": "2026-08-24T20:56:32+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-05T01:03:15.332609+00:00"
+  "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00"
 }

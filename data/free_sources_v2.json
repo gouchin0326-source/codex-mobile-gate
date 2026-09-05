@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "budgets": {
+    "maxRequestsPerRun": 20,
+    "maxRequestsPerDay": 600,
+    "maxBytesPerDay": 52428800,
+    "defaultMaxBytesPerResponse": 2097152,
+    "maxConcurrency": 3,
+    "timeoutSeconds": 10
+  },
+  "sources": [
+    {"id":"jma-toyama-warning","enabled":true,"intervalMinutes":10,"ttlMinutes":30,"maxBytes":1048576,"allowedHosts":["www.jma.go.jp"]},
+    {"id":"jma-nowcast","enabled":true,"intervalMinutes":10,"ttlMinutes":30,"maxBytes":1048576,"allowedHosts":["www.jma.go.jp"]},
+    {"id":"open-meteo-toyama","enabled":true,"intervalMinutes":30,"ttlMinutes":90,"maxBytes":2097152,"allowedHosts":["api.open-meteo.com"]},
+    {"id":"github-actions","enabled":true,"intervalMinutes":30,"ttlMinutes":90,"maxBytes":2097152,"allowedHosts":["api.github.com"]},
+    {"id":"openai","enabled":true,"intervalMinutes":360,"ttlMinutes":720,"maxBytes":2097152,"allowedHosts":["openai.com"]},
+    {"id":"github-blog","enabled":true,"intervalMinutes":360,"ttlMinutes":720,"maxBytes":2097152,"allowedHosts":["github.blog"]},
+    {"id":"github-changelog","enabled":true,"intervalMinutes":360,"ttlMinutes":720,"maxBytes":2097152,"allowedHosts":["github.blog"]},
+    {"id":"lobsters","enabled":true,"intervalMinutes":360,"ttlMinutes":720,"maxBytes":2097152,"allowedHosts":["lobste.rs"]},
+    {"id":"arxiv-ai","enabled":true,"intervalMinutes":1440,"ttlMinutes":2880,"maxBytes":2097152,"allowedHosts":["export.arxiv.org"]},
+    {"id":"usgs","enabled":true,"intervalMinutes":360,"ttlMinutes":720,"maxBytes":4194304,"allowedHosts":["earthquake.usgs.gov"]},
+    {"id":"news-ai-jp","enabled":true,"intervalMinutes":60,"ttlMinutes":180,"maxBytes":2097152,"allowedHosts":["news.google.com"]},
+    {"id":"news-economy-jp","enabled":true,"intervalMinutes":180,"ttlMinutes":360,"maxBytes":2097152,"allowedHosts":["news.google.com"]},
+    {"id":"news-disaster-jp","enabled":true,"intervalMinutes":60,"ttlMinutes":180,"maxBytes":2097152,"allowedHosts":["news.google.com"]},
+    {"id":"news-politics-jp","enabled":true,"intervalMinutes":180,"ttlMinutes":360,"maxBytes":2097152,"allowedHosts":["news.google.com"]},
+    {"id":"news-society-jp","enabled":true,"intervalMinutes":180,"ttlMinutes":360,"maxBytes":2097152,"allowedHosts":["news.google.com"]},
+    {"id":"news-world-jp","enabled":true,"intervalMinutes":180,"ttlMinutes":360,"maxBytes":2097152,"allowedHosts":["news.google.com"]},
+    {"id":"news-tech-jp","enabled":true,"intervalMinutes":180,"ttlMinutes":360,"maxBytes":2097152,"allowedHosts":["news.google.com"]},
+    {"id":"news-sports-jp","enabled":true,"intervalMinutes":180,"ttlMinutes":360,"maxBytes":2097152,"allowedHosts":["news.google.com"]},
+    {"id":"news-health-jp","enabled":true,"intervalMinutes":180,"ttlMinutes":360,"maxBytes":2097152,"allowedHosts":["news.google.com"]},
+    {"id":"news-toyama-jp","enabled":true,"intervalMinutes":60,"ttlMinutes":180,"maxBytes":2097152,"allowedHosts":["news.google.com"]},
+    {"id":"mastodon-ai","enabled":true,"intervalMinutes":60,"ttlMinutes":180,"maxBytes":2097152,"allowedHosts":["mstdn.jp"]},
+    {"id":"mastodon-codex","enabled":true,"intervalMinutes":60,"ttlMinutes":180,"maxBytes":2097152,"allowedHosts":["mstdn.jp"]}
+  ]
+}
