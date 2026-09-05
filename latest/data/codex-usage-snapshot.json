@@ -1,24 +1,24 @@
 {
-  "updatedAt": "2026-09-05T07:05:00+09:00",
+  "updatedAt": "2026-09-05T10:05:00+09:00",
   "source": "Codex internal usage tool",
   "automation": "Codex heartbeat every 3 hours; not available from GitHub Actions",
   "planType": "plus",
   "primary": {
     "label": "5時間枠",
-    "usedPercent": 4,
-    "remainingPercent": 96,
+    "usedPercent": 68,
+    "remainingPercent": 32,
     "resetsAt": "2026-09-05T12:05:04+09:00"
   },
   "secondary": {
     "label": "週枠",
-    "usedPercent": 55,
-    "remainingPercent": 45,
+    "usedPercent": 65,
+    "remainingPercent": 35,
     "resetsAt": "2026-09-07T11:31:23+09:00"
   },
   "resetCredits": {
-    "availableCount": 2,
+    "availableCount": 3,
     "nearestExpiresAt": "2026-09-21T07:22:40+09:00",
-    "nearestDaysLeft": 16,
+    "nearestDaysLeft": 15,
     "policy": "期限切れ前に使う。通常は週枠25%未満、期限3日以内、重開発前で判断。",
     "credits": [
       {
@@ -30,13 +30,18 @@
         "title": "Full reset (Weekly + 5 hr)",
         "status": "available",
         "expiresAt": "2026-10-04T10:35:04+09:00"
+      },
+      {
+        "title": "Full reset (Weekly + 5 hr)",
+        "status": "available",
+        "expiresAt": "2026-10-05T08:26:41+09:00"
       }
     ]
   },
   "decision": {
     "level": "green",
-    "line1": "通常運用: 5時間枠96%残",
-    "line2": "週枠45%残。券2枚/最短期限9月21日"
+    "line1": "節約運用: 5時間枠32%残",
+    "line2": "週枠35%残。券3枚/最短期限9月21日"
   },
   "taskPlan": [
     {
