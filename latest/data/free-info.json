@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-04T23:05:14.934705+00:00",
-  "lastSuccessAt": "2026-09-04T23:05:14.934705+00:00",
+  "updatedAt": "2026-09-05T01:03:15.332609+00:00",
+  "lastSuccessAt": "2026-09-05T01:03:15.332609+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -132,7 +132,7 @@
     {
       "genre": "天気",
       "count": 1,
-      "signal": "富山 24.3℃ / 雨 0.0mm / 風 7.9km/h",
+      "signal": "富山 26.4℃ / 雨 0.0mm / 風 14.5km/h",
       "decision": "今日の作業環境メモ",
       "topUrl": "https://api.open-meteo.com/v1/forecast?latitude=36.6953&longitude=137.2113&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
       "score": 1
@@ -140,9 +140,9 @@
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.1 - 11 km E of Fox, Alaska",
+      "signal": "M 2.0 - 10 km NNE of Toyah, Texas",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rodngl",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026rllhns",
       "score": 1
     }
   ],
@@ -241,10 +241,10 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "genre": "天気",
-      "title": "富山 24.3℃ / 雨 0.0mm / 風 7.9km/h",
+      "title": "富山 26.4℃ / 雨 0.0mm / 風 14.5km/h",
       "summary": "Open-Meteo no-key weather fetch",
       "url": "https://api.open-meteo.com/v1/forecast?latitude=36.6953&longitude=137.2113&current=temperature_2m,precipitation,wind_speed_10m&timezone=Asia%2FTokyo",
-      "published": "2026-09-05T08:00",
+      "published": "2026-09-05T10:00",
       "score": 1,
       "tags": [
         "天気"
@@ -254,10 +254,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.1 - 11 km E of Fox, Alaska",
-      "summary": "11 km E of Fox, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rodngl",
-      "published": "2026-09-04T23:03:20.639000+00:00",
+      "title": "M 2.0 - 10 km NNE of Toyah, Texas",
+      "summary": "10 km NNE of Toyah, Texas",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026rllhns",
+      "published": "2026-09-05T00:28:07.947000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -703,37 +703,37 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-04T23:05:14.934705+00:00"
+      "lastSuccessAt": "2026-09-05T01:03:15.332609+00:00"
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-04T23:05:14.934705+00:00"
+      "lastSuccessAt": "2026-09-05T01:03:15.332609+00:00"
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-04T23:05:14.934705+00:00"
+      "lastSuccessAt": "2026-09-05T01:03:15.332609+00:00"
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-04T23:05:14.934705+00:00"
+      "lastSuccessAt": "2026-09-05T01:03:15.332609+00:00"
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-04T23:05:14.934705+00:00"
+      "lastSuccessAt": "2026-09-05T01:03:15.332609+00:00"
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-04T23:05:14.934705+00:00"
+      "lastSuccessAt": "2026-09-05T01:03:15.332609+00:00"
     },
     {
       "id": "open-meteo-toyama",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-04T23:05:14.934705+00:00"
+      "lastSuccessAt": "2026-09-05T01:03:15.332609+00:00"
     }
   ],
   "errors": []
