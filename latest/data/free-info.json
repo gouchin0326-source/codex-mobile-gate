@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-05T16:46:31.151221+00:00",
-  "lastSuccessAt": "2026-09-05T11:31:45.343296+00:00",
+  "updatedAt": "2026-09-05T18:36:37.920217+00:00",
+  "lastSuccessAt": "2026-09-05T18:36:37.920217+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -131,19 +131,19 @@
       "score": 3
     },
     {
-      "genre": "技術",
+      "genre": "災害",
       "count": 2,
-      "signal": "Is it too much to ask devs to use AI to review their hand-crafted code? / Discovery of a new OpenAI agent message board",
+      "signal": "M 3.1 - 55 km SSW of Pilot Point, Alaska / M 4.9 - 80 km SSW of Nikolski, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://lobste.rs/s/fxccx9/is_it_too_much_ask_devs_use_ai_review_their",
-      "score": 2
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rppmra",
+      "score": 1
     },
     {
-      "genre": "災害",
+      "genre": "技術",
       "count": 1,
-      "signal": "M 1.1 - 83 km NW of Karluk, Alaska",
+      "signal": "zopt: low-ceremony command line parsing for Zig",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rpckng",
+      "topUrl": "https://codeberg.org/hgrsd/zopt",
       "score": 1
     }
   ],
@@ -222,33 +222,32 @@
       ]
     },
     {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 3.1 - 55 km SSW of Pilot Point, Alaska",
+      "summary": "55 km SSW of Pilot Point, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rppmra",
+      "published": "2026-09-05T18:01:58.736000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "AI",
+      "topic": "その他",
       "sourceWeight": 1,
-      "title": "Is it too much to ask devs to use AI to review their hand-crafted code?",
-      "summary": "You believe coding by hand is the Way and I both admire and appreciate beautiful, hand-crafted code. But I want to use your library, and when I ask my AI to evaluate it for bugs, memory leaks, security issues, it returns",
-      "url": "https://lobste.rs/s/fxccx9/is_it_too_much_ask_devs_use_ai_review_their",
-      "published": "2026-09-05T07:09:14+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "重要"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.1 - 83 km NW of Karluk, Alaska",
-      "summary": "83 km NW of Karluk, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rpckng",
-      "published": "2026-09-05T11:29:50.687000+00:00",
+      "title": "zopt: low-ceremony command line parsing for Zig",
+      "summary": "Comments",
+      "url": "https://codeberg.org/hgrsd/zopt",
+      "published": "2026-09-05T14:48:58+00:00",
       "score": 1,
       "tags": [
-        "災害"
+        "技術"
       ]
     },
     {
@@ -620,23 +619,6 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Discovery of a new OpenAI agent message board",
-      "summary": "Originally: https://www.reuters.com/world/europe/openai-agents-hijacked-german-website-previously-undisclosed-ai-breakout-this-2026-09-04/ Comments",
-      "url": "https://collusion.wiki/",
-      "published": "2026-09-04T11:43:06+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "重要"
-      ]
-    },
-    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -703,38 +685,51 @@
         "論文",
         "研究"
       ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 4.9 - 80 km SSW of Nikolski, Alaska",
+      "summary": "80 km SSW of Nikolski, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tek7",
+      "published": "2026-09-05T18:00:09.215000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T11:31:45.343296+00:00",
-      "lastAttemptAt": "2026-09-05T11:31:45.343296+00:00",
+      "lastSuccessAt": "2026-09-05T18:36:37.920217+00:00",
+      "lastAttemptAt": "2026-09-05T18:36:37.920217+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T11:31:45.343296+00:00",
-      "lastAttemptAt": "2026-09-05T11:31:45.343296+00:00",
+      "lastSuccessAt": "2026-09-05T18:36:37.920217+00:00",
+      "lastAttemptAt": "2026-09-05T18:36:37.920217+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T11:31:45.343296+00:00",
-      "lastAttemptAt": "2026-09-05T11:31:45.343296+00:00",
+      "lastSuccessAt": "2026-09-05T18:36:37.920217+00:00",
+      "lastAttemptAt": "2026-09-05T18:36:37.920217+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T11:31:45.343296+00:00",
-      "lastAttemptAt": "2026-09-05T11:31:45.343296+00:00",
+      "lastSuccessAt": "2026-09-05T18:36:37.920217+00:00",
+      "lastAttemptAt": "2026-09-05T18:36:37.920217+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -749,8 +744,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T11:31:45.343296+00:00",
-      "lastAttemptAt": "2026-09-05T11:31:45.343296+00:00",
+      "lastSuccessAt": "2026-09-05T18:36:37.920217+00:00",
+      "lastAttemptAt": "2026-09-05T18:36:37.920217+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
