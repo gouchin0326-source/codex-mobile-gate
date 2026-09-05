@@ -2,8 +2,8 @@
   "version": 1,
   "daily": {
     "date": "2026-09-05",
-    "httpRequests": 24,
-    "responseBytes": 3269254
+    "httpRequests": 33,
+    "responseBytes": 3851425
   },
   "sources": {
     "openai": {
@@ -79,9 +79,9 @@
       "lastHttpStatus": 200
     },
     "jma-toyama-warning": {
-      "lastAttemptAt": "2026-09-05T04:07:14.366631+00:00",
+      "lastAttemptAt": "2026-09-05T06:17:38.566422+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T04:07:14.366631+00:00",
+      "lastSuccessAt": "2026-09-05T06:17:38.566422+00:00",
       "contentUpdatedAt": "2026-09-05T03:44:09.088385+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
@@ -91,22 +91,22 @@
       "lastHttpStatus": 304
     },
     "jma-nowcast": {
-      "lastAttemptAt": "2026-09-05T04:07:14.366631+00:00",
+      "lastAttemptAt": "2026-09-05T06:17:38.566422+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T04:07:14.366631+00:00",
-      "contentUpdatedAt": "2026-09-05T04:07:14.366631+00:00",
+      "lastSuccessAt": "2026-09-05T06:17:38.566422+00:00",
+      "contentUpdatedAt": "2026-09-05T06:17:38.566422+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
-      "etag": "\"cd9e874632d989156cea8599dcf7d152\"",
-      "lastModified": "Sat, 05 Sep 2026 04:06:41 GMT",
+      "etag": "\"3dbcf4c3ea6aba26a700625ce9c30688\"",
+      "lastModified": "Sat, 05 Sep 2026 06:16:41 GMT",
       "lastHttpStatus": 200
     },
     "open-meteo-toyama": {
-      "lastAttemptAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastAttemptAt": "2026-09-05T06:17:38.566422+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00",
-      "contentUpdatedAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastSuccessAt": "2026-09-05T06:17:38.566422+00:00",
+      "contentUpdatedAt": "2026-09-05T06:17:38.566422+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -115,22 +115,22 @@
       "lastHttpStatus": 200
     },
     "github-actions": {
-      "lastAttemptAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastAttemptAt": "2026-09-05T06:17:38.566422+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00",
-      "contentUpdatedAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastSuccessAt": "2026-09-05T06:17:38.566422+00:00",
+      "contentUpdatedAt": "2026-09-05T06:17:38.566422+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
-      "etag": "W/\"0a605379cc6eea748a5a4317c5a4f00173feb53c82eea3eb85e545867abc4bf3\"",
+      "etag": "W/\"d73c559d3ca9e37e75ad556dc6986c61e3700811acad2a4faf066766b174633f\"",
       "lastModified": null,
       "lastHttpStatus": 200
     },
     "news-ai-jp": {
-      "lastAttemptAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastAttemptAt": "2026-09-05T06:17:38.566422+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00",
-      "contentUpdatedAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastSuccessAt": "2026-09-05T06:17:38.566422+00:00",
+      "contentUpdatedAt": "2026-09-05T06:17:38.566422+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -151,10 +151,10 @@
       "lastHttpStatus": 200
     },
     "news-disaster-jp": {
-      "lastAttemptAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastAttemptAt": "2026-09-05T06:17:38.566422+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00",
-      "contentUpdatedAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastSuccessAt": "2026-09-05T06:17:38.566422+00:00",
+      "contentUpdatedAt": "2026-09-05T06:17:38.566422+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -235,10 +235,10 @@
       "lastHttpStatus": 200
     },
     "news-toyama-jp": {
-      "lastAttemptAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastAttemptAt": "2026-09-05T06:17:38.566422+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00",
-      "contentUpdatedAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastSuccessAt": "2026-09-05T06:17:38.566422+00:00",
+      "contentUpdatedAt": "2026-09-05T06:17:38.566422+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -247,34 +247,34 @@
       "lastHttpStatus": 200
     },
     "mastodon-ai": {
-      "lastAttemptAt": "2026-09-05T03:44:42.754605+00:00",
+      "lastAttemptAt": "2026-09-05T06:17:38.566422+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T03:44:42.754605+00:00",
-      "contentUpdatedAt": "2026-09-05T03:44:42.754605+00:00",
+      "lastSuccessAt": "2026-09-05T06:17:38.566422+00:00",
+      "contentUpdatedAt": "2026-09-05T06:17:38.566422+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
-      "etag": "W/\"82998a16be84a3704802fc7215bdb54f\"",
+      "etag": "W/\"55c13c47161b5555c984258175955257\"",
       "lastModified": null,
       "lastHttpStatus": 200
     },
     "mastodon-codex": {
-      "lastAttemptAt": "2026-09-05T03:44:42.754605+00:00",
+      "lastAttemptAt": "2026-09-05T06:17:38.566422+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T03:44:42.754605+00:00",
-      "contentUpdatedAt": "2026-09-05T03:44:42.754605+00:00",
+      "lastSuccessAt": "2026-09-05T06:17:38.566422+00:00",
+      "contentUpdatedAt": "2026-09-05T06:17:38.566422+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
-      "etag": "W/\"9d3ae755bb93a78726bed77c9eb15acb\"",
+      "etag": "W/\"544c7ec0ae8c301527995c22213ca6d4\"",
       "lastModified": null,
       "lastHttpStatus": 200
     }
   },
-  "updatedAt": "2026-09-05T04:07:14.366631+00:00",
+  "updatedAt": "2026-09-05T06:17:38.566422+00:00",
   "lastRun": {
-    "httpRequests": 2,
-    "responseBytes": 1192,
+    "httpRequests": 9,
+    "responseBytes": 582171,
     "aiRequests": 0
   }
 }
