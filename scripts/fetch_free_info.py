@@ -835,12 +835,12 @@ def build_weather_payload(sources, now):
         x0 = int((TOYAMA_LON + 180) / 360 * (2 ** z))
         lat_rad = math.radians(TOYAMA_LAT)
         y0 = int((1 - math.log(math.tan(lat_rad) + 1 / math.cos(lat_rad)) / math.pi) / 2 * (2 ** z))
-        for target in targets[:4]:
+        for target in targets[:12]:
             basetime = target.get("basetime", "")
             validtime = target.get("validtime", "")
             nowcast["times"].append({"basetime": basetime, "validtime": validtime})
         if nowcast["times"]:
-            t0 = nowcast["times"][0]
+            t0 = nowcast["times"][-1]
             for dy in [-1, 0, 1]:
                 for dx in [-1, 0, 1]:
                     x = x0 + dx

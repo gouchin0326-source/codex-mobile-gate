@@ -82,7 +82,10 @@ def run():
                 if url == MODULE.JMA_TOYAMA_WARNING:
                     return b'{"areaTypes":[]}'
                 if url == MODULE.JMA_NOWCAST_TARGETS:
-                    return b"[]"
+                    return json.dumps([
+                        {"basetime": "20260905040000", "validtime": "20260905050000"},
+                        {"basetime": "20260905040000", "validtime": "20260905040500"},
+                    ]).encode()
                 return valid_weather()
 
             MODULE.fetch = good_fetch
@@ -92,6 +95,7 @@ def run():
             require(fresh["lastSuccessAt"] == now, "fresh data must update last success")
             require(fresh["nowcast"]["area"]["prefecture"] == "富山県", "nowcast must identify Toyama prefecture")
             require("lat:36.6953/lon:137.2113" in fresh["nowcast"]["link"], "official nowcast link must open at Toyama")
+            require("20260905040500" in fresh["nowcast"]["tiles"][0]["url"], "nowcast tiles must use the nearest current target")
 
             MODULE.fetch = lambda url, *args, **kwargs: b"[]" if url == MODULE.JMA_TOYAMA_WARNING else good_fetch(url, *args, **kwargs)
             schema_error = MODULE.build_weather_payload(weather_source(), now)
