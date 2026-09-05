@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T18:36:37.920217+00:00",
+  "updatedAt": "2026-09-05T20:42:38.199244+00:00",
   "mode": "operation-zero-gate-health",
   "codexTokenUse": "0 when run by GitHub Actions",
   "level": "caution",
@@ -15,7 +15,7 @@
       "status": "fresh",
       "errors": 0,
       "count": 32,
-      "ageHours": 0.0
+      "ageHours": 2.1
     },
     {
       "id": "ai-info",
@@ -24,12 +24,12 @@
       "status": "fresh",
       "errors": 0,
       "count": 24,
-      "ageHours": 0.0
+      "ageHours": 2.1
     },
     {
       "id": "weather-info",
       "label": "天気",
-      "updatedAt": "2026-09-05T18:36:37.920217+00:00",
+      "updatedAt": "2026-09-05T20:42:38.199244+00:00",
       "status": "fresh",
       "errors": 0,
       "count": 1,
@@ -41,8 +41,24 @@
       "name": "free-info",
       "status": "in_progress",
       "conclusion": null,
+      "createdAt": "2026-09-05T20:42:31Z",
+      "updatedAt": "2026-09-05T20:42:35Z",
+      "url": "https://github.com/gouchin0326-source/codex-mobile-gate/actions/runs/33990908310"
+    },
+    {
+      "name": "pages build and deployment",
+      "status": "completed",
+      "conclusion": "success",
+      "createdAt": "2026-09-05T18:36:46Z",
+      "updatedAt": "2026-09-05T18:37:40Z",
+      "url": "https://github.com/gouchin0326-source/codex-mobile-gate/actions/runs/33984605060"
+    },
+    {
+      "name": "free-info",
+      "status": "completed",
+      "conclusion": "success",
       "createdAt": "2026-09-05T18:36:31Z",
-      "updatedAt": "2026-09-05T18:36:35Z",
+      "updatedAt": "2026-09-05T18:37:18Z",
       "url": "https://github.com/gouchin0326-source/codex-mobile-gate/actions/runs/33984595184"
     },
     {
@@ -84,22 +100,6 @@
       "createdAt": "2026-09-05T13:59:08Z",
       "updatedAt": "2026-09-05T13:59:46Z",
       "url": "https://github.com/gouchin0326-source/codex-mobile-gate/actions/runs/33970455753"
-    },
-    {
-      "name": "pages build and deployment",
-      "status": "completed",
-      "conclusion": "success",
-      "createdAt": "2026-09-05T13:09:09Z",
-      "updatedAt": "2026-09-05T13:09:36Z",
-      "url": "https://github.com/gouchin0326-source/codex-mobile-gate/actions/runs/33968061660"
-    },
-    {
-      "name": "pages build and deployment",
-      "status": "completed",
-      "conclusion": "success",
-      "createdAt": "2026-09-05T11:31:57Z",
-      "updatedAt": "2026-09-05T11:32:22Z",
-      "url": "https://github.com/gouchin0326-source/codex-mobile-gate/actions/runs/33963578816"
     }
   ],
   "errors": []
