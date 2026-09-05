@@ -213,6 +213,10 @@ class FetchController:
 
     def save(self):
         self.state["updatedAt"] = self.now.isoformat()
-        self.state["lastRun"] = {"httpRequests": self.run_requests, "responseBytes": self.run_bytes}
+        self.state["lastRun"] = {
+            "httpRequests": self.run_requests,
+            "responseBytes": self.run_bytes,
+            "aiRequests": 0,
+        }
         self.state_path.parent.mkdir(parents=True, exist_ok=True)
         self.state_path.write_text(json.dumps(self.state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

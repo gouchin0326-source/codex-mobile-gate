@@ -69,6 +69,7 @@ def main():
         saved = json.loads(state.read_text(encoding="utf-8"))
         assert saved["daily"]["httpRequests"] == 1
         assert saved["daily"]["responseBytes"] == 5
+        assert saved["lastRun"]["aiRequests"] == 0
 
         not_due = FetchController(config, state, now + timedelta(minutes=30), opener=lambda *_a, **_k: None)
         assert not_due.has_due_sources() is True  # beta has never run
