@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-05T07:52:15.874739+00:00",
-  "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00",
+  "updatedAt": "2026-09-05T11:31:45.343296+00:00",
+  "lastSuccessAt": "2026-09-05T11:31:45.343296+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -133,17 +133,17 @@
     {
       "genre": "技術",
       "count": 2,
-      "signal": "Discovery of a new OpenAI agent message board / The NX bit is not just about security",
+      "signal": "Is it too much to ask devs to use AI to review their hand-crafted code? / Discovery of a new OpenAI agent message board",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://collusion.wiki/",
+      "topUrl": "https://lobste.rs/s/fxccx9/is_it_too_much_ask_devs_use_ai_review_their",
       "score": 2
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 0.7 - 7 km W of Cobb, CA",
+      "signal": "M 1.1 - 83 km NW of Karluk, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430012",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rpckng",
       "score": 1
     }
   ],
@@ -228,10 +228,10 @@
       "genre": "技術",
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "Discovery of a new OpenAI agent message board",
-      "summary": "Originally: https://www.reuters.com/world/europe/openai-agents-hijacked-german-website-previously-undisclosed-ai-breakout-this-2026-09-04/ Comments",
-      "url": "https://collusion.wiki/",
-      "published": "2026-09-04T11:43:06+00:00",
+      "title": "Is it too much to ask devs to use AI to review their hand-crafted code?",
+      "summary": "You believe coding by hand is the Way and I both admire and appreciate beautiful, hand-crafted code. But I want to use your library, and when I ask my AI to evaluate it for bugs, memory leaks, security issues, it returns",
+      "url": "https://lobste.rs/s/fxccx9/is_it_too_much_ask_devs_use_ai_review_their",
+      "published": "2026-09-05T07:09:14+00:00",
       "score": 2,
       "tags": [
         "技術",
@@ -242,10 +242,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.7 - 7 km W of Cobb, CA",
-      "summary": "7 km W of Cobb, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430012",
-      "published": "2026-09-05T03:31:35.850000+00:00",
+      "title": "M 1.1 - 83 km NW of Karluk, Alaska",
+      "summary": "83 km NW of Karluk, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rpckng",
+      "published": "2026-09-05T11:29:50.687000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -624,12 +624,12 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "技術",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "The NX bit is not just about security",
-      "summary": "Comments",
-      "url": "https://purplesyringa.moe/blog/guest/the-nx-bit-is-not-just-about-security/",
-      "published": "2026-09-04T06:27:04+00:00",
+      "title": "Discovery of a new OpenAI agent message board",
+      "summary": "Originally: https://www.reuters.com/world/europe/openai-agents-hijacked-german-website-previously-undisclosed-ai-breakout-this-2026-09-04/ Comments",
+      "url": "https://collusion.wiki/",
+      "published": "2026-09-04T11:43:06+00:00",
       "score": 2,
       "tags": [
         "技術",
@@ -709,32 +709,32 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00",
-      "lastAttemptAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastSuccessAt": "2026-09-05T11:31:45.343296+00:00",
+      "lastAttemptAt": "2026-09-05T11:31:45.343296+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00",
-      "lastAttemptAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastSuccessAt": "2026-09-05T11:31:45.343296+00:00",
+      "lastAttemptAt": "2026-09-05T11:31:45.343296+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00",
-      "lastAttemptAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastSuccessAt": "2026-09-05T11:31:45.343296+00:00",
+      "lastAttemptAt": "2026-09-05T11:31:45.343296+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00",
-      "lastAttemptAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastSuccessAt": "2026-09-05T11:31:45.343296+00:00",
+      "lastAttemptAt": "2026-09-05T11:31:45.343296+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -749,8 +749,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00",
-      "lastAttemptAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastSuccessAt": "2026-09-05T11:31:45.343296+00:00",
+      "lastAttemptAt": "2026-09-05T11:31:45.343296+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
