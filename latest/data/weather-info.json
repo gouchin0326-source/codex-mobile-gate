@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-05T03:44:42.754605+00:00",
-  "lastSuccessAt": "2026-09-05T03:44:42.754605+00:00",
+  "updatedAt": "2026-09-05T04:07:14.366631+00:00",
+  "lastSuccessAt": "2026-09-05T04:07:14.366631+00:00",
   "status": "fresh",
   "mode": "primary-api-weather-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -20,82 +20,89 @@
     "officialWarningStatus": "fresh"
   },
   "nowcast": {
-    "label": "気象庁ナウキャスト",
+    "label": "富山県 雨雲ナウキャスト",
+    "area": {
+      "prefecture": "富山県",
+      "centerLabel": "富山市中心",
+      "latitude": 36.6953,
+      "longitude": 137.2113,
+      "zoom": 9
+    },
     "source": "https://www.jma.go.jp/bosai/jmatile/data/nowc/targetTimes_N2.json",
-    "link": "https://www.jma.go.jp/bosai/nowc/",
-    "note": "公式タイル。降水なしの場合は透明表示。",
+    "link": "https://www.jma.go.jp/bosai/nowc/#zoom:9/lat:36.6953/lon:137.2113/colordepth:normal/elements:hrpns&slmcs&slmcs_fcst",
+    "note": "富山県を富山市中心で拡大。公式タイルは降水なしの場合に透明表示。",
     "tiles": [
       {
         "x": 450,
         "y": 198,
         "z": 9,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260905034000/none/20260905044000/surf/hrpns/9/450/198.png"
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260905040500/none/20260905050500/surf/hrpns/9/450/198.png"
       },
       {
         "x": 451,
         "y": 198,
         "z": 9,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260905034000/none/20260905044000/surf/hrpns/9/451/198.png"
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260905040500/none/20260905050500/surf/hrpns/9/451/198.png"
       },
       {
         "x": 452,
         "y": 198,
         "z": 9,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260905034000/none/20260905044000/surf/hrpns/9/452/198.png"
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260905040500/none/20260905050500/surf/hrpns/9/452/198.png"
       },
       {
         "x": 450,
         "y": 199,
         "z": 9,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260905034000/none/20260905044000/surf/hrpns/9/450/199.png"
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260905040500/none/20260905050500/surf/hrpns/9/450/199.png"
       },
       {
         "x": 451,
         "y": 199,
         "z": 9,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260905034000/none/20260905044000/surf/hrpns/9/451/199.png"
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260905040500/none/20260905050500/surf/hrpns/9/451/199.png"
       },
       {
         "x": 452,
         "y": 199,
         "z": 9,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260905034000/none/20260905044000/surf/hrpns/9/452/199.png"
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260905040500/none/20260905050500/surf/hrpns/9/452/199.png"
       },
       {
         "x": 450,
         "y": 200,
         "z": 9,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260905034000/none/20260905044000/surf/hrpns/9/450/200.png"
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260905040500/none/20260905050500/surf/hrpns/9/450/200.png"
       },
       {
         "x": 451,
         "y": 200,
         "z": 9,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260905034000/none/20260905044000/surf/hrpns/9/451/200.png"
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260905040500/none/20260905050500/surf/hrpns/9/451/200.png"
       },
       {
         "x": 452,
         "y": 200,
         "z": 9,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260905034000/none/20260905044000/surf/hrpns/9/452/200.png"
+        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260905040500/none/20260905050500/surf/hrpns/9/452/200.png"
       }
     ],
     "times": [
       {
-        "basetime": "20260905034000",
-        "validtime": "20260905044000"
+        "basetime": "20260905040500",
+        "validtime": "20260905050500"
       },
       {
-        "basetime": "20260905034000",
-        "validtime": "20260905043500"
+        "basetime": "20260905040500",
+        "validtime": "20260905050000"
       },
       {
-        "basetime": "20260905034000",
-        "validtime": "20260905043000"
+        "basetime": "20260905040500",
+        "validtime": "20260905045500"
       },
       {
-        "basetime": "20260905034000",
-        "validtime": "20260905042500"
+        "basetime": "20260905040500",
+        "validtime": "20260905045000"
       }
     ]
   },
@@ -392,16 +399,16 @@
     {
       "id": "jma-toyama-warning",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00",
-      "lastAttemptAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastSuccessAt": "2026-09-05T04:07:14.366631+00:00",
+      "lastAttemptAt": "2026-09-05T04:07:14.366631+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "jma-nowcast",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00",
-      "lastAttemptAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastSuccessAt": "2026-09-05T04:07:14.366631+00:00",
+      "lastAttemptAt": "2026-09-05T04:07:14.366631+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
