@@ -90,6 +90,8 @@ def run():
             require(fresh["status"] == "fresh", "valid sources must be fresh")
             require(fresh["risk"]["level"] == "normal", "valid empty warning and mild forecast may be normal")
             require(fresh["lastSuccessAt"] == now, "fresh data must update last success")
+            require(fresh["nowcast"]["area"]["prefecture"] == "富山県", "nowcast must identify Toyama prefecture")
+            require("lat:36.6953/lon:137.2113" in fresh["nowcast"]["link"], "official nowcast link must open at Toyama")
 
             MODULE.fetch = lambda url, *args, **kwargs: b"[]" if url == MODULE.JMA_TOYAMA_WARNING else good_fetch(url, *args, **kwargs)
             schema_error = MODULE.build_weather_payload(weather_source(), now)

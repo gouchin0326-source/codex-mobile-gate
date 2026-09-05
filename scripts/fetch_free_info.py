@@ -812,10 +812,17 @@ def build_weather_payload(sources, now):
         source_states.append(source_state("jma-toyama-warning", bool(previous), previous_warning_state, now))
 
     nowcast = {
-        "label": "気象庁ナウキャスト",
+        "label": "富山県 雨雲ナウキャスト",
+        "area": {
+            "prefecture": "富山県",
+            "centerLabel": "富山市中心",
+            "latitude": TOYAMA_LAT,
+            "longitude": TOYAMA_LON,
+            "zoom": 9,
+        },
         "source": JMA_NOWCAST_TARGETS,
-        "link": "https://www.jma.go.jp/bosai/nowc/",
-        "note": "公式タイル。降水なしの場合は透明表示。",
+        "link": "https://www.jma.go.jp/bosai/nowc/#zoom:9/lat:36.6953/lon:137.2113/colordepth:normal/elements:hrpns&slmcs&slmcs_fcst",
+        "note": "富山県を富山市中心で拡大。公式タイルは降水なしの場合に透明表示。",
         "tiles": [],
         "times": [],
     }
@@ -824,7 +831,7 @@ def build_weather_payload(sources, now):
         targets = json.loads(fetch(JMA_NOWCAST_TARGETS, "jma-nowcast", has_previous=bool(previous.get("nowcast"))))
         if not isinstance(targets, list):
             raise ValueError("unexpected JMA nowcast schema")
-        z = 9
+        z = nowcast["area"]["zoom"]
         x0 = int((TOYAMA_LON + 180) / 360 * (2 ** z))
         lat_rad = math.radians(TOYAMA_LAT)
         y0 = int((1 - math.log(math.tan(lat_rad) + 1 / math.cos(lat_rad)) / math.pi) / 2 * (2 ** z))
