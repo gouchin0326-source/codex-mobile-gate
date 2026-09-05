@@ -3,55 +3,83 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>無料情報ラボ | CODEXGATE</title>
+  <title>ニュースまとめ | CODEXGATE</title>
   <style>
-    :root{--bg:#f4f6f8;--panel:#fff;--ink:#172033;--muted:#667085;--line:#d9dee7;--blue:#2563eb;--green:#15803d;--amber:#b45309;--rose:#b4235a;font-family:"Segoe UI","Meiryo",system-ui,sans-serif}
-    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);line-height:1.45}.wrap{width:min(920px,calc(100% - 18px));margin:auto}
-    header{background:#172033;color:#fff;padding:14px 0;border-bottom:4px solid var(--green)}h1{font-size:1.45rem;margin:0}.sub{margin:4px 0 0;color:#dce5f3;font-size:.78rem;font-weight:800}
-    main{display:grid;gap:10px;padding:10px 0 28px}section{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px}h2{font-size:.98rem;margin:0 0 8px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.card{border:1px solid var(--line);border-radius:8px;background:#f9fafb;padding:10px}.card b{display:block;font-size:1rem}.card span{display:block;color:var(--muted);font-size:.9rem;font-weight:800}
-    .icons{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.icon{min-height:82px;display:grid;align-content:center;justify-items:center;gap:5px;text-decoration:none;color:var(--ink);border:1px solid transparent;border-radius:8px;text-align:center}.icon:hover,.icon:focus-visible{background:#fff;border-color:var(--blue)}
-    .glyph{width:46px;height:46px;border-radius:14px;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:900}.g0{background:var(--green)}.g1{background:var(--amber)}.g2{background:var(--rose)}
-    .feed{display:grid;gap:8px}.item{display:grid;grid-template-columns:54px 1fr auto;gap:10px;align-items:center;border:1px solid var(--line);border-radius:8px;padding:10px;background:#f9fafb;color:var(--ink);text-decoration:none}.item b{display:grid;place-items:center;min-height:44px;border-radius:10px;background:#172033;color:#fff;font-size:.9rem}.item span{font-size:1.05rem;font-weight:900;line-height:1.32}.item i{font-style:normal;color:var(--rose);font-weight:900;font-size:1.1rem}
-    .muted{color:var(--muted);font-size:.88rem;font-weight:800}@media(max-width:560px){.grid{grid-template-columns:1fr}.icons{grid-template-columns:repeat(4,1fr);gap:5px}.glyph{width:42px;height:42px}.icon{min-height:74px}.icon span{font-size:.62rem}.item{grid-template-columns:44px 1fr 18px;padding:9px;gap:8px}.item b{min-height:38px;font-size:.78rem}.item span{font-size:1.04rem}}
+    :root{--bg:#f3f5f8;--panel:#fff;--ink:#172033;--muted:#667085;--line:#d7dde7;--blue:#1d4ed8;--green:#15803d;--amber:#b45309;--rose:#b4235a;font-family:"Segoe UI","Meiryo",system-ui,sans-serif}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);line-height:1.5}.wrap{width:min(980px,calc(100% - 18px));margin:auto}
+    header{background:#172033;color:#fff;border-bottom:4px solid var(--blue);padding:14px 0}h1{margin:0;font-size:1.55rem}.sub{margin:3px 0 0;color:#dce5f3;font-size:.84rem;font-weight:800}
+    main{display:grid;gap:9px;padding:9px 0 28px}main>*{min-width:0}section{min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px}h2{margin:0 0 8px;font-size:1.04rem}.meta{color:var(--muted);font-size:.82rem;font-weight:800;margin:6px 0 0;overflow-wrap:anywhere}
+    .status{display:grid;grid-template-columns:2fr repeat(2,1fr);gap:7px}.stat{border:1px solid var(--line);border-radius:8px;background:#f8fafc;padding:9px}.stat b{display:block;font-size:1.2rem}.stat span{display:block;color:var(--muted);font-size:.75rem;font-weight:800}.stat.ok{border-left:5px solid var(--green)}.stat.warn{border-left:5px solid var(--amber)}.stat.bad{border-left:5px solid var(--rose)}
+    .lead-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.lead{display:grid;min-width:0;gap:5px;border:1px solid var(--line);border-top:5px solid var(--blue);border-radius:9px;background:#fff;padding:10px;color:var(--ink);text-decoration:none;overflow-wrap:anywhere}.lead[data-rank="1"]{border-top-color:var(--rose)}.lead[data-rank="2"]{border-top-color:var(--amber)}.lead strong{font-size:1.02rem;line-height:1.35}.lead p{margin:0;color:#344054;font-size:.86rem}.lead small{color:var(--muted);font-size:.74rem;font-weight:800}.reason{display:inline-flex;width:max-content;max-width:100%;padding:3px 7px;border-radius:999px;background:#eef2ff;color:#3730a3;font-size:.7rem;font-weight:900}
+    .genres{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}.genre{min-width:0;min-height:82px;border:1px solid var(--line);border-radius:8px;background:#f8fafc;color:var(--ink);padding:8px;text-align:left}.genre.on{background:#172033;color:#fff;border-color:#172033}.genre b{display:block;font-size:1.12rem}.genre span{display:block;font-size:.78rem;font-weight:900}.genre small{display:block;width:100%;color:var(--muted);font-size:.68rem;margin-top:3px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.genre.on small{color:#dce5f3}
+    .toolbar{display:grid;grid-template-columns:1fr auto;gap:7px;margin-bottom:8px}.search{width:100%;min-height:42px;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:inherit}.actions{display:flex;gap:6px;flex-wrap:wrap}.button,.back{display:inline-grid;place-items:center;min-height:42px;border:1px solid var(--blue);border-radius:8px;background:#fff;color:var(--blue);padding:7px 10px;text-decoration:none;font:inherit;font-weight:900}.button.primary,.back{background:var(--blue);color:#fff}
+    .feed{display:grid;gap:7px}.item{display:grid;grid-template-columns:62px minmax(0,1fr) auto;gap:9px;align-items:start;border:1px solid var(--line);border-radius:8px;background:#f9fafb;padding:9px;color:var(--ink);text-decoration:none}.badge{display:grid;place-items:center;min-height:42px;border-radius:8px;background:#172033;color:#fff;font-size:.76rem;font-weight:900;text-align:center}.body{min-width:0;overflow-wrap:anywhere}.body strong{display:block;font-size:.98rem;line-height:1.32}.body p{margin:3px 0 0;color:#475467;font-size:.82rem}.body small{display:block;color:var(--muted);font-size:.72rem;font-weight:800;margin-top:4px}.score{font-size:.78rem;font-weight:900;color:var(--rose);white-space:nowrap}.empty{padding:18px;text-align:center;color:var(--muted);font-weight:900;border:1px dashed var(--line);border-radius:8px}.foot{display:flex;gap:8px;flex-wrap:wrap}
+    @media(max-width:700px){.lead-grid{grid-template-columns:minmax(0,1fr)}.genres{grid-template-columns:repeat(3,minmax(0,1fr))}.status{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.status .stat:first-child{grid-column:1/-1}.toolbar{grid-template-columns:minmax(0,1fr)}.item{grid-template-columns:50px minmax(0,1fr)}.score{grid-column:2}.badge{min-height:38px}.actions{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.button{padding:6px}}
+    @media(max-width:360px){.wrap{width:calc(100% - 12px)}.genres{grid-template-columns:repeat(2,minmax(0,1fr))}h1{font-size:1.35rem}.item{padding:7px;gap:7px}.body strong{font-size:.92rem}}
   </style>
 </head>
 <body>
-  <header><div class="wrap"><h1>無料情報ラボ</h1><p class="sub">Codexトークンを使わず、情報を集めてCGへ出す</p></div></header>
+  <header><div class="wrap"><h1>ニュースまとめ</h1><p class="sub">重要な順 → 分野別 → 詳細一覧。公開RSS/APIを機械整理</p></div></header>
   <main class="wrap">
-    <section>
-      <h2>3段</h2>
-      <div class="grid">
-        <div class="card"><b>完全無料</b><span>ActionsがRSS/API取得。Codex 0%。</span></div>
-        <div class="card"><b>少量</b><span>20行だけCodexへ渡し、CGへ反映。</span></div>
-        <div class="card"><b>外部AI節約</b><span>調査/圧縮は外部AI。Codexは実装だけ。</span></div>
+    <section aria-labelledby="status-title">
+      <h2 id="status-title">更新状態</h2>
+      <div class="status">
+        <div class="stat" id="state"><b>読込中</b><span>データ状態</span></div>
+        <div class="stat"><b id="count">－</b><span>掲載ニュース</span></div>
+        <div class="stat"><b id="source-count">－</b><span>情報源</span></div>
       </div>
+      <p class="meta" id="updated">最新データを確認しています</p>
     </section>
-    <section>
-      <h2>無料取得</h2>
-      <div class="icons">
-        <a class="icon" href="../data/free-info.json"><b class="glyph g0">全</b><span>JSON</span></a>
-        <a class="icon" href="../data/codexgate-news-brief-2026-09-03.md"><b class="glyph g0">要</b><span>要約</span></a>
-        <a class="icon" href="https://open-meteo.com/"><b class="glyph g0">天</b><span>天気</span></a>
-        <a class="icon" href="https://earthquake.usgs.gov/earthquakes/feed/"><b class="glyph g0">揺</b><span>地震</span></a>
-        <a class="icon" href="https://info.arxiv.org/help/rss.html"><b class="glyph g0">論</b><span>論文</span></a>
-        <a class="icon" href="https://github.blog/changelog/feed/"><b class="glyph g0">開</b><span>開発</span></a>
-        <a class="icon" href="https://lobste.rs/rss"><b class="glyph g0">技</b><span>技術</span></a>
-        <a class="icon" href="../index.html"><b class="glyph g1">戻</b><span>CG</span></a>
+    <section aria-labelledby="lead-title">
+      <h2 id="lead-title">まず見る3件</h2>
+      <div class="lead-grid" id="leads"><div class="empty">読込中</div></div>
+      <p class="meta">重要語・分野・公開時刻による機械選定です。生成AIによる断定や記事本文の転載はしません。</p>
+    </section>
+    <section aria-labelledby="genre-title">
+      <h2 id="genre-title">分野別まとめ</h2>
+      <div class="genres" id="genres"><button class="genre on" type="button"><b>－</b><span>全部</span></button></div>
+      <p class="meta">分野を押すと一覧を絞り込みます</p>
+    </section>
+    <section aria-labelledby="list-title">
+      <h2 id="list-title">ニュース一覧</h2>
+      <div class="toolbar">
+        <input class="search" id="search" type="search" placeholder="タイトル・要約・情報源で検索" aria-label="ニュースを検索">
+        <div class="actions">
+          <a class="button" href="../data/free-info.json" download="cg-news.json">📤 JSON</a>
+          <button class="button primary" id="csv" type="button">📤 CSV</button>
+        </div>
       </div>
+      <div class="feed" id="feed"><div class="empty">読込中</div></div>
+      <p class="meta" id="shown">－</p>
     </section>
-    <section>
-      <h2>最新</h2>
-      <div class="feed" id="feed"><a class="item" href="../data/free-info.json"><b>待</b><span>取得待ち</span><i>!</i></a></div>
-      <p class="muted" id="meta">GitHub Actionsで6時間ごとに更新</p>
-    </section>
+    <div class="foot"><a class="back" href="../index.html">CGへ戻る</a><a class="button" href="../zero-token-army/index.html">無料アプリ軍団</a></div>
   </main>
   <script>
-    fetch("../data/free-info.json?v="+Date.now()).then(r=>r.ok?r.json():null).then(data=>{
-      if(!data||!Array.isArray(data.items))return;
-      document.querySelector("#meta").textContent=`更新 ${data.updatedAt} / ${data.items.length}件 / error ${data.errors.length}`;
-      document.querySelector("#feed").innerHTML=data.items.slice(0,10).map(item=>`<a class="item" href="${item.url}"><b>${item.genre}</b><span>${item.title}</span><i>${item.score>=3?"!":""}</i></a>`).join("");
-    }).catch(()=>{});
+    const state={data:null,genre:"全部",query:""};
+    const byId=id=>document.getElementById(id);
+    const node=(tag,className,text)=>{const el=document.createElement(tag);if(className)el.className=className;if(text!==undefined)el.textContent=text;return el};
+    const safeUrl=value=>{try{const url=new URL(value,location.href);return ["http:","https:"].includes(url.protocol)?url.href:"../data/free-info.json"}catch{return "../data/free-info.json"}};
+    const when=value=>{if(!value)return "時刻不明";const date=new Date(value);return Number.isNaN(date.getTime())?"時刻不明":date.toLocaleString("ja-JP",{month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"})};
+    const ageHours=value=>{const time=new Date(value||0).getTime();return Number.isFinite(time)?(Date.now()-time)/36e5:Infinity};
+    const summary=item=>(item.summary||"要約なし").replace(/\s+/g," ").trim().slice(0,170);
+    const reason=item=>item.score>=5?"最重要：複数の重要語":item.score>=3?"要確認：関連度が高い":`${item.genre||"情報"}の新着`;
+    const ranked=items=>[...items].sort((a,b)=>(b.score||0)-(a.score||0)||new Date(b.published||0)-new Date(a.published||0));
+    function renderStatus(data){
+      const stale=data.status!=="fresh"||ageHours(data.lastSuccessAt||data.updatedAt)>12;
+      const box=byId("state");box.className=`stat ${stale?"warn":"ok"}`;box.querySelector("b").textContent=stale?"更新遅れ":"最新";box.querySelector("span").textContent=stale?"元リンクで確認":"取得正常";
+      byId("count").textContent=String((data.items||[]).length);byId("source-count").textContent=String(new Set((data.items||[]).map(x=>x.source).filter(Boolean)).size);
+      byId("updated").textContent=`最終成功 ${when(data.lastSuccessAt||data.updatedAt)} / エラー ${(data.errors||[]).length}件 / Codex AI要求 0`;
+    }
+    function makeLead(item,index){const link=node("a","lead");link.href=safeUrl(item.url);link.rel="noreferrer";link.dataset.rank=String(index+1);link.append(node("span","reason",reason(item)),node("strong","",item.title||"無題"),node("p","",summary(item)),node("small","",`${item.genre||"情報"}・${item.label||item.source||"情報源"}・${when(item.published)}`));return link}
+    function renderLeads(items){const selected=[];const used=new Set();for(const item of ranked(items)){if(!used.has(item.genre)){selected.push(item);used.add(item.genre)}if(selected.length===3)break}for(const item of ranked(items)){if(!selected.includes(item))selected.push(item);if(selected.length===3)break}byId("leads").replaceChildren(...(selected.length?selected.map(makeLead):[node("div","empty","表示できるニュースがありません")]))}
+    function renderGenres(items){const groups=new Map([["全部",items]]);for(const item of items){const key=item.genre||"その他";if(!groups.has(key))groups.set(key,[]);groups.get(key).push(item)}const ordered=[...groups.entries()].sort((a,b)=>a[0]==="全部"?-1:b[0]==="全部"?1:b[1].length-a[1].length);const buttons=ordered.map(([genre,rows])=>{const button=node("button",`genre ${state.genre===genre?"on":""}`);button.type="button";button.setAttribute("aria-pressed",String(state.genre===genre));button.append(node("b","",String(rows.length)),node("span","",genre),node("small","",ranked(rows)[0]?.title||"新着なし"));button.addEventListener("click",()=>{state.genre=genre;renderGenres(items);renderFeed()});return button});byId("genres").replaceChildren(...buttons)}
+    function makeItem(item){const link=node("a","item");link.href=safeUrl(item.url);link.rel="noreferrer";const body=node("div","body");body.append(node("strong","",item.title||"無題"),node("p","",summary(item)),node("small","",`${item.label||item.source||"情報源"}・${when(item.published)}${item.stale?"・更新遅れ":""}`));link.append(node("span","badge",item.genre||"情報"),body,node("span","score",(item.score||0)>=3?`重要 ${item.score}`:""));return link}
+    function visibleItems(){const query=state.query.toLowerCase();return ranked(state.data?.items||[]).filter(item=>(state.genre==="全部"||(item.genre||"その他")===state.genre)&&(!query||`${item.title||""} ${item.summary||""} ${item.label||""}`.toLowerCase().includes(query)))}
+    function renderFeed(){const items=visibleItems();byId("feed").replaceChildren(...(items.length?items.map(makeItem):[node("div","empty","条件に合うニュースはありません")]));byId("shown").textContent=`${items.length}件表示 / 分野: ${state.genre}`}
+    function csvCell(value){let text=String(value??"");if(/^[=+\-@]/.test(text))text="'"+text;return `"${text.replaceAll('"','""')}"`}
+    function exportCsv(){const rows=[["分野","タイトル","短い要約","情報源","公開時刻","重要度","URL"],...visibleItems().map(x=>[x.genre,x.title,summary(x),x.label||x.source,x.published,x.score,x.url])];const blob=new Blob(["\ufeff"+rows.map(row=>row.map(csvCell).join(",")).join("\r\n")],{type:"text/csv;charset=utf-8"});const link=document.createElement("a");link.href=URL.createObjectURL(blob);link.download="cg-news-summary.csv";link.click();setTimeout(()=>URL.revokeObjectURL(link.href),1000)}
+    byId("search").addEventListener("input",event=>{state.query=event.target.value.trim();renderFeed()});byId("csv").addEventListener("click",exportCsv);
+    fetch("../data/free-info.json?v="+Date.now()).then(response=>response.ok?response.json():Promise.reject(new Error("HTTP "+response.status))).then(data=>{if(!data||!Array.isArray(data.items))throw new Error("形式不明");state.data=data;renderStatus(data);renderLeads(data.items);renderGenres(data.items);renderFeed()}).catch(()=>{const box=byId("state");box.className="stat bad";box.querySelector("b").textContent="取得不能";box.querySelector("span").textContent="JSONを直接確認";byId("leads").replaceChildren(node("div","empty","ニュースを取得できませんでした"));byId("feed").replaceChildren(node("div","empty","時間をおいて再読込してください"));byId("updated").textContent="状態を確認できません"});
   </script>
 </body>
 </html>
