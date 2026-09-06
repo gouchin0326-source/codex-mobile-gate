@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-06T00:04:32.130266+00:00",
-  "lastSuccessAt": "2026-09-05T18:36:37.920217+00:00",
+  "updatedAt": "2026-09-06T04:31:05.784696+00:00",
+  "lastSuccessAt": "2026-09-06T04:31:05.784696+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -115,12 +115,12 @@
       "score": 5
     },
     {
-      "genre": "論文",
+      "genre": "災害",
       "count": 8,
-      "signal": "Speculative Macro Commit for Faster Tool-Using Agents / Fresh Memory, Stale Plans: Dependency-Scoped Validation for Distributed LLM-Agent Memory / Dude: A Dual-Detection Multi-Agen",
+      "signal": "M 1.3 - 7 km ENE of Running Springs, CA / M 2.0 - 16 km NE of Milford, Utah / M 5.6 - 93 km SE of Kirakira, Solomon Islands",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://arxiv.org/abs/2609.03236",
-      "score": 3
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41541984",
+      "score": 1
     },
     {
       "genre": "AI",
@@ -131,19 +131,11 @@
       "score": 3
     },
     {
-      "genre": "災害",
-      "count": 2,
-      "signal": "M 3.1 - 55 km SSW of Pilot Point, Alaska / M 4.9 - 80 km SSW of Nikolski, Alaska",
-      "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rppmra",
-      "score": 1
-    },
-    {
       "genre": "技術",
-      "count": 1,
-      "signal": "zopt: low-ceremony command line parsing for Zig",
+      "count": 3,
+      "signal": "M2: Episode 1 (or, Asahi Linux on M3) / The revolt of the reader / It matters who teaches you",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://codeberg.org/hgrsd/zopt",
+      "topUrl": "https://asahilinux.org/2026/09/m2-episode-1/",
       "score": 1
     }
   ],
@@ -186,24 +178,6 @@
       ]
     },
     {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Speculative Macro Commit for Faster Tool-Using Agents",
-      "summary": "arXiv:2609.03236v1 Announce Type: new Abstract: Tool-using LLM agents spend wall-clock time not only on model inference but also in serial action--observation turns, where each tool call, environment transition, and obse",
-      "url": "https://arxiv.org/abs/2609.03236",
-      "published": "2026-09-04T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "OpenAI",
@@ -225,10 +199,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 3.1 - 55 km SSW of Pilot Point, Alaska",
-      "summary": "55 km SSW of Pilot Point, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rppmra",
-      "published": "2026-09-05T18:01:58.736000+00:00",
+      "title": "M 1.3 - 7 km ENE of Running Springs, CA",
+      "summary": "7 km ENE of Running Springs, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41541984",
+      "published": "2026-09-06T04:27:33.170000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -241,10 +215,10 @@
       "genre": "技術",
       "topic": "その他",
       "sourceWeight": 1,
-      "title": "zopt: low-ceremony command line parsing for Zig",
+      "title": "M2: Episode 1 (or, Asahi Linux on M3)",
       "summary": "Comments",
-      "url": "https://codeberg.org/hgrsd/zopt",
-      "published": "2026-09-05T14:48:58+00:00",
+      "url": "https://asahilinux.org/2026/09/m2-episode-1/",
+      "published": "2026-09-06T00:52:57+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -319,60 +293,6 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Fresh Memory, Stale Plans: Dependency-Scoped Validation for Distributed LLM-Agent Memory",
-      "summary": "arXiv:2609.03340v1 Announce Type: new Abstract: Distributed LLM-agent teams can read the latest shared facts and still act on an obsolete plan. A planner may derive an action from requirement $r_3$, another agent may com",
-      "url": "https://arxiv.org/abs/2609.03340",
-      "published": "2026-09-04T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Dude: A Dual-Detection Multi-Agent System for Paper-Code Discrepancy Detection",
-      "summary": "arXiv:2609.03416v1 Announce Type: new Abstract: LLM-empowered paper-code discrepancy detection has received growing concern since the scaling of research submissions exceeds the manual review capability. However, the lim",
-      "url": "https://arxiv.org/abs/2609.03416",
-      "published": "2026-09-04T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "DuplexSpeechBench-IFEval: Evaluating Implicit Instruction Following in Full-Duplex Voice Agents",
-      "summary": "arXiv:2609.03423v1 Announce Type: new Abstract: Full-duplex voice agents must continuously decide when to listen, backchannel, interrupt, handle speech overlaps, take the floor, and yield. Existing benchmarks largely tes",
-      "url": "https://arxiv.org/abs/2609.03423",
-      "published": "2026-09-04T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
       ]
     },
     {
@@ -619,84 +539,126 @@
       ]
     },
     {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Structure and Implementation of New Practical English Textbooks Driven by Artificial Intelligence",
-      "summary": "arXiv:2609.02981v1 Announce Type: new Abstract: Artificial intelligence is changing the form of applied English materials from fixed paper sequences to adaptive learning systems that can diagnose learners, recommend task",
-      "url": "https://arxiv.org/abs/2609.02981",
-      "published": "2026-09-04T04:00:00+00:00",
-      "score": 2,
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 2.0 - 16 km NE of Milford, Utah",
+      "summary": "16 km NE of Milford, Utah",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uu80154411",
+      "published": "2026-09-06T04:08:39.110000+00:00",
+      "score": 1,
       "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "MasterControl Seventeen Every Time",
-      "summary": "arXiv:2609.03209v1 Announce Type: new Abstract: We study a governed approach to enterprise analytics: a language model interprets the question, while deterministic policy selects and runs a pre-approved analytical progra",
-      "url": "https://arxiv.org/abs/2609.03209",
-      "published": "2026-09-04T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "A Prompt-Engineering Approach to Develop Scalable, Flexible, and Real-Time Hybrid Micro-Level Personalization in a General Purpose AI Teaching Assistant",
-      "summary": "arXiv:2609.03402v1 Announce Type: new Abstract: Artificial intelligence (AI) teaching assistants powered by large language models (LLMs) offer scalable educational support but often provide limited personalization. This ",
-      "url": "https://arxiv.org/abs/2609.03402",
-      "published": "2026-09-04T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Caught in the Story: Narrative Captivity in Multi-turn LLMs Conversation",
-      "summary": "arXiv:2609.03407v1 Announce Type: new Abstract: People increasingly turn to large language models (LLMs) for everyday advice, making ethically charged interpersonal problems a practical moral-advisory context. Most prior",
-      "url": "https://arxiv.org/abs/2609.03407",
-      "published": "2026-09-04T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
+        "災害"
       ]
     },
     {
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 4.9 - 80 km SSW of Nikolski, Alaska",
-      "summary": "80 km SSW of Nikolski, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tek7",
-      "published": "2026-09-05T18:00:09.215000+00:00",
+      "title": "M 5.6 - 93 km SE of Kirakira, Solomon Islands",
+      "summary": "93 km SE of Kirakira, Solomon Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000temi",
+      "published": "2026-09-06T04:05:30.141000+00:00",
       "score": 1,
       "tags": [
         "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 4.3 - 155 km SSW of Acajutla, El Salvador",
+      "summary": "155 km SSW of Acajutla, El Salvador",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000teme",
+      "published": "2026-09-06T04:00:21.725000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.9 - 60 km S of Whites City, New Mexico",
+      "summary": "60 km S of Whites City, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026rnnzam",
+      "published": "2026-09-06T03:57:35.985000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.6 - 12 km W of Anza, CA",
+      "summary": "12 km W of Anza, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41541976",
+      "published": "2026-09-06T03:27:57.370000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 2.0 - 91 km WNW of Yakutat, Alaska",
+      "summary": "91 km WNW of Yakutat, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rqhyuy",
+      "published": "2026-09-06T03:15:53.545000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.8 - 5 km NW of The Geysers, CA",
+      "summary": "5 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430477",
+      "published": "2026-09-06T03:09:29.490000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "The revolt of the reader",
+      "summary": "Comments",
+      "url": "https://bcantrill.dtrace.org/2026/09/05/the-revolt-of-the-reader/",
+      "published": "2026-09-05T21:28:47+00:00",
+      "score": 1,
+      "tags": [
+        "技術"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "It matters who teaches you",
+      "summary": "Comments",
+      "url": "https://bastiangruber.ca/posts/it-matters-who-teaches-you/",
+      "published": "2026-09-05T17:47:34+00:00",
+      "score": 1,
+      "tags": [
+        "技術"
       ]
     }
   ],
@@ -704,48 +666,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T18:36:37.920217+00:00",
-      "lastAttemptAt": "2026-09-05T18:36:37.920217+00:00",
+      "lastSuccessAt": "2026-09-06T04:31:05.784696+00:00",
+      "lastAttemptAt": "2026-09-06T04:31:05.784696+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T18:36:37.920217+00:00",
-      "lastAttemptAt": "2026-09-05T18:36:37.920217+00:00",
+      "lastSuccessAt": "2026-09-06T04:31:05.784696+00:00",
+      "lastAttemptAt": "2026-09-06T04:31:05.784696+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T18:36:37.920217+00:00",
-      "lastAttemptAt": "2026-09-05T18:36:37.920217+00:00",
+      "lastSuccessAt": "2026-09-06T04:31:05.784696+00:00",
+      "lastAttemptAt": "2026-09-06T04:31:05.784696+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T18:36:37.920217+00:00",
-      "lastAttemptAt": "2026-09-05T18:36:37.920217+00:00",
+      "lastSuccessAt": "2026-09-06T04:31:05.784696+00:00",
+      "lastAttemptAt": "2026-09-06T04:31:05.784696+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T03:44:09.088385+00:00",
-      "lastAttemptAt": "2026-09-05T03:44:09.088385+00:00",
+      "lastSuccessAt": "2026-09-06T04:31:05.784696+00:00",
+      "lastAttemptAt": "2026-09-06T04:31:05.784696+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-05T18:36:37.920217+00:00",
-      "lastAttemptAt": "2026-09-05T18:36:37.920217+00:00",
+      "lastSuccessAt": "2026-09-06T04:31:05.784696+00:00",
+      "lastAttemptAt": "2026-09-06T04:31:05.784696+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

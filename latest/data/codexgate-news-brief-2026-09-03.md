@@ -1,12 +1,11 @@
 # CODEXGATE News Brief
 
-- 更新: 2026-09-06T00:04:32.130266+00:00
+- 更新: 2026-09-06T04:31:05.784696+00:00
 - 取得: GitHub Actions/Python
 - Codex: 0%想定（自動実行時）
 - 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。
 
 - [開発] CG開発・GitHub運用へ反映候補 / GPT-6 Astra is generally available in GitHub Copilot / GitHub Copilot 
-- [論文] 更新あり。必要時だけ確認 / Speculative Macro Commit for Faster Tool-Using Agents / Fresh Memory, 
+- [災害] 更新あり。必要時だけ確認 / M 1.3 - 7 km ENE of Running Springs, CA / M 2.0 - 16 km NE of Milford,
 - [AI] AI/Codex運用の変化を確認 / Daybreak for Frontline Defenders: $1B to protect essential services / 
-- [災害] 更新あり。必要時だけ確認 / M 3.1 - 55 km SSW of Pilot Point, Alaska / M 4.9 - 80 km SSW of Nikols
-- [技術] 更新あり。必要時だけ確認 / zopt: low-ceremony command line parsing for Zig
+- [技術] 更新あり。必要時だけ確認 / M2: Episode 1 (or, Asahi Linux on M3) / The revolt of the reader / It 
