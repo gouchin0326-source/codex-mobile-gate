@@ -27,6 +27,7 @@ BRIEF = ROOT / "latest" / "data" / "codexgate-news-brief-2026-09-03.md"
 JMA_TOYAMA_WARNING = "https://www.jma.go.jp/bosai/warning/data/warning/160000.json"
 JMA_NOWCAST_TARGETS = "https://www.jma.go.jp/bosai/jmatile/data/nowc/targetTimes_N2.json"
 GITHUB_RUNS = "https://api.github.com/repos/gouchin0326-source/codex-mobile-gate/actions/runs?per_page=8"
+REFRESH_TARGET_MINUTES = 15
 TOYAMA_LAT = 36.6953
 TOYAMA_LON = 137.2113
 FETCH_CONTROLLER = None
@@ -1066,7 +1067,9 @@ def build_health_payload(now, free_payload, ai_payload, weather_payload):
             previous = {}
     try:
         data = json.loads(fetch(GITHUB_RUNS, "github-actions", has_previous=bool(previous.get("runs"))))
-        for run in data.get("workflow_runs", [])[:8]:
+        for run in data.get("workflow_runs", []):
+            if run.get("name") != "free-info":
+                continue
             runs.append({
                 "name": run.get("name", ""),
                 "status": run.get("status", ""),
@@ -1075,6 +1078,8 @@ def build_health_payload(now, free_payload, ai_payload, weather_payload):
                 "updatedAt": run.get("updated_at", ""),
                 "url": run.get("html_url", ""),
             })
+            if len(runs) >= 8:
+                break
     except SourceReuse:
         runs = list(previous.get("runs", []))
     except Exception as exc:
@@ -1083,17 +1088,25 @@ def build_health_payload(now, free_payload, ai_payload, weather_payload):
     now_dt = parse_utc(now) or datetime.now(timezone.utc)
     free_status = "fresh" if not free_payload.get("errors") else ("stale" if free_payload.get("items") else "unavailable")
     datasets = [
-        {"id": "free-info", "label": "全体", "updatedAt": free_payload.get("lastSuccessAt") or free_payload.get("updatedAt"), "status": free_payload.get("status") or free_status, "errors": len(free_payload.get("errors", [])), "count": len(free_payload.get("items", []))},
+        {"id": "free-info", "label": "全体", "updatedAt": free_payload.get("updatedAt"), "contentUpdatedAt": free_payload.get("lastSuccessAt"), "status": free_payload.get("status") or free_status, "errors": len(free_payload.get("errors", [])), "count": len(free_payload.get("items", []))},
         {"id": "ai-info", "label": "AI", "updatedAt": ai_payload.get("lastSuccessAt") or ai_payload.get("updatedAt"), "status": ai_payload.get("status") or free_status, "errors": len(free_payload.get("errors", [])), "count": len(ai_payload.get("items", []))},
         {"id": "weather-info", "label": "天気", "updatedAt": weather_payload.get("lastSuccessAt") or weather_payload.get("updatedAt"), "status": weather_payload.get("status") or "unavailable", "errors": len(weather_payload.get("errors", [])), "count": len(weather_payload.get("locations", []))},
     ]
     health_level = "normal"
-    lines = ["CG: 自動更新正常", "Actions/JSONを監視中"]
+    lines = ["CG: 15\u5206\u4ee5\u5185\u306b\u66f4\u65b0", "\u30ed\u30fc\u30ab\u30eb/GitHub\u30fbAI\u30c8\u30fc\u30af\u30f30"]
     for ds in datasets:
         updated = parse_utc(ds.get("updatedAt"))
         ds["ageHours"] = round((now_dt - updated).total_seconds() / 3600, 1) if updated else None
         if ds["status"] != "fresh" or ds["errors"] or ds["ageHours"] is None or ds["ageHours"] > 12:
             health_level = "warning"
+    refreshed = parse_utc(free_payload.get("updatedAt"))
+    refresh_seconds = max(0, (now_dt - refreshed).total_seconds()) if refreshed else None
+    refresh_age = round(refresh_seconds / 60, 1) if refresh_seconds is not None else None
+    refresh_on_time = refresh_seconds is not None and refresh_seconds <= REFRESH_TARGET_MINUTES * 60
+    if not refresh_on_time:
+        health_level = "warning"
+        age_label = refresh_age if refresh_age is not None else "?"
+        lines = ["CG: 15\u5206\u4ee5\u4e0a\u66f4\u65b0\u306a\u3057", f"\u6700\u7d42\u66f4\u65b0 {age_label}\u5206\u524d"]
     failed_runs = [r for r in runs if r.get("conclusion") in {"failure", "cancelled", "timed_out"}]
     active_runs = [r for r in runs if r.get("status") != "completed"]
     if failed_runs:
@@ -1101,8 +1114,8 @@ def build_health_payload(now, free_payload, ai_payload, weather_payload):
         lines = [f"CG: Actions失敗 {len(failed_runs)}件", "詳細はCG監視を確認"]
     elif active_runs:
         health_level = "caution"
-        lines = ["CG: Actions実行中", "更新完了待ち"]
-    elif health_level == "warning":
+        lines = ["CG: \u7121\u6599\u60c5\u5831\u3092\u66f4\u65b0\u4e2d", "free-info\u5b8c\u4e86\u5f85\u3061"]
+    elif health_level == "warning" and refresh_on_time:
         lines = ["CG: データ更新に注意", "JSON鮮度/errorを確認"]
     return {
         "updatedAt": now,
@@ -1110,6 +1123,13 @@ def build_health_payload(now, free_payload, ai_payload, weather_payload):
         "codexTokenUse": "0 when run by GitHub Actions",
         "level": health_level,
         "lines": lines,
+        "refresh": {
+            "targetMinutes": REFRESH_TARGET_MINUTES,
+            "lastUpdateAt": free_payload.get("updatedAt"),
+            "ageMinutes": refresh_age,
+            "onTime": refresh_on_time,
+            "tokenUse": 0,
+        },
         "datasets": datasets,
         "runs": runs,
         "errors": errors,
