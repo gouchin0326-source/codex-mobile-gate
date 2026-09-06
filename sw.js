@@ -1,4 +1,4 @@
-const CACHE = "codex-gate-v123-mobile-fresh-20260906";
+const CACHE = "codex-gate-v124-root-cow-20260906";
 const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
@@ -47,7 +47,11 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
-  event.respondWith(fetch(event.request).catch(() => caches.match(event.request)));
+  const isPage = event.request.mode === "navigate" || event.request.destination === "document";
+  const request = isPage ? new Request(event.request, { cache: "no-store" }) : event.request;
+  event.respondWith(
+    fetch(request).catch(() => caches.match(event.request, { ignoreSearch: true }))
+  );
 });
 
 

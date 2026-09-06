@@ -1,8 +1,8 @@
 {
   "lane": "app",
-  "ts": "2026-09-06T14:30:00+09:00",
+  "ts": "2026-09-06T15:00:00+09:00",
   "artifact": "index.html",
-  "prompt": "COW専用アイコンを追加し、スマホCGがHTMLキャッシュを残さず最新版へ更新されるよう修正",
+  "prompt": "スマホPWAが使用するルートCGにもCOW専用アイコンと書庫導線を同期し、全入口のキャッシュ更新を統一",
   "source": "codex",
   "backend": "codex",
   "model": "gpt-6-astra",
@@ -14,6 +14,7 @@
     "embedded_media": {"pass": true, "note": "Gem art is embedded SVG and music plus effects are synthesized with Web Audio; no external asset request is required."},
     "launcher_icon": {"pass": true, "note": "CG free-operation and archive launchers use a dedicated COW mark and CODEXWorld label instead of the cow character."},
     "mobile_freshness": {"pass": true, "note": "Navigation requests bypass HTTP cache, service worker updates bypass cache, and the PWA start URL carries the current build id."},
+    "root_entry_sync": {"pass": true, "note": "Both the repository root PWA entry and latest entry expose the COW launcher and COW library launcher."},
     "free_operation": {"pass": true, "note": "Runtime uses browser-local rules and templates without model API calls."},
     "cg_publication": {"pass": true, "note": "Approved artifacts appear in the CG COW content area in the same browser."},
     "archive": {"pass": true, "note": "Artifacts are grouped by genre and exported as folder-structured ZIP bundles."},
