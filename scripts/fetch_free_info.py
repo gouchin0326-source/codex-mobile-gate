@@ -138,6 +138,51 @@ SOCIAL_SOURCES = [
         "url": "https://news.google.com/rss/search?q=%E5%AF%8C%E5%B1%B1%20when:1d&hl=ja&gl=JP&ceid=JP:ja",
     },
     {
+        "id": "news-entertainment-jp",
+        "label": "日本ニュース エンタメ",
+        "platform": "Google News",
+        "type": "rss",
+        "genre": "SNS",
+        "topic": "エンタメ",
+        "url": "https://news.google.com/rss/search?q=%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%A1%20%E8%8A%B8%E8%83%BD%20when:1d&hl=ja&gl=JP&ceid=JP:ja",
+    },
+    {
+        "id": "news-business-jp",
+        "label": "日本ニュース ビジネス",
+        "platform": "Google News",
+        "type": "rss",
+        "genre": "SNS",
+        "topic": "ビジネス",
+        "url": "https://news.google.com/rss/search?q=%E4%BC%81%E6%A5%AD%20%E6%96%B0%E8%A3%BD%E5%93%81%20%E4%BA%BA%E4%BA%8B%20when:1d&hl=ja&gl=JP&ceid=JP:ja",
+    },
+    {
+        "id": "news-life-jp",
+        "label": "日本ニュース 生活",
+        "platform": "Google News",
+        "type": "rss",
+        "genre": "SNS",
+        "topic": "生活",
+        "url": "https://news.google.com/rss/search?q=%E7%94%9F%E6%B4%BB%20%E7%89%A9%E4%BE%A1%20%E5%AD%90%E8%82%B2%E3%81%A6%20when:1d&hl=ja&gl=JP&ceid=JP:ja",
+    },
+    {
+        "id": "news-science-jp",
+        "label": "日本ニュース 科学",
+        "platform": "Google News",
+        "type": "rss",
+        "genre": "SNS",
+        "topic": "科学",
+        "url": "https://news.google.com/rss/search?q=%E7%A7%91%E5%AD%A6%20%E5%AE%87%E5%AE%99%20%E7%A0%94%E7%A9%B6%20when:1d&hl=ja&gl=JP&ceid=JP:ja",
+    },
+    {
+        "id": "news-game-jp",
+        "label": "日本ニュース ゲーム",
+        "platform": "Google News",
+        "type": "rss",
+        "genre": "SNS",
+        "topic": "ゲーム",
+        "url": "https://news.google.com/rss/search?q=%E3%82%B2%E3%83%BC%E3%83%A0%20Nintendo%20PlayStation%20Steam%20when:1d&hl=ja&gl=JP&ceid=JP:ja",
+    },
+    {
         "id": "mastodon-ai",
         "label": "Mastodon #AI",
         "platform": "Mastodon",
@@ -179,6 +224,11 @@ def social_topic(title):
         ("災害", ["災害", "警報", "大雨", "線状降水帯", "地震", "台風", "避難"]),
         ("健康", ["健康", "医療", "病院", "感染", "薬", "熱中症"]),
         ("富山", ["富山", "高岡", "射水", "魚津", "氷見", "砺波"]),
+        ("生活", ["生活", "物価", "子育て", "家計", "食品", "値上げ", "買い物"]),
+        ("エンタメ", ["エンタメ", "芸能", "映画", "音楽", "ドラマ", "アニメ"]),
+        ("ビジネス", ["ビジネス", "企業", "新製品", "人事", "買収", "売上"]),
+        ("科学", ["科学", "宇宙", "研究", "発見", "実験", "論文"]),
+        ("ゲーム", ["ゲーム", "nintendo", "playstation", "steam", "switch", "ps5"]),
         ("技術", ["技術", "it", "スマホ", "半導体", "アプリ", "ソフト"]),
         ("開発", ["github", "python", "javascript", "api", "code", "codex", "developer", "npm", "oss"]),
         ("ガジェット", ["npu", "gpu", "ram", "chip", "pc", "device", "banana pi", "server"]),
@@ -657,7 +707,21 @@ def build_social_payload(now):
     overseas = []
     ranked = sorted(japanese, key=lambda x: (x.get("sourceWeight", 1), x.get("regionScore", 0), x.get("score", 0), x.get("published", "")), reverse=True)
     ranked.extend(sorted(overseas, key=lambda x: (x.get("score", 0), x.get("published", "")), reverse=True))
-    items = ranked[:36]
+    picked = []
+    seen_urls = set()
+    for topic in [s.get("topic") for s in SOCIAL_SOURCES if s.get("topic")]:
+        row = next((x for x in ranked if x.get("topic") == topic and x.get("url") not in seen_urls), None)
+        if row:
+            picked.append(row)
+            seen_urls.add(row.get("url"))
+    for row in ranked:
+        if row.get("url") in seen_urls:
+            continue
+        picked.append(row)
+        seen_urls.add(row.get("url"))
+        if len(picked) >= 60:
+            break
+    items = picked[:60]
     platforms = {}
     for item in items:
         platforms.setdefault(item.get("platform", "SNS"), 0)
@@ -818,10 +882,10 @@ def build_weather_payload(sources, now):
             "centerLabel": "富山市中心",
             "latitude": TOYAMA_LAT,
             "longitude": TOYAMA_LON,
-            "zoom": 9,
+            "zoom": 10,
         },
         "source": JMA_NOWCAST_TARGETS,
-        "link": "https://www.jma.go.jp/bosai/nowc/#zoom:9/lat:36.6953/lon:137.2113/colordepth:normal/elements:hrpns&slmcs&slmcs_fcst",
+        "link": "https://www.jma.go.jp/bosai/nowc/#zoom:10/lat:36.6953/lon:137.2113/colordepth:normal/elements:hrpns&slmcs&slmcs_fcst",
         "note": "富山県を富山市中心で拡大。公式タイルは降水なしの場合に透明表示。",
         "tiles": [],
         "times": [],
@@ -841,8 +905,8 @@ def build_weather_payload(sources, now):
             nowcast["times"].append({"basetime": basetime, "validtime": validtime})
         if nowcast["times"]:
             t0 = nowcast["times"][-1]
-            for dy in [-1, 0, 1]:
-                for dx in [-1, 0, 1]:
+            for dy in [-2, -1, 0, 1]:
+                for dx in [-2, -1, 0, 1]:
                     x = x0 + dx
                     y = y0 + dy
                     nowcast["tiles"].append({

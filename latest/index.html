@@ -665,10 +665,10 @@
     <div class="wrap top">
       <div>
         <h1>CG</h1>
-        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-06 20:49 JST</p>
+        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-07 07:11 JST</p>
       </div>
       <button class="refresh" id="force-update" type="button">最新版に更新</button>
-      <div class="date">更新 2026-09-06 20:49 JST</div>
+      <div class="date">更新 2026-09-07 07:11 JST</div>
     </div>
   </header>
 
@@ -837,24 +837,26 @@
       }));
     }
     renderCowArtifacts();
-    fetch("./data/free-info.json?v=" + Date.now())
+    fetch("./data/today.json?v=" + Date.now())
       .then((res) => res.ok ? res.json() : null)
       .then((data) => {
         if (!data || !Array.isArray(data.items)) return;
         const box = document.querySelector("#free-info-feed");
         if (!box) return;
-        const rows = Array.isArray(data.contexts) && data.contexts.length
-          ? data.contexts.slice(0, 5).map((ctx) => ({
-              genre: ctx.genre,
-              title: `${ctx.decision} / ${ctx.signal}`,
-              url: "./zero-token-army/index.html#context",
-              score: ctx.score
-            }))
-          : data.items.slice(0, 5);
-        box.innerHTML = rows.map((item) => {
-          const mark = item.score >= 3 ? "!" : "";
-          return `<a class="feed-item" href="${item.url || './data/free-info.json'}"><b>${item.genre || item.label || '情'}</b><span>${item.title || '無題'}</span><i>${mark}</i></a>`;
-        }).join("");
+        box.replaceChildren();
+        if (!data.items.length) {
+          const row = document.createElement("a"); row.className = "feed-item"; row.href = "./zero-token-army/index.html#today-section";
+          const mark = document.createElement("b"); mark.textContent = "今";
+          const title = document.createElement("span"); title.textContent = data.message || "今日の確認事項はありません";
+          const state = document.createElement("i"); state.textContent = ""; row.append(mark, title, state); box.append(row); return;
+        }
+        data.items.slice(0, 5).forEach((item) => {
+          const row = document.createElement("a"); row.className = "feed-item"; row.href = "./zero-token-army/index.html#today-section";
+          const mark = document.createElement("b"); mark.textContent = item.genre || "情";
+          const title = document.createElement("span"); title.textContent = `${item.title} / ${item.reason}`;
+          const state = document.createElement("i"); state.textContent = item.stale ? "旧" : (item.score >= 3 ? "!" : "");
+          row.append(mark, title, state); box.append(row);
+        });
       })
       .catch(() => {});
     fetch("./data/weather-info.json?v=" + Date.now())

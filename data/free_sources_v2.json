@@ -1,7 +1,7 @@
 {
   "version": 2,
   "budgets": {
-    "maxRequestsPerRun": 20,
+    "maxRequestsPerRun": 30,
     "maxRequestsPerDay": 600,
     "maxBytesPerDay": 52428800,
     "defaultMaxBytesPerResponse": 2097152,
@@ -29,6 +29,11 @@
     {"id":"news-sports-jp","enabled":true,"intervalMinutes":180,"ttlMinutes":360,"maxBytes":2097152,"allowedHosts":["news.google.com"]},
     {"id":"news-health-jp","enabled":true,"intervalMinutes":180,"ttlMinutes":360,"maxBytes":2097152,"allowedHosts":["news.google.com"]},
     {"id":"news-toyama-jp","enabled":true,"intervalMinutes":60,"ttlMinutes":180,"maxBytes":2097152,"allowedHosts":["news.google.com"]},
+    {"id":"news-entertainment-jp","enabled":true,"intervalMinutes":180,"ttlMinutes":360,"maxBytes":2097152,"allowedHosts":["news.google.com"]},
+    {"id":"news-business-jp","enabled":true,"intervalMinutes":180,"ttlMinutes":360,"maxBytes":2097152,"allowedHosts":["news.google.com"]},
+    {"id":"news-life-jp","enabled":true,"intervalMinutes":180,"ttlMinutes":360,"maxBytes":2097152,"allowedHosts":["news.google.com"]},
+    {"id":"news-science-jp","enabled":true,"intervalMinutes":180,"ttlMinutes":360,"maxBytes":2097152,"allowedHosts":["news.google.com"]},
+    {"id":"news-game-jp","enabled":true,"intervalMinutes":180,"ttlMinutes":360,"maxBytes":2097152,"allowedHosts":["news.google.com"]},
     {"id":"mastodon-ai","enabled":true,"intervalMinutes":60,"ttlMinutes":180,"maxBytes":2097152,"allowedHosts":["mstdn.jp"]},
     {"id":"mastodon-codex","enabled":true,"intervalMinutes":60,"ttlMinutes":180,"maxBytes":2097152,"allowedHosts":["mstdn.jp"]}
   ]
