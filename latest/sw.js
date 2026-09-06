@@ -1,4 +1,4 @@
-const CACHE = "codex-gate-v120-cow-icon-20260906";
+const CACHE = "codex-gate-v121-cow-icon-20260906";
 const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",

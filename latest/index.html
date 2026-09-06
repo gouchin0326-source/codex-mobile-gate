@@ -418,6 +418,12 @@
       overflow-wrap: anywhere;
     }
 
+    .app-icon .cow-label {
+      font-size: .62rem;
+      letter-spacing: -.035em;
+      white-space: nowrap;
+    }
+
     .info-feed {
       display: grid;
       gap: 7px;
@@ -508,6 +514,7 @@
       .glyph { width: 42px; height: 42px; border-radius: 12px; font-size: 1.15rem; }
       .app-icon { min-height: 76px; padding: 4px 2px; }
       .app-icon span { font-size: .6rem; }
+      .app-icon .cow-label { font-size: .54rem; }
       .feed-item { grid-template-columns: 44px 1fr 18px; padding: 9px; gap: 8px; }
       .feed-item b { min-height: 38px; font-size: .78rem; }
       .feed-item span { font-size: 1.02rem; line-height: 1.32; }
@@ -691,7 +698,7 @@
         <div class="auto-line">自動: GitHub Actionsが一次API/RSSを取得、Codex運用0</div>
       </div>
       <div class="phone-grid">
-        <a class="app-icon updated" href="./codex-world/index.html" aria-label="CODEXWorldを開く"><b class="glyph g-cow" aria-hidden="true">COW</b><span>CODEXWorld</span></a>
+        <a class="app-icon updated" href="./codex-world/index.html" aria-label="CODEXWorldを開く"><b class="glyph g-cow" aria-hidden="true">COW</b><span class="cow-label">CODEXWorld</span></a>
         <a class="app-icon updated" data-weather-icon href="./weather-info/index.html"><b class="glyph g-data">天</b><span>富山天気</span></a>
         <a class="app-icon updated" href="./ai-info/index.html"><b class="glyph g-dev">AI</b><span>AI動向</span></a>
         <a class="app-icon updated" href="./social-trends/index.html"><b class="glyph g-dev">話</b><span>日本語話題</span></a>
