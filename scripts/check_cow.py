@@ -35,6 +35,10 @@ def run():
 
     require("CODEXWorld <small>— COW</small>" in cow, "COW name missing")
     require(not re.search(r"\bCW\b", cow), "old CW abbreviation remains")
+    require('id="instruction"' in cow and 'id="app-name"' not in cow, "one-instruction easy mode missing")
+    require("function inferGenre" in cow and "function inferName" in cow, "autonomous decisions missing")
+    require("function completeBuild" in cow and "function improve" in cow, "automatic build/review loop missing")
+    require("COWに完成まで任せる" in cow and "このままCGへ掲載" in cow, "easy action labels missing")
     for term in ["cow-state-v1", "cg-cow-artifacts-v1", "cow-library/v1", "cow-artifact/v1"]:
         require(term in cow, f"missing COW identifier: {term}")
     for signature in ["0x04034b50", "0x02014b50", "0x06054b50"]:
@@ -49,7 +53,7 @@ def run():
 
     capabilities = json.loads((ROOT / "latest" / "data" / "artifact-capabilities.json").read_text(encoding="utf-8"))
     require(any(row.get("id") == "codex-world" for row in capabilities["artifacts"]), "artifact registry missing COW")
-    print("COW checks passed: naming, JavaScript, CG listing, genres, ZIP, offline cache, registry")
+    print("COW checks passed: easy mode, autonomous flow, review loop, CG listing, ZIP, offline cache")
 
 
 if __name__ == "__main__":

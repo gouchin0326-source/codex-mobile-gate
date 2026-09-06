@@ -1,13 +1,15 @@
 {
   "lane": "app",
-  "ts": "2026-09-06T09:45:00+09:00",
+  "ts": "2026-09-06T10:05:00+09:00",
   "artifact": "index.html",
   "prompt": "CODEXWorldをCOWとしてCG無料運用へ実装し、成果物掲載とジャンル別書庫束ね機能を追加",
   "source": "codex",
   "backend": "codex",
   "model": "gpt-5.6-sol",
   "gates": {
-    "autonomous_flow": {"pass": true, "note": "Plan, generate, validate, approve and rollback flow implemented."},
+    "autonomous_flow": {"pass": true, "note": "One instruction automatically drives naming, genre selection, planning, generation, validation and repair."},
+    "easy_mode": {"pass": true, "note": "The human only plays the completed candidate and submits a review or publication approval."},
+    "review_loop": {"pass": true, "note": "Review is learned as a versioned rule and visibly changes the regenerated app."},
     "free_operation": {"pass": true, "note": "Runtime uses browser-local rules and templates without model API calls."},
     "cg_publication": {"pass": true, "note": "Approved artifacts appear in the CG COW content area in the same browser."},
     "archive": {"pass": true, "note": "Artifacts are grouped by genre and exported as folder-structured ZIP bundles."},
