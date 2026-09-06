@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#172033">
-  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="manifest" href="manifest.webmanifest?v=202609061430">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <title>CG | CODEX Gate</title>
   <style>
@@ -665,10 +665,10 @@
     <div class="wrap top">
       <div>
         <h1>CG</h1>
-        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-06 11:47 JST</p>
+        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-06 14:30 JST</p>
       </div>
       <button class="refresh" id="force-update" type="button">最新版に更新</button>
-      <div class="date">更新 2026-09-06 11:47 JST</div>
+      <div class="date">更新 2026-09-06 14:30 JST</div>
     </div>
   </header>
 
@@ -765,7 +765,7 @@
         <div class="auto-line" id="cadence-note">設定: 通常10分。GitHub公式最短5分の範囲内。公開repo標準runnerは無料。</div>
       </div>
       <div class="phone-grid">
-        <a class="app-icon updated" href="./index.html?v=202609041707"><b class="glyph g-dev">更</b><span>最新版</span></a>
+        <a class="app-icon updated" href="./index.html?v=202609061430"><b class="glyph g-dev">更</b><span>最新版</span></a>
         <a class="app-icon updated" href="./index.html"><b class="glyph g-dev">CG</b><span>ホーム</span></a>
         <a class="app-icon updated" href="./data/zero-token-capabilities.json"><b class="glyph g-data">証</b><span>0証明</span></a>
         <a class="app-icon updated" href="./data/weather-info.json"><b class="glyph g-data">警</b><span>警戒設定</span></a>
@@ -792,15 +792,13 @@
         const regs = await navigator.serviceWorker.getRegistrations();
         await Promise.all(regs.map((reg) => reg.unregister().catch(() => reg.update().catch(() => {}))));
       }
-      const url = new URL(location.href);
-      url.searchParams.set("v", Date.now().toString());
-      location.replace(url.toString());
+      location.replace(`./index.html?v=202609061430&refresh=${Date.now()}`);
     }
     document.querySelector("#force-update")?.addEventListener("click", () => {
       forceUpdate().catch(() => location.reload());
     });
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("sw.js").catch(() => {});
+      navigator.serviceWorker.register("sw.js?v=202609061430", { updateViaCache: "none" }).catch(() => {});
     }
     function activateTab(name) {
       document.querySelectorAll(".tab").forEach((tab) => {
