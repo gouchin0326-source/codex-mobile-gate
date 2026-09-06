@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-06T17:44:15.049240+00:00",
-  "lastSuccessAt": "2026-09-06T12:30:52.529072+00:00",
+  "updatedAt": "2026-09-06T19:35:18.890783+00:00",
+  "lastSuccessAt": "2026-09-06T19:35:18.890783+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -117,25 +117,25 @@
     {
       "genre": "災害",
       "count": 8,
-      "signal": "M 2.5 - 93 km S of Kokhanok, Alaska / M 1.4 - 17 km WSW of Johannesburg, CA / M 1.3 - 7 km NW of The Geysers, CA",
+      "signal": "M 1.1 - 6 km W of Cobb, CA / M 2.2 - 3 km SW of Pāhala, Hawaii / M 2.0 - 9 km SE of Pāhala, Hawaii",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rrafwf",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430837",
       "score": 1
     },
     {
       "genre": "AI",
       "count": 6,
-      "signal": "Daybreak for Frontline Defenders: $1B to protect essential services / Playco cut manual fixes 50% prototyping games with GPT-6 Astra / GPT-6 Astra: A new generation of intelligence",
+      "signal": "Research acceleration: The view inside OpenAI / Daybreak for Frontline Defenders: $1B to protect essential services / Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
       "decision": "AI/Codex運用の変化を確認",
-      "topUrl": "https://openai.com/index/daybreak-for-frontline-defenders",
+      "topUrl": "https://openai.com/index/research-acceleration-view-inside-openai",
       "score": 3
     },
     {
       "genre": "技術",
       "count": 3,
-      "signal": "Terence Tao on “prematurely solving [a maths] problem by purely AI-powered methods” / Any Nix package, live in your browser / Debian Code Search: Fast TurboPFor with Go SIMD",
+      "signal": "NetBSD 11 from scratch / Who said a tech addict can't be comfortable far from home? / Terence Tao on “prematurely solving [a maths] problem by purely AI-powered methods”",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://mathstodon.xyz/@tao/117207856734787448",
+      "topUrl": "https://meanmicio.org/2026/09/06/netbsd-11-from-scratch/",
       "score": 1
     }
   ],
@@ -182,27 +182,27 @@
       "platform": "AI",
       "label": "OpenAI",
       "genre": "AI",
-      "topic": "その他",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
-      "summary": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
-      "url": "https://openai.com/index/daybreak-for-frontline-defenders",
-      "published": "2026-09-03T13:15:00+00:00",
+      "title": "Research acceleration: The view inside OpenAI",
+      "summary": "Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task complexity, and research acceleration.",
+      "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+      "published": "2026-09-06T08:00:00+00:00",
       "score": 3,
       "tags": [
         "AI",
         "重要",
-        "研究"
+        "開発"
       ]
     },
     {
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.5 - 93 km S of Kokhanok, Alaska",
-      "summary": "93 km S of Kokhanok, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rrafwf",
-      "published": "2026-09-06T12:23:47.372000+00:00",
+      "title": "M 1.1 - 6 km W of Cobb, CA",
+      "summary": "6 km W of Cobb, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430837",
+      "published": "2026-09-06T19:30:50.120000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -213,12 +213,12 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "AI",
+      "topic": "その他",
       "sourceWeight": 1,
-      "title": "Terence Tao on “prematurely solving [a maths] problem by purely AI-powered methods”",
-      "summary": "I recommend reading the whole thread, but I linked to the part I found the most relevant. I believe the same is true for programming. Comments",
-      "url": "https://mathstodon.xyz/@tao/117207856734787448",
-      "published": "2026-09-06T07:45:24+00:00",
+      "title": "NetBSD 11 from scratch",
+      "summary": "Comments",
+      "url": "https://meanmicio.org/2026/09/06/netbsd-11-from-scratch/",
+      "published": "2026-09-06T13:35:03+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -351,6 +351,24 @@
       "platform": "AI",
       "label": "OpenAI",
       "genre": "AI",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+      "summary": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
+      "url": "https://openai.com/index/daybreak-for-frontline-defenders",
+      "published": "2026-09-03T13:15:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
       "topic": "AI",
       "sourceWeight": 1,
       "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
@@ -435,42 +453,6 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "How AI-native companies turn workflows into operating capability",
-      "summary": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
-      "url": "https://openai.com/index/ai-native-company-workflows",
-      "published": "2026-09-01T17:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "開発"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Path to Astra: critical capabilities and frontier safeguards",
-      "summary": "Astra is the first OpenAI model to meet the Critical cybersecurity capability threshold under the Preparedness Framework, with stronger safeguards for release.",
-      "url": "https://openai.com/index/path-to-astra",
-      "published": "2026-09-01T13:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "研究"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -542,10 +524,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.4 - 17 km WSW of Johannesburg, CA",
-      "summary": "17 km WSW of Johannesburg, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41542088",
-      "published": "2026-09-06T12:17:15.660000+00:00",
+      "title": "M 2.2 - 3 km SW of Pāhala, Hawaii",
+      "summary": "3 km SW of Pāhala, Hawaii",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75030182",
+      "published": "2026-09-06T19:24:12.590000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -555,10 +537,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.3 - 7 km NW of The Geysers, CA",
-      "summary": "7 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430617",
-      "published": "2026-09-06T12:14:18.530000+00:00",
+      "title": "M 2.0 - 9 km SE of Pāhala, Hawaii",
+      "summary": "9 km SE of Pāhala, Hawaii",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75030177",
+      "published": "2026-09-06T19:15:21.240000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -568,10 +550,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.5 - 90 km WSW of Akhiok, Alaska",
-      "summary": "90 km WSW of Akhiok, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rqzrqb",
-      "published": "2026-09-06T12:07:21.987000+00:00",
+      "title": "M 0.8 - 6 km W of Cobb, CA",
+      "summary": "6 km W of Cobb, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430827",
+      "published": "2026-09-06T19:13:11.210000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -581,10 +563,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 5.2 - southern East Pacific Rise",
-      "summary": "southern East Pacific Rise",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tepx",
-      "published": "2026-09-06T12:00:16.067000+00:00",
+      "title": "M 1.3 - 46 km NW of Toyah, Texas",
+      "summary": "46 km NW of Toyah, Texas",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026rosbis",
+      "published": "2026-09-06T19:05:40.450000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -594,10 +576,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.1 - 21 km NNE of Yerington, Nevada",
-      "summary": "21 km NNE of Yerington, Nevada",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00924217",
-      "published": "2026-09-06T11:59:16.232000+00:00",
+      "title": "M 2.0 - 8 km NE of Lake Davis, CA",
+      "summary": "8 km NE of Lake Davis, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430817",
+      "published": "2026-09-06T19:00:34.030000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -607,10 +589,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.5 - 3 km NE of Big Lake, Alaska",
-      "summary": "3 km NE of Big Lake, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rqzhzr",
-      "published": "2026-09-06T11:56:17.086000+00:00",
+      "title": "M 1.6 - 15 km SE of Balmorhea, Texas",
+      "summary": "15 km SE of Balmorhea, Texas",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026rorqeb",
+      "published": "2026-09-06T18:52:29.978000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -620,10 +602,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.7 - 8 km W of Cobb, CA",
-      "summary": "8 km W of Cobb, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430597",
-      "published": "2026-09-06T11:50:27.670000+00:00",
+      "title": "M 1.1 - 6 km NNW of Cabazon, CA",
+      "summary": "6 km NNW of Cabazon, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41542192",
+      "published": "2026-09-06T18:36:43.570000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -634,28 +616,44 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "その他",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Any Nix package, live in your browser",
+      "title": "Who said a tech addict can't be comfortable far from home?",
       "summary": "Comments",
-      "url": "https://fzakaria.com/2026/09/04/any-nix-package-live-in-your-browser",
-      "published": "2026-09-06T07:09:11+00:00",
+      "url": "https://a.l3x.in/blog/my-travel-setup",
+      "published": "2026-09-06T12:41:25+00:00",
       "score": 1,
       "tags": [
         "技術"
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "An Alien Mind",
+      "summary": "Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeguards and international coordination.",
+      "url": "https://openai.com/index/an-alien-mind",
+      "published": "2026-09-06T09:00:00+00:00",
+      "score": 1,
+      "tags": [
+        "AI"
+      ]
+    },
+    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "技術",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Debian Code Search: Fast TurboPFor with Go SIMD",
-      "summary": "Comments",
-      "url": "https://michael.stapelberg.ch/posts/2026-09-06-dcs-fast-turbopfor-go-simd/",
-      "published": "2026-09-06T07:03:41+00:00",
+      "title": "Terence Tao on “prematurely solving [a maths] problem by purely AI-powered methods”",
+      "summary": "I recommend reading the whole thread, but I linked to the part I found the most relevant. I believe the same is true for programming. Comments",
+      "url": "https://mathstodon.xyz/@tao/117207856734787448",
+      "published": "2026-09-06T07:45:24+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -666,32 +664,32 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-06T12:30:52.529072+00:00",
-      "lastAttemptAt": "2026-09-06T12:30:52.529072+00:00",
+      "lastSuccessAt": "2026-09-06T19:35:18.890783+00:00",
+      "lastAttemptAt": "2026-09-06T19:35:18.890783+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-06T12:30:52.529072+00:00",
-      "lastAttemptAt": "2026-09-06T12:30:52.529072+00:00",
+      "lastSuccessAt": "2026-09-06T19:35:18.890783+00:00",
+      "lastAttemptAt": "2026-09-06T19:35:18.890783+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-06T12:30:52.529072+00:00",
-      "lastAttemptAt": "2026-09-06T12:30:52.529072+00:00",
+      "lastSuccessAt": "2026-09-06T19:35:18.890783+00:00",
+      "lastAttemptAt": "2026-09-06T19:35:18.890783+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-06T12:30:52.529072+00:00",
-      "lastAttemptAt": "2026-09-06T12:30:52.529072+00:00",
+      "lastSuccessAt": "2026-09-06T19:35:18.890783+00:00",
+      "lastAttemptAt": "2026-09-06T19:35:18.890783+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -706,8 +704,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-06T12:30:52.529072+00:00",
-      "lastAttemptAt": "2026-09-06T12:30:52.529072+00:00",
+      "lastSuccessAt": "2026-09-06T19:35:18.890783+00:00",
+      "lastAttemptAt": "2026-09-06T19:35:18.890783+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

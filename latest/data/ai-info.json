@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T17:44:15.049240+00:00",
+  "updatedAt": "2026-09-06T19:35:18.890783+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -18,16 +18,16 @@
       "genre": "AI",
       "count": 6,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "Daybreak for Frontline Defenders: $1B to protect essential services / Playco cut manual fixes 50% prototyping games with GPT-6 Astra / GPT-6 Astra: A new generation of intelligence",
-      "topUrl": "https://openai.com/index/daybreak-for-frontline-defenders",
+      "signal": "Research acceleration: The view inside OpenAI / Daybreak for Frontline Defenders: $1B to protect essential services / Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
+      "topUrl": "https://openai.com/index/research-acceleration-view-inside-openai",
       "score": 3
     },
     {
       "genre": "技術",
       "count": 3,
       "decision": "必要時だけ確認",
-      "signal": "Terence Tao on “prematurely solving [a maths] problem by purely AI-powered methods” / Any Nix package, live in your browser / Debian Code Search: Fast TurboPFor with Go SIMD",
-      "topUrl": "https://mathstodon.xyz/@tao/117207856734787448",
+      "signal": "NetBSD 11 from scratch / Who said a tech addict can't be comfortable far from home? / Terence Tao on “prematurely solving [a maths] problem by purely AI-powered methods”",
+      "topUrl": "https://meanmicio.org/2026/09/06/netbsd-11-from-scratch/",
       "score": 1
     }
   ],
@@ -68,6 +68,13 @@
       "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot"
     },
     {
+      "label": "AI",
+      "title": "Research acceleration: The view inside OpenAI",
+      "why": "Codex/AI開発判断に関係",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/research-acceleration-view-inside-openai"
+    },
+    {
       "label": "開発",
       "title": "New API endpoint provides privacy-safe star history data",
       "why": "Codex/AI開発判断に関係",
@@ -80,13 +87,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-09-03-github-actions-early-september-2026-updates"
-    },
-    {
-      "label": "開発",
-      "title": "GitHub CLI Linux package signing key expires September 5",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-03-github-cli-linux-package-signing-key-expires-september-5"
     }
   ],
   "items": [
@@ -179,6 +179,24 @@
         "開発",
         "重要",
         "研究"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Research acceleration: The view inside OpenAI",
+      "summary": "Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task complexity, and research acceleration.",
+      "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+      "published": "2026-09-06T08:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "開発"
       ]
     },
     {
@@ -356,42 +374,6 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "How AI-native companies turn workflows into operating capability",
-      "summary": "Basis, Clay, and Exa Labs use AI agents to improve onboarding, account management, and developer integrations. See what enterprise leaders can apply.",
-      "url": "https://openai.com/index/ai-native-company-workflows",
-      "published": "2026-09-01T17:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "開発"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Path to Astra: critical capabilities and frontier safeguards",
-      "summary": "Astra is the first OpenAI model to meet the Critical cybersecurity capability threshold under the Preparedness Framework, with stronger safeguards for release.",
-      "url": "https://openai.com/index/path-to-astra",
-      "published": "2026-09-01T13:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "研究"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -464,6 +446,54 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "NetBSD 11 from scratch",
+      "summary": "Comments",
+      "url": "https://meanmicio.org/2026/09/06/netbsd-11-from-scratch/",
+      "published": "2026-09-06T13:35:03+00:00",
+      "score": 1,
+      "tags": [
+        "技術"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Who said a tech addict can't be comfortable far from home?",
+      "summary": "Comments",
+      "url": "https://a.l3x.in/blog/my-travel-setup",
+      "published": "2026-09-06T12:41:25+00:00",
+      "score": 1,
+      "tags": [
+        "技術"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "An Alien Mind",
+      "summary": "Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeguards and international coordination.",
+      "url": "https://openai.com/index/an-alien-mind",
+      "published": "2026-09-06T09:00:00+00:00",
+      "score": 1,
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
       "topic": "AI",
       "sourceWeight": 1,
       "title": "Terence Tao on “prematurely solving [a maths] problem by purely AI-powered methods”",
@@ -474,40 +504,8 @@
       "tags": [
         "技術"
       ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Any Nix package, live in your browser",
-      "summary": "Comments",
-      "url": "https://fzakaria.com/2026/09/04/any-nix-package-live-in-your-browser",
-      "published": "2026-09-06T07:09:11+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Debian Code Search: Fast TurboPFor with Go SIMD",
-      "summary": "Comments",
-      "url": "https://michael.stapelberg.ch/posts/2026-09-06-dcs-fast-turbopfor-go-simd/",
-      "published": "2026-09-06T07:03:41+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
-      ]
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-06T12:30:52.529072+00:00"
+  "lastSuccessAt": "2026-09-06T19:35:18.890783+00:00"
 }
