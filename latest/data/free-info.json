@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-06T21:42:04.628515+00:00",
-  "lastSuccessAt": "2026-09-06T19:35:18.890783+00:00",
+  "updatedAt": "2026-09-06T23:13:02.136925+00:00",
+  "lastSuccessAt": "2026-09-06T22:09:05.487018+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -97,7 +97,7 @@
     "weatherRiskCadenceMinutes": 10,
     "sourcePolicyFile": "data/free_sources_v2.json",
     "budgets": {
-      "maxRequestsPerRun": 20,
+      "maxRequestsPerRun": 30,
       "maxRequestsPerDay": 600,
       "maxBytesPerDay": 52428800,
       "defaultMaxBytesPerResponse": 2097152,
@@ -664,32 +664,32 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-06T19:35:18.890783+00:00",
-      "lastAttemptAt": "2026-09-06T19:35:18.890783+00:00",
+      "lastSuccessAt": "2026-09-06T22:09:05.487018+00:00",
+      "lastAttemptAt": "2026-09-06T22:09:05.487018+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-06T19:35:18.890783+00:00",
-      "lastAttemptAt": "2026-09-06T19:35:18.890783+00:00",
+      "lastSuccessAt": "2026-09-06T22:09:05.487018+00:00",
+      "lastAttemptAt": "2026-09-06T22:09:05.487018+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-06T19:35:18.890783+00:00",
-      "lastAttemptAt": "2026-09-06T19:35:18.890783+00:00",
+      "lastSuccessAt": "2026-09-06T22:09:05.487018+00:00",
+      "lastAttemptAt": "2026-09-06T22:09:05.487018+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-06T19:35:18.890783+00:00",
-      "lastAttemptAt": "2026-09-06T19:35:18.890783+00:00",
+      "lastSuccessAt": "2026-09-06T22:09:05.487018+00:00",
+      "lastAttemptAt": "2026-09-06T22:09:05.487018+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -704,8 +704,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-06T19:35:18.890783+00:00",
-      "lastAttemptAt": "2026-09-06T19:35:18.890783+00:00",
+      "lastSuccessAt": "2026-09-06T22:09:05.487018+00:00",
+      "lastAttemptAt": "2026-09-06T22:09:05.487018+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

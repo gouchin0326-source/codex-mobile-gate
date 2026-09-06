@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-06T22:15:03.004523+00:00",
+  "updatedAt": "2026-09-06T23:13:07.414405+00:00",
   "sourceUpdatedAt": "2026-09-06T22:09:05.487018+00:00",
   "status": "fresh",
   "mode": "today-rule-based",
   "codexTokenUse": "0 when run by GitHub Actions",
-  "count": 2,
+  "count": 4,
   "message": "最大5件をルールで選択",
   "limits": {
     "maxItems": 5,
@@ -12,7 +12,7 @@
   },
   "items": [
     {
-      "id": "openai:1",
+      "id": "openai:2",
       "genre": "AI",
       "title": "Research acceleration: The view inside OpenAI",
       "reason": "AIの新着で、設定した重要語と一致",
@@ -27,13 +27,39 @@
     {
       "id": "lobsters:4",
       "genre": "技術",
-      "title": "Python Iceberg",
+      "title": "NetBSD 11 from scratch",
       "reason": "技術の新着を確認",
-      "publishedAt": "2026-09-06T18:46:54+00:00",
+      "publishedAt": "2026-09-06T13:35:03+00:00",
       "observedAt": "2026-09-06T22:09:05.487018+00:00",
       "source": "技術RSS",
-      "url": "https://aleyan.com/projects/python-iceberg/",
-      "score": 2,
+      "url": "https://meanmicio.org/2026/09/06/netbsd-11-from-scratch/",
+      "score": 1,
+      "stale": false,
+      "processing": "rule-based"
+    },
+    {
+      "id": "lobsters:29",
+      "genre": "技術",
+      "title": "Who said a tech addict can't be comfortable far from home?",
+      "reason": "技術の新着を確認",
+      "publishedAt": "2026-09-06T12:41:25+00:00",
+      "observedAt": "2026-09-06T22:09:05.487018+00:00",
+      "source": "技術RSS",
+      "url": "https://a.l3x.in/blog/my-travel-setup",
+      "score": 1,
+      "stale": false,
+      "processing": "rule-based"
+    },
+    {
+      "id": "openai:30",
+      "genre": "AI",
+      "title": "An Alien Mind",
+      "reason": "AIの新着を確認",
+      "publishedAt": "2026-09-06T09:00:00+00:00",
+      "observedAt": "2026-09-06T22:09:05.487018+00:00",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/an-alien-mind",
+      "score": 1,
       "stale": false,
       "processing": "rule-based"
     }
