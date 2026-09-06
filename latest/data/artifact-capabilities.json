@@ -432,6 +432,25 @@
         "human reviewer"
       ],
       "next_use": "Use as the compact proof that the CG-listed external AI lane path can run from dataset to artifact to CG registration."
+    },
+    {
+      "id": "codex-world",
+      "name": "CODEXWorld (COW)",
+      "path": "C:\\Codex\\pages-site\\latest\\codex-world\\index.html",
+      "type": "html-local-autonomous-app-builder",
+      "exports": [
+        "single HTML app",
+        "genre folder ZIP",
+        "COW library JSON",
+        "artifact metadata"
+      ],
+      "handoff_targets": [
+        "CG content archive",
+        "Codex",
+        "external AI",
+        "human reviewer"
+      ],
+      "next_use": "Create and approve browser-local HTML First apps, then publish them to CG content and bundle the archive by genre."
     }
   ]
 }

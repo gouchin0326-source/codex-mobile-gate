@@ -632,6 +632,15 @@
     .setting-pill b { font-size: .86rem; }
     .setting-pill span { color: var(--muted); font-size: .68rem; margin-top: 3px; }
 
+    .cow-content { display:grid; gap:7px; margin-top:10px; }
+    .cow-folder { border:1px solid var(--line); border-radius:8px; background:#f9fafb; overflow:hidden; }
+    .cow-folder summary { padding:8px; font-weight:900; cursor:pointer; }
+    .cow-files { display:grid; gap:6px; padding:7px; }
+    .cow-file { display:grid; grid-template-columns:1fr auto; gap:7px; align-items:center; padding:8px; border:1px solid var(--line); border-radius:8px; background:#fff; }
+    .cow-file b,.cow-file small { display:block; }
+    .cow-file small { color:var(--muted); }
+    .cow-file button { min-height:36px; border:1px solid #2563eb; border-radius:8px; background:#2563eb; color:#fff; font:inherit; font-weight:900; padding:6px 10px; }
+
     @media(max-width:560px){.setting-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.setting-pill{padding:6px;min-height:58px}.setting-pill b{font-size:.76rem}.setting-pill span{font-size:.62rem}}
   </style>
 </head>
@@ -640,10 +649,10 @@
     <div class="wrap top">
       <div>
         <h1>CG</h1>
-        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-06 08:46 JST</p>
+        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-06 09:45 JST</p>
       </div>
       <button class="refresh" id="force-update" type="button">最新版に更新</button>
-      <div class="date">更新 2026-09-06 08:46 JST</div>
+      <div class="date">更新 2026-09-06 09:45 JST</div>
     </div>
   </header>
 
@@ -673,6 +682,7 @@
         <div class="auto-line">自動: GitHub Actionsが一次API/RSSを取得、Codex運用0</div>
       </div>
       <div class="phone-grid">
+        <a class="app-icon updated" href="./codex-world/index.html"><b class="glyph g-dev">牛</b><span>COW</span></a>
         <a class="app-icon updated" data-weather-icon href="./weather-info/index.html"><b class="glyph g-data">天</b><span>富山天気</span></a>
         <a class="app-icon updated" href="./ai-info/index.html"><b class="glyph g-dev">AI</b><span>AI動向</span></a>
         <a class="app-icon updated" href="./social-trends/index.html"><b class="glyph g-dev">話</b><span>日本語話題</span></a>
@@ -708,6 +718,7 @@
         <div class="auto-line">素材: 前面に出さない一次データもここで保管</div>
       </div>
       <div class="phone-grid">
+        <a class="app-icon updated" href="./codex-world/index.html#library"><b class="glyph g-dev">牛</b><span>COW書庫</span></a>
         <a class="app-icon updated" href="./free-info-lab/index.html"><b class="glyph g-data">新</b><span>ニュースまとめ</span></a>
         <a class="app-icon updated" href="./data/codexgate-news-brief-2026-09-03.md"><b class="glyph g-dev">採</b><span>採決メモ</span></a>
         <a class="app-icon" href="./codex-data-pocket/index.html"><b class="glyph g-data">DB</b><span>データ</span></a>
@@ -723,6 +734,8 @@
         <a class="app-icon" href="./csd-designer-showcase/index.html"><b class="glyph g-view">展</b><span>展示</span></a>
         <a class="app-icon" href="./csd-web-designer-sample/index.html"><b class="glyph g-view">設</b><span>設計</span></a>
       </div>
+      <h2 style="margin-top:12px">COW成果物</h2>
+      <div class="cow-content" id="cow-published"><div class="auto-line">COWで承認したアプリがジャンル別に表示されます。</div></div>
     </section>
 
     <section class="tab-panel" id="tab-settings">
@@ -786,6 +799,30 @@
       tab.addEventListener("click", () => activateTab(tab.dataset.tab));
     });
     activateTab(localStorage.getItem("cg-tab") || "zero");
+    function renderCowArtifacts() {
+      const root = document.querySelector("#cow-published");
+      if (!root) return;
+      let artifacts = [];
+      try { artifacts = JSON.parse(localStorage.getItem("cg-cow-artifacts-v1") || "[]"); } catch {}
+      if (!Array.isArray(artifacts) || !artifacts.length) return;
+      const genreNames = {productivity:"仕事・生活",game:"ゲーム",learning:"学習",data:"データ",creative:"創作",wellness:"健康",other:"その他"};
+      const groups = artifacts.reduce((all, item) => { (all[item.genre] ||= []).push(item); return all; }, {});
+      root.replaceChildren(...Object.entries(groups).map(([genre, rows]) => {
+        const folder = document.createElement("details"); folder.className = "cow-folder"; folder.open = true;
+        const summary = document.createElement("summary"); summary.textContent = `${genreNames[genre] || "その他"}フォルダ（${rows.length}）`;
+        const files = document.createElement("div"); files.className = "cow-files";
+        rows.forEach((item) => {
+          const file = document.createElement("div"); file.className = "cow-file";
+          const info = document.createElement("div"); const name = document.createElement("b"); name.textContent = item.name;
+          const note = document.createElement("small"); note.textContent = item.summary || "COW承認済み成果物"; info.append(name, note);
+          const open = document.createElement("button"); open.type = "button"; open.textContent = "開く";
+          open.addEventListener("click", () => { const url = URL.createObjectURL(new Blob([item.html], {type:"text/html"})); window.open(url, "_blank", "noopener"); setTimeout(() => URL.revokeObjectURL(url), 60000); });
+          file.append(info, open); files.append(file);
+        });
+        folder.append(summary, files); return folder;
+      }));
+    }
+    renderCowArtifacts();
     fetch("./data/free-info.json?v=" + Date.now())
       .then((res) => res.ok ? res.json() : null)
       .then((data) => {
