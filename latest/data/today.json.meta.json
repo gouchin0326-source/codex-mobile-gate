@@ -1,0 +1,15 @@
+{
+  "lane": "research",
+  "ts": "2026-09-07T07:13:00+09:00",
+  "artifact": "today.json",
+  "prompt": "0907CGタスク遂行",
+  "source": "codex",
+  "backend": "codex",
+  "model": "gpt-6-astra",
+  "seconds": 600,
+  "gates": {
+    "max_five": {"pass": true, "note": "5件以下、同分類2件以下"},
+    "provenance": {"pass": true, "note": "全項目に理由・元リンク・発表/観測時刻"},
+    "no_fabrication": {"pass": true, "note": "欠測時は空配列と確認事項なしを返す"}
+  }
+}

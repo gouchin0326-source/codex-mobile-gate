@@ -1,8 +1,16 @@
 {
-  "name": "完全無料アプリ軍団",
-  "backend": "codex",
-  "status": "usable+auto-fetch+cg-listed",
-  "updatedAt": "2026-09-04T14:45:00+09:00",
+  "lane": "app",
+  "ts": "2026-09-07T07:13:00+09:00",
   "artifact": "index.html",
-  "purpose": "GitHub Actions and free RSS/API sources prove operation-zero CG apps that continue without Codex tokens."
+  "prompt": "0907CGタスク遂行",
+  "source": "codex",
+  "backend": "codex",
+  "model": "gpt-6-astra",
+  "seconds": 600,
+  "gates": {
+    "z2_rule_fixture": {"pass": true, "note": "最大5件・同分類2件・空状態・危険URL除外を固定試験"},
+    "json_csv": {"pass": true, "note": "today.json/today.csvを実データから生成"},
+    "javascript": {"pass": true, "note": "3 HTMLのinline scriptをNode.jsで構文検査"},
+    "accessibility": {"pass": true, "note": "320px実表示、44px操作、分類切替、aria-live、文字DOM生成を確認"}
+  }
 }

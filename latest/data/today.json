@@ -1,0 +1,42 @@
+{
+  "updatedAt": "2026-09-06T22:15:03.004523+00:00",
+  "sourceUpdatedAt": "2026-09-06T22:09:05.487018+00:00",
+  "status": "fresh",
+  "mode": "today-rule-based",
+  "codexTokenUse": "0 when run by GitHub Actions",
+  "count": 2,
+  "message": "最大5件をルールで選択",
+  "limits": {
+    "maxItems": 5,
+    "maxPerGenre": 2
+  },
+  "items": [
+    {
+      "id": "openai:1",
+      "genre": "AI",
+      "title": "Research acceleration: The view inside OpenAI",
+      "reason": "AIの新着で、設定した重要語と一致",
+      "publishedAt": "2026-09-06T08:00:00+00:00",
+      "observedAt": "2026-09-06T22:09:05.487018+00:00",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+      "score": 3,
+      "stale": false,
+      "processing": "rule-based"
+    },
+    {
+      "id": "lobsters:4",
+      "genre": "技術",
+      "title": "Python Iceberg",
+      "reason": "技術の新着を確認",
+      "publishedAt": "2026-09-06T18:46:54+00:00",
+      "observedAt": "2026-09-06T22:09:05.487018+00:00",
+      "source": "技術RSS",
+      "url": "https://aleyan.com/projects/python-iceberg/",
+      "score": 2,
+      "stale": false,
+      "processing": "rule-based"
+    }
+  ],
+  "errors": []
+}

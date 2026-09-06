@@ -16,6 +16,8 @@
     .feed{display:grid;gap:8px}.item{display:grid;grid-template-columns:54px 1fr auto;gap:10px;align-items:center;border:1px solid var(--line);border-radius:8px;padding:10px;background:#f9fafb;color:var(--ink);text-decoration:none}.item b{display:grid;place-items:center;min-height:44px;border-radius:10px;background:#172033;color:#fff;font-size:.9rem}.item span{font-size:1.05rem;font-weight:900;line-height:1.32;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical}.item i{font-style:normal;color:var(--rose);font-weight:900;font-size:1.1rem}
     .context{display:grid;gap:8px}.ctx{border:1px solid var(--line);border-radius:8px;background:#f9fafb;padding:10px}.ctx b{display:block;font-size:1.08rem}.ctx span{display:block;font-size:1rem;font-weight:900;line-height:1.35}.ctx small{display:block;color:var(--muted);font-size:.88rem;font-weight:800;margin-top:4px}
     .source-grid{display:grid;gap:8px}.src{border:1px solid var(--line);border-left:5px solid var(--amber);border-radius:8px;background:#f9fafb;padding:10px}.src.active{border-left-color:var(--green)}.src b{display:block;font-size:1rem}.src span{display:block;font-size:.95rem;font-weight:900;line-height:1.32}.src small{display:block;color:var(--muted);font-size:.82rem;font-weight:800;margin-top:4px}
+    .filters,.exports{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}.filter,.export{min-height:44px;border:1px solid var(--line);border-radius:8px;padding:8px 12px;background:#fff;color:var(--ink);font:inherit;font-weight:900;cursor:pointer}.filter[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}.export{display:inline-grid;place-items:center;background:var(--tool);border-color:var(--tool);color:#fff;text-decoration:none}
+    .today{display:grid;gap:8px}.today-card{border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:8px;padding:10px;background:#f9fafb}.today-card.stale{border-left-color:var(--amber)}.today-card h3{margin:0 0 5px;font-size:1rem}.today-card p{margin:3px 0;font-weight:800}.today-card small{display:block;color:var(--muted);margin-top:4px}.today-card a{display:inline-block;min-height:44px;padding:10px 0;color:var(--blue);font-weight:900}.empty{border:1px dashed var(--line);border-radius:8px;padding:14px;color:var(--muted);font-weight:900}
     .muted{color:var(--muted);font-size:.9rem;font-weight:800}.back{display:inline-grid;place-items:center;min-height:40px;padding:8px 12px;border-radius:8px;background:var(--blue);color:#fff;text-decoration:none;font-weight:900}
     @media(max-width:560px){.wrap{width:min(100% - 14px,430px)}h1{font-size:1.45rem}.sub{font-size:.82rem}.hero{grid-template-columns:1fr}.apps{grid-template-columns:repeat(4,1fr);gap:5px}.app{min-height:82px}.glyph{width:44px;height:44px;border-radius:12px;font-size:1.12rem}.app span{font-size:.7rem}.item{grid-template-columns:44px 1fr 18px;padding:9px;gap:8px}.item b{min-height:38px;font-size:.78rem}.item span{font-size:1.04rem}.muted{font-size:.84rem}}
   </style>
@@ -30,6 +32,23 @@
         <div class="metric"><b id="count">読込中</b><span>無料取得件数</span></div>
       </div>
     </section>
+    <section id="today-section">
+      <h2>今日の確認事項</h2>
+      <div class="filters" role="group" aria-label="確認事項の分類">
+        <button class="filter" type="button" data-filter="today" aria-pressed="true">今日</button>
+        <button class="filter" type="button" data-filter="life" aria-pressed="false">暮らし</button>
+        <button class="filter" type="button" data-filter="dev" aria-pressed="false">開発</button>
+        <button class="filter" type="button" data-filter="trend" aria-pressed="false">話題</button>
+        <button class="filter" type="button" data-filter="stats" aria-pressed="false">統計</button>
+        <button class="filter" type="button" data-filter="sources" aria-pressed="false">情報源</button>
+      </div>
+      <div class="exports">
+        <a class="export" href="../data/today.json" download>📤 JSON</a>
+        <a class="export" href="../data/today.csv" download>📤 CSV</a>
+      </div>
+      <div class="today" id="today" aria-live="polite"><div class="empty">読込中</div></div>
+      <p class="muted" id="today-meta">取得時刻を確認中</p>
+    </section>
     <section>
       <h2>処理アプリ</h2>
       <div class="apps">
@@ -39,6 +58,8 @@
         <a class="app new" href="#feed"><b class="glyph g1">分</b><span>分類</span></a>
         <a class="app new" href="../data/codexgate-news-brief-2026-09-03.md"><b class="glyph g2">採</b><span>採決メモ</span></a>
         <a class="app" href="../data/free-info.json"><b class="glyph g1">全</b><span>取得JSON</span></a>
+        <a class="app new" href="../data/today.json" download><b class="glyph g4">JSON</b><span>今日を出力</span></a>
+        <a class="app new" href="../data/today.csv" download><b class="glyph g4">CSV</b><span>表を出力</span></a>
         <a class="app new" href="#sources"><b class="glyph g4">源</b><span>取得源</span></a>
         <a class="app" href="#policy"><b class="glyph g3">守</b><span>合法方針</span></a>
         <a class="app" href="#feed"><b class="glyph g2">揺</b><span>地震処理</span></a>
@@ -68,19 +89,46 @@
     <a class="back" href="../index.html">CGへ戻る</a>
   </main>
   <script>
+    const genreGroups={life:["天気","災害","健康","生活","富山"],dev:["AI","開発","技術","論文","ゲーム"],trend:["SNS","話題","エンタメ","ビジネス"],stats:["統計","経済"]};
+    let todayData={items:[],status:"unavailable",message:"確認できません"};
+    const addText=(parent,tag,text,className)=>{const node=document.createElement(tag);node.textContent=String(text||"");if(className)node.className=className;parent.append(node);return node;};
+    const shortTime=value=>{if(!value)return"時刻不明";const date=new Date(value);return Number.isNaN(date.getTime())?"時刻不明":new Intl.DateTimeFormat("ja-JP",{timeZone:"Asia/Tokyo",month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit"}).format(date)};
+    function renderToday(filter="today"){
+      const box=document.querySelector("#today");box.replaceChildren();
+      let rows=todayData.items||[];
+      if(filter!=="today"&&filter!=="sources")rows=rows.filter(item=>(genreGroups[filter]||[]).includes(item.genre));
+      if(!rows.length){addText(box,"div",filter==="today"?(todayData.message||"今日の確認事項はありません"):"この分類に新しい確認事項はありません","empty");return;}
+      rows.forEach(item=>{
+        const card=document.createElement("article");card.className=`today-card${item.stale?" stale":""}`;
+        addText(card,"h3",filter==="sources"?`${item.source} / ${item.title}`:`${item.genre} / ${item.title}`);
+        addText(card,"p",item.reason);
+        addText(card,"small",`発表 ${shortTime(item.publishedAt)} / 観測 ${shortTime(item.observedAt)} / ${item.stale?"前回値":"取得済み"}`);
+        const link=addText(card,"a","元情報を開く");link.href=item.url;link.target="_blank";link.rel="noopener noreferrer";
+        box.append(card);
+      });
+    }
+    document.querySelectorAll(".filter").forEach(button=>button.addEventListener("click",()=>{
+      document.querySelectorAll(".filter").forEach(other=>other.setAttribute("aria-pressed",String(other===button)));
+      renderToday(button.dataset.filter);
+    }));
+    fetch("../data/today.json?v="+Date.now()).then(r=>r.ok?r.json():null).then(data=>{
+      if(!data||!Array.isArray(data.items))return;
+      todayData=data;renderToday();
+      document.querySelector("#today-meta").textContent=`${data.status==="fresh"?"取得済み":data.status==="stale"?"前回値":"確認できず"} / 元データ ${shortTime(data.sourceUpdatedAt)} / 最大${data.limits?.maxItems||5}件`;
+    }).catch(()=>{document.querySelector("#today").textContent="確認事項を読み込めません。JSONを直接確認してください。"});
     fetch("../data/free-info.json?v="+Date.now()).then(r=>r.ok?r.json():null).then(data=>{
       if(!data||!Array.isArray(data.items))return;
       document.querySelector("#count").textContent=String(data.items.length);
       document.querySelector("#meta").textContent=`更新 ${data.updatedAt} / error ${data.errors.length} / Codex 0%運用`;
       if(Array.isArray(data.contexts)){
-        document.querySelector("#contexts").innerHTML=data.contexts.map(ctx=>`<div class="ctx"><b>${ctx.genre} ${ctx.count}件</b><span>${ctx.decision}</span><small>${ctx.signal}</small></div>`).join("");
+        const contexts=document.querySelector("#contexts");contexts.replaceChildren();data.contexts.forEach(ctx=>{const row=document.createElement("div");row.className="ctx";addText(row,"b",`${ctx.genre} ${ctx.count}件`);addText(row,"span",ctx.decision);addText(row,"small",ctx.signal);contexts.append(row)});
       }
-      document.querySelector("#feed").innerHTML=data.items.slice(0,12).map(item=>`<a class="item" href="${item.url||'../data/free-info.json'}"><b>${item.genre||item.label||'情'}</b><span>${item.title||'無題'}</span><i>${item.score>=3?'!':''}</i></a>`).join("");
+      const feed=document.querySelector("#feed");feed.replaceChildren();data.items.slice(0,12).forEach(item=>{const row=document.createElement("a");row.className="item";row.href=item.url||"../data/free-info.json";addText(row,"b",item.genre||item.label||"情");addText(row,"span",item.title||"無題");addText(row,"i",item.score>=3?"!":"");feed.append(row)});
     }).catch(()=>{});
     fetch("../data/free-source-catalog.json?v="+Date.now()).then(r=>r.ok?r.json():null).then(data=>{
       if(!data)return;
       const rows=[...(data.active||[]),...(data.candidate||[])].slice(0,10);
-      document.querySelector("#sources-box").innerHTML=rows.map(x=>`<div class="src ${x.status}"><b>${x.genre} / ${x.provider}</b><span>${x.value}</span><small>${x.method} / ${x.status} / ${x.nextApp}</small></div>`).join("");
+      const box=document.querySelector("#sources-box");box.replaceChildren();rows.forEach(x=>{const row=document.createElement("div");row.className=`src ${x.status==="active"?"active":""}`;addText(row,"b",`${x.genre} / ${x.provider}`);addText(row,"span",x.value);addText(row,"small",`${x.method} / ${x.status} / ${x.nextApp}`);box.append(row)});
     }).catch(()=>{});
   </script>
 </body>
