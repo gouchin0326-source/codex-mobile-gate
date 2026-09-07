@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-07T04:28:09.577873+00:00",
-  "sourceUpdatedAt": "2026-09-07T04:18:01.934946+00:00",
+  "updatedAt": "2026-09-07T04:38:02.698472+00:00",
+  "sourceUpdatedAt": "2026-09-07T04:38:01.739453+00:00",
   "status": "fresh",
   "mode": "today-rule-based",
   "codexTokenUse": "0 when run by GitHub Actions",
-  "count": 3,
+  "count": 4,
   "message": "最大5件をルールで選択",
   "limits": {
     "maxItems": 5,
@@ -12,12 +12,38 @@
   },
   "items": [
     {
-      "id": "openai:2",
+      "id": "arxiv-ai:2",
+      "genre": "論文",
+      "title": "From Matching Models to Recruiting Agents: A Systematized Narrative Review of AI Recruitment Systems, Evaluation, and Governance",
+      "reason": "論文の新着で、設定した重要語と一致",
+      "publishedAt": "2026-09-07T04:00:00+00:00",
+      "observedAt": "2026-09-07T04:38:01.739453+00:00",
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2609.04286",
+      "score": 3,
+      "stale": false,
+      "processing": "rule-based"
+    },
+    {
+      "id": "arxiv-ai:9",
+      "genre": "論文",
+      "title": "Harbor Adapters and Harbor-Index: Infrastructure and a Curated Meta-Dataset for Large-Scale Agentic Evaluation",
+      "reason": "論文の新着で、設定した重要語と一致",
+      "publishedAt": "2026-09-07T04:00:00+00:00",
+      "observedAt": "2026-09-07T04:38:01.739453+00:00",
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2609.04298",
+      "score": 3,
+      "stale": false,
+      "processing": "rule-based"
+    },
+    {
+      "id": "openai:3",
       "genre": "AI",
       "title": "Research acceleration: The view inside OpenAI",
       "reason": "AIの新着で、設定した重要語と一致",
       "publishedAt": "2026-09-06T08:00:00+00:00",
-      "observedAt": "2026-09-07T04:18:01.934946+00:00",
+      "observedAt": "2026-09-07T04:38:01.739453+00:00",
       "source": "OpenAI",
       "url": "https://openai.com/index/research-acceleration-view-inside-openai",
       "score": 3,
@@ -25,28 +51,15 @@
       "processing": "rule-based"
     },
     {
-      "id": "lobsters:3",
+      "id": "lobsters:4",
       "genre": "技術",
       "title": "Python Iceberg",
       "reason": "技術の新着を確認",
       "publishedAt": "2026-09-06T18:46:54+00:00",
-      "observedAt": "2026-09-07T04:18:01.934946+00:00",
+      "observedAt": "2026-09-07T04:38:01.739453+00:00",
       "source": "技術RSS",
       "url": "https://aleyan.com/projects/python-iceberg/",
       "score": 2,
-      "stale": false,
-      "processing": "rule-based"
-    },
-    {
-      "id": "lobsters:29",
-      "genre": "技術",
-      "title": "It took a year to ship WebAssembly in Anubis",
-      "reason": "技術の新着を確認",
-      "publishedAt": "2026-09-06T20:41:38+00:00",
-      "observedAt": "2026-09-07T04:18:01.934946+00:00",
-      "source": "技術RSS",
-      "url": "https://anubis.techaro.lol/blog/2026/anubis-wasm/",
-      "score": 1,
       "stale": false,
       "processing": "rule-based"
     }

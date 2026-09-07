@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-07T04:28:01.898968+00:00",
-  "lastSuccessAt": "2026-09-07T04:18:01.934946+00:00",
+  "updatedAt": "2026-09-07T04:38:01.739453+00:00",
+  "lastSuccessAt": "2026-09-07T04:38:01.739453+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -115,12 +115,12 @@
       "score": 5
     },
     {
-      "genre": "災害",
+      "genre": "論文",
       "count": 8,
-      "signal": "M 2.0 - 8 km E of Willits, CA / M 0.7 - 11 km WNW of Cobb, CA / M 1.8 - 14 km ESE of Pāhala, Hawaii",
+      "signal": "From Matching Models to Recruiting Agents: A Systematized Narrative Review of AI Recruitment Systems, Evaluation, and Governance / Harbor Adapters and Harbor-Index: Infrastructure ",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430972",
-      "score": 1
+      "topUrl": "https://arxiv.org/abs/2609.04286",
+      "score": 3
     },
     {
       "genre": "AI",
@@ -131,9 +131,17 @@
       "score": 3
     },
     {
+      "genre": "災害",
+      "count": 3,
+      "signal": "M 2.0 - 8 km E of Willits, CA / M 0.7 - 11 km WNW of Cobb, CA / M 1.8 - 14 km ESE of Pāhala, Hawaii",
+      "decision": "更新あり。必要時だけ確認",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430972",
+      "score": 1
+    },
+    {
       "genre": "技術",
-      "count": 4,
-      "signal": "Python Iceberg / It took a year to ship WebAssembly in Anubis / QBittorrent breaks out of sandbox to commit crimes",
+      "count": 1,
+      "signal": "Python Iceberg",
       "decision": "更新あり。必要時だけ確認",
       "topUrl": "https://aleyan.com/projects/python-iceberg/",
       "score": 2
@@ -173,6 +181,24 @@
       "score": 4,
       "tags": [
         "開発",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "From Matching Models to Recruiting Agents: A Systematized Narrative Review of AI Recruitment Systems, Evaluation, and Governance",
+      "summary": "arXiv:2609.04286v1 Announce Type: new Abstract: Artificial intelligence in recruitment has shifted the object being automated from profile pairs and ranked lists to multi-stage workflows that retrieve evidence, compare c",
+      "url": "https://arxiv.org/abs/2609.04286",
+      "published": "2026-09-07T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
         "重要",
         "研究"
       ]
@@ -275,6 +301,78 @@
       "score": 4,
       "tags": [
         "開発",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Harbor Adapters and Harbor-Index: Infrastructure and a Curated Meta-Dataset for Large-Scale Agentic Evaluation",
+      "summary": "arXiv:2609.04298v1 Announce Type: new Abstract: Evaluating agents on the growing number of agentic benchmarks is challenging because they often require complex environments and agent integrations. We introduce Harbor Ada",
+      "url": "https://arxiv.org/abs/2609.04298",
+      "published": "2026-09-07T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Data-Optimized Contingency Screening: A Machine Learning Approach to Power System Security",
+      "summary": "arXiv:2609.04300v1 Announce Type: new Abstract: Ensuring the security of the power system is essential for stability and reliability, especially in the event of disruption. Effective classification of contingency in powe",
+      "url": "https://arxiv.org/abs/2609.04300",
+      "published": "2026-09-07T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Iris: Climbing to the Search Frontier",
+      "summary": "arXiv:2609.04304v1 Announce Type: new Abstract: We present Iris-mini and Iris-pro, two search agents trained at the 35B-A3B and 397B-A17B scales, together with the data pipeline and training recipe behind them. Tasks are",
+      "url": "https://arxiv.org/abs/2609.04304",
+      "published": "2026-09-07T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Why Better Models Can Create Riskier Systems: Evidence from LLM Agents in Financial Markets",
+      "summary": "arXiv:2609.04373v1 Announce Type: new Abstract: Large language models (LLMs) are being deployed at scale in consequential real-world systems, from financial markets to content moderation to hiring. We show that improving",
+      "url": "https://arxiv.org/abs/2609.04373",
+      "published": "2026-09-07T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
         "重要",
         "研究"
       ]
@@ -522,6 +620,57 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "EXAONE Forecast for Finance",
+      "summary": "arXiv:2609.04239v1 Announce Type: new Abstract: This technical report presents EXAONE Forecast for Finance (EXAONE Finance), a financial time series (TS) foundation model (TSFM) tailored to financial forecasting. Recent ",
+      "url": "https://arxiv.org/abs/2609.04239",
+      "published": "2026-09-07T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "A Removal Based Approach to Improve LLM Faithfulness at Test-Time",
+      "summary": "arXiv:2609.04343v1 Announce Type: new Abstract: Large language models (LLMs) are increasingly used for consequential decisions, making their explanations an important tool for auditing model behavior. Unfortunately, thes",
+      "url": "https://arxiv.org/abs/2609.04343",
+      "published": "2026-09-07T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Corporate Language Model (CLM): Transforming Tacit and Fragmented Enterprise Knowledge into a Sovereign, Auditable, and Executable Corporate Intelligence Layer",
+      "summary": "arXiv:2609.04377v1 Announce Type: new Abstract: Enterprise AI deployments fail not from model inadequacy, but because organizations lack a structured substrate encoding how they decide, negotiate, and execute. Generic LL",
+      "url": "https://arxiv.org/abs/2609.04377",
+      "published": "2026-09-07T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
@@ -545,119 +694,6 @@
       "score": 1,
       "tags": [
         "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.2 - 5 km NNE of Progreso, B.C., MX",
-      "summary": "5 km NNE of Progreso, B.C., MX",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41542224",
-      "published": "2026-09-07T03:39:55.390000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.5 - 6 km W of Dutch Harbor, Alaska",
-      "summary": "6 km W of Dutch Harbor, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/av94420578",
-      "published": "2026-09-07T03:37:59.590000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.2 - 35 km W of Ferry, Alaska",
-      "summary": "35 km W of Ferry, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rsesfx",
-      "published": "2026-09-07T03:37:39.329000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.2 - 64 km ESE of Pedro Bay, Alaska",
-      "summary": "64 km ESE of Pedro Bay, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rselys",
-      "published": "2026-09-07T03:30:34.235000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.9 - 5 km W of Dutch Harbor, Alaska",
-      "summary": "5 km W of Dutch Harbor, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/av94420548",
-      "published": "2026-09-07T03:17:25.120000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "It took a year to ship WebAssembly in Anubis",
-      "summary": "Comments",
-      "url": "https://anubis.techaro.lol/blog/2026/anubis-wasm/",
-      "published": "2026-09-06T20:41:38+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "QBittorrent breaks out of sandbox to commit crimes",
-      "summary": "Comments",
-      "url": "https://beige.party/@intransitivelie/117057396732763183",
-      "published": "2026-09-06T19:08:49+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Following legal advice, the Nitter project will continue",
-      "summary": "Comments",
-      "url": "https://github.com/zedeus/nitter/commit/1428b4c2b4246f92a7e5b2673438e5fb39fcc4a3",
-      "published": "2026-09-06T18:32:04+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
       ]
     }
   ],
@@ -697,8 +733,8 @@
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-06T04:31:05.784696+00:00",
-      "lastAttemptAt": "2026-09-06T04:31:05.784696+00:00",
+      "lastSuccessAt": "2026-09-07T04:38:01.739453+00:00",
+      "lastAttemptAt": "2026-09-07T04:38:01.739453+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },

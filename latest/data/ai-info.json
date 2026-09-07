@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-07T04:28:01.898968+00:00",
+  "updatedAt": "2026-09-07T04:38:01.739453+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -8,7 +8,7 @@
   "cards": [
     {
       "genre": "開発",
-      "count": 15,
+      "count": 14,
       "decision": "CG開発・GitHub運用へ反映候補",
       "signal": "GPT-6 Astra is generally available in GitHub Copilot / GitHub Copilot weekly releases — August 31 / Project HydraFusion: Frontier quality via multi-model orchestration",
       "topUrl": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot",
@@ -23,12 +23,12 @@
       "score": 3
     },
     {
-      "genre": "技術",
-      "count": 4,
+      "genre": "論文",
+      "count": 5,
       "decision": "必要時だけ確認",
-      "signal": "Python Iceberg / It took a year to ship WebAssembly in Anubis / QBittorrent breaks out of sandbox to commit crimes",
-      "topUrl": "https://aleyan.com/projects/python-iceberg/",
-      "score": 2
+      "signal": "From Matching Models to Recruiting Agents: A Systematized Narrative Review of AI Recruitment Systems, Evaluation, and Governance / Harbor Adapters and Harbor-Index: Infrastructure and a Curated Meta-Dataset for Large-Sca",
+      "topUrl": "https://arxiv.org/abs/2609.04286",
+      "score": 3
     }
   ],
   "focus": [
@@ -68,25 +68,25 @@
       "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot"
     },
     {
-      "label": "AI",
-      "title": "Research acceleration: The view inside OpenAI",
+      "label": "論文",
+      "title": "From Matching Models to Recruiting Agents: A Systematized Narrative Review of AI Recruitment Systems, Evaluation, and Governance",
       "why": "Codex/AI開発判断に関係",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/research-acceleration-view-inside-openai"
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2609.04286"
     },
     {
-      "label": "開発",
-      "title": "New API endpoint provides privacy-safe star history data",
+      "label": "論文",
+      "title": "Harbor Adapters and Harbor-Index: Infrastructure and a Curated Meta-Dataset for Large-Scale Agentic Evaluation",
       "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-04-new-api-endpoint-provides-privacy-safe-star-history-data"
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2609.04298"
     },
     {
-      "label": "開発",
-      "title": "GitHub Actions: Early September 2026 updates",
+      "label": "論文",
+      "title": "Data-Optimized Contingency Screening: A Machine Learning Approach to Power System Security",
       "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-03-github-actions-early-september-2026-updates"
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2609.04300"
     }
   ],
   "items": [
@@ -177,6 +177,96 @@
       "score": 4,
       "tags": [
         "開発",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "From Matching Models to Recruiting Agents: A Systematized Narrative Review of AI Recruitment Systems, Evaluation, and Governance",
+      "summary": "arXiv:2609.04286v1 Announce Type: new Abstract: Artificial intelligence in recruitment has shifted the object being automated from profile pairs and ranked lists to multi-stage workflows that retrieve evidence, compare c",
+      "url": "https://arxiv.org/abs/2609.04286",
+      "published": "2026-09-07T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Harbor Adapters and Harbor-Index: Infrastructure and a Curated Meta-Dataset for Large-Scale Agentic Evaluation",
+      "summary": "arXiv:2609.04298v1 Announce Type: new Abstract: Evaluating agents on the growing number of agentic benchmarks is challenging because they often require complex environments and agent integrations. We introduce Harbor Ada",
+      "url": "https://arxiv.org/abs/2609.04298",
+      "published": "2026-09-07T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Data-Optimized Contingency Screening: A Machine Learning Approach to Power System Security",
+      "summary": "arXiv:2609.04300v1 Announce Type: new Abstract: Ensuring the security of the power system is essential for stability and reliability, especially in the event of disruption. Effective classification of contingency in powe",
+      "url": "https://arxiv.org/abs/2609.04300",
+      "published": "2026-09-07T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Iris: Climbing to the Search Frontier",
+      "summary": "arXiv:2609.04304v1 Announce Type: new Abstract: We present Iris-mini and Iris-pro, two search agents trained at the 35B-A3B and 397B-A17B scales, together with the data pipeline and training recipe behind them. Tasks are",
+      "url": "https://arxiv.org/abs/2609.04304",
+      "published": "2026-09-07T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Why Better Models Can Create Riskier Systems: Evidence from LLM Agents in Financial Markets",
+      "summary": "arXiv:2609.04373v1 Announce Type: new Abstract: Large language models (LLMs) are being deployed at scale in consequential real-world systems, from financial markets to content moderation to hiring. We show that improving",
+      "url": "https://arxiv.org/abs/2609.04373",
+      "published": "2026-09-07T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
         "重要",
         "研究"
       ]
@@ -423,90 +513,8 @@
         "開発",
         "重要"
       ]
-    },
-    {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Your alt text passes automated checks. That doesn’t mean it’s any good.",
-      "summary": "We built a plugin for the GitHub Accessibility Scanner to make sure your alt text is actually accessible. Here's how it works. The post Your alt text passes automated checks. That doesn’t mean it’s any good. appeared fir",
-      "url": "https://github.blog/engineering/user-experience/your-alt-text-passes-automated-checks-that-doesnt-mean-its-any-good/",
-      "published": "2026-08-24T20:56:32+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Python Iceberg",
-      "summary": "Comments",
-      "url": "https://aleyan.com/projects/python-iceberg/",
-      "published": "2026-09-06T18:46:54+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "開発"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "It took a year to ship WebAssembly in Anubis",
-      "summary": "Comments",
-      "url": "https://anubis.techaro.lol/blog/2026/anubis-wasm/",
-      "published": "2026-09-06T20:41:38+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "QBittorrent breaks out of sandbox to commit crimes",
-      "summary": "Comments",
-      "url": "https://beige.party/@intransitivelie/117057396732763183",
-      "published": "2026-09-06T19:08:49+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Following legal advice, the Nitter project will continue",
-      "summary": "Comments",
-      "url": "https://github.com/zedeus/nitter/commit/1428b4c2b4246f92a7e5b2673438e5fb39fcc4a3",
-      "published": "2026-09-06T18:32:04+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
-      ]
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-07T04:18:01.934946+00:00"
+  "lastSuccessAt": "2026-09-07T04:38:01.739453+00:00"
 }
