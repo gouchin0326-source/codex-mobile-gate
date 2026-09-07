@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-07T17:57:15.922826+00:00",
+  "updatedAt": "2026-09-07T21:07:01.468631+00:00",
   "sourceUpdatedAt": "2026-09-07T17:57:06.596434+00:00",
   "status": "fresh",
   "mode": "today-rule-based",
@@ -38,19 +38,6 @@
       "processing": "rule-based"
     },
     {
-      "id": "openai:3",
-      "genre": "AI",
-      "title": "Research acceleration: The view inside OpenAI",
-      "reason": "AIの新着で、設定した重要語と一致",
-      "publishedAt": "2026-09-06T08:00:00+00:00",
-      "observedAt": "2026-09-07T17:57:06.596434+00:00",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/research-acceleration-view-inside-openai",
-      "score": 3,
-      "stale": false,
-      "processing": "rule-based"
-    },
-    {
       "id": "lobsters:4",
       "genre": "技術",
       "title": "How well do agents use test/verification techniques?",
@@ -72,6 +59,19 @@
       "observedAt": "2026-09-07T17:57:06.596434+00:00",
       "source": "OpenAI",
       "url": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
+      "score": 2,
+      "stale": false,
+      "processing": "rule-based"
+    },
+    {
+      "id": "lobsters:31",
+      "genre": "技術",
+      "title": "Python Iceberg",
+      "reason": "技術の新着を確認",
+      "publishedAt": "2026-09-06T18:46:54+00:00",
+      "observedAt": "2026-09-07T17:57:06.596434+00:00",
+      "source": "技術RSS",
+      "url": "https://aleyan.com/projects/python-iceberg/",
       "score": 2,
       "stale": false,
       "processing": "rule-based"
