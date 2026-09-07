@@ -1,18 +1,18 @@
 {
-  "updatedAt": "2026-09-07T10:03:00+09:00",
+  "updatedAt": "2026-09-07T13:05:00+09:00",
   "source": "Codex internal usage tool",
   "automation": "Codex heartbeat every 3 hours; not available from GitHub Actions",
   "planType": "plus",
   "primary": {
     "label": "5時間枠",
-    "usedPercent": 78,
-    "remainingPercent": 22,
-    "resetsAt": "2026-09-07T12:03:41+09:00"
+    "usedPercent": 0,
+    "remainingPercent": 100,
+    "resetsAt": "2026-09-07T18:05:13+09:00"
   },
   "secondary": {
     "label": "週枠",
-    "usedPercent": 39,
-    "remainingPercent": 61,
+    "usedPercent": 41,
+    "remainingPercent": 59,
     "resetsAt": "2026-09-13T10:08:55+09:00"
   },
   "resetCredits": {
@@ -36,9 +36,9 @@
     ]
   },
   "decision": {
-    "level": "red",
-    "line1": "軽作業のみ: 5時間枠22%残",
-    "line2": "週枠61%残。券2枚/最短期限10月4日"
+    "level": "green",
+    "line1": "重開発OK: 5時間枠100%残",
+    "line2": "週枠59%残。券2枚/最短期限10月4日"
   },
   "taskPlan": [
     {
