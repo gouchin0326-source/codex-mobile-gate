@@ -34,6 +34,7 @@ jobs:
         run: |
           python scripts/check_free_info_z1.py
           python scripts/check_cg_refresh.py
+          python scripts/check_kodekichi.py
       - name: Apply cadence input
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.cadence_minutes != '' }}
         run: |

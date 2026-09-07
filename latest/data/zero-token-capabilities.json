@@ -5,6 +5,13 @@
   "freeMeaning": "Free means programmatic collection from public RSS/API sources, then categorization and context generation into CG data. It does not mean a bookmark list.",
   "apps": [
     {
+      "id": "kodekichi",
+      "name": "コデ吉",
+      "type": "Browser-local creative agent",
+      "codexToken": 0,
+      "output": "PNG / WAV / HTML / Markdown / growth JSON"
+    },
+    {
       "id": "free-news",
       "name": "無料ニュース",
       "type": "RSS",
