@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-07T23:48:01.958991+00:00",
-  "lastSuccessAt": "2026-09-07T17:57:06.596434+00:00",
+  "updatedAt": "2026-09-07T23:58:01.459215+00:00",
+  "lastSuccessAt": "2026-09-07T23:58:01.459215+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -131,20 +131,20 @@
       "score": 3
     },
     {
-      "genre": "技術",
+      "genre": "災害",
       "count": 2,
-      "signal": "How well do agents use test/verification techniques? / Python Iceberg",
+      "signal": "M 0.8 - 78 km WNW of Tyonek, Alaska / M 1.0 - 5 km NNW of Beaumont, CA",
+      "decision": "更新あり。必要時だけ確認",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rtthzf",
+      "score": 1
+    },
+    {
+      "genre": "技術",
+      "count": 1,
+      "signal": "How well do agents use test/verification techniques?",
       "decision": "更新あり。必要時だけ確認",
       "topUrl": "https://danluu.com/agentic-testing/",
       "score": 2
-    },
-    {
-      "genre": "災害",
-      "count": 1,
-      "signal": "M 1.4 - 3 km SSE of The Geysers, CA",
-      "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75431237",
-      "score": 1
     }
   ],
   "items": [
@@ -242,10 +242,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.4 - 3 km SSE of The Geysers, CA",
-      "summary": "3 km SSE of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75431237",
-      "published": "2026-09-07T17:48:42.290000+00:00",
+      "title": "M 0.8 - 78 km WNW of Tyonek, Alaska",
+      "summary": "78 km WNW of Tyonek, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rtthzf",
+      "published": "2026-09-07T23:55:15.822000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -688,20 +688,16 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Python Iceberg",
-      "summary": "Comments",
-      "url": "https://aleyan.com/projects/python-iceberg/",
-      "published": "2026-09-06T18:46:54+00:00",
-      "score": 2,
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.0 - 5 km NNW of Beaumont, CA",
+      "summary": "5 km NNW of Beaumont, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41542576",
+      "published": "2026-09-07T23:47:59.930000+00:00",
+      "score": 1,
       "tags": [
-        "技術",
-        "開発"
+        "災害"
       ]
     }
   ],
@@ -709,32 +705,32 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-07T17:57:06.596434+00:00",
-      "lastAttemptAt": "2026-09-07T17:57:06.596434+00:00",
+      "lastSuccessAt": "2026-09-07T23:58:01.459215+00:00",
+      "lastAttemptAt": "2026-09-07T23:58:01.459215+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-07T17:57:06.596434+00:00",
-      "lastAttemptAt": "2026-09-07T17:57:06.596434+00:00",
+      "lastSuccessAt": "2026-09-07T23:58:01.459215+00:00",
+      "lastAttemptAt": "2026-09-07T23:58:01.459215+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-07T17:57:06.596434+00:00",
-      "lastAttemptAt": "2026-09-07T17:57:06.596434+00:00",
+      "lastSuccessAt": "2026-09-07T23:58:01.459215+00:00",
+      "lastAttemptAt": "2026-09-07T23:58:01.459215+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-07T17:57:06.596434+00:00",
-      "lastAttemptAt": "2026-09-07T17:57:06.596434+00:00",
+      "lastSuccessAt": "2026-09-07T23:58:01.459215+00:00",
+      "lastAttemptAt": "2026-09-07T23:58:01.459215+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -749,8 +745,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-07T17:57:06.596434+00:00",
-      "lastAttemptAt": "2026-09-07T17:57:06.596434+00:00",
+      "lastSuccessAt": "2026-09-07T23:58:01.459215+00:00",
+      "lastAttemptAt": "2026-09-07T23:58:01.459215+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
