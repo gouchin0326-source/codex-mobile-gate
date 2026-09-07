@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-07T04:08:01.816175+00:00",
-  "lastSuccessAt": "2026-09-06T22:09:05.487018+00:00",
+  "updatedAt": "2026-09-07T04:18:01.934946+00:00",
+  "lastSuccessAt": "2026-09-07T04:18:01.934946+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -117,14 +117,14 @@
     {
       "genre": "災害",
       "count": 8,
-      "signal": "M 1.1 - 6 km W of Cobb, CA / M 2.2 - 3 km SW of Pāhala, Hawaii / M 2.0 - 9 km SE of Pāhala, Hawaii",
+      "signal": "M 2.0 - 8 km E of Willits, CA / M 0.7 - 11 km WNW of Cobb, CA / M 1.8 - 14 km ESE of Pāhala, Hawaii",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430837",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430972",
       "score": 1
     },
     {
       "genre": "AI",
-      "count": 6,
+      "count": 5,
       "signal": "Research acceleration: The view inside OpenAI / Daybreak for Frontline Defenders: $1B to protect essential services / Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/research-acceleration-view-inside-openai",
@@ -132,11 +132,11 @@
     },
     {
       "genre": "技術",
-      "count": 3,
-      "signal": "NetBSD 11 from scratch / Who said a tech addict can't be comfortable far from home? / Terence Tao on “prematurely solving [a maths] problem by purely AI-powered methods”",
+      "count": 4,
+      "signal": "Python Iceberg / It took a year to ship WebAssembly in Anubis / QBittorrent breaks out of sandbox to commit crimes",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://meanmicio.org/2026/09/06/netbsd-11-from-scratch/",
-      "score": 1
+      "topUrl": "https://aleyan.com/projects/python-iceberg/",
+      "score": 2
     }
   ],
   "items": [
@@ -196,32 +196,33 @@
       ]
     },
     {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.1 - 6 km W of Cobb, CA",
-      "summary": "6 km W of Cobb, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430837",
-      "published": "2026-09-06T19:30:50.120000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "その他",
+      "topic": "開発",
       "sourceWeight": 1,
-      "title": "NetBSD 11 from scratch",
+      "title": "Python Iceberg",
       "summary": "Comments",
-      "url": "https://meanmicio.org/2026/09/06/netbsd-11-from-scratch/",
-      "published": "2026-09-06T13:35:03+00:00",
+      "url": "https://aleyan.com/projects/python-iceberg/",
+      "published": "2026-09-06T18:46:54+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "開発"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 2.0 - 8 km E of Willits, CA",
+      "summary": "8 km E of Willits, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430972",
+      "published": "2026-09-07T03:50:24.780000+00:00",
       "score": 1,
       "tags": [
-        "技術"
+        "災害"
       ]
     },
     {
@@ -524,10 +525,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.2 - 3 km SW of Pāhala, Hawaii",
-      "summary": "3 km SW of Pāhala, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75030182",
-      "published": "2026-09-06T19:24:12.590000+00:00",
+      "title": "M 0.7 - 11 km WNW of Cobb, CA",
+      "summary": "11 km WNW of Cobb, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430962",
+      "published": "2026-09-07T03:43:55.150000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -537,10 +538,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.0 - 9 km SE of Pāhala, Hawaii",
-      "summary": "9 km SE of Pāhala, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75030177",
-      "published": "2026-09-06T19:15:21.240000+00:00",
+      "title": "M 1.8 - 14 km ESE of Pāhala, Hawaii",
+      "summary": "14 km ESE of Pāhala, Hawaii",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75030322",
+      "published": "2026-09-07T03:40:39+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -550,10 +551,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.8 - 6 km W of Cobb, CA",
-      "summary": "6 km W of Cobb, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430827",
-      "published": "2026-09-06T19:13:11.210000+00:00",
+      "title": "M 2.2 - 5 km NNE of Progreso, B.C., MX",
+      "summary": "5 km NNE of Progreso, B.C., MX",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41542224",
+      "published": "2026-09-07T03:39:55.390000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -563,10 +564,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.3 - 46 km NW of Toyah, Texas",
-      "summary": "46 km NW of Toyah, Texas",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026rosbis",
-      "published": "2026-09-06T19:05:40.450000+00:00",
+      "title": "M 1.5 - 6 km W of Dutch Harbor, Alaska",
+      "summary": "6 km W of Dutch Harbor, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/av94420578",
+      "published": "2026-09-07T03:37:59.590000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -576,10 +577,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.0 - 8 km NE of Lake Davis, CA",
-      "summary": "8 km NE of Lake Davis, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75430817",
-      "published": "2026-09-06T19:00:34.030000+00:00",
+      "title": "M 1.2 - 35 km W of Ferry, Alaska",
+      "summary": "35 km W of Ferry, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rsesfx",
+      "published": "2026-09-07T03:37:39.329000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -589,10 +590,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.6 - 15 km SE of Balmorhea, Texas",
-      "summary": "15 km SE of Balmorhea, Texas",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026rorqeb",
-      "published": "2026-09-06T18:52:29.978000+00:00",
+      "title": "M 2.2 - 64 km ESE of Pedro Bay, Alaska",
+      "summary": "64 km ESE of Pedro Bay, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rselys",
+      "published": "2026-09-07T03:30:34.235000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -602,10 +603,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.1 - 6 km NNW of Cabazon, CA",
-      "summary": "6 km NNW of Cabazon, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41542192",
-      "published": "2026-09-06T18:36:43.570000+00:00",
+      "title": "M 2.9 - 5 km W of Dutch Harbor, Alaska",
+      "summary": "5 km W of Dutch Harbor, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/av94420548",
+      "published": "2026-09-07T03:17:25.120000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -616,31 +617,31 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Who said a tech addict can't be comfortable far from home?",
+      "title": "It took a year to ship WebAssembly in Anubis",
       "summary": "Comments",
-      "url": "https://a.l3x.in/blog/my-travel-setup",
-      "published": "2026-09-06T12:41:25+00:00",
+      "url": "https://anubis.techaro.lol/blog/2026/anubis-wasm/",
+      "published": "2026-09-06T20:41:38+00:00",
       "score": 1,
       "tags": [
         "技術"
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "その他",
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "An Alien Mind",
-      "summary": "Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeguards and international coordination.",
-      "url": "https://openai.com/index/an-alien-mind",
-      "published": "2026-09-06T09:00:00+00:00",
+      "title": "QBittorrent breaks out of sandbox to commit crimes",
+      "summary": "Comments",
+      "url": "https://beige.party/@intransitivelie/117057396732763183",
+      "published": "2026-09-06T19:08:49+00:00",
       "score": 1,
       "tags": [
-        "AI"
+        "技術"
       ]
     },
     {
@@ -648,12 +649,12 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Terence Tao on “prematurely solving [a maths] problem by purely AI-powered methods”",
-      "summary": "I recommend reading the whole thread, but I linked to the part I found the most relevant. I believe the same is true for programming. Comments",
-      "url": "https://mathstodon.xyz/@tao/117207856734787448",
-      "published": "2026-09-06T07:45:24+00:00",
+      "title": "Following legal advice, the Nitter project will continue",
+      "summary": "Comments",
+      "url": "https://github.com/zedeus/nitter/commit/1428b4c2b4246f92a7e5b2673438e5fb39fcc4a3",
+      "published": "2026-09-06T18:32:04+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -664,32 +665,32 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-06T22:09:05.487018+00:00",
-      "lastAttemptAt": "2026-09-06T22:09:05.487018+00:00",
+      "lastSuccessAt": "2026-09-07T04:18:01.934946+00:00",
+      "lastAttemptAt": "2026-09-07T04:18:01.934946+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-06T22:09:05.487018+00:00",
-      "lastAttemptAt": "2026-09-06T22:09:05.487018+00:00",
+      "lastSuccessAt": "2026-09-07T04:18:01.934946+00:00",
+      "lastAttemptAt": "2026-09-07T04:18:01.934946+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-06T22:09:05.487018+00:00",
-      "lastAttemptAt": "2026-09-06T22:09:05.487018+00:00",
+      "lastSuccessAt": "2026-09-07T04:18:01.934946+00:00",
+      "lastAttemptAt": "2026-09-07T04:18:01.934946+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-06T22:09:05.487018+00:00",
-      "lastAttemptAt": "2026-09-06T22:09:05.487018+00:00",
+      "lastSuccessAt": "2026-09-07T04:18:01.934946+00:00",
+      "lastAttemptAt": "2026-09-07T04:18:01.934946+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -704,8 +705,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-06T22:09:05.487018+00:00",
-      "lastAttemptAt": "2026-09-06T22:09:05.487018+00:00",
+      "lastSuccessAt": "2026-09-07T04:18:01.934946+00:00",
+      "lastAttemptAt": "2026-09-07T04:18:01.934946+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

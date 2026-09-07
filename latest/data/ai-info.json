@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-07T04:08:01.816175+00:00",
+  "updatedAt": "2026-09-07T04:18:01.934946+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -16,7 +16,7 @@
     },
     {
       "genre": "AI",
-      "count": 6,
+      "count": 5,
       "decision": "AI/Codex運用の変化を確認",
       "signal": "Research acceleration: The view inside OpenAI / Daybreak for Frontline Defenders: $1B to protect essential services / Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
       "topUrl": "https://openai.com/index/research-acceleration-view-inside-openai",
@@ -24,11 +24,11 @@
     },
     {
       "genre": "技術",
-      "count": 3,
+      "count": 4,
       "decision": "必要時だけ確認",
-      "signal": "NetBSD 11 from scratch / Who said a tech addict can't be comfortable far from home? / Terence Tao on “prematurely solving [a maths] problem by purely AI-powered methods”",
-      "topUrl": "https://meanmicio.org/2026/09/06/netbsd-11-from-scratch/",
-      "score": 1
+      "signal": "Python Iceberg / It took a year to ship WebAssembly in Anubis / QBittorrent breaks out of sandbox to commit crimes",
+      "topUrl": "https://aleyan.com/projects/python-iceberg/",
+      "score": 2
     }
   ],
   "focus": [
@@ -446,12 +446,29 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "その他",
+      "topic": "開発",
       "sourceWeight": 1,
-      "title": "NetBSD 11 from scratch",
+      "title": "Python Iceberg",
       "summary": "Comments",
-      "url": "https://meanmicio.org/2026/09/06/netbsd-11-from-scratch/",
-      "published": "2026-09-06T13:35:03+00:00",
+      "url": "https://aleyan.com/projects/python-iceberg/",
+      "published": "2026-09-06T18:46:54+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "開発"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "It took a year to ship WebAssembly in Anubis",
+      "summary": "Comments",
+      "url": "https://anubis.techaro.lol/blog/2026/anubis-wasm/",
+      "published": "2026-09-06T20:41:38+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -462,31 +479,15 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Who said a tech addict can't be comfortable far from home?",
+      "title": "QBittorrent breaks out of sandbox to commit crimes",
       "summary": "Comments",
-      "url": "https://a.l3x.in/blog/my-travel-setup",
-      "published": "2026-09-06T12:41:25+00:00",
+      "url": "https://beige.party/@intransitivelie/117057396732763183",
+      "published": "2026-09-06T19:08:49+00:00",
       "score": 1,
       "tags": [
         "技術"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "An Alien Mind",
-      "summary": "Jakub Pachocki reflects on increasingly capable AI and the challenge of keeping it aligned. He calls for stronger safeguards and international coordination.",
-      "url": "https://openai.com/index/an-alien-mind",
-      "published": "2026-09-06T09:00:00+00:00",
-      "score": 1,
-      "tags": [
-        "AI"
       ]
     },
     {
@@ -494,12 +495,12 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Terence Tao on “prematurely solving [a maths] problem by purely AI-powered methods”",
-      "summary": "I recommend reading the whole thread, but I linked to the part I found the most relevant. I believe the same is true for programming. Comments",
-      "url": "https://mathstodon.xyz/@tao/117207856734787448",
-      "published": "2026-09-06T07:45:24+00:00",
+      "title": "Following legal advice, the Nitter project will continue",
+      "summary": "Comments",
+      "url": "https://github.com/zedeus/nitter/commit/1428b4c2b4246f92a7e5b2673438e5fb39fcc4a3",
+      "published": "2026-09-06T18:32:04+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -507,5 +508,5 @@
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-06T22:09:05.487018+00:00"
+  "lastSuccessAt": "2026-09-07T04:18:01.934946+00:00"
 }
