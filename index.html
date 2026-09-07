@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#172033">
-  <link rel="manifest" href="manifest.webmanifest?v=202609070830">
+  <link rel="manifest" href="manifest.webmanifest?v=202609071517">
   <link rel="icon" href="latest/icon.svg" type="image/svg+xml">
   <title>CG | CODEX Gate</title>
   <style>
@@ -689,7 +689,7 @@
         <div class="auto-line">自動: GitHub Actionsが一次API/RSSを取得、Codex運用0</div>
       </div>
       <div class="phone-grid">
-        <a class="app-icon updated" href="./latest/codex-world/index.html?v=202609070830" aria-label="CODEXWorldを開く"><b class="glyph g-cow" aria-hidden="true">COW</b><span class="cow-label">CODEXWorld</span></a>
+        <a class="app-icon updated" href="./latest/codex-world/index.html?v=202609071517" aria-label="CODEXWorldを開く"><b class="glyph g-cow" aria-hidden="true">COW</b><span class="cow-label">CODEXWorld</span></a>
         <a class="app-icon updated" data-weather-icon href="./latest/weather-info/index.html"><b class="glyph g-data">天</b><span>富山天気</span></a>
         <a class="app-icon updated" href="./latest/ai-info/index.html"><b class="glyph g-dev">AI</b><span>AI動向</span></a>
         <a class="app-icon updated" href="./latest/social-trends/index.html"><b class="glyph g-dev">話</b><span>日本語話題</span></a>
@@ -725,7 +725,7 @@
         <div class="auto-line">素材: 前面に出さない一次データもここで保管</div>
       </div>
       <div class="phone-grid">
-        <a class="app-icon updated" href="./latest/codex-world/index.html?v=202609070830#library" aria-label="CODEXWorld書庫を開く"><b class="glyph g-cow" aria-hidden="true">COW</b><span>COW書庫</span></a>
+        <a class="app-icon updated" href="./latest/codex-world/index.html?v=202609071517#library" aria-label="CODEXWorld書庫を開く"><b class="glyph g-cow" aria-hidden="true">COW</b><span>COW書庫</span></a>
         <a class="app-icon updated" href="./latest/free-info-lab/index.html"><b class="glyph g-data">文</b><span>文脈情報</span></a>
         <a class="app-icon updated" href="./latest/data/codexgate-news-brief-2026-09-03.md"><b class="glyph g-dev">採</b><span>採決メモ</span></a>
         <a class="app-icon" href="./latest/codex-data-pocket/index.html"><b class="glyph g-data">DB</b><span>データ</span></a>
@@ -754,7 +754,7 @@
         <div class="auto-line" id="cadence-note">設定: 通常10分。GitHub公式最短5分の範囲内。公開repo標準runnerは無料。</div>
       </div>
       <div class="phone-grid">
-        <a class="app-icon updated" href="./index.html?v=202609070830"><b class="glyph g-dev">更</b><span>最新版</span></a>
+        <a class="app-icon updated" href="./index.html?v=202609071517"><b class="glyph g-dev">更</b><span>最新版</span></a>
         <a class="app-icon updated" href="./latest/index.html"><b class="glyph g-dev">CG</b><span>ホーム</span></a>
         <a class="app-icon updated" href="./latest/data/zero-token-capabilities.json"><b class="glyph g-data">証</b><span>0証明</span></a>
         <a class="app-icon updated" href="./latest/data/weather-info.json"><b class="glyph g-data">警</b><span>警戒設定</span></a>
@@ -781,13 +781,13 @@
         const regs = await navigator.serviceWorker.getRegistrations();
         await Promise.all(regs.map((reg) => reg.unregister().catch(() => reg.update().catch(() => {}))));
       }
-      location.replace(`./index.html?v=202609070830&refresh=${Date.now()}`);
+      location.replace(`./index.html?v=202609071517&refresh=${Date.now()}`);
     }
     document.querySelector("#force-update")?.addEventListener("click", () => {
       forceUpdate().catch(() => location.reload());
     });
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("sw.js?v=202609070830", { updateViaCache: "none" }).catch(() => {});
+      navigator.serviceWorker.register("sw.js?v=202609071517", { updateViaCache: "none" }).catch(() => {});
     }
     function activateTab(name) {
       document.querySelectorAll(".tab").forEach((tab) => {

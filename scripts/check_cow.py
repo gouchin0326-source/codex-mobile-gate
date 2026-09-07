@@ -19,12 +19,12 @@ def check_script(path):
     require(start >= 0 and end > start, f"script missing: {path}")
     script = text[start + len("<script>") : end]
     result = subprocess.run(
-        ["node", "-e", "new (require('vm').Script)(process.argv[1])", script],
+        ["node", "--check", "-"],
+        input=script.encode("utf-8"),
         capture_output=True,
-        text=True,
         check=False,
     )
-    require(result.returncode == 0, f"JavaScript syntax error in {path}: {result.stderr}")
+    require(result.returncode == 0, f"JavaScript syntax error in {path}: {result.stderr.decode('utf-8', errors='replace')}")
     return text
 
 
@@ -38,6 +38,10 @@ def run():
     require('id="instruction"' in cow and 'id="app-name"' not in cow, "one-instruction easy mode missing")
     require("function inferGenre" in cow and "function inferName" in cow, "autonomous decisions missing")
     require("function completeBuild" in cow and "function improve" in cow, "automatic build/review loop missing")
+    require("社長指示の流れ" in cow and "function renderCommandChain" in cow, "command chain visualization missing")
+    for command_step in ["1 社長", "2 COW受付", "3 担当セル", "4 制作・検品", "5 社長確認"]:
+        require(command_step in cow, f"command step missing: {command_step}")
+    require("COMPACT_ORDER" in cow and "compact-order-example" in cow, "compact screen instruction example missing")
     require("COWに完成まで任せる" in cow and "このままCGへ掲載" in cow, "easy action labels missing")
     for term in ["cow-state-v1", "cg-cow-artifacts-v1", "cow-library/v1", "cow-artifact/v1"]:
         require(term in cow, f"missing COW identifier: {term}")

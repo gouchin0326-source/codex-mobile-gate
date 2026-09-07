@@ -1,11 +1,11 @@
 {
   "lane": "app",
-  "ts": "2026-09-06T19:00:00+09:00",
+  "ts": "2026-09-07T15:17:40+09:00",
   "artifact": "index.html",
-  "prompt": "干場社長の依頼を専門エージェントがセル生産方式で設計・制作・検品・納品まで完結し、責任者・納期・使用システム・品質・進捗・納品物を仕事台帳で可視化",
+  "prompt": "干場社長からCOW受付、担当セル、制作・検品、社長確認までの指示経路を一画面で可視化し、スマホ・PC向けの簡潔な指示テンプレートを提供",
   "source": "codex",
   "backend": "codex",
-  "model": "gpt-6-astra",
+  "model": "gpt-5.4-mini",
   "gates": {
     "autonomous_flow": {"pass": true, "note": "One instruction automatically drives naming, genre selection, planning, generation, validation and repair."},
     "easy_mode": {"pass": true, "note": "The human only plays the completed candidate and submits a review or publication approval."},
@@ -24,6 +24,9 @@
     "free_operation": {"pass": true, "note": "Runtime uses browser-local rules and templates without model API calls."},
     "cg_publication": {"pass": true, "note": "Approved artifacts appear in the CG COW content area in the same browser."},
     "archive": {"pass": true, "note": "Artifacts are grouped by genre and exported as folder-structured ZIP bundles."},
-    "naming": {"pass": true, "note": "CODEXWorld=COW; ClaudeWorld=CLW is documented."}
+    "naming": {"pass": true, "note": "CODEXWorld=COW; ClaudeWorld=CLW is documented."},
+    "command_chain": {"pass": true, "note": "干場社長からCOW受付、担当セル、制作・検品、社長確認までを現在の仕事に連動して表示する。"},
+    "compact_prompt": {"pass": true, "note": "スマホとPCの一画面整理に必要な区分、上限、操作寸法、未確認表示、実機検査を含む指示例を一クリックで入力する。"},
+    "mobile_visual": {"pass": true, "note": "320px相当の実ブラウザー表示で縦型の指示経路とテンプレート入力を確認した。"}
   }
 }
