@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-07T14:48:01.038591+00:00",
-  "lastSuccessAt": "2026-09-07T10:18:02.089820+00:00",
+  "updatedAt": "2026-09-07T17:57:06.596434+00:00",
+  "lastSuccessAt": "2026-09-07T17:57:06.596434+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -131,20 +131,20 @@
       "score": 3
     },
     {
-      "genre": "災害",
+      "genre": "技術",
       "count": 2,
-      "signal": "M 2.0 - 53 km SW of Cantwell, Alaska / M 1.3 - 78 km WNW of Tyonek, Alaska",
+      "signal": "How well do agents use test/verification techniques? / Python Iceberg",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rsrxdn",
-      "score": 1
+      "topUrl": "https://danluu.com/agentic-testing/",
+      "score": 2
     },
     {
-      "genre": "技術",
+      "genre": "災害",
       "count": 1,
-      "signal": "Python Iceberg",
+      "signal": "M 1.4 - 3 km SSE of The Geysers, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://aleyan.com/projects/python-iceberg/",
-      "score": 2
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75431237",
+      "score": 1
     }
   ],
   "items": [
@@ -226,26 +226,26 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "開発",
+      "topic": "その他",
       "sourceWeight": 1,
-      "title": "Python Iceberg",
+      "title": "How well do agents use test/verification techniques?",
       "summary": "Comments",
-      "url": "https://aleyan.com/projects/python-iceberg/",
-      "published": "2026-09-06T18:46:54+00:00",
+      "url": "https://danluu.com/agentic-testing/",
+      "published": "2026-09-07T16:17:46+00:00",
       "score": 2,
       "tags": [
         "技術",
-        "開発"
+        "重要"
       ]
     },
     {
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.0 - 53 km SW of Cantwell, Alaska",
-      "summary": "53 km SW of Cantwell, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rsrxdn",
-      "published": "2026-09-07T10:13:08.737000+00:00",
+      "title": "M 1.4 - 3 km SSE of The Geysers, CA",
+      "summary": "3 km SSE of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75431237",
+      "published": "2026-09-07T17:48:42.290000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -688,16 +688,20 @@
       ]
     },
     {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.3 - 78 km WNW of Tyonek, Alaska",
-      "summary": "78 km WNW of Tyonek, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rsrmqf",
-      "published": "2026-09-07T10:01:00.489000+00:00",
-      "score": 1,
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "Python Iceberg",
+      "summary": "Comments",
+      "url": "https://aleyan.com/projects/python-iceberg/",
+      "published": "2026-09-06T18:46:54+00:00",
+      "score": 2,
       "tags": [
-        "災害"
+        "技術",
+        "開発"
       ]
     }
   ],
@@ -705,32 +709,32 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-07T10:18:02.089820+00:00",
-      "lastAttemptAt": "2026-09-07T10:18:02.089820+00:00",
+      "lastSuccessAt": "2026-09-07T17:57:06.596434+00:00",
+      "lastAttemptAt": "2026-09-07T17:57:06.596434+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-07T10:18:02.089820+00:00",
-      "lastAttemptAt": "2026-09-07T10:18:02.089820+00:00",
+      "lastSuccessAt": "2026-09-07T17:57:06.596434+00:00",
+      "lastAttemptAt": "2026-09-07T17:57:06.596434+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-07T10:18:02.089820+00:00",
-      "lastAttemptAt": "2026-09-07T10:18:02.089820+00:00",
+      "lastSuccessAt": "2026-09-07T17:57:06.596434+00:00",
+      "lastAttemptAt": "2026-09-07T17:57:06.596434+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-07T10:18:02.089820+00:00",
-      "lastAttemptAt": "2026-09-07T10:18:02.089820+00:00",
+      "lastSuccessAt": "2026-09-07T17:57:06.596434+00:00",
+      "lastAttemptAt": "2026-09-07T17:57:06.596434+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -745,8 +749,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-07T10:18:02.089820+00:00",
-      "lastAttemptAt": "2026-09-07T10:18:02.089820+00:00",
+      "lastSuccessAt": "2026-09-07T17:57:06.596434+00:00",
+      "lastAttemptAt": "2026-09-07T17:57:06.596434+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
