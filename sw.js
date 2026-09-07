@@ -1,4 +1,4 @@
-const CACHE = "codex-gate-v132-cow-command-20260907";
+const CACHE = "codex-gate-v133-cow-floor-kanban-20260907";
 const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",

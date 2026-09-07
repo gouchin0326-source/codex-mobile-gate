@@ -1,8 +1,8 @@
 {
   "lane": "app",
-  "ts": "2026-09-07T15:17:40+09:00",
+  "ts": "2026-09-07T15:27:34+09:00",
   "artifact": "index.html",
-  "prompt": "干場社長からCOW受付、担当セル、制作・検品、社長確認までの指示経路を一画面で可視化し、スマホ・PC向けの簡潔な指示テンプレートを提供",
+  "prompt": "COWに2Dフロアマップ型とカンバンを組み合わせた進捗可視化を実装する",
   "source": "codex",
   "backend": "codex",
   "model": "gpt-5.4-mini",
@@ -27,6 +27,9 @@
     "naming": {"pass": true, "note": "CODEXWorld=COW; ClaudeWorld=CLW is documented."},
     "command_chain": {"pass": true, "note": "干場社長からCOW受付、担当セル、制作・検品、社長確認までを現在の仕事に連動して表示する。"},
     "compact_prompt": {"pass": true, "note": "スマホとPCの一画面整理に必要な区分、上限、操作寸法、未確認表示、実機検査を含む指示例を一クリックで入力する。"},
-    "mobile_visual": {"pass": true, "note": "320px相当の実ブラウザー表示で縦型の指示経路とテンプレート入力を確認した。"}
+    "mobile_visual": {"pass": true, "note": "320px相当の実ブラウザー表示で縦型の指示経路とテンプレート入力を確認した。"},
+    "floor_map": {"pass": true, "note": "社長室、受付、4担当セル、検品室、納品口の2Dフロアへ仕事の現在地を表示する。"},
+    "kanban": {"pass": true, "note": "受領、設計、制作、検品、社長確認の5列へ同じ仕事データを工程別表示する。"},
+    "cross_navigation": {"pass": true, "note": "フロアとカンバンの仕事カードから担当・工程・検品ログへ移動できることを実ブラウザーで確認した。"}
   }
 }

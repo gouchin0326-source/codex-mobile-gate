@@ -42,6 +42,12 @@ def run():
     for command_step in ["1 社長", "2 COW受付", "3 担当セル", "4 制作・検品", "5 社長確認"]:
         require(command_step in cow, f"command step missing: {command_step}")
     require("COMPACT_ORDER" in cow and "compact-order-example" in cow, "compact screen instruction example missing")
+    require("2Dフロア × カンバン" in cow and "function renderFloorKanban" in cow, "floor and kanban visualization missing")
+    for room in ["president", "reception", "ren", "mio", "sora", "akari", "qa", "delivery"]:
+        require(f'id:\"{room}\"' in cow, f"floor room missing: {room}")
+    for column in ["受領", "設計", "制作", "検品", "社長確認"]:
+        require(f'title:\"{column}\"' in cow, f"kanban column missing: {column}")
+    require("openJob(job)" in cow and "card.onclick=()=>openJob(job)" in cow, "job card navigation missing")
     require("COWに完成まで任せる" in cow and "このままCGへ掲載" in cow, "easy action labels missing")
     for term in ["cow-state-v1", "cg-cow-artifacts-v1", "cow-library/v1", "cow-artifact/v1"]:
         require(term in cow, f"missing COW identifier: {term}")
@@ -57,7 +63,7 @@ def run():
 
     capabilities = json.loads((ROOT / "latest" / "data" / "artifact-capabilities.json").read_text(encoding="utf-8"))
     require(any(row.get("id") == "codex-world" for row in capabilities["artifacts"]), "artifact registry missing COW")
-    print("COW checks passed: easy mode, autonomous flow, review loop, CG listing, ZIP, offline cache")
+    print("COW checks passed: command floor, kanban, easy mode, autonomous flow, review loop, CG listing, ZIP, offline cache")
 
 
 if __name__ == "__main__":
