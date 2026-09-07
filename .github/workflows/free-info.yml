@@ -57,11 +57,13 @@ jobs:
         run: |
           python scripts/build_today.py
           python scripts/check_free_info_z2.py
+          python scripts/fetch_holidays.py
+          python scripts/check_free_info_z3.py
       - name: Commit updates
         run: |
           git config user.name "codexgate-bot"
           git config user.email "codexgate-bot@users.noreply.github.com"
-          git add data/free_info_schedule.json data/free_sources_v2.json data/free_info_state.json latest/data/free-info.json latest/data/ai-info.json latest/data/weather-info.json latest/data/gate-health.json latest/data/free-source-catalog.json latest/data/social-trends.json latest/data/today.json latest/data/today.csv latest/data/codexgate-news-brief-2026-09-03.md
+          git add data/free_info_schedule.json data/free_sources_v2.json data/free_info_state.json latest/data/free-info.json latest/data/ai-info.json latest/data/weather-info.json latest/data/gate-health.json latest/data/free-source-catalog.json latest/data/social-trends.json latest/data/today.json latest/data/today.csv latest/data/holidays.json latest/data/holidays.csv latest/data/holidays.ics latest/data/codexgate-news-brief-2026-09-03.md
           git diff --cached --quiet || git commit -m "update free info"
           git push
       - name: Verify Pages source route

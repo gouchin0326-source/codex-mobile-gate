@@ -1,8 +1,8 @@
 {
   "lane": "app",
-  "ts": "2026-09-07T07:13:00+09:00",
+  "ts": "2026-09-08T06:10:00+09:00",
   "artifact": "index.html",
-  "prompt": "0907CGタスク遂行",
+  "prompt": "0908CG環境構築作業継続：公式祝日CSVから次の祝日を追加し、JSON/CSV/ICSで出力",
   "source": "codex",
   "backend": "codex",
   "model": "gpt-5.4-mini",
@@ -11,6 +11,7 @@
     "z2_rule_fixture": {"pass": true, "note": "最大5件・同分類2件・空状態・危険URL除外を固定試験"},
     "json_csv": {"pass": true, "note": "today.json/today.csvを実データから生成"},
     "javascript": {"pass": true, "note": "3 HTMLのinline scriptをNode.jsで構文検査"},
-    "accessibility": {"pass": true, "note": "320px実表示、44px操作、分類切替、aria-live、文字DOM生成を確認"}
+    "accessibility": {"pass": true, "note": "320px実表示、44px操作、分類切替、aria-live、文字DOM生成を確認"},
+    "z3_holidays": {"pass": true, "note": "内閣府CSV実取得、掲載範囲内の次の祝日、欠測時fail-closed、JSON/CSV/ICSを検査"}
   }
 }

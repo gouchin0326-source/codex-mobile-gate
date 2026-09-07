@@ -45,7 +45,10 @@
       <div class="exports">
         <a class="export" href="../data/today.json" download>📤 JSON</a>
         <a class="export" href="../data/today.csv" download>📤 CSV</a>
+        <a class="export" href="../data/holidays.csv" download>📤 祝日CSV</a>
+        <a class="export" href="../data/holidays.ics" download>📅 祝日ICS</a>
       </div>
+      <div class="today" id="next-holiday" aria-live="polite"><div class="empty">次の祝日を確認中</div></div>
       <div class="today" id="today" aria-live="polite"><div class="empty">読込中</div></div>
       <p class="muted" id="today-meta">取得時刻を確認中</p>
     </section>
@@ -60,6 +63,8 @@
         <a class="app" href="../data/free-info.json"><b class="glyph g1">全</b><span>取得JSON</span></a>
         <a class="app new" href="../data/today.json" download><b class="glyph g4">JSON</b><span>今日を出力</span></a>
         <a class="app new" href="../data/today.csv" download><b class="glyph g4">CSV</b><span>表を出力</span></a>
+        <a class="app new" href="../data/holidays.json"><b class="glyph g4">休</b><span>次の祝日</span></a>
+        <a class="app new" href="../data/holidays.ics" download><b class="glyph g4">ICS</b><span>祝日予定</span></a>
         <a class="app new" href="#sources"><b class="glyph g4">源</b><span>取得源</span></a>
         <a class="app" href="#policy"><b class="glyph g3">守</b><span>合法方針</span></a>
         <a class="app" href="#feed"><b class="glyph g2">揺</b><span>地震処理</span></a>
@@ -116,6 +121,14 @@
       todayData=data;renderToday();
       document.querySelector("#today-meta").textContent=`${data.status==="fresh"?"取得済み":data.status==="stale"?"前回値":"確認できず"} / 元データ ${shortTime(data.sourceUpdatedAt)} / 最大${data.limits?.maxItems||5}件`;
     }).catch(()=>{document.querySelector("#today").textContent="確認事項を読み込めません。JSONを直接確認してください。"});
+    fetch("../data/holidays.json?v="+Date.now()).then(r=>r.ok?r.json():null).then(data=>{
+      const box=document.querySelector("#next-holiday");box.replaceChildren();
+      if(!data?.nextHoliday){addText(box,"div",data?.message||"祝日情報を確認できません","empty");return;}
+      const item=data.nextHoliday;const card=document.createElement("article");card.className=`today-card${data.status==="stale"?" stale":""}`;
+      addText(card,"h3",`次の祝日：${item.name}`);addText(card,"p",`${item.date} / あと${item.daysUntil}日`);
+      addText(card,"small",`${data.source} / 掲載 ${data.coverageThrough}まで / ${data.status==="stale"?"前回値":"取得済み"}`);
+      const link=addText(card,"a","内閣府の元情報を開く");link.href=data.referenceUrl;link.target="_blank";link.rel="noopener noreferrer";box.append(card);
+    }).catch(()=>{document.querySelector("#next-holiday").textContent="祝日情報を読み込めません。"});
     fetch("../data/free-info.json?v="+Date.now()).then(r=>r.ok?r.json():null).then(data=>{
       if(!data||!Array.isArray(data.items))return;
       document.querySelector("#count").textContent=String(data.items.length);

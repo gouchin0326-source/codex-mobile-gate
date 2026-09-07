@@ -35,6 +35,7 @@
     {"id":"news-science-jp","enabled":true,"intervalMinutes":180,"ttlMinutes":360,"maxBytes":2097152,"allowedHosts":["news.google.com"]},
     {"id":"news-game-jp","enabled":true,"intervalMinutes":180,"ttlMinutes":360,"maxBytes":2097152,"allowedHosts":["news.google.com"]},
     {"id":"mastodon-ai","enabled":true,"intervalMinutes":60,"ttlMinutes":180,"maxBytes":2097152,"allowedHosts":["mstdn.jp"]},
-    {"id":"mastodon-codex","enabled":true,"intervalMinutes":60,"ttlMinutes":180,"maxBytes":2097152,"allowedHosts":["mstdn.jp"]}
+    {"id":"mastodon-codex","enabled":true,"intervalMinutes":60,"ttlMinutes":180,"maxBytes":2097152,"allowedHosts":["mstdn.jp"]},
+    {"id":"cabinet-office-holidays","enabled":true,"intervalMinutes":10080,"ttlMinutes":20160,"maxBytes":524288,"allowedHosts":["www8.cao.go.jp"]}
   ]
 }
