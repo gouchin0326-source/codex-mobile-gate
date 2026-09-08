@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-08T09:08:03.115053+00:00",
-  "lastSuccessAt": "2026-09-08T09:08:03.115053+00:00",
+  "updatedAt": "2026-09-08T09:18:01.949203+00:00",
+  "lastSuccessAt": "2026-09-08T09:18:01.949203+00:00",
   "status": "fresh",
   "mode": "primary-api-weather-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -185,27 +185,18 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "location": "富山県",
-      "updatedAt": "2026-09-08T08:48:01.811603+00:00",
+      "updatedAt": "2026-09-08T09:18:01.949203+00:00",
       "current": {
-        "time": "2026-09-08T17:45",
+        "time": "2026-09-08T18:15",
         "interval": 900,
-        "temperature_2m": 24.9,
+        "temperature_2m": 24.8,
         "relative_humidity_2m": 96,
         "apparent_temperature": 30.6,
-        "precipitation": 0.0,
-        "weather_code": 2,
-        "wind_speed_10m": 3.7
+        "precipitation": 0.6,
+        "weather_code": 61,
+        "wind_speed_10m": 2.9
       },
       "hourly": [
-        {
-          "time": "2026-09-08T18:00",
-          "temp": 24.9,
-          "humidity": 96,
-          "feelsLike": 30.5,
-          "rainProb": 100,
-          "rain": 0.1,
-          "wind": 3.6
-        },
         {
           "time": "2026-09-08T19:00",
           "temp": 24.6,
@@ -412,6 +403,15 @@
           "rainProb": 90,
           "rain": 0.4,
           "wind": 9.4
+        },
+        {
+          "time": "2026-09-09T18:00",
+          "temp": 21.0,
+          "humidity": 84,
+          "feelsLike": 22.7,
+          "rainProb": 84,
+          "rain": 0.0,
+          "wind": 9.0
         }
       ],
       "daily": [
@@ -489,8 +489,8 @@
     {
       "id": "open-meteo-toyama",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-08T08:48:01.811603+00:00",
-      "lastAttemptAt": "2026-09-08T08:48:01.811603+00:00",
+      "lastSuccessAt": "2026-09-08T09:18:01.949203+00:00",
+      "lastAttemptAt": "2026-09-08T09:18:01.949203+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
