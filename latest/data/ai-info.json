@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-08T05:48:01.760257+00:00",
+  "updatedAt": "2026-09-08T05:58:01.685112+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -24,10 +24,10 @@
     },
     {
       "genre": "技術",
-      "count": 1,
+      "count": 3,
       "decision": "必要時だけ確認",
-      "signal": "How well do agents use test/verification techniques?",
-      "topUrl": "https://danluu.com/agentic-testing/",
+      "signal": "Emacs Bedrock 2.0 Released / What are you using as a task manager and as a people manager? / I changed my license to EUPL",
+      "topUrl": "https://lambdaland.org/posts/2026-09-06-bedrock-v2/",
       "score": 2
     }
   ],
@@ -446,16 +446,33 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "その他",
+      "topic": "ニュース",
       "sourceWeight": 1,
-      "title": "How well do agents use test/verification techniques?",
+      "title": "Emacs Bedrock 2.0 Released",
       "summary": "Comments",
-      "url": "https://danluu.com/agentic-testing/",
-      "published": "2026-09-07T16:17:46+00:00",
+      "url": "https://lambdaland.org/posts/2026-09-06-bedrock-v2/",
+      "published": "2026-09-08T02:55:30+00:00",
       "score": 2,
       "tags": [
         "技術",
         "重要"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "What are you using as a task manager and as a people manager?",
+      "summary": "What’s your tool or method for your daily and then more open tasks? How do you stay on top of everything at work and at home? A program, pen and paper, just your head like Aristotle? How do you keep up with your work con",
+      "url": "https://lobste.rs/s/0t6c5f/what_are_you_using_as_task_manager_as",
+      "published": "2026-09-08T00:50:16+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "研究"
       ]
     },
     {
@@ -474,8 +491,24 @@
         "AI",
         "重要"
       ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "I changed my license to EUPL",
+      "summary": "Comments",
+      "url": "https://bergie.iki.fi/blog/eupl/",
+      "published": "2026-09-08T04:17:11+00:00",
+      "score": 1,
+      "tags": [
+        "技術"
+      ]
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-08T04:48:01.681157+00:00"
+  "lastSuccessAt": "2026-09-08T05:58:01.685112+00:00"
 }
