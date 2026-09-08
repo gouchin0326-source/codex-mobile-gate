@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-08T11:58:00.909224+00:00",
+  "updatedAt": "2026-09-08T12:08:01.844788+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -26,8 +26,8 @@
       "genre": "技術",
       "count": 3,
       "decision": "必要時だけ確認",
-      "signal": "Emacs Bedrock 2.0 Released / What are you using as a task manager and as a people manager? / I changed my license to EUPL",
-      "topUrl": "https://lambdaland.org/posts/2026-09-06-bedrock-v2/",
+      "signal": "Statement on finite-time blowup for forced 3D Euler, and OpenAI's conduct / Extreme Server Side Rendering / The state of European cloud providers in 2026",
+      "topUrl": "https://cims.nyu.edu/~tristanb/statement.pdf",
       "score": 2
     }
   ],
@@ -446,33 +446,16 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "ニュース",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Emacs Bedrock 2.0 Released",
-      "summary": "Comments",
-      "url": "https://lambdaland.org/posts/2026-09-06-bedrock-v2/",
-      "published": "2026-09-08T02:55:30+00:00",
+      "title": "Statement on finite-time blowup for forced 3D Euler, and OpenAI's conduct",
+      "summary": "Tristan's original post, which includes links to the proofs themselves: https://mastodon.social/@tristanbuckmaster/117233413705701198 Comments",
+      "url": "https://cims.nyu.edu/~tristanb/statement.pdf",
+      "published": "2026-09-08T08:14:40+00:00",
       "score": 2,
       "tags": [
         "技術",
         "重要"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "What are you using as a task manager and as a people manager?",
-      "summary": "What’s your tool or method for your daily and then more open tasks? How do you stay on top of everything at work and at home? A program, pen and paper, just your head like Aristotle? How do you keep up with your work con",
-      "url": "https://lobste.rs/s/0t6c5f/what_are_you_using_as_task_manager_as",
-      "published": "2026-09-08T00:50:16+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "研究"
       ]
     },
     {
@@ -497,12 +480,28 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
+      "topic": "ガジェット",
+      "sourceWeight": 1,
+      "title": "Extreme Server Side Rendering",
+      "summary": "Comments",
+      "url": "https://www.scd31.com/posts/extreme-server-side-rendering",
+      "published": "2026-09-08T10:54:57+00:00",
+      "score": 1,
+      "tags": [
+        "技術"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
       "topic": "その他",
       "sourceWeight": 1,
-      "title": "I changed my license to EUPL",
+      "title": "The state of European cloud providers in 2026",
       "summary": "Comments",
-      "url": "https://bergie.iki.fi/blog/eupl/",
-      "published": "2026-09-08T04:17:11+00:00",
+      "url": "https://crescentro.se/posts/euro-cloud-providers-2026/",
+      "published": "2026-09-08T07:20:16+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -510,5 +509,5 @@
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-08T05:58:01.685112+00:00"
+  "lastSuccessAt": "2026-09-08T12:08:01.844788+00:00"
 }

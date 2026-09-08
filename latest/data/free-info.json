@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-08T11:58:00.909224+00:00",
-  "lastSuccessAt": "2026-09-08T05:58:01.685112+00:00",
+  "updatedAt": "2026-09-08T12:08:01.844788+00:00",
+  "lastSuccessAt": "2026-09-08T12:08:01.844788+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -117,9 +117,9 @@
     {
       "genre": "災害",
       "count": 8,
-      "signal": "M 1.8 - 26 km SE of Lindsay, Texas / M 0.7 - 9 km NW of The Geysers, CA / M 2.7 - 32 km S of Akhiok, Alaska",
+      "signal": "M 1.1 - 13 km ENE of Nenana, Alaska / M 1.5 - 43 km WNW of Valdez, Alaska / M 1.2 - 16 km NNW of San Simeon, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026rrjflf",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rurnzj",
       "score": 1
     },
     {
@@ -133,9 +133,9 @@
     {
       "genre": "技術",
       "count": 3,
-      "signal": "Emacs Bedrock 2.0 Released / What are you using as a task manager and as a people manager? / I changed my license to EUPL",
+      "signal": "Statement on finite-time blowup for forced 3D Euler, and OpenAI's conduct / Extreme Server Side Rendering / The state of European cloud providers in 2026",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://lambdaland.org/posts/2026-09-06-bedrock-v2/",
+      "topUrl": "https://cims.nyu.edu/~tristanb/statement.pdf",
       "score": 2
     }
   ],
@@ -200,12 +200,12 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "ニュース",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Emacs Bedrock 2.0 Released",
-      "summary": "Comments",
-      "url": "https://lambdaland.org/posts/2026-09-06-bedrock-v2/",
-      "published": "2026-09-08T02:55:30+00:00",
+      "title": "Statement on finite-time blowup for forced 3D Euler, and OpenAI's conduct",
+      "summary": "Tristan's original post, which includes links to the proofs themselves: https://mastodon.social/@tristanbuckmaster/117233413705701198 Comments",
+      "url": "https://cims.nyu.edu/~tristanb/statement.pdf",
+      "published": "2026-09-08T08:14:40+00:00",
       "score": 2,
       "tags": [
         "技術",
@@ -216,10 +216,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.8 - 26 km SE of Lindsay, Texas",
-      "summary": "26 km SE of Lindsay, Texas",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026rrjflf",
-      "published": "2026-09-08T05:52:08.616000+00:00",
+      "title": "M 1.1 - 13 km ENE of Nenana, Alaska",
+      "summary": "13 km ENE of Nenana, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rurnzj",
+      "published": "2026-09-08T12:01:51.826000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -522,23 +522,6 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "What are you using as a task manager and as a people manager?",
-      "summary": "What’s your tool or method for your daily and then more open tasks? How do you stay on top of everything at work and at home? A program, pen and paper, just your head like Aristotle? How do you keep up with your work con",
-      "url": "https://lobste.rs/s/0t6c5f/what_are_you_using_as_task_manager_as",
-      "published": "2026-09-08T00:50:16+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "研究"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "OpenAI",
@@ -559,10 +542,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.7 - 9 km NW of The Geysers, CA",
-      "summary": "9 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75431577",
-      "published": "2026-09-08T05:50:41.390000+00:00",
+      "title": "M 1.5 - 43 km WNW of Valdez, Alaska",
+      "summary": "43 km WNW of Valdez, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rurfdh",
+      "published": "2026-09-08T11:51:39.756000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -572,10 +555,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.7 - 32 km S of Akhiok, Alaska",
-      "summary": "32 km S of Akhiok, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rudiqp",
-      "published": "2026-09-08T04:55:53.639000+00:00",
+      "title": "M 1.2 - 16 km NNW of San Simeon, CA",
+      "summary": "16 km NNW of San Simeon, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75431657",
+      "published": "2026-09-08T11:50:25.020000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -585,10 +568,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 5.3 - 51 km NNE of Ruteng, Indonesia",
-      "summary": "51 km NNE of Ruteng, Indonesia",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tfr8",
-      "published": "2026-09-08T04:40:28.046000+00:00",
+      "title": "M 1.5 - 17 km WNW of Mentone, Texas",
+      "summary": "17 km WNW of Mentone, Texas",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026rruxwl",
+      "published": "2026-09-08T11:45:29.102000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -598,10 +581,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.7 - 9 km WNW of Cobb, CA",
-      "summary": "9 km WNW of Cobb, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75431557",
-      "published": "2026-09-08T04:29:16+00:00",
+      "title": "M 0.6 - 16 km ESE of Anza, CA",
+      "summary": "16 km ESE of Anza, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41542744",
+      "published": "2026-09-08T11:32:57.330000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -611,10 +594,39 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.7 - 73 km ENE of Tonopah, Nevada",
-      "summary": "73 km ENE of Tonopah, Nevada",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00924244",
-      "published": "2026-09-08T04:22:01.129000+00:00",
+      "title": "M 2.4 - 23 km SE of Pāhala, Hawaii",
+      "summary": "23 km SE of Pāhala, Hawaii",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75030857",
+      "published": "2026-09-08T11:28:08.020000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "topic": "ガジェット",
+      "sourceWeight": 1,
+      "title": "Extreme Server Side Rendering",
+      "summary": "Comments",
+      "url": "https://www.scd31.com/posts/extreme-server-side-rendering",
+      "published": "2026-09-08T10:54:57+00:00",
+      "score": 1,
+      "tags": [
+        "技術"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.0 - 8 km W of Cobb, CA",
+      "summary": "8 km W of Cobb, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75431652",
+      "published": "2026-09-08T10:51:43.360000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -624,23 +636,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.5 - 16 km W of Salamatof, Alaska",
-      "summary": "16 km W of Salamatof, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ruccoc",
-      "published": "2026-09-08T04:18:53.064000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.9 - 8 km ENE of Puebla, B.C., MX",
-      "summary": "8 km ENE of Puebla, B.C., MX",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41542640",
-      "published": "2026-09-08T04:17:24.470000+00:00",
+      "title": "M 4.1 - 105 km SSE of King Cove, Alaska",
+      "summary": "105 km SSE of King Cove, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tft5",
+      "published": "2026-09-08T10:49:02.312000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -653,10 +652,10 @@
       "genre": "技術",
       "topic": "その他",
       "sourceWeight": 1,
-      "title": "I changed my license to EUPL",
+      "title": "The state of European cloud providers in 2026",
       "summary": "Comments",
-      "url": "https://bergie.iki.fi/blog/eupl/",
-      "published": "2026-09-08T04:17:11+00:00",
+      "url": "https://crescentro.se/posts/euro-cloud-providers-2026/",
+      "published": "2026-09-08T07:20:16+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -667,32 +666,32 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-08T05:58:01.685112+00:00",
-      "lastAttemptAt": "2026-09-08T05:58:01.685112+00:00",
+      "lastSuccessAt": "2026-09-08T12:08:01.844788+00:00",
+      "lastAttemptAt": "2026-09-08T12:08:01.844788+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-08T05:58:01.685112+00:00",
-      "lastAttemptAt": "2026-09-08T05:58:01.685112+00:00",
+      "lastSuccessAt": "2026-09-08T12:08:01.844788+00:00",
+      "lastAttemptAt": "2026-09-08T12:08:01.844788+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-08T05:58:01.685112+00:00",
-      "lastAttemptAt": "2026-09-08T05:58:01.685112+00:00",
+      "lastSuccessAt": "2026-09-08T12:08:01.844788+00:00",
+      "lastAttemptAt": "2026-09-08T12:08:01.844788+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-08T05:58:01.685112+00:00",
-      "lastAttemptAt": "2026-09-08T05:58:01.685112+00:00",
+      "lastSuccessAt": "2026-09-08T12:08:01.844788+00:00",
+      "lastAttemptAt": "2026-09-08T12:08:01.844788+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -707,8 +706,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-08T05:58:01.685112+00:00",
-      "lastAttemptAt": "2026-09-08T05:58:01.685112+00:00",
+      "lastSuccessAt": "2026-09-08T12:08:01.844788+00:00",
+      "lastAttemptAt": "2026-09-08T12:08:01.844788+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
