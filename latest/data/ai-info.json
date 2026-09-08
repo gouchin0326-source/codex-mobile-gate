@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-08T15:23:11.880954+00:00",
+  "updatedAt": "2026-09-08T18:56:31.734288+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -8,9 +8,9 @@
   "cards": [
     {
       "genre": "開発",
-      "count": 15,
+      "count": 16,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "GPT-6 Astra is generally available in GitHub Copilot / GitHub Copilot weekly releases — August 31 / Project HydraFusion: Frontier quality via multi-model orchestration",
+      "signal": "GPT-6 Astra is generally available in GitHub Copilot / GitHub Copilot weekly releases — August 31 / New customer portal help.github.com",
       "topUrl": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot",
       "score": 5
     },
@@ -18,17 +18,17 @@
       "genre": "AI",
       "count": 6,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "Research acceleration: The view inside OpenAI / Daybreak for Frontline Defenders: $1B to protect essential services / Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
-      "topUrl": "https://openai.com/index/research-acceleration-view-inside-openai",
+      "signal": "OpenAI expands initiatives to support journalism from classrooms to newsrooms / Research acceleration: The view inside OpenAI / Introducing ChatGPT Images 2.5",
+      "topUrl": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms",
       "score": 3
     },
     {
       "genre": "技術",
-      "count": 3,
+      "count": 2,
       "decision": "必要時だけ確認",
-      "signal": "Statement on finite-time blowup for forced 3D Euler, and OpenAI's conduct / Extreme Server Side Rendering / The state of European cloud providers in 2026",
-      "topUrl": "https://cims.nyu.edu/~tristanb/statement.pdf",
-      "score": 2
+      "signal": "Switching Password Managers in 2026 / Extreme Server Side Rendering",
+      "topUrl": "https://rmondello.com/2026/09/07/switching-password-managers-2026/",
+      "score": 1
     }
   ],
   "focus": [
@@ -48,6 +48,13 @@
     },
     {
       "label": "開発",
+      "title": "New customer portal help.github.com",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-04-new-customer-portal-help-github-com"
+    },
+    {
+      "label": "開発",
       "title": "Project HydraFusion: Frontier quality via multi-model orchestration",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
@@ -62,10 +69,17 @@
     },
     {
       "label": "開発",
-      "title": "Gemini 3.8 Flash is now available in GitHub Copilot",
+      "title": "Automatic Dependabot access to GitHub-hosted registries",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot"
+      "url": "https://github.blog/changelog/2026-09-08-automatic-dependabot-access-to-github-hosted-registries"
+    },
+    {
+      "label": "AI",
+      "title": "OpenAI expands initiatives to support journalism from classrooms to newsrooms",
+      "why": "Codex/AI開発判断に関係",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms"
     },
     {
       "label": "AI",
@@ -73,20 +87,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "OpenAI",
       "url": "https://openai.com/index/research-acceleration-view-inside-openai"
-    },
-    {
-      "label": "開発",
-      "title": "New API endpoint provides privacy-safe star history data",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-04-new-api-endpoint-provides-privacy-safe-star-history-data"
-    },
-    {
-      "label": "開発",
-      "title": "GitHub Actions: Early September 2026 updates",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-03-github-actions-early-september-2026-updates"
     }
   ],
   "items": [
@@ -125,6 +125,24 @@
         "開発",
         "重要",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "New customer portal help.github.com",
+      "summary": "The support portal has been redesigned and moved to a new home at help.github.com. It brings support, docs, learning, community, and account resources together in one place with Copilot-powered search… The post New custo",
+      "url": "https://github.blog/changelog/2026-09-04-new-customer-portal-help-github-com",
+      "published": "2026-09-04T17:08:10+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "制作"
       ]
     },
     {
@@ -168,15 +186,32 @@
       "platform": "開発",
       "label": "GitHub更新",
       "genre": "開発",
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Gemini 3.8 Flash is now available in GitHub Copilot",
-      "summary": "Gemini 3.8 Flash, Google’s latest Flash model, is now available in GitHub Copilot. In our early testing, Gemini 3.8 Flash performed strongly on complex terminal-based coding tasks and demonstrated rigorous… The post Gemi",
-      "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot",
-      "published": "2026-09-03T18:50:38+00:00",
-      "score": 4,
+      "title": "Automatic Dependabot access to GitHub-hosted registries",
+      "summary": "Dependabot can now read from private GitHub Packages registries without a personal access token. If a package has granted your repository access through “Manage Actions access” in the package settings,… The post Automati",
+      "url": "https://github.blog/changelog/2026-09-08-automatic-dependabot-access-to-github-hosted-registries",
+      "published": "2026-09-08T16:46:05+00:00",
+      "score": 3,
       "tags": [
         "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "OpenAI expands initiatives to support journalism from classrooms to newsrooms",
+      "summary": "OpenAI is expanding support for journalism with tools, training, and partnerships for students, educators, journalists, and news organizations.",
+      "url": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms",
+      "published": "2026-09-08T00:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
         "重要",
         "研究"
       ]
@@ -234,23 +269,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "GitHub CLI Linux package signing key expires September 5",
-      "summary": "The current PGP key for the GitHub CLI Linux package repositories expires on Saturday, September 5, 2026. Beginning with the first release after that date, APT and RPM repository metadata… The post GitHub CLI Linux packa",
-      "url": "https://github.blog/changelog/2026-09-03-github-cli-linux-package-signing-key-expires-september-5",
-      "published": "2026-09-03T19:05:40+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -265,78 +283,6 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
-      "summary": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
-      "url": "https://openai.com/index/daybreak-for-frontline-defenders",
-      "published": "2026-09-03T13:15:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
-      "summary": "Using GPT-6 Astra, Playco built three themed game prototypes from one grey box foundation and reported 50% fewer manual fixes than with the previous model.",
-      "url": "https://openai.com/index/playco-game-prototyping-with-astra",
-      "published": "2026-09-03T12:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "制作",
-        "研究"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "GPT-6 Astra: A new generation of intelligence",
-      "summary": "Introducing GPT-6 Astra, our most intelligent and aligned model yet, with state-of-the-art capabilities across computer use, coding, cybersecurity, and science.",
-      "url": "https://openai.com/index/gpt-6-astra",
-      "published": "2026-09-03T11:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Safety overview: GPT-6 Astra",
-      "summary": "GPT-6 Astra is our most capable broadly deployed model and our first to reach the Critical level of cybersecurity capability under our Preparedness Framework.",
-      "url": "https://openai.com/index/safety-overview-gpt-6-astra",
-      "published": "2026-09-03T00:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "研究"
       ]
     },
     {
@@ -442,19 +388,36 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "Statement on finite-time blowup for forced 3D Euler, and OpenAI's conduct",
-      "summary": "Tristan's original post, which includes links to the proofs themselves: https://mastodon.social/@tristanbuckmaster/117233413705701198 Comments",
-      "url": "https://cims.nyu.edu/~tristanb/statement.pdf",
-      "published": "2026-09-08T08:14:40+00:00",
+      "title": "Introducing ChatGPT Images 2.5",
+      "summary": "ChatGPT Images 2.5 helps turn your ideas, sketches, and reference photos into more personalized, polished images that better reflect your ideas.",
+      "url": "https://openai.com/index/introducing-chatgpt-images-2-5",
+      "published": "2026-09-08T11:30:00+00:00",
       "score": 2,
       "tags": [
-        "技術",
+        "AI",
+        "制作"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Funding grants for new research into AI and teen development",
+      "summary": "Apply now for OpenAI’s $5 million grant program supporting independent research on how generative AI affects teen development, well-being, and safety.",
+      "url": "https://openai.com/index/teen-development-research-grants",
+      "published": "2026-09-08T09:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
         "重要"
       ]
     },
@@ -476,6 +439,54 @@
       ]
     },
     {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "Multiple trusted publishing configurations for npm",
+      "summary": "We’re continuing to make trusted publishing smoother for npm publishers, guided by maintainers feedback. Three updates to npm publishing are now generally available: Multiple trusted publishing configurations per package",
+      "url": "https://github.blog/changelog/2026-09-03-multiple-trusted-publishing-configurations-for-npm",
+      "published": "2026-09-03T20:34:34+00:00",
+      "score": 2,
+      "tags": [
+        "開発"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "topic": "ゲーム",
+      "sourceWeight": 1,
+      "title": "Switching Password Managers in 2026",
+      "summary": "Comments",
+      "url": "https://rmondello.com/2026/09/07/switching-password-managers-2026/",
+      "published": "2026-09-08T13:55:09+00:00",
+      "score": 1,
+      "tags": [
+        "技術"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "The Work Now Within Reach",
+      "summary": "Explore how more capable, affordable AI can expand the work people and businesses can accomplish—and make growth more economical.",
+      "url": "https://openai.com/index/the-work-now-within-reach",
+      "published": "2026-09-08T13:00:00+00:00",
+      "score": 1,
+      "tags": [
+        "AI"
+      ]
+    },
+    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
@@ -490,24 +501,8 @@
       "tags": [
         "技術"
       ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "The state of European cloud providers in 2026",
-      "summary": "Comments",
-      "url": "https://crescentro.se/posts/euro-cloud-providers-2026/",
-      "published": "2026-09-08T07:20:16+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
-      ]
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-08T12:08:01.844788+00:00"
+  "lastSuccessAt": "2026-09-08T18:56:31.734288+00:00"
 }
