@@ -11,7 +11,7 @@ def main():
         "習慣", "カウンター", "タイマー", "メモ", "カンバン", "クイズ",
         "toBlob", "audio/wav", "text/html", "text/markdown", "localStorage",
         "holidays.json", "free-info.json", "today.json", "weather-info.json",
-        "cg-kodekichi-v2", 'localStorage.removeItem(OLD)', "learningDays",
+        "cg-kodekichi-v2-1", 'localStorage.removeItem(OLD)', 'localStorage.removeItem("cg-kodekichi-v2")', "learningDays",
         "aria-live", "min-height:44px", "prefers-reduced-motion", "推測では補いません",
         "CODEKICHI /", "品質門", "setTimeout(()=>runMission()",
     ]
@@ -19,6 +19,7 @@ def main():
     assert "api.openai.com" not in page and "Authorization" not in page
     assert sum(page.count(f'"{name}"') for name in ("image", "music", "app", "research")) >= 8
     assert "days:3,skills:8" in page and "days:30,skills:24" in page
+    assert '["タイマー","クイズ"].includes(item.recipe)' in page
     for index in (root / "index.html", root / "latest" / "index.html"):
         assert "kodekichi/index.html" in index.read_text(encoding="utf-8")
     print("Kodekichi v2 checks passed: reset, 24 recipes, autonomous make-test-shelf, slow daily growth, exports, zero model API")
