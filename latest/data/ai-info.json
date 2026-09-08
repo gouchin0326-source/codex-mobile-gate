@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-08T04:38:01.647146+00:00",
+  "updatedAt": "2026-09-08T04:48:01.681157+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -8,7 +8,7 @@
   "cards": [
     {
       "genre": "開発",
-      "count": 14,
+      "count": 15,
       "decision": "CG開発・GitHub運用へ反映候補",
       "signal": "GPT-6 Astra is generally available in GitHub Copilot / GitHub Copilot weekly releases — August 31 / Project HydraFusion: Frontier quality via multi-model orchestration",
       "topUrl": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot",
@@ -16,19 +16,19 @@
     },
     {
       "genre": "AI",
-      "count": 5,
+      "count": 6,
       "decision": "AI/Codex運用の変化を確認",
       "signal": "Research acceleration: The view inside OpenAI / Daybreak for Frontline Defenders: $1B to protect essential services / Playco cut manual fixes 50% prototyping games with GPT-6 Astra",
       "topUrl": "https://openai.com/index/research-acceleration-view-inside-openai",
       "score": 3
     },
     {
-      "genre": "論文",
-      "count": 5,
+      "genre": "技術",
+      "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "From Matching Models to Recruiting Agents: A Systematized Narrative Review of AI Recruitment Systems, Evaluation, and Governance / Harbor Adapters and Harbor-Index: Infrastructure and a Curated Meta-Dataset for Large-Sca",
-      "topUrl": "https://arxiv.org/abs/2609.04286",
-      "score": 3
+      "signal": "How well do agents use test/verification techniques?",
+      "topUrl": "https://danluu.com/agentic-testing/",
+      "score": 2
     }
   ],
   "focus": [
@@ -68,25 +68,25 @@
       "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot"
     },
     {
-      "label": "論文",
-      "title": "From Matching Models to Recruiting Agents: A Systematized Narrative Review of AI Recruitment Systems, Evaluation, and Governance",
+      "label": "AI",
+      "title": "Research acceleration: The view inside OpenAI",
       "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.04286"
+      "source": "OpenAI",
+      "url": "https://openai.com/index/research-acceleration-view-inside-openai"
     },
     {
-      "label": "論文",
-      "title": "Harbor Adapters and Harbor-Index: Infrastructure and a Curated Meta-Dataset for Large-Scale Agentic Evaluation",
+      "label": "開発",
+      "title": "New API endpoint provides privacy-safe star history data",
       "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.04298"
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-04-new-api-endpoint-provides-privacy-safe-star-history-data"
     },
     {
-      "label": "論文",
-      "title": "Data-Optimized Contingency Screening: A Machine Learning Approach to Power System Security",
+      "label": "開発",
+      "title": "GitHub Actions: Early September 2026 updates",
       "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.04300"
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-03-github-actions-early-september-2026-updates"
     }
   ],
   "items": [
@@ -177,96 +177,6 @@
       "score": 4,
       "tags": [
         "開発",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "From Matching Models to Recruiting Agents: A Systematized Narrative Review of AI Recruitment Systems, Evaluation, and Governance",
-      "summary": "arXiv:2609.04286v1 Announce Type: new Abstract: Artificial intelligence in recruitment has shifted the object being automated from profile pairs and ranked lists to multi-stage workflows that retrieve evidence, compare c",
-      "url": "https://arxiv.org/abs/2609.04286",
-      "published": "2026-09-07T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Harbor Adapters and Harbor-Index: Infrastructure and a Curated Meta-Dataset for Large-Scale Agentic Evaluation",
-      "summary": "arXiv:2609.04298v1 Announce Type: new Abstract: Evaluating agents on the growing number of agentic benchmarks is challenging because they often require complex environments and agent integrations. We introduce Harbor Ada",
-      "url": "https://arxiv.org/abs/2609.04298",
-      "published": "2026-09-07T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Data-Optimized Contingency Screening: A Machine Learning Approach to Power System Security",
-      "summary": "arXiv:2609.04300v1 Announce Type: new Abstract: Ensuring the security of the power system is essential for stability and reliability, especially in the event of disruption. Effective classification of contingency in powe",
-      "url": "https://arxiv.org/abs/2609.04300",
-      "published": "2026-09-07T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Iris: Climbing to the Search Frontier",
-      "summary": "arXiv:2609.04304v1 Announce Type: new Abstract: We present Iris-mini and Iris-pro, two search agents trained at the 35B-A3B and 397B-A17B scales, together with the data pipeline and training recipe behind them. Tasks are",
-      "url": "https://arxiv.org/abs/2609.04304",
-      "published": "2026-09-07T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Why Better Models Can Create Riskier Systems: Evidence from LLM Agents in Financial Markets",
-      "summary": "arXiv:2609.04373v1 Announce Type: new Abstract: Large language models (LLMs) are being deployed at scale in consequential real-world systems, from financial markets to content moderation to hiring. We show that improving",
-      "url": "https://arxiv.org/abs/2609.04373",
-      "published": "2026-09-07T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
         "重要",
         "研究"
       ]
@@ -513,8 +423,59 @@
         "開発",
         "重要"
       ]
+    },
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Your alt text passes automated checks. That doesn’t mean it’s any good.",
+      "summary": "We built a plugin for the GitHub Accessibility Scanner to make sure your alt text is actually accessible. Here's how it works. The post Your alt text passes automated checks. That doesn’t mean it’s any good. appeared fir",
+      "url": "https://github.blog/engineering/user-experience/your-alt-text-passes-automated-checks-that-doesnt-mean-its-any-good/",
+      "published": "2026-08-24T20:56:32+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "How well do agents use test/verification techniques?",
+      "summary": "Comments",
+      "url": "https://danluu.com/agentic-testing/",
+      "published": "2026-09-07T16:17:46+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Supporting independent journalism in Ukraine",
+      "summary": "OpenAI, AIRPPU and WAN-IFRA launch an AI program to help Ukrainian news organizations strengthen innovation, resilience, and independent journalism.",
+      "url": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
+      "published": "2026-09-07T00:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-07T23:58:01.459215+00:00"
+  "lastSuccessAt": "2026-09-08T04:48:01.681157+00:00"
 }
