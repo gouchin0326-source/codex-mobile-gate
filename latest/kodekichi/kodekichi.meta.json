@@ -1,16 +1,16 @@
 {
   "lane": "app",
-  "ts": "2026-09-08T07:00:00+09:00",
+  "ts": "2026-09-08T07:15:00+09:00",
   "artifact": "index.html",
-  "prompt": "無料トークンで画像生成・音楽作成・アプリ作成・調査を実施し、たまごっちのように進化する自律型AIエージェント、コデ吉を作る",
+  "prompt": "コデ吉を第1形態へ戻し、確認なしで多様な作品を自律制作・検査・成果化し、制作日数と習得技でゆっくり進化するv2へ直す",
   "source": "codex",
   "backend": "codex",
   "model": "gpt-5.4-mini",
   "seconds": 1200,
   "gates": {
-    "four_outputs": {"pass": true, "note": "Canvas PNG、Web Audio WAV、単一HTML、公開データ調査Markdownを端末内生成"},
-    "growth": {"pass": true, "note": "経験値、5段階進化、能力別完了数、仕事日誌をlocalStorageへ保持"},
-    "autonomy": {"pass": true, "note": "おまかせ巡回が4工房を順番に実行し、成果を個別出力"},
+    "four_outputs": {"pass": true, "note": "Canvas PNG、Web Audio WAV、6種の単一HTML、6種の公開データ調査Markdownを端末内生成"},
+    "growth": {"pass": true, "note": "旧v1をリセット。24技と学習日数の両条件で5段階進化し、同日連打では進まない"},
+    "autonomy": {"pass": true, "note": "初回と新しい学習日に自動で題材選択、4分野制作、内容検査、合格成果の棚入れまで実行"},
     "token_free": {"pass": true, "note": "モデルAPIなし。端末内ルールとCG公開JSONのみ"},
     "inclusive": {"pass": true, "note": "320px対応、44px操作、キーボードfocus、aria-live、reduced-motion"},
     "truthful": {"pass": true, "note": "ルール生成と明示し、調査欠測を推測補完しない"}
