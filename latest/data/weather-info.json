@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-08T08:38:01.912596+00:00",
-  "lastSuccessAt": "2026-09-08T08:38:01.912596+00:00",
+  "updatedAt": "2026-09-08T08:48:01.811603+00:00",
+  "lastSuccessAt": "2026-09-08T08:48:01.811603+00:00",
   "status": "fresh",
   "mode": "primary-api-weather-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -185,27 +185,18 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "location": "富山県",
-      "updatedAt": "2026-09-08T08:08:01.914359+00:00",
+      "updatedAt": "2026-09-08T08:48:01.811603+00:00",
       "current": {
-        "time": "2026-09-08T17:00",
+        "time": "2026-09-08T17:45",
         "interval": 900,
-        "temperature_2m": 25.0,
-        "relative_humidity_2m": 97,
-        "apparent_temperature": 31.1,
-        "precipitation": 0.1,
-        "weather_code": 51,
-        "wind_speed_10m": 1.8
+        "temperature_2m": 24.9,
+        "relative_humidity_2m": 96,
+        "apparent_temperature": 30.6,
+        "precipitation": 0.0,
+        "weather_code": 2,
+        "wind_speed_10m": 3.7
       },
       "hourly": [
-        {
-          "time": "2026-09-08T17:00",
-          "temp": 25.0,
-          "humidity": 97,
-          "feelsLike": 31.1,
-          "rainProb": 97,
-          "rain": 0.2,
-          "wind": 1.8
-        },
         {
           "time": "2026-09-08T18:00",
           "temp": 24.9,
@@ -412,6 +403,15 @@
           "rainProb": 96,
           "rain": 2.3,
           "wind": 9.0
+        },
+        {
+          "time": "2026-09-09T17:00",
+          "temp": 20.7,
+          "humidity": 83,
+          "feelsLike": 22.1,
+          "rainProb": 90,
+          "rain": 0.4,
+          "wind": 9.4
         }
       ],
       "daily": [
@@ -489,8 +489,8 @@
     {
       "id": "open-meteo-toyama",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-08T08:08:01.914359+00:00",
-      "lastAttemptAt": "2026-09-08T08:08:01.914359+00:00",
+      "lastSuccessAt": "2026-09-08T08:48:01.811603+00:00",
+      "lastAttemptAt": "2026-09-08T08:48:01.811603+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
