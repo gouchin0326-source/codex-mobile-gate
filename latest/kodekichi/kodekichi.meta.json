@@ -1,6 +1,6 @@
 {
   "lane": "app",
-  "ts": "2026-09-08T07:15:00+09:00",
+  "ts": "2026-09-08T14:15:00+09:00",
   "artifact": "index.html",
   "prompt": "コデ吉を第1形態へ戻し、確認なしで多様な作品を自律制作・検査・成果化し、制作日数と習得技でゆっくり進化するv2へ直す",
   "source": "codex",
@@ -12,7 +12,8 @@
     "growth": {"pass": true, "note": "旧v1をリセット。24技と学習日数の両条件で5段階進化し、同日連打では進まない"},
     "autonomy": {"pass": true, "note": "初回と新しい学習日に自動で題材選択、4分野制作、内容検査、合格成果の棚入れまで実行"},
     "token_free": {"pass": true, "note": "モデルAPIなし。端末内ルールとCG公開JSONのみ"},
-    "inclusive": {"pass": true, "note": "320px対応、44px操作、キーボードfocus、aria-live、reduced-motion"},
-    "truthful": {"pass": true, "note": "ルール生成と明示し、調査欠測を推測補完しない"}
+    "inclusive": {"pass": true, "note": "公開版を320x700pxで実表示し、コデ吉・主操作・品質・進化状況の一画面表示を確認"},
+    "truthful": {"pass": true, "note": "ルール生成と明示し、調査欠測を推測補完しない"},
+    "live_autonomy": {"pass": true, "note": "公開初回4/4 PASS、同日2巡で8作品・8技になっても学習1日・第1形態を維持"}
   }
 }
