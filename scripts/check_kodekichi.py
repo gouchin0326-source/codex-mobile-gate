@@ -44,6 +44,8 @@ def main():
         "AI比率調整", "発火した判断ポイント", "decisionTriggers",
         "measuredRadar", "evolutionDecision", "evolutionGates", "catch_width",
         "generation_focus", "pet_palette", "pet_expression", "aura_style",
+        "mobile-dock", 'data-mobile-view="settings"', 'data-mobile-view="results"',
+        "gameObjectsTouch", 'addEventListener("pointermove"',
     ]
     assert all(value in page for value in required)
     assert "api.openai.com" not in page and "Authorization" not in page
