@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-09T16:32:25.325735+00:00",
-  "lastSuccessAt": "2026-09-09T13:08:04.483505+00:00",
+  "updatedAt": "2026-09-09T19:28:01.885556+00:00",
+  "lastSuccessAt": "2026-09-09T19:28:01.885556+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -108,34 +108,34 @@
   "contexts": [
     {
       "genre": "開発",
-      "count": 16,
-      "signal": "GPT-6 Astra is generally available in GitHub Copilot / New customer portal help.github.com / GitHub Copilot weekly releases — August 31",
+      "count": 15,
+      "signal": "New customer portal help.github.com / GitHub Copilot weekly releases — August 31 / Project HydraFusion: Frontier quality via multi-model orchestration",
       "decision": "CG開発・GitHub運用へ反映候補",
-      "topUrl": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot",
-      "score": 5
+      "topUrl": "https://github.blog/changelog/2026-09-08-new-customer-portal-help-github-com",
+      "score": 4
     },
     {
       "genre": "災害",
       "count": 8,
-      "signal": "M 1.9 - 11 km ENE of Pāhala, Hawaii / M 0.6 - 12 km W of Anza, CA / M 1.9 - 5 km SSW of Smith Valley, Nevada",
+      "signal": "M 1.9 - 8 km NW of Anchor Point, Alaska / M 1.8 - 45 km NW of Toyah, Texas / M 1.1 - 12 km WNW of Cobb, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75031487",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rxcgyx",
       "score": 1
     },
     {
       "genre": "AI",
       "count": 6,
-      "signal": "OpenAI expands initiatives to support journalism from classrooms to newsrooms / 1Password increases engineering productivity 21% with Codex / How GPT-5.6 Sol helps run quantum comp",
+      "signal": "OpenAI expands initiatives to support journalism from classrooms to newsrooms / 1Password increases engineering productivity 21% with Codex / Paul Christiano joins OpenAI Foundatio",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms",
       "score": 3
     },
     {
       "genre": "技術",
-      "count": 2,
-      "signal": "Solaris Turnstiles / How to build a f**king printer",
+      "count": 3,
+      "signal": "I Don’t Want to Interact With Stochastic Parrots / Apple Event for September 9th, 2026 / The purpose of DNS is to spread scams",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://rdmsr.github.io/writing/turnstiles/",
+      "topUrl": "https://ploum.net/2026-09-09-ai_policy.html",
       "score": 1
     }
   ],
@@ -145,18 +145,17 @@
       "platform": "開発",
       "label": "GitHub更新",
       "genre": "開発",
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "GPT-6 Astra is generally available in GitHub Copilot",
-      "summary": "GPT-6 Astra from OpenAI is now available in GitHub Copilot. OpenAI’s latest general-purpose model, GPT-6 Astra, is designed for long-horizon, autonomous coding and agentic tasks. In our internal testing, GPT-6… The post ",
-      "url": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot",
-      "published": "2026-09-04T18:59:51+00:00",
-      "score": 5,
+      "title": "New customer portal help.github.com",
+      "summary": "The support portal has been redesigned and moved to a new home at help.github.com. It brings support, docs, learning, community, and account resources together in one place with Copilot-powered search… The post New custo",
+      "url": "https://github.blog/changelog/2026-09-08-new-customer-portal-help-github-com",
+      "published": "2026-09-08T18:00:10+00:00",
+      "score": 4,
       "tags": [
         "開発",
         "重要",
-        "制作",
-        "研究"
+        "制作"
       ]
     },
     {
@@ -199,10 +198,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.9 - 11 km ENE of Pāhala, Hawaii",
-      "summary": "11 km ENE of Pāhala, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75031487",
-      "published": "2026-09-09T13:00:28.240000+00:00",
+      "title": "M 1.9 - 8 km NW of Anchor Point, Alaska",
+      "summary": "8 km NW of Anchor Point, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rxcgyx",
+      "published": "2026-09-09T19:26:16.950000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -213,33 +212,15 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "その他",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Solaris Turnstiles",
+      "title": "I Don’t Want to Interact With Stochastic Parrots",
       "summary": "Comments",
-      "url": "https://rdmsr.github.io/writing/turnstiles/",
-      "published": "2026-09-09T08:14:25+00:00",
+      "url": "https://ploum.net/2026-09-09-ai_policy.html",
+      "published": "2026-09-09T17:18:32+00:00",
       "score": 1,
       "tags": [
         "技術"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "New customer portal help.github.com",
-      "summary": "The support portal has been redesigned and moved to a new home at help.github.com. It brings support, docs, learning, community, and account resources together in one place with Copilot-powered search… The post New custo",
-      "url": "https://github.blog/changelog/2026-09-08-new-customer-portal-help-github-com",
-      "published": "2026-09-08T18:00:10+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
-        "制作"
       ]
     },
     {
@@ -258,6 +239,23 @@
         "開発",
         "重要",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "GitHub Advanced Security expands trial availability",
+      "summary": "More GitHub Enterprise Cloud customers can now start a self-serve GitHub Advanced Security trial to evaluate GitHub Code Security and GitHub Secret Protection. Eligibility has expanded from enterprises with up… The post ",
+      "url": "https://github.blog/changelog/2026-09-09-github-advanced-security-expands-trial-availability",
+      "published": "2026-09-09T17:33:34+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -310,23 +308,6 @@
         "AI",
         "重要",
         "開発"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "New API endpoint provides privacy-safe star history data",
-      "summary": "Track repository star growth over time with the new star history REST API endpoint without exposing stargazer identities. Earlier this year, stargazer listing endpoints were restricted to admins and collaborators… The po",
-      "url": "https://github.blog/changelog/2026-09-04-new-api-endpoint-provides-privacy-safe-star-history-data",
-      "published": "2026-09-04T16:43:56+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
       ]
     },
     {
@@ -455,6 +436,40 @@
       "genre": "AI",
       "topic": "AI",
       "sourceWeight": 1,
+      "title": "Paul Christiano joins OpenAI Foundation Board",
+      "summary": "Paul Christiano joins the OpenAI Foundation Board and its Safety and Security Committee, bringing experience in AI alignment, safety, and standards.",
+      "url": "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
+      "published": "2026-09-09T17:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Remediate Code Quality findings with agentic autofix",
+      "summary": "Agentic autofix is now available to help you burn down findings in your code quality backlog. You can select up to 25 standard findings on a page and assign the… The post Remediate Code Quality findings with agentic auto",
+      "url": "https://github.blog/changelog/2026-09-09-remediate-code-quality-findings-with-agentic-autofix",
+      "published": "2026-09-09T12:21:01+00:00",
+      "score": 2,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
       "title": "How GPT-5.6 Sol helps run quantum computing experiments",
       "summary": "See how an MIT researcher uses GPT-5.6 Sol with Codex to autonomously run quantum computing experiments, analyze results, and calibrate qubits.",
       "url": "https://openai.com/index/codex-quantum-computing-experiments",
@@ -500,46 +515,13 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Supporting independent journalism in Ukraine",
-      "summary": "OpenAI, AIRPPU and WAN-IFRA launch an AI program to help Ukrainian news organizations strengthen innovation, resilience, and independent journalism.",
-      "url": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
-      "published": "2026-09-07T00:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Multiple trusted publishing configurations for npm",
-      "summary": "We’re continuing to make trusted publishing smoother for npm publishers, guided by maintainers feedback. Three updates to npm publishing are now generally available: Multiple trusted publishing configurations per package",
-      "url": "https://github.blog/changelog/2026-09-03-multiple-trusted-publishing-configurations-for-npm",
-      "published": "2026-09-03T20:34:34+00:00",
-      "score": 2,
-      "tags": [
-        "開発"
-      ]
-    },
-    {
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.6 - 12 km W of Anza, CA",
-      "summary": "12 km W of Anza, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41543496",
-      "published": "2026-09-09T12:52:30.220000+00:00",
+      "title": "M 1.8 - 45 km NW of Toyah, Texas",
+      "summary": "45 km NW of Toyah, Texas",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026rufohq",
+      "published": "2026-09-09T19:15:07.189000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -549,10 +531,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.9 - 5 km SSW of Smith Valley, Nevada",
-      "summary": "5 km SSW of Smith Valley, Nevada",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00924291",
-      "published": "2026-09-09T12:40:24.401000+00:00",
+      "title": "M 1.1 - 12 km WNW of Cobb, CA",
+      "summary": "12 km WNW of Cobb, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75432702",
+      "published": "2026-09-09T19:14:45.880000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -562,10 +544,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.3 - 28 km S of Rampart, Alaska",
-      "summary": "28 km S of Rampart, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rwotrn",
-      "published": "2026-09-09T12:37:48.298000+00:00",
+      "title": "M 0.7 - 12 km WNW of Cobb, CA",
+      "summary": "12 km WNW of Cobb, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75432697",
+      "published": "2026-09-09T19:14:20.250000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -575,10 +557,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.3 - 2 km SSE of Pecos, Texas",
-      "summary": "2 km SSE of Pecos, Texas",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026rtsiaw",
-      "published": "2026-09-09T12:35:41.805000+00:00",
+      "title": "M 1.3 - 8 km SE of Coto De Caza, CA",
+      "summary": "8 km SE of Coto De Caza, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41543648",
+      "published": "2026-09-09T19:13:58.140000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -588,10 +570,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.3 - 30 km S of Rampart, Alaska",
-      "summary": "30 km S of Rampart, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rwohtx",
-      "published": "2026-09-09T12:24:00.867000+00:00",
+      "title": "M 0.9 - 12 km WNW of Cobb, CA",
+      "summary": "12 km WNW of Cobb, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75432687",
+      "published": "2026-09-09T19:12:56.580000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -601,10 +583,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 4.7 - 139 km NNE of Hihifo, Tonga",
-      "summary": "139 km NNE of Hihifo, Tonga",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tg1q",
-      "published": "2026-09-09T12:18:14.599000+00:00",
+      "title": "M 0.8 - 12 km WNW of Cobb, CA",
+      "summary": "12 km WNW of Cobb, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75432682",
+      "published": "2026-09-09T19:12:37.800000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -614,10 +596,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.5 - 10 km SSE of Idyllwild, CA",
-      "summary": "10 km SSE of Idyllwild, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41543480",
-      "published": "2026-09-09T12:10:49.590000+00:00",
+      "title": "M 2.7 - 12 km WNW of Cobb, CA",
+      "summary": "12 km WNW of Cobb, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75432677",
+      "published": "2026-09-09T19:12:04.250000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -628,12 +610,12 @@
       "platform": "開発",
       "label": "GitHub更新",
       "genre": "開発",
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Enterprise-managed sandbox in Copilot for JetBrains",
-      "summary": "This update brings support for enterprise-managed sandbox policies, cross-file cursor jumps for next edit suggestions, global project context in chat, enterprise policy diagnostics, and a new connection between terminal ",
-      "url": "https://github.blog/changelog/2026-09-08-enterprise-managed-sandbox-in-copilot-for-jetbrains",
-      "published": "2026-09-09T02:43:38+00:00",
+      "title": "Block pull requests with exposed secrets from merging",
+      "summary": "Repository rulesets allow you to easily add scalable protections across your repositories. Starting today, you can use repository rulesets to block pull requests from merging when the pull request introduces… The post Bl",
+      "url": "https://github.blog/changelog/2026-09-09-block-pull-requests-with-exposed-secrets-from-merging",
+      "published": "2026-09-09T17:14:02+00:00",
       "score": 1,
       "tags": [
         "開発"
@@ -646,10 +628,26 @@
       "genre": "技術",
       "topic": "その他",
       "sourceWeight": 1,
-      "title": "How to build a f**king printer",
+      "title": "Apple Event for September 9th, 2026",
+      "summary": "Out with the Tim, in with the John. Who knows if they'll fold? Comments",
+      "url": "https://www.apple.com/apple-events/event-stream/",
+      "published": "2026-09-09T16:54:31+00:00",
+      "score": 1,
+      "tags": [
+        "技術"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "The purpose of DNS is to spread scams",
       "summary": "Comments",
-      "url": "https://nishantjosh.dev/blogs/how-to-build-a-fking-printer/",
-      "published": "2026-09-08T21:39:21+00:00",
+      "url": "https://shkspr.mobi/blog/2026/09/the-purpose-of-dns-is-to-spread-scams/",
+      "published": "2026-09-09T13:32:22+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -660,32 +658,32 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-09T13:08:04.483505+00:00",
-      "lastAttemptAt": "2026-09-09T13:08:04.483505+00:00",
+      "lastSuccessAt": "2026-09-09T19:28:01.885556+00:00",
+      "lastAttemptAt": "2026-09-09T19:28:01.885556+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-09T13:08:04.483505+00:00",
-      "lastAttemptAt": "2026-09-09T13:08:04.483505+00:00",
+      "lastSuccessAt": "2026-09-09T19:28:01.885556+00:00",
+      "lastAttemptAt": "2026-09-09T19:28:01.885556+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-09T13:08:04.483505+00:00",
-      "lastAttemptAt": "2026-09-09T13:08:04.483505+00:00",
+      "lastSuccessAt": "2026-09-09T19:28:01.885556+00:00",
+      "lastAttemptAt": "2026-09-09T19:28:01.885556+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-09T13:08:04.483505+00:00",
-      "lastAttemptAt": "2026-09-09T13:08:04.483505+00:00",
+      "lastSuccessAt": "2026-09-09T19:28:01.885556+00:00",
+      "lastAttemptAt": "2026-09-09T19:28:01.885556+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -700,8 +698,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-09T13:08:04.483505+00:00",
-      "lastAttemptAt": "2026-09-09T13:08:04.483505+00:00",
+      "lastSuccessAt": "2026-09-09T19:28:01.885556+00:00",
+      "lastAttemptAt": "2026-09-09T19:28:01.885556+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

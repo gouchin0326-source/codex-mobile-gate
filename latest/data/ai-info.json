@@ -1,44 +1,37 @@
 {
-  "updatedAt": "2026-09-09T16:32:25.325735+00:00",
+  "updatedAt": "2026-09-09T19:28:01.885556+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "GPT-6 Astra is generally available in GitHub Copilot",
+  "topLine": "New customer portal help.github.com",
   "cards": [
     {
       "genre": "開発",
-      "count": 16,
+      "count": 15,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "GPT-6 Astra is generally available in GitHub Copilot / New customer portal help.github.com / GitHub Copilot weekly releases — August 31",
-      "topUrl": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot",
-      "score": 5
+      "signal": "New customer portal help.github.com / GitHub Copilot weekly releases — August 31 / Project HydraFusion: Frontier quality via multi-model orchestration",
+      "topUrl": "https://github.blog/changelog/2026-09-08-new-customer-portal-help-github-com",
+      "score": 4
     },
     {
       "genre": "AI",
       "count": 6,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "OpenAI expands initiatives to support journalism from classrooms to newsrooms / 1Password increases engineering productivity 21% with Codex / How GPT-5.6 Sol helps run quantum computing experiments",
+      "signal": "OpenAI expands initiatives to support journalism from classrooms to newsrooms / 1Password increases engineering productivity 21% with Codex / Paul Christiano joins OpenAI Foundation Board",
       "topUrl": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms",
       "score": 3
     },
     {
       "genre": "技術",
-      "count": 2,
+      "count": 3,
       "decision": "必要時だけ確認",
-      "signal": "Solaris Turnstiles / How to build a f**king printer",
-      "topUrl": "https://rdmsr.github.io/writing/turnstiles/",
+      "signal": "I Don’t Want to Interact With Stochastic Parrots / Apple Event for September 9th, 2026 / The purpose of DNS is to spread scams",
+      "topUrl": "https://ploum.net/2026-09-09-ai_policy.html",
       "score": 1
     }
   ],
   "focus": [
-    {
-      "label": "開発",
-      "title": "GPT-6 Astra is generally available in GitHub Copilot",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot"
-    },
     {
       "label": "開発",
       "title": "New customer portal help.github.com",
@@ -59,6 +52,13 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
       "url": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/"
+    },
+    {
+      "label": "開発",
+      "title": "GitHub Advanced Security expands trial availability",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-09-github-advanced-security-expands-trial-availability"
     },
     {
       "label": "開発",
@@ -90,25 +90,6 @@
     }
   ],
   "items": [
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "GPT-6 Astra is generally available in GitHub Copilot",
-      "summary": "GPT-6 Astra from OpenAI is now available in GitHub Copilot. OpenAI’s latest general-purpose model, GPT-6 Astra, is designed for long-horizon, autonomous coding and agentic tasks. In our internal testing, GPT-6… The post ",
-      "url": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot",
-      "published": "2026-09-04T18:59:51+00:00",
-      "score": 5,
-      "tags": [
-        "開発",
-        "重要",
-        "制作",
-        "研究"
-      ]
-    },
     {
       "source": "github-changelog",
       "platform": "開発",
@@ -161,6 +142,23 @@
         "開発",
         "重要",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "GitHub Advanced Security expands trial availability",
+      "summary": "More GitHub Enterprise Cloud customers can now start a self-serve GitHub Advanced Security trial to evaluate GitHub Code Security and GitHub Secret Protection. Eligibility has expanded from enterprises with up… The post ",
+      "url": "https://github.blog/changelog/2026-09-09-github-advanced-security-expands-trial-availability",
+      "published": "2026-09-09T17:33:34+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -231,23 +229,6 @@
         "AI",
         "重要",
         "開発"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "New API endpoint provides privacy-safe star history data",
-      "summary": "Track repository star growth over time with the new star history REST API endpoint without exposing stargazer identities. Earlier this year, stargazer listing endpoints were restricted to admins and collaborators… The po",
-      "url": "https://github.blog/changelog/2026-09-04-new-api-endpoint-provides-privacy-safe-star-history-data",
-      "published": "2026-09-04T16:43:56+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
       ]
     },
     {
@@ -376,6 +357,40 @@
       "genre": "AI",
       "topic": "AI",
       "sourceWeight": 1,
+      "title": "Paul Christiano joins OpenAI Foundation Board",
+      "summary": "Paul Christiano joins the OpenAI Foundation Board and its Safety and Security Committee, bringing experience in AI alignment, safety, and standards.",
+      "url": "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
+      "published": "2026-09-09T17:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Remediate Code Quality findings with agentic autofix",
+      "summary": "Agentic autofix is now available to help you burn down findings in your code quality backlog. You can select up to 25 standard findings on a page and assign the… The post Remediate Code Quality findings with agentic auto",
+      "url": "https://github.blog/changelog/2026-09-09-remediate-code-quality-findings-with-agentic-autofix",
+      "published": "2026-09-09T12:21:01+00:00",
+      "score": 2,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
       "title": "How GPT-5.6 Sol helps run quantum computing experiments",
       "summary": "See how an MIT researcher uses GPT-5.6 Sol with Codex to autonomously run quantum computing experiments, analyze results, and calibrate qubits.",
       "url": "https://openai.com/index/codex-quantum-computing-experiments",
@@ -421,49 +436,16 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Supporting independent journalism in Ukraine",
-      "summary": "OpenAI, AIRPPU and WAN-IFRA launch an AI program to help Ukrainian news organizations strengthen innovation, resilience, and independent journalism.",
-      "url": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
-      "published": "2026-09-07T00:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Multiple trusted publishing configurations for npm",
-      "summary": "We’re continuing to make trusted publishing smoother for npm publishers, guided by maintainers feedback. Three updates to npm publishing are now generally available: Multiple trusted publishing configurations per package",
-      "url": "https://github.blog/changelog/2026-09-03-multiple-trusted-publishing-configurations-for-npm",
-      "published": "2026-09-03T20:34:34+00:00",
-      "score": 2,
-      "tags": [
-        "開発"
-      ]
-    },
-    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "その他",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Solaris Turnstiles",
+      "title": "I Don’t Want to Interact With Stochastic Parrots",
       "summary": "Comments",
-      "url": "https://rdmsr.github.io/writing/turnstiles/",
-      "published": "2026-09-09T08:14:25+00:00",
+      "url": "https://ploum.net/2026-09-09-ai_policy.html",
+      "published": "2026-09-09T17:18:32+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -474,12 +456,12 @@
       "platform": "開発",
       "label": "GitHub更新",
       "genre": "開発",
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Enterprise-managed sandbox in Copilot for JetBrains",
-      "summary": "This update brings support for enterprise-managed sandbox policies, cross-file cursor jumps for next edit suggestions, global project context in chat, enterprise policy diagnostics, and a new connection between terminal ",
-      "url": "https://github.blog/changelog/2026-09-08-enterprise-managed-sandbox-in-copilot-for-jetbrains",
-      "published": "2026-09-09T02:43:38+00:00",
+      "title": "Block pull requests with exposed secrets from merging",
+      "summary": "Repository rulesets allow you to easily add scalable protections across your repositories. Starting today, you can use repository rulesets to block pull requests from merging when the pull request introduces… The post Bl",
+      "url": "https://github.blog/changelog/2026-09-09-block-pull-requests-with-exposed-secrets-from-merging",
+      "published": "2026-09-09T17:14:02+00:00",
       "score": 1,
       "tags": [
         "開発"
@@ -492,10 +474,26 @@
       "genre": "技術",
       "topic": "その他",
       "sourceWeight": 1,
-      "title": "How to build a f**king printer",
+      "title": "Apple Event for September 9th, 2026",
+      "summary": "Out with the Tim, in with the John. Who knows if they'll fold? Comments",
+      "url": "https://www.apple.com/apple-events/event-stream/",
+      "published": "2026-09-09T16:54:31+00:00",
+      "score": 1,
+      "tags": [
+        "技術"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "The purpose of DNS is to spread scams",
       "summary": "Comments",
-      "url": "https://nishantjosh.dev/blogs/how-to-build-a-fking-printer/",
-      "published": "2026-09-08T21:39:21+00:00",
+      "url": "https://shkspr.mobi/blog/2026/09/the-purpose-of-dns-is-to-spread-scams/",
+      "published": "2026-09-09T13:32:22+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -503,5 +501,5 @@
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-09T13:08:04.483505+00:00"
+  "lastSuccessAt": "2026-09-09T19:28:01.885556+00:00"
 }
