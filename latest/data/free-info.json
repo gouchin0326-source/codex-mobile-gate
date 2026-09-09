@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-09T00:48:01.485451+00:00",
-  "lastSuccessAt": "2026-09-08T18:56:31.734288+00:00",
+  "updatedAt": "2026-09-09T00:58:01.499536+00:00",
+  "lastSuccessAt": "2026-09-09T00:58:01.499536+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -109,7 +109,7 @@
     {
       "genre": "開発",
       "count": 16,
-      "signal": "GPT-6 Astra is generally available in GitHub Copilot / GitHub Copilot weekly releases — August 31 / New customer portal help.github.com",
+      "signal": "GPT-6 Astra is generally available in GitHub Copilot / New customer portal help.github.com / GitHub Copilot weekly releases — August 31",
       "decision": "CG開発・GitHub運用へ反映候補",
       "topUrl": "https://github.blog/changelog/2026-09-04-gpt-6-astra-is-generally-available-in-github-copilot",
       "score": 5
@@ -117,15 +117,15 @@
     {
       "genre": "災害",
       "count": 8,
-      "signal": "M 1.3 - 14 km ESE of Ocotillo Wells, CA / M 1.5 - 6 km NW of The Geysers, CA / M 1.8 - 22 km WSW of Coyanosa, Texas",
+      "signal": "M 2.7 - 44 km N of Tanana, Alaska / M 1.1 - 4 km WSW of Farmers Loop, Alaska / M 1.7 - 58 km S of Whites City, New Mexico",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41542936",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rvrdne",
       "score": 1
     },
     {
       "genre": "AI",
       "count": 6,
-      "signal": "OpenAI expands initiatives to support journalism from classrooms to newsrooms / Research acceleration: The view inside OpenAI / Introducing ChatGPT Images 2.5",
+      "signal": "OpenAI expands initiatives to support journalism from classrooms to newsrooms / 1Password increases engineering productivity 21% with Codex / How GPT-5.6 Sol helps run quantum comp",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms",
       "score": 3
@@ -133,9 +133,9 @@
     {
       "genre": "技術",
       "count": 2,
-      "signal": "Switching Password Managers in 2026 / Extreme Server Side Rendering",
+      "signal": "How to build a f**king printer / What makes $BigTechCompany's products bad, anyway?",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://rmondello.com/2026/09/07/switching-password-managers-2026/",
+      "topUrl": "https://nishantjosh.dev/blogs/how-to-build-a-fking-printer/",
       "score": 1
     }
   ],
@@ -199,10 +199,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.3 - 14 km ESE of Ocotillo Wells, CA",
-      "summary": "14 km ESE of Ocotillo Wells, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41542936",
-      "published": "2026-09-08T18:52:52.430000+00:00",
+      "title": "M 2.7 - 44 km N of Tanana, Alaska",
+      "summary": "44 km N of Tanana, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rvrdne",
+      "published": "2026-09-09T00:49:26.835000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -213,15 +213,33 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "ゲーム",
+      "topic": "その他",
       "sourceWeight": 1,
-      "title": "Switching Password Managers in 2026",
+      "title": "How to build a f**king printer",
       "summary": "Comments",
-      "url": "https://rmondello.com/2026/09/07/switching-password-managers-2026/",
-      "published": "2026-09-08T13:55:09+00:00",
+      "url": "https://nishantjosh.dev/blogs/how-to-build-a-fking-printer/",
+      "published": "2026-09-08T21:39:21+00:00",
       "score": 1,
       "tags": [
         "技術"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "New customer portal help.github.com",
+      "summary": "The support portal has been redesigned and moved to a new home at help.github.com. It brings support, docs, learning, community, and account resources together in one place with Copilot-powered search… The post New custo",
+      "url": "https://github.blog/changelog/2026-09-08-new-customer-portal-help-github-com",
+      "published": "2026-09-08T18:00:10+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "制作"
       ]
     },
     {
@@ -247,35 +265,16 @@
       "platform": "開発",
       "label": "GitHub更新",
       "genre": "開発",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "New customer portal help.github.com",
-      "summary": "The support portal has been redesigned and moved to a new home at help.github.com. It brings support, docs, learning, community, and account resources together in one place with Copilot-powered search… The post New custo",
-      "url": "https://github.blog/changelog/2026-09-04-new-customer-portal-help-github-com",
-      "published": "2026-09-04T17:08:10+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
-        "制作"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "Upcoming deprecation of selected GitHub Copilot models",
-      "summary": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on October 2nd, 2026: Model Deprecation date… The post Upcomi",
-      "url": "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models",
-      "published": "2026-09-03T19:40:14+00:00",
-      "score": 4,
+      "title": "GitHub Enterprise Server 3.22 is now generally available",
+      "summary": "GitHub Enterprise Server (GHES) 3.22 is now available and introduces new capabilities across the platform. Here are a few highlights in the 3.22 release: Administrators can configure Copilot CLI to… The post GitHub Enter",
+      "url": "https://github.blog/changelog/2026-09-08-github-enterprise-server-3-22-is-now-generally-available",
+      "published": "2026-09-08T21:52:42+00:00",
+      "score": 3,
       "tags": [
         "開発",
-        "重要",
-        "研究"
+        "重要"
       ]
     },
     {
@@ -300,12 +299,12 @@
       "platform": "AI",
       "label": "OpenAI",
       "genre": "AI",
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Research acceleration: The view inside OpenAI",
-      "summary": "Inside OpenAI, coding agents are reshaping AI research. Explore early data on agent usage, experiment velocity, task complexity, and research acceleration.",
-      "url": "https://openai.com/index/research-acceleration-view-inside-openai",
-      "published": "2026-09-06T08:00:00+00:00",
+      "title": "1Password increases engineering productivity 21% with Codex",
+      "summary": "Engineers at 1Password use Codex to rapidly build new features and internal tools, reaching production-readiness while maintaining rigorous security policies.",
+      "url": "https://openai.com/index/1password",
+      "published": "2026-09-08T00:00:00+00:00",
       "score": 3,
       "tags": [
         "AI",
@@ -473,6 +472,23 @@
       "genre": "AI",
       "topic": "AI",
       "sourceWeight": 1,
+      "title": "How GPT-5.6 Sol helps run quantum computing experiments",
+      "summary": "See how an MIT researcher uses GPT-5.6 Sol with Codex to autonomously run quantum computing experiments, analyze results, and calibrate qubits.",
+      "url": "https://openai.com/index/codex-quantum-computing-experiments",
+      "published": "2026-09-08T17:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
       "title": "Introducing ChatGPT Images 2.5",
       "summary": "ChatGPT Images 2.5 helps turn your ideas, sketches, and reference photos into more personalized, polished images that better reflect your ideas.",
       "url": "https://openai.com/index/introducing-chatgpt-images-2-5",
@@ -537,10 +553,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.5 - 6 km NW of The Geysers, CA",
-      "summary": "6 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75431862",
-      "published": "2026-09-08T18:19:50.060000+00:00",
+      "title": "M 1.1 - 4 km WSW of Farmers Loop, Alaska",
+      "summary": "4 km WSW of Farmers Loop, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rvqzzb",
+      "published": "2026-09-09T00:45:21.259000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -550,10 +566,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.8 - 22 km WSW of Coyanosa, Texas",
-      "summary": "22 km WSW of Coyanosa, Texas",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026rshtgw",
-      "published": "2026-09-08T18:12:16.483000+00:00",
+      "title": "M 1.7 - 58 km S of Whites City, New Mexico",
+      "summary": "58 km S of Whites City, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026rsuopz",
+      "published": "2026-09-09T00:39:17.068000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -563,10 +579,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.9 - 8 km NW of The Geysers, CA",
-      "summary": "8 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75431852",
-      "published": "2026-09-08T17:58:49.480000+00:00",
+      "title": "M 2.1 - 7 km WSW of Guánica, Puerto Rico",
+      "summary": "7 km WSW of Guánica, Puerto Rico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71531223",
+      "published": "2026-09-09T00:38:32.630000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -576,10 +592,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.1 - 8 km ENE of Vallejo, CA",
-      "summary": "8 km ENE of Vallejo, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75431847",
-      "published": "2026-09-08T17:57:56.990000+00:00",
+      "title": "M 1.5 - 16 km WSW of Johannesburg, CA",
+      "summary": "16 km WSW of Johannesburg, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41543112",
+      "published": "2026-09-09T00:33:43.950000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -589,10 +605,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.4 - 17 km W of Searles Valley, CA",
-      "summary": "17 km W of Searles Valley, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41542896",
-      "published": "2026-09-08T17:57:08.390000+00:00",
+      "title": "M 1.1 - 1 km N of Middletown, CA",
+      "summary": "1 km N of Middletown, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75432117",
+      "published": "2026-09-09T00:32:30.930000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -602,10 +618,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.7 - 67 km SSE of Cantwell, Alaska",
-      "summary": "67 km SSE of Cantwell, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rvdjld",
-      "published": "2026-09-08T17:56:34.852000+00:00",
+      "title": "M 1.8 - 16 km WSW of Johannesburg, CA",
+      "summary": "16 km WSW of Johannesburg, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41543104",
+      "published": "2026-09-09T00:28:02.290000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -615,29 +631,13 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.1 - 7 km NW of The Geysers, CA",
-      "summary": "7 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75431832",
-      "published": "2026-09-08T17:46:37.700000+00:00",
+      "title": "M 3.6 - 89 km SSW of Nikolski, Alaska",
+      "summary": "89 km SSW of Nikolski, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026rvqhfz",
+      "published": "2026-09-09T00:23:45.868000+00:00",
       "score": 1,
       "tags": [
         "災害"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "The Work Now Within Reach",
-      "summary": "Explore how more capable, affordable AI can expand the work people and businesses can accomplish—and make growth more economical.",
-      "url": "https://openai.com/index/the-work-now-within-reach",
-      "published": "2026-09-08T13:00:00+00:00",
-      "score": 1,
-      "tags": [
-        "AI"
       ]
     },
     {
@@ -645,12 +645,12 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "ガジェット",
+      "topic": "その他",
       "sourceWeight": 1,
-      "title": "Extreme Server Side Rendering",
+      "title": "What makes $BigTechCompany's products bad, anyway?",
       "summary": "Comments",
-      "url": "https://www.scd31.com/posts/extreme-server-side-rendering",
-      "published": "2026-09-08T10:54:57+00:00",
+      "url": "https://herecomesthemoon.net/2026/09/why-is-big-tech-bad/",
+      "published": "2026-09-08T21:05:31+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -661,32 +661,32 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-08T18:56:31.734288+00:00",
-      "lastAttemptAt": "2026-09-08T18:56:31.734288+00:00",
+      "lastSuccessAt": "2026-09-09T00:58:01.499536+00:00",
+      "lastAttemptAt": "2026-09-09T00:58:01.499536+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-08T18:56:31.734288+00:00",
-      "lastAttemptAt": "2026-09-08T18:56:31.734288+00:00",
+      "lastSuccessAt": "2026-09-09T00:58:01.499536+00:00",
+      "lastAttemptAt": "2026-09-09T00:58:01.499536+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-08T18:56:31.734288+00:00",
-      "lastAttemptAt": "2026-09-08T18:56:31.734288+00:00",
+      "lastSuccessAt": "2026-09-09T00:58:01.499536+00:00",
+      "lastAttemptAt": "2026-09-09T00:58:01.499536+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-08T18:56:31.734288+00:00",
-      "lastAttemptAt": "2026-09-08T18:56:31.734288+00:00",
+      "lastSuccessAt": "2026-09-09T00:58:01.499536+00:00",
+      "lastAttemptAt": "2026-09-09T00:58:01.499536+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -701,8 +701,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-08T18:56:31.734288+00:00",
-      "lastAttemptAt": "2026-09-08T18:56:31.734288+00:00",
+      "lastSuccessAt": "2026-09-09T00:58:01.499536+00:00",
+      "lastAttemptAt": "2026-09-09T00:58:01.499536+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
