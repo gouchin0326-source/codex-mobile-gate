@@ -41,6 +41,12 @@ const result = await call("Runtime.evaluate", {
     const resultsVisible = getComputedStyle(document.querySelector('#gallery')).display !== "none";
     document.querySelector('[data-mobile-view="home"]').click();
     const homeVisible = getComputedStyle(document.querySelector('.hero')).display !== "none";
+    document.querySelectorAll('.garden-site')[1].click();
+    const gardenState = JSON.parse(localStorage.getItem('cg-kodekichi-v2-1')).garden;
+    const discoveryPlanned = gardenState.discovered.includes('flower-maze') && gardenState.plans.some(plan => plan.siteId === 'flower-maze' && plan.stage === 0);
+    document.querySelectorAll('.garden-site')[0].click();
+    document.querySelector('#game-start').click();
+    const switchedToGame = document.querySelector('#game-arena').dataset.mode === 'minigame' && document.querySelector('#game-star').classList.contains('on');
     return {
       innerWidth,
       scrollWidth: document.documentElement.scrollWidth,
@@ -51,16 +57,21 @@ const result = await call("Runtime.evaluate", {
       hasTouchDrag: document.documentElement.innerHTML.includes("pointermove"),
       settingsVisible,
       resultsVisible,
-      homeVisible
+      homeVisible,
+      discoveryPlanned,
+      switchedToGame,
+      schedule: gardenState.schedule.start + '-' + gardenState.schedule.end
     };
   })()`,
   returnByValue: true
 });
+await call("Page.reload", { ignoreCache: true });
+await new Promise(resolve => setTimeout(resolve, 500));
 const screenshot = await call("Page.captureScreenshot", { format: "png", captureBeyondViewport: false });
 await import("node:fs").then(fs => fs.writeFileSync(output, Buffer.from(screenshot.result.data, "base64")));
 socket.close();
 const actual = result.result.result.value;
-if (actual.innerWidth !== 390 || actual.scrollWidth > 390 || actual.navItems !== 3 || !actual.navVisible || actual.petWidth >= 100 || Math.round(actual.navRight) !== 390 || !actual.hasTouchDrag || !actual.settingsVisible || !actual.resultsVisible || !actual.homeVisible) {
+if (actual.innerWidth !== 390 || actual.scrollWidth > 390 || actual.navItems !== 3 || !actual.navVisible || actual.petWidth >= 100 || Math.round(actual.navRight) !== 390 || !actual.hasTouchDrag || !actual.settingsVisible || !actual.resultsVisible || !actual.homeVisible || !actual.discoveryPlanned || !actual.switchedToGame || actual.schedule !== "08:00-17:00") {
   throw new Error(`Mobile UI check failed: ${JSON.stringify(actual)}`);
 }
 console.log(`Kodekichi mobile UI PASS: ${JSON.stringify(actual)}`);

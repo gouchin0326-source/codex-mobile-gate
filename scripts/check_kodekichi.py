@@ -13,7 +13,7 @@ def main():
         "holidays.json", "free-info.json", "today.json", "weather-info.json",
         "cg-kodekichi-v2-1", 'localStorage.removeItem(OLD)', 'localStorage.removeItem("cg-kodekichi-v2")', "learningDays",
         "aria-live", "min-height:44px", "prefers-reduced-motion", "推測では補いません",
-        "CODEKICHI /", "品質門", "setTimeout(()=>runMission()",
+        "CODEKICHI /", "品質門", "advanceGardenPlan()",
         "開発時間を指示する", 'id="job-minutes"', 'min="1" max="480"',
         "startJob", "tickJob", "finishRequested", "今すぐ納品",
         "納品書庫", "finalizeJob", "state.archives", "deliveryNote",
@@ -31,7 +31,7 @@ def main():
         "コデ吉、干場をびっくりさせて！", "びっくり作品を作る",
         "こんなの作ったよ！", "generateSurprise", 'bridgeFetch("/surprise"',
         "Geminiびっくり企画", "Claude領域外", "renderLatest",
-        "コデ吉の星キャッチゲーム画面", "星キャッチで遊ぶ", "gameLoop",
+        "コデ吉の庭。指で上下左右へ動かせます", 'special:"star"', "gameLoop",
         "ArrowLeft", "gameLab", "syncGameKnowledge", "ゲーム星の発明王",
         "ゲームアプリ", "直接プレイ / HTML", "遊びから学習",
         "その場で遊べるミニゲームです",
@@ -46,6 +46,10 @@ def main():
         "generation_focus", "pet_palette", "pet_expression", "aura_style",
         "mobile-dock", 'data-mobile-view="settings"', 'data-mobile-view="results"',
         "gameObjectsTouch", 'addEventListener("pointermove"',
+        "庭アプリ開発計画", 'value="08:00"', 'value="17:00"',
+        "計画書 → 試作 → テスト → 庭へ配置", "gardenPlanMarkdown",
+        "GARDEN_APPS", "moveGardenTo", "activateGardenSite", "gardenCore",
+        "1日の完成上限: 1ゲーム", "dailyCompletions",
     ]
     assert all(value in page for value in required)
     assert "api.openai.com" not in page and "Authorization" not in page
@@ -58,7 +62,7 @@ def main():
     assert '["タイマー","クイズ"].includes(item.recipe)' in page
     for index in (root / "index.html", root / "latest" / "index.html"):
         assert "kodekichi/index.html" in index.read_text(encoding="utf-8")
-    print("Kodekichi v3 checks passed: autonomous Gemini evolution, validated app upgrades, rollback, playable games, quality archive")
+    print("Kodekichi v4 checks passed: garden discovery, scheduled plans, validated game planting, autonomous evolution")
 
 
 if __name__ == "__main__":
