@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-09T12:58:00.623886+00:00",
+  "updatedAt": "2026-09-09T13:08:04.483505+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -26,8 +26,8 @@
       "genre": "技術",
       "count": 2,
       "decision": "必要時だけ確認",
-      "signal": "How to build a f**king printer / Rust: When Empty Isn't Bottom",
-      "topUrl": "https://nishantjosh.dev/blogs/how-to-build-a-fking-printer/",
+      "signal": "Solaris Turnstiles / How to build a f**king printer",
+      "topUrl": "https://rdmsr.github.io/writing/turnstiles/",
       "score": 1
     }
   ],
@@ -454,6 +454,22 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Solaris Turnstiles",
+      "summary": "Comments",
+      "url": "https://rdmsr.github.io/writing/turnstiles/",
+      "published": "2026-09-09T08:14:25+00:00",
+      "score": 1,
+      "tags": [
+        "技術"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -484,24 +500,8 @@
       "tags": [
         "技術"
       ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Rust: When Empty Isn't Bottom",
-      "summary": "Comments",
-      "url": "https://ettolrach.com/blog/rust_when_empty_isnt_bottom.html",
-      "published": "2026-09-08T21:23:18+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
-      ]
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-09T06:58:01.928406+00:00"
+  "lastSuccessAt": "2026-09-09T13:08:04.483505+00:00"
 }
