@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-09T06:48:02.449733+00:00",
+  "updatedAt": "2026-09-09T06:58:01.928406+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -26,7 +26,7 @@
       "genre": "技術",
       "count": 2,
       "decision": "必要時だけ確認",
-      "signal": "How to build a f**king printer / What makes $BigTechCompany's products bad, anyway?",
+      "signal": "How to build a f**king printer / Rust: When Empty Isn't Bottom",
       "topUrl": "https://nishantjosh.dev/blogs/how-to-build-a-fking-printer/",
       "score": 1
     }
@@ -251,23 +251,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "GitHub Actions: Early September 2026 updates",
-      "summary": "GitHub Actions now includes three updates that give you clearer visibility and finer-grained control over your workflows. New REST API for runner version deprecations A new REST API returns when… The post GitHub Actions:",
-      "url": "https://github.blog/changelog/2026-09-03-github-actions-early-september-2026-updates",
-      "published": "2026-09-03T20:30:53+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -471,6 +454,22 @@
       ]
     },
     {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Enterprise-managed sandbox in Copilot for JetBrains",
+      "summary": "This update brings support for enterprise-managed sandbox policies, cross-file cursor jumps for next edit suggestions, global project context in chat, enterprise policy diagnostics, and a new connection between terminal ",
+      "url": "https://github.blog/changelog/2026-09-08-enterprise-managed-sandbox-in-copilot-for-jetbrains",
+      "published": "2026-09-09T02:43:38+00:00",
+      "score": 1,
+      "tags": [
+        "開発"
+      ]
+    },
+    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
@@ -493,10 +492,10 @@
       "genre": "技術",
       "topic": "その他",
       "sourceWeight": 1,
-      "title": "What makes $BigTechCompany's products bad, anyway?",
+      "title": "Rust: When Empty Isn't Bottom",
       "summary": "Comments",
-      "url": "https://herecomesthemoon.net/2026/09/why-is-big-tech-bad/",
-      "published": "2026-09-08T21:05:31+00:00",
+      "url": "https://ettolrach.com/blog/rust_when_empty_isnt_bottom.html",
+      "published": "2026-09-08T21:23:18+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -504,5 +503,5 @@
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-09T04:48:02.300817+00:00"
+  "lastSuccessAt": "2026-09-09T06:58:01.928406+00:00"
 }
