@@ -52,6 +52,9 @@ def main():
         "完成数上限: なし（ただし1時間に1工程）", "外部API必須",
         'id="plan-auto"', "ensureAutonomousPlan", "コデ吉の自律工程",
         'bridgeFetch("/generate"', "外部API設計なし", 'lane:"codex-kodekichi-garden"',
+        "コデ吉とコデ美 v5", 'id="character-switch"', "🎵 コデ美へ", "🎮 コデ吉へ",
+        'data-mode="room"', "ROOM_STATIONS", "renderRoom", "switchCharacter",
+        'bridgeFetch("/music"', 'lane:"codex-kodemi"', "Lyria 3で作曲", "room-audio",
     ]
     assert all(value in page for value in required)
     assert "api.openai.com" not in page and "Authorization" not in page
@@ -61,14 +64,14 @@ def main():
     assert 'q("#custom").onclick=()=>runMission' not in page
     assert 'setInterval(()=>{tickJob()' not in page
     bridge = (root.parent / "tools" / "kodekichi_ai_bridge.py").read_text(encoding="utf-8")
-    assert all(value in bridge for value in ("gemini_text", "openai_text", "claudeOverlap", "codex-kodekichi", "parse_blueprint", "parse_surprises", '"/surprise"', "LOCK.acquire", '"gemini", "openai"', '"/evolve"', "validate_evolution", "parse_evolution", "EVOLUTION_SPECS", "EVOLUTION_SYSTEM_PROMPT", "EVOLUTION_TARGETS", "system_instruction"))
+    assert all(value in bridge for value in ("gemini_text", "openai_text", "claudeOverlap", "codex-kodekichi", "codex-kodemi", "parse_blueprint", "parse_surprises", '"/surprise"', '"/music"', "lyria_music", "lyria-3-clip-preview", "LOCK.acquire", '"gemini", "openai"', '"/evolve"', "validate_evolution", "parse_evolution", "EVOLUTION_SPECS", "EVOLUTION_SYSTEM_PROMPT", "EVOLUTION_TARGETS", "system_instruction"))
     assert "GEMINI_API_KEY" not in page and "GOOGLE_API_KEY" not in page
     assert sum(page.count(f'"{name}"') for name in ("image", "music", "app", "research")) >= 8
     assert "days:3,skills:8" in page and "days:30,skills:24" in page
     assert '["タイマー","クイズ"].includes(item.recipe)' in page
     for index in (root / "index.html", root / "latest" / "index.html"):
         assert "kodekichi/index.html" in index.read_text(encoding="utf-8")
-    print("Kodekichi v4 checks passed: external-API plans, unlimited scheduled builds, validated game planting, autonomous evolution")
+    print("Kodekichi v5 checks passed: one-button character switch, game garden, Lyria music room, external-API plans")
 
 
 if __name__ == "__main__":

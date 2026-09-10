@@ -33,6 +33,7 @@ await call("Page.reload", { ignoreCache: true });
 await new Promise(resolve => setTimeout(resolve, 900));
 const result = await call("Runtime.evaluate", {
   expression: `(() => {
+    if (document.body.dataset.character === 'kodemi') document.querySelector('#character-switch').click();
     const pet = document.querySelector("#game-pet").getBoundingClientRect();
     const nav = document.querySelector(".mobile-dock").getBoundingClientRect();
     document.querySelector('[data-mobile-view="settings"]').click();
@@ -47,6 +48,10 @@ const result = await call("Runtime.evaluate", {
     document.querySelectorAll('.garden-site')[0].click();
     document.querySelector('#game-start').click();
     const switchedToGame = document.querySelector('#game-arena').dataset.mode === 'minigame' && document.querySelector('#game-star').classList.contains('on');
+    document.querySelector('#character-switch').click();
+    const switchedToKodemi = document.body.dataset.character === 'kodemi' && document.querySelector('#game-arena').dataset.mode === 'room' && document.querySelectorAll('.garden-site').length === 3;
+    document.querySelector('#character-switch').click();
+    const switchedBackToKodekichi = document.body.dataset.character === 'kodekichi' && document.querySelector('#game-arena').dataset.mode === 'garden';
     return {
       innerWidth,
       scrollWidth: document.documentElement.scrollWidth,
@@ -60,6 +65,8 @@ const result = await call("Runtime.evaluate", {
       homeVisible,
       discoveryRegistered,
       switchedToGame,
+      switchedToKodemi,
+      switchedBackToKodekichi,
       schedule: gardenState.schedule.start + '-' + gardenState.schedule.end
     };
   })()`,
@@ -71,7 +78,7 @@ const screenshot = await call("Page.captureScreenshot", { format: "png", capture
 await import("node:fs").then(fs => fs.writeFileSync(output, Buffer.from(screenshot.result.data, "base64")));
 socket.close();
 const actual = result.result.result.value;
-if (actual.innerWidth !== 390 || actual.scrollWidth > 390 || actual.navItems !== 3 || !actual.navVisible || actual.petWidth >= 100 || Math.round(actual.navRight) !== 390 || !actual.hasTouchDrag || !actual.settingsVisible || !actual.resultsVisible || !actual.homeVisible || !actual.discoveryRegistered || !actual.switchedToGame || actual.schedule !== "08:00-22:00") {
+if (actual.innerWidth !== 390 || actual.scrollWidth > 390 || actual.navItems !== 3 || !actual.navVisible || actual.petWidth >= 100 || Math.round(actual.navRight) !== 390 || !actual.hasTouchDrag || !actual.settingsVisible || !actual.resultsVisible || !actual.homeVisible || !actual.discoveryRegistered || !actual.switchedToGame || !actual.switchedToKodemi || !actual.switchedBackToKodekichi || actual.schedule !== "08:00-22:00") {
   throw new Error(`Mobile UI check failed: ${JSON.stringify(actual)}`);
 }
 console.log(`Kodekichi mobile UI PASS: ${JSON.stringify(actual)}`);
