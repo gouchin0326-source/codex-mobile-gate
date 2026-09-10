@@ -71,7 +71,7 @@ const screenshot = await call("Page.captureScreenshot", { format: "png", capture
 await import("node:fs").then(fs => fs.writeFileSync(output, Buffer.from(screenshot.result.data, "base64")));
 socket.close();
 const actual = result.result.result.value;
-if (actual.innerWidth !== 390 || actual.scrollWidth > 390 || actual.navItems !== 3 || !actual.navVisible || actual.petWidth >= 100 || Math.round(actual.navRight) !== 390 || !actual.hasTouchDrag || !actual.settingsVisible || !actual.resultsVisible || !actual.homeVisible || !actual.discoveryPlanned || !actual.switchedToGame || actual.schedule !== "08:00-17:00") {
+if (actual.innerWidth !== 390 || actual.scrollWidth > 390 || actual.navItems !== 3 || !actual.navVisible || actual.petWidth >= 100 || Math.round(actual.navRight) !== 390 || !actual.hasTouchDrag || !actual.settingsVisible || !actual.resultsVisible || !actual.homeVisible || !actual.discoveryPlanned || !actual.switchedToGame || actual.schedule !== "08:00-22:00") {
   throw new Error(`Mobile UI check failed: ${JSON.stringify(actual)}`);
 }
 console.log(`Kodekichi mobile UI PASS: ${JSON.stringify(actual)}`);

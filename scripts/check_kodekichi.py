@@ -46,10 +46,11 @@ def main():
         "generation_focus", "pet_palette", "pet_expression", "aura_style",
         "mobile-dock", 'data-mobile-view="settings"', 'data-mobile-view="results"',
         "gameObjectsTouch", 'addEventListener("pointermove"',
-        "庭アプリ開発計画", 'value="08:00"', 'value="17:00"',
+        "庭アプリ開発計画", 'value="08:00"', 'value="22:00"',
         "計画書 → 試作 → テスト → 庭へ配置", "gardenPlanMarkdown",
         "GARDEN_APPS", "moveGardenTo", "activateGardenSite", "gardenCore",
         "1日の完成上限: 1ゲーム", "dailyCompletions",
+        'id="plan-auto"', "ensureAutonomousPlan", "コデ吉の自律工程",
     ]
     assert all(value in page for value in required)
     assert "api.openai.com" not in page and "Authorization" not in page
