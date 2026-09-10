@@ -43,7 +43,7 @@ const result = await call("Runtime.evaluate", {
     const homeVisible = getComputedStyle(document.querySelector('.hero')).display !== "none";
     document.querySelectorAll('.garden-site')[1].click();
     const gardenState = JSON.parse(localStorage.getItem('cg-kodekichi-v2-1')).garden;
-    const discoveryPlanned = gardenState.discovered.includes('flower-maze') && gardenState.plans.some(plan => plan.siteId === 'flower-maze' && plan.stage === 0);
+    const discoveryRegistered = gardenState.discovered.includes('flower-maze');
     document.querySelectorAll('.garden-site')[0].click();
     document.querySelector('#game-start').click();
     const switchedToGame = document.querySelector('#game-arena').dataset.mode === 'minigame' && document.querySelector('#game-star').classList.contains('on');
@@ -58,7 +58,7 @@ const result = await call("Runtime.evaluate", {
       settingsVisible,
       resultsVisible,
       homeVisible,
-      discoveryPlanned,
+      discoveryRegistered,
       switchedToGame,
       schedule: gardenState.schedule.start + '-' + gardenState.schedule.end
     };
@@ -71,7 +71,7 @@ const screenshot = await call("Page.captureScreenshot", { format: "png", capture
 await import("node:fs").then(fs => fs.writeFileSync(output, Buffer.from(screenshot.result.data, "base64")));
 socket.close();
 const actual = result.result.result.value;
-if (actual.innerWidth !== 390 || actual.scrollWidth > 390 || actual.navItems !== 3 || !actual.navVisible || actual.petWidth >= 100 || Math.round(actual.navRight) !== 390 || !actual.hasTouchDrag || !actual.settingsVisible || !actual.resultsVisible || !actual.homeVisible || !actual.discoveryPlanned || !actual.switchedToGame || actual.schedule !== "08:00-22:00") {
+if (actual.innerWidth !== 390 || actual.scrollWidth > 390 || actual.navItems !== 3 || !actual.navVisible || actual.petWidth >= 100 || Math.round(actual.navRight) !== 390 || !actual.hasTouchDrag || !actual.settingsVisible || !actual.resultsVisible || !actual.homeVisible || !actual.discoveryRegistered || !actual.switchedToGame || actual.schedule !== "08:00-22:00") {
   throw new Error(`Mobile UI check failed: ${JSON.stringify(actual)}`);
 }
 console.log(`Kodekichi mobile UI PASS: ${JSON.stringify(actual)}`);

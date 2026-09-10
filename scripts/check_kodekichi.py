@@ -5,7 +5,7 @@ def main():
     root = Path(__file__).resolve().parents[1]
     page = (root / "latest" / "kodekichi" / "index.html").read_text(encoding="utf-8")
     required = [
-        "コデ吉", "第1形態 めばえ", "自由制作をもう一巡", "成果の棚",
+        "コデ吉", "第1形態 めばえ", "自律開発の計画を見る", "成果の棚",
         "星空", "庭園", "都市", "ポスター", "モザイク", "ピクセル",
         "冒険", "子守歌", "祭り", "宇宙", "雨音", "不思議",
         "習慣", "カウンター", "タイマー", "メモ", "カンバン", "クイズ",
@@ -18,7 +18,7 @@ def main():
         "startJob", "tickJob", "finishRequested", "今すぐ納品",
         "納品書庫", "finalizeJob", "state.archives", "deliveryNote",
         "成果物入り書庫JSON", "data-url", "全品質門PASS",
-        "外部AI 0回・Claude重複なし", "外部AI安全策", 'mode:"local-only"',
+        "外部AI 0回・Claude重複なし", "外部AI安全策", 'mode:"external-api-only"',
         "リクエストエラーの結果は納品へ入れません", "claudeOverlap",
         "納品停止 外部AIエラーまたはClaude重複",
         "外部AIと作品を作る", "127.0.0.1:8766",
@@ -49,12 +49,17 @@ def main():
         "庭アプリ開発計画", 'value="08:00"', 'value="22:00"',
         "計画書 → 試作 → テスト → 庭へ配置", "gardenPlanMarkdown",
         "GARDEN_APPS", "moveGardenTo", "activateGardenSite", "gardenCore",
-        "1日の完成上限: 1ゲーム", "dailyCompletions",
+        "完成数上限: なし（ただし1時間に1工程）", "外部API必須",
         'id="plan-auto"', "ensureAutonomousPlan", "コデ吉の自律工程",
+        'bridgeFetch("/generate"', "外部API設計なし", 'lane:"codex-kodekichi-garden"',
     ]
     assert all(value in page for value in required)
     assert "api.openai.com" not in page and "Authorization" not in page
     assert "state.externalAI.requests++" in page and "state.externalAI.errors++" in page
+    assert "dailyCompletions" not in page
+    assert 'q("#mission").onclick=()=>runMission()' not in page
+    assert 'q("#custom").onclick=()=>runMission' not in page
+    assert 'setInterval(()=>{tickJob()' not in page
     bridge = (root.parent / "tools" / "kodekichi_ai_bridge.py").read_text(encoding="utf-8")
     assert all(value in bridge for value in ("gemini_text", "openai_text", "claudeOverlap", "codex-kodekichi", "parse_blueprint", "parse_surprises", '"/surprise"', "LOCK.acquire", '"gemini", "openai"', '"/evolve"', "validate_evolution", "parse_evolution", "EVOLUTION_SPECS", "EVOLUTION_SYSTEM_PROMPT", "EVOLUTION_TARGETS", "system_instruction"))
     assert "GEMINI_API_KEY" not in page and "GOOGLE_API_KEY" not in page
@@ -63,7 +68,7 @@ def main():
     assert '["タイマー","クイズ"].includes(item.recipe)' in page
     for index in (root / "index.html", root / "latest" / "index.html"):
         assert "kodekichi/index.html" in index.read_text(encoding="utf-8")
-    print("Kodekichi v4 checks passed: garden discovery, scheduled plans, validated game planting, autonomous evolution")
+    print("Kodekichi v4 checks passed: external-API plans, unlimited scheduled builds, validated game planting, autonomous evolution")
 
 
 if __name__ == "__main__":
