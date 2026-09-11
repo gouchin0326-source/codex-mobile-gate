@@ -1,50 +1,79 @@
 {
-  "updatedAt": "2026-09-09T21:28:02.017109+00:00",
+  "updatedAt": "2026-09-11T02:13:32.846131+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "New customer portal help.github.com",
+  "topLine": "MAI-Code-1-Flash deprecated",
   "cards": [
     {
       "genre": "開発",
       "count": 15,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "New customer portal help.github.com / GitHub Copilot weekly releases — August 31 / Project HydraFusion: Frontier quality via multi-model orchestration",
-      "topUrl": "https://github.blog/changelog/2026-09-08-new-customer-portal-help-github-com",
+      "signal": "MAI-Code-1-Flash deprecated / Xcode 27 runner image now runs on macOS 27 / Project HydraFusion: Frontier quality via multi-model orchestration",
+      "topUrl": "https://github.blog/changelog/2026-09-10-mai-code-1-flash-deprecated",
       "score": 4
     },
     {
       "genre": "AI",
-      "count": 6,
+      "count": 4,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "OpenAI expands initiatives to support journalism from classrooms to newsrooms / 1Password increases engineering productivity 21% with Codex / Paul Christiano joins OpenAI Foundation Board",
-      "topUrl": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms",
-      "score": 3
+      "signal": "GPT-6 Astra: The next generation in intelligence for work / Introducing the Agents API / Build more natural voice experiences with GPT‑Live‑1 in the API",
+      "topUrl": "https://openai.com/index/gpt-6-astra-next-generation-work",
+      "score": 4
+    },
+    {
+      "genre": "論文",
+      "count": 4,
+      "decision": "必要時だけ確認",
+      "signal": "Compiling VGDL into Causal Models / RAPID: Reliability-Aware Pair Importance Distillation / When Does Memory Help? A Cost-Aware Evaluation of Long-Term Memory in Tool-Using LLM Agents",
+      "topUrl": "https://arxiv.org/abs/2609.05459",
+      "score": 4
     },
     {
       "genre": "技術",
-      "count": 3,
+      "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "I Don’t Want to Interact With Stochastic Parrots / Apple Event for September 9th, 2026 / The purpose of DNS is to spread scams",
-      "topUrl": "https://ploum.net/2026-09-09-ai_policy.html",
-      "score": 1
+      "signal": "Forgejo 16.0.4 has a critical security bug fix (RCE - Remote Code Execution)",
+      "topUrl": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md",
+      "score": 2
     }
   ],
   "focus": [
     {
       "label": "開発",
-      "title": "New customer portal help.github.com",
+      "title": "MAI-Code-1-Flash deprecated",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-08-new-customer-portal-help-github-com"
+      "url": "https://github.blog/changelog/2026-09-10-mai-code-1-flash-deprecated"
     },
     {
       "label": "開発",
-      "title": "GitHub Copilot weekly releases — August 31",
+      "title": "Xcode 27 runner image now runs on macOS 27",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-04-github-copilot-weekly-releases-august-31"
+      "url": "https://github.blog/changelog/2026-09-10-xcode-27-runner-image-now-runs-on-macos-27"
+    },
+    {
+      "label": "論文",
+      "title": "Compiling VGDL into Causal Models",
+      "why": "Codex/AI開発判断に関係",
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2609.05459"
+    },
+    {
+      "label": "論文",
+      "title": "RAPID: Reliability-Aware Pair Importance Distillation",
+      "why": "Codex/AI開発判断に関係",
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2609.05481"
+    },
+    {
+      "label": "AI",
+      "title": "GPT-6 Astra: The next generation in intelligence for work",
+      "why": "Codex/AI開発判断に関係",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/gpt-6-astra-next-generation-work"
     },
     {
       "label": "開発",
@@ -55,38 +84,17 @@
     },
     {
       "label": "開発",
-      "title": "GitHub Advanced Security expands trial availability",
+      "title": "GitHub Copilot app for Beginners: Using the diff, terminal, and browser",
       "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-09-github-advanced-security-expands-trial-availability"
+      "source": "GitHub",
+      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-using-the-diff-terminal-and-browser/"
     },
     {
       "label": "開発",
-      "title": "GitHub Enterprise Server 3.22 is now generally available",
+      "title": "Refreshed repository pull requests page in public preview",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-08-github-enterprise-server-3-22-is-now-generally-available"
-    },
-    {
-      "label": "開発",
-      "title": "Automatic Dependabot access to GitHub-hosted registries",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-08-automatic-dependabot-access-to-github-hosted-registries"
-    },
-    {
-      "label": "AI",
-      "title": "OpenAI expands initiatives to support journalism from classrooms to newsrooms",
-      "why": "Codex/AI開発判断に関係",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms"
-    },
-    {
-      "label": "AI",
-      "title": "1Password increases engineering productivity 21% with Codex",
-      "why": "Codex/AI開発判断に関係",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/1password"
+      "url": "https://github.blog/changelog/2026-09-10-refreshed-repository-pull-requests-page-in-public-preview"
     }
   ],
   "items": [
@@ -95,12 +103,30 @@
       "platform": "開発",
       "label": "GitHub更新",
       "genre": "開発",
-      "topic": "技術",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "New customer portal help.github.com",
-      "summary": "The support portal has been redesigned and moved to a new home at help.github.com. It brings support, docs, learning, community, and account resources together in one place with Copilot-powered search… The post New custo",
-      "url": "https://github.blog/changelog/2026-09-08-new-customer-portal-help-github-com",
-      "published": "2026-09-08T18:00:10+00:00",
+      "title": "MAI-Code-1-Flash deprecated",
+      "summary": "We have deprecated MAI-Code-1-Flash across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) today, September 10, 2026. Model Deprecation date Suggested alte",
+      "url": "https://github.blog/changelog/2026-09-10-mai-code-1-flash-deprecated",
+      "published": "2026-09-10T16:54:01+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "Xcode 27 runner image now runs on macOS 27",
+      "summary": "You can now validate your Apple apps against macOS 27 using the Xcode 27 runner image for GitHub-hosted macOS runners, available in public preview. The image previously ran on macOS… The post Xcode 27 runner image now ru",
+      "url": "https://github.blog/changelog/2026-09-10-xcode-27-runner-image-now-runs-on-macos-27",
+      "published": "2026-09-10T15:15:36+00:00",
       "score": 4,
       "tags": [
         "開発",
@@ -109,20 +135,59 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "技術",
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "GitHub Copilot weekly releases — August 31",
-      "summary": "This week, GitHub Copilot expands model choice and content protections, while VS Code adds new ways to manage agent sessions and get pull requests merge-ready. GitHub Copilot, general Claude Fable… The post GitHub Copilo",
-      "url": "https://github.blog/changelog/2026-09-04-github-copilot-weekly-releases-august-31",
-      "published": "2026-09-04T21:05:01+00:00",
+      "title": "Compiling VGDL into Causal Models",
+      "summary": "arXiv:2609.05459v1 Announce Type: new Abstract: Reinforcement learning and large language models often struggle to accurately capture the causal mechanics of game environments. Standard reinforcement learning agents tend",
+      "url": "https://arxiv.org/abs/2609.05459",
+      "published": "2026-09-10T04:00:00+00:00",
       "score": 4,
       "tags": [
-        "開発",
+        "論文",
         "重要",
+        "制作",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "RAPID: Reliability-Aware Pair Importance Distillation",
+      "summary": "arXiv:2609.05481v1 Announce Type: new Abstract: Inter example relational distillation transfers a teacher's representation geometry by matching relations among examples within a mini batch. Computing all pairs has quadra",
+      "url": "https://arxiv.org/abs/2609.05481",
+      "published": "2026-09-10T04:00:00+00:00",
+      "score": 4,
+      "tags": [
+        "論文",
+        "重要",
+        "開発",
+        "研究"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "GPT-6 Astra: The next generation in intelligence for work",
+      "summary": "Meet GPT-6 Astra, OpenAI’s most capable model for business, with advanced reasoning, computer use, and stronger writing and design judgment.",
+      "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
+      "published": "2026-09-09T11:00:00+00:00",
+      "score": 4,
+      "tags": [
+        "AI",
+        "重要",
+        "制作",
         "研究"
       ]
     },
@@ -145,33 +210,16 @@
       ]
     },
     {
-      "source": "github-changelog",
+      "source": "github-blog",
       "platform": "開発",
-      "label": "GitHub更新",
+      "label": "GitHub",
       "genre": "開発",
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "GitHub Advanced Security expands trial availability",
-      "summary": "More GitHub Enterprise Cloud customers can now start a self-serve GitHub Advanced Security trial to evaluate GitHub Code Security and GitHub Secret Protection. Eligibility has expanded from enterprises with up… The post ",
-      "url": "https://github.blog/changelog/2026-09-09-github-advanced-security-expands-trial-availability",
-      "published": "2026-09-09T17:33:34+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "GitHub Enterprise Server 3.22 is now generally available",
-      "summary": "GitHub Enterprise Server (GHES) 3.22 is now available and introduces new capabilities across the platform. Here are a few highlights in the 3.22 release: Administrators can configure Copilot CLI to… The post GitHub Enter",
-      "url": "https://github.blog/changelog/2026-09-08-github-enterprise-server-3-22-is-now-generally-available",
-      "published": "2026-09-08T21:52:42+00:00",
+      "title": "GitHub Copilot app for Beginners: Using the diff, terminal, and browser",
+      "summary": "Checking agent-generated code usually means hopping between tabs. Learn how to view diffs, run terminal commands, and preview web apps side by side in the GitHub Copilot app. The post GitHub Copilot app for Beginners: Us",
+      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-using-the-diff-terminal-and-browser/",
+      "published": "2026-09-10T21:31:19+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -185,10 +233,10 @@
       "genre": "開発",
       "topic": "技術",
       "sourceWeight": 1,
-      "title": "Automatic Dependabot access to GitHub-hosted registries",
-      "summary": "Dependabot can now read from private GitHub Packages registries without a personal access token. If a package has granted your repository access through “Manage Actions access” in the package settings,… The post Automati",
-      "url": "https://github.blog/changelog/2026-09-08-automatic-dependabot-access-to-github-hosted-registries",
-      "published": "2026-09-08T16:46:05+00:00",
+      "title": "Refreshed repository pull requests page in public preview",
+      "summary": "A refreshed repository-level pull request listing page is now in public preview for all GitHub users. It brings powerful filtering, compact presentation mode, and more. Highlights The new page makes… The post Refreshed r",
+      "url": "https://github.blog/changelog/2026-09-10-refreshed-repository-pull-requests-page-in-public-preview",
+      "published": "2026-09-10T21:27:17+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -196,39 +244,160 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "OpenAI expands initiatives to support journalism from classrooms to newsrooms",
-      "summary": "OpenAI is expanding support for journalism with tools, training, and partnerships for students, educators, journalists, and news organizations.",
-      "url": "https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms",
-      "published": "2026-09-08T00:00:00+00:00",
+      "title": "AI Scan for pull request APIs in public preview",
+      "summary": "You can now manage GitHub code scanning’s AI Scan for pull request enablement with REST API endpoints at the organization and repository levels. This public preview gives teams a programmatic… The post AI Scan for pull r",
+      "url": "https://github.blog/changelog/2026-09-10-ai-scan-for-pull-request-apis-in-public-preview",
+      "published": "2026-09-10T20:20:58+00:00",
       "score": 3,
       "tags": [
-        "AI",
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Control GitHub Actions cache access with cache-mode",
+      "summary": "You can now use cache-mode to apply least-privilege access to the GitHub Actions cache at the workflow or job level. By granting each workflow or job only the cache access… The post Control GitHub Actions cache access wi",
+      "url": "https://github.blog/changelog/2026-09-10-control-github-actions-cache-access-with-cache-mode",
+      "published": "2026-09-10T17:26:59+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "When Does Memory Help? A Cost-Aware Evaluation of Long-Term Memory in Tool-Using LLM Agents",
+      "summary": "arXiv:2609.05441v1 Announce Type: new Abstract: Long-term memory for LLM agents is evaluated today by conversational recall benchmarks (LoCoMo, LongMemEval), which measure question answering over dialogue history, not wh",
+      "url": "https://arxiv.org/abs/2609.05441",
+      "published": "2026-09-10T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
         "重要",
         "研究"
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "AutoFyn Technical Report: Non-Parametric Expert Iteration for Long-Horizon Agents",
+      "summary": "arXiv:2609.05446v1 Announce Type: new Abstract: We introduce AutoFyn, an agent harness inspired by the Expert Iteration algorithm, adapting a frozen model across many rounds by updating persistent state from verified rew",
+      "url": "https://arxiv.org/abs/2609.05446",
+      "published": "2026-09-10T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "GitHub availability report: August 2026",
+      "summary": "In August, we experienced five incidents that resulted in degraded performance across GitHub services. The post GitHub availability report: August 2026 appeared first on The GitHub Blog .",
+      "url": "https://github.blog/news-insights/company-news/github-availability-report-august-2026/",
+      "published": "2026-09-10T02:05:17+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "OpenAI",
       "genre": "AI",
-      "topic": "技術",
+      "topic": "開発",
       "sourceWeight": 1,
-      "title": "1Password increases engineering productivity 21% with Codex",
-      "summary": "Engineers at 1Password use Codex to rapidly build new features and internal tools, reaching production-readiness while maintaining rigorous security policies.",
-      "url": "https://openai.com/index/1password",
-      "published": "2026-09-08T00:00:00+00:00",
+      "title": "Introducing the Agents API",
+      "summary": "Build and launch cloud agents with the Agents API, a managed service powered by the Codex harness for orchestration, long-running sessions, and tool use.",
+      "url": "https://openai.com/index/introducing-the-agents-api",
+      "published": "2026-09-10T00:00:00+00:00",
       "score": 3,
       "tags": [
         "AI",
         "重要",
         "開発"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Build more natural voice experiences with GPT‑Live‑1 in the API",
+      "summary": "GPT‑Live‑1 brings natural, full-duplex voice conversations to the API, with stronger instruction following, custom voices, and telephony support.",
+      "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
+      "published": "2026-09-10T00:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "開発"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "npm extends recovery-code security holds to all accounts",
+      "summary": "npm now places a temporary 72-hour security hold on any account after a successful recovery-code sign-in, extending a protection that previously applied only to high-impact accounts. This change applies to… The post npm ",
+      "url": "https://github.blog/changelog/2026-09-09-npm-extends-recovery-code-security-holds-to-all-accounts",
+      "published": "2026-09-09T21:55:55+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Enterprise managed permissions for GitHub Copilot agent operations",
+      "summary": "If you administer GitHub Copilot Business or GitHub Copilot Enterprise, you can now centrally control which agent operations are blocked, require human approval, or can proceed without a prompt. Managed… The post Enterpr",
+      "url": "https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations",
+      "published": "2026-09-09T20:08:14+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -317,189 +486,40 @@
       ]
     },
     {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "How to evaluate LLMs before production",
-      "summary": "These are the lessons we learned evaluating LLMs for real-world secret scanning. The post How to evaluate LLMs before production appeared first on The GitHub Blog .",
-      "url": "https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/",
-      "published": "2026-08-25T21:35:11+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Your alt text passes automated checks. That doesn’t mean it’s any good.",
-      "summary": "We built a plugin for the GitHub Accessibility Scanner to make sure your alt text is actually accessible. Here's how it works. The post Your alt text passes automated checks. That doesn’t mean it’s any good. appeared fir",
-      "url": "https://github.blog/engineering/user-experience/your-alt-text-passes-automated-checks-that-doesnt-mean-its-any-good/",
-      "published": "2026-08-24T20:56:32+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Paul Christiano joins OpenAI Foundation Board",
-      "summary": "Paul Christiano joins the OpenAI Foundation Board and its Safety and Security Committee, bringing experience in AI alignment, safety, and standards.",
-      "url": "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
-      "published": "2026-09-09T17:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Remediate Code Quality findings with agentic autofix",
-      "summary": "Agentic autofix is now available to help you burn down findings in your code quality backlog. You can select up to 25 standard findings on a page and assign the… The post Remediate Code Quality findings with agentic auto",
-      "url": "https://github.blog/changelog/2026-09-09-remediate-code-quality-findings-with-agentic-autofix",
-      "published": "2026-09-09T12:21:01+00:00",
-      "score": 2,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "How GPT-5.6 Sol helps run quantum computing experiments",
-      "summary": "See how an MIT researcher uses GPT-5.6 Sol with Codex to autonomously run quantum computing experiments, analyze results, and calibrate qubits.",
-      "url": "https://openai.com/index/codex-quantum-computing-experiments",
-      "published": "2026-09-08T17:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Introducing ChatGPT Images 2.5",
-      "summary": "ChatGPT Images 2.5 helps turn your ideas, sketches, and reference photos into more personalized, polished images that better reflect your ideas.",
-      "url": "https://openai.com/index/introducing-chatgpt-images-2-5",
-      "published": "2026-09-08T11:30:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "制作"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Funding grants for new research into AI and teen development",
-      "summary": "Apply now for OpenAI’s $5 million grant program supporting independent research on how generative AI affects teen development, well-being, and safety.",
-      "url": "https://openai.com/index/teen-development-research-grants",
-      "published": "2026-09-08T09:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
       "topic": "技術",
       "sourceWeight": 1,
-      "title": "I Don’t Want to Interact With Stochastic Parrots",
+      "title": "Forgejo 16.0.4 has a critical security bug fix (RCE - Remote Code Execution)",
       "summary": "Comments",
-      "url": "https://ploum.net/2026-09-09-ai_policy.html",
-      "published": "2026-09-09T17:18:32+00:00",
-      "score": 1,
+      "url": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md",
+      "published": "2026-09-10T17:40:19+00:00",
+      "score": 2,
       "tags": [
-        "技術"
+        "技術",
+        "重要"
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "技術",
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Block pull requests with exposed secrets from merging",
-      "summary": "Repository rulesets allow you to easily add scalable protections across your repositories. Starting today, you can use repository rulesets to block pull requests from merging when the pull request introduces… The post Bl",
-      "url": "https://github.blog/changelog/2026-09-09-block-pull-requests-with-exposed-secrets-from-merging",
-      "published": "2026-09-09T17:14:02+00:00",
-      "score": 1,
+      "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
+      "summary": "César de la Fuente’s lab uses Codex and ChatGPT to search living and extinct genomes for antimicrobial candidates to fight drug-resistant infections.",
+      "url": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
+      "published": "2026-09-10T16:00:00+00:00",
+      "score": 2,
       "tags": [
-        "開発"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Apple Event for September 9th, 2026",
-      "summary": "Out with the Tim, in with the John. Who knows if they'll fold? Comments",
-      "url": "https://www.apple.com/apple-events/event-stream/",
-      "published": "2026-09-09T16:54:31+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "The purpose of DNS is to spread scams",
-      "summary": "Comments",
-      "url": "https://shkspr.mobi/blog/2026/09/the-purpose-of-dns-is-to-spread-scams/",
-      "published": "2026-09-09T13:32:22+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
+        "AI",
+        "重要"
       ]
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-09T19:28:01.885556+00:00"
+  "lastSuccessAt": "2026-09-11T02:13:32.846131+00:00"
 }
