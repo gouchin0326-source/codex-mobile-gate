@@ -1,6 +1,6 @@
 # CODEXGATE News Brief
 
-- 更新: 2026-09-11T08:08:01.934023+00:00
+- 更新: 2026-09-11T08:18:01.829217+00:00
 - 取得: GitHub Actions/Python
 - Codex: 0%想定（自動実行時）
 - 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。
@@ -9,4 +9,4 @@
 - [論文] 更新あり。必要時だけ確認 / Compiling VGDL into Causal Models / RAPID: Reliability-Aware Pair Impo
 - [AI] AI/Codex運用の変化を確認 / GPT-6 Astra: The next generation in intelligence for work / Introducin
 - [技術] 更新あり。必要時だけ確認 / Forgejo 16.0.4 has a critical security bug fix (RCE - Remote Code Exec
-- [災害] 更新あり。必要時だけ確認 / M 1.0 - 8 km SW of Corona, CA
+- [災害] 更新あり。必要時だけ確認 / M 1.5 - 6 km SSW of Ojai, CA
