@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-11T07:38:01.827504+00:00",
-  "lastSuccessAt": "2026-09-11T07:38:01.827504+00:00",
+  "updatedAt": "2026-09-11T07:48:01.675627+00:00",
+  "lastSuccessAt": "2026-09-11T07:48:01.675627+00:00",
   "status": "fresh",
   "mode": "primary-api-weather-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -185,27 +185,18 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "location": "富山県",
-      "updatedAt": "2026-09-11T07:08:03.238162+00:00",
+      "updatedAt": "2026-09-11T07:48:01.675627+00:00",
       "current": {
-        "time": "2026-09-11T16:00",
+        "time": "2026-09-11T16:45",
         "interval": 900,
-        "temperature_2m": 23.8,
-        "relative_humidity_2m": 79,
+        "temperature_2m": 23.6,
+        "relative_humidity_2m": 80,
         "apparent_temperature": 26.9,
         "precipitation": 0.0,
         "weather_code": 3,
-        "wind_speed_10m": 4.6
+        "wind_speed_10m": 3.1
       },
       "hourly": [
-        {
-          "time": "2026-09-11T16:00",
-          "temp": 23.8,
-          "humidity": 79,
-          "feelsLike": 26.9,
-          "rainProb": 11,
-          "rain": 0.0,
-          "wind": 4.6
-        },
         {
           "time": "2026-09-11T17:00",
           "temp": 23.5,
@@ -412,6 +403,15 @@
           "rainProb": 0,
           "rain": 0.0,
           "wind": 11.8
+        },
+        {
+          "time": "2026-09-12T16:00",
+          "temp": 25.6,
+          "humidity": 68,
+          "feelsLike": 27.5,
+          "rainProb": 0,
+          "rain": 0.0,
+          "wind": 10.6
         }
       ],
       "daily": [
@@ -489,8 +489,8 @@
     {
       "id": "open-meteo-toyama",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-11T07:08:03.238162+00:00",
-      "lastAttemptAt": "2026-09-11T07:08:03.238162+00:00",
+      "lastSuccessAt": "2026-09-11T07:48:01.675627+00:00",
+      "lastAttemptAt": "2026-09-11T07:48:01.675627+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
