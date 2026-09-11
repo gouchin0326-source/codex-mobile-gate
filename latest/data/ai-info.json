@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-11T14:08:01.390302+00:00",
+  "updatedAt": "2026-09-11T14:18:01.932843+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -15,14 +15,6 @@
       "score": 4
     },
     {
-      "genre": "AI",
-      "count": 4,
-      "decision": "AI/Codex運用の変化を確認",
-      "signal": "GPT-6 Astra: The next generation in intelligence for work / Introducing the Agents API / Build more natural voice experiences with GPT‑Live‑1 in the API",
-      "topUrl": "https://openai.com/index/gpt-6-astra-next-generation-work",
-      "score": 4
-    },
-    {
       "genre": "論文",
       "count": 4,
       "decision": "必要時だけ確認",
@@ -31,11 +23,19 @@
       "score": 4
     },
     {
+      "genre": "AI",
+      "count": 3,
+      "decision": "AI/Codex運用の変化を確認",
+      "signal": "GPT-6 Astra: The next generation in intelligence for work / Build more natural voice experiences with GPT‑Live‑1 in the API / Introducing the Agents API",
+      "topUrl": "https://openai.com/index/gpt-6-astra-next-generation-work",
+      "score": 4
+    },
+    {
       "genre": "技術",
-      "count": 1,
+      "count": 2,
       "decision": "必要時だけ確認",
-      "signal": "Forgejo 16.0.4 has a critical security bug fix (RCE - Remote Code Execution)",
-      "topUrl": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md",
+      "signal": "Models Don't Go Rogue / Forgejo 16.0.4 has a critical security bug fix (RCE - Remote Code Execution)",
+      "topUrl": "https://mail.cyberneticforests.com/models-dont-go-rogue/",
       "score": 2
     }
   ],
@@ -335,11 +335,11 @@
       "platform": "AI",
       "label": "OpenAI",
       "genre": "AI",
-      "topic": "開発",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Introducing the Agents API",
-      "summary": "Build and launch cloud agents with the Agents API, a managed service powered by the Codex harness for orchestration, long-running sessions, and tool use.",
-      "url": "https://openai.com/index/introducing-the-agents-api",
+      "title": "Build more natural voice experiences with GPT‑Live‑1 in the API",
+      "summary": "GPT‑Live‑1 brings natural, full-duplex voice conversations to the API, with stronger instruction following, custom voices, and telephony support.",
+      "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
       "published": "2026-09-10T00:00:00+00:00",
       "score": 3,
       "tags": [
@@ -353,11 +353,11 @@
       "platform": "AI",
       "label": "OpenAI",
       "genre": "AI",
-      "topic": "AI",
+      "topic": "開発",
       "sourceWeight": 1,
-      "title": "Build more natural voice experiences with GPT‑Live‑1 in the API",
-      "summary": "GPT‑Live‑1 brings natural, full-duplex voice conversations to the API, with stronger instruction following, custom voices, and telephony support.",
-      "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
+      "title": "Introducing the Agents API",
+      "summary": "Build and launch cloud agents with the Agents API, a managed service powered by the Codex harness for orchestration, long-running sessions, and tool use.",
+      "url": "https://openai.com/index/introducing-the-agents-api",
       "published": "2026-09-10T00:00:00+00:00",
       "score": 3,
       "tags": [
@@ -490,6 +490,23 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Models Don't Go Rogue",
+      "summary": "Comments",
+      "url": "https://mail.cyberneticforests.com/models-dont-go-rogue/",
+      "published": "2026-09-11T03:37:10+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "研究"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
       "topic": "技術",
       "sourceWeight": 1,
       "title": "Forgejo 16.0.4 has a critical security bug fix (RCE - Remote Code Execution)",
@@ -501,25 +518,8 @@
         "技術",
         "重要"
       ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
-      "summary": "César de la Fuente’s lab uses Codex and ChatGPT to search living and extinct genomes for antimicrobial candidates to fight drug-resistant infections.",
-      "url": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
-      "published": "2026-09-10T16:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-11T08:18:01.829217+00:00"
+  "lastSuccessAt": "2026-09-11T14:18:01.932843+00:00"
 }

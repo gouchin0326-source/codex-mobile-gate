@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-11T14:08:01.390302+00:00",
-  "lastSuccessAt": "2026-09-11T08:18:01.829217+00:00",
+  "updatedAt": "2026-09-11T14:18:01.932843+00:00",
+  "lastSuccessAt": "2026-09-11T14:18:01.932843+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -115,35 +115,35 @@
       "score": 4
     },
     {
+      "genre": "AI",
+      "count": 7,
+      "signal": "GPT-6 Astra: The next generation in intelligence for work / Build more natural voice experiences with GPT‑Live‑1 in the API / Introducing the Agents API",
+      "decision": "AI/Codex運用の変化を確認",
+      "topUrl": "https://openai.com/index/gpt-6-astra-next-generation-work",
+      "score": 4
+    },
+    {
       "genre": "論文",
-      "count": 8,
+      "count": 7,
       "signal": "Compiling VGDL into Causal Models / RAPID: Reliability-Aware Pair Importance Distillation / When Does Memory Help? A Cost-Aware Evaluation of Long-Term Memory in Tool-Using LLM Age",
       "decision": "更新あり。必要時だけ確認",
       "topUrl": "https://arxiv.org/abs/2609.05459",
       "score": 4
     },
     {
-      "genre": "AI",
-      "count": 7,
-      "signal": "GPT-6 Astra: The next generation in intelligence for work / Introducing the Agents API / Build more natural voice experiences with GPT‑Live‑1 in the API",
-      "decision": "AI/Codex運用の変化を確認",
-      "topUrl": "https://openai.com/index/gpt-6-astra-next-generation-work",
-      "score": 4
-    },
-    {
       "genre": "技術",
-      "count": 1,
-      "signal": "Forgejo 16.0.4 has a critical security bug fix (RCE - Remote Code Execution)",
+      "count": 2,
+      "signal": "Models Don't Go Rogue / Forgejo 16.0.4 has a critical security bug fix (RCE - Remote Code Execution)",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md",
+      "topUrl": "https://mail.cyberneticforests.com/models-dont-go-rogue/",
       "score": 2
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.5 - 6 km SSW of Ojai, CA",
+      "signal": "M 1.0 - 7 km SW of Anza, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41544656",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41544760",
       "score": 1
     }
   ],
@@ -227,26 +227,26 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "技術",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Forgejo 16.0.4 has a critical security bug fix (RCE - Remote Code Execution)",
+      "title": "Models Don't Go Rogue",
       "summary": "Comments",
-      "url": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md",
-      "published": "2026-09-10T17:40:19+00:00",
+      "url": "https://mail.cyberneticforests.com/models-dont-go-rogue/",
+      "published": "2026-09-11T03:37:10+00:00",
       "score": 2,
       "tags": [
         "技術",
-        "重要"
+        "研究"
       ]
     },
     {
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.5 - 6 km SSW of Ojai, CA",
-      "summary": "6 km SSW of Ojai, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41544656",
-      "published": "2026-09-11T08:09:09.240000+00:00",
+      "title": "M 1.0 - 7 km SW of Anza, CA",
+      "summary": "7 km SW of Anza, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41544760",
+      "published": "2026-09-11T14:15:08.750000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -415,11 +415,11 @@
       "platform": "AI",
       "label": "OpenAI",
       "genre": "AI",
-      "topic": "開発",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Introducing the Agents API",
-      "summary": "Build and launch cloud agents with the Agents API, a managed service powered by the Codex harness for orchestration, long-running sessions, and tool use.",
-      "url": "https://openai.com/index/introducing-the-agents-api",
+      "title": "Build more natural voice experiences with GPT‑Live‑1 in the API",
+      "summary": "GPT‑Live‑1 brings natural, full-duplex voice conversations to the API, with stronger instruction following, custom voices, and telephony support.",
+      "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
       "published": "2026-09-10T00:00:00+00:00",
       "score": 3,
       "tags": [
@@ -433,11 +433,11 @@
       "platform": "AI",
       "label": "OpenAI",
       "genre": "AI",
-      "topic": "AI",
+      "topic": "開発",
       "sourceWeight": 1,
-      "title": "Build more natural voice experiences with GPT‑Live‑1 in the API",
-      "summary": "GPT‑Live‑1 brings natural, full-duplex voice conversations to the API, with stronger instruction following, custom voices, and telephony support.",
-      "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
+      "title": "Introducing the Agents API",
+      "summary": "Build and launch cloud agents with the Agents API, a managed service powered by the Codex harness for orchestration, long-running sessions, and tool use.",
+      "url": "https://openai.com/index/introducing-the-agents-api",
       "published": "2026-09-10T00:00:00+00:00",
       "score": 3,
       "tags": [
@@ -566,6 +566,23 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Forgejo 16.0.4 has a critical security bug fix (RCE - Remote Code Execution)",
+      "summary": "Comments",
+      "url": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md",
+      "published": "2026-09-10T17:40:19+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "重要"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "OpenAI",
@@ -683,55 +700,38 @@
         "論文",
         "研究"
       ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "ARC-Bench: Closed-Loop Replanning Masks Broken Action Ranking in Frozen JEPA World Models",
-      "summary": "arXiv:2609.05461v1 Announce Type: new Abstract: Reward-free latent world models plan by scoring candidate actions with distances in a frozen latent space: an action is preferred if its predicted future embedding lands cl",
-      "url": "https://arxiv.org/abs/2609.05461",
-      "published": "2026-09-10T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-11T08:18:01.829217+00:00",
-      "lastAttemptAt": "2026-09-11T08:18:01.829217+00:00",
+      "lastSuccessAt": "2026-09-11T14:18:01.932843+00:00",
+      "lastAttemptAt": "2026-09-11T14:18:01.932843+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-11T08:18:01.829217+00:00",
-      "lastAttemptAt": "2026-09-11T08:18:01.829217+00:00",
+      "lastSuccessAt": "2026-09-11T14:18:01.932843+00:00",
+      "lastAttemptAt": "2026-09-11T14:18:01.932843+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-11T08:18:01.829217+00:00",
-      "lastAttemptAt": "2026-09-11T08:18:01.829217+00:00",
+      "lastSuccessAt": "2026-09-11T14:18:01.932843+00:00",
+      "lastAttemptAt": "2026-09-11T14:18:01.932843+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-11T08:18:01.829217+00:00",
-      "lastAttemptAt": "2026-09-11T08:18:01.829217+00:00",
+      "lastSuccessAt": "2026-09-11T14:18:01.932843+00:00",
+      "lastAttemptAt": "2026-09-11T14:18:01.932843+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -746,8 +746,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-11T08:18:01.829217+00:00",
-      "lastAttemptAt": "2026-09-11T08:18:01.829217+00:00",
+      "lastSuccessAt": "2026-09-11T14:18:01.932843+00:00",
+      "lastAttemptAt": "2026-09-11T14:18:01.932843+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
