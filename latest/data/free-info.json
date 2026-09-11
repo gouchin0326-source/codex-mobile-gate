@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-11T15:18:01.675020+00:00",
-  "lastSuccessAt": "2026-09-11T14:18:01.932843+00:00",
+  "updatedAt": "2026-09-11T22:15:57.983570+00:00",
+  "lastSuccessAt": "2026-09-11T22:15:57.983570+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -109,18 +109,18 @@
     {
       "genre": "開発",
       "count": 15,
-      "signal": "MAI-Code-1-Flash deprecated / Xcode 27 runner image now runs on macOS 27 / Project HydraFusion: Frontier quality via multi-model orchestration",
+      "signal": "GitHub Copilot weekly releases — September 7 / MAI-Code-1-Flash deprecated / Xcode 27 runner image now runs on macOS 27",
       "decision": "CG開発・GitHub運用へ反映候補",
-      "topUrl": "https://github.blog/changelog/2026-09-10-mai-code-1-flash-deprecated",
+      "topUrl": "https://github.blog/changelog/2026-09-10-github-copilot-weekly-releases-september-7",
       "score": 4
     },
     {
       "genre": "AI",
       "count": 7,
-      "signal": "GPT-6 Astra: The next generation in intelligence for work / Build more natural voice experiences with GPT‑Live‑1 in the API / Introducing the Agents API",
+      "signal": "Rapidly scaling online storage to serve over 1 billion ChatGPT users / Build more natural voice experiences with GPT‑Live‑1 in the API / Introducing the Agents API",
       "decision": "AI/Codex運用の変化を確認",
-      "topUrl": "https://openai.com/index/gpt-6-astra-next-generation-work",
-      "score": 4
+      "topUrl": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
+      "score": 3
     },
     {
       "genre": "論文",
@@ -133,17 +133,17 @@
     {
       "genre": "技術",
       "count": 2,
-      "signal": "Models Don't Go Rogue / Forgejo 16.0.4 has a critical security bug fix (RCE - Remote Code Execution)",
+      "signal": "ChiPass Release 2026.09.0 / Models Don't Go Rogue",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://mail.cyberneticforests.com/models-dont-go-rogue/",
+      "topUrl": "https://codeberg.org/ChiPass/ChiPass/releases/tag/v2026.09.0",
       "score": 2
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.0 - 7 km SW of Anza, CA",
+      "signal": "M 0.8 - 8 km NW of The Geysers, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41544760",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75433917",
       "score": 1
     }
   ],
@@ -153,12 +153,12 @@
       "platform": "開発",
       "label": "GitHub更新",
       "genre": "開発",
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "MAI-Code-1-Flash deprecated",
-      "summary": "We have deprecated MAI-Code-1-Flash across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) today, September 10, 2026. Model Deprecation date Suggested alte",
-      "url": "https://github.blog/changelog/2026-09-10-mai-code-1-flash-deprecated",
-      "published": "2026-09-10T16:54:01+00:00",
+      "title": "GitHub Copilot weekly releases — September 7",
+      "summary": "This week, GitHub Copilot introduces Jira integration in Copilot app and adaptive model orchestration with Project HydraFusion in Copilot CLI. We also introduced new agent automation in Visual Studio Code… The post GitHu",
+      "url": "https://github.blog/changelog/2026-09-10-github-copilot-weekly-releases-september-7",
+      "published": "2026-09-10T22:55:07+00:00",
       "score": 4,
       "tags": [
         "開発",
@@ -186,25 +186,6 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "GPT-6 Astra: The next generation in intelligence for work",
-      "summary": "Meet GPT-6 Astra, OpenAI’s most capable model for business, with advanced reasoning, computer use, and stronger writing and design judgment.",
-      "url": "https://openai.com/index/gpt-6-astra-next-generation-work",
-      "published": "2026-09-09T11:00:00+00:00",
-      "score": 4,
-      "tags": [
-        "AI",
-        "重要",
-        "制作",
-        "研究"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -223,33 +204,69 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+      "summary": "Learn how OpenAI evolved Habitat from a Python library into a globally distributed storage platform serving 1 billion ChatGPT users and 22M requests per second.",
+      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
+      "published": "2026-09-11T10:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "開発"
+      ]
+    },
+    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "AI",
+      "topic": "ガジェット",
       "sourceWeight": 1,
-      "title": "Models Don't Go Rogue",
+      "title": "ChiPass Release 2026.09.0",
       "summary": "Comments",
-      "url": "https://mail.cyberneticforests.com/models-dont-go-rogue/",
-      "published": "2026-09-11T03:37:10+00:00",
+      "url": "https://codeberg.org/ChiPass/ChiPass/releases/tag/v2026.09.0",
+      "published": "2026-09-11T16:35:40+00:00",
       "score": 2,
       "tags": [
         "技術",
-        "研究"
+        "重要"
       ]
     },
     {
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.0 - 7 km SW of Anza, CA",
-      "summary": "7 km SW of Anza, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41544760",
-      "published": "2026-09-11T14:15:08.750000+00:00",
+      "title": "M 0.8 - 8 km NW of The Geysers, CA",
+      "summary": "8 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75433917",
+      "published": "2026-09-11T22:07:13.330000+00:00",
       "score": 1,
       "tags": [
         "災害"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "MAI-Code-1-Flash deprecated",
+      "summary": "We have deprecated MAI-Code-1-Flash across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) today, September 10, 2026. Model Deprecation date Suggested alte",
+      "url": "https://github.blog/changelog/2026-09-10-mai-code-1-flash-deprecated",
+      "published": "2026-09-10T16:54:01+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
       ]
     },
     {
@@ -287,6 +304,40 @@
         "重要",
         "開発",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "Add VS Code Agents to Copilot usage metrics",
+      "summary": "GitHub Copilot usage metrics reports now include generally available metrics for activity in the dedicated VS Code Agents window, helping you measure adoption and engagement across enterprises and organizations. What’s… ",
+      "url": "https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics",
+      "published": "2026-09-11T21:30:30+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Marketing ops as code: Automating events from planning to follow-up on GitHub",
+      "summary": "If you can write down how you do your work, you can automate it. Here's what I did to support GitHub's APAC marketing team. The post Marketing ops as code: Automating events from planning to follow-up on GitHub appeared ",
+      "url": "https://github.blog/ai-and-ml/github-copilot/marketing-ops-as-code-automating-events-from-planning-to-follow-up-on-github/",
+      "published": "2026-09-11T18:26:10+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -447,40 +498,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "npm extends recovery-code security holds to all accounts",
-      "summary": "npm now places a temporary 72-hour security hold on any account after a successful recovery-code sign-in, extending a protection that previously applied only to high-impact accounts. This change applies to… The post npm ",
-      "url": "https://github.blog/changelog/2026-09-09-npm-extends-recovery-code-security-holds-to-all-accounts",
-      "published": "2026-09-09T21:55:55+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Enterprise managed permissions for GitHub Copilot agent operations",
-      "summary": "If you administer GitHub Copilot Business or GitHub Copilot Enterprise, you can now centrally control which agent operations are blocked, require human approval, or can proceed without a prompt. Managed… The post Enterpr",
-      "url": "https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations",
-      "published": "2026-09-09T20:08:14+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -549,37 +566,20 @@
       ]
     },
     {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "GitHub Copilot app for Beginners: Automate Dependabot pull request triage",
-      "summary": "Managing library updates can be tedious at times. Learn how the GitHub Copilot app can handle this type of repetitive task. The post GitHub Copilot app for Beginners: Automate Dependabot pull request triage appeared firs",
-      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/",
-      "published": "2026-08-26T20:12:53+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "技術",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Forgejo 16.0.4 has a critical security bug fix (RCE - Remote Code Execution)",
+      "title": "Models Don't Go Rogue",
       "summary": "Comments",
-      "url": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md",
-      "published": "2026-09-10T17:40:19+00:00",
+      "url": "https://mail.cyberneticforests.com/models-dont-go-rogue/",
+      "published": "2026-09-11T03:37:10+00:00",
       "score": 2,
       "tags": [
         "技術",
-        "重要"
+        "研究"
       ]
     },
     {
@@ -706,32 +706,32 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-11T14:18:01.932843+00:00",
-      "lastAttemptAt": "2026-09-11T14:18:01.932843+00:00",
+      "lastSuccessAt": "2026-09-11T22:15:57.983570+00:00",
+      "lastAttemptAt": "2026-09-11T22:15:57.983570+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-11T14:18:01.932843+00:00",
-      "lastAttemptAt": "2026-09-11T14:18:01.932843+00:00",
+      "lastSuccessAt": "2026-09-11T22:15:57.983570+00:00",
+      "lastAttemptAt": "2026-09-11T22:15:57.983570+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-11T14:18:01.932843+00:00",
-      "lastAttemptAt": "2026-09-11T14:18:01.932843+00:00",
+      "lastSuccessAt": "2026-09-11T22:15:57.983570+00:00",
+      "lastAttemptAt": "2026-09-11T22:15:57.983570+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-11T14:18:01.932843+00:00",
-      "lastAttemptAt": "2026-09-11T14:18:01.932843+00:00",
+      "lastSuccessAt": "2026-09-11T22:15:57.983570+00:00",
+      "lastAttemptAt": "2026-09-11T22:15:57.983570+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -746,8 +746,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-11T14:18:01.932843+00:00",
-      "lastAttemptAt": "2026-09-11T14:18:01.932843+00:00",
+      "lastSuccessAt": "2026-09-11T22:15:57.983570+00:00",
+      "lastAttemptAt": "2026-09-11T22:15:57.983570+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

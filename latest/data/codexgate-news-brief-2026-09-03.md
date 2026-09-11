@@ -1,12 +1,12 @@
 # CODEXGATE News Brief
 
-- 更新: 2026-09-11T15:18:01.675020+00:00
+- 更新: 2026-09-11T22:15:57.983570+00:00
 - 取得: GitHub Actions/Python
 - Codex: 0%想定（自動実行時）
 - 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。
 
-- [開発] CG開発・GitHub運用へ反映候補 / MAI-Code-1-Flash deprecated / Xcode 27 runner image now runs on macOS 
-- [AI] AI/Codex運用の変化を確認 / GPT-6 Astra: The next generation in intelligence for work / Build more
+- [開発] CG開発・GitHub運用へ反映候補 / GitHub Copilot weekly releases — September 7 / MAI-Code-1-Flash deprec
+- [AI] AI/Codex運用の変化を確認 / Rapidly scaling online storage to serve over 1 billion ChatGPT users /
 - [論文] 更新あり。必要時だけ確認 / Compiling VGDL into Causal Models / RAPID: Reliability-Aware Pair Impo
-- [技術] 更新あり。必要時だけ確認 / Models Don't Go Rogue / Forgejo 16.0.4 has a critical security bug fix
-- [災害] 更新あり。必要時だけ確認 / M 1.0 - 7 km SW of Anza, CA
+- [技術] 更新あり。必要時だけ確認 / ChiPass Release 2026.09.0 / Models Don't Go Rogue
+- [災害] 更新あり。必要時だけ確認 / M 0.8 - 8 km NW of The Geysers, CA
