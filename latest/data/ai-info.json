@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-12T02:08:02.094370+00:00",
+  "updatedAt": "2026-09-12T02:18:02.523666+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "GitHub Copilot weekly releases — September 7",
+  "topLine": "Valerant: An Automatic Navigable Game Map Generator via Action-Conditioned World Model Exploration",
   "cards": [
     {
       "genre": "開発",
@@ -16,11 +16,11 @@
     },
     {
       "genre": "論文",
-      "count": 4,
+      "count": 5,
       "decision": "必要時だけ確認",
-      "signal": "Compiling VGDL into Causal Models / RAPID: Reliability-Aware Pair Importance Distillation / When Does Memory Help? A Cost-Aware Evaluation of Long-Term Memory in Tool-Using LLM Agents",
-      "topUrl": "https://arxiv.org/abs/2609.05459",
-      "score": 4
+      "signal": "Valerant: An Automatic Navigable Game Map Generator via Action-Conditioned World Model Exploration / Adaptive Entangled Game Modules in Artificial General Intelligence / Subagents vs Agent Skills: Executing Reusable Know",
+      "topUrl": "https://arxiv.org/abs/2609.09418",
+      "score": 5
     },
     {
       "genre": "AI",
@@ -32,14 +32,28 @@
     },
     {
       "genre": "技術",
-      "count": 2,
+      "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "ChiPass Release 2026.09.0 / Models Don't Go Rogue",
+      "signal": "ChiPass Release 2026.09.0",
       "topUrl": "https://codeberg.org/ChiPass/ChiPass/releases/tag/v2026.09.0",
       "score": 2
     }
   ],
   "focus": [
+    {
+      "label": "論文",
+      "title": "Valerant: An Automatic Navigable Game Map Generator via Action-Conditioned World Model Exploration",
+      "why": "Codex/AI開発判断に関係",
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2609.09418"
+    },
+    {
+      "label": "論文",
+      "title": "Adaptive Entangled Game Modules in Artificial General Intelligence",
+      "why": "Codex/AI開発判断に関係",
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2609.09226"
+    },
     {
       "label": "開発",
       "title": "GitHub Copilot weekly releases — September 7",
@@ -60,20 +74,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-09-10-xcode-27-runner-image-now-runs-on-macos-27"
-    },
-    {
-      "label": "論文",
-      "title": "Compiling VGDL into Causal Models",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.05459"
-    },
-    {
-      "label": "論文",
-      "title": "RAPID: Reliability-Aware Pair Importance Distillation",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.05481"
     },
     {
       "label": "開発",
@@ -98,6 +98,44 @@
     }
   ],
   "items": [
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Valerant: An Automatic Navigable Game Map Generator via Action-Conditioned World Model Exploration",
+      "summary": "arXiv:2609.09418v1 Announce Type: new Abstract: World Action Models (WAMs) couple predictive world modeling with action generation, allowing anticipated future states to guide agent behavior. Although WAMs are rapidly ad",
+      "url": "https://arxiv.org/abs/2609.09418",
+      "published": "2026-09-11T04:00:00+00:00",
+      "score": 5,
+      "tags": [
+        "論文",
+        "重要",
+        "制作",
+        "開発"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "制作",
+      "sourceWeight": 1,
+      "title": "Adaptive Entangled Game Modules in Artificial General Intelligence",
+      "summary": "arXiv:2609.09226v1 Announce Type: new Abstract: We introduce a probability-wave framework for modeling the collective behavior of interacting adaptive agents, deriving testable eigenmodes through a generalized behavioral",
+      "url": "https://arxiv.org/abs/2609.09226",
+      "published": "2026-09-11T04:00:00+00:00",
+      "score": 4,
+      "tags": [
+        "論文",
+        "重要",
+        "制作",
+        "研究"
+      ]
+    },
     {
       "source": "github-changelog",
       "platform": "開発",
@@ -150,44 +188,6 @@
         "開発",
         "重要",
         "制作"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Compiling VGDL into Causal Models",
-      "summary": "arXiv:2609.05459v1 Announce Type: new Abstract: Reinforcement learning and large language models often struggle to accurately capture the causal mechanics of game environments. Standard reinforcement learning agents tend",
-      "url": "https://arxiv.org/abs/2609.05459",
-      "published": "2026-09-10T04:00:00+00:00",
-      "score": 4,
-      "tags": [
-        "論文",
-        "重要",
-        "制作",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "RAPID: Reliability-Aware Pair Importance Distillation",
-      "summary": "arXiv:2609.05481v1 Announce Type: new Abstract: Inter example relational distillation transfers a teacher's representation geometry by matching relations among examples within a mini batch. Computing all pairs has quadra",
-      "url": "https://arxiv.org/abs/2609.05481",
-      "published": "2026-09-10T04:00:00+00:00",
-      "score": 4,
-      "tags": [
-        "論文",
-        "重要",
-        "開発",
-        "研究"
       ]
     },
     {
@@ -261,6 +261,60 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Subagents vs Agent Skills: Executing Reusable Knowledge for Long-Horizon Agentic Tasks",
+      "summary": "arXiv:2609.09233v1 Announce Type: new Abstract: How can language model agents effectively leverage libraries of reusable knowledge to solve long-horizon tasks? Recent work has increasingly focused on agent skills: reusab",
+      "url": "https://arxiv.org/abs/2609.09233",
+      "published": "2026-09-11T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "An Autonomous GeoAI Agent for Arctic Eco-Navigation",
+      "summary": "arXiv:2609.09374v1 Announce Type: new Abstract: Arctic maritime navigation is becoming increasingly important as changing sea-ice conditions expand seasonal accessibility while simultaneously introducing substantial oper",
+      "url": "https://arxiv.org/abs/2609.09374",
+      "published": "2026-09-11T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "The Menu Is an Execution Prior: State-Path Tool Menus for Online Agents",
+      "summary": "arXiv:2609.09395v1 Announce Type: new Abstract: Language models act through tools, yet practical agents face libraries containing thousands of interfaces. We introduce the tool menu as the short, ordered subset of availa",
+      "url": "https://arxiv.org/abs/2609.09395",
+      "published": "2026-09-11T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -326,42 +380,6 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "When Does Memory Help? A Cost-Aware Evaluation of Long-Term Memory in Tool-Using LLM Agents",
-      "summary": "arXiv:2609.05441v1 Announce Type: new Abstract: Long-term memory for LLM agents is evaluated today by conversational recall benchmarks (LoCoMo, LongMemEval), which measure question answering over dialogue history, not wh",
-      "url": "https://arxiv.org/abs/2609.05441",
-      "published": "2026-09-10T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "AutoFyn Technical Report: Non-Parametric Expert Iteration for Long-Horizon Agents",
-      "summary": "arXiv:2609.05446v1 Announce Type: new Abstract: We introduce AutoFyn, an agent harness inspired by the Expert Iteration algorithm, adapting a frozen model across many rounds by updating persistent state from verified rew",
-      "url": "https://arxiv.org/abs/2609.05446",
-      "published": "2026-09-10T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
       ]
     },
     {
@@ -501,25 +519,8 @@
         "技術",
         "重要"
       ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Models Don't Go Rogue",
-      "summary": "Comments",
-      "url": "https://mail.cyberneticforests.com/models-dont-go-rogue/",
-      "published": "2026-09-11T03:37:10+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "研究"
-      ]
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-11T22:15:57.983570+00:00"
+  "lastSuccessAt": "2026-09-12T02:18:02.523666+00:00"
 }
