@@ -2,8 +2,8 @@
   "version": 1,
   "daily": {
     "date": "2026-09-12",
-    "httpRequests": 307,
-    "responseBytes": 14040790
+    "httpRequests": 312,
+    "responseBytes": 14394593
   },
   "sources": {
     "openai": {
@@ -127,10 +127,10 @@
       "lastHttpStatus": 200
     },
     "news-ai-jp": {
-      "lastAttemptAt": "2026-09-12T13:58:04.822456+00:00",
+      "lastAttemptAt": "2026-09-12T15:08:01.791516+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-12T13:58:04.822456+00:00",
-      "contentUpdatedAt": "2026-09-12T13:58:04.822456+00:00",
+      "lastSuccessAt": "2026-09-12T15:08:01.791516+00:00",
+      "contentUpdatedAt": "2026-09-12T15:08:01.791516+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -151,10 +151,10 @@
       "lastHttpStatus": 200
     },
     "news-disaster-jp": {
-      "lastAttemptAt": "2026-09-12T13:58:04.822456+00:00",
+      "lastAttemptAt": "2026-09-12T15:08:01.791516+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-12T13:58:04.822456+00:00",
-      "contentUpdatedAt": "2026-09-12T13:58:04.822456+00:00",
+      "lastSuccessAt": "2026-09-12T15:08:01.791516+00:00",
+      "contentUpdatedAt": "2026-09-12T15:08:01.791516+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -235,10 +235,10 @@
       "lastHttpStatus": 200
     },
     "news-toyama-jp": {
-      "lastAttemptAt": "2026-09-12T13:58:04.822456+00:00",
+      "lastAttemptAt": "2026-09-12T15:08:01.791516+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-12T13:58:04.822456+00:00",
-      "contentUpdatedAt": "2026-09-12T13:58:04.822456+00:00",
+      "lastSuccessAt": "2026-09-12T15:08:01.791516+00:00",
+      "contentUpdatedAt": "2026-09-12T15:08:01.791516+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -247,28 +247,28 @@
       "lastHttpStatus": 200
     },
     "mastodon-ai": {
-      "lastAttemptAt": "2026-09-12T13:58:04.822456+00:00",
+      "lastAttemptAt": "2026-09-12T15:08:01.791516+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-12T13:58:04.822456+00:00",
-      "contentUpdatedAt": "2026-09-12T13:58:04.822456+00:00",
+      "lastSuccessAt": "2026-09-12T15:08:01.791516+00:00",
+      "contentUpdatedAt": "2026-09-12T15:08:01.791516+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
-      "etag": "W/\"ee16503776ad891040c4225c046184f0\"",
+      "etag": "W/\"d4a4624815c930e4826ca8f3b8ab9369\"",
       "lastModified": null,
       "lastHttpStatus": 200
     },
     "mastodon-codex": {
-      "lastAttemptAt": "2026-09-12T13:58:04.822456+00:00",
-      "status": "unavailable",
-      "lastSuccessAt": "2026-09-12T12:58:02.351489+00:00",
-      "contentUpdatedAt": "2026-09-12T12:58:02.351489+00:00",
+      "lastAttemptAt": "2026-09-12T15:08:01.791516+00:00",
+      "status": "fresh",
+      "lastSuccessAt": "2026-09-12T15:08:01.791516+00:00",
+      "contentUpdatedAt": "2026-09-12T15:08:01.791516+00:00",
       "consecutiveFailures": 0,
-      "errorCode": "304-without-cache",
+      "errorCode": null,
       "retryAfterAt": null,
-      "etag": "W/\"a11feca06140f3f0200bdd22ddc98182\"",
+      "etag": "W/\"64bbbe869a1820a73f0130d763a77045\"",
       "lastModified": null,
-      "lastHttpStatus": 304
+      "lastHttpStatus": 200
     },
     "news-entertainment-jp": {
       "lastAttemptAt": "2026-09-12T13:38:02.201750+00:00",
@@ -332,10 +332,10 @@
     },
     "cabinet-office-holidays": {}
   },
-  "updatedAt": "2026-09-12T14:58:02.333635+00:00",
+  "updatedAt": "2026-09-12T15:08:01.791516+00:00",
   "lastRun": {
-    "httpRequests": 4,
-    "responseBytes": 121729,
+    "httpRequests": 5,
+    "responseBytes": 353803,
     "aiRequests": 0
   }
 }
