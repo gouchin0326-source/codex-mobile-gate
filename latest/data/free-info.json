@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-12T15:08:01.791516+00:00",
-  "lastSuccessAt": "2026-09-12T10:28:01.311814+00:00",
+  "updatedAt": "2026-09-12T22:26:52.976622+00:00",
+  "lastSuccessAt": "2026-09-12T22:26:52.976622+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -133,17 +133,17 @@
     {
       "genre": "技術",
       "count": 2,
-      "signal": "OpenAI agents carried out an undisclosed attack on RubyGems / ChiPass Release 2026.09.0",
+      "signal": "Useful Things Agents Can Do That Are Not Writing Code / OpenAI agents carried out an undisclosed attack on RubyGems",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://www.rubyhack.ai/",
+      "topUrl": "https://elijahpotter.dev/articles/useful_things_agents_can_do_that_are_not_writing_code",
       "score": 2
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.1 - 4 km ESE of Inglewood, CA",
+      "signal": "M 1.4 - 20 km E of Castle Rock, Washington",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41545816",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714100711",
       "score": 1
     }
   ],
@@ -226,12 +226,12 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
+      "title": "Useful Things Agents Can Do That Are Not Writing Code",
       "summary": "Comments",
-      "url": "https://www.rubyhack.ai/",
-      "published": "2026-09-11T23:41:50+00:00",
+      "url": "https://elijahpotter.dev/articles/useful_things_agents_can_do_that_are_not_writing_code",
+      "published": "2026-09-12T15:56:54+00:00",
       "score": 2,
       "tags": [
         "技術",
@@ -242,10 +242,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.1 - 4 km ESE of Inglewood, CA",
-      "summary": "4 km ESE of Inglewood, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41545816",
-      "published": "2026-09-12T10:23:36.110000+00:00",
+      "title": "M 1.4 - 20 km E of Castle Rock, Washington",
+      "summary": "20 km E of Castle Rock, Washington",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714100711",
+      "published": "2026-09-12T22:07:18.310000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -587,12 +587,12 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "ガジェット",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "ChiPass Release 2026.09.0",
+      "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
       "summary": "Comments",
-      "url": "https://codeberg.org/ChiPass/ChiPass/releases/tag/v2026.09.0",
-      "published": "2026-09-11T16:35:40+00:00",
+      "url": "https://www.rubyhack.ai/",
+      "published": "2026-09-11T23:41:50+00:00",
       "score": 2,
       "tags": [
         "技術",
@@ -706,32 +706,32 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-12T10:28:01.311814+00:00",
-      "lastAttemptAt": "2026-09-12T10:28:01.311814+00:00",
+      "lastSuccessAt": "2026-09-12T22:26:52.976622+00:00",
+      "lastAttemptAt": "2026-09-12T22:26:52.976622+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-12T10:28:01.311814+00:00",
-      "lastAttemptAt": "2026-09-12T10:28:01.311814+00:00",
+      "lastSuccessAt": "2026-09-12T22:26:52.976622+00:00",
+      "lastAttemptAt": "2026-09-12T22:26:52.976622+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-12T10:28:01.311814+00:00",
-      "lastAttemptAt": "2026-09-12T10:28:01.311814+00:00",
+      "lastSuccessAt": "2026-09-12T22:26:52.976622+00:00",
+      "lastAttemptAt": "2026-09-12T22:26:52.976622+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-12T10:28:01.311814+00:00",
-      "lastAttemptAt": "2026-09-12T10:28:01.311814+00:00",
+      "lastSuccessAt": "2026-09-12T22:26:52.976622+00:00",
+      "lastAttemptAt": "2026-09-12T22:26:52.976622+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -746,8 +746,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-12T10:28:01.311814+00:00",
-      "lastAttemptAt": "2026-09-12T10:28:01.311814+00:00",
+      "lastSuccessAt": "2026-09-12T22:26:52.976622+00:00",
+      "lastAttemptAt": "2026-09-12T22:26:52.976622+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
