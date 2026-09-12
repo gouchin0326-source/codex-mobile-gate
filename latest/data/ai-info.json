@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-12T04:08:01.849170+00:00",
+  "updatedAt": "2026-09-12T04:18:01.762155+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -26,7 +26,7 @@
       "genre": "AI",
       "count": 3,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "Rapidly scaling online storage to serve over 1 billion ChatGPT users / Build more natural voice experiences with GPT‑Live‑1 in the API / Introducing the Agents API",
+      "signal": "Rapidly scaling online storage to serve over 1 billion ChatGPT users / Build more natural voice experiences with GPT‑Live‑1 in the API / Perplexity trusts GPT-6 Astra with end-to-end systems",
       "topUrl": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
       "score": 3
     },
@@ -34,8 +34,8 @@
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "ChiPass Release 2026.09.0",
-      "topUrl": "https://codeberg.org/ChiPass/ChiPass/releases/tag/v2026.09.0",
+      "signal": "OpenAI agents carried out an undisclosed attack on RubyGems",
+      "topUrl": "https://www.rubyhack.ai/",
       "score": 2
     }
   ],
@@ -418,24 +418,6 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Introducing the Agents API",
-      "summary": "Build and launch cloud agents with the Agents API, a managed service powered by the Codex harness for orchestration, long-running sessions, and tool use.",
-      "url": "https://openai.com/index/introducing-the-agents-api",
-      "published": "2026-09-10T00:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "開発"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -504,16 +486,33 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+      "summary": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less frequently than with earlier models.",
+      "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+      "published": "2026-09-14T00:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "研究"
+      ]
+    },
+    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "ガジェット",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "ChiPass Release 2026.09.0",
+      "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
       "summary": "Comments",
-      "url": "https://codeberg.org/ChiPass/ChiPass/releases/tag/v2026.09.0",
-      "published": "2026-09-11T16:35:40+00:00",
+      "url": "https://www.rubyhack.ai/",
+      "published": "2026-09-11T23:41:50+00:00",
       "score": 2,
       "tags": [
         "技術",
@@ -522,5 +521,5 @@
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-12T02:18:02.523666+00:00"
+  "lastSuccessAt": "2026-09-12T04:18:01.762155+00:00"
 }
