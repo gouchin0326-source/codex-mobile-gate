@@ -1,16 +1,29 @@
 {
-  "updatedAt": "2026-09-13T22:58:04.212149+00:00",
+  "updatedAt": "2026-09-13T23:08:01.274574+00:00",
   "sourceUpdatedAt": "2026-09-13T21:47:43.609754+00:00",
   "status": "fresh",
   "mode": "today-rule-based",
   "codexTokenUse": "0 when run by GitHub Actions",
-  "count": 1,
+  "count": 2,
   "message": "最大5件をルールで選択",
   "limits": {
     "maxItems": 5,
     "maxPerGenre": 2
   },
   "items": [
+    {
+      "id": "openai:21",
+      "genre": "AI",
+      "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+      "reason": "AIの新着を確認",
+      "publishedAt": "2026-09-14T00:00:00+00:00",
+      "observedAt": "2026-09-13T21:47:43.609754+00:00",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+      "score": 2,
+      "stale": false,
+      "processing": "rule-based"
+    },
     {
       "id": "lobsters:4",
       "genre": "技術",
