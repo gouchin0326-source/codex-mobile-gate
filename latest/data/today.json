@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-13T06:18:07.997212+00:00",
+  "updatedAt": "2026-09-13T06:28:02.006025+00:00",
   "sourceUpdatedAt": "2026-09-13T04:28:02.650648+00:00",
   "status": "fresh",
   "mode": "today-rule-based",
@@ -51,19 +51,6 @@
       "processing": "rule-based"
     },
     {
-      "id": "github-blog:10",
-      "genre": "開発",
-      "title": "Marketing ops as code: Automating events from planning to follow-up on GitHub",
-      "reason": "開発の新着で、設定した重要語と一致",
-      "publishedAt": "2026-09-11T18:26:10+00:00",
-      "observedAt": "2026-09-13T04:28:02.650648+00:00",
-      "source": "GitHub",
-      "url": "https://github.blog/ai-and-ml/github-copilot/marketing-ops-as-code-automating-events-from-planning-to-follow-up-on-github/",
-      "score": 3,
-      "stale": false,
-      "processing": "rule-based"
-    },
-    {
       "id": "lobsters:4",
       "genre": "技術",
       "title": "Useful Things Agents Can Do That Are Not Writing Code",
@@ -72,6 +59,19 @@
       "observedAt": "2026-09-13T04:28:02.650648+00:00",
       "source": "技術RSS",
       "url": "https://elijahpotter.dev/articles/useful_things_agents_can_do_that_are_not_writing_code",
+      "score": 2,
+      "stale": false,
+      "processing": "rule-based"
+    },
+    {
+      "id": "lobsters:28",
+      "genre": "技術",
+      "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
+      "reason": "技術の新着を確認",
+      "publishedAt": "2026-09-11T23:41:50+00:00",
+      "observedAt": "2026-09-13T04:28:02.650648+00:00",
+      "source": "技術RSS",
+      "url": "https://www.rubyhack.ai/",
       "score": 2,
       "stale": false,
       "processing": "rule-based"
