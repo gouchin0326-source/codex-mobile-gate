@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-13T05:28:03.529954+00:00",
-  "lastSuccessAt": "2026-09-13T05:28:03.529954+00:00",
+  "updatedAt": "2026-09-13T05:38:03.084071+00:00",
+  "lastSuccessAt": "2026-09-13T05:38:03.084071+00:00",
   "status": "fresh",
   "mode": "primary-api-weather-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -185,27 +185,18 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "location": "富山県",
-      "updatedAt": "2026-09-13T05:08:02.724063+00:00",
+      "updatedAt": "2026-09-13T05:38:03.084071+00:00",
       "current": {
-        "time": "2026-09-13T14:00",
+        "time": "2026-09-13T14:30",
         "interval": 900,
-        "temperature_2m": 27.7,
-        "relative_humidity_2m": 77,
-        "apparent_temperature": 32.5,
+        "temperature_2m": 27.4,
+        "relative_humidity_2m": 80,
+        "apparent_temperature": 32.6,
         "precipitation": 0.1,
         "weather_code": 51,
-        "wind_speed_10m": 5.8
+        "wind_speed_10m": 4.8
       },
       "hourly": [
-        {
-          "time": "2026-09-13T14:00",
-          "temp": 27.7,
-          "humidity": 77,
-          "feelsLike": 32.5,
-          "rainProb": 65,
-          "rain": 0.2,
-          "wind": 5.8
-        },
         {
           "time": "2026-09-13T15:00",
           "temp": 27.3,
@@ -412,6 +403,15 @@
           "rainProb": 99,
           "rain": 0.0,
           "wind": 14.2
+        },
+        {
+          "time": "2026-09-14T14:00",
+          "temp": 29.7,
+          "humidity": 66,
+          "feelsLike": 33.4,
+          "rainProb": 99,
+          "rain": 0.0,
+          "wind": 11.0
         }
       ],
       "daily": [
@@ -489,8 +489,8 @@
     {
       "id": "open-meteo-toyama",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-13T05:08:02.724063+00:00",
-      "lastAttemptAt": "2026-09-13T05:08:02.724063+00:00",
+      "lastSuccessAt": "2026-09-13T05:38:03.084071+00:00",
+      "lastAttemptAt": "2026-09-13T05:38:03.084071+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
