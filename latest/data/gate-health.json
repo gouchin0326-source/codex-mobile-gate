@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-09-13T22:48:01.198305+00:00",
+  "updatedAt": "2026-09-13T22:58:01.393193+00:00",
   "mode": "operation-zero-gate-health",
   "codexTokenUse": "0 when run by GitHub Actions",
   "level": "warning",
   "lines": [
-    "CG: Actions失敗 3件",
+    "CG: Actions失敗 1件",
     "詳細はCG監視を確認"
   ],
   "refresh": {
     "targetMinutes": 15,
-    "lastUpdateAt": "2026-09-13T22:48:01.198305+00:00",
+    "lastUpdateAt": "2026-09-13T22:58:01.393193+00:00",
     "ageMinutes": 0.0,
     "onTime": true,
     "tokenUse": 0
@@ -18,7 +18,7 @@
     {
       "id": "free-info",
       "label": "全体",
-      "updatedAt": "2026-09-13T22:48:01.198305+00:00",
+      "updatedAt": "2026-09-13T22:58:01.393193+00:00",
       "contentUpdatedAt": "2026-09-13T21:47:43.609754+00:00",
       "status": "fresh",
       "errors": 0,
@@ -32,12 +32,12 @@
       "status": "fresh",
       "errors": 0,
       "count": 24,
-      "ageHours": 1.0
+      "ageHours": 1.2
     },
     {
       "id": "weather-info",
       "label": "天気",
-      "updatedAt": "2026-09-13T22:48:01.198305+00:00",
+      "updatedAt": "2026-09-13T22:58:01.393193+00:00",
       "status": "fresh",
       "errors": 0,
       "count": 1,
@@ -49,25 +49,9 @@
       "name": "free-info",
       "status": "completed",
       "conclusion": "failure",
-      "createdAt": "2026-09-13T19:53:10Z",
-      "updatedAt": "2026-09-13T19:53:20Z",
-      "url": "https://github.com/gouchin0326-source/codex-mobile-gate/actions/runs/34779047870"
-    },
-    {
-      "name": "free-info",
-      "status": "completed",
-      "conclusion": "failure",
-      "createdAt": "2026-09-13T17:43:59Z",
-      "updatedAt": "2026-09-13T17:44:09Z",
-      "url": "https://github.com/gouchin0326-source/codex-mobile-gate/actions/runs/34772471925"
-    },
-    {
-      "name": "free-info",
-      "status": "completed",
-      "conclusion": "failure",
-      "createdAt": "2026-09-13T14:38:21Z",
-      "updatedAt": "2026-09-13T14:38:32Z",
-      "url": "https://github.com/gouchin0326-source/codex-mobile-gate/actions/runs/34763240737"
+      "createdAt": "2026-09-13T22:21:16Z",
+      "updatedAt": "2026-09-13T22:21:26Z",
+      "url": "https://github.com/gouchin0326-source/codex-mobile-gate/actions/runs/34786541124"
     }
   ],
   "errors": []
