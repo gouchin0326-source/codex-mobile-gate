@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-13T10:28:02.358352+00:00",
-  "lastSuccessAt": "2026-09-13T04:28:02.650648+00:00",
+  "updatedAt": "2026-09-13T10:38:02.013653+00:00",
+  "lastSuccessAt": "2026-09-13T10:38:02.013653+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -124,7 +124,7 @@
     },
     {
       "genre": "AI",
-      "count": 6,
+      "count": 7,
       "signal": "Rapidly scaling online storage to serve over 1 billion ChatGPT users / Build more natural voice experiences with GPT‑Live‑1 in the API / Perplexity trusts GPT-6 Astra with end-to-e",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
@@ -132,18 +132,18 @@
     },
     {
       "genre": "技術",
-      "count": 2,
-      "signal": "Useful Things Agents Can Do That Are Not Writing Code / OpenAI agents carried out an undisclosed attack on RubyGems",
+      "count": 1,
+      "signal": "OpenAI agents carried out an undisclosed attack on RubyGems",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://elijahpotter.dev/articles/useful_things_agents_can_do_that_are_not_writing_code",
+      "topUrl": "https://www.rubyhack.ai/",
       "score": 2
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.5 - 4 km SW of Anza, CA",
+      "signal": "M 3.3 - 57 km S of Whites City, New Mexico",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41546520",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026sawssd",
       "score": 1
     }
   ],
@@ -225,12 +225,12 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "技術",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Useful Things Agents Can Do That Are Not Writing Code",
+      "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
       "summary": "Comments",
-      "url": "https://elijahpotter.dev/articles/useful_things_agents_can_do_that_are_not_writing_code",
-      "published": "2026-09-12T15:56:54+00:00",
+      "url": "https://www.rubyhack.ai/",
+      "published": "2026-09-11T23:41:50+00:00",
       "score": 2,
       "tags": [
         "技術",
@@ -241,10 +241,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.5 - 4 km SW of Anza, CA",
-      "summary": "4 km SW of Anza, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41546520",
-      "published": "2026-09-13T04:21:36.670000+00:00",
+      "title": "M 3.3 - 57 km S of Whites City, New Mexico",
+      "summary": "57 km S of Whites City, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026sawssd",
+      "published": "2026-09-13T10:19:59.943000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -629,23 +629,6 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
-      "summary": "Comments",
-      "url": "https://www.rubyhack.ai/",
-      "published": "2026-09-11T23:41:50+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "重要"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "OpenAI",
@@ -695,38 +678,55 @@
         "AI",
         "研究"
       ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
+      "summary": "OpenAI and GSA will offer eligible federal, state, local, and tribal governments $0 license fees, 50% off usage, and expanded cyber defense support.",
+      "url": "https://openai.com/index/expanding-ai-access-us-government",
+      "published": "2026-09-10T07:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-13T04:28:02.650648+00:00",
-      "lastAttemptAt": "2026-09-13T04:28:02.650648+00:00",
+      "lastSuccessAt": "2026-09-13T10:38:02.013653+00:00",
+      "lastAttemptAt": "2026-09-13T10:38:02.013653+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-13T04:28:02.650648+00:00",
-      "lastAttemptAt": "2026-09-13T04:28:02.650648+00:00",
+      "lastSuccessAt": "2026-09-13T10:38:02.013653+00:00",
+      "lastAttemptAt": "2026-09-13T10:38:02.013653+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-13T04:28:02.650648+00:00",
-      "lastAttemptAt": "2026-09-13T04:28:02.650648+00:00",
+      "lastSuccessAt": "2026-09-13T10:38:02.013653+00:00",
+      "lastAttemptAt": "2026-09-13T10:38:02.013653+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-13T04:28:02.650648+00:00",
-      "lastAttemptAt": "2026-09-13T04:28:02.650648+00:00",
+      "lastSuccessAt": "2026-09-13T10:38:02.013653+00:00",
+      "lastAttemptAt": "2026-09-13T10:38:02.013653+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -741,8 +741,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-13T04:28:02.650648+00:00",
-      "lastAttemptAt": "2026-09-13T04:28:02.650648+00:00",
+      "lastSuccessAt": "2026-09-13T10:38:02.013653+00:00",
+      "lastAttemptAt": "2026-09-13T10:38:02.013653+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

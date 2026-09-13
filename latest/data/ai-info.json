@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-13T10:28:02.358352+00:00",
+  "updatedAt": "2026-09-13T10:38:02.013653+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -16,7 +16,7 @@
     },
     {
       "genre": "論文",
-      "count": 5,
+      "count": 6,
       "decision": "必要時だけ確認",
       "signal": "An Open Recipe for IMO Gold: Training Nemotron for Olympiad Mathematics / Finishing the Task Is Not Enough: Evaluating Agent Resilience and Considerate Participation under Accumulating Challenge / Probabilistic Focal Sea",
       "topUrl": "https://arxiv.org/abs/2609.10712",
@@ -29,14 +29,6 @@
       "signal": "Rapidly scaling online storage to serve over 1 billion ChatGPT users / Build more natural voice experiences with GPT‑Live‑1 in the API / Perplexity trusts GPT-6 Astra with end-to-end systems",
       "topUrl": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
       "score": 3
-    },
-    {
-      "genre": "技術",
-      "count": 1,
-      "decision": "必要時だけ確認",
-      "signal": "Useful Things Agents Can Do That Are Not Writing Code",
-      "topUrl": "https://elijahpotter.dev/articles/useful_things_agents_can_do_that_are_not_writing_code",
-      "score": 2
     }
   ],
   "focus": [
@@ -447,23 +439,6 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Useful Things Agents Can Do That Are Not Writing Code",
-      "summary": "Comments",
-      "url": "https://elijahpotter.dev/articles/useful_things_agents_can_do_that_are_not_writing_code",
-      "published": "2026-09-12T15:56:54+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "重要"
-      ]
-    },
-    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -513,8 +488,25 @@
         "論文",
         "研究"
       ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Understanding LoRA Rank Trade-offs in Diffusion Model Fine-Tuning",
+      "summary": "arXiv:2609.10656v1 Announce Type: new Abstract: Selecting LoRA rank for diffusion fine-tuning requires balancing quality and compute cost. We present a controlled study on CIFAR-10 using a DDPM U-Net with ranks {2,4,8,16",
+      "url": "https://arxiv.org/abs/2609.10656",
+      "published": "2026-09-12T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-13T04:28:02.650648+00:00"
+  "lastSuccessAt": "2026-09-13T10:38:02.013653+00:00"
 }
