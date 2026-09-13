@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-13T14:18:01.541136+00:00",
-  "lastSuccessAt": "2026-09-13T10:38:02.013653+00:00",
+  "updatedAt": "2026-09-13T21:47:43.609754+00:00",
+  "lastSuccessAt": "2026-09-13T21:47:43.609754+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -133,17 +133,17 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "OpenAI agents carried out an undisclosed attack on RubyGems",
+      "signal": "Golang developers should try Odin",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://www.rubyhack.ai/",
+      "topUrl": "https://rm4n0s.github.io/posts/2-go-devs-should-learn-odin/",
       "score": 2
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 3.3 - 57 km S of Whites City, New Mexico",
+      "signal": "M 1.5 - 19 km NE of Big Bend, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026sawssd",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75435192",
       "score": 1
     }
   ],
@@ -225,26 +225,26 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "AI",
+      "topic": "開発",
       "sourceWeight": 1,
-      "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
+      "title": "Golang developers should try Odin",
       "summary": "Comments",
-      "url": "https://www.rubyhack.ai/",
-      "published": "2026-09-11T23:41:50+00:00",
+      "url": "https://rm4n0s.github.io/posts/2-go-devs-should-learn-odin/",
+      "published": "2026-09-13T15:23:41+00:00",
       "score": 2,
       "tags": [
         "技術",
-        "重要"
+        "開発"
       ]
     },
     {
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 3.3 - 57 km S of Whites City, New Mexico",
-      "summary": "57 km S of Whites City, New Mexico",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026sawssd",
-      "published": "2026-09-13T10:19:59.943000+00:00",
+      "title": "M 1.5 - 19 km NE of Big Bend, CA",
+      "summary": "19 km NE of Big Bend, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75435192",
+      "published": "2026-09-13T21:38:57.590000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -701,32 +701,32 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-13T10:38:02.013653+00:00",
-      "lastAttemptAt": "2026-09-13T10:38:02.013653+00:00",
+      "lastSuccessAt": "2026-09-13T21:47:43.609754+00:00",
+      "lastAttemptAt": "2026-09-13T21:47:43.609754+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-13T10:38:02.013653+00:00",
-      "lastAttemptAt": "2026-09-13T10:38:02.013653+00:00",
+      "lastSuccessAt": "2026-09-13T21:47:43.609754+00:00",
+      "lastAttemptAt": "2026-09-13T21:47:43.609754+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-13T10:38:02.013653+00:00",
-      "lastAttemptAt": "2026-09-13T10:38:02.013653+00:00",
+      "lastSuccessAt": "2026-09-13T21:47:43.609754+00:00",
+      "lastAttemptAt": "2026-09-13T21:47:43.609754+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-13T10:38:02.013653+00:00",
-      "lastAttemptAt": "2026-09-13T10:38:02.013653+00:00",
+      "lastSuccessAt": "2026-09-13T21:47:43.609754+00:00",
+      "lastAttemptAt": "2026-09-13T21:47:43.609754+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -741,8 +741,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-13T10:38:02.013653+00:00",
-      "lastAttemptAt": "2026-09-13T10:38:02.013653+00:00",
+      "lastSuccessAt": "2026-09-13T21:47:43.609754+00:00",
+      "lastAttemptAt": "2026-09-13T21:47:43.609754+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

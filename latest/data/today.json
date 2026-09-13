@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-13T14:18:04.465290+00:00",
-  "sourceUpdatedAt": "2026-09-13T10:38:02.013653+00:00",
+  "updatedAt": "2026-09-13T21:48:02.229477+00:00",
+  "sourceUpdatedAt": "2026-09-13T21:47:43.609754+00:00",
   "status": "fresh",
   "mode": "today-rule-based",
   "codexTokenUse": "0 when run by GitHub Actions",
-  "count": 2,
+  "count": 1,
   "message": "最大5件をルールで選択",
   "limits": {
     "maxItems": 5,
@@ -12,28 +12,15 @@
   },
   "items": [
     {
-      "id": "arxiv-ai:2",
-      "genre": "論文",
-      "title": "An Open Recipe for IMO Gold: Training Nemotron for Olympiad Mathematics",
-      "reason": "論文の新着で、設定した重要語と一致",
-      "publishedAt": "2026-09-12T04:00:00+00:00",
-      "observedAt": "2026-09-13T10:38:02.013653+00:00",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.10712",
-      "score": 3,
-      "stale": false,
-      "processing": "rule-based"
-    },
-    {
-      "id": "arxiv-ai:8",
-      "genre": "論文",
-      "title": "Finishing the Task Is Not Enough: Evaluating Agent Resilience and Considerate Participation under Accumulating Challenge",
-      "reason": "論文の新着で、設定した重要語と一致",
-      "publishedAt": "2026-09-12T04:00:00+00:00",
-      "observedAt": "2026-09-13T10:38:02.013653+00:00",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.10724",
-      "score": 3,
+      "id": "lobsters:4",
+      "genre": "技術",
+      "title": "Golang developers should try Odin",
+      "reason": "技術の新着を確認",
+      "publishedAt": "2026-09-13T15:23:41+00:00",
+      "observedAt": "2026-09-13T21:47:43.609754+00:00",
+      "source": "技術RSS",
+      "url": "https://rm4n0s.github.io/posts/2-go-devs-should-learn-odin/",
+      "score": 2,
       "stale": false,
       "processing": "rule-based"
     }
