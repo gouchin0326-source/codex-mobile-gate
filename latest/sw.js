@@ -1,10 +1,11 @@
-const CACHE = "codex-gate-v137-mobile14b-20260911";
+const CACHE = "codex-gate-v138-kodekichi-20260914";
 const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
   "./icon.svg",
   "./dashboard.html",
   "./app-launcher.html",
+  "./kodekichi/index.html",
   "./codex-world/index.html",
   "./free-info-lab/index.html",
   "./zero-token-army/index.html",
