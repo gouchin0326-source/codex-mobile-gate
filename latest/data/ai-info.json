@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-14T03:38:01.490555+00:00",
+  "updatedAt": "2026-09-14T03:48:01.681492+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -24,9 +24,9 @@
     },
     {
       "genre": "技術",
-      "count": 1,
+      "count": 2,
       "decision": "必要時だけ確認",
-      "signal": "Golang developers should try Odin",
+      "signal": "Golang developers should try Odin / The case against JPEG XL",
       "topUrl": "https://rm4n0s.github.io/posts/2-go-devs-should-learn-odin/",
       "score": 2
     }
@@ -486,8 +486,24 @@
         "AI",
         "重要"
       ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "The case against JPEG XL",
+      "summary": "Comments",
+      "url": "https://giannirosato.com/blog/post/case-against-jxl",
+      "published": "2026-09-14T01:18:11+00:00",
+      "score": 1,
+      "tags": [
+        "技術"
+      ]
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-14T02:28:01.926870+00:00"
+  "lastSuccessAt": "2026-09-14T03:48:01.681492+00:00"
 }
