@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-14T09:48:01.018834+00:00",
+  "updatedAt": "2026-09-14T09:58:00.959166+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -18,7 +18,7 @@
       "genre": "AI",
       "count": 7,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "Rapidly scaling online storage to serve over 1 billion ChatGPT users / Build more natural voice experiences with GPT‑Live‑1 in the API / Perplexity trusts GPT-6 Astra with end-to-end systems",
+      "signal": "Rapidly scaling online storage to serve over 1 billion ChatGPT users / Introducing the Agents API / Perplexity trusts GPT-6 Astra with end-to-end systems",
       "topUrl": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
       "score": 3
     },
@@ -26,9 +26,9 @@
       "genre": "技術",
       "count": 2,
       "decision": "必要時だけ確認",
-      "signal": "Golang developers should try Odin / The case against JPEG XL",
-      "topUrl": "https://rm4n0s.github.io/posts/2-go-devs-should-learn-odin/",
-      "score": 2
+      "signal": "Why is the x86 undefined instruction called ud2? Why 2? / The case against JPEG XL",
+      "topUrl": "https://devblogs.microsoft.com/oldnewthing/20260910-00/?p=112689",
+      "score": 1
     }
   ],
   "focus": [
@@ -304,11 +304,11 @@
       "platform": "AI",
       "label": "OpenAI",
       "genre": "AI",
-      "topic": "AI",
+      "topic": "開発",
       "sourceWeight": 1,
-      "title": "Build more natural voice experiences with GPT‑Live‑1 in the API",
-      "summary": "GPT‑Live‑1 brings natural, full-duplex voice conversations to the API, with stronger instruction following, custom voices, and telephony support.",
-      "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
+      "title": "Introducing the Agents API",
+      "summary": "Build and launch cloud agents with the Agents API, a managed service powered by the Codex harness for orchestration, long-running sessions, and tool use.",
+      "url": "https://openai.com/index/introducing-the-agents-api",
       "published": "2026-09-10T00:00:00+00:00",
       "score": 3,
       "tags": [
@@ -403,23 +403,6 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Golang developers should try Odin",
-      "summary": "Comments",
-      "url": "https://rm4n0s.github.io/posts/2-go-devs-should-learn-odin/",
-      "published": "2026-09-13T15:23:41+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "開発"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "OpenAI",
@@ -492,6 +475,22 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Why is the x86 undefined instruction called ud2? Why 2?",
+      "summary": "Comments",
+      "url": "https://devblogs.microsoft.com/oldnewthing/20260910-00/?p=112689",
+      "published": "2026-09-14T03:34:33+00:00",
+      "score": 1,
+      "tags": [
+        "技術"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
       "topic": "AI",
       "sourceWeight": 1,
       "title": "The case against JPEG XL",
@@ -505,5 +504,5 @@
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-14T03:48:01.681492+00:00"
+  "lastSuccessAt": "2026-09-14T09:58:00.959166+00:00"
 }
