@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-14T02:58:01.357285+00:00",
-  "lastSuccessAt": "2026-09-14T02:58:01.357285+00:00",
+  "updatedAt": "2026-09-14T03:08:01.334486+00:00",
+  "lastSuccessAt": "2026-09-14T03:08:01.334486+00:00",
   "status": "fresh",
   "mode": "primary-api-weather-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -185,16 +185,16 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "location": "富山県",
-      "updatedAt": "2026-09-14T02:28:01.926870+00:00",
+      "updatedAt": "2026-09-14T03:08:01.334486+00:00",
       "current": {
-        "time": "2026-09-14T11:15",
+        "time": "2026-09-14T12:00",
         "interval": 900,
-        "temperature_2m": 28.8,
+        "temperature_2m": 28.4,
         "relative_humidity_2m": 70,
-        "apparent_temperature": 32.5,
+        "apparent_temperature": 32.1,
         "precipitation": 0.0,
-        "weather_code": 1,
-        "wind_speed_10m": 11.3
+        "weather_code": 2,
+        "wind_speed_10m": 9.7
       },
       "hourly": [
         {
@@ -202,7 +202,7 @@
           "temp": 28.4,
           "humidity": 70,
           "feelsLike": 32.1,
-          "rainProb": 80,
+          "rainProb": 98,
           "rain": 0.0,
           "wind": 9.7
         },
@@ -211,7 +211,7 @@
           "temp": 25.7,
           "humidity": 81,
           "feelsLike": 29.1,
-          "rainProb": 91,
+          "rainProb": 100,
           "rain": 0.2,
           "wind": 11.0
         },
@@ -220,7 +220,7 @@
           "temp": 25.5,
           "humidity": 78,
           "feelsLike": 28.8,
-          "rainProb": 95,
+          "rainProb": 100,
           "rain": 0.1,
           "wind": 8.1
         },
@@ -229,7 +229,7 @@
           "temp": 24.3,
           "humidity": 83,
           "feelsLike": 27.8,
-          "rainProb": 98,
+          "rainProb": 96,
           "rain": 0.3,
           "wind": 6.1
         },
@@ -238,7 +238,7 @@
           "temp": 23.6,
           "humidity": 89,
           "feelsLike": 27.7,
-          "rainProb": 100,
+          "rainProb": 97,
           "rain": 0.9,
           "wind": 4.2
         },
@@ -247,7 +247,7 @@
           "temp": 23.4,
           "humidity": 91,
           "feelsLike": 27.6,
-          "rainProb": 100,
+          "rainProb": 99,
           "rain": 0.5,
           "wind": 4.0
         },
@@ -319,7 +319,7 @@
           "temp": 21.6,
           "humidity": 96,
           "feelsLike": 25.5,
-          "rainProb": 96,
+          "rainProb": 98,
           "rain": 0.4,
           "wind": 2.7
         },
@@ -328,7 +328,7 @@
           "temp": 21.6,
           "humidity": 97,
           "feelsLike": 25.9,
-          "rainProb": 90,
+          "rainProb": 95,
           "rain": 2.2,
           "wind": 1.1
         },
@@ -337,7 +337,7 @@
           "temp": 21.7,
           "humidity": 93,
           "feelsLike": 24.7,
-          "rainProb": 86,
+          "rainProb": 92,
           "rain": 3.1,
           "wind": 7.9
         },
@@ -346,7 +346,7 @@
           "temp": 21.3,
           "humidity": 92,
           "feelsLike": 23.5,
-          "rainProb": 85,
+          "rainProb": 90,
           "rain": 1.0,
           "wind": 11.3
         },
@@ -355,7 +355,7 @@
           "temp": 20.9,
           "humidity": 91,
           "feelsLike": 23.0,
-          "rainProb": 85,
+          "rainProb": 88,
           "rain": 0.1,
           "wind": 9.8
         },
@@ -364,7 +364,7 @@
           "temp": 20.8,
           "humidity": 90,
           "feelsLike": 23.1,
-          "rainProb": 86,
+          "rainProb": 88,
           "rain": 0.1,
           "wind": 7.4
         },
@@ -373,7 +373,7 @@
           "temp": 20.9,
           "humidity": 92,
           "feelsLike": 23.7,
-          "rainProb": 87,
+          "rainProb": 90,
           "rain": 0.2,
           "wind": 5.5
         },
@@ -382,7 +382,7 @@
           "temp": 21.1,
           "humidity": 93,
           "feelsLike": 24.3,
-          "rainProb": 89,
+          "rainProb": 92,
           "rain": 1.1,
           "wind": 4.1
         },
@@ -391,7 +391,7 @@
           "temp": 21.4,
           "humidity": 94,
           "feelsLike": 24.8,
-          "rainProb": 90,
+          "rainProb": 94,
           "rain": 2.3,
           "wind": 3.9
         },
@@ -400,7 +400,7 @@
           "temp": 21.8,
           "humidity": 94,
           "feelsLike": 25.1,
-          "rainProb": 91,
+          "rainProb": 93,
           "rain": 1.9,
           "wind": 6.2
         },
@@ -409,7 +409,7 @@
           "temp": 22.2,
           "humidity": 94,
           "feelsLike": 25.6,
-          "rainProb": 92,
+          "rainProb": 91,
           "rain": 1.0,
           "wind": 6.9
         }
@@ -489,8 +489,8 @@
     {
       "id": "open-meteo-toyama",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-14T02:28:01.926870+00:00",
-      "lastAttemptAt": "2026-09-14T02:28:01.926870+00:00",
+      "lastSuccessAt": "2026-09-14T03:08:01.334486+00:00",
+      "lastAttemptAt": "2026-09-14T03:08:01.334486+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
