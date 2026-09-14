@@ -1,37 +1,44 @@
 {
-  "updatedAt": "2026-09-14T14:58:01.139532+00:00",
+  "updatedAt": "2026-09-14T21:10:48.853907+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "GitHub Copilot weekly releases — September 7",
+  "topLine": "Configure cost and quality in Copilot auto model selection",
   "cards": [
     {
       "genre": "開発",
       "count": 15,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "GitHub Copilot weekly releases — September 7 / MAI-Code-1-Flash deprecated / Xcode 27 runner image now runs on macOS 27",
-      "topUrl": "https://github.blog/changelog/2026-09-10-github-copilot-weekly-releases-september-7",
+      "signal": "Configure cost and quality in Copilot auto model selection / GitHub Copilot weekly releases — September 7 / MAI-Code-1-Flash deprecated",
+      "topUrl": "https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection",
       "score": 4
     },
     {
       "genre": "AI",
       "count": 7,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "Rapidly scaling online storage to serve over 1 billion ChatGPT users / Introducing the Agents API / Perplexity trusts GPT-6 Astra with end-to-end systems",
-      "topUrl": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
+      "signal": "How Fyxer built an AI executive assistant people trust / Rapidly scaling online storage to serve over 1 billion ChatGPT users / Perplexity trusts GPT-6 Astra with end-to-end systems",
+      "topUrl": "https://openai.com/index/fyxer",
       "score": 3
     },
     {
       "genre": "技術",
       "count": 2,
       "decision": "必要時だけ確認",
-      "signal": "Why is the x86 undefined instruction called ud2? Why 2? / The case against JPEG XL",
-      "topUrl": "https://devblogs.microsoft.com/oldnewthing/20260910-00/?p=112689",
+      "signal": "The contagion of fear / How can you not be romantic about UNIX domain sockets?",
+      "topUrl": "https://bcantrill.dtrace.org/2026/09/13/the-contagion-of-fear/",
       "score": 1
     }
   ],
   "focus": [
+    {
+      "label": "開発",
+      "title": "Configure cost and quality in Copilot auto model selection",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection"
+    },
     {
       "label": "開発",
       "title": "GitHub Copilot weekly releases — September 7",
@@ -48,17 +55,17 @@
     },
     {
       "label": "開発",
-      "title": "Xcode 27 runner image now runs on macOS 27",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-10-xcode-27-runner-image-now-runs-on-macos-27"
-    },
-    {
-      "label": "開発",
       "title": "Project HydraFusion: Frontier quality via multi-model orchestration",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
       "url": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/"
+    },
+    {
+      "label": "AI",
+      "title": "How Fyxer built an AI executive assistant people trust",
+      "why": "Codex/AI開発判断に関係",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/fyxer"
     },
     {
       "label": "開発",
@@ -80,16 +87,27 @@
       "why": "Codex/AI開発判断に関係",
       "source": "OpenAI",
       "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one"
-    },
-    {
-      "label": "開発",
-      "title": "GitHub Copilot app for Beginners: Using the diff, terminal, and browser",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub",
-      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-using-the-diff-terminal-and-browser/"
     }
   ],
   "items": [
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Configure cost and quality in Copilot auto model selection",
+      "summary": "GitHub Copilot auto model selection now offers three tiers: efficiency, balance, and intelligence. Choose the tier that reflects how you want auto to weigh cost, quality, and response time for… The post Configure cost an",
+      "url": "https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection",
+      "published": "2026-09-14T16:05:27+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
+      ]
+    },
     {
       "source": "github-changelog",
       "platform": "開発",
@@ -127,24 +145,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Xcode 27 runner image now runs on macOS 27",
-      "summary": "You can now validate your Apple apps against macOS 27 using the Xcode 27 runner image for GitHub-hosted macOS runners, available in public preview. The image previously ran on macOS… The post Xcode 27 runner image now ru",
-      "url": "https://github.blog/changelog/2026-09-10-xcode-27-runner-image-now-runs-on-macos-27",
-      "published": "2026-09-10T15:15:36+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
-        "制作"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -158,6 +158,24 @@
       "score": 4,
       "tags": [
         "開発",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "How Fyxer built an AI executive assistant people trust",
+      "summary": "Fyxer uses OpenAI models, fine-tuning, memory, and real user feedback to organize inboxes and draft emails in each user’s voice.",
+      "url": "https://openai.com/index/fyxer",
+      "published": "2026-09-14T12:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
         "重要",
         "研究"
       ]
@@ -297,24 +315,6 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Introducing the Agents API",
-      "summary": "Build and launch cloud agents with the Agents API, a managed service powered by the Codex harness for orchestration, long-running sessions, and tool use.",
-      "url": "https://openai.com/index/introducing-the-agents-api",
-      "published": "2026-09-10T00:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "開発"
       ]
     },
     {
@@ -477,10 +477,10 @@
       "genre": "技術",
       "topic": "その他",
       "sourceWeight": 1,
-      "title": "Why is the x86 undefined instruction called ud2? Why 2?",
+      "title": "The contagion of fear",
       "summary": "Comments",
-      "url": "https://devblogs.microsoft.com/oldnewthing/20260910-00/?p=112689",
-      "published": "2026-09-14T03:34:33+00:00",
+      "url": "https://bcantrill.dtrace.org/2026/09/13/the-contagion-of-fear/",
+      "published": "2026-09-14T16:53:14+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -493,10 +493,10 @@
       "genre": "技術",
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "The case against JPEG XL",
+      "title": "How can you not be romantic about UNIX domain sockets?",
       "summary": "Comments",
-      "url": "https://giannirosato.com/blog/post/case-against-jxl",
-      "published": "2026-09-14T01:18:11+00:00",
+      "url": "https://yuvalino.com/how-can-you-not-be-romantic-about-unix-domain-sockets",
+      "published": "2026-09-14T16:27:12+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -504,5 +504,5 @@
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-14T09:58:00.959166+00:00"
+  "lastSuccessAt": "2026-09-14T21:10:48.853907+00:00"
 }
