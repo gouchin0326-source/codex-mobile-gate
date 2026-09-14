@@ -1,0 +1,14 @@
+{
+  "lane": "test",
+  "ts": "2026-09-14T14:18:00+09:00",
+  "artifact": "check_kodekichi_experience.mjs",
+  "prompt": "コデ吉の画像・音楽・ゲーム・調査が画面内で体験できることを実ブラウザで検査する",
+  "source": "codex",
+  "backend": "codex",
+  "model": "gpt-5.4-mini",
+  "seconds": 120,
+  "gates": {
+    "four_kinds": {"pass": true, "note": "4種類の体験表示と閉じた後の片付けを検査"},
+    "external_ai": {"pass": true, "note": "固定検査データのみ。外部AI送信なし"}
+  }
+}
