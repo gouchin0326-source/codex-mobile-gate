@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-14T02:18:02.813607+00:00",
+  "updatedAt": "2026-09-14T02:28:01.926870+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -15,16 +15,8 @@
       "score": 4
     },
     {
-      "genre": "論文",
-      "count": 5,
-      "decision": "必要時だけ確認",
-      "signal": "An Open Recipe for IMO Gold: Training Nemotron for Olympiad Mathematics / Finishing the Task Is Not Enough: Evaluating Agent Resilience and Considerate Participation under Accumulating Challenge / Probabilistic Focal Sea",
-      "topUrl": "https://arxiv.org/abs/2609.10712",
-      "score": 3
-    },
-    {
       "genre": "AI",
-      "count": 3,
+      "count": 7,
       "decision": "AI/Codex運用の変化を確認",
       "signal": "Rapidly scaling online storage to serve over 1 billion ChatGPT users / Build more natural voice experiences with GPT‑Live‑1 in the API / Perplexity trusts GPT-6 Astra with end-to-end systems",
       "topUrl": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
@@ -69,20 +61,6 @@
       "url": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/"
     },
     {
-      "label": "論文",
-      "title": "An Open Recipe for IMO Gold: Training Nemotron for Olympiad Mathematics",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.10712"
-    },
-    {
-      "label": "論文",
-      "title": "Finishing the Task Is Not Enough: Evaluating Agent Resilience and Considerate Participation under Accumulating Challenge",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.10724"
-    },
-    {
       "label": "開発",
       "title": "Add VS Code Agents to Copilot usage metrics",
       "why": "Codex/AI開発判断に関係",
@@ -95,6 +73,20 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
       "url": "https://github.blog/ai-and-ml/github-copilot/marketing-ops-as-code-automating-events-from-planning-to-follow-up-on-github/"
+    },
+    {
+      "label": "AI",
+      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
+      "why": "Codex/AI開発判断に関係",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one"
+    },
+    {
+      "label": "開発",
+      "title": "GitHub Copilot app for Beginners: Using the diff, terminal, and browser",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub",
+      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-using-the-diff-terminal-and-browser/"
     }
   ],
   "items": [
@@ -166,42 +158,6 @@
       "score": 4,
       "tags": [
         "開発",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "An Open Recipe for IMO Gold: Training Nemotron for Olympiad Mathematics",
-      "summary": "arXiv:2609.10712v1 Announce Type: new Abstract: We study how model post-training and test-time inference design affect natural-language proof generation for hard olympiad mathematics. Starting from Nemotron 3 Ultra, we t",
-      "url": "https://arxiv.org/abs/2609.10712",
-      "published": "2026-09-12T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "制作",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Finishing the Task Is Not Enough: Evaluating Agent Resilience and Considerate Participation under Accumulating Challenge",
-      "summary": "arXiv:2609.10724v1 Announce Type: new Abstract: Sustained deployment of generative AI agents requires more than isolated task success. Agents must remain useful across repeated interactions, changing conditions, and depe",
-      "url": "https://arxiv.org/abs/2609.10724",
-      "published": "2026-09-12T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
         "重要",
         "研究"
       ]
@@ -464,57 +420,74 @@
       ]
     },
     {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
+      "summary": "César de la Fuente’s lab uses Codex and ChatGPT to search living and extinct genomes for antimicrobial candidates to fight drug-resistant infections.",
+      "url": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
+      "published": "2026-09-10T16:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
       "topic": "その他",
       "sourceWeight": 1,
-      "title": "Probabilistic Focal Search: Accelerating Bounded-Suboptimal Search via Lower-Bound Advancement",
-      "summary": "arXiv:2609.10584v1 Announce Type: new Abstract: Bounded-suboptimal search seeks a solution within a factor $w$ of optimal while reducing search effort. Focal Search (FS) uses heuristic guidance within FOCAL, the frontier",
-      "url": "https://arxiv.org/abs/2609.10584",
-      "published": "2026-09-12T04:00:00+00:00",
+      "title": "Now everyone can put data to work",
+      "summary": "Meet the Data agent in ChatGPT Work. Connect company data, uncover insights, and build interactive dashboards with AI using natural language.",
+      "url": "https://openai.com/index/put-data-to-work",
+      "published": "2026-09-10T15:00:00+00:00",
       "score": 2,
       "tags": [
-        "論文",
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Introducing ChatGPT for Financial Services",
+      "summary": "Introducing ChatGPT for Financial Services, combining built-in financial data and GPT-6 Astra for research, modeling, and client-ready materials.",
+      "url": "https://openai.com/index/introducing-chatgpt-financial-services",
+      "published": "2026-09-10T07:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
         "研究"
       ]
     },
     {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "Automating Quadratic Unconstrained Binary Optimization (QUBO) Formulation Generation from Natural Language",
-      "summary": "arXiv:2609.10629v1 Announce Type: new Abstract: Quadratic Unconstrained Binary Optimization (QUBO) is a central formulation for combinatorial optimization and has gained increasing attention due to its compatibility with",
-      "url": "https://arxiv.org/abs/2609.10629",
-      "published": "2026-09-12T04:00:00+00:00",
+      "title": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
+      "summary": "OpenAI and GSA will offer eligible federal, state, local, and tribal governments $0 license fees, 50% off usage, and expanded cyber defense support.",
+      "url": "https://openai.com/index/expanding-ai-access-us-government",
+      "published": "2026-09-10T07:00:00+00:00",
       "score": 2,
       "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "A Multi-Stage Rule-Chaining Framework for Compositional and Interpretable Cognitive Reasoning",
-      "summary": "arXiv:2609.10654v1 Announce Type: new Abstract: The Abstraction and Reasoning Corpus (ARC) benchmarks cognitive generalization, the ability to infer and apply abstract rules from limited examples. This paper presents a m",
-      "url": "https://arxiv.org/abs/2609.10654",
-      "published": "2026-09-12T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
+        "AI",
+        "重要"
       ]
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-13T21:47:43.609754+00:00"
+  "lastSuccessAt": "2026-09-14T02:28:01.926870+00:00"
 }

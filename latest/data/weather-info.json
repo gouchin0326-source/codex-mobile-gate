@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-14T02:18:02.813607+00:00",
-  "lastSuccessAt": "2026-09-14T02:18:02.813607+00:00",
+  "updatedAt": "2026-09-14T02:28:01.926870+00:00",
+  "lastSuccessAt": "2026-09-14T02:28:01.926870+00:00",
   "status": "fresh",
   "mode": "primary-api-weather-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -10,12 +10,12 @@
     "label": "注意",
     "lines": [
       "富山: 雨100%/最大3.2mm",
-      "風11.5km/h・週間雨量最大54.4mm"
+      "風11.3km/h・週間雨量最大54.4mm"
     ],
     "maxRainProbability": 100,
     "maxHourlyRain": 3.2,
     "maxDailyRain": 54.4,
-    "maxWind": 11.5,
+    "maxWind": 11.3,
     "jmaWarnings": [],
     "officialWarningStatus": "fresh"
   },
@@ -185,27 +185,18 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "location": "富山県",
-      "updatedAt": "2026-09-14T01:58:01.517695+00:00",
+      "updatedAt": "2026-09-14T02:28:01.926870+00:00",
       "current": {
-        "time": "2026-09-14T10:45",
+        "time": "2026-09-14T11:15",
         "interval": 900,
-        "temperature_2m": 29.0,
-        "relative_humidity_2m": 69,
-        "apparent_temperature": 32.6,
+        "temperature_2m": 28.8,
+        "relative_humidity_2m": 70,
+        "apparent_temperature": 32.5,
         "precipitation": 0.0,
         "weather_code": 1,
-        "wind_speed_10m": 11.6
+        "wind_speed_10m": 11.3
       },
       "hourly": [
-        {
-          "time": "2026-09-14T11:00",
-          "temp": 28.9,
-          "humidity": 70,
-          "feelsLike": 32.6,
-          "rainProb": 55,
-          "rain": 0.0,
-          "wind": 11.5
-        },
         {
           "time": "2026-09-14T12:00",
           "temp": 28.4,
@@ -412,6 +403,15 @@
           "rainProb": 91,
           "rain": 1.9,
           "wind": 6.2
+        },
+        {
+          "time": "2026-09-15T11:00",
+          "temp": 22.2,
+          "humidity": 94,
+          "feelsLike": 25.6,
+          "rainProb": 92,
+          "rain": 1.0,
+          "wind": 6.9
         }
       ],
       "daily": [
@@ -489,8 +489,8 @@
     {
       "id": "open-meteo-toyama",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-14T01:58:01.517695+00:00",
-      "lastAttemptAt": "2026-09-14T01:58:01.517695+00:00",
+      "lastSuccessAt": "2026-09-14T02:28:01.926870+00:00",
+      "lastAttemptAt": "2026-09-14T02:28:01.926870+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
