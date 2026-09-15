@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-15T22:28:03.358781+00:00",
-  "lastSuccessAt": "2026-09-15T21:32:58.946632+00:00",
+  "updatedAt": "2026-09-15T22:38:08.761778+00:00",
+  "lastSuccessAt": "2026-09-15T22:38:08.761778+00:00",
   "status": "fresh",
   "mode": "zero-token-social-trends",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -325,7 +325,7 @@
   "trends": [
     {
       "word": "news",
-      "count": 10
+      "count": 12
     },
     {
       "word": "yahoo",
@@ -844,6 +844,24 @@
       "region": "日本語優先"
     },
     {
+      "source": "news-toyama-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 富山",
+      "genre": "SNS",
+      "topic": "富山",
+      "sourceWeight": 3,
+      "title": "34年ぶり上昇転じる 富山県内基準地価0.1％増 上昇率トップ、富山・牛島町9.9％増 - 47NEWS",
+      "summary": "34年ぶり上昇転じる 富山県内基準地価0.1％増 上昇率トップ、富山・牛島町9.9％増 47NEWS",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBxTlVRaXFtY292Y3dpT2hYRHNrejF1Nkl3RVlCNE02V2RSV0ZwbVI5OENmQTVEcG5id3d3ZVNZMktVWjRJQTYtMWxOWQ?oc=5",
+      "published": "2026-09-15T20:00:00+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
       "source": "news-business-jp",
       "platform": "Google News",
       "label": "日本ニュース ビジネス",
@@ -1160,24 +1178,6 @@
       "summary": "栃木・上三川町強盗殺人事件 18歳の“リクルーター”起訴内容認める（2026年9月15日掲載）｜日テレNEWS NNN 日テレNEWS NNN",
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1oMHdhVU93azIwc2pQWmtXbDg0LWFpcXRjcFhCM1YwV1VuX0stU3NydnJBZTB1eUVlUnY1SF9YeEU5cWhSbXdGNU5hYWlWRXlodXZaMzZNQkFPV0paeW44Y0l2OUdfa0ZwSGRKVlFmQ2UtV2szX2xVM0VRNVc?oc=5",
       "published": "2026-09-15T11:43:00+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
-      "source": "news-toyama-jp",
-      "platform": "Google News",
-      "label": "日本ニュース 富山",
-      "genre": "SNS",
-      "topic": "富山",
-      "sourceWeight": 3,
-      "title": "富山グラウジーズの実行委員変更 - bleague.jp",
-      "summary": "富山グラウジーズの実行委員変更 bleague.jp",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE01WGJJLUNsZk5FTXktVmxZa2JYZzZqRjFNM29UQ3lFMDdERUoxcDVEbHVqczlIT1J5Z0hmV2RyOHE5eXFKeFhkcXR6TGtObk00NmVVNzZNQQ?oc=5",
-      "published": "2026-09-15T11:25:20+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -1613,8 +1613,8 @@
     {
       "id": "news-ai-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-15T21:32:58.946632+00:00",
-      "lastAttemptAt": "2026-09-15T21:32:58.946632+00:00",
+      "lastSuccessAt": "2026-09-15T22:38:08.761778+00:00",
+      "lastAttemptAt": "2026-09-15T22:38:08.761778+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -1629,8 +1629,8 @@
     {
       "id": "news-disaster-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-15T21:32:58.946632+00:00",
-      "lastAttemptAt": "2026-09-15T21:32:58.946632+00:00",
+      "lastSuccessAt": "2026-09-15T22:38:08.761778+00:00",
+      "lastAttemptAt": "2026-09-15T22:38:08.761778+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -1685,8 +1685,8 @@
     {
       "id": "news-toyama-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-15T21:32:58.946632+00:00",
-      "lastAttemptAt": "2026-09-15T21:32:58.946632+00:00",
+      "lastSuccessAt": "2026-09-15T22:38:08.761778+00:00",
+      "lastAttemptAt": "2026-09-15T22:38:08.761778+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -1733,16 +1733,16 @@
     {
       "id": "mastodon-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-15T21:32:58.946632+00:00",
-      "lastAttemptAt": "2026-09-15T21:32:58.946632+00:00",
+      "lastSuccessAt": "2026-09-15T22:38:08.761778+00:00",
+      "lastAttemptAt": "2026-09-15T22:38:08.761778+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "mastodon-codex",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-15T21:32:58.946632+00:00",
-      "lastAttemptAt": "2026-09-15T21:32:58.946632+00:00",
+      "lastSuccessAt": "2026-09-15T22:38:08.761778+00:00",
+      "lastAttemptAt": "2026-09-15T22:38:08.761778+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
