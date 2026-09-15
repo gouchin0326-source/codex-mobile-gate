@@ -2,15 +2,15 @@
   "version": 1,
   "daily": {
     "date": "2026-09-15",
-    "httpRequests": 64,
-    "responseBytes": 2611725
+    "httpRequests": 81,
+    "responseBytes": 4187889
   },
   "sources": {
     "openai": {
-      "lastAttemptAt": "2026-09-14T21:10:48.853907+00:00",
+      "lastAttemptAt": "2026-09-15T03:18:02.180728+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-14T21:10:48.853907+00:00",
-      "contentUpdatedAt": "2026-09-14T21:10:48.853907+00:00",
+      "lastSuccessAt": "2026-09-15T03:18:02.180728+00:00",
+      "contentUpdatedAt": "2026-09-15T03:18:02.180728+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -19,39 +19,39 @@
       "lastHttpStatus": 200
     },
     "github-blog": {
-      "lastAttemptAt": "2026-09-14T21:10:48.853907+00:00",
+      "lastAttemptAt": "2026-09-15T03:18:02.180728+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-14T21:10:48.853907+00:00",
+      "lastSuccessAt": "2026-09-15T03:18:02.180728+00:00",
       "contentUpdatedAt": "2026-09-14T21:10:48.853907+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
       "etag": "\"bfc060b4ea2706190426dfa150674068\"",
       "lastModified": "Mon, 14 Sep 2026 16:57:18 GMT",
-      "lastHttpStatus": 200
+      "lastHttpStatus": 304
     },
     "github-changelog": {
-      "lastAttemptAt": "2026-09-14T21:10:48.853907+00:00",
+      "lastAttemptAt": "2026-09-15T03:18:02.180728+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-14T21:10:48.853907+00:00",
+      "lastSuccessAt": "2026-09-15T03:18:02.180728+00:00",
       "contentUpdatedAt": "2026-09-14T21:10:48.853907+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
       "etag": "\"bfc060b4ea2706190426dfa150674068\"",
       "lastModified": "Mon, 14 Sep 2026 16:57:18 GMT",
-      "lastHttpStatus": 200
+      "lastHttpStatus": 304
     },
     "lobsters": {
-      "lastAttemptAt": "2026-09-14T21:10:48.853907+00:00",
+      "lastAttemptAt": "2026-09-15T03:18:02.180728+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-14T21:10:48.853907+00:00",
-      "contentUpdatedAt": "2026-09-14T21:10:48.853907+00:00",
+      "lastSuccessAt": "2026-09-15T03:18:02.180728+00:00",
+      "contentUpdatedAt": "2026-09-15T03:18:02.180728+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
-      "etag": "\"dlfcje0oxyikc6c\"",
-      "lastModified": "Mon, 14 Sep 2026 21:10:49 GMT",
+      "etag": "\"dlfkbz042d1wcbk\"",
+      "lastModified": "Tue, 15 Sep 2026 03:17:16 GMT",
       "lastHttpStatus": 200
     },
     "arxiv-ai": {
@@ -67,15 +67,15 @@
       "lastHttpStatus": 200
     },
     "usgs": {
-      "lastAttemptAt": "2026-09-14T21:10:48.853907+00:00",
+      "lastAttemptAt": "2026-09-15T03:18:02.180728+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-14T21:10:48.853907+00:00",
-      "contentUpdatedAt": "2026-09-14T21:10:48.853907+00:00",
+      "lastSuccessAt": "2026-09-15T03:18:02.180728+00:00",
+      "contentUpdatedAt": "2026-09-15T03:18:02.180728+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
       "etag": null,
-      "lastModified": "Mon, 14 Sep 2026 21:10:48 GMT",
+      "lastModified": "Tue, 15 Sep 2026 03:17:48 GMT",
       "lastHttpStatus": 200
     },
     "jma-toyama-warning": {
@@ -139,10 +139,10 @@
       "lastHttpStatus": 200
     },
     "news-economy-jp": {
-      "lastAttemptAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastAttemptAt": "2026-09-15T03:18:02.180728+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-15T00:18:01.822540+00:00",
-      "contentUpdatedAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastSuccessAt": "2026-09-15T03:18:02.180728+00:00",
+      "contentUpdatedAt": "2026-09-15T03:18:02.180728+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -163,10 +163,10 @@
       "lastHttpStatus": 200
     },
     "news-politics-jp": {
-      "lastAttemptAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastAttemptAt": "2026-09-15T03:18:02.180728+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-15T00:18:01.822540+00:00",
-      "contentUpdatedAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastSuccessAt": "2026-09-15T03:18:02.180728+00:00",
+      "contentUpdatedAt": "2026-09-15T03:18:02.180728+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -175,10 +175,10 @@
       "lastHttpStatus": 200
     },
     "news-society-jp": {
-      "lastAttemptAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastAttemptAt": "2026-09-15T03:18:02.180728+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-15T00:18:01.822540+00:00",
-      "contentUpdatedAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastSuccessAt": "2026-09-15T03:18:02.180728+00:00",
+      "contentUpdatedAt": "2026-09-15T03:18:02.180728+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -187,10 +187,10 @@
       "lastHttpStatus": 200
     },
     "news-world-jp": {
-      "lastAttemptAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastAttemptAt": "2026-09-15T03:18:02.180728+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-15T00:18:01.822540+00:00",
-      "contentUpdatedAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastSuccessAt": "2026-09-15T03:18:02.180728+00:00",
+      "contentUpdatedAt": "2026-09-15T03:18:02.180728+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -199,10 +199,10 @@
       "lastHttpStatus": 200
     },
     "news-tech-jp": {
-      "lastAttemptAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastAttemptAt": "2026-09-15T03:18:02.180728+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-15T00:18:01.822540+00:00",
-      "contentUpdatedAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastSuccessAt": "2026-09-15T03:18:02.180728+00:00",
+      "contentUpdatedAt": "2026-09-15T03:18:02.180728+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -211,10 +211,10 @@
       "lastHttpStatus": 200
     },
     "news-sports-jp": {
-      "lastAttemptAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastAttemptAt": "2026-09-15T03:18:02.180728+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-15T00:18:01.822540+00:00",
-      "contentUpdatedAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastSuccessAt": "2026-09-15T03:18:02.180728+00:00",
+      "contentUpdatedAt": "2026-09-15T03:18:02.180728+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -223,10 +223,10 @@
       "lastHttpStatus": 200
     },
     "news-health-jp": {
-      "lastAttemptAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastAttemptAt": "2026-09-15T03:18:02.180728+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-15T00:18:01.822540+00:00",
-      "contentUpdatedAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastSuccessAt": "2026-09-15T03:18:02.180728+00:00",
+      "contentUpdatedAt": "2026-09-15T03:18:02.180728+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -271,10 +271,10 @@
       "lastHttpStatus": 200
     },
     "news-entertainment-jp": {
-      "lastAttemptAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastAttemptAt": "2026-09-15T03:18:02.180728+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-15T00:18:01.822540+00:00",
-      "contentUpdatedAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastSuccessAt": "2026-09-15T03:18:02.180728+00:00",
+      "contentUpdatedAt": "2026-09-15T03:18:02.180728+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -283,10 +283,10 @@
       "lastHttpStatus": 200
     },
     "news-business-jp": {
-      "lastAttemptAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastAttemptAt": "2026-09-15T03:18:02.180728+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-15T00:18:01.822540+00:00",
-      "contentUpdatedAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastSuccessAt": "2026-09-15T03:18:02.180728+00:00",
+      "contentUpdatedAt": "2026-09-15T03:18:02.180728+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -295,10 +295,10 @@
       "lastHttpStatus": 200
     },
     "news-life-jp": {
-      "lastAttemptAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastAttemptAt": "2026-09-15T03:18:02.180728+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-15T00:18:01.822540+00:00",
-      "contentUpdatedAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastSuccessAt": "2026-09-15T03:18:02.180728+00:00",
+      "contentUpdatedAt": "2026-09-15T03:18:02.180728+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -307,10 +307,10 @@
       "lastHttpStatus": 200
     },
     "news-science-jp": {
-      "lastAttemptAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastAttemptAt": "2026-09-15T03:18:02.180728+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-15T00:18:01.822540+00:00",
-      "contentUpdatedAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastSuccessAt": "2026-09-15T03:18:02.180728+00:00",
+      "contentUpdatedAt": "2026-09-15T03:18:02.180728+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -319,10 +319,10 @@
       "lastHttpStatus": 200
     },
     "news-game-jp": {
-      "lastAttemptAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastAttemptAt": "2026-09-15T03:18:02.180728+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-15T00:18:01.822540+00:00",
-      "contentUpdatedAt": "2026-09-15T00:18:01.822540+00:00",
+      "lastSuccessAt": "2026-09-15T03:18:02.180728+00:00",
+      "contentUpdatedAt": "2026-09-15T03:18:02.180728+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -332,10 +332,10 @@
     },
     "cabinet-office-holidays": {}
   },
-  "updatedAt": "2026-09-15T03:08:14.193194+00:00",
+  "updatedAt": "2026-09-15T03:18:02.180728+00:00",
   "lastRun": {
-    "httpRequests": 4,
-    "responseBytes": 121697,
+    "httpRequests": 17,
+    "responseBytes": 1576164,
     "aiRequests": 0
   }
 }
