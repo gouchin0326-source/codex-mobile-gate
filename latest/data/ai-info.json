@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-15T15:18:00.916531+00:00",
+  "updatedAt": "2026-09-15T21:32:58.946632+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -10,7 +10,7 @@
       "genre": "開発",
       "count": 15,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "Configure cost and quality in Copilot auto model selection / GitHub Copilot weekly releases — September 7 / MAI-Code-1-Flash deprecated",
+      "signal": "Configure cost and quality in Copilot auto model selection / GitHub Copilot weekly releases — September 7 / Project HydraFusion: Frontier quality via multi-model orchestration",
       "topUrl": "https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection",
       "score": 4
     },
@@ -26,8 +26,8 @@
       "genre": "技術",
       "count": 2,
       "decision": "必要時だけ確認",
-      "signal": "A New Equal-Area Map for Interactive Computer Use (natively zooms to Mercator) / \"Do You Still Read the Code?\"",
-      "topUrl": "https://www.benjoffe.com/map",
+      "signal": "From Intern to Software Architect / GEFS on OpenBSD: A very early preview",
+      "topUrl": "https://chauhankiran.blogspot.com/2026/09/levels.html",
       "score": 1
     }
   ],
@@ -48,17 +48,31 @@
     },
     {
       "label": "開発",
-      "title": "MAI-Code-1-Flash deprecated",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-10-mai-code-1-flash-deprecated"
-    },
-    {
-      "label": "開発",
       "title": "Project HydraFusion: Frontier quality via multi-model orchestration",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
       "url": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/"
+    },
+    {
+      "label": "開発",
+      "title": "Enforce GitHub Advanced Security configurations",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-15-enforce-github-advanced-security-configurations"
+    },
+    {
+      "label": "開発",
+      "title": "GitHub Copilot suggests custom properties definitions",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-15-github-copilot-suggests-custom-properties-definitions"
+    },
+    {
+      "label": "開発",
+      "title": "SHA-1 in HTTPS on GitHub sunset",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-15-sha-1-in-https-on-github-sunset"
     },
     {
       "label": "AI",
@@ -69,24 +83,10 @@
     },
     {
       "label": "開発",
-      "title": "Add VS Code Agents to Copilot usage metrics",
+      "title": "Profiles now show your highest achievement badge tier",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics"
-    },
-    {
-      "label": "開発",
-      "title": "Marketing ops as code: Automating events from planning to follow-up on GitHub",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub",
-      "url": "https://github.blog/ai-and-ml/github-copilot/marketing-ops-as-code-automating-events-from-planning-to-follow-up-on-github/"
-    },
-    {
-      "label": "AI",
-      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
-      "why": "Codex/AI開発判断に関係",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one"
+      "url": "https://github.blog/changelog/2026-09-11-profiles-now-show-your-highest-achievement-badge-tier"
     }
   ],
   "items": [
@@ -127,24 +127,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "MAI-Code-1-Flash deprecated",
-      "summary": "We have deprecated MAI-Code-1-Flash across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) today, September 10, 2026. Model Deprecation date Suggested alte",
-      "url": "https://github.blog/changelog/2026-09-10-mai-code-1-flash-deprecated",
-      "published": "2026-09-10T16:54:01+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
-        "研究"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -163,6 +145,57 @@
       ]
     },
     {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Enforce GitHub Advanced Security configurations",
+      "summary": "Enterprise administrators can now enforce GitHub Advanced Security configurations across their organizations. This prevents both organization and repository administrators from overriding settings defined at the enterpri",
+      "url": "https://github.blog/changelog/2026-09-15-enforce-github-advanced-security-configurations",
+      "published": "2026-09-15T19:31:58+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "GitHub Copilot suggests custom properties definitions",
+      "summary": "GitHub Copilot can now suggest allowed values when you create a custom property for repositories in your organization. This feature is in public preview for GitHub Copilot Business and Copilot… The post GitHub Copilot su",
+      "url": "https://github.blog/changelog/2026-09-15-github-copilot-suggests-custom-properties-definitions",
+      "published": "2026-09-15T19:07:47+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "SHA-1 in HTTPS on GitHub sunset",
+      "summary": "Previously we announced we would be disabling SHA-1 in HTTPS for GitHub on September 15th, 2026. Following the planned schedule, GitHub has disabled SHA-1 in HTTPS for github.com and partner… The post SHA-1 in HTTPS on G",
+      "url": "https://github.blog/changelog/2026-09-15-sha-1-in-https-on-github-sunset",
+      "published": "2026-09-15T16:47:20+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "OpenAI",
@@ -178,6 +211,23 @@
         "AI",
         "重要",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Profiles now show your highest achievement badge tier",
+      "summary": "Your GitHub profile now displays the highest tier you’ve earned for achievements with multiple levels. Previously, profiles could display the first tier earned, even after you had progressed to a… The post Profiles now s",
+      "url": "https://github.blog/changelog/2026-09-11-profiles-now-show-your-highest-achievement-badge-tier",
+      "published": "2026-09-11T22:39:50+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -243,57 +293,6 @@
       "summary": "Checking agent-generated code usually means hopping between tabs. Learn how to view diffs, run terminal commands, and preview web apps side by side in the GitHub Copilot app. The post GitHub Copilot app for Beginners: Us",
       "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-using-the-diff-terminal-and-browser/",
       "published": "2026-09-10T21:31:19+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Refreshed repository pull requests page in public preview",
-      "summary": "A refreshed repository-level pull request listing page is now in public preview for all GitHub users. It brings powerful filtering, compact presentation mode, and more. Highlights The new page makes… The post Refreshed r",
-      "url": "https://github.blog/changelog/2026-09-10-refreshed-repository-pull-requests-page-in-public-preview",
-      "published": "2026-09-10T21:27:17+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "AI Scan for pull request APIs in public preview",
-      "summary": "You can now manage GitHub code scanning’s AI Scan for pull request enablement with REST API endpoints at the organization and repository levels. This public preview gives teams a programmatic… The post AI Scan for pull r",
-      "url": "https://github.blog/changelog/2026-09-10-ai-scan-for-pull-request-apis-in-public-preview",
-      "published": "2026-09-10T20:20:58+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Control GitHub Actions cache access with cache-mode",
-      "summary": "You can now use cache-mode to apply least-privilege access to the GitHub Actions cache at the workflow or job level. By granting each workflow or job only the cache access… The post Control GitHub Actions cache access wi",
-      "url": "https://github.blog/changelog/2026-09-10-control-github-actions-cache-access-with-cache-mode",
-      "published": "2026-09-10T17:26:59+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -475,12 +474,12 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "その他",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "A New Equal-Area Map for Interactive Computer Use (natively zooms to Mercator)",
+      "title": "From Intern to Software Architect",
       "summary": "Comments",
-      "url": "https://www.benjoffe.com/map",
-      "published": "2026-09-14T22:37:17+00:00",
+      "url": "https://chauhankiran.blogspot.com/2026/09/levels.html",
+      "published": "2026-09-15T18:38:43+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -491,12 +490,12 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "開発",
+      "topic": "その他",
       "sourceWeight": 1,
-      "title": "\"Do You Still Read the Code?\"",
+      "title": "GEFS on OpenBSD: A very early preview",
       "summary": "Comments",
-      "url": "https://zanlib.dev/blog/do-you-still-read-the-code/",
-      "published": "2026-09-14T20:16:07+00:00",
+      "url": "https://marc.info/?l=openbsd-tech&m=178948744271633&w=2",
+      "published": "2026-09-15T17:21:47+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -504,5 +503,5 @@
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-15T09:28:01.305699+00:00"
+  "lastSuccessAt": "2026-09-15T21:32:58.946632+00:00"
 }
