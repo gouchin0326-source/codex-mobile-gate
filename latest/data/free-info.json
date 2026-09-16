@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-16T14:58:02.190744+00:00",
-  "lastSuccessAt": "2026-09-16T09:38:01.523554+00:00",
+  "updatedAt": "2026-09-16T21:01:37.049891+00:00",
+  "lastSuccessAt": "2026-09-16T21:01:37.049891+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -108,8 +108,8 @@
   "contexts": [
     {
       "genre": "開発",
-      "count": 15,
-      "signal": "Configure cost and quality in Copilot auto model selection / GitHub Copilot weekly releases — September 7 / Project HydraFusion: Frontier quality via multi-model orchestration",
+      "count": 16,
+      "signal": "Configure cost and quality in Copilot auto model selection / Project HydraFusion: Frontier quality via multi-model orchestration / SCIM user responses now include a profileUrl attr",
       "decision": "CG開発・GitHub運用へ反映候補",
       "topUrl": "https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection",
       "score": 4
@@ -124,26 +124,26 @@
     },
     {
       "genre": "AI",
-      "count": 7,
-      "signal": "How Fyxer built an AI executive assistant people trust / Rapidly scaling online storage to serve over 1 billion ChatGPT users / Perplexity trusts GPT-6 Astra with end-to-end system",
+      "count": 6,
+      "signal": "How to connect AI usage to business value / How Fyxer built an AI executive assistant people trust / Rapidly scaling online storage to serve over 1 billion ChatGPT users",
       "decision": "AI/Codex運用の変化を確認",
-      "topUrl": "https://openai.com/index/fyxer",
+      "topUrl": "https://openai.com/index/how-to-connect-ai-usage-to-business-value",
       "score": 3
     },
     {
       "genre": "技術",
       "count": 1,
-      "signal": "JDK 27 has been released",
+      "signal": "Introducing GNOME 51",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://openjdk.org/projects/jdk/27/",
-      "score": 2
+      "topUrl": "https://release.gnome.org/51/",
+      "score": 1
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 2.1 - 33 km W of Salamatof, Alaska",
+      "signal": "M 1.3 - 5 km S of Brawley, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sjgsfz",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41333839",
       "score": 1
     }
   ],
@@ -185,6 +185,24 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "How to connect AI usage to business value",
+      "summary": "Learn how ChatGPT Work and Codex analytics help teams understand AI usage and spend, identify training needs, and connect adoption to business outcomes.",
+      "url": "https://openai.com/index/how-to-connect-ai-usage-to-business-value",
+      "published": "2026-09-16T12:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -203,21 +221,16 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "How Fyxer built an AI executive assistant people trust",
-      "summary": "Fyxer uses OpenAI models, fine-tuning, memory, and real user feedback to organize inboxes and draft emails in each user’s voice.",
-      "url": "https://openai.com/index/fyxer",
-      "published": "2026-09-14T12:00:00+00:00",
-      "score": 3,
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.3 - 5 km S of Brawley, CA",
+      "summary": "5 km S of Brawley, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41333839",
+      "published": "2026-09-16T20:45:00.890000+00:00",
+      "score": 1,
       "tags": [
-        "AI",
-        "重要",
-        "研究"
+        "災害"
       ]
     },
     {
@@ -225,29 +238,15 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "ニュース",
+      "topic": "その他",
       "sourceWeight": 1,
-      "title": "JDK 27 has been released",
+      "title": "Introducing GNOME 51",
       "summary": "Comments",
-      "url": "https://openjdk.org/projects/jdk/27/",
-      "published": "2026-09-16T03:17:56+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "重要"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.1 - 33 km W of Salamatof, Alaska",
-      "summary": "33 km W of Salamatof, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sjgsfz",
-      "published": "2026-09-16T09:36:15.120000+00:00",
+      "url": "https://release.gnome.org/51/",
+      "published": "2026-09-16T18:05:43+00:00",
       "score": 1,
       "tags": [
-        "災害"
+        "技術"
       ]
     },
     {
@@ -255,17 +254,16 @@
       "platform": "開発",
       "label": "GitHub更新",
       "genre": "開発",
-      "topic": "技術",
+      "topic": "その他",
       "sourceWeight": 1,
-      "title": "GitHub Copilot weekly releases — September 7",
-      "summary": "This week, GitHub Copilot introduces Jira integration in Copilot app and adaptive model orchestration with Project HydraFusion in Copilot CLI. We also introduced new agent automation in Visual Studio Code… The post GitHu",
-      "url": "https://github.blog/changelog/2026-09-10-github-copilot-weekly-releases-september-7",
-      "published": "2026-09-10T22:55:07+00:00",
-      "score": 4,
+      "title": "SCIM user responses now include a profileUrl attribute",
+      "summary": "SCIM user responses from GitHub now include the standard profileUrl attribute defined by RFC 7643, containing the absolute URL of the GitHub account linked to the external identity. Previously, matching… The post SCIM us",
+      "url": "https://github.blog/changelog/2026-09-16-scim-user-responses-now-include-a-profileurl-attribute",
+      "published": "2026-09-16T20:19:58+00:00",
+      "score": 3,
       "tags": [
         "開発",
-        "重要",
-        "研究"
+        "重要"
       ]
     },
     {
@@ -410,6 +408,24 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "How Fyxer built an AI executive assistant people trust",
+      "summary": "Fyxer uses OpenAI models, fine-tuning, memory, and real user feedback to organize inboxes and draft emails in each user’s voice.",
+      "url": "https://openai.com/index/fyxer",
+      "published": "2026-09-14T12:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -420,23 +436,6 @@
       "summary": "Your GitHub profile now displays the highest tier you’ve earned for achievements with multiple levels. Previously, profiles could display the first tier earned, even after you had progressed to a… The post Profiles now s",
       "url": "https://github.blog/changelog/2026-09-11-profiles-now-show-your-highest-achievement-badge-tier",
       "published": "2026-09-11T22:39:50+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Add VS Code Agents to Copilot usage metrics",
-      "summary": "GitHub Copilot usage metrics reports now include generally available metrics for activity in the dedicated VS Code Agents window, helping you measure adoption and engagement across enterprises and organizations. What’s… ",
-      "url": "https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics",
-      "published": "2026-09-11T21:30:30+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -581,6 +580,91 @@
       ]
     },
     {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Copilot budget increase requests are generally available",
+      "summary": "Previously, when a member used all the Copilot AI credits available to them, they were blocked from Copilot features that consume credits. This release adds a flow for them to… The post Copilot budget increase requests a",
+      "url": "https://github.blog/changelog/2026-09-16-copilot-budget-increase-requests-are-generally-available",
+      "published": "2026-09-16T20:17:18+00:00",
+      "score": 2,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Helping older adults use AI in everyday life",
+      "summary": "OpenAI and AARP are bringing free, hands-on ChatGPT workshops to 1,000 older adults across 10 U.S. cities to build practical AI skills safely.",
+      "url": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
+      "published": "2026-09-16T16:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Code scanning AI Scan no longer requires CodeQL default setup",
+      "summary": "You can now use AI Scan for pull requests to find security vulnerabilities, even when CodeQL default setup isn’t enabled on a repository. Previously, AI Scan for pull requests only… The post Code scanning AI Scan no long",
+      "url": "https://github.blog/changelog/2026-09-16-code-scanning-ai-scan-no-longer-requires-codeql-default-setup",
+      "published": "2026-09-16T13:26:06+00:00",
+      "score": 2,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Reimagining advertising with AI",
+      "summary": "Explore new AI-powered advertising experiences from OpenAI, including Sponsored Agents, tools for marketers, and integrations with HubSpot and Shopify.",
+      "url": "https://openai.com/index/reimagining-advertising-with-ai",
+      "published": "2026-09-16T13:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "How workers are unlocking new ways of working",
+      "summary": "New OpenAI Economic Research shows how workers use AI beyond traditional roles and which new activities become recurring parts of their work.",
+      "url": "https://openai.com/index/unlocking-new-ways-of-working",
+      "published": "2026-09-16T09:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -613,123 +697,38 @@
         "論文",
         "研究"
       ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
-      "summary": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less frequently than with earlier models.",
-      "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
-      "published": "2026-09-14T00:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "研究"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
-      "summary": "César de la Fuente’s lab uses Codex and ChatGPT to search living and extinct genomes for antimicrobial candidates to fight drug-resistant infections.",
-      "url": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
-      "published": "2026-09-10T16:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Now everyone can put data to work",
-      "summary": "Meet the Data agent in ChatGPT Work. Connect company data, uncover insights, and build interactive dashboards with AI using natural language.",
-      "url": "https://openai.com/index/put-data-to-work",
-      "published": "2026-09-10T15:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Introducing ChatGPT for Financial Services",
-      "summary": "Introducing ChatGPT for Financial Services, combining built-in financial data and GPT-6 Astra for research, modeling, and client-ready materials.",
-      "url": "https://openai.com/index/introducing-chatgpt-financial-services",
-      "published": "2026-09-10T07:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "研究"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Expanding AI access and cyber defense for federal, state, local, and tribal governments",
-      "summary": "OpenAI and GSA will offer eligible federal, state, local, and tribal governments $0 license fees, 50% off usage, and expanded cyber defense support.",
-      "url": "https://openai.com/index/expanding-ai-access-us-government",
-      "published": "2026-09-10T07:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T09:38:01.523554+00:00",
-      "lastAttemptAt": "2026-09-16T09:38:01.523554+00:00",
+      "lastSuccessAt": "2026-09-16T21:01:37.049891+00:00",
+      "lastAttemptAt": "2026-09-16T21:01:37.049891+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T09:38:01.523554+00:00",
-      "lastAttemptAt": "2026-09-16T09:38:01.523554+00:00",
+      "lastSuccessAt": "2026-09-16T21:01:37.049891+00:00",
+      "lastAttemptAt": "2026-09-16T21:01:37.049891+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T09:38:01.523554+00:00",
-      "lastAttemptAt": "2026-09-16T09:38:01.523554+00:00",
+      "lastSuccessAt": "2026-09-16T21:01:37.049891+00:00",
+      "lastAttemptAt": "2026-09-16T21:01:37.049891+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T09:38:01.523554+00:00",
-      "lastAttemptAt": "2026-09-16T09:38:01.523554+00:00",
+      "lastSuccessAt": "2026-09-16T21:01:37.049891+00:00",
+      "lastAttemptAt": "2026-09-16T21:01:37.049891+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -744,8 +743,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T09:38:01.523554+00:00",
-      "lastAttemptAt": "2026-09-16T09:38:01.523554+00:00",
+      "lastSuccessAt": "2026-09-16T21:01:37.049891+00:00",
+      "lastAttemptAt": "2026-09-16T21:01:37.049891+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
