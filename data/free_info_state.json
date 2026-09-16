@@ -2,8 +2,8 @@
   "version": 1,
   "daily": {
     "date": "2026-09-16",
-    "httpRequests": 222,
-    "responseBytes": 12036269
+    "httpRequests": 224,
+    "responseBytes": 12037461
   },
   "sources": {
     "openai": {
@@ -79,9 +79,9 @@
       "lastHttpStatus": 200
     },
     "jma-toyama-warning": {
-      "lastAttemptAt": "2026-09-16T09:48:02.004043+00:00",
+      "lastAttemptAt": "2026-09-16T10:08:04.030507+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T09:48:02.004043+00:00",
+      "lastSuccessAt": "2026-09-16T10:08:04.030507+00:00",
       "contentUpdatedAt": "2026-09-05T03:44:09.088385+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
@@ -91,15 +91,15 @@
       "lastHttpStatus": 304
     },
     "jma-nowcast": {
-      "lastAttemptAt": "2026-09-16T09:48:02.004043+00:00",
+      "lastAttemptAt": "2026-09-16T10:08:04.030507+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T09:48:02.004043+00:00",
-      "contentUpdatedAt": "2026-09-16T09:48:02.004043+00:00",
+      "lastSuccessAt": "2026-09-16T10:08:04.030507+00:00",
+      "contentUpdatedAt": "2026-09-16T10:08:04.030507+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
-      "etag": "\"23ed0a0feb1d2a0db58a7221476ccda0\"",
-      "lastModified": "Wed, 16 Sep 2026 09:46:41 GMT",
+      "etag": "\"c7927b2827e9ec868edd39fee77ddd2b\"",
+      "lastModified": "Wed, 16 Sep 2026 10:06:45 GMT",
       "lastHttpStatus": 200
     },
     "open-meteo-toyama": {
@@ -332,10 +332,10 @@
     },
     "cabinet-office-holidays": {}
   },
-  "updatedAt": "2026-09-16T09:58:01.329535+00:00",
+  "updatedAt": "2026-09-16T10:08:04.030507+00:00",
   "lastRun": {
-    "httpRequests": 14,
-    "responseBytes": 810749,
+    "httpRequests": 2,
+    "responseBytes": 1192,
     "aiRequests": 0
   }
 }
