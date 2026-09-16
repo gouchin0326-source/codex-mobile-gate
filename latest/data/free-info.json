@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-16T09:28:00.893108+00:00",
-  "lastSuccessAt": "2026-09-16T03:38:01.322141+00:00",
+  "updatedAt": "2026-09-16T09:38:01.523554+00:00",
+  "lastSuccessAt": "2026-09-16T09:38:01.523554+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -133,17 +133,17 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "Small Programming Tricks",
+      "signal": "JDK 27 has been released",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://will-keleher.com/posts/small-programming-tricks-matter/",
-      "score": 1
+      "topUrl": "https://openjdk.org/projects/jdk/27/",
+      "score": 2
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 0.7 - 3 km NW of The Geysers, CA",
+      "signal": "M 2.1 - 33 km W of Salamatof, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75436377",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sjgsfz",
       "score": 1
     }
   ],
@@ -221,32 +221,33 @@
       ]
     },
     {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.7 - 3 km NW of The Geysers, CA",
-      "summary": "3 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75436377",
-      "published": "2026-09-16T03:22:09.620000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "ガジェット",
+      "topic": "ニュース",
       "sourceWeight": 1,
-      "title": "Small Programming Tricks",
+      "title": "JDK 27 has been released",
       "summary": "Comments",
-      "url": "https://will-keleher.com/posts/small-programming-tricks-matter/",
-      "published": "2026-09-15T20:50:57+00:00",
+      "url": "https://openjdk.org/projects/jdk/27/",
+      "published": "2026-09-16T03:17:56+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "重要"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 2.1 - 33 km W of Salamatof, Alaska",
+      "summary": "33 km W of Salamatof, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sjgsfz",
+      "published": "2026-09-16T09:36:15.120000+00:00",
       "score": 1,
       "tags": [
-        "技術"
+        "災害"
       ]
     },
     {
@@ -703,32 +704,32 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T03:38:01.322141+00:00",
-      "lastAttemptAt": "2026-09-16T03:38:01.322141+00:00",
+      "lastSuccessAt": "2026-09-16T09:38:01.523554+00:00",
+      "lastAttemptAt": "2026-09-16T09:38:01.523554+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T03:38:01.322141+00:00",
-      "lastAttemptAt": "2026-09-16T03:38:01.322141+00:00",
+      "lastSuccessAt": "2026-09-16T09:38:01.523554+00:00",
+      "lastAttemptAt": "2026-09-16T09:38:01.523554+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T03:38:01.322141+00:00",
-      "lastAttemptAt": "2026-09-16T03:38:01.322141+00:00",
+      "lastSuccessAt": "2026-09-16T09:38:01.523554+00:00",
+      "lastAttemptAt": "2026-09-16T09:38:01.523554+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T03:38:01.322141+00:00",
-      "lastAttemptAt": "2026-09-16T03:38:01.322141+00:00",
+      "lastSuccessAt": "2026-09-16T09:38:01.523554+00:00",
+      "lastAttemptAt": "2026-09-16T09:38:01.523554+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -743,8 +744,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T03:38:01.322141+00:00",
-      "lastAttemptAt": "2026-09-16T03:38:01.322141+00:00",
+      "lastSuccessAt": "2026-09-16T09:38:01.523554+00:00",
+      "lastAttemptAt": "2026-09-16T09:38:01.523554+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

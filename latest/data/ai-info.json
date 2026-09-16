@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-16T09:28:00.893108+00:00",
+  "updatedAt": "2026-09-16T09:38:01.523554+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -16,7 +16,7 @@
     },
     {
       "genre": "論文",
-      "count": 7,
+      "count": 6,
       "decision": "必要時だけ確認",
       "signal": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search / Generalized Agent Iteration: One Formal Framework for Iterative Policy Improvement and Recursive Self-Improvement / Vibe Patenti",
       "topUrl": "https://arxiv.org/abs/2609.13356",
@@ -29,6 +29,14 @@
       "signal": "How Fyxer built an AI executive assistant people trust / Rapidly scaling online storage to serve over 1 billion ChatGPT users",
       "topUrl": "https://openai.com/index/fyxer",
       "score": 3
+    },
+    {
+      "genre": "技術",
+      "count": 1,
+      "decision": "必要時だけ確認",
+      "signal": "JDK 27 has been released",
+      "topUrl": "https://openjdk.org/projects/jdk/27/",
+      "score": 2
     }
   ],
   "focus": [
@@ -493,23 +501,23 @@
       ]
     },
     {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "技術",
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "topic": "ニュース",
       "sourceWeight": 1,
-      "title": "Converge Then Diversify: Decoupling Convergence and Diversity in Multi-Objective Bayesian Optimisation",
-      "summary": "arXiv:2609.13396v1 Announce Type: new Abstract: Multi-objective Bayesian optimisation (MOBO) is a sample-efficient approach for optimising expensive black-box functions with multiple objectives. In MOBO, the goal is to a",
-      "url": "https://arxiv.org/abs/2609.13396",
-      "published": "2026-09-15T04:00:00+00:00",
+      "title": "JDK 27 has been released",
+      "summary": "Comments",
+      "url": "https://openjdk.org/projects/jdk/27/",
+      "published": "2026-09-16T03:17:56+00:00",
       "score": 2,
       "tags": [
-        "論文",
-        "研究"
+        "技術",
+        "重要"
       ]
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-16T03:38:01.322141+00:00"
+  "lastSuccessAt": "2026-09-16T09:38:01.523554+00:00"
 }
