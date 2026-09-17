@@ -1,37 +1,44 @@
 {
-  "updatedAt": "2026-09-17T02:28:01.383775+00:00",
+  "updatedAt": "2026-09-17T02:38:02.298274+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "Configure cost and quality in Copilot auto model selection",
+  "topLine": "Artificial intelligence and biosecurity: capabilities, threat pathways, and defense-in-depth governance",
   "cards": [
     {
       "genre": "開発",
-      "count": 15,
+      "count": 16,
       "decision": "CG開発・GitHub運用へ反映候補",
       "signal": "Configure cost and quality in Copilot auto model selection / Project HydraFusion: Frontier quality via multi-model orchestration / SCIM user responses now include a profileUrl attribute",
       "topUrl": "https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection",
       "score": 4
     },
     {
-      "genre": "論文",
-      "count": 6,
-      "decision": "必要時だけ確認",
-      "signal": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search / Generalized Agent Iteration: One Formal Framework for Iterative Policy Improvement and Recursive Self-Improvement / Vibe Patenti",
-      "topUrl": "https://arxiv.org/abs/2609.13356",
-      "score": 3
-    },
-    {
       "genre": "AI",
-      "count": 3,
+      "count": 4,
       "decision": "AI/Codex運用の変化を確認",
       "signal": "How to connect AI usage to business value / How Fyxer built an AI executive assistant people trust / Rapidly scaling online storage to serve over 1 billion ChatGPT users",
       "topUrl": "https://openai.com/index/how-to-connect-ai-usage-to-business-value",
       "score": 3
+    },
+    {
+      "genre": "論文",
+      "count": 4,
+      "decision": "必要時だけ確認",
+      "signal": "Artificial intelligence and biosecurity: capabilities, threat pathways, and defense-in-depth governance / GPEvac: GNN-Based PPO for Adaptive Evacuation Routing During Shooting Events / Position: AI Is Not Ready for Strat",
+      "topUrl": "https://arxiv.org/abs/2609.16213",
+      "score": 4
     }
   ],
   "focus": [
+    {
+      "label": "論文",
+      "title": "Artificial intelligence and biosecurity: capabilities, threat pathways, and defense-in-depth governance",
+      "why": "Codex/AI開発判断に関係",
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2609.16213"
+    },
     {
       "label": "開発",
       "title": "Configure cost and quality in Copilot auto model selection",
@@ -61,35 +68,47 @@
       "url": "https://openai.com/index/how-to-connect-ai-usage-to-business-value"
     },
     {
-      "label": "開発",
-      "title": "Enforce GitHub Advanced Security configurations",
+      "label": "論文",
+      "title": "GPEvac: GNN-Based PPO for Adaptive Evacuation Routing During Shooting Events",
       "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-15-enforce-github-advanced-security-configurations"
-    },
-    {
-      "label": "開発",
-      "title": "GitHub Copilot suggests custom properties definitions",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-15-github-copilot-suggests-custom-properties-definitions"
-    },
-    {
-      "label": "開発",
-      "title": "SHA-1 in HTTPS on GitHub sunset",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-15-sha-1-in-https-on-github-sunset"
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2609.16163"
     },
     {
       "label": "論文",
-      "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
+      "title": "Position: AI Is Not Ready for Strategic Conflicts",
       "why": "Codex/AI開発判断に関係",
       "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.13356"
+      "url": "https://arxiv.org/abs/2609.16189"
+    },
+    {
+      "label": "論文",
+      "title": "Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD for Long-Lived Sessions",
+      "why": "Codex/AI開発判断に関係",
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2609.16215"
     }
   ],
   "items": [
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Artificial intelligence and biosecurity: capabilities, threat pathways, and defense-in-depth governance",
+      "summary": "arXiv:2609.16213v1 Announce Type: new Abstract: Artificial intelligence is reshaping biological research across an increasingly connected digital-to-physical workflow. General-purpose large language models can retrieve a",
+      "url": "https://arxiv.org/abs/2609.16213",
+      "published": "2026-09-16T04:00:00+00:00",
+      "score": 4,
+      "tags": [
+        "論文",
+        "重要",
+        "開発",
+        "研究"
+      ]
+    },
     {
       "source": "github-changelog",
       "platform": "開発",
@@ -162,6 +181,60 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "GPEvac: GNN-Based PPO for Adaptive Evacuation Routing During Shooting Events",
+      "summary": "arXiv:2609.16163v1 Announce Type: new Abstract: The sharp increase in mass shootings underscores an urgent need for systems that guide victims to safety in real time. An effective evacuation system must minimize threat e",
+      "url": "https://arxiv.org/abs/2609.16163",
+      "published": "2026-09-16T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Position: AI Is Not Ready for Strategic Conflicts",
+      "summary": "arXiv:2609.16189v1 Announce Type: new Abstract: Open-ended strategic wargames are high-stakes LM-based social simulations: they model adversaries, institutions, escalation, plan brittleness, doctrine, and crisis response",
+      "url": "https://arxiv.org/abs/2609.16189",
+      "published": "2026-09-16T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "制作",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD for Long-Lived Sessions",
+      "summary": "arXiv:2609.16215v1 Announce Type: new Abstract: GPU high bandwidth memory is scarce and expensive, and KV caches consume much of it as chats, agent loops, and document question answering accumulate state. Systems such as",
+      "url": "https://arxiv.org/abs/2609.16215",
+      "published": "2026-09-16T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -210,114 +283,6 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
-      "summary": "arXiv:2609.13356v1 Announce Type: new Abstract: In this work, we present ZGCM-1, a fully open 7B dense foundation model trained from scratch with extreme data, system, and algorithmic efficiency. ZGCM-1 is founded on a c",
-      "url": "https://arxiv.org/abs/2609.13356",
-      "published": "2026-09-15T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Generalized Agent Iteration: One Formal Framework for Iterative Policy Improvement and Recursive Self-Improvement",
-      "summary": "arXiv:2609.13406v1 Announce Type: new Abstract: When we speak of recursive self-improvement (RSI), are we speaking of a phenomenon, a mechanism, or a prospect? Towards autonomous and evolving intelligence, RSI is being c",
-      "url": "https://arxiv.org/abs/2609.13406",
-      "published": "2026-09-15T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Vibe Patenting: Evaluating LLM Judges for Professional Patent-Drafting Agents",
-      "summary": "arXiv:2609.13422v1 Announce Type: new Abstract: LLM judges are increasingly used to evaluate and improve AI-generated outputs, yet their reliability for complex professional work remains unclear. We study this problem th",
-      "url": "https://arxiv.org/abs/2609.13422",
-      "published": "2026-09-15T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Toward Self-Adaptive Physical AI: Can LLM Agents Manage Long-Horizon Physical Tasks?",
-      "summary": "arXiv:2609.13436v1 Announce Type: new Abstract: Large Language Model (LLM) agents offer a promising path toward autonomously managing long-term physical tasks without human intervention. However, physical tasks require a",
-      "url": "https://arxiv.org/abs/2609.13436",
-      "published": "2026-09-15T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "LabAgent: Customize Any Research Hubs for Scientific Discoveries Using AI Agents",
-      "summary": "arXiv:2609.13437v1 Announce Type: new Abstract: Scientific research is a continuous process that emphasizes inheritance. Methods developed by predecessors are often expanded upon by new researchers to explore more novel ",
-      "url": "https://arxiv.org/abs/2609.13437",
-      "published": "2026-09-15T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Root-Cause Attribution Is a Search Problem: Continual Search for Long-Horizon Agent Failures",
-      "summary": "arXiv:2609.13463v1 Announce Type: new Abstract: The increasing deployment of AI agents in long-horizon tasks yields massive execution logs. Diagnosing failures within these records is crucial for reliability, as it trans",
-      "url": "https://arxiv.org/abs/2609.13463",
-      "published": "2026-09-15T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
       ]
     },
     {
@@ -508,8 +473,42 @@
         "開発",
         "重要"
       ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Helping older adults use AI in everyday life",
+      "summary": "OpenAI and AARP are bringing free, hands-on ChatGPT workshops to 1,000 older adults across 10 U.S. cities to build practical AI skills safely.",
+      "url": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
+      "published": "2026-09-16T16:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Code scanning AI Scan no longer requires CodeQL default setup",
+      "summary": "You can now use AI Scan for pull requests to find security vulnerabilities, even when CodeQL default setup isn’t enabled on a repository. Previously, AI Scan for pull requests only… The post Code scanning AI Scan no long",
+      "url": "https://github.blog/changelog/2026-09-16-code-scanning-ai-scan-no-longer-requires-codeql-default-setup",
+      "published": "2026-09-16T13:26:06+00:00",
+      "score": 2,
+      "tags": [
+        "開発",
+        "重要"
+      ]
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-16T21:01:37.049891+00:00"
+  "lastSuccessAt": "2026-09-17T02:38:02.298274+00:00"
 }
