@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-09-17T15:08:01.216532+00:00",
+  "updatedAt": "2026-09-17T21:04:17.043962+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "Artificial intelligence and biosecurity: capabilities, threat pathways, and defense-in-depth governance",
+  "topLine": "Ubuntu 26 generally available and latest migration",
   "cards": [
     {
       "genre": "開発",
       "count": 15,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "Configure cost and quality in Copilot auto model selection / Project HydraFusion: Frontier quality via multi-model orchestration / Migrating the GitHub Copilot runtime to Rust, using Copilot",
-      "topUrl": "https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection",
+      "signal": "Ubuntu 26 generally available and latest migration / Project HydraFusion: Frontier quality via multi-model orchestration / Workflow execution protections in GitHub Actions generally available",
+      "topUrl": "https://github.blog/changelog/2026-09-17-ubuntu-26-generally-available-and-latest-migration",
       "score": 4
     },
     {
@@ -33,6 +33,13 @@
   ],
   "focus": [
     {
+      "label": "開発",
+      "title": "Ubuntu 26 generally available and latest migration",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-17-ubuntu-26-generally-available-and-latest-migration"
+    },
+    {
       "label": "論文",
       "title": "Artificial intelligence and biosecurity: capabilities, threat pathways, and defense-in-depth governance",
       "why": "Codex/AI開発判断に関係",
@@ -41,17 +48,17 @@
     },
     {
       "label": "開発",
-      "title": "Configure cost and quality in Copilot auto model selection",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection"
-    },
-    {
-      "label": "開発",
       "title": "Project HydraFusion: Frontier quality via multi-model orchestration",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
       "url": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/"
+    },
+    {
+      "label": "開発",
+      "title": "Workflow execution protections in GitHub Actions generally available",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-17-workflow-execution-protections-in-github-actions-generally-available"
     },
     {
       "label": "開発",
@@ -80,16 +87,27 @@
       "why": "Codex/AI開発判断に関係",
       "source": "OpenAI",
       "url": "https://openai.com/index/model-misalignment-reporting-framework"
-    },
-    {
-      "label": "AI",
-      "title": "How to connect AI usage to business value",
-      "why": "Codex/AI開発判断に関係",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/how-to-connect-ai-usage-to-business-value"
     }
   ],
   "items": [
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Ubuntu 26 generally available and latest migration",
+      "summary": "The Ubuntu 26.04 runner image for GitHub Actions is now out of public preview and fully supported for production workflows on both x64 and arm64. As part of this release,… The post Ubuntu 26 generally available and lates",
+      "url": "https://github.blog/changelog/2026-09-17-ubuntu-26-generally-available-and-latest-migration",
+      "published": "2026-09-17T16:27:16+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "制作"
+      ]
+    },
     {
       "source": "arxiv-ai",
       "platform": "論文",
@@ -110,24 +128,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Configure cost and quality in Copilot auto model selection",
-      "summary": "GitHub Copilot auto model selection now offers three tiers: efficiency, balance, and intelligence. Choose the tier that reflects how you want auto to weigh cost, quality, and response time for… The post Configure cost an",
-      "url": "https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection",
-      "published": "2026-09-14T16:05:27+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
-        "研究"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -143,6 +143,23 @@
         "開発",
         "重要",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Workflow execution protections in GitHub Actions generally available",
+      "summary": "Workflow execution protections for GitHub Actions, previously in public preview, are now generally available for GitHub Enterprise, organizations, and repositories. Execution protections let you define an allowlist that ",
+      "url": "https://github.blog/changelog/2026-09-17-workflow-execution-protections-in-github-actions-generally-available",
+      "published": "2026-09-17T15:45:26+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -321,23 +338,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "SHA-1 in HTTPS on GitHub sunset",
-      "summary": "Previously we announced we would be disabling SHA-1 in HTTPS for GitHub on September 15th, 2026. Following the planned schedule, GitHub has disabled SHA-1 in HTTPS for github.com and partner… The post SHA-1 in HTTPS on G",
-      "url": "https://github.blog/changelog/2026-09-15-sha-1-in-https-on-github-sunset",
-      "published": "2026-09-15T16:47:20+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "OpenAI",
@@ -370,24 +370,6 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users",
-      "summary": "Learn how OpenAI evolved Habitat from a Python library into a globally distributed storage platform serving 1 billion ChatGPT users and 22M requests per second.",
-      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-one",
-      "published": "2026-09-11T10:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "開発"
       ]
     },
     {
@@ -476,6 +458,23 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Introducing Astra for Law",
+      "summary": "OpenAI for Law brings frontier intelligence for law, custom firm workflows, connected legal data sources, and legal-grade controls for confidential client work.",
+      "url": "https://openai.com/index/astra-for-law",
+      "published": "2026-09-17T00:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -511,5 +510,5 @@
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-17T09:18:01.045181+00:00"
+  "lastSuccessAt": "2026-09-17T21:04:17.043962+00:00"
 }
