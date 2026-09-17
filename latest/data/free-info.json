@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-17T02:58:01.548651+00:00",
-  "lastSuccessAt": "2026-09-17T02:38:02.298274+00:00",
+  "updatedAt": "2026-09-17T03:08:01.784333+00:00",
+  "lastSuccessAt": "2026-09-17T03:08:01.784333+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -109,26 +109,26 @@
     {
       "genre": "開発",
       "count": 16,
-      "signal": "Configure cost and quality in Copilot auto model selection / Project HydraFusion: Frontier quality via multi-model orchestration / SCIM user responses now include a profileUrl attr",
+      "signal": "Configure cost and quality in Copilot auto model selection / Project HydraFusion: Frontier quality via multi-model orchestration / Migrating the GitHub Copilot runtime to Rust, usi",
       "decision": "CG開発・GitHub運用へ反映候補",
       "topUrl": "https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection",
       "score": 4
     },
     {
+      "genre": "AI",
+      "count": 7,
+      "signal": "Our framework for reporting model misalignment / How to connect AI usage to business value / How Fyxer built an AI executive assistant people trust",
+      "decision": "AI/Codex運用の変化を確認",
+      "topUrl": "https://openai.com/index/model-misalignment-reporting-framework",
+      "score": 3
+    },
+    {
       "genre": "論文",
-      "count": 8,
+      "count": 7,
       "signal": "Artificial intelligence and biosecurity: capabilities, threat pathways, and defense-in-depth governance / GPEvac: GNN-Based PPO for Adaptive Evacuation Routing During Shooting Even",
       "decision": "更新あり。必要時だけ確認",
       "topUrl": "https://arxiv.org/abs/2609.16213",
       "score": 4
-    },
-    {
-      "genre": "AI",
-      "count": 6,
-      "signal": "How to connect AI usage to business value / How Fyxer built an AI executive assistant people trust / Rapidly scaling online storage to serve over 1 billion ChatGPT users",
-      "decision": "AI/Codex運用の変化を確認",
-      "topUrl": "https://openai.com/index/how-to-connect-ai-usage-to-business-value",
-      "score": 3
     },
     {
       "genre": "技術",
@@ -141,9 +141,9 @@
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.3 - 5 km S of Brawley, CA",
+      "signal": "M 1.3 - 5 km NW of The Geysers, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41333839",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75437037",
       "score": 1
     }
   ],
@@ -210,10 +210,10 @@
       "genre": "AI",
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "How to connect AI usage to business value",
-      "summary": "Learn how ChatGPT Work and Codex analytics help teams understand AI usage and spend, identify training needs, and connect adoption to business outcomes.",
-      "url": "https://openai.com/index/how-to-connect-ai-usage-to-business-value",
-      "published": "2026-09-16T12:00:00+00:00",
+      "title": "Our framework for reporting model misalignment",
+      "summary": "OpenAI shares a framework for tracking, investigating, and disclosing model misalignment, alongside six reports of unexpected or concerning model behavior.",
+      "url": "https://openai.com/index/model-misalignment-reporting-framework",
+      "published": "2026-09-16T17:00:00+00:00",
       "score": 3,
       "tags": [
         "AI",
@@ -225,10 +225,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.3 - 5 km S of Brawley, CA",
-      "summary": "5 km S of Brawley, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41333839",
-      "published": "2026-09-16T20:45:00.890000+00:00",
+      "title": "M 1.3 - 5 km NW of The Geysers, CA",
+      "summary": "5 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75437037",
+      "published": "2026-09-17T03:04:24.440000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -251,6 +251,40 @@
       ]
     },
     {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Migrating the GitHub Copilot runtime to Rust, using Copilot",
+      "summary": "A rewrite this size wasn't affordable before agents. Here's what porting the Copilot agent runtime to 800,000 lines of production Rust actually took. The post Migrating the GitHub Copilot runtime to Rust, using Copilot a",
+      "url": "https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/",
+      "published": "2026-09-17T00:26:43+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Automate SSO authorization for classic PATs and SSH keys",
+      "summary": "Enterprise admins can now automate SSO authorization for existing classic personal access tokens (PATs) and SSH keys for organizations in GitHub Enterprise Cloud, replacing manual per-organization authorization by your d",
+      "url": "https://github.blog/changelog/2026-09-16-automate-sso-authorization-for-classic-pats-and-ssh-keys",
+      "published": "2026-09-16T20:20:16+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -265,6 +299,24 @@
       "tags": [
         "開発",
         "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "How to connect AI usage to business value",
+      "summary": "Learn how ChatGPT Work and Codex analytics help teams understand AI usage and spend, identify training needs, and connect adoption to business outcomes.",
+      "url": "https://openai.com/index/how-to-connect-ai-usage-to-business-value",
+      "published": "2026-09-16T12:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
       ]
     },
     {
@@ -391,23 +443,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Profiles now show your highest achievement badge tier",
-      "summary": "Your GitHub profile now displays the highest tier you’ve earned for achievements with multiple levels. Previously, profiles could display the first tier earned, even after you had progressed to a… The post Profiles now s",
-      "url": "https://github.blog/changelog/2026-09-11-profiles-now-show-your-highest-achievement-badge-tier",
-      "published": "2026-09-11T22:39:50+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -521,23 +556,6 @@
       "summary": "Why shorter outputs can cost more, and how GitHub Copilot reduces wasted work across the complete coding task. The post How we make AI coding more cost efficient without sacrificing task quality appeared first on The Git",
       "url": "https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/",
       "published": "2026-09-02T18:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "OpenClaw went viral. Meet the maintainers building and securing it.",
-      "summary": "OpenClaw is the fastest-growing project in GitHub history. Peter Steinberger and several maintainers share what they learned in the project's first six months. The post OpenClaw went viral. Meet the maintainers building ",
-      "url": "https://github.blog/open-source/maintainers/openclaw-went-viral-meet-the-maintainers-building-and-securing-it/",
-      "published": "2026-08-27T16:00:00+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -679,55 +697,38 @@
         "論文",
         "研究"
       ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Toward Governance-Aware Autonomous GIS: A Narrative Review of Ethical and Privacy Risks in LLM-Enabled GeoAI",
-      "summary": "arXiv:2609.16232v1 Announce Type: new Abstract: Geospatial artificial intelligence (GeoAI) powered by large language models (LLMs) is expanding the capacity to query, generate, and interpret spatial information through n",
-      "url": "https://arxiv.org/abs/2609.16232",
-      "published": "2026-09-16T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T21:01:37.049891+00:00",
-      "lastAttemptAt": "2026-09-16T21:01:37.049891+00:00",
+      "lastSuccessAt": "2026-09-17T03:08:01.784333+00:00",
+      "lastAttemptAt": "2026-09-17T03:08:01.784333+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T21:01:37.049891+00:00",
-      "lastAttemptAt": "2026-09-16T21:01:37.049891+00:00",
+      "lastSuccessAt": "2026-09-17T03:08:01.784333+00:00",
+      "lastAttemptAt": "2026-09-17T03:08:01.784333+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T21:01:37.049891+00:00",
-      "lastAttemptAt": "2026-09-16T21:01:37.049891+00:00",
+      "lastSuccessAt": "2026-09-17T03:08:01.784333+00:00",
+      "lastAttemptAt": "2026-09-17T03:08:01.784333+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T21:01:37.049891+00:00",
-      "lastAttemptAt": "2026-09-16T21:01:37.049891+00:00",
+      "lastSuccessAt": "2026-09-17T03:08:01.784333+00:00",
+      "lastAttemptAt": "2026-09-17T03:08:01.784333+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -742,8 +743,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T21:01:37.049891+00:00",
-      "lastAttemptAt": "2026-09-16T21:01:37.049891+00:00",
+      "lastSuccessAt": "2026-09-17T03:08:01.784333+00:00",
+      "lastAttemptAt": "2026-09-17T03:08:01.784333+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

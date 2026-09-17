@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T02:58:01.548651+00:00",
+  "updatedAt": "2026-09-17T03:08:01.784333+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -8,18 +8,18 @@
   "cards": [
     {
       "genre": "開発",
-      "count": 16,
+      "count": 15,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "Configure cost and quality in Copilot auto model selection / Project HydraFusion: Frontier quality via multi-model orchestration / SCIM user responses now include a profileUrl attribute",
+      "signal": "Configure cost and quality in Copilot auto model selection / Project HydraFusion: Frontier quality via multi-model orchestration / Migrating the GitHub Copilot runtime to Rust, using Copilot",
       "topUrl": "https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection",
       "score": 4
     },
     {
       "genre": "AI",
-      "count": 4,
+      "count": 5,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "How to connect AI usage to business value / How Fyxer built an AI executive assistant people trust / Rapidly scaling online storage to serve over 1 billion ChatGPT users",
-      "topUrl": "https://openai.com/index/how-to-connect-ai-usage-to-business-value",
+      "signal": "Our framework for reporting model misalignment / How to connect AI usage to business value / How Fyxer built an AI executive assistant people trust",
+      "topUrl": "https://openai.com/index/model-misalignment-reporting-framework",
       "score": 3
     },
     {
@@ -55,6 +55,20 @@
     },
     {
       "label": "開発",
+      "title": "Migrating the GitHub Copilot runtime to Rust, using Copilot",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub",
+      "url": "https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/"
+    },
+    {
+      "label": "開発",
+      "title": "Automate SSO authorization for classic PATs and SSH keys",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-16-automate-sso-authorization-for-classic-pats-and-ssh-keys"
+    },
+    {
+      "label": "開発",
       "title": "SCIM user responses now include a profileUrl attribute",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
@@ -62,31 +76,17 @@
     },
     {
       "label": "AI",
+      "title": "Our framework for reporting model misalignment",
+      "why": "Codex/AI開発判断に関係",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/model-misalignment-reporting-framework"
+    },
+    {
+      "label": "AI",
       "title": "How to connect AI usage to business value",
       "why": "Codex/AI開発判断に関係",
       "source": "OpenAI",
       "url": "https://openai.com/index/how-to-connect-ai-usage-to-business-value"
-    },
-    {
-      "label": "論文",
-      "title": "GPEvac: GNN-Based PPO for Adaptive Evacuation Routing During Shooting Events",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.16163"
-    },
-    {
-      "label": "論文",
-      "title": "Position: AI Is Not Ready for Strategic Conflicts",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.16189"
-    },
-    {
-      "label": "論文",
-      "title": "Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD for Long-Lived Sessions",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.16215"
     }
   ],
   "items": [
@@ -146,6 +146,40 @@
       ]
     },
     {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Migrating the GitHub Copilot runtime to Rust, using Copilot",
+      "summary": "A rewrite this size wasn't affordable before agents. Here's what porting the Copilot agent runtime to 800,000 lines of production Rust actually took. The post Migrating the GitHub Copilot runtime to Rust, using Copilot a",
+      "url": "https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/",
+      "published": "2026-09-17T00:26:43+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Automate SSO authorization for classic PATs and SSH keys",
+      "summary": "Enterprise admins can now automate SSO authorization for existing classic personal access tokens (PATs) and SSH keys for organizations in GitHub Enterprise Cloud, replacing manual per-organization authorization by your d",
+      "url": "https://github.blog/changelog/2026-09-16-automate-sso-authorization-for-classic-pats-and-ssh-keys",
+      "published": "2026-09-16T20:20:16+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -160,6 +194,24 @@
       "tags": [
         "開発",
         "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Our framework for reporting model misalignment",
+      "summary": "OpenAI shares a framework for tracking, investigating, and disclosing model misalignment, alongside six reports of unexpected or concerning model behavior.",
+      "url": "https://openai.com/index/model-misalignment-reporting-framework",
+      "published": "2026-09-16T17:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
       ]
     },
     {
@@ -304,23 +356,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Profiles now show your highest achievement badge tier",
-      "summary": "Your GitHub profile now displays the highest tier you’ve earned for achievements with multiple levels. Previously, profiles could display the first tier earned, even after you had progressed to a… The post Profiles now s",
-      "url": "https://github.blog/changelog/2026-09-11-profiles-now-show-your-highest-achievement-badge-tier",
-      "published": "2026-09-11T22:39:50+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -441,23 +476,6 @@
       ]
     },
     {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "OpenClaw went viral. Meet the maintainers building and securing it.",
-      "summary": "OpenClaw is the fastest-growing project in GitHub history. Peter Steinberger and several maintainers share what they learned in the project's first six months. The post OpenClaw went viral. Meet the maintainers building ",
-      "url": "https://github.blog/open-source/maintainers/openclaw-went-viral-meet-the-maintainers-building-and-securing-it/",
-      "published": "2026-08-27T16:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -490,25 +508,8 @@
         "AI",
         "重要"
       ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Code scanning AI Scan no longer requires CodeQL default setup",
-      "summary": "You can now use AI Scan for pull requests to find security vulnerabilities, even when CodeQL default setup isn’t enabled on a repository. Previously, AI Scan for pull requests only… The post Code scanning AI Scan no long",
-      "url": "https://github.blog/changelog/2026-09-16-code-scanning-ai-scan-no-longer-requires-codeql-default-setup",
-      "published": "2026-09-16T13:26:06+00:00",
-      "score": 2,
-      "tags": [
-        "開発",
-        "重要"
-      ]
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-17T02:38:02.298274+00:00"
+  "lastSuccessAt": "2026-09-17T03:08:01.784333+00:00"
 }
