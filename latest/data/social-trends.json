@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-17T00:08:01.223246+00:00",
-  "lastSuccessAt": "2026-09-17T00:08:01.223246+00:00",
+  "updatedAt": "2026-09-17T00:18:01.449426+00:00",
+  "lastSuccessAt": "2026-09-17T00:18:01.449426+00:00",
   "status": "fresh",
   "mode": "zero-token-social-trends",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -74,8 +74,8 @@
           "platform": "Google News"
         },
         {
-          "title": "ChatGPT、世界の生成AIアプリ収益の63%を獲得——Sensor Tower調査 - BigGo ファイナンス",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE0wRTJCSDU4d3JwOFBkOElHd3JqbXJJb25RY19XeWtlM19DZU95alBpS3kyRnBtdjNvUVdfSFVQbVUwblhIa29QSWF1SkZOZm1WMTlieHBBa2lOM014TjJyYVlydWhpMWVqbERwSjNtNGF4LWZX?oc=5",
+          "title": "「AIに意識があるかもと教えるから危険になる」Microsoft AIのSuleyman氏、Anthropicを批判 - 株式会社エクサウィザーズ",
+          "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9Na1FIWjg1eTJRQS1EV1VEZVRFYTZJQUJVNHV6blMtR19QbzhNWHRpYnlyc2YwN3JRSFFGVVk2V3NEMl9HdVdMRVlJcTVib0IyTFA4RTFQQ3R3ZWZKb0NEOWVmUnJxdw?oc=5",
           "platform": "Google News"
         },
         {
@@ -324,20 +324,20 @@
   ],
   "trends": [
     {
+      "word": "anthropic",
+      "count": 12
+    },
+    {
       "word": "news",
       "count": 12
     },
     {
-      "word": "anthropic",
+      "word": "yahoo",
       "count": 10
     },
     {
       "word": "biggo",
-      "count": 10
-    },
-    {
-      "word": "yahoo",
-      "count": 10
+      "count": 8
     },
     {
       "word": "claude",
@@ -360,15 +360,15 @@
       "count": 4
     },
     {
+      "word": "tenki",
+      "count": 4
+    },
+    {
       "word": "web",
       "count": 4
     },
     {
       "word": "advisors",
-      "count": 2
-    },
-    {
-      "word": "astroarts",
       "count": 2
     }
   ],
@@ -665,6 +665,24 @@
       "region": "日本語優先"
     },
     {
+      "source": "news-ai-jp",
+      "platform": "Google News",
+      "label": "日本ニュース AI",
+      "genre": "SNS",
+      "topic": "AI",
+      "sourceWeight": 3,
+      "title": "「AIに意識があるかもと教えるから危険になる」Microsoft AIのSuleyman氏、Anthropicを批判 - 株式会社エクサウィザーズ",
+      "summary": "「AIに意識があるかもと教えるから危険になる」Microsoft AIのSuleyman氏、Anthropicを批判 株式会社エクサウィザーズ",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9Na1FIWjg1eTJRQS1EV1VEZVRFYTZJQUJVNHV6blMtR19QbzhNWHRpYnlyc2YwN3JRSFFGVVk2V3NEMl9HdVdMRVlJcTVib0IyTFA4RTFQQ3R3ZWZKb0NEOWVmUnJxdw?oc=5",
+      "published": "2026-09-16T23:21:30+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
       "source": "news-sports-jp",
       "platform": "Google News",
       "label": "日本ニュース スポーツ",
@@ -953,24 +971,6 @@
       "region": "日本語優先"
     },
     {
-      "source": "news-toyama-jp",
-      "platform": "Google News",
-      "label": "日本ニュース 富山",
-      "genre": "SNS",
-      "topic": "富山",
-      "sourceWeight": 3,
-      "title": "水稲二期作の肥料材をコメ由来で 富山・いなほ化工、プラ流出も防止 - 日本経済新聞",
-      "summary": "水稲二期作の肥料材をコメ由来で 富山・いなほ化工、プラ流出も防止 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBybFBJRjMxdUg2bUQ3dktmMG1fRXVrNFktT1dyeUp3QmVUdnctanZHbXhLQjdYQ0ltZENZUlJvdElic2ZSWS1DUXRfcHlQOWQwZUhpUEtFdUN4eXpzVXlMWUlhV05lTE5WNzNXYw?oc=5",
-      "published": "2026-09-16T20:00:00+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
       "source": "news-science-jp",
       "platform": "Google News",
       "label": "日本ニュース 科学",
@@ -1025,16 +1025,16 @@
       "region": "日本語優先"
     },
     {
-      "source": "news-ai-jp",
+      "source": "news-toyama-jp",
       "platform": "Google News",
-      "label": "日本ニュース AI",
+      "label": "日本ニュース 富山",
       "genre": "SNS",
-      "topic": "AI",
+      "topic": "富山",
       "sourceWeight": 3,
-      "title": "ChatGPT、世界の生成AIアプリ収益の63%を獲得——Sensor Tower調査 - BigGo ファイナンス",
-      "summary": "ChatGPT、世界の生成AIアプリ収益の63%を獲得——Sensor Tower調査 BigGo ファイナンス",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE0wRTJCSDU4d3JwOFBkOElHd3JqbXJJb25RY19XeWtlM19DZU95alBpS3kyRnBtdjNvUVdfSFVQbVUwblhIa29QSWF1SkZOZm1WMTlieHBBa2lOM014TjJyYVlydWhpMWVqbERwSjNtNGF4LWZX?oc=5",
-      "published": "2026-09-16T18:30:00+00:00",
+      "title": "富山(富山県)の過去の天気(実況天気・2026年09月16日) - tenki.jp",
+      "summary": "富山(富山県)の過去の天気(実況天気・2026年09月16日) tenki.jp",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBJQmVNQndHNUhSZi1OZGlvdVpQMVhKcnNRMkVfb0VEWnZ6VmtWWWZfSnhNa252ekgxWVRuem9kU1F5LU5kcndqVzBuOTJiamViOEI2b0tORmdxcFBUWFRySVZn?oc=5",
+      "published": "2026-09-16T18:29:28+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -1614,8 +1614,8 @@
     {
       "id": "news-ai-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T23:18:01.361107+00:00",
-      "lastAttemptAt": "2026-09-16T23:18:01.361107+00:00",
+      "lastSuccessAt": "2026-09-17T00:18:01.449426+00:00",
+      "lastAttemptAt": "2026-09-17T00:18:01.449426+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -1630,8 +1630,8 @@
     {
       "id": "news-disaster-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T23:18:01.361107+00:00",
-      "lastAttemptAt": "2026-09-16T23:18:01.361107+00:00",
+      "lastSuccessAt": "2026-09-17T00:18:01.449426+00:00",
+      "lastAttemptAt": "2026-09-17T00:18:01.449426+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -1686,8 +1686,8 @@
     {
       "id": "news-toyama-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T23:18:01.361107+00:00",
-      "lastAttemptAt": "2026-09-16T23:18:01.361107+00:00",
+      "lastSuccessAt": "2026-09-17T00:18:01.449426+00:00",
+      "lastAttemptAt": "2026-09-17T00:18:01.449426+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -1734,16 +1734,16 @@
     {
       "id": "mastodon-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T23:18:01.361107+00:00",
-      "lastAttemptAt": "2026-09-16T23:18:01.361107+00:00",
+      "lastSuccessAt": "2026-09-17T00:18:01.449426+00:00",
+      "lastAttemptAt": "2026-09-17T00:18:01.449426+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "mastodon-codex",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-16T23:18:01.361107+00:00",
-      "lastAttemptAt": "2026-09-16T23:18:01.361107+00:00",
+      "lastSuccessAt": "2026-09-17T00:18:01.449426+00:00",
+      "lastAttemptAt": "2026-09-17T00:18:01.449426+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
