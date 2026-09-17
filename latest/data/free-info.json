@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-17T09:08:01.204093+00:00",
-  "lastSuccessAt": "2026-09-17T03:08:01.784333+00:00",
+  "updatedAt": "2026-09-17T09:18:01.045181+00:00",
+  "lastSuccessAt": "2026-09-17T09:18:01.045181+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -133,17 +133,17 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "Introducing GNOME 51",
+      "signal": "C++26: Trivial infinite loops are no longer undefined behaviour",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://release.gnome.org/51/",
+      "topUrl": "https://www.sandordargo.com/blog/2026/09/16/cpp26-trivial-infinite-loops",
       "score": 1
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.3 - 5 km NW of The Geysers, CA",
+      "signal": "M 1.5 - 62 km S of Whites City, New Mexico",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75437037",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026siczzu",
       "score": 1
     }
   ],
@@ -225,10 +225,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.3 - 5 km NW of The Geysers, CA",
-      "summary": "5 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75437037",
-      "published": "2026-09-17T03:04:24.440000+00:00",
+      "title": "M 1.5 - 62 km S of Whites City, New Mexico",
+      "summary": "62 km S of Whites City, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026siczzu",
+      "published": "2026-09-17T09:04:04.490000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -239,12 +239,12 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
-      "topic": "その他",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Introducing GNOME 51",
+      "title": "C++26: Trivial infinite loops are no longer undefined behaviour",
       "summary": "Comments",
-      "url": "https://release.gnome.org/51/",
-      "published": "2026-09-16T18:05:43+00:00",
+      "url": "https://www.sandordargo.com/blog/2026/09/16/cpp26-trivial-infinite-loops",
+      "published": "2026-09-16T19:33:37+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -703,32 +703,32 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-17T03:08:01.784333+00:00",
-      "lastAttemptAt": "2026-09-17T03:08:01.784333+00:00",
+      "lastSuccessAt": "2026-09-17T09:18:01.045181+00:00",
+      "lastAttemptAt": "2026-09-17T09:18:01.045181+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-17T03:08:01.784333+00:00",
-      "lastAttemptAt": "2026-09-17T03:08:01.784333+00:00",
+      "lastSuccessAt": "2026-09-17T09:18:01.045181+00:00",
+      "lastAttemptAt": "2026-09-17T09:18:01.045181+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-17T03:08:01.784333+00:00",
-      "lastAttemptAt": "2026-09-17T03:08:01.784333+00:00",
+      "lastSuccessAt": "2026-09-17T09:18:01.045181+00:00",
+      "lastAttemptAt": "2026-09-17T09:18:01.045181+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-17T03:08:01.784333+00:00",
-      "lastAttemptAt": "2026-09-17T03:08:01.784333+00:00",
+      "lastSuccessAt": "2026-09-17T09:18:01.045181+00:00",
+      "lastAttemptAt": "2026-09-17T09:18:01.045181+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -743,8 +743,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-17T03:08:01.784333+00:00",
-      "lastAttemptAt": "2026-09-17T03:08:01.784333+00:00",
+      "lastSuccessAt": "2026-09-17T09:18:01.045181+00:00",
+      "lastAttemptAt": "2026-09-17T09:18:01.045181+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
