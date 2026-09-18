@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-18T02:58:01.614913+00:00",
-  "lastSuccessAt": "2026-09-18T02:48:01.753382+00:00",
+  "updatedAt": "2026-09-18T03:08:01.499968+00:00",
+  "lastSuccessAt": "2026-09-18T03:08:01.499968+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -108,10 +108,10 @@
   "contexts": [
     {
       "genre": "開発",
-      "count": 16,
-      "signal": "Ubuntu 26 generally available and latest migration / Project HydraFusion: Frontier quality via multi-model orchestration / Workflow execution protections in GitHub Actions generall",
+      "count": 15,
+      "signal": "Agentic CLI customizations now in the usage metrics API / Ubuntu 26 generally available and latest migration / Project HydraFusion: Frontier quality via multi-model orchestration",
       "decision": "CG開発・GitHub運用へ反映候補",
-      "topUrl": "https://github.blog/changelog/2026-09-17-ubuntu-26-generally-available-and-latest-migration",
+      "topUrl": "https://github.blog/changelog/2026-09-17-agentic-cli-customizations-now-in-the-usage-metrics-api",
       "score": 4
     },
     {
@@ -124,7 +124,7 @@
     },
     {
       "genre": "AI",
-      "count": 6,
+      "count": 7,
       "signal": "Our framework for reporting model misalignment / How to connect AI usage to business value / How Fyxer built an AI executive assistant people trust",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/model-misalignment-reporting-framework",
@@ -133,17 +133,17 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "Be alert: targeted attacks on prominent Rustaceans",
+      "signal": "Flock cameras are riddled with security vulnerabilities and hard-coded credentials",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://blog.rust-lang.org/2026/09/17/targeted-attacks/",
-      "score": 1
+      "topUrl": "https://micahflee.com/flock-cameras-are-riddled-with-security-vulnerabilities-and-hard-coded-credentials/",
+      "score": 2
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.3 - 27 km ENE of Pine Valley, CA",
+      "signal": "M 2.5 - 18 km N of Cooper Landing, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41334239",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026smlgtq",
       "score": 1
     }
   ],
@@ -153,17 +153,17 @@
       "platform": "開発",
       "label": "GitHub更新",
       "genre": "開発",
-      "topic": "AI",
+      "topic": "開発",
       "sourceWeight": 1,
-      "title": "Ubuntu 26 generally available and latest migration",
-      "summary": "The Ubuntu 26.04 runner image for GitHub Actions is now out of public preview and fully supported for production workflows on both x64 and arm64. As part of this release,… The post Ubuntu 26 generally available and lates",
-      "url": "https://github.blog/changelog/2026-09-17-ubuntu-26-generally-available-and-latest-migration",
-      "published": "2026-09-17T16:27:16+00:00",
+      "title": "Agentic CLI customizations now in the usage metrics API",
+      "summary": "GitHub Copilot expands existing CLI report coverage with agentic activity metrics for skills, custom agents, Model Context Protocol (MCP) servers, slash commands, and plugins. What’s new The fields appear in… The post Ag",
+      "url": "https://github.blog/changelog/2026-09-17-agentic-cli-customizations-now-in-the-usage-metrics-api",
+      "published": "2026-09-17T21:08:50+00:00",
       "score": 4,
       "tags": [
         "開発",
         "重要",
-        "制作"
+        "研究"
       ]
     },
     {
@@ -221,32 +221,51 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Flock cameras are riddled with security vulnerabilities and hard-coded credentials",
+      "summary": "Comments",
+      "url": "https://micahflee.com/flock-cameras-are-riddled-with-security-vulnerabilities-and-hard-coded-credentials/",
+      "published": "2026-09-17T21:21:18+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "重要"
+      ]
+    },
+    {
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.3 - 27 km ENE of Pine Valley, CA",
-      "summary": "27 km ENE of Pine Valley, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41334239",
-      "published": "2026-09-17T20:42:33.900000+00:00",
+      "title": "M 2.5 - 18 km N of Cooper Landing, Alaska",
+      "summary": "18 km N of Cooper Landing, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026smlgtq",
+      "published": "2026-09-18T02:47:13.415000+00:00",
       "score": 1,
       "tags": [
         "災害"
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "topic": "その他",
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Be alert: targeted attacks on prominent Rustaceans",
-      "summary": "Comments",
-      "url": "https://blog.rust-lang.org/2026/09/17/targeted-attacks/",
-      "published": "2026-09-17T18:10:52+00:00",
-      "score": 1,
+      "title": "Ubuntu 26 generally available and latest migration",
+      "summary": "The Ubuntu 26.04 runner image for GitHub Actions is now out of public preview and fully supported for production workflows on both x64 and arm64. As part of this release,… The post Ubuntu 26 generally available and lates",
+      "url": "https://github.blog/changelog/2026-09-17-ubuntu-26-generally-available-and-latest-migration",
+      "published": "2026-09-17T16:27:16+00:00",
+      "score": 4,
       "tags": [
-        "技術"
+        "開発",
+        "重要",
+        "制作"
       ]
     },
     {
@@ -387,40 +406,6 @@
         "AI",
         "重要",
         "研究"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Enforce GitHub Advanced Security configurations",
-      "summary": "Enterprise administrators can now enforce GitHub Advanced Security configurations across their organizations. This prevents both organization and repository administrators from overriding settings defined at the enterpri",
-      "url": "https://github.blog/changelog/2026-09-15-enforce-github-advanced-security-configurations",
-      "published": "2026-09-15T19:31:58+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "GitHub Copilot suggests custom properties definitions",
-      "summary": "GitHub Copilot can now suggest allowed values when you create a custom property for repositories in your organization. This feature is in public preview for GitHub Copilot Business and Copilot… The post GitHub Copilot su",
-      "url": "https://github.blog/changelog/2026-09-15-github-copilot-suggests-custom-properties-definitions",
-      "published": "2026-09-15T19:07:47+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
       ]
     },
     {
@@ -695,38 +680,55 @@
         "AI",
         "重要"
       ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "OpenAI",
+      "genre": "AI",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "How workers are unlocking new ways of working",
+      "summary": "New OpenAI Economic Research shows how workers use AI beyond traditional roles and which new activities become recurring parts of their work.",
+      "url": "https://openai.com/index/unlocking-new-ways-of-working",
+      "published": "2026-09-16T09:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-17T21:04:17.043962+00:00",
-      "lastAttemptAt": "2026-09-17T21:04:17.043962+00:00",
+      "lastSuccessAt": "2026-09-18T03:08:01.499968+00:00",
+      "lastAttemptAt": "2026-09-18T03:08:01.499968+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-17T21:04:17.043962+00:00",
-      "lastAttemptAt": "2026-09-17T21:04:17.043962+00:00",
+      "lastSuccessAt": "2026-09-18T03:08:01.499968+00:00",
+      "lastAttemptAt": "2026-09-18T03:08:01.499968+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-17T21:04:17.043962+00:00",
-      "lastAttemptAt": "2026-09-17T21:04:17.043962+00:00",
+      "lastSuccessAt": "2026-09-18T03:08:01.499968+00:00",
+      "lastAttemptAt": "2026-09-18T03:08:01.499968+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-17T21:04:17.043962+00:00",
-      "lastAttemptAt": "2026-09-17T21:04:17.043962+00:00",
+      "lastSuccessAt": "2026-09-18T03:08:01.499968+00:00",
+      "lastAttemptAt": "2026-09-18T03:08:01.499968+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -741,8 +743,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-17T21:04:17.043962+00:00",
-      "lastAttemptAt": "2026-09-17T21:04:17.043962+00:00",
+      "lastSuccessAt": "2026-09-18T03:08:01.499968+00:00",
+      "lastAttemptAt": "2026-09-18T03:08:01.499968+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

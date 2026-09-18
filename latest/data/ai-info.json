@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-09-18T02:58:01.614913+00:00",
+  "updatedAt": "2026-09-18T03:08:01.499968+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "Ubuntu 26 generally available and latest migration",
+  "topLine": "Agentic CLI customizations now in the usage metrics API",
   "cards": [
     {
       "genre": "開発",
-      "count": 14,
+      "count": 13,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "Ubuntu 26 generally available and latest migration / Project HydraFusion: Frontier quality via multi-model orchestration / Workflow execution protections in GitHub Actions generally available",
-      "topUrl": "https://github.blog/changelog/2026-09-17-ubuntu-26-generally-available-and-latest-migration",
+      "signal": "Agentic CLI customizations now in the usage metrics API / Ubuntu 26 generally available and latest migration / Project HydraFusion: Frontier quality via multi-model orchestration",
+      "topUrl": "https://github.blog/changelog/2026-09-17-agentic-cli-customizations-now-in-the-usage-metrics-api",
       "score": 4
     },
     {
@@ -29,9 +29,24 @@
       "signal": "Our framework for reporting model misalignment / How to connect AI usage to business value / How Fyxer built an AI executive assistant people trust",
       "topUrl": "https://openai.com/index/model-misalignment-reporting-framework",
       "score": 3
+    },
+    {
+      "genre": "技術",
+      "count": 1,
+      "decision": "必要時だけ確認",
+      "signal": "Flock cameras are riddled with security vulnerabilities and hard-coded credentials",
+      "topUrl": "https://micahflee.com/flock-cameras-are-riddled-with-security-vulnerabilities-and-hard-coded-credentials/",
+      "score": 2
     }
   ],
   "focus": [
+    {
+      "label": "開発",
+      "title": "Agentic CLI customizations now in the usage metrics API",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-17-agentic-cli-customizations-now-in-the-usage-metrics-api"
+    },
     {
       "label": "開発",
       "title": "Ubuntu 26 generally available and latest migration",
@@ -80,16 +95,27 @@
       "why": "Codex/AI開発判断に関係",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2609.17695"
-    },
-    {
-      "label": "開発",
-      "title": "Migrating the GitHub Copilot runtime to Rust, using Copilot",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub",
-      "url": "https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/"
     }
   ],
   "items": [
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "Agentic CLI customizations now in the usage metrics API",
+      "summary": "GitHub Copilot expands existing CLI report coverage with agentic activity metrics for skills, custom agents, Model Context Protocol (MCP) servers, slash commands, and plugins. What’s new The fields appear in… The post Ag",
+      "url": "https://github.blog/changelog/2026-09-17-agentic-cli-customizations-now-in-the-usage-metrics-api",
+      "published": "2026-09-17T21:08:50+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
+      ]
+    },
     {
       "source": "github-changelog",
       "platform": "開発",
@@ -303,40 +329,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Enforce GitHub Advanced Security configurations",
-      "summary": "Enterprise administrators can now enforce GitHub Advanced Security configurations across their organizations. This prevents both organization and repository administrators from overriding settings defined at the enterpri",
-      "url": "https://github.blog/changelog/2026-09-15-enforce-github-advanced-security-configurations",
-      "published": "2026-09-15T19:31:58+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "GitHub Copilot suggests custom properties definitions",
-      "summary": "GitHub Copilot can now suggest allowed values when you create a custom property for repositories in your organization. This feature is in public preview for GitHub Copilot Business and Copilot… The post GitHub Copilot su",
-      "url": "https://github.blog/changelog/2026-09-15-github-copilot-suggests-custom-properties-definitions",
-      "published": "2026-09-15T19:07:47+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "OpenAI",
@@ -457,6 +449,23 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Flock cameras are riddled with security vulnerabilities and hard-coded credentials",
+      "summary": "Comments",
+      "url": "https://micahflee.com/flock-cameras-are-riddled-with-security-vulnerabilities-and-hard-coded-credentials/",
+      "published": "2026-09-17T21:21:18+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "重要"
+      ]
+    },
+    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -509,5 +518,5 @@
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-18T02:48:01.753382+00:00"
+  "lastSuccessAt": "2026-09-18T03:08:01.499968+00:00"
 }
