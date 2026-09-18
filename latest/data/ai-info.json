@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18T08:58:02.050580+00:00",
+  "updatedAt": "2026-09-18T09:08:03.510439+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -16,7 +16,7 @@
     },
     {
       "genre": "論文",
-      "count": 7,
+      "count": 6,
       "decision": "必要時だけ確認",
       "signal": "EvolveTrade: Experience-Driven Policy Refinement for Self-Evolving LLM Trading Agents / Physics-Constrained Digital Twins for Sensor Integrity in Urban Pedestrian Flow: Detecting Stealthy False Data Injection with Confor",
       "topUrl": "https://arxiv.org/abs/2609.17632",
@@ -32,10 +32,10 @@
     },
     {
       "genre": "技術",
-      "count": 1,
+      "count": 2,
       "decision": "必要時だけ確認",
-      "signal": "Flock cameras are riddled with security vulnerabilities and hard-coded credentials",
-      "topUrl": "https://micahflee.com/flock-cameras-are-riddled-with-security-vulnerabilities-and-hard-coded-credentials/",
+      "signal": "Introducing System One Models & Jev / Flock cameras are riddled with security vulnerabilities and hard-coded credentials",
+      "topUrl": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
       "score": 2
     }
   ],
@@ -453,6 +453,23 @@
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Introducing System One Models & Jev",
+      "summary": "Comments",
+      "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "published": "2026-09-18T00:05:10+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "研究"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
       "topic": "技術",
       "sourceWeight": 1,
       "title": "Flock cameras are riddled with security vulnerabilities and hard-coded credentials",
@@ -498,25 +515,8 @@
         "論文",
         "研究"
       ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "What You Can't See Is Still What You Learn: A Preregistered Sixty-Society Confirmation That Evidence Masking Drives Compositional Generalization",
-      "summary": "arXiv:2609.17637v1 Announce Type: new Abstract: Restricting what a module can read may improve what a system learns to compute. We test this in a preregistered confirmation with sixty four-cell systems sharing a frozen l",
-      "url": "https://arxiv.org/abs/2609.17637",
-      "published": "2026-09-17T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
     }
   ],
   "status": "fresh",
-  "lastSuccessAt": "2026-09-18T03:08:01.499968+00:00"
+  "lastSuccessAt": "2026-09-18T09:08:03.510439+00:00"
 }
