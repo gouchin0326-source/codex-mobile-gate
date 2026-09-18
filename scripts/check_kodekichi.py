@@ -30,7 +30,7 @@ def main():
         "コデ吉、干場をびっくりさせて！", "びっくり作品を作る",
         "こんなの作ったよ！", "generateSurprise", 'bridgeFetch("/surprise"',
         "Geminiびっくり企画", "Claude領域外", "renderLatest",
-        "コデ吉の庭。指で上下左右へ動かせます", 'special:"star"', "gameLoop",
+        "三人が自律移動する共有庭", 'special:"star"', "gameLoop",
         "ArrowLeft", "gameLab", "syncGameKnowledge", "ゲーム星の発明王",
         "ゲームアプリ", "直接プレイ / HTML", "遊びから学習",
         "その場で遊べるミニゲームです",
@@ -51,8 +51,8 @@ def main():
         "完成数上限: なし（ただし1時間に1工程）", "外部API必須",
         'id="plan-auto"', "ensureAutonomousPlan", "コデ吉の自律工程",
         'bridgeFetch("/generate"', "外部API設計なし", 'lane:"codex-kodekichi-garden"',
-        "コデ吉・コデ美・コデ郎 v9.20260919", 'id="app-version"', 'id="app-updated"',
-        'datetime="2026-09-19T00:00:00+09:00"', "三部屋自律版",
+        "コデ吉・コデ美・コデ郎 v10.20260919", 'id="app-version"', 'id="app-updated"',
+        'datetime="2026-09-19T00:00:00+09:00"', "共有庭版",
         'id="experience-dialog"', 'id="experience-stage"', "openExperience", "closeExperience",
         "🔎 大きく見る", "▶ 聴く", "🎮 遊ぶ", "📖 読む", 'audio.controls=true',
         'frame.sandbox="allow-scripts"', "experienceObjectUrl", "URL.revokeObjectURL",
@@ -117,7 +117,7 @@ def main():
     assert '["タイマー","クイズ"].includes(item.recipe)' in page
     for index in (root / "index.html", root / "latest" / "index.html"):
         assert "kodekichi/index.html" in index.read_text(encoding="utf-8")
-    print("Kodekichi v9 checks passed: three autonomous rooms, Sera patterns, shared lanes")
+    print("Kodekichi v10 checks passed: shared garden, strict evaluation, shared lanes")
 
 
 if __name__ == "__main__":
