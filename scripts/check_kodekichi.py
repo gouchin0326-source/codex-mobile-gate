@@ -51,8 +51,8 @@ def main():
         "完成数上限: なし（ただし1時間に1工程）", "外部API必須",
         'id="plan-auto"', "ensureAutonomousPlan", "コデ吉の自律工程",
         'bridgeFetch("/generate"', "外部API設計なし", 'lane:"codex-kodekichi-garden"',
-        "コデ吉・コデ美・コデ郎 v8.20260914.2", 'id="app-version"', 'id="app-updated"',
-        'datetime="2026-09-14T14:18:00+09:00"', "本体更新 2026/09/14 14:18",
+        "コデ吉・コデ美・コデ郎 v9.20260919", 'id="app-version"', 'id="app-updated"',
+        'datetime="2026-09-19T00:00:00+09:00"', "三部屋自律版",
         'id="experience-dialog"', 'id="experience-stage"', "openExperience", "closeExperience",
         "🔎 大きく見る", "▶ 聴く", "🎮 遊ぶ", "📖 読む", 'audio.controls=true',
         'frame.sandbox="allow-scripts"', "experienceObjectUrl", "URL.revokeObjectURL",
@@ -117,7 +117,7 @@ def main():
     assert '["タイマー","クイズ"].includes(item.recipe)' in page
     for index in (root / "index.html", root / "latest" / "index.html"):
         assert "kodekichi/index.html" in index.read_text(encoding="utf-8")
-    print("Kodekichi v8 checks passed: Sera patterns, three AI lyric variants, vocal studio, separated lanes")
+    print("Kodekichi v9 checks passed: three autonomous rooms, Sera patterns, shared lanes")
 
 
 if __name__ == "__main__":
