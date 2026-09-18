@@ -665,10 +665,10 @@
     <div class="wrap top">
       <div>
         <h1>CG</h1>
-        <p class="tagline">CODEX Gate / 価値別アプリ管理 / 更新 2026-09-14 14:18 JST</p>
+        <p class="tagline" id="cg-updated-label">CODEX Gate / 価値別アプリ管理 / 更新情報を取得中</p>
       </div>
       <button class="refresh" id="force-update" type="button">最新版に更新</button>
-      <div class="date">更新 2026-09-14 14:18 JST</div>
+      <div class="date" id="cg-updated-date">更新情報を取得中</div>
     </div>
   </header>
 
@@ -840,9 +840,17 @@
       }));
     }
     renderCowArtifacts();
+    function renderPublishedAt(value) {
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return;
+      const text = new Intl.DateTimeFormat("ja-JP", {year:"numeric", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit", timeZone:"Asia/Tokyo"}).format(date).replaceAll("/", "-");
+      document.querySelector("#cg-updated-label")?.replaceChildren(document.createTextNode(`CODEX Gate / 価値別アプリ管理 / 更新 ${text} JST`));
+      document.querySelector("#cg-updated-date")?.replaceChildren(document.createTextNode(`更新 ${text} JST`));
+    }
     fetch("./data/today.json?v=" + Date.now())
       .then((res) => res.ok ? res.json() : null)
       .then((data) => {
+        if (data?.updatedAt) renderPublishedAt(data.updatedAt);
         if (!data || !Array.isArray(data.items)) return;
         const box = document.querySelector("#free-info-feed");
         if (!box) return;
