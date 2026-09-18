@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-18T02:38:01.486641+00:00",
-  "lastSuccessAt": "2026-09-17T21:04:17.043962+00:00",
+  "updatedAt": "2026-09-18T02:48:01.753382+00:00",
+  "lastSuccessAt": "2026-09-18T02:48:01.753382+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -115,20 +115,20 @@
       "score": 4
     },
     {
+      "genre": "論文",
+      "count": 8,
+      "signal": "EvolveTrade: Experience-Driven Policy Refinement for Self-Evolving LLM Trading Agents / Physics-Constrained Digital Twins for Sensor Integrity in Urban Pedestrian Flow: Detecting S",
+      "decision": "更新あり。必要時だけ確認",
+      "topUrl": "https://arxiv.org/abs/2609.17632",
+      "score": 3
+    },
+    {
       "genre": "AI",
-      "count": 7,
+      "count": 6,
       "signal": "Our framework for reporting model misalignment / How to connect AI usage to business value / How Fyxer built an AI executive assistant people trust",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/model-misalignment-reporting-framework",
       "score": 3
-    },
-    {
-      "genre": "論文",
-      "count": 7,
-      "signal": "Artificial intelligence and biosecurity: capabilities, threat pathways, and defense-in-depth governance / GPEvac: GNN-Based PPO for Adaptive Evacuation Routing During Shooting Even",
-      "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://arxiv.org/abs/2609.16213",
-      "score": 4
     },
     {
       "genre": "技術",
@@ -167,25 +167,6 @@
       ]
     },
     {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Artificial intelligence and biosecurity: capabilities, threat pathways, and defense-in-depth governance",
-      "summary": "arXiv:2609.16213v1 Announce Type: new Abstract: Artificial intelligence is reshaping biological research across an increasingly connected digital-to-physical workflow. General-purpose large language models can retrieve a",
-      "url": "https://arxiv.org/abs/2609.16213",
-      "published": "2026-09-16T04:00:00+00:00",
-      "score": 4,
-      "tags": [
-        "論文",
-        "重要",
-        "開発",
-        "研究"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -199,6 +180,24 @@
       "score": 4,
       "tags": [
         "開発",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "EvolveTrade: Experience-Driven Policy Refinement for Self-Evolving LLM Trading Agents",
+      "summary": "arXiv:2609.17632v1 Announce Type: new Abstract: Large language model (LLM) trading agents can combine market data, news, and executable analysis, but their behavior is often controlled by static hand-written tool-use pol",
+      "url": "https://arxiv.org/abs/2609.17632",
+      "published": "2026-09-17T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
         "重要",
         "研究"
       ]
@@ -268,6 +267,60 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Physics-Constrained Digital Twins for Sensor Integrity in Urban Pedestrian Flow: Detecting Stealthy False Data Injection with Conformal Guarantees",
+      "summary": "arXiv:2609.17635v1 Announce Type: new Abstract: City pedestrian counting systems now feed economic indicators, planning decisions and safety operations, yet the twins built on top of them treat the incoming stream as gro",
+      "url": "https://arxiv.org/abs/2609.17635",
+      "published": "2026-09-17T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "制作",
+      "sourceWeight": 1,
+      "title": "CapMem: A Benchmark for Caption-Based Episodic Memory in Egocentric Video",
+      "summary": "arXiv:2609.17688v1 Announce Type: new Abstract: Wearable assistants require episodic memory over egocentric video, yet current vision-language models face bounded frame budgets, growing visual-token costs, and long-conte",
+      "url": "https://arxiv.org/abs/2609.17688",
+      "published": "2026-09-17T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "制作",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "GraphEcho: Structural Redundancy and Evidence Provenance in LLM Graph Agents",
+      "summary": "arXiv:2609.17695v1 Announce Type: new Abstract: A large language model (LLM) agent can follow more graph paths without acquiring more independent evidence. GraphEcho tests whether agents mistake these repeated encounters",
+      "url": "https://arxiv.org/abs/2609.17695",
+      "published": "2026-09-17T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -332,60 +385,6 @@
       "score": 3,
       "tags": [
         "AI",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "GPEvac: GNN-Based PPO for Adaptive Evacuation Routing During Shooting Events",
-      "summary": "arXiv:2609.16163v1 Announce Type: new Abstract: The sharp increase in mass shootings underscores an urgent need for systems that guide victims to safety in real time. An effective evacuation system must minimize threat e",
-      "url": "https://arxiv.org/abs/2609.16163",
-      "published": "2026-09-16T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Position: AI Is Not Ready for Strategic Conflicts",
-      "summary": "arXiv:2609.16189v1 Announce Type: new Abstract: Open-ended strategic wargames are high-stakes LM-based social simulations: they model adversaries, institutions, escalation, plan brittleness, doctrine, and crisis response",
-      "url": "https://arxiv.org/abs/2609.16189",
-      "published": "2026-09-16T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "制作",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Where Should the KV Cache Live? Placement Policies Across GPU, CPU, and SSD for Long-Lived Sessions",
-      "summary": "arXiv:2609.16215v1 Announce Type: new Abstract: GPU high bandwidth memory is scarce and expensive, and KV caches consume much of it as chats, agent loops, and document question answering accumulate state. Systems such as",
-      "url": "https://arxiv.org/abs/2609.16215",
-      "published": "2026-09-16T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
         "重要",
         "研究"
       ]
@@ -545,6 +544,74 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Making AI-Assisted Claims Independently Challengeable: Publication Authority and a Protocol for Falsifiable Publication Records",
+      "summary": "arXiv:2609.17631v1 Announce Type: new Abstract: AI-assisted claims can appear authoritative when evidence, analysis, human authorization, presentation, and correction history refer to different states. Provenance, attest",
+      "url": "https://arxiv.org/abs/2609.17631",
+      "published": "2026-09-17T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "One Color Preprocessing Improves DSATUR",
+      "summary": "arXiv:2609.17633v1 Announce Type: new Abstract: The Graph Coloring Problem (GCP) is NP-hard and DSATUR stands as one of the fastest heuristics for it despite producing colorings that typically use more colors than state-",
+      "url": "https://arxiv.org/abs/2609.17633",
+      "published": "2026-09-17T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "What You Can't See Is Still What You Learn: A Preregistered Sixty-Society Confirmation That Evidence Masking Drives Compositional Generalization",
+      "summary": "arXiv:2609.17637v1 Announce Type: new Abstract: Restricting what a module can read may improve what a system learns to compute. We test this in a preregistered confirmation with sixty four-cell systems sharing a frozen l",
+      "url": "https://arxiv.org/abs/2609.17637",
+      "published": "2026-09-17T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "GVD: Governed Versioning and Deduplication for Document Repositories",
+      "summary": "arXiv:2609.17696v1 Announce Type: new Abstract: Document repositories evolve continuously. Guidelines and policies are revised, superseded, and re-uploaded, so the same content recurs in different wording and newer versi",
+      "url": "https://arxiv.org/abs/2609.17696",
+      "published": "2026-09-17T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "OpenAI",
@@ -628,74 +695,6 @@
         "AI",
         "重要"
       ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "OpenAI",
-      "genre": "AI",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "How workers are unlocking new ways of working",
-      "summary": "New OpenAI Economic Research shows how workers use AI beyond traditional roles and which new activities become recurring parts of their work.",
-      "url": "https://openai.com/index/unlocking-new-ways-of-working",
-      "published": "2026-09-16T09:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Optimal Pruning for Neural Architectures using Fisher Information Distances",
-      "summary": "arXiv:2609.16129v1 Announce Type: new Abstract: A new scheme for parameter pruning is introduced, derived from the differential-geometric distance in model space. Pruning a parameter sets its value to zero, representing ",
-      "url": "https://arxiv.org/abs/2609.16129",
-      "published": "2026-09-16T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Safe Error Correction for Language Models: Frozen-Base Adjustment with Capability Preservation",
-      "summary": "arXiv:2609.16145v1 Announce Type: new Abstract: We study a practical question: can a small correction module fix errors in a frozen language model's outputs without degrading its base capabilities? We propose CRN v2, a l",
-      "url": "https://arxiv.org/abs/2609.16145",
-      "published": "2026-09-16T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Calibrate, Then Route: A Measured Study of Learned Request Routing for Disaggregated LLM Serving",
-      "summary": "arXiv:2609.16206v1 Announce Type: new Abstract: Disaggregated LLM serving places compute heavy prefill and memory heavy decode on separate GPU pools. Systems such as DistServe, Splitwise, and Mooncake make this separatio",
-      "url": "https://arxiv.org/abs/2609.16206",
-      "published": "2026-09-16T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
     }
   ],
   "sourceStates": [
@@ -734,8 +733,8 @@
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-17T02:38:02.298274+00:00",
-      "lastAttemptAt": "2026-09-17T02:38:02.298274+00:00",
+      "lastSuccessAt": "2026-09-18T02:48:01.753382+00:00",
+      "lastAttemptAt": "2026-09-18T02:48:01.753382+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
