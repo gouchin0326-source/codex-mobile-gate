@@ -1,0 +1,16 @@
+{
+  "lane": "test",
+  "ts": "2026-09-13T14:35:00+09:00",
+  "artifact": "check_kodekichi_mobile_ui.mjs",
+  "prompt": "コデ吉・コデ美・コデ郎の390x844モバイル表示と3画面・3キャラ遷移を隔離ブラウザで検査する",
+  "source": "codex",
+  "backend": "codex",
+  "model": "gpt-5.4-mini",
+  "seconds": 3,
+  "gates": {
+    "viewport": {"pass": true, "note": "390px幅、横はみ出し0、固定ナビ右端390px"},
+    "navigation": {"pass": true, "note": "遊ぶ・設定・成果の3画面を表示"},
+    "characters": {"pass": true, "note": "コデ吉→コデ美→コデ郎→コデ吉を確認"},
+    "test_isolation": {"pass": true, "note": "専用Edgeプロファイルのみ使用"}
+  }
+}

@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCES = ROOT / "data" / "news_sources.json"
 SCHEDULE = ROOT / "data" / "free_info_schedule.json"
 SOURCE_POLICY = ROOT / "data" / "free_sources_v2.json"
+AI_PROVIDER_BASELINES = ROOT / "data" / "ai_provider_baselines.json"
 FETCH_STATE = ROOT / "data" / "free_info_state.json"
 OUT = ROOT / "latest" / "data" / "free-info.json"
 AI_OUT = ROOT / "latest" / "data" / "ai-info.json"
@@ -333,13 +334,13 @@ SOURCE_CATALOG = [
         "id": "ai-official-rss",
         "status": "active",
         "genre": "AI",
-        "provider": "OpenAI/GitHub/arXiv",
-        "method": "official/public RSS",
-        "url": "https://info.arxiv.org/help/rss.html",
+        "provider": "OpenAI/Google/Anthropic",
+        "method": "official RSS + public sitemap metadata",
+        "url": "https://openai.com/news/rss.xml",
         "cadence": "6h",
-        "value": "AI/Codex開発に関係する一次情報を分類",
-        "legalPoint": "RSSのタイトル/要約/URLのみ保存。記事全文複製なし。",
-        "nextApp": "AI動向を重要度順の判断カードに圧縮",
+        "value": "ChatGPT・Gemini・Claudeの公式更新とプラン判断を3社別に分類",
+        "legalPoint": "公式RSSまたは公開サイトマップの題名相当・更新時刻・URLだけを保存。記事本文は複製しない。",
+        "nextApp": "公式更新と実測残量から共用外部AIの安全弁を段階調整",
         "score": 5,
     },
     {
@@ -561,6 +562,7 @@ def parse_rss(source, blob):
             "platform": source.get("platform", source.get("genre", "")),
             "label": source["label"],
             "genre": source["genre"],
+            "provider": source.get("provider"),
             "topic": source.get("topic") or social_topic(title),
             "sourceWeight": 3 if source.get("platform") == "Google News" else 1,
             "title": title,
@@ -571,6 +573,37 @@ def parse_rss(source, blob):
             "tags": tags,
         })
     return items
+
+
+def parse_sitemap(source, blob):
+    root = ET.fromstring(blob)
+    namespace = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+    prefix = source.get("pathPrefix", "")
+    rows = []
+    for entry in root.findall("sm:url", namespace):
+        url = (entry.findtext("sm:loc", default="", namespaces=namespace) or "").strip()
+        if prefix and not url.startswith(prefix):
+            continue
+        lastmod = (entry.findtext("sm:lastmod", default="", namespaces=namespace) or "").strip()
+        slug = urllib.parse.unquote(url.rstrip("/").split("/")[-1]).replace("-", " ")
+        title = clean(slug).strip().title() or source["label"]
+        score, tags = score_item(title, source["label"], source["genre"])
+        rows.append({
+            "source": source["id"],
+            "platform": source.get("platform", source.get("genre", "")),
+            "label": source["label"],
+            "genre": source["genre"],
+            "provider": source.get("provider"),
+            "topic": source.get("topic") or social_topic(title),
+            "sourceWeight": 2,
+            "title": title,
+            "summary": "公式サイトマップで更新を検知。内容は公式ページで確認。",
+            "url": url,
+            "published": lastmod,
+            "score": score,
+            "tags": tags,
+        })
+    return sorted(rows, key=lambda row: row.get("published", ""), reverse=True)[:8]
 
 
 def parse_json(source, blob):
@@ -800,8 +833,8 @@ def parse_weather(source, blob):
 
 
 def build_ai_payload(items, now):
-    ai_rows = [x for x in items if x.get("genre") in {"AI", "論文", "開発", "技術"}]
-    ai_rows = sorted(ai_rows, key=lambda x: (x.get("score", 0), x.get("published", "")), reverse=True)[:24]
+    all_ai_rows = [x for x in items if x.get("genre") in {"AI", "論文", "開発", "技術"}]
+    ai_rows = sorted(all_ai_rows, key=lambda x: (x.get("score", 0), x.get("published", "")), reverse=True)[:24]
     focus = []
     for item in ai_rows[:8]:
         focus.append({
@@ -812,7 +845,7 @@ def build_ai_payload(items, now):
             "url": item.get("url", ""),
         })
     groups = {}
-    for item in ai_rows:
+    for item in all_ai_rows:
         groups.setdefault(item.get("genre", "AI"), []).append(item)
     cards = []
     for genre, rows in sorted(groups.items(), key=lambda x: (-len(x[1]), x[0])):
@@ -825,6 +858,22 @@ def build_ai_payload(items, now):
             "topUrl": top[0].get("url", "") if top else "",
             "score": max([x.get("score", 1) for x in rows] or [1]),
         })
+    baseline = json.loads(AI_PROVIDER_BASELINES.read_text(encoding="utf-8"))
+    provider_latest = {}
+    for row in all_ai_rows:
+        provider_id = row.get("provider")
+        if provider_id:
+            provider_latest.setdefault(provider_id, []).append({
+                "title": row.get("title", ""),
+                "url": row.get("url", ""),
+                "published": row.get("published", ""),
+                "source": row.get("label", ""),
+            })
+    providers = []
+    for provider in baseline.get("providers", []):
+        card = dict(provider)
+        card["latest"] = provider_latest.get(provider["id"], [])[:4]
+        providers.append(card)
     return {
         "updatedAt": now,
         "mode": "primary-rss-ai-context",
@@ -835,6 +884,13 @@ def build_ai_payload(items, now):
         "cards": cards,
         "focus": focus,
         "items": ai_rows,
+        "providerWatch": {
+            "asOf": baseline.get("asOf"),
+            "purpose": baseline.get("purpose"),
+            "monitoringPolicy": baseline.get("monitoringPolicy", {}),
+            "providers": providers,
+            "localGuardrail": baseline.get("localGuardrail", {}),
+        },
     }
 
 
@@ -1167,6 +1223,8 @@ def main():
             blob = fetch(source["url"], source["id"], has_previous=bool(fallback))
             if source["type"] == "json":
                 collected.extend(parse_json(source, blob))
+            elif source["type"] == "sitemap":
+                collected.extend(parse_sitemap(source, blob))
             else:
                 collected.extend(parse_rss(source, blob))
             source_states.append(source_state(source["id"], False, now=now_dt.isoformat()))

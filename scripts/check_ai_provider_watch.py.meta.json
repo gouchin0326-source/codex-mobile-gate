@@ -1,0 +1,15 @@
+{
+  "lane": "research",
+  "ts": "2026-09-13T09:25:00+09:00",
+  "artifact": "check_ai_provider_watch.py",
+  "prompt": "3社AI無料情報ウォッチを外部通信なしで回帰検査する",
+  "source": "codex",
+  "backend": "codex",
+  "model": "gpt-6-astra",
+  "seconds": 0,
+  "gates": {
+    "three_sources": {"pass": true, "note": "OpenAI/Gemini/Anthropicを検査"},
+    "sitemap_filter": {"pass": true, "note": "Anthropic newsだけを抽出"},
+    "provider_retention": {"pass": true, "note": "上位24件外でも3社最新を保持"}
+  }
+}

@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-09-14T13:50:01+09:00",
-  "date": "2026-09-14",
+  "updated_at": "2026-09-19T07:43:12+09:00",
+  "date": "2026-09-19",
   "window": "08:00–22:00",
   "model": "gemini-3.5-flash-lite",
   "mode": "public RSS/API continuous collection + Gemini morning/evening synthesis / three separated character lanes",
   "request_policy": "public collection uses 0 AI; all external requests use the shared serialized governor",
   "gemini_budget": {
-    "date": "2026-09-14",
+    "date": "2026-09-19",
     "timezone": "Asia/Tokyo",
     "used": 1,
     "limit": 6,
@@ -17,7 +17,7 @@
         "used": 1,
         "limit": 4,
         "remaining": 3,
-        "cooldownUntil": "2026-09-14T08:39:35+09:00"
+        "cooldownUntil": "2026-09-19T08:13:12+09:00"
       },
       "codex": {
         "used": 0,
@@ -68,7 +68,7 @@
           "time": "08:00",
           "status": "passed",
           "task": "今日の情報から遊べるゲーム案と受入基準を1件作る",
-          "artifact": "C:\\Codex\\cloud_ai\\kodekichi_autonomy\\2026-09-14\\0800-kodekichi-game.html",
+          "artifact": "C:\\Codex\\cloud_ai\\kodekichi_autonomy\\2026-09-19\\0800-kodekichi-game.html",
           "degraded": true,
           "note": "Gemini利用枠待ちのため公開RSS/APIへ縮退: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, he"
         }
@@ -103,7 +103,7 @@
           "time": "08:00",
           "status": "passed",
           "task": "今日の情報から短い音楽作品のテーマと非音声代替を1件作る",
-          "artifact": "C:\\Codex\\cloud_ai\\kodekichi_autonomy\\2026-09-14\\0800-kodemi-music.html",
+          "artifact": "C:\\Codex\\cloud_ai\\kodekichi_autonomy\\2026-09-19\\0800-kodemi-music.html",
           "degraded": true,
           "note": "Gemini利用枠待ちのため公開RSS/APIへ縮退: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, he"
         }
@@ -138,31 +138,18 @@
           "time": "08:00",
           "status": "passed",
           "task": "HAの外部AI状況と公開情報を確認し、二人へ渡す根拠付き知識を整理する",
-          "artifact": "C:\\Codex\\cloud_ai\\kodekichi_autonomy\\2026-09-14\\0800-kodesama-library.html",
+          "artifact": "C:\\Codex\\cloud_ai\\kodekichi_autonomy\\2026-09-19\\0800-kodesama-library.html",
           "degraded": true,
           "note": "Gemini利用枠待ちのため公開RSS/APIへ縮退: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, he"
         }
       ]
     }
   ],
-  "directions": [
-    {
-      "id": "direction-token-saving-evolution",
-      "agent": "all",
-      "priority": "high",
-      "task": "コデ朗が先に利用枠と既存情報を確認し、コデ吉とコデ美は重複しない改善を1件ずつ進める",
-      "why": "開発量より、Codexトークンを節約しながら必要な調査と検証を行うことを優先するため",
-      "acceptance": "予定・実績・外部AI試行・個別送信回避・縮退理由が管理盤に残り、成果は人物別に検査済みで保存される",
-      "deadline": "2026-09-14T22:00",
-      "lane": "no-ai-first",
-      "aiBudget": 1,
-      "status": "approved"
-    }
-  ],
+  "directions": [],
   "tomorrow_plan": {
-    "date": "2026-09-15",
+    "date": "2026-09-20",
     "status": "draft",
-    "createdAt": "2026-09-14T12:15:59+09:00",
+    "createdAt": "2026-09-19T07:43:12+09:00",
     "author": "コデ朗",
     "source": "deterministic-rules",
     "aiRequests": 0,
@@ -251,11 +238,11 @@
   "ha_lane_snapshot": {
     "available": true,
     "state": "ready",
-    "updatedAt": "2026-09-14T13:49:34+09:00",
+    "updatedAt": "2026-09-19T07:42:54+09:00",
     "ageMinutes": 0,
     "gpu": {
-      "status": "idle",
-      "laneOwner": null,
+      "status": "busy",
+      "laneOwner": "local-job",
       "availableAt": null
     },
     "externalAI": {
@@ -268,9 +255,9 @@
       },
       "gemini": {
         "status": "available",
-        "used": 33,
-        "limit": 100,
-        "remaining": 67,
+        "used": 0,
+        "limit": 1500,
+        "remaining": 1500,
         "resetAt": null
       },
       "codex": {
@@ -286,7 +273,7 @@
   },
   "dispatch": {
     "check_interval_minutes": 10,
-    "state": "ready",
+    "state": "waiting",
     "next_pending": "20:00",
     "joint_request": "コデ朗→コデ吉→コデ美を1要求へ統合"
   },
@@ -301,7 +288,7 @@
   },
   "google_drive": {
     "status": "synced",
-    "target": "G:\\マイドライブ\\CODEX\\kodekichi-autonomy\\2026-09-14",
-    "files": 17
+    "target": "G:\\マイドライブ\\CODEX\\kodekichi-autonomy\\2026-09-19",
+    "files": 16
   }
 }

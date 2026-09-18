@@ -1,0 +1,37 @@
+# Orbit Catcher: Zombie Siege
+
+`Gate Run` とは別方向のゾンビ制圧版です。ゴール到達よりも、大量のゾンビを銃・投擲武器・仲間でしのぎながら生き残るゲーム性に寄せています。
+
+## Controls
+
+- Move: WASD or arrow keys, or the on-screen stick.
+- Sprint: Hold Shift on PC, or push the on-screen stick deeply. Sprinting consumes stamina.
+- Shoot: Fully automatic while the round is running. Ammo and reload still matter.
+- Aim mode: Press E or tap the aim button to switch auto aim/manual aim.
+- Backpedal shooting: Hold S on PC, or hold the backpedal button on touch.
+- Grenade: Press G or use the grenade tool.
+- Molotov: Press F or use the molotov tool.
+- Mine: Press M or use the mine tool.
+- Weapon swap: Press Q, or tap a gun card.
+- Pause: Press P or the pause button.
+
+## Gameplay
+
+- Buildings and obstacle walls are now placed across the large map. Buildings can be entered, but being inside increases pressure and makes retreat planning important.
+- Zombies mostly walk in, with runners and heavy zombies mixed in from later waves.
+- Zombies have walking motion, hit stagger, burn/slow status markers, shadows, and more detailed pixel bodies.
+- The player shoots automatically, with muzzle flash, recoil, walking motion, shadow, stamina, and backpedal aiming.
+- The mobile layout uses a compact HUD: the title header is hidden, the top menu is reduced to one thin status row plus weapon/tool cards, and most of the screen is reserved for the game canvas.
+- Weapons include pistol, shotgun, and machine gun. Each gun has its own ammo count and can be switched with one tap.
+- Grenades explode, mines can be placed, and molotovs leave a burning area that damages and slows zombies over time.
+- Allies can join randomly. They have visible type colors/icons: POWER, SPEED, GUARD, TRAP, SLOW, and BLADE.
+- Ally roles include gunner, trap setter, slow-shot support, and melee cleanup. Allies have unlimited ammo but remain fragile.
+- Ammo, throwables, healing, and weapon pickups can drop from zombies.
+
+## Export
+
+- JSON: `orbit-catcher-zombie-siege-result.json`
+- Markdown: `orbit-catcher-zombie-siege-result.md`
+- AI prompt: `orbit-catcher-zombie-siege-ai-prompt.txt`
+
+Best score is stored in localStorage under `codex.orbit-catcher.zombie-siege.best.v1`.

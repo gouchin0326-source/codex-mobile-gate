@@ -1,0 +1,15 @@
+{
+  "lane": "research",
+  "ts": "2026-09-13T09:25:00+09:00",
+  "artifact": "ai_provider_baselines.json",
+  "prompt": "ChatGPT・Gemini・Claudeのプラン、得意分野、利用枠の読み方と共用安全弁を無料情報へ追加する",
+  "source": "codex",
+  "backend": "codex",
+  "model": "gpt-6-astra",
+  "seconds": 0,
+  "gates": {
+    "official_links": {"pass": true, "note": "3社それぞれ公式確認先を保持"},
+    "unknown_plan_closed": {"pass": true, "note": "未確認のGemini/Claude契約種別を断定しない"},
+    "guardrail": {"pass": true, "note": "現行6回と試行12回を区別"}
+  }
+}

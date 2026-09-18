@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-05",
+  "updated": "2026-09-01",
   "purpose": "Visualize CODEX-owned bounded PDCA lanes that turn compact tickets into verified artifacts.",
   "rules": [
     "One lane ticket per run.",
@@ -28,7 +28,7 @@
       "do": "Edit scoped files under C:\\Codex and sync public copies.",
       "check": "Run inline script checks, generator checks, and browser/human checks when visual feel matters.",
       "act": "Update HUB.md, logs\\PROGRESS.md, registry/dashboard, and next ticket.",
-      "next_ticket": "Clean stale mojibake/current-task state and align dashboard visibility."
+      "next_ticket": "Use the external AI lane run dataset to request and integrate a compact Cascade Forge mission pack."
     },
     {
       "id": "review-lane",
@@ -39,7 +39,7 @@
       "do": "Inspect only the target file and compact metadata.",
       "check": "Return ranked findings with file references and missing verification.",
       "act": "Convert accepted findings into a new implementation ticket.",
-      "next_ticket": "Review dashboard mojibake and navigation readability."
+      "next_ticket": "Review the 0901 CSD visibility refresh in dashboard.html and CG copies."
     },
     {
       "id": "handoff-lane",
@@ -50,7 +50,7 @@
       "do": "Reduce to one bounded CODEX lane ticket.",
       "check": "Confirm target files, forbidden scope, and acceptance are explicit.",
       "act": "Place the ticket in inbox or execute it when small enough.",
-      "next_ticket": "Create the first concrete ticket from Claude lane references."
+      "next_ticket": "Convert the Cascade Forge mission-pack request into one bounded integration ticket."
     },
     {
       "id": "web-designer-sample-lane",

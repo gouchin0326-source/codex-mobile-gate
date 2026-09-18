@@ -1,0 +1,13 @@
+{
+  "lane": "test",
+  "ts": "2026-09-09T00:00:00+09:00",
+  "artifact": "check_kodekichi_evolution_live.mjs",
+  "prompt": "初回制作からGemini判断、ゲート通過、画面改造までの自律進化を実ブラウザで検証する",
+  "source": "codex",
+  "backend": "codex",
+  "model": "gpt-5.4-mini",
+  "gates": {
+    "real_browser": {"pass": true, "note": "Edge CDPでlocalStorageとCanvasを実測"},
+    "external_ai": {"pass": true, "note": "Gemini橋渡し稼働時だけ実行するライブ検査"}
+  }
+}

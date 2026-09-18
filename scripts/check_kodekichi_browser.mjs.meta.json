@@ -1,0 +1,20 @@
+{
+  "lane": "test",
+  "ts": "2026-09-13T14:35:00+09:00",
+  "artifact": "check_kodekichi_browser.mjs",
+  "prompt": "隔離ブラウザでコデ吉の時間開発、コデ美の無料WAV、コデ郎の公式AI情報を検査し、制作回数へ加算しない",
+  "source": "codex",
+  "backend": "codex",
+  "model": "gpt-5.4-mini",
+  "seconds": 120,
+  "gates": {
+    "start": {"pass": true, "note": "開始後の表示がプレイ中"},
+    "star": {"pass": true, "note": "星ターゲット表示"},
+    "movement": {"pass": true, "note": "初期化後に星の泉へ移動、開始、左操作でコデ吉が40%へ移動"},
+    "decision_ui": {"pass": true, "note": "レーダー描画、比率合計100、6ゲート、外観クラスを実測"},
+    "kodero_free_feed": {"pass": true, "note": "新着書架からGemini・ChatGPT公式情報を含む6件、出典リンク3件、外部AI回数不変"},
+    "kodemi_local_wav": {"pass": true, "note": "705644 bytesのWAVを生成し、provider=local、外部AI回数不変"},
+    "timed_game_job": {"pass": true, "note": "開始、即時納品、書庫保存、待機復帰を隔離状態で確認"},
+    "test_isolation": {"pass": true, "note": "専用EdgeプロファイルのlocalStorageだけを使用し、実運用の制作・納品回数へ非加算"}
+  }
+}

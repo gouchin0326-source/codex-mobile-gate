@@ -1,5 +1,5 @@
 const port = process.argv[2] || "9335";
-const output = process.argv[3] || "C:/Codex/reports/kodekichi-mobile-0910-final.png";
+const output = process.argv[3] || "C:/Codex/reports/kodekichi-mobile-0913-final.png";
 const tabs = await (await fetch(`http://127.0.0.1:${port}/json`)).json();
 const tab = tabs.find(item => item.url?.includes("kodekichi/index.html"));
 if (!tab) throw new Error("Kodekichi browser tab not found");
@@ -33,7 +33,7 @@ await call("Page.reload", { ignoreCache: true });
 await new Promise(resolve => setTimeout(resolve, 900));
 const result = await call("Runtime.evaluate", {
   expression: `(() => {
-    if (document.body.dataset.character === 'kodemi') document.querySelector('#character-switch').click();
+    while (document.body.dataset.character !== 'kodekichi') document.querySelector('#character-switch').click();
     const pet = document.querySelector("#game-pet").getBoundingClientRect();
     const nav = document.querySelector(".mobile-dock").getBoundingClientRect();
     document.querySelector('[data-mobile-view="settings"]').click();
@@ -51,6 +51,8 @@ const result = await call("Runtime.evaluate", {
     document.querySelector('#character-switch').click();
     const switchedToKodemi = document.body.dataset.character === 'kodemi' && document.querySelector('#game-arena').dataset.mode === 'room' && document.querySelectorAll('.garden-site').length === 3;
     document.querySelector('#character-switch').click();
+    const switchedToKodesama = document.body.dataset.character === 'kodesama' && document.querySelector('#game-arena').dataset.mode === 'library' && document.querySelectorAll('.garden-site').length === 3 && document.querySelector('#app-title').textContent.includes('コデ郎');
+    document.querySelector('#character-switch').click();
     const switchedBackToKodekichi = document.body.dataset.character === 'kodekichi' && document.querySelector('#game-arena').dataset.mode === 'garden';
     return {
       innerWidth,
@@ -66,6 +68,7 @@ const result = await call("Runtime.evaluate", {
       discoveryRegistered,
       switchedToGame,
       switchedToKodemi,
+      switchedToKodesama,
       switchedBackToKodekichi,
       schedule: gardenState.schedule.start + '-' + gardenState.schedule.end
     };
@@ -74,11 +77,13 @@ const result = await call("Runtime.evaluate", {
 });
 await call("Page.reload", { ignoreCache: true });
 await new Promise(resolve => setTimeout(resolve, 500));
+await call("Runtime.evaluate", { expression: `while(document.body.dataset.character!=='kodesama')document.querySelector('#character-switch').click();scrollTo(0,0);document.querySelector('main').scrollTop=0` });
+await new Promise(resolve => setTimeout(resolve, 200));
 const screenshot = await call("Page.captureScreenshot", { format: "png", captureBeyondViewport: false });
 await import("node:fs").then(fs => fs.writeFileSync(output, Buffer.from(screenshot.result.data, "base64")));
 socket.close();
 const actual = result.result.result.value;
-if (actual.innerWidth !== 390 || actual.scrollWidth > 390 || actual.navItems !== 3 || !actual.navVisible || actual.petWidth >= 100 || Math.round(actual.navRight) !== 390 || !actual.hasTouchDrag || !actual.settingsVisible || !actual.resultsVisible || !actual.homeVisible || !actual.discoveryRegistered || !actual.switchedToGame || !actual.switchedToKodemi || !actual.switchedBackToKodekichi || actual.schedule !== "08:00-22:00") {
+if (actual.innerWidth !== 390 || actual.scrollWidth > 390 || actual.navItems !== 3 || !actual.navVisible || actual.petWidth >= 100 || Math.round(actual.navRight) !== 390 || !actual.hasTouchDrag || !actual.settingsVisible || !actual.resultsVisible || !actual.homeVisible || !actual.discoveryRegistered || !actual.switchedToGame || !actual.switchedToKodemi || !actual.switchedToKodesama || !actual.switchedBackToKodekichi || actual.schedule !== "08:00-22:00") {
   throw new Error(`Mobile UI check failed: ${JSON.stringify(actual)}`);
 }
 console.log(`Kodekichi mobile UI PASS: ${JSON.stringify(actual)}`);

@@ -4,5 +4,12 @@
   "status": "usable+auto-fetch+cg-listed",
   "updatedAt": "2026-09-04T11:52:00+09:00",
   "artifact": "index.html",
-  "purpose": "Primary RSS AI/developer/paper information page generated from operation-zero JSON."
+  "purpose": "ChatGPT、Gemini、Claudeの公式更新・プラン・得意分野・共用安全弁を外部AI 0回で比較するページ。",
+  "source": "codex",
+  "model": "gpt-6-astra",
+  "gates": {
+    "three_providers": {"pass": true, "note": "3社カードと公式確認先を表示"},
+    "zero_external_ai": {"pass": true, "note": "公式RSS/公開サイトマップ/静的基準JSONのみ"},
+    "export": {"pass": true, "note": "元JSONへの導線を維持"}
+  }
 }

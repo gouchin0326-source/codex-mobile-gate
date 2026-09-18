@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-05",
+  "updated": "2026-09-01",
   "purpose": "Record actual CSD lane trials so the lane system is tested, not only described.",
   "trials": [
     {
@@ -309,6 +309,28 @@
       "check": "Run inline script syntax check, JSON registry checks, CSD/status generation, public-copy sync, and CG visibility checks.",
       "act": "Register the run in apps, artifact capabilities, CODEX lanes, CSD trials, CG, public-mobile, and pages-site latest.",
       "next_ticket": "Use the same dataset shape for a real external AI mission-pack request and integrate the returned JSON into Cascade Forge."
+    },
+    {
+      "id": "csd-lane-trial-2026-09-01-001",
+      "status": "done",
+      "lanes_used": [
+        "Handoff Lane",
+        "Static Tool Lane",
+        "Review Lane"
+      ],
+      "objective": "Run the 0901 CODEX task by checking CSD lane-trial freshness and making the current task visible again.",
+      "claude_knowhow": [
+        "Start from a compact ticket: objective, scope, acceptance, and checks before broad work.",
+        "Use ledgers as the control plane so CSD/CG can show state without rereading long history.",
+        "A lane trial should preserve Plan, Do, Check, and Act, not only a completion note.",
+        "Generated dashboards should come from JSON/Markdown sources and pass deterministic regeneration.",
+        "Keep the next ticket compact and avoid GPU/local LLM for static dashboard maintenance."
+      ],
+      "plan": "Treat the user's 0901 request as a freshness and visibility pass over the existing CSD lane trial system.",
+      "do": "Updated the CSD trial ledger, HUB current task, CODEX lane next ticket, and progress log for the 2026-09-01 run.",
+      "check": "Run Node syntax, JSON parse, dashboard/status generation, and dashboard visibility checks.",
+      "act": "Leave CSD showing the latest 0901 trial and point the next ticket at a real external AI mission-pack integration.",
+      "next_ticket": "Use the external AI lane run dataset to request and integrate a compact Cascade Forge mission pack."
     }
   ]
 }

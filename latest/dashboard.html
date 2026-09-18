@@ -78,7 +78,7 @@
 <body>
   <header>
     <h1>Codex Status Dashboard</h1>
-    <div class="sub">C:\Codex / 更新 2026/8/5 6:29:33 / トークン節約で成果物を増やす作業環境</div>
+    <div class="sub">C:\Codex / 更新 2026/9/1 6:29:39 / トークン節約で成果物を増やす作業環境</div>
   </header>
   <main>
     <div class="hero">
@@ -183,7 +183,7 @@
               <td><span class="badge">できる</span></td>
               <td>司令塔</td>
               <td><a href="data/external-ai-lanes.json">外部AIレーン</a></td>
-              <td>4本の外部AI活用レーンを定義。Codexは統合と検証に集中</td>
+              <td>5本の外部AI活用レーンを定義。Codexは統合と検証に集中</td>
             </tr>
             <tr class="ok">
               <td><span class="badge">できる</span></td>
@@ -447,11 +447,19 @@
               <td>Test whether the latest CG-listed external AI lane path can execute from lane dataset to artifact creation and CG listing.</td>
               <td>Run inline script syntax check, JSON registry checks, CSD/status generation, public-copy sync, and CG visibility checks.</td>
               <td>Use the same dataset shape for a real external AI mission-pack request and integrate the returned JSON into Cascade Forge.</td>
+            </tr>
+            <tr class="ok">
+              <td><span class="badge">done</span></td>
+              <td>csd-lane-trial-2026-09-01-001</td>
+              <td>Handoff Lane -&gt; Static Tool Lane -&gt; Review Lane</td>
+              <td>Run the 0901 CODEX task by checking CSD lane-trial freshness and making the current task visible again.</td>
+              <td>Run Node syntax, JSON parse, dashboard/status generation, and dashboard visibility checks.</td>
+              <td>Use the external AI lane run dataset to request and integrate a compact Cascade Forge mission pack.</td>
             </tr></tbody>
         </table>
         <div class="subhead"><strong>Claude側から取得したノウハウ</strong><span>今回の試行に使った要点</span></div>
         <table>
-          <tbody><tr><td>Keep external AI input compact and do not pass whole folders.</td></tr><tr><td>The return format should be JSON or Markdown that Codex can integrate deterministically.</td></tr><tr><td>A lane test is complete only when the artifact, ledgers, dashboard, public copy, and CG entry agree.</td></tr><tr><td>For token saving, the proof artifact should preserve the reusable dataset and handoff text.</td></tr><tr><td>No local LLM or GPU is needed for this static lane verification.</td></tr></tbody>
+          <tbody><tr><td>Start from a compact ticket: objective, scope, acceptance, and checks before broad work.</td></tr><tr><td>Use ledgers as the control plane so CSD/CG can show state without rereading long history.</td></tr><tr><td>A lane trial should preserve Plan, Do, Check, and Act, not only a completion note.</td></tr><tr><td>Generated dashboards should come from JSON/Markdown sources and pass deterministic regeneration.</td></tr><tr><td>Keep the next ticket compact and avoid GPU/local LLM for static dashboard maintenance.</td></tr></tbody>
         </table>
       </div>
     </section>
@@ -510,18 +518,25 @@
           <thead><tr><th>レーン</th><th>向いている仕事</th><th>入力</th><th>出力</th><th>Codexの役割</th></tr></thead>
           <tbody>
             <tr>
-              <td><a href="data/external-ai-lanes.json">ChatGPT Research Lane</a></td>
-              <td>short research, comparison table, test ideas, copy draft</td>
-              <td>templates/EXTERNAL_AI_BRIEF.md</td>
+              <td><a href="data/external-ai-lanes.json">OpenAI / ChatGPT API Lane</a></td>
+              <td>implementation review, acceptance criteria, risk checks, small patch suggestions</td>
+              <td>cloud_ai/zombie_game_cloud_ai_lane.md</td>
               <td>Markdown, JSON bullets</td>
-              <td>verify facts when needed, reduce to implementation steps, update dashboard artifacts</td>
+              <td>integrate scoped recommendations and verify behavior locally</td>
+            </tr>
+            <tr>
+              <td><a href="data/external-ai-lanes.json">Gemini Brief Review Lane</a></td>
+              <td>broad visual alternatives, idea compression, UI/gameplay critique, cheap first-pass review</td>
+              <td>cloud_ai/zombie_game_cloud_ai_lane.md</td>
+              <td>Markdown, JSON bullets</td>
+              <td>turn compact notes into one small implementation task</td>
             </tr>
             <tr>
               <td><a href="data/external-ai-lanes.json">Claude Design Review Lane</a></td>
               <td>UI critique, workflow review, Japanese copy polish, edge-case discovery</td>
               <td>templates/EXTERNAL_AI_BRIEF.md</td>
               <td>review note, ranked findings</td>
-              <td>apply only scoped fixes under C:\Codex and avoid editing C:\Claude shared data</td>
+              <td>do not use unless the user explicitly re-enables Claude</td>
             </tr>
             <tr>
               <td><a href="data/external-ai-lanes.json">Human Browser Check Lane</a></td>
@@ -545,22 +560,22 @@
             <tr>
               <td>dashboard.html</td>
               <td>司令塔HTML</td>
-              <td>2026/8/3 19:53:55</td>
+              <td>2026/8/5 6:29:33</td>
             </tr>
             <tr>
               <td>app-launcher.html</td>
               <td>アプリ入口</td>
-              <td>2026/8/5 6:29:29</td>
+              <td>2026/9/1 6:29:35</td>
             </tr>
             <tr>
               <td>public-mobile</td>
               <td>モバイル用latest素材</td>
-              <td>2026/8/5 6:29:11</td>
+              <td>2026/8/24 16:44:00</td>
             </tr>
             <tr>
               <td>pages-site</td>
               <td>GitHub Pages準備フォルダ</td>
-              <td>2026/8/1 6:33:52</td>
+              <td>2026/8/24 16:44:00</td>
             </tr>
             <tr>
               <td>artifact-capabilities.json</td>
@@ -570,12 +585,12 @@
             <tr>
               <td>external-ai-lanes.json</td>
               <td>外部AIレーン台帳</td>
-              <td>2026/7/21 18:29:33</td>
+              <td>2026/8/15 23:23:45</td>
             </tr>
             <tr>
               <td>codex-lanes.json</td>
               <td>CODEX PDCAレーン台帳</td>
-              <td>2026/8/5 6:28:17</td>
+              <td>2026/9/1 6:29:16</td>
             </tr></tbody>
         </table>
       </div>
@@ -587,9 +602,9 @@
         <div class="subhead"><strong>現在タスク</strong><a href="data/status.json">status.json</a></div>
         <table>
           <tbody>
-            <tr><td>Objective</td><td>2026-08-03 task - create a serious falling-block puzzle app through the CODEX eco-lane.</td></tr>
-            <tr><td>Scope</td><td>`C:\Codex` Cascade Forge static game, falling-block eco-lane, external AI brief export, app/artifact/CODEX lane/CSD ledgers, public copies, dashboard/status, and progress log only. No local LLM/GPU.</td></tr>
-            <tr><td>Acceptance</td><td>Cascade Forge is a mobile-first falling-block puzzle with seven pieces, collision, rotation, soft/hard drop, hold, next queue, ghost, line clears, combo missions, local records, external AI brief copy, JSON/Markdown/result export, CG/CSD registration, public copies, dashboard/status generation, and deterministic checks.</td></tr>
+            <tr><td>Objective</td><td>2026-09-01 task - refresh CSD lane-trial visibility for the 0901 CODEX run.</td></tr>
+            <tr><td>Scope</td><td>`C:\Codex` CSD lane-trial ledger, CODEX lane ledger, HUB current task, dashboard/status generation, and progress log only. No local LLM/GPU.</td></tr>
+            <tr><td>Acceptance</td><td>CSD shows the latest 2026-09-01 lane trial with Plan, Do, Check, Act, Claude-derived know-how, deterministic regeneration, and visibility checks.</td></tr>
           </tbody>
         </table>
         <div class="subhead"><strong>PDCA</strong><a href="data/codex-lanes.json">codex-lanes.json</a></div>
@@ -631,7 +646,7 @@
               <td>Produce small HTML-first tools with import/export and deterministic checks.</td>
               <td>Run inline script checks, generator checks, and browser/human checks when visual feel matters.</td>
               <td>Update HUB.md, logs\PROGRESS.md, registry/dashboard, and next ticket.</td>
-              <td>Clean stale mojibake/current-task state and align dashboard visibility.</td>
+              <td>Use the external AI lane run dataset to request and integrate a compact Cascade Forge mission pack.</td>
             </tr>
             <tr class="ok">
               <td><span class="badge">ready</span></td>
@@ -639,7 +654,7 @@
               <td>Use CODEX as a second-system reviewer for generated artifacts.</td>
               <td>Return ranked findings with file references and missing verification.</td>
               <td>Convert accepted findings into a new implementation ticket.</td>
-              <td>Review dashboard mojibake and navigation readability.</td>
+              <td>Review the 0901 CSD visibility refresh in dashboard.html and CG copies.</td>
             </tr>
             <tr class="ok">
               <td><span class="badge">ready</span></td>
@@ -647,7 +662,7 @@
               <td>Convert notes or external AI output into compact implementation tickets.</td>
               <td>Confirm target files, forbidden scope, and acceptance are explicit.</td>
               <td>Place the ticket in inbox or execute it when small enough.</td>
-              <td>Create the first concrete ticket from Claude lane references.</td>
+              <td>Convert the Cascade Forge mission-pack request into one bounded integration ticket.</td>
             </tr>
             <tr class="ok">
               <td><span class="badge">showcase-done</span></td>
@@ -859,7 +874,7 @@ Avoid: long preface, greeting, long background</pre>
     </section>
 
     <section id="apps" class="tab-panel">
-      <div class="title-row"><h2>登録済みアプリ</h2><span class="muted">19 apps / 20 projects</span></div>
+      <div class="title-row"><h2>登録済みアプリ</h2><span class="muted">20 apps / 21 projects</span></div>
       <div class="body mini-grid">
           <a class="mini-card" href="projects/token-flow-app/index.html">
             <strong>Token Flow</strong>
@@ -955,6 +970,11 @@ Avoid: long preface, greeting, long background</pre>
             <strong>0805 External AI Lane Run</strong>
             <span>test+export+cg-listed / development</span>
             <small>CG-listed end-to-end test for the latest external-AI eco-lane path: lane dataset, compact external AI brief shape, artifact creation, CSD registration, CG listing, JSON export, and Markdown export</small>
+          </a>
+          <a class="mini-card" href="projects/orbit-catcher-zombie-siege/index.html">
+            <strong>Orbit Catcher: Zombie Siege</strong>
+            <span>game+export+cg-listed / game</span>
+            <small>CG zombie action game with tactical danger/supply intel, high-spec visual effects, horde rushes, lunging/grabbing zombies, destructible buildings, weapon upgrades, boss zombies, powerful support tools, local best score, JSON export, Markdown export, and AI improvement prompt export</small>
           </a></div>
     </section>
 
@@ -1222,11 +1242,17 @@ Avoid: long preface, greeting, long background</pre>
       <div class="body"><pre>C:\CODEX
 |   AGENTS.md
 |   app-launcher.html
+|   cg_console.html
+|   CODEXGATE_CG_0809_TASKS.md
 |   dashboard.html
+|   HA_INHERIT.md
 |   HOSHI_CODEX_TOKEN_ECONOMY_SPEC_2026-07-06.md
 |   HUB.md
 |   README.md
 |   
++---.agents
++---.codex
++---.git
 +---apps
 |       apps.json
 |       README.md
@@ -1242,11 +1268,29 @@ Avoid: long preface, greeting, long background</pre>
 |       END_SESSION.md
 |       LOCAL_LLM_TEST.md
 |       START_SESSION.md
+|       TOOLING_TRAPS.md
 |       
 +---cloud_ai
 |       CHATGPT_TO_CODEX_BRIEF.md
+|       gemini_lane_test.md
+|       gemini_less_polygon_mobs_v66.md
+|       gemini_less_polygon_mobs_v66_retry.md
+|       gemini_mobile_skill_ui_v67.md
+|       gemini_mob_graphics_v65.md
+|       gemini_realism_ideas_v66.md
+|       gemini_zombie_graphics_next_v65.md
+|       gemini_zombie_next_v64.md
+|       gemini_zombie_notes.md
+|       ollama_qwen_graphics_review_20260815.md
 |       README.md
+|       zombie_game_cloud_ai_lane.md
+|       zombie_graphics_next_brief.md
 |       
++---compare
+|   \---p1
+|           HA_INHERIT_input.md
+|           quickstart.md
+|           
 +---data
 |       artifact-capabilities.json
 |       codex-lanes.json
@@ -1257,14 +1301,32 @@ Avoid: long preface, greeting, long background</pre>
 |       local-ai-artifacts.json
 |       local-ai-routes.json
 |       status.json
+|       ticket_result.schema.json
 |       token-budget.json
+|       usage_log.jsonl
 |       
 +---handoffs
+|   \---done
+|           research_req_codexquota.json
+|           research_req_codexquota2.json
+|           
 +---inbox
-|       CSD_LANE_TRIAL_2026-07-23.md
-|       README.md
-|       
+|   |   CSD_LANE_TRIAL_2026-07-23.md
+|   |   README.md
+|   |   
+|   \---archive
+|           20260823_232657_0365.json
+|           20260823_232657_7ea6.json
+|           20260824_004641_caef.json
+|           20260824_004713_ba6e.json
+|           20260824_005155_7246.json
+|           20260824_100352_6532.json
+|           20260824_180913_b33c.json
+|           CLOSED.md
+|           
 +---knowledge
+|       CODEX_CG_TOKEN_ECOSYSTEM_20260831.md
+|       CODEX_CG_TOKEN_ECOSYSTEM_20260831.md.meta.json
 |       RECIPE_INDEX.md
 |       
 +---local_ai
@@ -1421,118 +1483,167 @@ Avoid: long preface, greeting, long background</pre>
 |       ngrok-codex-8765.err.log
 |       ngrok-codex-8765.log
 |       PROGRESS.md
+|       research_codexquota2_20260831.log
+|       research_codexquota_20260831.log
 |       
 +---memory
+|       CODEX_CG_TOKEN_ECOSYSTEM_DECISION_20260831.md
 |       CODEX_ECOSYSTEM_PATTERN_FROM_CLAUDE.md
 |       CODEX_LANE_RESTART_2026-07-23.md
 |       CODEX_SETTINGS_PREP.md
 |       DECISIONS.md
+|       HA_CODEX_CG_ROLE_DECISION_20260828.md
 |       LOCAL_LLM_CODING_STRATEGY.md
 |       OPERATING_PRINCIPLES.md
 |       
 +---mobile-gate
+|   |   app-launcher.html
 |   |   icon.svg
 |   |   index.html
 |   |   manifest.webmanifest
 |   |   README.md
 |   |   sw.js
 |   |   
-|   \---latest
-|       |   app-launcher.html
-|       |   dashboard.html
-|       |   icon.svg
-|       |   index.html
-|       |   manifest.webmanifest
-|       |   sw.js
-|       |   
-|       +---cat-affinity-lane
-|       |   |   index.html
-|       |   |   README.md
-|       |   |   
-|       |   \---assets
-|       |           cat-hero.png
-|       |           
-|       +---codex-data-pocket
-|       |       index.html
-|       |       
-|       +---csd-designer-showcase
-|       |   |   index.html
-|       |   |   README.md
-|       |   |   
-|       |   \---assets
-|       |           csd-hero.png
-|       |           
-|       +---csd-web-designer-sample
-|       |       index.html
-|       |       README.md
-|       |       
-|       +---daily-task-0731
-|       |       index.html
-|       |       
-|       +---data
-|       |       codex-data-schema.json
-|       |       README.md
-|       |       seed-records.json
-|       |       
-|       +---eco-lane-map
-|       |       index.html
-|       |       
-|       +---external-ai-brief-compressor
-|       |       index.html
-|       |       
-|       +---external-ai-lane-run-0805
-|       |       index.html
-|       |       README.md
-|       |       
-|       +---focus-session-cards
-|       |       index.html
-|       |       
-|       +---orbit-catcher
-|       |       index.html
-|       |       README.md
-|       |       
-|       +---projects
-|       |   +---cat-affinity-lane
-|       |   |   |   index.html
-|       |   |   |   README.md
-|       |   |   |   
-|       |   |   \---assets
-|       |   |           cat-hero.png
-|       |   |           
-|       |   +---csd-designer-showcase
-|       |   |   |   index.html
-|       |   |   |   README.md
-|       |   |   |   
-|       |   |   \---assets
-|       |   |           csd-hero.png
-|       |   |           
-|       |   +---csd-web-designer-sample
-|       |   |       index.html
-|       |   |       README.md
-|       |   |       
-|       |   +---daily-task-0731
-|       |   |       index.html
-|       |   |       README.md
-|       |   |       
-|       |   +---eco-lane-map
-|       |   |       index.html
-|       |   |       README.md
-|       |   |       
-|       |   +---external-ai-brief-compressor
-|       |   |       index.html
-|       |   |       README.md
-|       |   |       
-|       |   +---external-ai-lane-run-0805
-|       |   |       index.html
-|       |   |       README.md
-|       |   |       
-|       |   \---focus-session-cards
-|       |           index.html
-|       |           README.md
-|       |           
-|       \---quick-notes-board
-|               index.html
-|               
+|   +---latest
+|   |   |   app-launcher.html
+|   |   |   dashboard.html
+|   |   |   icon.svg
+|   |   |   index.html
+|   |   |   manifest.webmanifest
+|   |   |   sw.js
+|   |   |   
+|   |   +---cat-affinity-lane
+|   |   |   |   index.html
+|   |   |   |   README.md
+|   |   |   |   
+|   |   |   \---assets
+|   |   |           cat-hero.png
+|   |   |           
+|   |   +---codex-data-pocket
+|   |   |       index.html
+|   |   |       
+|   |   +---csd-designer-showcase
+|   |   |   |   index.html
+|   |   |   |   README.md
+|   |   |   |   
+|   |   |   \---assets
+|   |   |           csd-hero.png
+|   |   |           
+|   |   +---csd-web-designer-sample
+|   |   |       index.html
+|   |   |       README.md
+|   |   |       
+|   |   +---daily-task-0731
+|   |   |       index.html
+|   |   |       
+|   |   +---data
+|   |   |       artifact-capabilities.json
+|   |   |       codex-data-schema.json
+|   |   |       codex-lanes.json
+|   |   |       csd-action-items.json
+|   |   |       csd-lane-trials.json
+|   |   |       external-ai-lanes.json
+|   |   |       README.md
+|   |   |       seed-records.json
+|   |   |       status.json
+|   |   |       
+|   |   +---eco-lane-map
+|   |   |       index.html
+|   |   |       
+|   |   +---external-ai-brief-compressor
+|   |   |       index.html
+|   |   |       
+|   |   +---external-ai-lane-run-0805
+|   |   |       index.html
+|   |   |       README.md
+|   |   |       
+|   |   +---focus-session-cards
+|   |   |       index.html
+|   |   |       
+|   |   +---orbit-catcher
+|   |   |       index.html
+|   |   |       README.md
+|   |   |       
+|   |   +---orbit-catcher-zombie-siege
+|   |   |   |   index.html
+|   |   |   |   README.md
+|   |   |   |   
+|   |   |   \---assets
+|   |   |           actor-atlas-v1.png
+|   |   |           actor-atlas-v10-level5.png
+|   |   |           actor-atlas-v11-level7.png
+|   |   |           actor-atlas-v2.png
+|   |   |           actor-atlas-v3.png
+|   |   |           actor-atlas-v4.png
+|   |   |           actor-atlas-v5.png
+|   |   |           actor-atlas-v6.png
+|   |   |           actor-atlas-v7.png
+|   |   |           actor-atlas-v8.png
+|   |   |           actor-atlas-v9-anime.png
+|   |   |           player-atlas-v12-level8.png
+|   |   |           player-atlas-v13-clean.png
+|   |   |           player-atlas-v14-level9.png
+|   |   |           player-atlas-v15-engineer.png
+|   |   |           player-atlas-v15-medic.png
+|   |   |           player-atlas-v15-scout.png
+|   |   |           player-atlas-v15-vanguard.png
+|   |   |           
+|   |   +---projects
+|   |   |   +---cat-affinity-lane
+|   |   |   |   |   index.html
+|   |   |   |   |   README.md
+|   |   |   |   |   
+|   |   |   |   \---assets
+|   |   |   |           cat-hero.png
+|   |   |   |           
+|   |   |   +---csd-designer-showcase
+|   |   |   |   |   index.html
+|   |   |   |   |   README.md
+|   |   |   |   |   
+|   |   |   |   \---assets
+|   |   |   |           csd-hero.png
+|   |   |   |           
+|   |   |   +---csd-web-designer-sample
+|   |   |   |       index.html
+|   |   |   |       README.md
+|   |   |   |       
+|   |   |   +---daily-task-0731
+|   |   |   |       index.html
+|   |   |   |       README.md
+|   |   |   |       
+|   |   |   +---eco-lane-map
+|   |   |   |       index.html
+|   |   |   |       README.md
+|   |   |   |       
+|   |   |   +---external-ai-brief-compressor
+|   |   |   |       index.html
+|   |   |   |       README.md
+|   |   |   |       
+|   |   |   +---external-ai-lane-run-0805
+|   |   |   |       index.html
+|   |   |   |       README.md
+|   |   |   |       
+|   |   |   \---focus-session-cards
+|   |   |           index.html
+|   |   |           README.md
+|   |   |           
+|   |   \---quick-notes-board
+|   |           index.html
+|   |           
+|   +---orbit-catcher
+|   |       index.html
+|   |       README.md
+|   |       
+|   \---orbit-catcher-zombie-siege
+|           index.html
+|           README.md
+|           
++---outbox
+|       20260823_232657_0365.json
+|       20260824_005155_7246.json
+|       20260824_180913_b33c.json
+|       20260824_ha_dev_env_check.json
+|       
 +---pages-site
 |   |   .nojekyll
 |   |   icon.svg
@@ -1574,9 +1685,16 @@ Avoid: long preface, greeting, long background</pre>
 |       |       index.html
 |       |       
 |       +---data
+|       |       artifact-capabilities.json
+|       |       cg-development-status-2026-08-01.md
 |       |       codex-data-schema.json
+|       |       codex-lanes.json
+|       |       csd-action-items.json
+|       |       csd-lane-trials.json
+|       |       external-ai-lanes.json
 |       |       README.md
 |       |       seed-records.json
+|       |       status.json
 |       |       
 |       +---eco-lane-map
 |       |       index.html
@@ -1584,19 +1702,41 @@ Avoid: long preface, greeting, long background</pre>
 |       +---external-ai-brief-compressor
 |       |       index.html
 |       |       
-|       +---falling-block-eco-lane
+|       +---external-ai-lane-run-0805
 |       |       index.html
+|       |       README.md
 |       |       
 |       +---focus-session-cards
-|       |       index.html
-|       |       
-|       +---mobile-puzzle-eco-lane
 |       |       index.html
 |       |       
 |       +---orbit-catcher
 |       |       index.html
 |       |       README.md
 |       |       
+|       +---orbit-catcher-zombie-siege
+|       |   |   index.html
+|       |   |   README.md
+|       |   |   
+|       |   \---assets
+|       |           actor-atlas-v1.png
+|       |           actor-atlas-v10-level5.png
+|       |           actor-atlas-v11-level7.png
+|       |           actor-atlas-v2.png
+|       |           actor-atlas-v3.png
+|       |           actor-atlas-v4.png
+|       |           actor-atlas-v5.png
+|       |           actor-atlas-v6.png
+|       |           actor-atlas-v7.png
+|       |           actor-atlas-v8.png
+|       |           actor-atlas-v9-anime.png
+|       |           player-atlas-v12-level8.png
+|       |           player-atlas-v13-clean.png
+|       |           player-atlas-v14-level9.png
+|       |           player-atlas-v15-engineer.png
+|       |           player-atlas-v15-medic.png
+|       |           player-atlas-v15-scout.png
+|       |           player-atlas-v15-vanguard.png
+|       |           
 |       +---projects
 |       |   +---cat-affinity-lane
 |       |   |   |   index.html
@@ -1628,14 +1768,24 @@ Avoid: long preface, greeting, long background</pre>
 |       |   |       index.html
 |       |   |       README.md
 |       |   |       
-|       |   \---focus-session-cards
+|       |   +---external-ai-lane-run-0805
+|       |   |       index.html
+|       |   |       README.md
+|       |   |       
+|       |   +---falling-block-eco-lane
+|       |   |       index.html
+|       |   |       
+|       |   +---focus-session-cards
+|       |   |       index.html
+|       |   |       README.md
+|       |   |       
+|       |   +---mobile-puzzle-eco-lane
+|       |   |       index.html
+|       |   |       
+|       |   \---sum-garden-eco-lane
 |       |           index.html
-|       |           README.md
 |       |           
-|       +---quick-notes-board
-|       |       index.html
-|       |       
-|       \---sum-garden-eco-lane
+|       \---quick-notes-board
 |               index.html
 |               
 +---projects
@@ -1712,6 +1862,41 @@ Avoid: long preface, greeting, long background</pre>
 |   |       index.html
 |   |       README.md
 |   |       
+|   +---orbit-catcher-zombie-siege
+|   |   |   index.html
+|   |   |   README.md
+|   |   |   
+|   |   +---assets
+|   |   |       actor-atlas-v1.png
+|   |   |       actor-atlas-v10-level5.png
+|   |   |       actor-atlas-v11-level7.png
+|   |   |       actor-atlas-v2.png
+|   |   |       actor-atlas-v3.png
+|   |   |       actor-atlas-v4.png
+|   |   |       actor-atlas-v5.png
+|   |   |       actor-atlas-v6.png
+|   |   |       actor-atlas-v7.png
+|   |   |       actor-atlas-v8.png
+|   |   |       actor-atlas-v9-anime.png
+|   |   |       player-atlas-v12-level8.png
+|   |   |       player-atlas-v13-clean.png
+|   |   |       player-atlas-v14-level9.png
+|   |   |       player-atlas-v15-engineer.png
+|   |   |       player-atlas-v15-medic.png
+|   |   |       player-atlas-v15-scout.png
+|   |   |       player-atlas-v15-vanguard.png
+|   |   |       
+|   |   \---tools
+|   |       |   build_actor_atlas_v10.py
+|   |       |   build_actor_atlas_v11.py
+|   |       |   build_player_atlas_v12.py
+|   |       |   build_player_atlas_v13.py
+|   |       |   build_player_atlas_v14.py
+|   |       |   split_player_atlas_v15.py
+|   |       |   
+|   |       \---__pycache__
+|   |               build_actor_atlas_v10.cpython-313.pyc
+|   |               
 |   +---quick-notes-board
 |   |       index.html
 |   |       README.md
@@ -1756,10 +1941,16 @@ Avoid: long preface, greeting, long background</pre>
 |   |       index.html
 |   |       
 |   +---data
+|   |       artifact-capabilities.json
 |   |       cg-development-status-2026-08-01.md
 |   |       codex-data-schema.json
+|   |       codex-lanes.json
+|   |       csd-action-items.json
+|   |       csd-lane-trials.json
+|   |       external-ai-lanes.json
 |   |       README.md
 |   |       seed-records.json
+|   |       status.json
 |   |       
 |   +---eco-lane-map
 |   |       index.html
@@ -1778,6 +1969,30 @@ Avoid: long preface, greeting, long background</pre>
 |   |       index.html
 |   |       README.md
 |   |       
+|   +---orbit-catcher-zombie-siege
+|   |   |   index.html
+|   |   |   README.md
+|   |   |   
+|   |   \---assets
+|   |           actor-atlas-v1.png
+|   |           actor-atlas-v10-level5.png
+|   |           actor-atlas-v11-level7.png
+|   |           actor-atlas-v2.png
+|   |           actor-atlas-v3.png
+|   |           actor-atlas-v4.png
+|   |           actor-atlas-v5.png
+|   |           actor-atlas-v6.png
+|   |           actor-atlas-v7.png
+|   |           actor-atlas-v8.png
+|   |           actor-atlas-v9-anime.png
+|   |           player-atlas-v12-level8.png
+|   |           player-atlas-v13-clean.png
+|   |           player-atlas-v14-level9.png
+|   |           player-atlas-v15-engineer.png
+|   |           player-atlas-v15-medic.png
+|   |           player-atlas-v15-scout.png
+|   |           player-atlas-v15-vanguard.png
+|   |           
 |   +---projects
 |   |   +---cat-affinity-lane
 |   |   |   |   index.html
@@ -1831,10 +2046,88 @@ Avoid: long preface, greeting, long background</pre>
 |           
 +---reports
 |       cg-development-status-2026-08-01.md
+|       codex_task_check_20260829.md
+|       codex_task_check_20260829.md.meta.json
+|       codex_task_plan_20260828.md
+|       codex_task_plan_20260828.md.meta.json
+|       codex_task_plan_20260831.md
+|       codex_task_plan_20260831.md.meta.json
+|       ha_codex_cg_role_decision_20260828.md
+|       ha_codex_cg_role_decision_20260828.md.meta.json
+|       ha_dev_env_check_20260824.md
+|       ha_dev_env_check_20260824.md.meta.json
 |       LOCAL_LLM_CAPABILITY_TEST_2026-07-07.md
 |       README.md
+|       research_codexquota2_20260831_predigest.md
+|       research_codexquota_20260831_predigest.md
 |       SMALL_STEP_LOCAL_LLM_CODING_RESEARCH_2026-07-06.md
 |       STARTUP_CONNECTION_TEST_2026-07-28.md
+|       zombie-siege-0811-mobile-final.png
+|       zombie-siege-0811-mobile-v2.png
+|       zombie-siege-0811-mobile-v3.png
+|       zombie-siege-0811-mobile.png
+|       zombie-siege-3d-actors.png
+|       zombie-siege-analog-stick.png
+|       zombie-siege-center-controller-ring.png
+|       zombie-siege-center-controller.png
+|       zombie-siege-clean-controller.png
+|       zombie-siege-compact-overlay-mobile.png
+|       zombie-siege-highfx-mobile.png
+|       zombie-siege-natural-form.png
+|       zombie-siege-overlay-v21-cachebust.png
+|       zombie-siege-overlay-v21-canvas-stick-final.png
+|       zombie-siege-overlay-v21-canvas-stick.png
+|       zombie-siege-overlay-v21-final-visible.png
+|       zombie-siege-overlay-v21-final.png
+|       zombie-siege-overlay-v21-mobile.png
+|       zombie-siege-overlay-v21-stick-center.png
+|       zombie-siege-overlay-v21-stick-fixed.png
+|       zombie-siege-playable-balance.png
+|       zombie-siege-playable-clean.png
+|       zombie-siege-resized-canvas-mobile.png
+|       zombie-siege-settings-mobile.png
+|       zombie-siege-stick-persistent.png
+|       zombie-siege-tabs-fixed-mobile.png
+|       zombie-siege-tabs-mobile.png
+|       zombie-siege-tabs-vw-mobile.png
+|       zombie-siege-v32-layout-2.png
+|       zombie-siege-v32-layout-3.png
+|       zombie-siege-v32-layout-4.png
+|       zombie-siege-v32-layout-final.png
+|       zombie-siege-v32-layout.png
+|       zombie-siege-v33-all-features.png
+|       zombie-siege-v33-running.png
+|       zombie-siege-v34-mob-realism.png
+|       zombie-siege-v35-animation.png
+|       zombie-siege-v36-actor-graphics.png
+|       zombie-siege-v37-direction-types.png
+|       zombie-siege-v38-death-bite.png
+|       zombie-siege-v39-level3-lod.png
+|       zombie-siege-v40-player-details.png
+|       zombie-siege-v41-raster-sprites.png
+|       zombie-siege-v42-external-atlas.png
+|       zombie-siege-v43-action-sheet.png
+|       zombie-siege-v44-action-sheet-v3.png
+|       zombie-siege-v45-action-sheet-v4.png
+|       zombie-siege-v46-action-sheet-v5.png
+|       zombie-siege-v47-character-select.png
+|       zombie-siege-v48-character-atlas-v7.png
+|       zombie-siege-v49-joint-atlas-v8.png
+|       zombie-siege-v50-anime-atlas.png
+|       zombie-siege-v51-fun-size.png
+|       zombie-siege-v52-gameplay-expansion.png
+|       zombie-siege-v53-level5-characters.png
+|       zombie-siege-v54-level6-7.png
+|       zombie-siege-v55-clean-player.png
+|       zombie-siege-v56-level8-player.png
+|       zombie-siege-v57-player-anchor.png
+|       zombie-siege-v58-player-clean-level.png
+|       zombie-siege-v59-level9-player.png
+|       zombie-siege-v60-split-player-sheets.png
+|       zombie-siege-v61-external-lane-graphics.png
+|       zombie-siege-weapon-cycle-mobile-final.png
+|       zombie-siege-weapon-cycle-mobile-v2.png
+|       zombie-siege-weapon-cycle-mobile.png
 |       
 +---runbooks
 |       CONFIG_CHANGE_PROTOCOL.md
@@ -1853,7 +2146,10 @@ Avoid: long preface, greeting, long background</pre>
 |   |   generate-codex-video-sample.py
 |   |   normalize-apps-json.mjs
 |   |   prepare-pages-publish.ps1
+|   |   set-cloud-ai-key-from-clipboard.ps1
+|   |   setup-cloud-ai-lanes.ps1
 |   |   sync-google-drive.ps1
+|   |   test-cloud-ai-lanes.ps1
 |   |   update-app-launcher.ps1
 |   |   update-dashboard.mjs
 |   |   update-dashboard.ps1
@@ -1863,15 +2159,22 @@ Avoid: long preface, greeting, long background</pre>
 |   \---__pycache__
 |           generate-codex-image-sample.cpython-313.pyc
 |           
-\---templates
-        APP_REQUEST_BRIEF.md
-        EXTERNAL_AI_BRIEF.md
-        HANDOFF.md
-        LANE_TICKET.md
-        PROJECT_README.md
-        REVIEW_NOTE.md
-        SESSION_SUMMARY.md
-        TASK_NOTE.md
++---templates
+|       APP_REQUEST_BRIEF.md
+|       CLAUDE_TO_CODEX_RESEARCH_NOTE_0831.md
+|       CLAUDE_TO_CODEX_RESEARCH_NOTE_0831.md.meta.json
+|       CODEX_GATE_TICKET_0831.md
+|       CODEX_GATE_TICKET_0831.md.meta.json
+|       EXTERNAL_AI_BRIEF.md
+|       HANDOFF.md
+|       LANE_TICKET.md
+|       PROJECT_README.md
+|       REVIEW_NOTE.md
+|       SESSION_SUMMARY.md
+|       TASK_NOTE.md
+|       
+\---tools
+        external_ai_lane.py
         
 </pre></div>
     </section>

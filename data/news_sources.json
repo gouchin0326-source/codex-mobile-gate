@@ -1,10 +1,28 @@
 [
   {
     "id": "openai",
-    "label": "OpenAI",
+    "label": "ChatGPT / OpenAI公式",
     "genre": "AI",
+    "provider": "chatgpt",
     "type": "rss",
     "url": "https://openai.com/news/rss.xml"
+  },
+  {
+    "id": "google-gemini",
+    "label": "Gemini公式",
+    "genre": "AI",
+    "provider": "gemini",
+    "type": "rss",
+    "url": "https://blog.google/products/gemini/rss/"
+  },
+  {
+    "id": "anthropic-claude",
+    "label": "Claude / Anthropic公式",
+    "genre": "AI",
+    "provider": "claude",
+    "type": "sitemap",
+    "url": "https://www.anthropic.com/sitemap.xml",
+    "pathPrefix": "https://www.anthropic.com/news/"
   },
   {
     "id": "github-blog",

@@ -14,6 +14,8 @@
     {"id":"open-meteo-toyama","enabled":true,"intervalMinutes":30,"ttlMinutes":90,"maxBytes":2097152,"allowedHosts":["api.open-meteo.com"]},
     {"id":"github-actions","enabled":true,"intervalMinutes":30,"ttlMinutes":90,"maxBytes":2097152,"allowedHosts":["api.github.com"]},
     {"id":"openai","enabled":true,"intervalMinutes":360,"ttlMinutes":720,"maxBytes":2097152,"allowedHosts":["openai.com"]},
+    {"id":"google-gemini","enabled":true,"intervalMinutes":360,"ttlMinutes":720,"maxBytes":2097152,"allowedHosts":["blog.google"]},
+    {"id":"anthropic-claude","enabled":true,"intervalMinutes":360,"ttlMinutes":720,"maxBytes":524288,"allowedHosts":["www.anthropic.com"]},
     {"id":"github-blog","enabled":true,"intervalMinutes":360,"ttlMinutes":720,"maxBytes":2097152,"allowedHosts":["github.blog"]},
     {"id":"github-changelog","enabled":true,"intervalMinutes":360,"ttlMinutes":720,"maxBytes":2097152,"allowedHosts":["github.blog"]},
     {"id":"lobsters","enabled":true,"intervalMinutes":360,"ttlMinutes":720,"maxBytes":2097152,"allowedHosts":["lobste.rs"]},

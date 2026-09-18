@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "asOf": "2026-09-13",
+  "purpose": "3社の得意分野、契約と実行経路、変動する利用上限を区別し、安全弁を実測で調整する。",
+  "monitoringPolicy": {
+    "mode": "independent-dual-observation",
+    "principle": "Codex側とClaude/HA側がそれぞれ公式情報を取得する。片側の生成JSONをもう片側の唯一の入力にはしない。",
+    "compare": "URL、公開日、取得時刻、題名を照合し、片側だけが検出した更新を要確認として残す。",
+    "importantChanges": ["モデル追加・廃止", "プランと料金", "利用上限とリセット周期", "認証・API課金経路", "Claude Code/Codex/Gemini開発機能", "規約・データ利用・セキュリティ"],
+    "failureRule": "片側が失敗しても他方の取得を止めない。直前成功値をstale表示し、未確認を推測で補わない。",
+    "reviewRule": "重要変更は自動で設定を書き換えず、現行設定への影響と公式URLを人へ提示してから反映する。"
+  },
+  "providers": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT / Codex",
+      "currentPlan": "ChatGPT Plus",
+      "route": "ChatGPT認証済みCodex CLI（OpenAI API課金は無効）",
+      "strengths": ["複雑な実装と検証", "リポジトリをまたぐ開発判断", "Lunaによる軽量・多量処理"],
+      "limitReading": "固定の日次回数ではなく、モデルと処理量で消費が変わる共有枠。Codex/Work側の残量表示を正本にする。",
+      "official": [
+        {"label": "OpenAI Docs: Codex料金と利用枠", "url": "https://learn.chatgpt.com/docs/pricing"},
+        {"label": "OpenAI Docs: ChatGPT/Codexの更新", "url": "https://learn.chatgpt.com/docs/whats-new"}
+      ],
+      "trackedSourceIds": ["openai"]
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "currentPlan": "Google AI有料プラン（契約種別は未確認）",
+      "route": "Gemini Developer APIキー。Geminiアプリ契約とAPIプロジェクトの利用枠は分けて確認する。",
+      "strengths": ["Google検索と広い情報収集", "長い資料の整理", "Flash-Liteによる軽量な案出し"],
+      "limitReading": "RPM・TPM・RPDのいずれでも制限され、実値はモデルとAPIプロジェクト階層で変わる。AI Studioの表示を正本にする。",
+      "official": [
+        {"label": "Gemini APIのレート制限", "url": "https://ai.google.dev/gemini-api/docs/rate-limits"},
+        {"label": "Geminiアプリのプランと上限", "url": "https://support.google.com/gemini/answer/16275805?hl=ja"}
+      ],
+      "trackedSourceIds": ["google-gemini"]
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "currentPlan": "Claude有料プラン（契約種別は未確認）",
+      "route": "現在はHA/Claudeが共用レーンの呼出元。Claudeを3つ目の外部実行先にはまだ追加しない。",
+      "strengths": ["大きな設計の整理", "長時間のコーディング作業", "Claude Codeと対話の連携"],
+      "limitReading": "Claude、Claude Code、Desktopは契約に応じて同じ利用枠を共有するため、Claude側のusage表示を正本にする。",
+      "official": [
+        {"label": "Claudeのプラン比較", "url": "https://support.claude.com/en/articles/11049762-choose-a-claude-plan"},
+        {"label": "Claude Codeの利用枠", "url": "https://support.claude.com/en/articles/14552983-models-usage-and-limits-in-claude-code"}
+      ],
+      "trackedSourceIds": ["anthropic-claude"]
+    }
+  ],
+  "localGuardrail": {
+    "status": "active-conservative-baseline",
+    "active": {"dailyTotal": 6, "gemini": 4, "codex": 2},
+    "recommendedPilot": {"dailyTotal": 12, "gemini": 8, "codex": 4},
+    "keep": {"globalMinIntervalSeconds": 120, "geminiMinIntervalSeconds": 120, "codexMinIntervalSeconds": 300, "rateErrorCooldownSeconds": 1800, "singleActiveRequest": true},
+    "assessment": "6回はサービス上限ではなく、配管確認用の厳しい初期値。両方利用は2回消費するため最大3案件となる。まず12回で数日計測し、429と残量を見て段階調整する。"
+  }
+}
