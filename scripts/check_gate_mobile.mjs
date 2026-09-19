@@ -40,6 +40,8 @@ const dashResult = await call("Runtime.evaluate", { expression:"document.querySe
 const dashState = dashResult.result.result.value;
 const comboResult = await call("Runtime.evaluate", { expression:"handleEnemyDefeat({type:'walker',score:18,x:200,y:200});handleEnemyDefeat({type:'walker',score:18,x:220,y:200});({combo,score})", returnByValue:true });
 const comboCheck = comboResult.result.result.value;
+const mapResult = await call("Runtime.evaluate", { expression:"const a={stage:wave,seed:terrain.seed,theme:terrain.theme.name,obstacles:terrain.obstacles.length,hazards:terrain.hazards.length};clearGate();({a,b:{stage:wave,seed:terrain.seed,theme:terrain.theme.name,obstacles:terrain.obstacles.length,hazards:terrain.hazards.length}})", returnByValue:true });
+const mapCheck = mapResult.result.result.value;
 const settingsResult = await call("Runtime.evaluate", { expression:"document.querySelector('#mobile-settings').click();({open:document.body.classList.contains('settings-open'),exportVisible:getComputedStyle(document.querySelector('#export-result')).display!=='none'})", returnByValue:true });
 const settingsScreen = settingsResult.result.result.value;
 await call("Runtime.evaluate", { expression:"document.querySelector('#settings-close').click()" });
@@ -48,5 +50,5 @@ await writeFile(output, Buffer.from(shot.result.data, "base64"));
 socket.close();
 const fit = value.scroll[0] <= value.inner[0] && value.scroll[1] <= value.inner[1] && value.controls.b <= value.inner[1] && value.items.every(item => item.r <= value.inner[0]);
 const ratioMatch = Math.abs(value.canvas[0]/value.canvas[1]-value.stage.w/value.stage.h) < .01;
-console.log(JSON.stringify({ fit, ratioMatch, ...value, started, dashState, comboCheck, settingsScreen, screenshot:output }));
-if (!fit || !ratioMatch || dashState === "OK" || comboCheck.combo !== 2 || !value.headerHidden || !value.settingsHidden || !settingsScreen.open || !settingsScreen.exportVisible || started.label !== "やり直す") process.exitCode = 1;
+console.log(JSON.stringify({ fit, ratioMatch, ...value, started, dashState, comboCheck, mapCheck, settingsScreen, screenshot:output }));
+if (!fit || !ratioMatch || dashState === "OK" || comboCheck.combo !== 2 || mapCheck.a.seed===mapCheck.b.seed || mapCheck.b.stage!==2 || mapCheck.a.obstacles<10 || mapCheck.b.hazards<3 || !value.headerHidden || !value.settingsHidden || !settingsScreen.open || !settingsScreen.exportVisible || started.label !== "やり直す") process.exitCode = 1;

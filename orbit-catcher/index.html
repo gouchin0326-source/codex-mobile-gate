@@ -188,6 +188,13 @@
     const camera = { x:0, y:0 };
     const audio = { ctx:null, music:null, enabled:false, nextBeat:0 };
     const stars = Array.from({ length:180 }, () => ({ x:Math.random() * world.w, y:Math.random() * world.h, r:Math.random() * 1.8 + .4, a:Math.random() * .65 + .2 }));
+    const mapThemes = [
+      { name:"星雲墓地", colors:["#172554","#0f172a","#020617"], rock:"#334155", hazard:"#7c3aed" },
+      { name:"灼熱軌道", colors:["#4c1d2f","#24111d","#09060b"], rock:"#78350f", hazard:"#ef4444" },
+      { name:"氷晶宙域", colors:["#164e63","#082f49","#020617"], rock:"#155e75", hazard:"#38bdf8" },
+      { name:"機械遺跡", colors:["#3f3f46","#18181b","#09090b"], rock:"#52525b", hazard:"#f59e0b" }
+    ];
+    let terrain = { seed:0, theme:mapThemes[0], obstacles:[], hazards:[] };
     let best = readBest();
     let running = false, paused = false, settingsPaused = false, lastTime = 0, score = 0, wave = 1, hp = 100, clip = 12, reserveAmmo = 90, shieldTime = 0, kills = 0, clears = 0, brutes = 0, alliesMet = 0, alliesLost = 0, distanceTravelled = 0, fireCooldown = 0, reloadTimer = 0, enemyTimer = 0, itemTimer = 2, recruitTimer = 7, droneCooldown = 0, orbitalCooldown = 0, novaCharge = 0, flashUntil = 0, missionAnnounced = false, combo = 0, comboTimer = 0, dashCooldown = 0, invulnerable = 0;
     let weapon = { type:"single", level:1, ttl:0, damage:24 };
@@ -207,9 +214,8 @@
       score = 0; wave = 1; hp = 100; clip = 12; reserveAmmo = 90; shieldTime = 0; kills = 0; clears = 0; brutes = 0; alliesMet = 0; alliesLost = 0; distanceTravelled = 0; fireCooldown = 0; reloadTimer = 0; enemyTimer = .16; itemTimer = 2; recruitTimer = 7; droneCooldown = .6; orbitalCooldown = 1.4; novaCharge = 0; flashUntil = 0; missionAnnounced = false; combo = 0; comboTimer = 0; dashCooldown = 0; invulnerable = 0;
       weapon = { type:"single", level:1, ttl:0, damage:24 };
       player = { x:180, y:180, r:16, speed:255, angle:0 };
-      goal = { x:rand(world.w - 520, world.w - 180), y:rand(world.h - 520, world.h - 180), r:46 };
-      enemies = []; bullets = []; items = []; inventory = []; recruits = []; allies = []; particles = []; trail = []; boss = spawnBoss(); running = true; paused = false; lastTime = performance.now();
-      startButton.textContent = "やり直す"; mobileStartButton.textContent = "↻"; pauseButton.textContent = "一時停止"; flash("ゲートを目指せ"); updateHud(); ensureAudio();
+      enemies = []; bullets = []; items = []; inventory = []; recruits = []; allies = []; particles = []; trail = []; generateStage(1); running = true; paused = false; lastTime = performance.now();
+      startButton.textContent = "やり直す"; mobileStartButton.textContent = "↻"; pauseButton.textContent = "一時停止"; flash(`STAGE 1 ${terrain.theme.name}`); updateHud(); ensureAudio();
     }
     function updateHud() {
       scoreEl.textContent = score; bestEl.textContent = best; waveEl.textContent = wave; hpEl.textContent = Math.max(0, Math.ceil(hp)); ammoEl.textContent = reloadTimer > 0 ? `装填中/${reserveAmmo}` : `${clip}/${reserveAmmo}`; weaponEl.textContent = weaponNames[weapon.type]; killsEl.textContent = kills;
@@ -239,6 +245,17 @@
     }
     function distance(a, b) { return Math.hypot(a.x - b.x, a.y - b.y); }
     function screenToWorld(x, y) { return { x:x + camera.x, y:y + camera.y }; }
+    function hitsObstacle(x, y, radius=player.r) { return terrain.obstacles.some(o => Math.hypot(x-o.x,y-o.y) < radius+o.r); }
+    function generateStage(stage) {
+      const corners=[{x:180,y:180,gx:world.w-220,gy:world.h-220},{x:world.w-180,y:180,gx:220,gy:world.h-220},{x:180,y:world.h-180,gx:world.w-220,gy:220},{x:world.w-180,y:world.h-180,gx:220,gy:220}], start=corners[Math.floor(rand(0,corners.length))];
+      player.x=start.x; player.y=start.y; goal={x:start.gx+rand(-120,120),y:start.gy+rand(-120,120),r:46};
+      terrain={seed:Math.floor(Math.random()*999999),theme:mapThemes[(stage-1)%mapThemes.length],obstacles:[],hazards:[]};
+      const safe=p=>Math.hypot(p.x-player.x,p.y-player.y)>260&&Math.hypot(p.x-goal.x,p.y-goal.y)>260;
+      for(let i=0;i<16+Math.min(12,stage*2);i++){const o={x:rand(120,world.w-120),y:rand(120,world.h-120),r:rand(34,82)};if(safe(o))terrain.obstacles.push(o);}
+      for(let i=0;i<3+Math.min(5,stage);i++){const h={x:rand(140,world.w-140),y:rand(140,world.h-140),r:rand(58,110)};if(safe(h))terrain.hazards.push(h);}
+      ["ammo","heal","weapon"].forEach((type,i)=>items.push({x:clamp(player.x+(start.x<world.w/2?1:-1)*(220+i*115),60,world.w-60),y:clamp(player.y+(i-1)*90,60,world.h-60),r:15,type,life:40}));
+      boss=spawnBoss(); camera.x=clamp(player.x-canvas.width/2,0,world.w-canvas.width); camera.y=clamp(player.y-canvas.height/2,0,world.h-canvas.height);
+    }
     function damagePlayer(amount) { if (invulnerable > 0) return; hp -= shieldTime > 0 ? amount * .35 : amount; combo = 0; comboTimer = 0; }
     function burst(x, y, color, count=10) { for (let i = 0; i < count; i += 1) { const a = rand(0, Math.PI * 2); const s = rand(45, 180); particles.push({ x, y, vx:Math.cos(a) * s, vy:Math.sin(a) * s, r:rand(2, 5), life:rand(.25, .75), max:.75, color }); } }
     function chooseEnemyType() {
@@ -323,6 +340,7 @@
       const len = Math.hypot(dx, dy); const oldX = player.x, oldY = player.y;
       if (len > 0) { const boost = (keys.has("shift") || controls.boost) ? 1.5 : 1; const focus = (keys.has("control") || controls.focus) ? .48 : 1; player.x += dx / len * player.speed * boost * focus * dt; player.y += dy / len * player.speed * boost * focus * dt; }
       player.x = clamp(player.x, player.r, world.w - player.r); player.y = clamp(player.y, player.r, world.h - player.r); distanceTravelled += Math.hypot(player.x - oldX, player.y - oldY) / 10;
+      if (hitsObstacle(player.x,player.y)) { player.x=oldX; player.y=oldY; }
       const aim = pointer.active ? screenToWorld(pointer.x, pointer.y) : { x:player.x + 1, y:player.y }; player.angle = Math.atan2(aim.y - player.y, aim.x - player.x);
       trail.push({ x:player.x, y:player.y, life:.45, r:player.r }); if (trail.length > 32) trail.shift();
     }
@@ -331,7 +349,7 @@
       let dx = stickState.x, dy = stickState.y; const len = Math.hypot(dx, dy);
       if (len < .1) { dx = Math.cos(player.angle); dy = Math.sin(player.angle); }
       else { dx /= len; dy /= len; }
-      player.x = clamp(player.x + dx * 190, player.r, world.w - player.r); player.y = clamp(player.y + dy * 190, player.r, world.h - player.r);
+      const oldX=player.x,oldY=player.y; player.x = clamp(player.x + dx * 190, player.r, world.w - player.r); player.y = clamp(player.y + dy * 190, player.r, world.h - player.r); if(hitsObstacle(player.x,player.y)){player.x=oldX;player.y=oldY;}
       dashCooldown = 2.5; invulnerable = .38; dashStateEl.textContent = "2.5"; burst(player.x, player.y, "#c4b5fd", 24); flash("緊急回避"); tone(820, .08, "sine", .04);
     }
     function weaponStats() { return { magazine:weapon.type === "burst" ? 18 : weapon.type === "spread" ? 10 : weapon.type === "pierce" ? 9 : 12, reload:Math.max(.65, 1.25 - weapon.level * .08), range:weapon.type === "pierce" ? 620 : 540 }; }
@@ -383,6 +401,7 @@
       updateMusic(now); if (!running || paused) { updateParticles(dt); return; }
       if (performance.now() > flashUntil) stateEl.textContent = combo > 1 ? `${combo} COMBO` : "進行中"; shieldTime = Math.max(0, shieldTime - dt); dashCooldown = Math.max(0, dashCooldown - dt); invulnerable = Math.max(0, invulnerable - dt); comboTimer = Math.max(0, comboTimer - dt); if (comboTimer <= 0) combo = 0; dashStateEl.textContent = dashCooldown > 0 ? dashCooldown.toFixed(1) : "OK";
       movePlayer(dt); fireCooldown = Math.max(0, fireCooldown - dt); if (reloadTimer > 0) { reloadTimer = Math.max(0, reloadTimer - dt); if (reloadTimer <= 0) finishReload(); } weapon.ttl = Math.max(0, weapon.ttl - dt); if (weapon.ttl <= 0 && weapon.type !== "single") { weapon = { type:"single", level:Math.max(1, weapon.level - 1), ttl:0, damage:24 }; clip = Math.min(clip, weaponStats().magazine); }
+      if (terrain.hazards.some(h=>distance(player,h)<h.r+player.r)) damagePlayer(7*dt);
       autoShoot();
       updateEquipment(dt);
       enemyTimer -= dt; itemTimer -= dt; recruitTimer -= dt; if (enemyTimer <= 0) { spawnEnemy(); if (wave > 2 && Math.random() < .55) spawnEnemy(); if (wave > 5 && Math.random() < .35) spawnEnemy(); enemyTimer = Math.max(.055, .34 - wave * .018); } if (itemTimer <= 0) { spawnItem(); itemTimer = rand(4.5, 7.5); } if (recruitTimer <= 0) { spawnRecruit(); recruitTimer = rand(12, 20); }
@@ -425,16 +444,17 @@
       if (missionComplete() && !missionAnnounced) { missionAnnounced = true; flash("ミッション達成"); }
       if (hp <= 0) endRound(false); updateHud();
     }
-    function clearGate() { clears += 1; wave += 1; score += 250 + wave * 60; reserveAmmo = Math.min(260, reserveAmmo + 55); hp = Math.min(100, hp + 25); goal = { x:rand(180, world.w - 180), y:rand(180, world.h - 180), r:46 }; boss = spawnBoss(); enemies.push(...Array.from({ length:Math.min(18, 5 + wave) }, () => (spawnEnemy(), enemies.pop()))); flash(`ゲート突破 ${wave}`); burst(player.x, player.y, "#22c55e", 30); tone(880, .16, "sine", .05); }
+    function clearGate() { clears += 1; wave += 1; score += 250 + wave * 60; reserveAmmo = Math.min(260, reserveAmmo + 55); hp = Math.min(100, hp + 25); enemies=[]; bullets=[]; items=[]; recruits=[]; particles=[]; trail=[]; generateStage(wave); for(let i=0;i<Math.min(18,5+wave);i++)spawnEnemy(); flash(`STAGE ${wave} ${terrain.theme.name}`); burst(player.x, player.y, "#22c55e", 30); tone(880, .16, "sine", .05); }
     function updateParticles(dt) { particles.forEach((p) => { p.life -= dt; p.x += p.vx * dt; p.y += p.vy * dt; p.vx *= .96; p.vy *= .96; }); particles = particles.filter((p) => p.life > 0); trail.forEach((t) => t.life -= dt); trail = trail.filter((t) => t.life > 0); }
     function endRound(cleared) { running = false; paused = false; const missionDone = missionComplete(); if (missionDone) score += mission.reward; lastResult = { finishedAt:new Date().toISOString(), cleared, score, best:Math.max(best, score), wave, hp:Math.max(0, Number(hp.toFixed(1))), clip, reserveAmmo, inventory:[...inventory], kills, clears, brutes, distanceTravelled:Number(distanceTravelled.toFixed(1)), weapon:{ ...weapon }, mission:{ ...mission, complete:missionDone } }; if (score > best) { best = score; writeBest(best); stateEl.textContent = "最高記録"; } else { stateEl.textContent = "終了"; } startButton.textContent = "開始"; mobileStartButton.textContent = "▶"; pauseButton.textContent = "一時停止"; updateHud(); }
     function worldX(x) { return x - camera.x; }
     function worldY(y) { return y - camera.y; }
     function drawBackground() {
-      const g = ctx.createRadialGradient(canvas.width * .5, canvas.height * .45, 80, canvas.width * .5, canvas.height * .5, canvas.width * .75); g.addColorStop(0, "#172554"); g.addColorStop(.55, "#0f172a"); g.addColorStop(1, "#020617"); ctx.fillStyle = g; ctx.fillRect(0, 0, canvas.width, canvas.height);
+      const colors=terrain.theme.colors; const g = ctx.createRadialGradient(canvas.width * .5, canvas.height * .45, 80, canvas.width * .5, canvas.height * .5, canvas.width * .75); g.addColorStop(0, colors[0]); g.addColorStop(.55, colors[1]); g.addColorStop(1, colors[2]); ctx.fillStyle = g; ctx.fillRect(0, 0, canvas.width, canvas.height);
       stars.forEach((s) => { const x = ((s.x - camera.x * .42) % canvas.width + canvas.width) % canvas.width; const y = ((s.y - camera.y * .42) % canvas.height + canvas.height) % canvas.height; ctx.fillStyle = `rgba(219,234,254,${s.a})`; ctx.beginPath(); ctx.arc(x, y, s.r, 0, Math.PI * 2); ctx.fill(); });
       ctx.strokeStyle = "rgba(148,163,184,.12)"; ctx.lineWidth = 1; const gx = -camera.x % 80; const gy = -camera.y % 80; for (let x = gx; x < canvas.width; x += 80) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke(); } for (let y = gy; y < canvas.height; y += 80) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke(); }
     }
+    function drawTerrain(){terrain.hazards.forEach(h=>{const x=worldX(h.x),y=worldY(h.y);ctx.fillStyle=terrain.theme.hazard+"33";ctx.strokeStyle=terrain.theme.hazard;ctx.lineWidth=2;ctx.beginPath();ctx.arc(x,y,h.r,0,Math.PI*2);ctx.fill();ctx.stroke();});terrain.obstacles.forEach(o=>{const x=worldX(o.x),y=worldY(o.y);ctx.fillStyle=terrain.theme.rock;ctx.strokeStyle="#ffffff22";ctx.lineWidth=3;ctx.beginPath();ctx.arc(x,y,o.r,0,Math.PI*2);ctx.fill();ctx.stroke();});}
     function drawCircle(obj, color, glow) { ctx.save(); ctx.shadowColor = glow; ctx.shadowBlur = 14; ctx.fillStyle = color; ctx.beginPath(); ctx.arc(worldX(obj.x), worldY(obj.y), obj.r, 0, Math.PI * 2); ctx.fill(); ctx.restore(); }
     function pixelRect(x, y, px, py, w, h, size, color) { ctx.fillStyle = color; ctx.fillRect(Math.round(x + px * size), Math.round(y + py * size), w * size, h * size); }
     function drawPixelSprite(x, y, size, color, kind) {
@@ -455,7 +475,7 @@
     function drawParticles() { particles.forEach((p) => { ctx.globalAlpha = Math.max(0, p.life / p.max); ctx.fillStyle = p.color; ctx.beginPath(); ctx.arc(worldX(p.x), worldY(p.y), p.r, 0, Math.PI * 2); ctx.fill(); ctx.globalAlpha = 1; }); }
     function drawItem(item) { const color = item.type === "weapon" ? "#a78bfa" : item.type === "heal" || item.type === "medkit" ? "#22c55e" : item.type === "bomb" ? "#ef4444" : item.type === "shield" ? "#38bdf8" : "#f59e0b"; const x = worldX(item.x), y = worldY(item.y); drawPixelSprite(x, y, 4, color, "item"); ctx.strokeStyle = "rgba(255,255,255,.75)"; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x, y, item.r + 6, 0, Math.PI * 2); ctx.stroke(); }
     function drawTextCenter(text, subtext) { ctx.fillStyle = "rgba(219,234,254,.95)"; ctx.font = "700 30px Segoe UI, sans-serif"; ctx.textAlign = "center"; ctx.fillText(text, canvas.width / 2, canvas.height / 2 - 10); if (subtext) { ctx.font = "500 16px Segoe UI, sans-serif"; ctx.fillText(subtext, canvas.width / 2, canvas.height / 2 + 24); } }
-    function draw() { drawBackground(); drawGoal(); items.forEach(drawItem); recruits.forEach(drawRecruit); bullets.forEach((b) => drawCircle(b, b.enemy ? "#fb7185" : b.ally ? "#93c5fd" : "#f8fafc", b.enemy ? "rgba(251,113,133,.8)" : "rgba(226,232,240,.8)")); enemies.forEach(drawEnemy); drawBoss(); allies.forEach(drawAlly); drawPlayer(); drawParticles(); ctx.fillStyle = "rgba(219,234,254,.92)"; ctx.font = "600 13px Segoe UI, sans-serif"; ctx.textAlign = "left"; ctx.fillText(`Gate ${Math.round(goal.x)},${Math.round(goal.y)} ${boss ? "LOCK" : "OPEN"}`, 10, 22); ctx.fillText(`S ${score}  HP ${Math.max(0,Math.ceil(hp))}  AM ${clip}/${reserveAmmo}`, 10, 43); if (combo > 1) { ctx.fillStyle="#fbbf24"; ctx.font="800 20px Segoe UI, sans-serif"; ctx.fillText(`${combo} COMBO`,10,68); } if (!running && score === 0) drawTextCenter("▶で開始", "ゲートへ到達せよ"); if (paused) drawTextCenter("一時停止中", "設定を閉じると再開します"); }
+    function draw() { drawBackground(); drawTerrain(); drawGoal(); items.forEach(drawItem); recruits.forEach(drawRecruit); bullets.forEach((b) => drawCircle(b, b.enemy ? "#fb7185" : b.ally ? "#93c5fd" : "#f8fafc", b.enemy ? "rgba(251,113,133,.8)" : "rgba(226,232,240,.8)")); enemies.forEach(drawEnemy); drawBoss(); allies.forEach(drawAlly); drawPlayer(); drawParticles(); ctx.fillStyle = "rgba(219,234,254,.92)"; ctx.font = "600 13px Segoe UI, sans-serif"; ctx.textAlign = "left"; ctx.fillText(`ST ${wave} ${terrain.theme.name} / Gate ${boss ? "LOCK" : "OPEN"}`, 10, 22); ctx.fillText(`S ${score}  HP ${Math.max(0,Math.ceil(hp))}  AM ${clip}/${reserveAmmo}`, 10, 43); if (combo > 1) { ctx.fillStyle="#fbbf24"; ctx.font="800 20px Segoe UI, sans-serif"; ctx.fillText(`${combo} COMBO`,10,68); } if (!running && score === 0) drawTextCenter("▶で開始", "ゲートへ到達せよ"); if (paused) drawTextCenter("一時停止中", "設定を閉じると再開します"); }
     function resizeCanvas() { const rect=canvas.getBoundingClientRect(); if (matchMedia("(max-width:560px)").matches) { canvas.width=Math.max(320,Math.round(rect.width)); canvas.height=Math.max(480,Math.round(rect.height)); } else { canvas.width=920; canvas.height=690; } draw(); }
     function loop(now) { const dt = Math.min(.033, (now - lastTime) / 1000 || 0); lastTime = now; update(dt, now); draw(); requestAnimationFrame(loop); }
     function togglePause() { if (!running) return; paused = !paused; stateEl.textContent = paused ? "一時停止" : "進行中"; pauseButton.textContent = paused ? "再開" : "一時停止"; lastTime = performance.now(); }
