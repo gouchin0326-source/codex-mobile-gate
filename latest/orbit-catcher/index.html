@@ -58,24 +58,29 @@
     .use-slot { background:#334155; border-color:#334155; color:#fff; display:grid; place-items:center; line-height:1.1; padding:4px; }
     .use-slot span { font-size:11px; font-weight:700; }
     .control-note { grid-column:1 / -1; color:var(--muted); font-size:12px; text-align:center; }
+    .mobile-actions, .settings-head { display:none; }
     @media (max-width:920px) { main { grid-template-columns:1fr; } aside { border-right:0; border-bottom:1px solid var(--line); } .stats { grid-template-columns:repeat(4, minmax(0,1fr)); } .stat { padding:8px; } .stat strong { font-size:17px; } .panel { display:none; } .panel.keep { display:grid; } .play-wrap { padding:8px; align-items:start; } .stage { width:100%; max-height:56vh; } }
     @media (max-width:560px) {
       html, body { width:100%; height:100%; overflow:hidden; overscroll-behavior:none; }
       body { min-height:100dvh; }
-      header { height:42px; min-height:42px; padding:5px 9px; }
-      header h1 { font-size:15px; line-height:1; }
-      header .muted { font-size:9px; }
-      main { height:calc(100dvh - 42px); min-height:0; grid-template-rows:82px minmax(0,1fr); overflow:hidden; }
-      aside { height:82px; padding:4px; border:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); grid-template-rows:50px 24px; gap:4px; overflow:hidden; }
-      .stats { grid-column:1/-1; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); grid-template-rows:repeat(2,23px); gap:3px; }
-      .stat { min-height:0; padding:2px 3px; border-radius:5px; text-align:center; }
-      .stat strong { font-size:11px; line-height:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-      .stat span { display:block; margin-top:1px; font-size:7px; line-height:1; }
-      aside > button { display:none; min-height:24px; padding:1px 3px; border-radius:6px; font-size:10px; }
-      aside > #start, aside > #pause, aside > #sound { display:block; }
-      aside > .status-line, aside > .panel { display:none!important; }
-      .play-wrap { min-height:0; height:100%; padding:4px; display:grid; grid-template-rows:minmax(0,1fr) 96px; gap:4px; overflow:hidden; }
+      header { display:none; }
+      main { width:100%; height:100dvh; min-height:0; display:block; overflow:hidden; }
+      aside { display:none; }
+      body.settings-open aside { position:fixed; inset:0; z-index:40; width:100%; height:100dvh; padding:10px; border:0; background:#fff; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:7px; align-content:start; overflow:auto; }
+      body.settings-open .settings-head, body.settings-open .stats, body.settings-open aside > button, body.settings-open aside > .status-line { grid-column:1/-1; }
+      body.settings-open .settings-head { display:flex; justify-content:space-between; align-items:center; }
+      body.settings-open .settings-head button { min-height:36px; padding:4px 14px; }
+      body.settings-open .stats { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:4px; }
+      body.settings-open .stat { min-height:44px; padding:5px 2px; text-align:center; }
+      body.settings-open .stat strong { font-size:13px; }
+      body.settings-open .stat span { font-size:8px; }
+      body.settings-open aside > button { display:block; min-height:38px; }
+      body.settings-open aside > .panel.keep { display:grid; grid-column:1/-1; }
+      body.settings-open aside > .legend { display:none; }
+      .play-wrap { width:100%; min-width:0; min-height:0; height:100dvh; padding:4px; display:grid; grid-template-rows:minmax(0,1fr) 96px; gap:4px; overflow:hidden; }
       .stage { width:100%; height:100%; max-height:none; aspect-ratio:auto; align-self:stretch; border-radius:7px; }
+      .mobile-actions { position:absolute; z-index:5; top:7px; right:7px; display:flex; gap:6px; }
+      .mobile-actions button { width:42px; min-height:42px; padding:0; border-radius:50%; border-color:#ffffff55; background:#0f172ccc; font-size:17px; }
       canvas { touch-action:none; }
       .overlay { inset:auto 5px 5px 5px; font-size:9px; }
       .badge { min-height:19px; padding:1px 6px; }
@@ -93,6 +98,7 @@
   <header><h1>Orbit Catcher: Gate Run</h1><div class="muted">巨大マップ探索シューティング</div></header>
   <main>
     <aside>
+      <div class="settings-head"><strong>設定・記録</strong><button class="secondary" id="settings-close" type="button">閉じる</button></div>
       <div class="stats">
         <div class="stat"><strong id="score">0</strong><span>得点</span></div><div class="stat"><strong id="best">0</strong><span>最高</span></div>
         <div class="stat"><strong id="wave">1</strong><span>周回</span></div><div class="stat"><strong id="hp">100</strong><span>耐久</span></div>
@@ -110,7 +116,7 @@
       <div class="panel legend"><div><span class="dot player"></span> 自機</div><div><span class="dot goal"></span> ゲート: 到達でクリア</div><div><span class="dot zombie"></span> ゾンビ: 接触で耐久低下</div><div><span class="dot item"></span> 弾薬/武器/回復</div></div>
     </aside>
     <div class="play-wrap">
-      <div class="stage"><canvas id="game" width="920" height="690" aria-label="Orbit Catcher Gate Runのゲーム画面"></canvas><div class="overlay"><span class="badge" id="state">準備中</span><span class="badge" id="effect">通常</span></div></div>
+      <div class="stage"><canvas id="game" width="920" height="690" aria-label="Orbit Catcher Gate Runのゲーム画面"></canvas><div class="mobile-actions"><button id="mobile-start" type="button" aria-label="ゲーム開始">▶</button><button id="mobile-settings" type="button" aria-label="設定を開く">⚙</button></div><div class="overlay"><span class="badge" id="state">準備中</span><span class="badge" id="effect">通常</span></div></div>
       <div class="controls" aria-label="ゲーム操作パネル"><div class="stick" id="stick" aria-label="移動スティック" role="application"><div class="stick-knob" id="stickKnob">移動</div></div><button class="round use-slot" id="use-slot-0" aria-label="道具1"><strong>-</strong><span>道具1</span></button><button class="round use-slot" id="use-slot-1" aria-label="道具2"><strong>-</strong><span>道具2</span></button><div class="control-note">射撃とリロードは自動。右ボタンは道具箱のアイテム使用。PCはWASD/矢印、Shiftで加速、Ctrlで精密。</div></div>
     </div>
   </main>
@@ -150,6 +156,9 @@
     const missionProgressEl = document.querySelector("#mission-progress");
     const stick = document.querySelector("#stick");
     const stickKnob = document.querySelector("#stickKnob");
+    const mobileStartButton = document.querySelector("#mobile-start");
+    const mobileSettingsButton = document.querySelector("#mobile-settings");
+    const settingsCloseButton = document.querySelector("#settings-close");
     const bestKey = "codex.orbit-catcher.best.v4";
     const missionPool = [
       { id:"reach-gate", label:"ゲートに1回到達する", target:1, reward:180, metric:"clears" },
@@ -177,7 +186,7 @@
     const audio = { ctx:null, music:null, enabled:false, nextBeat:0 };
     const stars = Array.from({ length:180 }, () => ({ x:Math.random() * world.w, y:Math.random() * world.h, r:Math.random() * 1.8 + .4, a:Math.random() * .65 + .2 }));
     let best = readBest();
-    let running = false, paused = false, lastTime = 0, score = 0, wave = 1, hp = 100, clip = 12, reserveAmmo = 90, shieldTime = 0, kills = 0, clears = 0, brutes = 0, alliesMet = 0, alliesLost = 0, distanceTravelled = 0, fireCooldown = 0, reloadTimer = 0, enemyTimer = 0, itemTimer = 2, recruitTimer = 7, droneCooldown = 0, orbitalCooldown = 0, novaCharge = 0, flashUntil = 0, missionAnnounced = false;
+    let running = false, paused = false, settingsPaused = false, lastTime = 0, score = 0, wave = 1, hp = 100, clip = 12, reserveAmmo = 90, shieldTime = 0, kills = 0, clears = 0, brutes = 0, alliesMet = 0, alliesLost = 0, distanceTravelled = 0, fireCooldown = 0, reloadTimer = 0, enemyTimer = 0, itemTimer = 2, recruitTimer = 7, droneCooldown = 0, orbitalCooldown = 0, novaCharge = 0, flashUntil = 0, missionAnnounced = false;
     let weapon = { type:"single", level:1, ttl:0, damage:24 };
     let player = { x:180, y:180, r:16, speed:255, angle:0 };
     let goal = { x:2850, y:2050, r:46 };
@@ -197,7 +206,7 @@
       player = { x:180, y:180, r:16, speed:255, angle:0 };
       goal = { x:rand(world.w - 520, world.w - 180), y:rand(world.h - 520, world.h - 180), r:46 };
       enemies = []; bullets = []; items = []; inventory = []; recruits = []; allies = []; particles = []; trail = []; boss = spawnBoss(); running = true; paused = false; lastTime = performance.now();
-      startButton.textContent = "やり直す"; pauseButton.textContent = "一時停止"; flash("ゲートを目指せ"); updateHud(); ensureAudio();
+      startButton.textContent = "やり直す"; mobileStartButton.textContent = "↻"; pauseButton.textContent = "一時停止"; flash("ゲートを目指せ"); updateHud(); ensureAudio();
     }
     function updateHud() {
       scoreEl.textContent = score; bestEl.textContent = best; waveEl.textContent = wave; hpEl.textContent = Math.max(0, Math.ceil(hp)); ammoEl.textContent = reloadTimer > 0 ? `装填中/${reserveAmmo}` : `${clip}/${reserveAmmo}`; weaponEl.textContent = weaponNames[weapon.type]; killsEl.textContent = kills;
@@ -435,7 +444,7 @@
     function drawParticles() { particles.forEach((p) => { ctx.globalAlpha = Math.max(0, p.life / p.max); ctx.fillStyle = p.color; ctx.beginPath(); ctx.arc(worldX(p.x), worldY(p.y), p.r, 0, Math.PI * 2); ctx.fill(); ctx.globalAlpha = 1; }); }
     function drawItem(item) { const color = item.type === "weapon" ? "#a78bfa" : item.type === "heal" || item.type === "medkit" ? "#22c55e" : item.type === "bomb" ? "#ef4444" : item.type === "shield" ? "#38bdf8" : "#f59e0b"; const x = worldX(item.x), y = worldY(item.y); drawPixelSprite(x, y, 4, color, "item"); ctx.strokeStyle = "rgba(255,255,255,.75)"; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x, y, item.r + 6, 0, Math.PI * 2); ctx.stroke(); }
     function drawTextCenter(text, subtext) { ctx.fillStyle = "rgba(219,234,254,.95)"; ctx.font = "700 30px Segoe UI, sans-serif"; ctx.textAlign = "center"; ctx.fillText(text, canvas.width / 2, canvas.height / 2 - 10); if (subtext) { ctx.font = "500 16px Segoe UI, sans-serif"; ctx.fillText(subtext, canvas.width / 2, canvas.height / 2 + 24); } }
-    function draw() { drawBackground(); drawGoal(); items.forEach(drawItem); recruits.forEach(drawRecruit); bullets.forEach((b) => drawCircle(b, b.enemy ? "#fb7185" : b.ally ? "#93c5fd" : "#f8fafc", b.enemy ? "rgba(251,113,133,.8)" : "rgba(226,232,240,.8)")); enemies.forEach(drawEnemy); drawBoss(); allies.forEach(drawAlly); drawPlayer(); drawParticles(); ctx.fillStyle = "rgba(219,234,254,.92)"; ctx.font = "600 16px Segoe UI, sans-serif"; ctx.textAlign = "left"; ctx.fillText(`Map ${Math.round(player.x)},${Math.round(player.y)}  Gate ${Math.round(goal.x)},${Math.round(goal.y)} ${boss ? "LOCK" : "OPEN"}`, 16, 28); if (!running && score === 0) drawTextCenter("開始を押してください", "巨大マップのゲートへ到達します"); if (paused) drawTextCenter("一時停止中", "再開で続きから遊べます"); }
+    function draw() { drawBackground(); drawGoal(); items.forEach(drawItem); recruits.forEach(drawRecruit); bullets.forEach((b) => drawCircle(b, b.enemy ? "#fb7185" : b.ally ? "#93c5fd" : "#f8fafc", b.enemy ? "rgba(251,113,133,.8)" : "rgba(226,232,240,.8)")); enemies.forEach(drawEnemy); drawBoss(); allies.forEach(drawAlly); drawPlayer(); drawParticles(); ctx.fillStyle = "rgba(219,234,254,.92)"; ctx.font = "600 16px Segoe UI, sans-serif"; ctx.textAlign = "left"; ctx.fillText(`Map ${Math.round(player.x)},${Math.round(player.y)}  Gate ${Math.round(goal.x)},${Math.round(goal.y)} ${boss ? "LOCK" : "OPEN"}`, 16, 28); ctx.textAlign = "right"; ctx.fillText(`S ${score}  HP ${Math.max(0,Math.ceil(hp))}  AM ${clip}/${reserveAmmo}`, canvas.width - 16, 52); if (!running && score === 0) drawTextCenter("▶で開始", "ゲートへ到達せよ"); if (paused) drawTextCenter("一時停止中", "設定を閉じると再開します"); }
     function loop(now) { const dt = Math.min(.033, (now - lastTime) / 1000 || 0); lastTime = now; update(dt, now); draw(); requestAnimationFrame(loop); }
     function togglePause() { if (!running) return; paused = !paused; stateEl.textContent = paused ? "一時停止" : "進行中"; pauseButton.textContent = paused ? "再開" : "一時停止"; lastTime = performance.now(); }
     function downloadText(filename, text, type) { const blob = new Blob([text], { type }); const url = URL.createObjectURL(blob); const link = document.createElement("a"); link.href = url; link.download = filename; document.body.appendChild(link); link.click(); link.remove(); URL.revokeObjectURL(url); exportStatusEl.textContent = `${filename} を書き出しました`; }
@@ -456,6 +465,9 @@
     stick.addEventListener("pointerup", (event) => { if (event.pointerId === stickState.pointerId) resetStick(); });
     stick.addEventListener("pointercancel", resetStick);
     startButton.addEventListener("click", resetRound);
+    mobileStartButton.addEventListener("click", resetRound);
+    mobileSettingsButton.addEventListener("click", () => { settingsPaused = running && !paused; if (settingsPaused) togglePause(); document.body.classList.add("settings-open"); });
+    settingsCloseButton.addEventListener("click", () => { document.body.classList.remove("settings-open"); if (settingsPaused && paused) togglePause(); settingsPaused = false; });
     pauseButton.addEventListener("click", togglePause);
     soundButton.addEventListener("click", () => { audio.enabled = !audio.enabled; soundButton.textContent = audio.enabled ? "音 OFF" : "音 ON"; if (audio.enabled) { ensureAudio(); tone(660, .12, "sine", .045); } });
     exportButton.addEventListener("click", exportResult);
