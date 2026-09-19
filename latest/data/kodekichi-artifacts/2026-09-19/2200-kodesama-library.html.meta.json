@@ -1,0 +1,36 @@
+{
+  "lane": "research",
+  "ts": "2026-09-19T18:00:33+09:00",
+  "artifact": "2200-kodesama-library.html",
+  "prompt": "コデ朗 / 知識・出典・鮮度・配車実績を記録する",
+  "source": "local",
+  "backend": "codex",
+  "model": "deterministic-rules",
+  "seconds": 0,
+  "gates": {
+    "html_first": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "mobile": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "accessible_status": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "export": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "offline": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "substantial": {
+      "pass": true,
+      "note": "local deterministic gate"
+    }
+  }
+}
