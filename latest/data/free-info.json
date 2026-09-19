@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-19T13:28:01.178838+00:00",
-  "lastSuccessAt": "2026-09-19T13:28:01.178838+00:00",
+  "updatedAt": "2026-09-19T13:38:01.038168+00:00",
+  "lastSuccessAt": "2026-09-19T13:38:01.038168+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 0.8 - 57 km SE of Pedro Bay, Alaska / M 0.6 - 1 km NE of Julian, CA / M 2.1 - 2 km W of Guánica, Puerto Rico",
+      "signal": "M 1.6 - 21 km W of Anchor Point, Alaska / M 2.2 - 4 km WSW of Guánica, Puerto Rico / M 2.2 - 14 km ENE of Pāhala, Hawaii",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026spclwh",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026spcrlr",
       "score": 1
     },
     {
@@ -275,10 +275,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.8 - 57 km SE of Pedro Bay, Alaska",
-      "summary": "57 km SE of Pedro Bay, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026spclwh",
-      "published": "2026-09-19T13:22:10.124000+00:00",
+      "title": "M 1.6 - 21 km W of Anchor Point, Alaska",
+      "summary": "21 km W of Anchor Point, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026spcrlr",
+      "published": "2026-09-19T13:28:36.602000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -669,49 +669,49 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 2.2 - 4 km WSW of Guánica, Puerto Rico",
+      "summary": "4 km WSW of Guánica, Puerto Rico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71533003",
+      "published": "2026-09-19T13:25:06.030000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 2.2 - 14 km ENE of Pāhala, Hawaii",
+      "summary": "14 km ENE of Pāhala, Hawaii",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75040157",
+      "published": "2026-09-19T13:24:58.820000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.8 - 57 km SE of Pedro Bay, Alaska",
+      "summary": "57 km SE of Pedro Bay, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026spclwh",
+      "published": "2026-09-19T13:22:10.124000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 0.6 - 1 km NE of Julian, CA",
       "summary": "1 km NE of Julian, CA",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335063",
       "published": "2026-09-19T12:58:04+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.1 - 2 km W of Guánica, Puerto Rico",
-      "summary": "2 km W of Guánica, Puerto Rico",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71532998",
-      "published": "2026-09-19T12:49:33.660000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.1 - 58 km SSW of Whites City, New Mexico",
-      "summary": "58 km SSW of Whites City, New Mexico",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026smbfxf",
-      "published": "2026-09-19T12:26:32.727000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.7 - 4 km N of Banning, CA",
-      "summary": "4 km N of Banning, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335055",
-      "published": "2026-09-19T12:20:32.990000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -722,64 +722,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T13:28:01.178838+00:00",
-      "lastAttemptAt": "2026-09-19T13:28:01.178838+00:00",
+      "lastSuccessAt": "2026-09-19T13:38:01.038168+00:00",
+      "lastAttemptAt": "2026-09-19T13:38:01.038168+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T13:28:01.178838+00:00",
-      "lastAttemptAt": "2026-09-19T13:28:01.178838+00:00",
+      "lastSuccessAt": "2026-09-19T13:38:01.038168+00:00",
+      "lastAttemptAt": "2026-09-19T13:38:01.038168+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T13:28:01.178838+00:00",
-      "lastAttemptAt": "2026-09-19T13:28:01.178838+00:00",
+      "lastSuccessAt": "2026-09-19T13:38:01.038168+00:00",
+      "lastAttemptAt": "2026-09-19T13:38:01.038168+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T13:28:01.178838+00:00",
-      "lastAttemptAt": "2026-09-19T13:28:01.178838+00:00",
+      "lastSuccessAt": "2026-09-19T13:38:01.038168+00:00",
+      "lastAttemptAt": "2026-09-19T13:38:01.038168+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T13:28:01.178838+00:00",
-      "lastAttemptAt": "2026-09-19T13:28:01.178838+00:00",
+      "lastSuccessAt": "2026-09-19T13:38:01.038168+00:00",
+      "lastAttemptAt": "2026-09-19T13:38:01.038168+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T13:28:01.178838+00:00",
-      "lastAttemptAt": "2026-09-19T13:28:01.178838+00:00",
+      "lastSuccessAt": "2026-09-19T13:38:01.038168+00:00",
+      "lastAttemptAt": "2026-09-19T13:38:01.038168+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T13:28:01.178838+00:00",
-      "lastAttemptAt": "2026-09-19T13:28:01.178838+00:00",
+      "lastSuccessAt": "2026-09-19T13:38:01.038168+00:00",
+      "lastAttemptAt": "2026-09-19T13:38:01.038168+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T13:28:01.178838+00:00",
-      "lastAttemptAt": "2026-09-19T13:28:01.178838+00:00",
+      "lastSuccessAt": "2026-09-19T13:38:01.038168+00:00",
+      "lastAttemptAt": "2026-09-19T13:38:01.038168+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
