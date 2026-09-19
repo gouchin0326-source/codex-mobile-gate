@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T05:08:01.749468+00:00",
+  "updatedAt": "2026-09-19T05:18:01.584900+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -423,6 +423,24 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Introducing the Australian Youth Safety Blueprint",
+      "summary": "OpenAI introduces the Australian Youth Safety Blueprint, a six-pillar roadmap for safer AI experiences that protect and empower young people.",
+      "url": "https://openai.com/index/australian-youth-safety-blueprint",
+      "published": "2026-09-18T12:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
@@ -511,24 +529,6 @@
         "AI",
         "重要"
       ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "How workers are unlocking new ways of working",
-      "summary": "New OpenAI Economic Research shows how workers use AI beyond traditional roles and which new activities become recurring parts of their work.",
-      "url": "https://openai.com/index/unlocking-new-ways-of-working",
-      "published": "2026-09-16T09:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
     }
   ],
   "providerWatch": {
@@ -588,15 +588,15 @@
             "source": "ChatGPT / OpenAI公式"
           },
           {
-            "title": "Introducing Astra for Law",
-            "url": "https://openai.com/index/astra-for-law",
-            "published": "2026-09-17T00:00:00+00:00",
+            "title": "Introducing the Australian Youth Safety Blueprint",
+            "url": "https://openai.com/index/australian-youth-safety-blueprint",
+            "published": "2026-09-18T12:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           },
           {
-            "title": "Helping older adults use AI in everyday life",
-            "url": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
-            "published": "2026-09-16T16:00:00+00:00",
+            "title": "Introducing Astra for Law",
+            "url": "https://openai.com/index/astra-for-law",
+            "published": "2026-09-17T00:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           }
         ]
@@ -709,5 +709,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-19T05:08:01.749468+00:00"
+  "lastSuccessAt": "2026-09-19T05:18:01.584900+00:00"
 }
