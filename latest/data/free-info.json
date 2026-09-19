@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-19T11:18:00.942681+00:00",
-  "lastSuccessAt": "2026-09-19T11:18:00.942681+00:00",
+  "updatedAt": "2026-09-19T11:28:01.036045+00:00",
+  "lastSuccessAt": "2026-09-19T11:28:01.036045+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 1.0 - 8 km NW of The Geysers, CA / M 1.2 - 9 km WSW of Idyllwild, CA / M 2.3 - 47 km WSW of Karluk, Alaska",
+      "signal": "M 1.3 - 12 km SSE of Stanton, Texas / M 2.1 - 21 km NNW of Karluk, Alaska / M 1.0 - 8 km NW of The Geysers, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438292",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026slzevu",
       "score": 1
     },
     {
@@ -275,10 +275,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.0 - 8 km NW of The Geysers, CA",
-      "summary": "8 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438292",
-      "published": "2026-09-19T11:07:58.090000+00:00",
+      "title": "M 1.3 - 12 km SSE of Stanton, Texas",
+      "summary": "12 km SSE of Stanton, Texas",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026slzevu",
+      "published": "2026-09-19T11:23:40.176000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -669,6 +669,32 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 2.1 - 21 km NNW of Karluk, Alaska",
+      "summary": "21 km NNW of Karluk, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026soyium",
+      "published": "2026-09-19T11:18:42.617000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.0 - 8 km NW of The Geysers, CA",
+      "summary": "8 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438292",
+      "published": "2026-09-19T11:07:58.090000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 1.2 - 9 km WSW of Idyllwild, CA",
       "summary": "9 km WSW of Idyllwild, CA",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335047",
@@ -690,96 +716,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.5 - 10 km ENE of Milpitas, CA",
-      "summary": "10 km ENE of Milpitas, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438287",
-      "published": "2026-09-19T10:52:05.170000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.7 - 8 km WNW of Cobb, CA",
-      "summary": "8 km WNW of Cobb, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438282",
-      "published": "2026-09-19T10:51:34.700000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T11:18:00.942681+00:00",
-      "lastAttemptAt": "2026-09-19T11:18:00.942681+00:00",
+      "lastSuccessAt": "2026-09-19T11:28:01.036045+00:00",
+      "lastAttemptAt": "2026-09-19T11:28:01.036045+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T11:18:00.942681+00:00",
-      "lastAttemptAt": "2026-09-19T11:18:00.942681+00:00",
+      "lastSuccessAt": "2026-09-19T11:28:01.036045+00:00",
+      "lastAttemptAt": "2026-09-19T11:28:01.036045+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T11:18:00.942681+00:00",
-      "lastAttemptAt": "2026-09-19T11:18:00.942681+00:00",
+      "lastSuccessAt": "2026-09-19T11:28:01.036045+00:00",
+      "lastAttemptAt": "2026-09-19T11:28:01.036045+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T11:18:00.942681+00:00",
-      "lastAttemptAt": "2026-09-19T11:18:00.942681+00:00",
+      "lastSuccessAt": "2026-09-19T11:28:01.036045+00:00",
+      "lastAttemptAt": "2026-09-19T11:28:01.036045+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T11:18:00.942681+00:00",
-      "lastAttemptAt": "2026-09-19T11:18:00.942681+00:00",
+      "lastSuccessAt": "2026-09-19T11:28:01.036045+00:00",
+      "lastAttemptAt": "2026-09-19T11:28:01.036045+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T11:18:00.942681+00:00",
-      "lastAttemptAt": "2026-09-19T11:18:00.942681+00:00",
+      "lastSuccessAt": "2026-09-19T11:28:01.036045+00:00",
+      "lastAttemptAt": "2026-09-19T11:28:01.036045+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T11:18:00.942681+00:00",
-      "lastAttemptAt": "2026-09-19T11:18:00.942681+00:00",
+      "lastSuccessAt": "2026-09-19T11:28:01.036045+00:00",
+      "lastAttemptAt": "2026-09-19T11:28:01.036045+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T11:18:00.942681+00:00",
-      "lastAttemptAt": "2026-09-19T11:18:00.942681+00:00",
+      "lastSuccessAt": "2026-09-19T11:28:01.036045+00:00",
+      "lastAttemptAt": "2026-09-19T11:28:01.036045+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
