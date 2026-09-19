@@ -1,11 +1,11 @@
 # CODEXGATE News Brief
 
-- 更新: 2026-09-19T12:58:01.388698+00:00
+- 更新: 2026-09-19T13:08:01.159493+00:00
 - 取得: GitHub Actions/Python
 - Codex: 0%想定（自動実行時）
 - 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。
 
 - [開発] CG開発・GitHub運用へ反映候補 / GitHub Copilot weekly releases — September 14 / Upcoming deprecation o
 - [AI] AI/Codex運用の変化を確認 / Create your best tracks yet with Lyria 3.5 in Gemini. / Our framework 
-- [災害] 更新あり。必要時だけ確認 / M 0.7 - 4 km N of Banning, CA / M 4.5 - 273 km NNW of Dêqên, China / M
-- [技術] 更新あり。必要時だけ確認 / Benchmarking Wild vs Mold / Don’t Let Architecture Astronauts Scare Yo
+- [災害] 更新あり。必要時だけ確認 / M 0.6 - 1 km NE of Julian, CA / M 2.1 - 2 km W of Guánica, Puerto Rico
+- [技術] 更新あり。必要時だけ確認 / Benchmarking Wild vs Mold
