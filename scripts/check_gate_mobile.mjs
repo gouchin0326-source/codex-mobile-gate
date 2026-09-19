@@ -1,0 +1,44 @@
+import { writeFile } from "node:fs/promises";
+
+const port = process.argv[2] || "9337";
+const output = process.argv[3] || "C:/Codex/reports/gate-mobile-cdp.png";
+const tabs = await (await fetch(`http://127.0.0.1:${port}/json`)).json();
+const tab = tabs.find(item => item.url?.includes("orbit-catcher"));
+if (!tab) throw new Error("Gate tab not found");
+const socket = new WebSocket(tab.webSocketDebuggerUrl);
+await new Promise(resolve => { socket.onopen = resolve; });
+let id = 0;
+const pending = new Map();
+socket.onmessage = event => {
+  const message = JSON.parse(event.data);
+  if (message.id && pending.has(message.id)) {
+    pending.get(message.id)(message);
+    pending.delete(message.id);
+  }
+};
+const call = (method, params = {}) => new Promise(resolve => {
+  const requestId = ++id;
+  pending.set(requestId, resolve);
+  socket.send(JSON.stringify({ id:requestId, method, params }));
+});
+await call("Page.enable");
+await call("Runtime.enable");
+await call("Emulation.setDeviceMetricsOverride", { width:390, height:844, deviceScaleFactor:1, mobile:true });
+await call("Page.reload", { ignoreCache:true });
+await new Promise(resolve => setTimeout(resolve, 700));
+const result = await call("Runtime.evaluate", { expression:`(() => {
+  const rect = selector => { const r=document.querySelector(selector).getBoundingClientRect(); return {x:r.x,y:r.y,w:r.width,h:r.height,b:r.bottom,r:r.right}; };
+  const visible = selector => getComputedStyle(document.querySelector(selector)).display !== "none";
+  return {inner:[innerWidth,innerHeight],scroll:[document.documentElement.scrollWidth,document.documentElement.scrollHeight],stage:rect('.stage'),controls:rect('.controls'),start:rect('#start'),sound:rect('#sound'),items:[rect('#use-slot-0'),rect('#use-slot-1')],exportsHidden:!visible('#export-result')};
+})()`, returnByValue:true });
+const value = result.result.result.value;
+await call("Runtime.evaluate", { expression:"document.querySelector('#start').click()" });
+await new Promise(resolve => setTimeout(resolve, 250));
+const startedResult = await call("Runtime.evaluate", { expression:"({label:document.querySelector('#start').textContent,state:document.querySelector('#state').textContent})", returnByValue:true });
+const started = startedResult.result.result.value;
+const shot = await call("Page.captureScreenshot", { format:"png" });
+await writeFile(output, Buffer.from(shot.result.data, "base64"));
+socket.close();
+const fit = value.scroll[0] <= value.inner[0] && value.scroll[1] <= value.inner[1] && value.controls.b <= value.inner[1] && value.items.every(item => item.r <= value.inner[0]);
+console.log(JSON.stringify({ fit, ...value, started, screenshot:output }));
+if (!fit || !value.exportsHidden || started.label !== "やり直す") process.exitCode = 1;

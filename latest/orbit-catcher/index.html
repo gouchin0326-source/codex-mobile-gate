@@ -59,7 +59,34 @@
     .use-slot span { font-size:11px; font-weight:700; }
     .control-note { grid-column:1 / -1; color:var(--muted); font-size:12px; text-align:center; }
     @media (max-width:920px) { main { grid-template-columns:1fr; } aside { border-right:0; border-bottom:1px solid var(--line); } .stats { grid-template-columns:repeat(4, minmax(0,1fr)); } .stat { padding:8px; } .stat strong { font-size:17px; } .panel { display:none; } .panel.keep { display:grid; } .play-wrap { padding:8px; align-items:start; } .stage { width:100%; max-height:56vh; } }
-    @media (max-width:560px) { header { padding:10px 12px; } h1 { font-size:18px; } .stats { grid-template-columns:repeat(3, minmax(0,1fr)); } .controls { grid-template-columns:1fr 76px 72px; padding:8px; gap:7px; } .stick { width:124px; height:124px; } .stick-knob { width:50px; height:50px; } .round { width:68px; height:68px; font-size:13px; } }
+    @media (max-width:560px) {
+      html, body { width:100%; height:100%; overflow:hidden; overscroll-behavior:none; }
+      body { min-height:100dvh; }
+      header { height:42px; min-height:42px; padding:5px 9px; }
+      header h1 { font-size:15px; line-height:1; }
+      header .muted { font-size:9px; }
+      main { height:calc(100dvh - 42px); min-height:0; grid-template-rows:82px minmax(0,1fr); overflow:hidden; }
+      aside { height:82px; padding:4px; border:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); grid-template-rows:50px 24px; gap:4px; overflow:hidden; }
+      .stats { grid-column:1/-1; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); grid-template-rows:repeat(2,23px); gap:3px; }
+      .stat { min-height:0; padding:2px 3px; border-radius:5px; text-align:center; }
+      .stat strong { font-size:11px; line-height:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+      .stat span { display:block; margin-top:1px; font-size:7px; line-height:1; }
+      aside > button { display:none; min-height:24px; padding:1px 3px; border-radius:6px; font-size:10px; }
+      aside > #start, aside > #pause, aside > #sound { display:block; }
+      aside > .status-line, aside > .panel { display:none!important; }
+      .play-wrap { min-height:0; height:100%; padding:4px; display:grid; grid-template-rows:minmax(0,1fr) 96px; gap:4px; overflow:hidden; }
+      .stage { width:100%; height:100%; max-height:none; aspect-ratio:auto; align-self:stretch; border-radius:7px; }
+      canvas { touch-action:none; }
+      .overlay { inset:auto 5px 5px 5px; font-size:9px; }
+      .badge { min-height:19px; padding:1px 6px; }
+      .controls { width:100%; height:96px; padding:4px 7px; grid-template-columns:minmax(96px,1fr) 60px 60px; gap:7px; border-radius:7px; overflow:hidden; }
+      .stick { width:88px; height:88px; }
+      .stick::before { inset:13px; }
+      .stick-knob { width:38px; height:38px; font-size:9px; }
+      .round { width:58px; height:58px; min-height:58px; font-size:10px; }
+      .use-slot span { font-size:8px; }
+      .control-note { display:none; }
+    }
   </style>
 </head>
 <body>
