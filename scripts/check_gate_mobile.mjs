@@ -2,6 +2,7 @@ import { writeFile } from "node:fs/promises";
 
 const port = process.argv[2] || "9337";
 const output = process.argv[3] || "C:/Codex/reports/gate-mobile-cdp.png";
+const viewportHeight = Number(process.argv[4] || 844);
 const tabs = await (await fetch(`http://127.0.0.1:${port}/json`)).json();
 const tab = tabs.find(item => item.url?.includes("orbit-catcher"));
 if (!tab) throw new Error("Gate tab not found");
@@ -23,7 +24,7 @@ const call = (method, params = {}) => new Promise(resolve => {
 });
 await call("Page.enable");
 await call("Runtime.enable");
-await call("Emulation.setDeviceMetricsOverride", { width:390, height:844, deviceScaleFactor:1, mobile:true });
+await call("Emulation.setDeviceMetricsOverride", { width:390, height:viewportHeight, deviceScaleFactor:1, mobile:true });
 await call("Page.reload", { ignoreCache:true });
 await new Promise(resolve => setTimeout(resolve, 700));
 const result = await call("Runtime.evaluate", { expression:`(() => {
