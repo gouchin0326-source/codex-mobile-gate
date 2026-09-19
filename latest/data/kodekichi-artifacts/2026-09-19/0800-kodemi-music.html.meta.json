@@ -1,0 +1,36 @@
+{
+  "lane": "music",
+  "ts": "2026-09-19T07:43:11+09:00",
+  "artifact": "0800-kodemi-music.html",
+  "prompt": "コデ美 / 今日の情報から短い音楽作品のテーマと非音声代替を1件作る",
+  "source": "local",
+  "backend": "codex",
+  "model": "deterministic-rules",
+  "seconds": 0,
+  "gates": {
+    "html_first": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "mobile": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "accessible_status": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "export": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "offline": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "substantial": {
+      "pass": true,
+      "note": "local deterministic gate"
+    }
+  }
+}

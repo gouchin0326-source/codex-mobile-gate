@@ -1,0 +1,36 @@
+{
+  "lane": "research",
+  "ts": "2026-09-19T07:43:11+09:00",
+  "artifact": "0800-kodesama-library.html",
+  "prompt": "コデ朗 / HAの外部AI状況と公開情報を確認し、二人へ渡す根拠付き知識を整理する",
+  "source": "local",
+  "backend": "codex",
+  "model": "deterministic-rules",
+  "seconds": 0,
+  "gates": {
+    "html_first": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "mobile": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "accessible_status": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "export": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "offline": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "substantial": {
+      "pass": true,
+      "note": "local deterministic gate"
+    }
+  }
+}
