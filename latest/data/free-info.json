@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-19T03:58:01.499008+00:00",
-  "lastSuccessAt": "2026-09-19T03:58:01.499008+00:00",
+  "updatedAt": "2026-09-19T04:08:01.548380+00:00",
+  "lastSuccessAt": "2026-09-19T04:08:01.548380+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -133,20 +133,20 @@
       "score": 4
     },
     {
-      "genre": "論文",
-      "count": 8,
-      "signal": "Do AI Agents Understand Computer Architecture? / What Do We Expect from LLMs? Mapping the Design of LLM Benchmarks / Position: It is Time to Virtualize Foundation Models with a Sel",
-      "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://arxiv.org/abs/2609.19387",
-      "score": 4
-    },
-    {
       "genre": "AI",
-      "count": 7,
+      "count": 12,
       "signal": "Create your best tracks yet with Lyria 3.5 in Gemini. / Our framework for reporting model misalignment / How to connect AI usage to business value",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
       "score": 4
+    },
+    {
+      "genre": "災害",
+      "count": 4,
+      "signal": "M 2.8 - 3 km SSW of Pāhala, Hawaii / M 0.9 - 6 km WNW of The Geysers, CA / M 2.0 - 54 km W of Anchor Point, Alaska",
+      "decision": "更新あり。必要時だけ確認",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75039922",
+      "score": 1
     },
     {
       "genre": "技術",
@@ -155,14 +155,6 @@
       "decision": "更新あり。必要時だけ確認",
       "topUrl": "https://davidlattimore.github.io/posts/2026/09/18/benchmarking-wild-vs-mold.html",
       "score": 2
-    },
-    {
-      "genre": "災害",
-      "count": 1,
-      "signal": "M 3.0 - 4 km SSW of Pāhala, Hawaii",
-      "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75039922",
-      "score": 1
     }
   ],
   "items": [
@@ -182,26 +174,6 @@
       "tags": [
         "開発",
         "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Do AI Agents Understand Computer Architecture?",
-      "summary": "arXiv:2609.19387v1 Announce Type: new Abstract: Agents are increasingly asked to design hardware, and increasingly reported to succeed. Such reports establish that a design improved; they cannot establish why. An agent t",
-      "url": "https://arxiv.org/abs/2609.19387",
-      "published": "2026-09-18T04:00:00+00:00",
-      "score": 4,
-      "tags": [
-        "論文",
-        "重要",
-        "制作",
         "研究"
       ]
     },
@@ -303,10 +275,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 3.0 - 4 km SSW of Pāhala, Hawaii",
-      "summary": "4 km SSW of Pāhala, Hawaii",
+      "title": "M 2.8 - 3 km SSW of Pāhala, Hawaii",
+      "summary": "3 km SSW of Pāhala, Hawaii",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75039922",
-      "published": "2026-09-19T03:28:41.710000+00:00",
+      "published": "2026-09-19T03:28:41.790000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -403,82 +375,6 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "What Do We Expect from LLMs? Mapping the Design of LLM Benchmarks",
-      "summary": "arXiv:2609.19182v1 Announce Type: new Abstract: Benchmarks are central to how progress in large language models (LLMs) is assessed and communicated. Yet model rankings alone reveal little about how evaluation requirement",
-      "url": "https://arxiv.org/abs/2609.19182",
-      "published": "2026-09-18T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "制作",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Position: It is Time to Virtualize Foundation Models with a Self-evolving Operating System Layer",
-      "summary": "arXiv:2609.19203v1 Announce Type: new Abstract: AI applications have shifted from single, monolithic foundation models (FM) to compound agentic systems. Yet today's stacks remain fragmented: even as protocols (e.g., MCP,",
-      "url": "https://arxiv.org/abs/2609.19203",
-      "published": "2026-09-18T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Characterizing Web Search by Conversational LLM Agents: From Search Decisions and Strategies to Results and Responses",
-      "summary": "arXiv:2609.19244v1 Announce Type: new Abstract: Conversational LLM agents increasingly rely on Web search, yet the end-to-end lifecycle of agentic search remains poorly understood. We present the first study of Web searc",
-      "url": "https://arxiv.org/abs/2609.19244",
-      "published": "2026-09-18T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "MAGS: Multi-agent Auto-formalization Guarantees Safety for Agentic Outputs",
-      "summary": "arXiv:2609.19391v1 Announce Type: new Abstract: LLM coding agents now generate complex programs at a scale that makes thorough human review increasingly difficult, raising the risk of safety and security failures. Common",
-      "url": "https://arxiv.org/abs/2609.19391",
-      "published": "2026-09-18T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
       ]
     },
     {
@@ -626,60 +522,6 @@
       ]
     },
     {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Regularized Emphatic Temporal-Difference Learning: Stability under Constant Stepsizes",
-      "summary": "arXiv:2609.19170v1 Announce Type: new Abstract: Emphatic temporal-difference learning (ETD) stabilizes the expected off-policy TD update and changes its projection geometry, but neither property determines constant-steps",
-      "url": "https://arxiv.org/abs/2609.19170",
-      "published": "2026-09-18T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "BioPhys-Bridge: A Benchmark for Interdisciplinary Scientific Reasoning in Physics-Grounded Biological Research",
-      "summary": "arXiv:2609.19180v1 Announce Type: new Abstract: Language models face unique challenges in analyzing interdisciplinary scientific research literature. In biophysics research, faithful answers require grounding observed da",
-      "url": "https://arxiv.org/abs/2609.19180",
-      "published": "2026-09-18T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "What Do Current Systematic Generalization Tasks Miss? A Reasoning-Centered Analysis",
-      "summary": "arXiv:2609.19212v1 Announce Type: new Abstract: Systematic generalization, the ability to solve novel problems by recombining known atomic elements, is central to human intelligence but difficult to study rigorously unde",
-      "url": "https://arxiv.org/abs/2609.19212",
-      "published": "2026-09-18T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
@@ -750,70 +592,199 @@
         "AI",
         "重要"
       ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Hex turns complex analysis into visual reports with GPT‑6 Astra",
+      "summary": "GPT-6 Astra helps Hex’s data agents turn answers into interactive visualizations that employees are proud to share.",
+      "url": "https://openai.com/index/hex-gpt-6-astra",
+      "published": "2026-09-16T12:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "How workers are unlocking new ways of working",
+      "summary": "New OpenAI Economic Research shows how workers use AI beyond traditional roles and which new activities become recurring parts of their work.",
+      "url": "https://openai.com/index/unlocking-new-ways-of-working",
+      "published": "2026-09-16T09:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+      "summary": "Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking are our most advanced live dialogue models yet, built for natural conversation.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+      "published": "2026-09-15T17:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "研究"
+      ]
+    },
+    {
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "DevFest is back",
+      "summary": "DevFest 2026 is back and here’s how you can connect with one of the more than 800 global events to build, secure, and scale in the agentic AI era.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/",
+      "published": "2026-09-14T16:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
+      "summary": "Gemini 3.8 Flash and 3.8 Flash Cyber deliver next-generation intelligence for agentic workflows and cybersecurity.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
+      "published": "2026-09-02T15:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.9 - 6 km WNW of The Geysers, CA",
+      "summary": "6 km WNW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438192",
+      "published": "2026-09-19T03:24:31.230000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 2.0 - 54 km W of Anchor Point, Alaska",
+      "summary": "54 km W of Anchor Point, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026soigah",
+      "published": "2026-09-19T03:15:43.779000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 2.5 - 4 km SW of Guánica, Puerto Rico",
+      "summary": "4 km SW of Guánica, Puerto Rico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71532843",
+      "published": "2026-09-19T03:12:08.300000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T03:58:01.499008+00:00",
-      "lastAttemptAt": "2026-09-19T03:58:01.499008+00:00",
+      "lastSuccessAt": "2026-09-19T04:08:01.548380+00:00",
+      "lastAttemptAt": "2026-09-19T04:08:01.548380+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T03:58:01.499008+00:00",
-      "lastAttemptAt": "2026-09-19T03:58:01.499008+00:00",
+      "lastSuccessAt": "2026-09-19T04:08:01.548380+00:00",
+      "lastAttemptAt": "2026-09-19T04:08:01.548380+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T03:58:01.499008+00:00",
-      "lastAttemptAt": "2026-09-19T03:58:01.499008+00:00",
+      "lastSuccessAt": "2026-09-19T04:08:01.548380+00:00",
+      "lastAttemptAt": "2026-09-19T04:08:01.548380+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T03:58:01.499008+00:00",
-      "lastAttemptAt": "2026-09-19T03:58:01.499008+00:00",
+      "lastSuccessAt": "2026-09-19T04:08:01.548380+00:00",
+      "lastAttemptAt": "2026-09-19T04:08:01.548380+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T03:58:01.499008+00:00",
-      "lastAttemptAt": "2026-09-19T03:58:01.499008+00:00",
+      "lastSuccessAt": "2026-09-19T04:08:01.548380+00:00",
+      "lastAttemptAt": "2026-09-19T04:08:01.548380+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T03:58:01.499008+00:00",
-      "lastAttemptAt": "2026-09-19T03:58:01.499008+00:00",
+      "lastSuccessAt": "2026-09-19T04:08:01.548380+00:00",
+      "lastAttemptAt": "2026-09-19T04:08:01.548380+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T03:58:01.499008+00:00",
-      "lastAttemptAt": "2026-09-19T03:58:01.499008+00:00",
+      "lastSuccessAt": "2026-09-19T04:08:01.548380+00:00",
+      "lastAttemptAt": "2026-09-19T04:08:01.548380+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T03:58:01.499008+00:00",
-      "lastAttemptAt": "2026-09-19T03:58:01.499008+00:00",
+      "lastSuccessAt": "2026-09-19T04:08:01.548380+00:00",
+      "lastAttemptAt": "2026-09-19T04:08:01.548380+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
