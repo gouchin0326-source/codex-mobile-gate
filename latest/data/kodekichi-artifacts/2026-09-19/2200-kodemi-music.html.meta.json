@@ -1,8 +1,8 @@
 {
   "lane": "music",
-  "ts": "2026-09-19T18:00:33+09:00",
+  "ts": "2026-09-19T22:00:00+09:00",
   "artifact": "2200-kodemi-music.html",
-  "prompt": "コデ美 / 音楽成果・検査・次の一手を記録する",
+  "prompt": "コデ美 / 4音ステップシーケンサー",
   "source": "local",
   "backend": "codex",
   "model": "deterministic-rules",
@@ -29,6 +29,10 @@
       "note": "local deterministic gate"
     },
     "substantial": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "interactive": {
       "pass": true,
       "note": "local deterministic gate"
     }
