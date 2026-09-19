@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-19T15:28:01.195316+00:00",
-  "lastSuccessAt": "2026-09-19T15:28:01.195316+00:00",
+  "updatedAt": "2026-09-19T15:38:01.099293+00:00",
+  "lastSuccessAt": "2026-09-19T15:38:01.099293+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 1.1 - 5 km W of Anza, CA / M 2.5 - 4 km S of Pāhala, Hawaii / M 1.0 - 87 km SSE of Igiugig, Alaska",
+      "signal": "M 1.7 - 8 km ESE of Cloverdale, CA / M 2.1 - 34 km N of Chenega, Alaska / M 0.9 - 4 km WSW of Anza, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335119",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438392",
       "score": 1
     },
     {
@@ -275,10 +275,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.1 - 5 km W of Anza, CA",
-      "summary": "5 km W of Anza, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335119",
-      "published": "2026-09-19T15:25:45.940000+00:00",
+      "title": "M 1.7 - 8 km ESE of Cloverdale, CA",
+      "summary": "8 km ESE of Cloverdale, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438392",
+      "published": "2026-09-19T15:31:06.260000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -669,6 +669,32 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 2.1 - 34 km N of Chenega, Alaska",
+      "summary": "34 km N of Chenega, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026spgqqi",
+      "published": "2026-09-19T15:27:36.882000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.9 - 4 km WSW of Anza, CA",
+      "summary": "4 km WSW of Anza, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335119",
+      "published": "2026-09-19T15:25:46.490000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 2.5 - 4 km S of Pāhala, Hawaii",
       "summary": "4 km S of Pāhala, Hawaii",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75040197",
@@ -690,96 +716,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.3 - 72 km WNW of Tyonek, Alaska",
-      "summary": "72 km WNW of Tyonek, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026spflop",
-      "published": "2026-09-19T14:51:47.140000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.4 - 4 km W of Fuig, Puerto Rico",
-      "summary": "4 km W of Fuig, Puerto Rico",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71533033",
-      "published": "2026-09-19T14:47:21.520000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T15:28:01.195316+00:00",
-      "lastAttemptAt": "2026-09-19T15:28:01.195316+00:00",
+      "lastSuccessAt": "2026-09-19T15:38:01.099293+00:00",
+      "lastAttemptAt": "2026-09-19T15:38:01.099293+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T15:28:01.195316+00:00",
-      "lastAttemptAt": "2026-09-19T15:28:01.195316+00:00",
+      "lastSuccessAt": "2026-09-19T15:38:01.099293+00:00",
+      "lastAttemptAt": "2026-09-19T15:38:01.099293+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T15:28:01.195316+00:00",
-      "lastAttemptAt": "2026-09-19T15:28:01.195316+00:00",
+      "lastSuccessAt": "2026-09-19T15:38:01.099293+00:00",
+      "lastAttemptAt": "2026-09-19T15:38:01.099293+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T15:28:01.195316+00:00",
-      "lastAttemptAt": "2026-09-19T15:28:01.195316+00:00",
+      "lastSuccessAt": "2026-09-19T15:38:01.099293+00:00",
+      "lastAttemptAt": "2026-09-19T15:38:01.099293+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T15:28:01.195316+00:00",
-      "lastAttemptAt": "2026-09-19T15:28:01.195316+00:00",
+      "lastSuccessAt": "2026-09-19T15:38:01.099293+00:00",
+      "lastAttemptAt": "2026-09-19T15:38:01.099293+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T15:28:01.195316+00:00",
-      "lastAttemptAt": "2026-09-19T15:28:01.195316+00:00",
+      "lastSuccessAt": "2026-09-19T15:38:01.099293+00:00",
+      "lastAttemptAt": "2026-09-19T15:38:01.099293+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T15:28:01.195316+00:00",
-      "lastAttemptAt": "2026-09-19T15:28:01.195316+00:00",
+      "lastSuccessAt": "2026-09-19T15:38:01.099293+00:00",
+      "lastAttemptAt": "2026-09-19T15:38:01.099293+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T15:28:01.195316+00:00",
-      "lastAttemptAt": "2026-09-19T15:28:01.195316+00:00",
+      "lastSuccessAt": "2026-09-19T15:38:01.099293+00:00",
+      "lastAttemptAt": "2026-09-19T15:38:01.099293+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
