@@ -1,0 +1,40 @@
+{
+  "lane": "app",
+  "ts": "2026-09-19T21:18:26+09:00",
+  "artifact": "2140-kodekichi-game.html",
+  "prompt": "コデ吉 / 情報を分類して得点するゲーム",
+  "source": "local",
+  "backend": "codex",
+  "model": "deterministic-rules",
+  "seconds": 0,
+  "gates": {
+    "html_first": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "mobile": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "accessible_status": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "export": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "offline": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "substantial": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "interactive": {
+      "pass": true,
+      "note": "local deterministic gate"
+    }
+  }
+}
