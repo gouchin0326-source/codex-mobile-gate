@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-19T08:58:02.044889+00:00",
-  "lastSuccessAt": "2026-09-19T08:58:02.044889+00:00",
+  "updatedAt": "2026-09-19T09:08:01.843800+00:00",
+  "lastSuccessAt": "2026-09-19T09:08:01.843800+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -141,20 +141,20 @@
       "score": 4
     },
     {
-      "genre": "災害",
-      "count": 5,
-      "signal": "M 1.1 - 19 km N of San Simeon, CA / M 1.3 - 20 km SSW of South Van Horn, Alaska / M 0.9 - 85 km NNW of Karluk, Alaska",
+      "genre": "技術",
+      "count": 3,
+      "signal": "The Implications of Linguistic Illegibility for LLM Security / Hacking OpenAI / Introducing System One Models & Jev",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438242",
-      "score": 1
+      "topUrl": "https://arxiv.org/abs/2609.02852",
+      "score": 2
     },
     {
-      "genre": "技術",
-      "count": 1,
-      "signal": "Benchmarking Wild vs Mold",
+      "genre": "災害",
+      "count": 3,
+      "signal": "M 0.3 - 12 km W of Anza, CA / M 1.0 - 7 km NW of The Geysers, CA / M 1.1 - 19 km N of San Simeon, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://davidlattimore.github.io/posts/2026/09/18/benchmarking-wild-vs-mold.html",
-      "score": 2
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335031",
+      "score": 1
     }
   ],
   "items": [
@@ -241,16 +241,16 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "その他",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Benchmarking Wild vs Mold",
-      "summary": "Comments",
-      "url": "https://davidlattimore.github.io/posts/2026/09/18/benchmarking-wild-vs-mold.html",
-      "published": "2026-09-18T15:25:08+00:00",
+      "title": "The Implications of Linguistic Illegibility for LLM Security",
+      "summary": "LLMs are trained to generate natural language. However, various strands of evidence indicate that an LLM's externalized linguistic outputs and mechanistically-extracted linguistic features can be an unreliable lens for u",
+      "url": "https://arxiv.org/abs/2609.02852",
+      "published": "2026-09-19T05:34:15+00:00",
       "score": 2,
       "tags": [
         "技術",
-        "研究"
+        "重要"
       ]
     },
     {
@@ -275,10 +275,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.1 - 19 km N of San Simeon, CA",
-      "summary": "19 km N of San Simeon, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438242",
-      "published": "2026-09-19T08:54:53.460000+00:00",
+      "title": "M 0.3 - 12 km W of Anza, CA",
+      "summary": "12 km W of Anza, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335031",
+      "published": "2026-09-19T09:01:44.530000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -540,6 +540,42 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Hacking OpenAI",
+      "summary": "Comments",
+      "url": "https://www.hacktron.ai/blog/hacking-openai",
+      "published": "2026-09-18T10:26:42+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "重要"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Introducing System One Models & Jev",
+      "summary": "Comments",
+      "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "published": "2026-09-18T00:05:10+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "研究"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -669,10 +705,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.3 - 20 km SSW of South Van Horn, Alaska",
-      "summary": "20 km SSW of South Van Horn, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sotjsj",
-      "published": "2026-09-19T08:49:47.349000+00:00",
+      "title": "M 1.0 - 7 km NW of The Geysers, CA",
+      "summary": "7 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438247",
+      "published": "2026-09-19T08:58:08.480000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -682,36 +718,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.9 - 85 km NNW of Karluk, Alaska",
-      "summary": "85 km NNW of Karluk, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sotaqm",
-      "published": "2026-09-19T08:39:20.798000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.0 - 27 km WNW of Anchor Point, Alaska",
-      "summary": "27 km WNW of Anchor Point, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sosvrf",
-      "published": "2026-09-19T08:33:36.892000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.3 - 23 km W of Hope, Alaska",
-      "summary": "23 km W of Hope, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sortzr",
-      "published": "2026-09-19T08:01:42.438000+00:00",
+      "title": "M 1.1 - 19 km N of San Simeon, CA",
+      "summary": "19 km N of San Simeon, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438242",
+      "published": "2026-09-19T08:54:53.460000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -722,64 +732,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:58:02.044889+00:00",
-      "lastAttemptAt": "2026-09-19T08:58:02.044889+00:00",
+      "lastSuccessAt": "2026-09-19T09:08:01.843800+00:00",
+      "lastAttemptAt": "2026-09-19T09:08:01.843800+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:58:02.044889+00:00",
-      "lastAttemptAt": "2026-09-19T08:58:02.044889+00:00",
+      "lastSuccessAt": "2026-09-19T09:08:01.843800+00:00",
+      "lastAttemptAt": "2026-09-19T09:08:01.843800+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:58:02.044889+00:00",
-      "lastAttemptAt": "2026-09-19T08:58:02.044889+00:00",
+      "lastSuccessAt": "2026-09-19T09:08:01.843800+00:00",
+      "lastAttemptAt": "2026-09-19T09:08:01.843800+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:58:02.044889+00:00",
-      "lastAttemptAt": "2026-09-19T08:58:02.044889+00:00",
+      "lastSuccessAt": "2026-09-19T09:08:01.843800+00:00",
+      "lastAttemptAt": "2026-09-19T09:08:01.843800+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:58:02.044889+00:00",
-      "lastAttemptAt": "2026-09-19T08:58:02.044889+00:00",
+      "lastSuccessAt": "2026-09-19T09:08:01.843800+00:00",
+      "lastAttemptAt": "2026-09-19T09:08:01.843800+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:58:02.044889+00:00",
-      "lastAttemptAt": "2026-09-19T08:58:02.044889+00:00",
+      "lastSuccessAt": "2026-09-19T09:08:01.843800+00:00",
+      "lastAttemptAt": "2026-09-19T09:08:01.843800+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:58:02.044889+00:00",
-      "lastAttemptAt": "2026-09-19T08:58:02.044889+00:00",
+      "lastSuccessAt": "2026-09-19T09:08:01.843800+00:00",
+      "lastAttemptAt": "2026-09-19T09:08:01.843800+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:58:02.044889+00:00",
-      "lastAttemptAt": "2026-09-19T08:58:02.044889+00:00",
+      "lastSuccessAt": "2026-09-19T09:08:01.843800+00:00",
+      "lastAttemptAt": "2026-09-19T09:08:01.843800+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
