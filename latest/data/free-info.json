@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-19T08:38:01.913389+00:00",
-  "lastSuccessAt": "2026-09-19T08:38:01.913389+00:00",
+  "updatedAt": "2026-09-19T08:48:01.909060+00:00",
+  "lastSuccessAt": "2026-09-19T08:48:01.909060+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 1.0 - 27 km WNW of Anchor Point, Alaska / M 2.3 - 23 km W of Hope, Alaska / M 1.7 - 47 km NW of Toyah, Texas",
+      "signal": "M 0.9 - 85 km NNW of Karluk, Alaska / M 1.0 - 27 km WNW of Anchor Point, Alaska / M 2.3 - 23 km W of Hope, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sosvrf",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sotaqm",
       "score": 1
     },
     {
@@ -275,10 +275,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.0 - 27 km WNW of Anchor Point, Alaska",
-      "summary": "27 km WNW of Anchor Point, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sosvrf",
-      "published": "2026-09-19T08:33:36.892000+00:00",
+      "title": "M 0.9 - 85 km NNW of Karluk, Alaska",
+      "summary": "85 km NNW of Karluk, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sotaqm",
+      "published": "2026-09-19T08:39:20.798000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -669,6 +669,19 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 1.0 - 27 km WNW of Anchor Point, Alaska",
+      "summary": "27 km WNW of Anchor Point, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sosvrf",
+      "published": "2026-09-19T08:33:36.892000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 2.3 - 23 km W of Hope, Alaska",
       "summary": "23 km W of Hope, Alaska",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sortzr",
@@ -682,10 +695,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.7 - 47 km NW of Toyah, Texas",
-      "summary": "47 km NW of Toyah, Texas",
+      "title": "M 1.7 - 46 km NW of Toyah, Texas",
+      "summary": "46 km NW of Toyah, Texas",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026slsggq",
-      "published": "2026-09-19T07:54:05.089000+00:00",
+      "published": "2026-09-19T07:54:04.995000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -703,83 +716,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 4.8 - 210 km W of Abepura, Indonesia",
-      "summary": "210 km W of Abepura, Indonesia",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tiib",
-      "published": "2026-09-19T07:44:25.478000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:38:01.913389+00:00",
-      "lastAttemptAt": "2026-09-19T08:38:01.913389+00:00",
+      "lastSuccessAt": "2026-09-19T08:48:01.909060+00:00",
+      "lastAttemptAt": "2026-09-19T08:48:01.909060+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:38:01.913389+00:00",
-      "lastAttemptAt": "2026-09-19T08:38:01.913389+00:00",
+      "lastSuccessAt": "2026-09-19T08:48:01.909060+00:00",
+      "lastAttemptAt": "2026-09-19T08:48:01.909060+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:38:01.913389+00:00",
-      "lastAttemptAt": "2026-09-19T08:38:01.913389+00:00",
+      "lastSuccessAt": "2026-09-19T08:48:01.909060+00:00",
+      "lastAttemptAt": "2026-09-19T08:48:01.909060+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:38:01.913389+00:00",
-      "lastAttemptAt": "2026-09-19T08:38:01.913389+00:00",
+      "lastSuccessAt": "2026-09-19T08:48:01.909060+00:00",
+      "lastAttemptAt": "2026-09-19T08:48:01.909060+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:38:01.913389+00:00",
-      "lastAttemptAt": "2026-09-19T08:38:01.913389+00:00",
+      "lastSuccessAt": "2026-09-19T08:48:01.909060+00:00",
+      "lastAttemptAt": "2026-09-19T08:48:01.909060+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:38:01.913389+00:00",
-      "lastAttemptAt": "2026-09-19T08:38:01.913389+00:00",
+      "lastSuccessAt": "2026-09-19T08:48:01.909060+00:00",
+      "lastAttemptAt": "2026-09-19T08:48:01.909060+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:38:01.913389+00:00",
-      "lastAttemptAt": "2026-09-19T08:38:01.913389+00:00",
+      "lastSuccessAt": "2026-09-19T08:48:01.909060+00:00",
+      "lastAttemptAt": "2026-09-19T08:48:01.909060+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:38:01.913389+00:00",
-      "lastAttemptAt": "2026-09-19T08:38:01.913389+00:00",
+      "lastSuccessAt": "2026-09-19T08:48:01.909060+00:00",
+      "lastAttemptAt": "2026-09-19T08:48:01.909060+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
