@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-19T11:38:01.068702+00:00",
-  "lastSuccessAt": "2026-09-19T11:38:01.068702+00:00",
+  "updatedAt": "2026-09-19T11:48:01.014581+00:00",
+  "lastSuccessAt": "2026-09-19T11:48:01.014581+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 1.5 - 45 km NW of Toyah, Texas / M 1.3 - 12 km SSE of Stanton, Texas / M 2.1 - 21 km NNW of Karluk, Alaska",
+      "signal": "M 1.5 - 27 km NNE of Karluk, Alaska / M 1.0 - 6 km NW of The Geysers, CA / M 1.5 - 45 km NW of Toyah, Texas",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026slznia",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sozelf",
       "score": 1
     },
     {
@@ -275,10 +275,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.5 - 45 km NW of Toyah, Texas",
-      "summary": "45 km NW of Toyah, Texas",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026slznia",
-      "published": "2026-09-19T11:33:29.667000+00:00",
+      "title": "M 1.5 - 27 km NNE of Karluk, Alaska",
+      "summary": "27 km NNE of Karluk, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sozelf",
+      "published": "2026-09-19T11:43:39.653000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -669,6 +669,32 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 1.0 - 6 km NW of The Geysers, CA",
+      "summary": "6 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438297",
+      "published": "2026-09-19T11:43:14.740000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.5 - 45 km NW of Toyah, Texas",
+      "summary": "45 km NW of Toyah, Texas",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026slznia",
+      "published": "2026-09-19T11:33:29.667000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 1.3 - 12 km SSE of Stanton, Texas",
       "summary": "12 km SSE of Stanton, Texas",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026slzevu",
@@ -690,96 +716,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.8 - 6 km WSW of Fuig, Puerto Rico",
-      "summary": "6 km WSW of Fuig, Puerto Rico",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71532993",
-      "published": "2026-09-19T11:18:01.240000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.0 - 8 km NW of The Geysers, CA",
-      "summary": "8 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438292",
-      "published": "2026-09-19T11:07:58.090000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T11:38:01.068702+00:00",
-      "lastAttemptAt": "2026-09-19T11:38:01.068702+00:00",
+      "lastSuccessAt": "2026-09-19T11:48:01.014581+00:00",
+      "lastAttemptAt": "2026-09-19T11:48:01.014581+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T11:38:01.068702+00:00",
-      "lastAttemptAt": "2026-09-19T11:38:01.068702+00:00",
+      "lastSuccessAt": "2026-09-19T11:48:01.014581+00:00",
+      "lastAttemptAt": "2026-09-19T11:48:01.014581+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T11:38:01.068702+00:00",
-      "lastAttemptAt": "2026-09-19T11:38:01.068702+00:00",
+      "lastSuccessAt": "2026-09-19T11:48:01.014581+00:00",
+      "lastAttemptAt": "2026-09-19T11:48:01.014581+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T11:38:01.068702+00:00",
-      "lastAttemptAt": "2026-09-19T11:38:01.068702+00:00",
+      "lastSuccessAt": "2026-09-19T11:48:01.014581+00:00",
+      "lastAttemptAt": "2026-09-19T11:48:01.014581+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T11:38:01.068702+00:00",
-      "lastAttemptAt": "2026-09-19T11:38:01.068702+00:00",
+      "lastSuccessAt": "2026-09-19T11:48:01.014581+00:00",
+      "lastAttemptAt": "2026-09-19T11:48:01.014581+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T11:38:01.068702+00:00",
-      "lastAttemptAt": "2026-09-19T11:38:01.068702+00:00",
+      "lastSuccessAt": "2026-09-19T11:48:01.014581+00:00",
+      "lastAttemptAt": "2026-09-19T11:48:01.014581+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T11:38:01.068702+00:00",
-      "lastAttemptAt": "2026-09-19T11:38:01.068702+00:00",
+      "lastSuccessAt": "2026-09-19T11:48:01.014581+00:00",
+      "lastAttemptAt": "2026-09-19T11:48:01.014581+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T11:38:01.068702+00:00",
-      "lastAttemptAt": "2026-09-19T11:38:01.068702+00:00",
+      "lastSuccessAt": "2026-09-19T11:48:01.014581+00:00",
+      "lastAttemptAt": "2026-09-19T11:48:01.014581+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
