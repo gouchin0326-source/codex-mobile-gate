@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-19T08:48:01.909060+00:00",
-  "lastSuccessAt": "2026-09-19T08:48:01.909060+00:00",
+  "updatedAt": "2026-09-19T08:58:02.044889+00:00",
+  "lastSuccessAt": "2026-09-19T08:58:02.044889+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 0.9 - 85 km NNW of Karluk, Alaska / M 1.0 - 27 km WNW of Anchor Point, Alaska / M 2.3 - 23 km W of Hope, Alaska",
+      "signal": "M 1.1 - 19 km N of San Simeon, CA / M 1.3 - 20 km SSW of South Van Horn, Alaska / M 0.9 - 85 km NNW of Karluk, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sotaqm",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438242",
       "score": 1
     },
     {
@@ -275,10 +275,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.9 - 85 km NNW of Karluk, Alaska",
-      "summary": "85 km NNW of Karluk, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sotaqm",
-      "published": "2026-09-19T08:39:20.798000+00:00",
+      "title": "M 1.1 - 19 km N of San Simeon, CA",
+      "summary": "19 km N of San Simeon, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438242",
+      "published": "2026-09-19T08:54:53.460000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -669,6 +669,32 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 1.3 - 20 km SSW of South Van Horn, Alaska",
+      "summary": "20 km SSW of South Van Horn, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sotjsj",
+      "published": "2026-09-19T08:49:47.349000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.9 - 85 km NNW of Karluk, Alaska",
+      "summary": "85 km NNW of Karluk, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sotaqm",
+      "published": "2026-09-19T08:39:20.798000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 1.0 - 27 km WNW of Anchor Point, Alaska",
       "summary": "27 km WNW of Anchor Point, Alaska",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sosvrf",
@@ -690,96 +716,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.7 - 46 km NW of Toyah, Texas",
-      "summary": "46 km NW of Toyah, Texas",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026slsggq",
-      "published": "2026-09-19T07:54:04.995000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.5 - 47 km NW of Toyah, Texas",
-      "summary": "47 km NW of Toyah, Texas",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026slsfls",
-      "published": "2026-09-19T07:53:09.502000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:48:01.909060+00:00",
-      "lastAttemptAt": "2026-09-19T08:48:01.909060+00:00",
+      "lastSuccessAt": "2026-09-19T08:58:02.044889+00:00",
+      "lastAttemptAt": "2026-09-19T08:58:02.044889+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:48:01.909060+00:00",
-      "lastAttemptAt": "2026-09-19T08:48:01.909060+00:00",
+      "lastSuccessAt": "2026-09-19T08:58:02.044889+00:00",
+      "lastAttemptAt": "2026-09-19T08:58:02.044889+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:48:01.909060+00:00",
-      "lastAttemptAt": "2026-09-19T08:48:01.909060+00:00",
+      "lastSuccessAt": "2026-09-19T08:58:02.044889+00:00",
+      "lastAttemptAt": "2026-09-19T08:58:02.044889+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:48:01.909060+00:00",
-      "lastAttemptAt": "2026-09-19T08:48:01.909060+00:00",
+      "lastSuccessAt": "2026-09-19T08:58:02.044889+00:00",
+      "lastAttemptAt": "2026-09-19T08:58:02.044889+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:48:01.909060+00:00",
-      "lastAttemptAt": "2026-09-19T08:48:01.909060+00:00",
+      "lastSuccessAt": "2026-09-19T08:58:02.044889+00:00",
+      "lastAttemptAt": "2026-09-19T08:58:02.044889+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:48:01.909060+00:00",
-      "lastAttemptAt": "2026-09-19T08:48:01.909060+00:00",
+      "lastSuccessAt": "2026-09-19T08:58:02.044889+00:00",
+      "lastAttemptAt": "2026-09-19T08:58:02.044889+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:48:01.909060+00:00",
-      "lastAttemptAt": "2026-09-19T08:48:01.909060+00:00",
+      "lastSuccessAt": "2026-09-19T08:58:02.044889+00:00",
+      "lastAttemptAt": "2026-09-19T08:58:02.044889+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T08:48:01.909060+00:00",
-      "lastAttemptAt": "2026-09-19T08:48:01.909060+00:00",
+      "lastSuccessAt": "2026-09-19T08:58:02.044889+00:00",
+      "lastAttemptAt": "2026-09-19T08:58:02.044889+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
