@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T04:48:01.681659+00:00",
+  "updatedAt": "2026-09-19T04:58:01.590265+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -24,9 +24,9 @@
     },
     {
       "genre": "技術",
-      "count": 1,
+      "count": 2,
       "decision": "必要時だけ確認",
-      "signal": "Benchmarking Wild vs Mold",
+      "signal": "Benchmarking Wild vs Mold / Flock cameras are riddled with security vulnerabilities and hard-coded credentials",
       "topUrl": "https://davidlattimore.github.io/posts/2026/09/18/benchmarking-wild-vs-mold.html",
       "score": 2
     }
@@ -423,6 +423,24 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Flock cameras are riddled with security vulnerabilities and hard-coded credentials",
+      "summary": "Comments",
+      "url": "https://micahflee.com/flock-cameras-are-riddled-with-security-vulnerabilities-and-hard-coded-credentials/",
+      "published": "2026-09-17T21:21:18+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "重要"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -510,24 +528,6 @@
       "tags": [
         "AI",
         "重要"
-      ]
-    },
-    {
-      "source": "google-gemini",
-      "platform": "AI",
-      "label": "Gemini公式",
-      "genre": "AI",
-      "provider": "gemini",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
-      "summary": "Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking are our most advanced live dialogue models yet, built for natural conversation.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
-      "published": "2026-09-15T17:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "研究"
       ]
     }
   ],
@@ -709,5 +709,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-19T04:48:01.681659+00:00"
+  "lastSuccessAt": "2026-09-19T04:58:01.590265+00:00"
 }

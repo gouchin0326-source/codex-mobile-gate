@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-19T04:48:01.681659+00:00",
-  "lastSuccessAt": "2026-09-19T04:48:01.681659+00:00",
+  "updatedAt": "2026-09-19T04:58:01.590265+00:00",
+  "lastSuccessAt": "2026-09-19T04:58:01.590265+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -142,16 +142,16 @@
     },
     {
       "genre": "災害",
-      "count": 5,
-      "signal": "M 2.0 - 5 km WSW of Pāhala, Hawaii / M 0.5 - 12 km W of Anza, CA / M 0.5 - 12 km W of Anza, CA",
+      "count": 4,
+      "signal": "M 1.5 - 11 km NE of Ridgecrest, CA / M 2.0 - 5 km WSW of Pāhala, Hawaii / M 0.5 - 12 km W of Anza, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75039947",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41334999",
       "score": 1
     },
     {
       "genre": "技術",
-      "count": 1,
-      "signal": "Benchmarking Wild vs Mold",
+      "count": 2,
+      "signal": "Benchmarking Wild vs Mold / Flock cameras are riddled with security vulnerabilities and hard-coded credentials",
       "decision": "更新あり。必要時だけ確認",
       "topUrl": "https://davidlattimore.github.io/posts/2026/09/18/benchmarking-wild-vs-mold.html",
       "score": 2
@@ -275,10 +275,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.0 - 5 km WSW of Pāhala, Hawaii",
-      "summary": "5 km WSW of Pāhala, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75039947",
-      "published": "2026-09-19T04:40:31.530000+00:00",
+      "title": "M 1.5 - 11 km NE of Ridgecrest, CA",
+      "summary": "11 km NE of Ridgecrest, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41334999",
+      "published": "2026-09-19T04:55:15.090000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -522,6 +522,24 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Flock cameras are riddled with security vulnerabilities and hard-coded credentials",
+      "summary": "Comments",
+      "url": "https://micahflee.com/flock-cameras-are-riddled-with-security-vulnerabilities-and-hard-coded-credentials/",
+      "published": "2026-09-17T21:21:18+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "重要"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -669,6 +687,19 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 2.0 - 5 km WSW of Pāhala, Hawaii",
+      "summary": "5 km WSW of Pāhala, Hawaii",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75039947",
+      "published": "2026-09-19T04:40:31.530000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 0.5 - 12 km W of Anza, CA",
       "summary": "12 km W of Anza, CA",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41334991",
@@ -690,96 +721,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.9 - 83 km WNW of Karluk, Alaska",
-      "summary": "83 km WNW of Karluk, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sokpyd",
-      "published": "2026-09-19T04:27:06.212000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.2 - 20 km NNE of Andrews, Texas",
-      "summary": "20 km NNE of Andrews, Texas",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026sllhva",
-      "published": "2026-09-19T04:27:03.422000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T04:48:01.681659+00:00",
-      "lastAttemptAt": "2026-09-19T04:48:01.681659+00:00",
+      "lastSuccessAt": "2026-09-19T04:58:01.590265+00:00",
+      "lastAttemptAt": "2026-09-19T04:58:01.590265+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T04:48:01.681659+00:00",
-      "lastAttemptAt": "2026-09-19T04:48:01.681659+00:00",
+      "lastSuccessAt": "2026-09-19T04:58:01.590265+00:00",
+      "lastAttemptAt": "2026-09-19T04:58:01.590265+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T04:48:01.681659+00:00",
-      "lastAttemptAt": "2026-09-19T04:48:01.681659+00:00",
+      "lastSuccessAt": "2026-09-19T04:58:01.590265+00:00",
+      "lastAttemptAt": "2026-09-19T04:58:01.590265+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T04:48:01.681659+00:00",
-      "lastAttemptAt": "2026-09-19T04:48:01.681659+00:00",
+      "lastSuccessAt": "2026-09-19T04:58:01.590265+00:00",
+      "lastAttemptAt": "2026-09-19T04:58:01.590265+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T04:48:01.681659+00:00",
-      "lastAttemptAt": "2026-09-19T04:48:01.681659+00:00",
+      "lastSuccessAt": "2026-09-19T04:58:01.590265+00:00",
+      "lastAttemptAt": "2026-09-19T04:58:01.590265+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T04:48:01.681659+00:00",
-      "lastAttemptAt": "2026-09-19T04:48:01.681659+00:00",
+      "lastSuccessAt": "2026-09-19T04:58:01.590265+00:00",
+      "lastAttemptAt": "2026-09-19T04:58:01.590265+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T04:48:01.681659+00:00",
-      "lastAttemptAt": "2026-09-19T04:48:01.681659+00:00",
+      "lastSuccessAt": "2026-09-19T04:58:01.590265+00:00",
+      "lastAttemptAt": "2026-09-19T04:58:01.590265+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T04:48:01.681659+00:00",
-      "lastAttemptAt": "2026-09-19T04:48:01.681659+00:00",
+      "lastSuccessAt": "2026-09-19T04:58:01.590265+00:00",
+      "lastAttemptAt": "2026-09-19T04:58:01.590265+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
