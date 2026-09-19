@@ -1,0 +1,36 @@
+{
+  "lane": "app",
+  "ts": "2026-09-19T19:12:57+09:00",
+  "artifact": "2100-kodekichi-game.html",
+  "prompt": "コデ吉 / コデ朗の知識とコデ美の感情設計を使い、遊べるミニゲームを完成させる",
+  "source": "local",
+  "backend": "codex",
+  "model": "deterministic-rules",
+  "seconds": 0,
+  "gates": {
+    "html_first": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "mobile": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "accessible_status": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "export": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "offline": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "substantial": {
+      "pass": true,
+      "note": "local deterministic gate"
+    }
+  }
+}

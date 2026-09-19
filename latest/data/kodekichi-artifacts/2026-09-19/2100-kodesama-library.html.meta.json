@@ -1,0 +1,36 @@
+{
+  "lane": "research",
+  "ts": "2026-09-19T19:12:57+09:00",
+  "artifact": "2100-kodesama-library.html",
+  "prompt": "コデ朗 / 二人の成果を横断検索できる知識・調査アプリを完成させる",
+  "source": "local",
+  "backend": "codex",
+  "model": "deterministic-rules",
+  "seconds": 0,
+  "gates": {
+    "html_first": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "mobile": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "accessible_status": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "export": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "offline": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "substantial": {
+      "pass": true,
+      "note": "local deterministic gate"
+    }
+  }
+}

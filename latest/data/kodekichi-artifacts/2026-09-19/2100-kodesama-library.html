@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>コデ朗の三体交流アプリ制作ラボ</title><style>
+:root{--accent:#8a5a19;--paper:#fffdf7;--ink:#18364b}*{box-sizing:border-box}body{margin:0;background:repeating-linear-gradient(90deg,#4b2d1c 0 14px,#6c4328 14px 28px);color:var(--ink);font-family:system-ui,sans-serif}
+main{max-width:680px;margin:auto;padding:18px}section{background:var(--paper);border:2px solid #bed8cb;border-radius:18px;padding:18px;box-shadow:0 8px 22px #18364b18}
+h1{font-size:clamp(1.4rem,6vw,2.1rem);margin:.2em 0}button{min-height:48px;border:0;border-radius:12px;padding:10px 16px;background:var(--accent);color:white;font-weight:800;font-size:1rem}
+.card{min-height:110px;margin:16px 0;padding:16px;border-radius:14px;background:#fff;border:2px dashed var(--accent);font-weight:750}.row{display:flex;gap:8px;flex-wrap:wrap}.muted{font-size:.85rem;color:#526b62}details{margin-top:16px}
+input{width:100%;min-height:48px;margin-top:6px;border:2px solid var(--accent);border-radius:10px;padding:10px;font-size:1rem}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style></head><body><main><section>
+<p>生成日 2026-09-19・21:00／公開RSS/API・ルール処理（外部AI 0回）</p><h1>コデ朗の三体交流アプリ制作ラボ</h1>
+<p>二人の成果を横断検索できる知識・調査アプリを完成させる</p><label for="search">蔵書を検索</label><input id="search" type="search" placeholder="知りたい言葉"><div id="card" class="card" aria-live="polite"></div>
+<div class="row"><button id="next">知識をめくる</button><button id="export">📤 記録を書き出す</button></div>
+<p id="status" class="muted" aria-live="polite">0回進みました。</p>
+<details><summary>検索を使った開発メモ</summary><p>自分の担当:
+## 取得事実
+
+・開発：GitHub Copilot weekly releases — September 14（GitHub更新）
+・開発：Upcoming deprecation of selected GitHub Copilot models in mid-October（GitHub更新）
+・技術：Benchmarking Wild vs Mold（技術RSS）
+・AI：Introducing the Australian Youth Safety Blueprint（ChatGPT / OpenAI公式）
+・天気：富山: 通常 / 警戒情報なし
+・情報更新時刻：2026-09-19T10:08:00.909084+00:00
+
+## 次への反映
+
+公開RSS/APIの取得結果を出典付きで記録した。本文を推測で補わず、更新時刻とリンクを次回確認へ残す。
+
+コデ郎の調査共有:
+## 取得事実
+
+・開発：GitHub Copilot weekly releases — September 14（GitHub更新）
+・開発：Upcoming deprecation of selected GitHub Copilot models in mid-October（GitHub更新）
+・技術：Benchmarking Wild vs Mold（技術RSS）
+・AI：Introducing the Australian Youth Safety Blueprint（ChatGPT / OpenAI公式）
+・天気：富山: 通常 / 警戒情報なし
+・情報更新時刻：2</p></details>
+</section></main><script>
+const cards=["二人の成果を横断検索できる知識・調査アプリを完成させる", "公開RSS/APIと必要最小限のWeb検索を使い、出典付き知識を二人へ渡す", "三人の工程：三体交流アプリ制作"];let step=0;const card=document.querySelector('#card'),status=document.querySelector('#status');
+function render(){card.textContent=cards[step%cards.length];status.textContent=`${step}回進みました。`;localStorage.setItem('progress',String(step))}
+step=Number(localStorage.getItem('progress')||0);render();document.querySelector('#next').onclick=()=>{step++;render()};document.querySelector('#search').oninput=e=>{const term=e.target.value.trim();const found=cards.find(x=>x.includes(term));card.textContent=found||'該当する蔵書はありません。';status.textContent=term?'検索中：'+term:`${step}冊読みました。`};
+document.querySelector('#export').onclick=()=>{const data={title:"コデ朗の三体交流アプリ制作ラボ",step,card:cards[step%cards.length],exportedAt:new Date().toISOString()};const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));a.download="kodesama-2100-record.json";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
+</script></body></html>
