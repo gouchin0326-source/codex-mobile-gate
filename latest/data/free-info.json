@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-19T07:48:01.822664+00:00",
-  "lastSuccessAt": "2026-09-19T07:48:01.822664+00:00",
+  "updatedAt": "2026-09-19T07:58:01.738040+00:00",
+  "lastSuccessAt": "2026-09-19T07:58:01.738040+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 1.4 - 63 km SSW of Whites City, New Mexico / M 2.0 - 51 km ENE of Kodiak, Alaska / M 1.2 - 19 km SE of Pinnacles, CA",
+      "signal": "M 1.5 - 47 km NW of Toyah, Texas / M 1.4 - 63 km SSW of Whites City, New Mexico / M 2.0 - 51 km ENE of Kodiak, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026slrtqo",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026slsfls",
       "score": 1
     },
     {
@@ -275,10 +275,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.4 - 63 km SSW of Whites City, New Mexico",
-      "summary": "63 km SSW of Whites City, New Mexico",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026slrtqo",
-      "published": "2026-09-19T07:41:57.790000+00:00",
+      "title": "M 1.5 - 47 km NW of Toyah, Texas",
+      "summary": "47 km NW of Toyah, Texas",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026slsfls",
+      "published": "2026-09-19T07:53:09.502000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -669,6 +669,19 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 1.4 - 63 km SSW of Whites City, New Mexico",
+      "summary": "63 km SSW of Whites City, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026slrtqo",
+      "published": "2026-09-19T07:41:57.790000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 2.0 - 51 km ENE of Kodiak, Alaska",
       "summary": "51 km ENE of Kodiak, Alaska",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sorbkd",
@@ -703,83 +716,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.5 - 59 km S of Whites City, New Mexico",
-      "summary": "59 km S of Whites City, New Mexico",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026slrnmv",
-      "published": "2026-09-19T07:32:19.226000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T07:48:01.822664+00:00",
-      "lastAttemptAt": "2026-09-19T07:48:01.822664+00:00",
+      "lastSuccessAt": "2026-09-19T07:58:01.738040+00:00",
+      "lastAttemptAt": "2026-09-19T07:58:01.738040+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T07:48:01.822664+00:00",
-      "lastAttemptAt": "2026-09-19T07:48:01.822664+00:00",
+      "lastSuccessAt": "2026-09-19T07:58:01.738040+00:00",
+      "lastAttemptAt": "2026-09-19T07:58:01.738040+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T07:48:01.822664+00:00",
-      "lastAttemptAt": "2026-09-19T07:48:01.822664+00:00",
+      "lastSuccessAt": "2026-09-19T07:58:01.738040+00:00",
+      "lastAttemptAt": "2026-09-19T07:58:01.738040+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T07:48:01.822664+00:00",
-      "lastAttemptAt": "2026-09-19T07:48:01.822664+00:00",
+      "lastSuccessAt": "2026-09-19T07:58:01.738040+00:00",
+      "lastAttemptAt": "2026-09-19T07:58:01.738040+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T07:48:01.822664+00:00",
-      "lastAttemptAt": "2026-09-19T07:48:01.822664+00:00",
+      "lastSuccessAt": "2026-09-19T07:58:01.738040+00:00",
+      "lastAttemptAt": "2026-09-19T07:58:01.738040+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T07:48:01.822664+00:00",
-      "lastAttemptAt": "2026-09-19T07:48:01.822664+00:00",
+      "lastSuccessAt": "2026-09-19T07:58:01.738040+00:00",
+      "lastAttemptAt": "2026-09-19T07:58:01.738040+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T07:48:01.822664+00:00",
-      "lastAttemptAt": "2026-09-19T07:48:01.822664+00:00",
+      "lastSuccessAt": "2026-09-19T07:58:01.738040+00:00",
+      "lastAttemptAt": "2026-09-19T07:58:01.738040+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T07:48:01.822664+00:00",
-      "lastAttemptAt": "2026-09-19T07:48:01.822664+00:00",
+      "lastSuccessAt": "2026-09-19T07:58:01.738040+00:00",
+      "lastAttemptAt": "2026-09-19T07:58:01.738040+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
