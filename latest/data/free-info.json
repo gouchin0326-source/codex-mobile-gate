@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-19T14:28:01.495878+00:00",
-  "lastSuccessAt": "2026-09-19T14:28:01.495878+00:00",
+  "updatedAt": "2026-09-19T14:38:02.777014+00:00",
+  "lastSuccessAt": "2026-09-19T14:38:02.777014+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 1.4 - 13 km NE of Hollister, CA / M 1.0 - 8 km W of Cobb, CA / M 0.8 - 7 km NW of The Geysers, CA",
+      "signal": "M 2.3 - 50 km SSE of Tanana, Alaska / M 1.4 - 13 km NE of Hollister, CA / M 1.0 - 8 km W of Cobb, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438372",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026speqkg",
       "score": 1
     },
     {
@@ -275,10 +275,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.4 - 13 km NE of Hollister, CA",
-      "summary": "13 km NE of Hollister, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438372",
-      "published": "2026-09-19T14:21:17.100000+00:00",
+      "title": "M 2.3 - 50 km SSE of Tanana, Alaska",
+      "summary": "50 km SSE of Tanana, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026speqkg",
+      "published": "2026-09-19T14:27:22.321000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -669,6 +669,19 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 1.4 - 13 km NE of Hollister, CA",
+      "summary": "13 km NE of Hollister, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438372",
+      "published": "2026-09-19T14:21:17.100000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 1.0 - 8 km W of Cobb, CA",
       "summary": "8 km W of Cobb, CA",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438367",
@@ -703,83 +716,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.6 - 22 km SW of La Quinta, CA",
-      "summary": "22 km SW of La Quinta, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335079",
-      "published": "2026-09-19T14:05:06.550000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T14:28:01.495878+00:00",
-      "lastAttemptAt": "2026-09-19T14:28:01.495878+00:00",
+      "lastSuccessAt": "2026-09-19T14:38:02.777014+00:00",
+      "lastAttemptAt": "2026-09-19T14:38:02.777014+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T14:28:01.495878+00:00",
-      "lastAttemptAt": "2026-09-19T14:28:01.495878+00:00",
+      "lastSuccessAt": "2026-09-19T14:38:02.777014+00:00",
+      "lastAttemptAt": "2026-09-19T14:38:02.777014+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T14:28:01.495878+00:00",
-      "lastAttemptAt": "2026-09-19T14:28:01.495878+00:00",
+      "lastSuccessAt": "2026-09-19T14:38:02.777014+00:00",
+      "lastAttemptAt": "2026-09-19T14:38:02.777014+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T14:28:01.495878+00:00",
-      "lastAttemptAt": "2026-09-19T14:28:01.495878+00:00",
+      "lastSuccessAt": "2026-09-19T14:38:02.777014+00:00",
+      "lastAttemptAt": "2026-09-19T14:38:02.777014+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T14:28:01.495878+00:00",
-      "lastAttemptAt": "2026-09-19T14:28:01.495878+00:00",
+      "lastSuccessAt": "2026-09-19T14:38:02.777014+00:00",
+      "lastAttemptAt": "2026-09-19T14:38:02.777014+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T14:28:01.495878+00:00",
-      "lastAttemptAt": "2026-09-19T14:28:01.495878+00:00",
+      "lastSuccessAt": "2026-09-19T14:38:02.777014+00:00",
+      "lastAttemptAt": "2026-09-19T14:38:02.777014+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T14:28:01.495878+00:00",
-      "lastAttemptAt": "2026-09-19T14:28:01.495878+00:00",
+      "lastSuccessAt": "2026-09-19T14:38:02.777014+00:00",
+      "lastAttemptAt": "2026-09-19T14:38:02.777014+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T14:28:01.495878+00:00",
-      "lastAttemptAt": "2026-09-19T14:28:01.495878+00:00",
+      "lastSuccessAt": "2026-09-19T14:38:02.777014+00:00",
+      "lastAttemptAt": "2026-09-19T14:38:02.777014+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
