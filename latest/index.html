@@ -360,6 +360,25 @@
       gap: 8px;
     }
 
+    .play-now { display:grid; grid-template-columns:1.35fr .65fr; min-height:150px; margin-bottom:10px; border-radius:16px; overflow:hidden; color:#fff; text-decoration:none; background:radial-gradient(circle at 78% 30%,#7c3aed,#172554 48%,#020617); box-shadow:0 12px 28px rgba(15,23,42,.24); }
+    .play-now-copy { padding:18px; display:grid; align-content:center; gap:5px; }
+    .play-now-copy small { color:#c4b5fd; font-weight:900; }
+    .play-now-copy strong { font-size:1.55rem; line-height:1; }
+    .play-now-copy span { font-size:.78rem; color:#dbeafe; }
+    .play-now-mark { display:grid; place-items:center; font-size:4rem; background:linear-gradient(135deg,#ffffff08,#38bdf833); }
+    .game-shelf { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; margin-bottom:12px; }
+    .game-card { min-height:112px; padding:10px; border-radius:13px; color:#fff; text-decoration:none; display:grid; align-content:end; gap:3px; box-shadow:inset 0 0 0 1px #ffffff24; }
+    .game-card b { font-size:1.05rem; }
+    .game-card span { color:#ffffffc9; font-size:.68rem; }
+    .game-card.action { background:linear-gradient(145deg,#7f1d1d,#ea580c); }
+    .game-card.survival { background:linear-gradient(145deg,#1f2937,#166534); }
+    .game-card.puzzle { background:linear-gradient(145deg,#312e81,#7c3aed); }
+    .game-card.brain { background:linear-gradient(145deg,#075985,#0f766e); }
+    .game-card.arcade { background:linear-gradient(145deg,#713f12,#ca8a04); }
+    .shelf-title { display:flex; justify-content:space-between; align-items:end; margin:10px 0 7px; }
+    .shelf-title h2 { margin:0; }
+    .shelf-title small { color:var(--muted); }
+
     .app-icon {
       position: relative;
       min-height: 88px;
@@ -657,7 +676,7 @@
     .cow-file small { color:var(--muted); }
     .cow-file button { min-height:36px; border:1px solid #2563eb; border-radius:8px; background:#2563eb; color:#fff; font:inherit; font-weight:900; padding:6px 10px; }
 
-    @media(max-width:560px){.setting-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.setting-pill{padding:6px;min-height:58px}.setting-pill b{font-size:.76rem}.setting-pill span{font-size:.62rem}}
+    @media(max-width:560px){.setting-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.setting-pill{padding:6px;min-height:58px}.setting-pill b{font-size:.76rem}.setting-pill span{font-size:.62rem}.play-now{min-height:132px}.play-now-copy{padding:14px}.play-now-copy strong{font-size:1.3rem}.play-now-mark{font-size:3.2rem}.game-shelf{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.game-card{min-height:96px;padding:9px}}
   </style>
 </head>
 <body>
@@ -665,7 +684,7 @@
     <div class="wrap top">
       <div>
         <h1>CG</h1>
-        <p class="tagline" id="cg-updated-label">CODEX Gate / 価値別アプリ管理 / 更新情報を取得中</p>
+        <p class="tagline" id="cg-updated-label">すぐ遊べるゲームとアプリ / 更新情報を取得中</p>
       </div>
       <button class="refresh" id="force-update" type="button">最新版に更新</button>
       <div class="date" id="cg-updated-date">更新情報を取得中</div>
@@ -684,7 +703,7 @@
 
     <section>
       <div class="tabs" role="tablist" aria-label="CGアプリ分類">
-        <button class="tab" type="button" role="tab" aria-selected="true" data-tab="zero">無料運用</button>
+        <button class="tab" type="button" role="tab" aria-selected="true" data-tab="zero">遊ぶ</button>
         <button class="tab" type="button" role="tab" aria-selected="false" data-tab="codex">Codex</button>
         <button class="tab" type="button" role="tab" aria-selected="false" data-tab="archive">書庫</button>
         <button class="tab" type="button" role="tab" aria-selected="false" data-tab="settings">設定</button>
@@ -692,22 +711,26 @@
     </section>
 
     <section class="tab-panel active" id="tab-zero">
-      <h2>無料運用アプリ</h2>
-      <div class="auto-list">
-        <div class="auto-line">前面: クリックして役立つ完成アプリだけ表示</div>
-        <div class="auto-line">自動: GitHub Actionsが一次API/RSSを取得、Codex運用0</div>
+      <a class="play-now" href="./orbit-catcher/index.html" aria-label="Gate Runを今すぐ遊ぶ">
+        <span class="play-now-copy"><small>今すぐ遊ぶ</small><strong>GATE RUN</strong><span>ランダムステージ探索シューティング</span></span><b class="play-now-mark" aria-hidden="true">◆</b>
+      </a>
+      <div class="shelf-title"><h2>ゲーム棚</h2><small>1タップで起動</small></div>
+      <div class="game-shelf">
+        <a class="game-card survival" href="./orbit-catcher-zombie-siege/index.html"><b>ゾンビ包囲</b><span>サバイバル</span></a>
+        <a class="game-card puzzle" href="./projects/mobile-puzzle-eco-lane/index.html"><b>プリズム</b><span>パズル</span></a>
+        <a class="game-card brain" href="./projects/sum-garden-eco-lane/index.html"><b>計算庭</b><span>脳トレ</span></a>
+        <a class="game-card arcade" href="./projects/falling-block-eco-lane/index.html"><b>落ちもの</b><span>アーケード</span></a>
+        <a class="game-card action" href="./orbit-catcher/index.html"><b>ゲート</b><span>アクション</span></a>
       </div>
+      <div class="shelf-title"><h2>アプリ棚</h2><small>道具・情報</small></div>
       <div class="phone-grid">
-        <a class="app-icon updated" href="./kodekichi/index.html?v=202609141418" aria-label="コデ吉最新版 v8.20260914.2を開く"><b class="glyph g-data" aria-hidden="true">吉</b><span>コデ吉</span></a>
-        <a class="app-icon updated" href="./codex-world/index.html?v=202609141418" aria-label="CODEXWorldを開く"><b class="glyph g-cow" aria-hidden="true">COW</b><span class="cow-label">CODEXWorld</span></a>
+        <a class="app-icon updated" href="./kodekichi/index.html?v=20260919" aria-label="コデ吉最新版を開く"><b class="glyph g-data" aria-hidden="true">吉</b><span>コデ吉</span></a>
+        <a class="app-icon updated" href="./codex-world/index.html?v=20260919" aria-label="CODEXWorldを開く"><b class="glyph g-cow" aria-hidden="true">COW</b><span class="cow-label">CODEXWorld</span></a>
         <a class="app-icon updated" data-weather-icon href="./weather-info/index.html"><b class="glyph g-data">天</b><span>富山天気</span></a>
         <a class="app-icon updated" href="./ai-info/index.html"><b class="glyph g-dev">AI</b><span>AI動向</span></a>
         <a class="app-icon updated" href="./social-trends/index.html"><b class="glyph g-dev">話</b><span>日本語話題</span></a>
         <a class="app-icon updated" data-health-icon href="./gate-health/index.html"><b class="glyph g-tool">監</b><span>CG監視</span></a>
         <a class="app-icon updated" href="./zero-token-army/index.html"><b class="glyph g-data">0</b><span>無料管理</span></a>
-      </div>
-      <div class="info-feed" id="free-info-feed">
-        <a class="feed-item" href="./data/free-info.json"><b>待</b><span>無料取得データ待ち</span><i>!</i></a>
       </div>
     </section>
 
@@ -844,7 +867,7 @@
       const date = new Date(value);
       if (Number.isNaN(date.getTime())) return;
       const text = new Intl.DateTimeFormat("ja-JP", {year:"numeric", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit", timeZone:"Asia/Tokyo"}).format(date).replaceAll("/", "-");
-      document.querySelector("#cg-updated-label")?.replaceChildren(document.createTextNode(`CODEX Gate / 価値別アプリ管理 / 更新 ${text} JST`));
+      document.querySelector("#cg-updated-label")?.replaceChildren(document.createTextNode(`すぐ遊べるゲームとアプリ / 更新 ${text} JST`));
       document.querySelector("#cg-updated-date")?.replaceChildren(document.createTextNode(`更新 ${text} JST`));
     }
     fetch("./data/today.json?v=" + Date.now())

@@ -1,0 +1,11 @@
+import { writeFile } from "node:fs/promises";
+const port=process.argv[2]||"9339", output=process.argv[3]||"C:/Codex/reports/cg-game-shelf-mobile.png";
+const tabs=await(await fetch(`http://127.0.0.1:${port}/json`)).json(),tab=tabs.find(x=>x.url?.includes("127.0.0.1")&&x.url?.includes("latest"));
+if(!tab)throw new Error("CG latest tab not found");
+const ws=new WebSocket(tab.webSocketDebuggerUrl);await new Promise(r=>ws.onopen=r);let id=0;const pending=new Map();
+ws.onmessage=e=>{const m=JSON.parse(e.data);if(m.id&&pending.has(m.id)){pending.get(m.id)(m);pending.delete(m.id)}};
+const call=(method,params={})=>new Promise(r=>{const n=++id;pending.set(n,r);ws.send(JSON.stringify({id:n,method,params}))});
+await call("Page.enable");await call("Emulation.setDeviceMetricsOverride",{width:390,height:844,deviceScaleFactor:1,mobile:true});await call("Page.reload",{ignoreCache:true});await new Promise(r=>setTimeout(r,700));
+const result=await call("Runtime.evaluate",{expression:`(()=>{const cards=[...document.querySelectorAll('.game-card')],feature=document.querySelector('.play-now');return{cards:cards.length,feature:feature?.textContent.trim(),feed:Boolean(document.querySelector('#free-info-feed')),minTap:Math.min(feature.getBoundingClientRect().height,...cards.map(x=>x.getBoundingClientRect().height)),links:[feature,...cards].every(x=>x.href)}})()`,returnByValue:true});
+const value=result.result.result.value,shot=await call("Page.captureScreenshot",{format:"png"});await writeFile(output,Buffer.from(shot.result.data,"base64"));ws.close();
+console.log(JSON.stringify({...value,screenshot:output}));if(value.cards<5||!value.feature||value.feed||value.minTap<44||!value.links)process.exitCode=1;
