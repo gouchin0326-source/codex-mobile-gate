@@ -131,13 +131,13 @@
       <div class="dispatch-summary" id="dispatch-summary" role="status" aria-live="polite">日次配車台帳を読み込んでいます。</div>
       <div class="ha-lane-state" id="ha-lane-state" role="status" aria-live="polite">HAのGPU・外部AIレーンはClaude側スナップショット待ちです。</div>
       <div class="agent-board" id="agent-board" aria-labelledby="dispatch-title"><div class="empty">予定と実績を確認中です。</div></div>
-      <div class="token-saving" id="token-saving"><b>📉 コデ朗の節約確認</b><br>共同便と無AI処理の実績を確認中です。</div>
+      <div class="token-saving" id="token-saving"><b>📉 コデ郎の節約確認</b><br>共同便と無AI処理の実績を確認中です。</div>
       <div class="value-panel" aria-labelledby="value-title"><h3 id="value-title">📐 三人の成果価値</h3><div class="value-board" id="value-board"><div class="empty">合格・手戻り・再利用可能性を確認中です。</div></div><p class="value-note" id="value-note">未実行は合格率の分母に含めません。</p></div>
       <div class="direction-box manual-instruction" aria-labelledby="direction-title">
         <h3 id="direction-title">🧭 干場の方向指示</h3>
         <p class="garden-note">承認した指示だけが次の共同便へ入ります。理由と完成条件、外部AI上限を一緒に固定します。</p>
         <div class="direction-form">
-          <label>担当<select id="direction-agent"><option value="all">三人共同</option><option value="kodekichi">コデ吉</option><option value="kodemi">コデ美</option><option value="kodesama">コデ朗</option></select></label>
+          <label>担当<select id="direction-agent"><option value="all">三人共同</option><option value="kodekichi">コデ吉</option><option value="kodemi">コデ美</option><option value="kodesama">コデ郎</option></select></label>
           <label>優先度<select id="direction-priority"><option value="high">高</option><option value="normal" selected>通常</option><option value="low">低</option></select></label>
           <label>外部AIレーン<select id="direction-lane"><option value="no-ai-first">無AIを先に試す</option><option value="gemini">Gemini</option><option value="codex">Codex</option><option value="both">両方</option></select></label>
           <label>AI上限<input id="direction-budget" type="number" min="0" max="2" value="0"></label>
@@ -152,7 +152,7 @@
       </div>
       <div class="tomorrow-box" aria-labelledby="tomorrow-title">
         <h3 id="tomorrow-title">🌅 明日の配車案</h3>
-        <p class="garden-note">コデ朗が外部AIを使わず下書きします。干場が承認するまで、翌日の正本にも実行予定にも入りません。</p>
+        <p class="garden-note">コデ郎が外部AIを使わず下書きします。干場が承認するまで、翌日の正本にも実行予定にも入りません。</p>
         <div class="tomorrow-state" id="tomorrow-state" role="status" aria-live="polite">明日の下書きを確認中です。</div>
         <div class="tomorrow-list" id="tomorrow-list"><div class="empty">下書きはまだありません。</div></div>
         <div class="tomorrow-actions"><button id="tomorrow-approve" type="button">明日の配車を承認</button><button class="secondary" id="tomorrow-hold" type="button">いったん保留</button><button class="secondary" id="tomorrow-export" type="button">📤 明日案</button></div>
