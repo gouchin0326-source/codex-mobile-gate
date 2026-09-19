@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T15:38:01.099293+00:00",
+  "updatedAt": "2026-09-19T21:39:37.044144+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -24,10 +24,10 @@
     },
     {
       "genre": "技術",
-      "count": 1,
+      "count": 2,
       "decision": "必要時だけ確認",
-      "signal": "kicking the tires on jev (TypeSafe's System One model) with 2048",
-      "topUrl": "https://gist.github.com/cablehead/bdf9ad946ceb26d9008976e49c9bfbbb",
+      "signal": "I Built Non-Autoregressive Decision Models a Year Ago. Then a Frontier Lab Called It a \"Breakthrough\" / kicking the tires on jev (TypeSafe's System One model) with 2048",
+      "topUrl": "https://dev.to/nandakishor_m_6cc0adfde9f/i-built-non-autoregressive-decision-models-a-year-ago-then-a-frontier-lab-called-it-a-18me",
       "score": 2
     }
   ],
@@ -395,6 +395,24 @@
       "provider": null,
       "topic": "AI",
       "sourceWeight": 1,
+      "title": "I Built Non-Autoregressive Decision Models a Year Ago. Then a Frontier Lab Called It a \"Breakthrough\"",
+      "summary": "Comments",
+      "url": "https://dev.to/nandakishor_m_6cc0adfde9f/i-built-non-autoregressive-decision-models-a-year-ago-then-a-frontier-lab-called-it-a-18me",
+      "published": "2026-09-19T13:41:57+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "研究"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
       "title": "kicking the tires on jev (TypeSafe's System One model) with 2048",
       "summary": "Comments",
       "url": "https://gist.github.com/cablehead/bdf9ad946ceb26d9008976e49c9bfbbb",
@@ -510,24 +528,6 @@
       "tags": [
         "AI",
         "重要"
-      ]
-    },
-    {
-      "source": "google-gemini",
-      "platform": "AI",
-      "label": "Gemini公式",
-      "genre": "AI",
-      "provider": "gemini",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
-      "summary": "Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking are our most advanced live dialogue models yet, built for natural conversation.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
-      "published": "2026-09-15T17:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "研究"
       ]
     }
   ],
@@ -709,5 +709,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-19T15:38:01.099293+00:00"
+  "lastSuccessAt": "2026-09-19T21:39:37.044144+00:00"
 }
