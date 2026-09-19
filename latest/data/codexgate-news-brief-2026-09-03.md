@@ -1,6 +1,6 @@
 # CODEXGATE News Brief
 
-- 更新: 2026-09-19T01:18:01.424272+00:00
+- 更新: 2026-09-19T01:28:01.449156+00:00
 - 取得: GitHub Actions/Python
 - Codex: 0%想定（自動実行時）
 - 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。
@@ -9,4 +9,4 @@
 - [論文] 更新あり。必要時だけ確認 / Do AI Agents Understand Computer Architecture? / What Do We Expect fro
 - [AI] AI/Codex運用の変化を確認 / Create your best tracks yet with Lyria 3.5 in Gemini. / Our framework 
 - [技術] 更新あり。必要時だけ確認 / Benchmarking Wild vs Mold / Flock cameras are riddled with security vu
-- [災害] 更新あり。必要時だけ確認 / M 0.2 - 60 km ENE of Pedro Bay, Alaska
+- [災害] 更新あり。必要時だけ確認 / M 2.4 - 15 km WSW of Petrolia, CA
