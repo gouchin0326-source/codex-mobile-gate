@@ -84,11 +84,12 @@
       canvas { touch-action:none; }
       .overlay { inset:auto 5px 5px 5px; font-size:9px; }
       .badge { min-height:19px; padding:1px 6px; }
-      .controls { width:100%; height:96px; padding:4px 7px; grid-template-columns:minmax(96px,1fr) 60px 60px; gap:7px; border-radius:7px; overflow:hidden; }
+      .controls { width:100%; height:96px; padding:4px 7px; grid-template-columns:minmax(96px,1fr) 52px 52px 52px; gap:5px; border-radius:7px; overflow:hidden; }
       .stick { width:88px; height:88px; }
       .stick::before { inset:13px; }
       .stick-knob { width:38px; height:38px; font-size:9px; }
-      .round { width:58px; height:58px; min-height:58px; font-size:10px; }
+      .round { width:50px; height:50px; min-height:50px; font-size:9px; }
+      .dash { background:#7c3aed; border-color:#a78bfa; }
       .use-slot span { font-size:8px; }
       .control-note { display:none; }
     }
@@ -117,7 +118,7 @@
     </aside>
     <div class="play-wrap">
       <div class="stage"><canvas id="game" width="920" height="690" aria-label="Orbit Catcher Gate Runのゲーム画面"></canvas><div class="mobile-actions"><button id="mobile-start" type="button" aria-label="ゲーム開始">▶</button><button id="mobile-settings" type="button" aria-label="設定を開く">⚙</button></div><div class="overlay"><span class="badge" id="state">準備中</span><span class="badge" id="effect">通常</span></div></div>
-      <div class="controls" aria-label="ゲーム操作パネル"><div class="stick" id="stick" aria-label="移動スティック" role="application"><div class="stick-knob" id="stickKnob">移動</div></div><button class="round use-slot" id="use-slot-0" aria-label="道具1"><strong>-</strong><span>道具1</span></button><button class="round use-slot" id="use-slot-1" aria-label="道具2"><strong>-</strong><span>道具2</span></button><div class="control-note">射撃とリロードは自動。右ボタンは道具箱のアイテム使用。PCはWASD/矢印、Shiftで加速、Ctrlで精密。</div></div>
+      <div class="controls" aria-label="ゲーム操作パネル"><div class="stick" id="stick" aria-label="移動スティック" role="application"><div class="stick-knob" id="stickKnob">移動</div></div><button class="round dash" id="dash" type="button" aria-label="緊急回避"><strong>回避</strong><span id="dash-state">OK</span></button><button class="round use-slot" id="use-slot-0" aria-label="道具1"><strong>-</strong><span>道具1</span></button><button class="round use-slot" id="use-slot-1" aria-label="道具2"><strong>-</strong><span>道具2</span></button><div class="control-note">射撃とリロードは自動。回避中は無敵。PCはWASD/矢印、Spaceで回避。</div></div>
     </div>
   </main>
   <script>
@@ -159,6 +160,8 @@
     const mobileStartButton = document.querySelector("#mobile-start");
     const mobileSettingsButton = document.querySelector("#mobile-settings");
     const settingsCloseButton = document.querySelector("#settings-close");
+    const dashButton = document.querySelector("#dash");
+    const dashStateEl = document.querySelector("#dash-state");
     const bestKey = "codex.orbit-catcher.best.v4";
     const missionPool = [
       { id:"reach-gate", label:"ゲートに1回到達する", target:1, reward:180, metric:"clears" },
@@ -186,7 +189,7 @@
     const audio = { ctx:null, music:null, enabled:false, nextBeat:0 };
     const stars = Array.from({ length:180 }, () => ({ x:Math.random() * world.w, y:Math.random() * world.h, r:Math.random() * 1.8 + .4, a:Math.random() * .65 + .2 }));
     let best = readBest();
-    let running = false, paused = false, settingsPaused = false, lastTime = 0, score = 0, wave = 1, hp = 100, clip = 12, reserveAmmo = 90, shieldTime = 0, kills = 0, clears = 0, brutes = 0, alliesMet = 0, alliesLost = 0, distanceTravelled = 0, fireCooldown = 0, reloadTimer = 0, enemyTimer = 0, itemTimer = 2, recruitTimer = 7, droneCooldown = 0, orbitalCooldown = 0, novaCharge = 0, flashUntil = 0, missionAnnounced = false;
+    let running = false, paused = false, settingsPaused = false, lastTime = 0, score = 0, wave = 1, hp = 100, clip = 12, reserveAmmo = 90, shieldTime = 0, kills = 0, clears = 0, brutes = 0, alliesMet = 0, alliesLost = 0, distanceTravelled = 0, fireCooldown = 0, reloadTimer = 0, enemyTimer = 0, itemTimer = 2, recruitTimer = 7, droneCooldown = 0, orbitalCooldown = 0, novaCharge = 0, flashUntil = 0, missionAnnounced = false, combo = 0, comboTimer = 0, dashCooldown = 0, invulnerable = 0;
     let weapon = { type:"single", level:1, ttl:0, damage:24 };
     let player = { x:180, y:180, r:16, speed:255, angle:0 };
     let goal = { x:2850, y:2050, r:46 };
@@ -201,7 +204,7 @@
     function missionComplete() { return missionValue() >= mission.target; }
     function updateMissionHud() { const value = Math.min(mission.target, Math.floor(missionValue())); const percent = clamp((value / mission.target) * 100, 0, 100); missionTextEl.textContent = mission.label; missionRewardEl.textContent = missionComplete() ? `達成 +${mission.reward}` : `+${mission.reward}`; missionFillEl.style.width = `${percent}%`; missionProgressEl.textContent = `${value} / ${mission.target}`; }
     function resetRound() {
-      score = 0; wave = 1; hp = 100; clip = 12; reserveAmmo = 90; shieldTime = 0; kills = 0; clears = 0; brutes = 0; alliesMet = 0; alliesLost = 0; distanceTravelled = 0; fireCooldown = 0; reloadTimer = 0; enemyTimer = .16; itemTimer = 2; recruitTimer = 7; droneCooldown = .6; orbitalCooldown = 1.4; novaCharge = 0; flashUntil = 0; missionAnnounced = false;
+      score = 0; wave = 1; hp = 100; clip = 12; reserveAmmo = 90; shieldTime = 0; kills = 0; clears = 0; brutes = 0; alliesMet = 0; alliesLost = 0; distanceTravelled = 0; fireCooldown = 0; reloadTimer = 0; enemyTimer = .16; itemTimer = 2; recruitTimer = 7; droneCooldown = .6; orbitalCooldown = 1.4; novaCharge = 0; flashUntil = 0; missionAnnounced = false; combo = 0; comboTimer = 0; dashCooldown = 0; invulnerable = 0;
       weapon = { type:"single", level:1, ttl:0, damage:24 };
       player = { x:180, y:180, r:16, speed:255, angle:0 };
       goal = { x:rand(world.w - 520, world.w - 180), y:rand(world.h - 520, world.h - 180), r:46 };
@@ -236,7 +239,7 @@
     }
     function distance(a, b) { return Math.hypot(a.x - b.x, a.y - b.y); }
     function screenToWorld(x, y) { return { x:x + camera.x, y:y + camera.y }; }
-    function damagePlayer(amount) { hp -= shieldTime > 0 ? amount * .35 : amount; }
+    function damagePlayer(amount) { if (invulnerable > 0) return; hp -= shieldTime > 0 ? amount * .35 : amount; combo = 0; comboTimer = 0; }
     function burst(x, y, color, count=10) { for (let i = 0; i < count; i += 1) { const a = rand(0, Math.PI * 2); const s = rand(45, 180); particles.push({ x, y, vx:Math.cos(a) * s, vy:Math.sin(a) * s, r:rand(2, 5), life:rand(.25, .75), max:.75, color }); } }
     function chooseEnemyType() {
       const roll = Math.random();
@@ -288,7 +291,7 @@
       return null;
     }
     function handleEnemyDefeat(enemy) {
-      kills += 1; if (enemy.type === "brute" || enemy.type === "armored") brutes += 1; score += enemy.score + wave * 4;
+      kills += 1; combo = comboTimer > 0 ? Math.min(12, combo + 1) : 1; comboTimer = 2.4; if (enemy.type === "brute" || enemy.type === "armored") brutes += 1; score += Math.round((enemy.score + wave * 4) * (1 + combo * .12));
       const drop = rollEnemyDrop(enemy); if (drop) dropItemAt(enemy.x + rand(-18, 18), enemy.y + rand(-18, 18), drop);
       if (enemy.explode) { burst(enemy.x, enemy.y, "#fb7185", 24); if (distance(enemy, player) < 96) damagePlayer(18); allies.forEach((ally) => { if (distance(enemy, ally) < 92) ally.hp -= 20; }); enemies.forEach((other) => { if (other !== enemy && distance(enemy, other) < 86) other.hp -= 28; }); }
       else burst(enemy.x, enemy.y, "#ef4444", 15);
@@ -322,6 +325,14 @@
       player.x = clamp(player.x, player.r, world.w - player.r); player.y = clamp(player.y, player.r, world.h - player.r); distanceTravelled += Math.hypot(player.x - oldX, player.y - oldY) / 10;
       const aim = pointer.active ? screenToWorld(pointer.x, pointer.y) : { x:player.x + 1, y:player.y }; player.angle = Math.atan2(aim.y - player.y, aim.x - player.x);
       trail.push({ x:player.x, y:player.y, life:.45, r:player.r }); if (trail.length > 32) trail.shift();
+    }
+    function performDash() {
+      if (!running || paused || dashCooldown > 0) return;
+      let dx = stickState.x, dy = stickState.y; const len = Math.hypot(dx, dy);
+      if (len < .1) { dx = Math.cos(player.angle); dy = Math.sin(player.angle); }
+      else { dx /= len; dy /= len; }
+      player.x = clamp(player.x + dx * 190, player.r, world.w - player.r); player.y = clamp(player.y + dy * 190, player.r, world.h - player.r);
+      dashCooldown = 2.5; invulnerable = .38; dashStateEl.textContent = "2.5"; burst(player.x, player.y, "#c4b5fd", 24); flash("緊急回避"); tone(820, .08, "sine", .04);
     }
     function weaponStats() { return { magazine:weapon.type === "burst" ? 18 : weapon.type === "spread" ? 10 : weapon.type === "pierce" ? 9 : 12, reload:Math.max(.65, 1.25 - weapon.level * .08), range:weapon.type === "pierce" ? 620 : 540 }; }
     function findTarget(range) { let target = null, bestDistance = range; if (boss) { const d = distance(player, boss); if (d < bestDistance) { bestDistance = d; target = boss; } } enemies.forEach((enemy) => { const d = distance(player, enemy); if (d < bestDistance) { bestDistance = d; target = enemy; } }); return target; }
@@ -370,7 +381,7 @@
     }
     function update(dt, now) {
       updateMusic(now); if (!running || paused) { updateParticles(dt); return; }
-      if (performance.now() > flashUntil) stateEl.textContent = "進行中"; shieldTime = Math.max(0, shieldTime - dt);
+      if (performance.now() > flashUntil) stateEl.textContent = combo > 1 ? `${combo} COMBO` : "進行中"; shieldTime = Math.max(0, shieldTime - dt); dashCooldown = Math.max(0, dashCooldown - dt); invulnerable = Math.max(0, invulnerable - dt); comboTimer = Math.max(0, comboTimer - dt); if (comboTimer <= 0) combo = 0; dashStateEl.textContent = dashCooldown > 0 ? dashCooldown.toFixed(1) : "OK";
       movePlayer(dt); fireCooldown = Math.max(0, fireCooldown - dt); if (reloadTimer > 0) { reloadTimer = Math.max(0, reloadTimer - dt); if (reloadTimer <= 0) finishReload(); } weapon.ttl = Math.max(0, weapon.ttl - dt); if (weapon.ttl <= 0 && weapon.type !== "single") { weapon = { type:"single", level:Math.max(1, weapon.level - 1), ttl:0, damage:24 }; clip = Math.min(clip, weaponStats().magazine); }
       autoShoot();
       updateEquipment(dt);
@@ -416,7 +427,7 @@
     }
     function clearGate() { clears += 1; wave += 1; score += 250 + wave * 60; reserveAmmo = Math.min(260, reserveAmmo + 55); hp = Math.min(100, hp + 25); goal = { x:rand(180, world.w - 180), y:rand(180, world.h - 180), r:46 }; boss = spawnBoss(); enemies.push(...Array.from({ length:Math.min(18, 5 + wave) }, () => (spawnEnemy(), enemies.pop()))); flash(`ゲート突破 ${wave}`); burst(player.x, player.y, "#22c55e", 30); tone(880, .16, "sine", .05); }
     function updateParticles(dt) { particles.forEach((p) => { p.life -= dt; p.x += p.vx * dt; p.y += p.vy * dt; p.vx *= .96; p.vy *= .96; }); particles = particles.filter((p) => p.life > 0); trail.forEach((t) => t.life -= dt); trail = trail.filter((t) => t.life > 0); }
-    function endRound(cleared) { running = false; paused = false; const missionDone = missionComplete(); if (missionDone) score += mission.reward; lastResult = { finishedAt:new Date().toISOString(), cleared, score, best:Math.max(best, score), wave, hp:Math.max(0, Number(hp.toFixed(1))), clip, reserveAmmo, inventory:[...inventory], kills, clears, brutes, distanceTravelled:Number(distanceTravelled.toFixed(1)), weapon:{ ...weapon }, mission:{ ...mission, complete:missionDone } }; if (score > best) { best = score; writeBest(best); stateEl.textContent = "最高記録"; } else { stateEl.textContent = "終了"; } startButton.textContent = "開始"; pauseButton.textContent = "一時停止"; updateHud(); }
+    function endRound(cleared) { running = false; paused = false; const missionDone = missionComplete(); if (missionDone) score += mission.reward; lastResult = { finishedAt:new Date().toISOString(), cleared, score, best:Math.max(best, score), wave, hp:Math.max(0, Number(hp.toFixed(1))), clip, reserveAmmo, inventory:[...inventory], kills, clears, brutes, distanceTravelled:Number(distanceTravelled.toFixed(1)), weapon:{ ...weapon }, mission:{ ...mission, complete:missionDone } }; if (score > best) { best = score; writeBest(best); stateEl.textContent = "最高記録"; } else { stateEl.textContent = "終了"; } startButton.textContent = "開始"; mobileStartButton.textContent = "▶"; pauseButton.textContent = "一時停止"; updateHud(); }
     function worldX(x) { return x - camera.x; }
     function worldY(y) { return y - camera.y; }
     function drawBackground() {
@@ -444,7 +455,8 @@
     function drawParticles() { particles.forEach((p) => { ctx.globalAlpha = Math.max(0, p.life / p.max); ctx.fillStyle = p.color; ctx.beginPath(); ctx.arc(worldX(p.x), worldY(p.y), p.r, 0, Math.PI * 2); ctx.fill(); ctx.globalAlpha = 1; }); }
     function drawItem(item) { const color = item.type === "weapon" ? "#a78bfa" : item.type === "heal" || item.type === "medkit" ? "#22c55e" : item.type === "bomb" ? "#ef4444" : item.type === "shield" ? "#38bdf8" : "#f59e0b"; const x = worldX(item.x), y = worldY(item.y); drawPixelSprite(x, y, 4, color, "item"); ctx.strokeStyle = "rgba(255,255,255,.75)"; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x, y, item.r + 6, 0, Math.PI * 2); ctx.stroke(); }
     function drawTextCenter(text, subtext) { ctx.fillStyle = "rgba(219,234,254,.95)"; ctx.font = "700 30px Segoe UI, sans-serif"; ctx.textAlign = "center"; ctx.fillText(text, canvas.width / 2, canvas.height / 2 - 10); if (subtext) { ctx.font = "500 16px Segoe UI, sans-serif"; ctx.fillText(subtext, canvas.width / 2, canvas.height / 2 + 24); } }
-    function draw() { drawBackground(); drawGoal(); items.forEach(drawItem); recruits.forEach(drawRecruit); bullets.forEach((b) => drawCircle(b, b.enemy ? "#fb7185" : b.ally ? "#93c5fd" : "#f8fafc", b.enemy ? "rgba(251,113,133,.8)" : "rgba(226,232,240,.8)")); enemies.forEach(drawEnemy); drawBoss(); allies.forEach(drawAlly); drawPlayer(); drawParticles(); ctx.fillStyle = "rgba(219,234,254,.92)"; ctx.font = "600 16px Segoe UI, sans-serif"; ctx.textAlign = "left"; ctx.fillText(`Map ${Math.round(player.x)},${Math.round(player.y)}  Gate ${Math.round(goal.x)},${Math.round(goal.y)} ${boss ? "LOCK" : "OPEN"}`, 16, 28); ctx.textAlign = "right"; ctx.fillText(`S ${score}  HP ${Math.max(0,Math.ceil(hp))}  AM ${clip}/${reserveAmmo}`, canvas.width - 16, 52); if (!running && score === 0) drawTextCenter("▶で開始", "ゲートへ到達せよ"); if (paused) drawTextCenter("一時停止中", "設定を閉じると再開します"); }
+    function draw() { drawBackground(); drawGoal(); items.forEach(drawItem); recruits.forEach(drawRecruit); bullets.forEach((b) => drawCircle(b, b.enemy ? "#fb7185" : b.ally ? "#93c5fd" : "#f8fafc", b.enemy ? "rgba(251,113,133,.8)" : "rgba(226,232,240,.8)")); enemies.forEach(drawEnemy); drawBoss(); allies.forEach(drawAlly); drawPlayer(); drawParticles(); ctx.fillStyle = "rgba(219,234,254,.92)"; ctx.font = "600 13px Segoe UI, sans-serif"; ctx.textAlign = "left"; ctx.fillText(`Gate ${Math.round(goal.x)},${Math.round(goal.y)} ${boss ? "LOCK" : "OPEN"}`, 10, 22); ctx.fillText(`S ${score}  HP ${Math.max(0,Math.ceil(hp))}  AM ${clip}/${reserveAmmo}`, 10, 43); if (combo > 1) { ctx.fillStyle="#fbbf24"; ctx.font="800 20px Segoe UI, sans-serif"; ctx.fillText(`${combo} COMBO`,10,68); } if (!running && score === 0) drawTextCenter("▶で開始", "ゲートへ到達せよ"); if (paused) drawTextCenter("一時停止中", "設定を閉じると再開します"); }
+    function resizeCanvas() { const rect=canvas.getBoundingClientRect(); if (matchMedia("(max-width:560px)").matches) { canvas.width=Math.max(320,Math.round(rect.width)); canvas.height=Math.max(480,Math.round(rect.height)); } else { canvas.width=920; canvas.height=690; } draw(); }
     function loop(now) { const dt = Math.min(.033, (now - lastTime) / 1000 || 0); lastTime = now; update(dt, now); draw(); requestAnimationFrame(loop); }
     function togglePause() { if (!running) return; paused = !paused; stateEl.textContent = paused ? "一時停止" : "進行中"; pauseButton.textContent = paused ? "再開" : "一時停止"; lastTime = performance.now(); }
     function downloadText(filename, text, type) { const blob = new Blob([text], { type }); const url = URL.createObjectURL(blob); const link = document.createElement("a"); link.href = url; link.download = filename; document.body.appendChild(link); link.click(); link.remove(); URL.revokeObjectURL(url); exportStatusEl.textContent = `${filename} を書き出しました`; }
@@ -464,6 +476,7 @@
     stick.addEventListener("pointermove", (event) => { if (stickState.active && event.pointerId === stickState.pointerId) updateStickFromPointer(event); });
     stick.addEventListener("pointerup", (event) => { if (event.pointerId === stickState.pointerId) resetStick(); });
     stick.addEventListener("pointercancel", resetStick);
+    dashButton.addEventListener("click", performDash);
     startButton.addEventListener("click", resetRound);
     mobileStartButton.addEventListener("click", resetRound);
     mobileSettingsButton.addEventListener("click", () => { settingsPaused = running && !paused; if (settingsPaused) togglePause(); document.body.classList.add("settings-open"); });
@@ -477,7 +490,10 @@
     resetBestButton.addEventListener("click", () => { best = 0; writeBest(0); updateHud(); exportStatusEl.textContent = "最高記録をリセットしました"; });
     bagButtons.forEach((button, index) => button.addEventListener("click", () => useInventory(index)));
     useButtons.forEach((button, index) => button.addEventListener("click", () => useInventory(index)));
-    updateHud(); draw(); requestAnimationFrame(loop);
+    window.addEventListener("keydown", event => { if (event.code === "Space") { event.preventDefault(); performDash(); } });
+    window.addEventListener("resize", resizeCanvas);
+    new ResizeObserver(resizeCanvas).observe(document.querySelector(".stage"));
+    updateHud(); resizeCanvas(); requestAnimationFrame(loop);
   </script>
 </body>
 </html>
