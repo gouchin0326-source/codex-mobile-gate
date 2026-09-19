@@ -47,6 +47,7 @@
     .play-wrap { min-height:100%; display:grid; grid-template-rows:minmax(0, 1fr) auto; gap:10px; padding:12px; }
     .stage { width:min(100%, 920px); aspect-ratio:4/3; align-self:center; justify-self:center; border:1px solid rgba(255,255,255,.18); border-radius:8px; background:#08111f; position:relative; overflow:hidden; box-shadow:0 16px 50px rgba(0,0,0,.3); }
     canvas { width:100%; height:100%; display:block; background:#08111f; }
+    #ability-radar { width:100%; height:auto; background:#0f172a; border-radius:8px; }
     .overlay { position:absolute; inset:auto 12px 12px 12px; display:flex; justify-content:space-between; align-items:end; gap:8px; color:#dbeafe; pointer-events:none; font-size:12px; }
     .badge { display:inline-flex; align-items:center; min-height:26px; padding:3px 9px; border:1px solid rgba(255,255,255,.18); border-radius:999px; background:rgba(15,23,42,.72); backdrop-filter:blur(6px); }
     .status-line { min-height:18px; color:var(--muted); font-size:12px; }
@@ -77,14 +78,14 @@
       body.settings-open aside > button { display:block; min-height:38px; }
       body.settings-open aside > .panel.keep { display:grid; grid-column:1/-1; }
       body.settings-open aside > .legend { display:none; }
-      .play-wrap { width:100%; min-width:0; min-height:0; height:var(--app-height,100svh); padding:4px; display:grid; grid-template-rows:minmax(0,1fr) calc(88px + env(safe-area-inset-bottom)); gap:4px; overflow:hidden; }
+      .play-wrap { width:100%; min-width:0; min-height:0; height:var(--app-height,100svh); padding:4px; display:grid; grid-template-rows:minmax(0,1fr) calc(112px + env(safe-area-inset-bottom)); gap:4px; overflow:hidden; }
       .stage { width:100%; height:100%; max-height:none; aspect-ratio:auto; align-self:stretch; border-radius:7px; }
       .mobile-actions { position:absolute; z-index:5; top:7px; right:7px; display:flex; gap:6px; }
       .mobile-actions button { width:42px; min-height:42px; padding:0; border-radius:50%; border-color:#ffffff55; background:#0f172ccc; font-size:17px; }
       canvas { touch-action:none; }
       .overlay { inset:auto 5px 5px 5px; font-size:9px; }
       .badge { min-height:19px; padding:1px 6px; }
-      .controls { width:100%; height:calc(88px + env(safe-area-inset-bottom)); padding:4px 7px calc(4px + env(safe-area-inset-bottom)); grid-template-columns:minmax(88px,1fr) 50px 50px 50px; gap:4px; border-radius:7px; overflow:hidden; }
+      .controls { width:100%; height:88px; padding:4px 7px; align-self:start; grid-template-columns:minmax(88px,1fr) 50px 50px 50px; gap:4px; border-radius:7px; overflow:hidden; }
       .stick { width:80px; height:80px; }
       .stick::before { inset:13px; }
       .stick-knob { width:36px; height:36px; font-size:9px; }
@@ -111,7 +112,8 @@
       <div class="status-line" id="export-status" role="status" aria-live="polite"></div>
       <div class="panel keep"><strong>状態</strong><div class="gauges"><div class="gauge-row"><span>耐久</span><div class="gauge"><div class="gauge-fill" id="hp-bar"></div></div><span id="hp-read">100</span></div><div class="gauge-row"><span>装填</span><div class="gauge"><div class="gauge-fill ammo" id="clip-bar"></div></div><span id="clip-read">12</span></div></div></div>
       <div class="panel keep"><strong>道具箱</strong><div class="loadout"><button class="slot" id="bag-slot-0"><strong>-</strong><span>空</span></button><button class="slot" id="bag-slot-1"><strong>-</strong><span>空</span></button></div></div>
-      <div class="panel keep"><strong>装備</strong><div class="equip-grid"><div class="equip"><strong>DR</strong><span>ドローン</span></div><div class="equip"><strong>OR</strong><span>軌道弾</span></div><div class="equip"><strong>NV</strong><span>ノヴァ</span></div></div></div>
+      <div class="panel keep"><strong>猫の能力</strong><canvas id="ability-radar" width="280" height="190" aria-label="攻撃・速度・防御・回避・武器の能力レーダー"></canvas></div>
+      <div class="panel keep"><strong>武器 3枠</strong><div class="equip-grid" id="weapon-loadout"><div class="equip"><strong>単</strong><span>単発 Lv1</span></div><div class="equip"><strong>空</strong><span>未装備</span></div><div class="equip"><strong>空</strong><span>未装備</span></div></div></div>
       <div class="panel mission keep"><div class="mission-title"><strong>今日のミッション</strong><span class="mission-tag" id="mission-reward">+0</span></div><div id="mission-text" class="muted"></div><div class="mission-meter" aria-hidden="true"><div class="mission-fill" id="mission-fill"></div></div><div class="muted" id="mission-progress"></div></div>
       <div class="panel keep"><strong>外部AI連携</strong><div class="muted">結果を書き出し、敵グラフィック・銃火器・音楽案は外部AIへ渡します。Codexは小さく確実に実装します。</div></div>
       <div class="panel legend"><div><span class="dot player"></span> 自機</div><div><span class="dot goal"></span> ゲート: 到達でクリア</div><div><span class="dot zombie"></span> ゾンビ: 接触で耐久低下</div><div><span class="dot item"></span> 弾薬/武器/回復</div></div>
@@ -162,6 +164,9 @@
     const settingsCloseButton = document.querySelector("#settings-close");
     const dashButton = document.querySelector("#dash");
     const dashStateEl = document.querySelector("#dash-state");
+    const abilityRadar = document.querySelector("#ability-radar");
+    const abilityCtx = abilityRadar.getContext("2d");
+    const weaponLoadoutEl = document.querySelector("#weapon-loadout");
     const bestKey = "codex.orbit-catcher.best.v4";
     const missionPool = [
       { id:"reach-gate", label:"ゲートに1回到達する", target:1, reward:180, metric:"clears" },
@@ -170,9 +175,10 @@
       { id:"wander-1200", label:"1200m以上進む", target:1200, reward:90, metric:"distance" },
       { id:"elite-3", label:"大型ゾンビを3体倒す", target:3, reward:150, metric:"brutes" }
     ];
-    const weaponNames = { single:"単発", burst:"連射", spread:"拡散", pierce:"貫通" };
-    const itemNames = { ammo:"弾薬", weapon:"武器", heal:"修理", medkit:"救急", bomb:"爆弾", shield:"防壁" };
-    const itemIcons = { ammo:"AM", weapon:"WP", heal:"HP", medkit:"MD", bomb:"BM", shield:"SH" };
+    const weaponNames = { single:"単発", burst:"連射", spread:"拡散", pierce:"貫通", homing:"追尾", orbit:"衛星", blade:"刃" };
+    const weaponMarks = { single:"単", burst:"連", spread:"散", pierce:"貫", homing:"追", orbit:"衛", blade:"刃" };
+    const itemNames = { ammo:"弾薬", weapon:"武器", heal:"修理", medkit:"救急", bomb:"爆弾", shield:"防壁", speedUp:"速度強化", defenseUp:"防御強化", attackUp:"攻撃強化" };
+    const itemIcons = { ammo:"AM", weapon:"WP", heal:"HP", medkit:"MD", bomb:"BM", shield:"SH", speedUp:"SP", defenseUp:"DF", attackUp:"AT" };
     const storedItemTypes = ["medkit", "bomb", "shield"];
     const allyTypes = [
       { type:"rookie", name:"ルーキー", color:"#60a5fa", hp:42, range:300, cooldown:.7, damage:10, speed:210 },
@@ -198,6 +204,8 @@
     let best = readBest();
     let running = false, paused = false, settingsPaused = false, lastTime = 0, score = 0, wave = 1, hp = 100, clip = 12, reserveAmmo = 90, shieldTime = 0, kills = 0, clears = 0, brutes = 0, alliesMet = 0, alliesLost = 0, distanceTravelled = 0, fireCooldown = 0, reloadTimer = 0, enemyTimer = 0, itemTimer = 2, recruitTimer = 7, droneCooldown = 0, orbitalCooldown = 0, novaCharge = 0, flashUntil = 0, missionAnnounced = false, combo = 0, comboTimer = 0, dashCooldown = 0, invulnerable = 0;
     let weapon = { type:"single", level:1, ttl:0, damage:24 };
+    let upgrades = { attack:1, speed:1, defense:1 };
+    let weaponSlots = [{type:"single",level:1}];
     let player = { x:180, y:180, r:16, speed:255, angle:0 };
     let goal = { x:2850, y:2050, r:46 };
     let enemies = [], bullets = [], items = [], inventory = [], recruits = [], allies = [], particles = [], trail = [], boss = null, lastResult = null, mission = pickMission();
@@ -213,21 +221,25 @@
     function resetRound() {
       score = 0; wave = 1; hp = 100; clip = 12; reserveAmmo = 90; shieldTime = 0; kills = 0; clears = 0; brutes = 0; alliesMet = 0; alliesLost = 0; distanceTravelled = 0; fireCooldown = 0; reloadTimer = 0; enemyTimer = .16; itemTimer = 2; recruitTimer = 7; droneCooldown = .6; orbitalCooldown = 1.4; novaCharge = 0; flashUntil = 0; missionAnnounced = false; combo = 0; comboTimer = 0; dashCooldown = 0; invulnerable = 0;
       weapon = { type:"single", level:1, ttl:0, damage:24 };
+      upgrades = { attack:1, speed:1, defense:1 }; weaponSlots = [{type:"single",level:1}];
       player = { x:180, y:180, r:16, speed:255, angle:0 };
       enemies = []; bullets = []; items = []; inventory = []; recruits = []; allies = []; particles = []; trail = []; generateStage(1); running = true; paused = false; lastTime = performance.now();
       startButton.textContent = "やり直す"; mobileStartButton.textContent = "↻"; pauseButton.textContent = "一時停止"; flash(`STAGE 1 ${terrain.theme.name}`); updateHud(); ensureAudio();
     }
     function updateHud() {
-      scoreEl.textContent = score; bestEl.textContent = best; waveEl.textContent = wave; hpEl.textContent = Math.max(0, Math.ceil(hp)); ammoEl.textContent = reloadTimer > 0 ? `装填中/${reserveAmmo}` : `${clip}/${reserveAmmo}`; weaponEl.textContent = weaponNames[weapon.type]; killsEl.textContent = kills;
+      scoreEl.textContent = score; bestEl.textContent = best; waveEl.textContent = wave; hpEl.textContent = Math.max(0, Math.ceil(hp)); ammoEl.textContent = reloadTimer > 0 ? `装填中/${reserveAmmo}` : `${clip}/${reserveAmmo}`; weaponEl.textContent = `${weaponSlots.length}/3`; killsEl.textContent = kills;
       distanceEl.textContent = `${Math.max(0, Math.round(distance(player, goal) / 10))}m`;
       bossEl.textContent = boss ? `${Math.ceil(boss.hp)}` : "撃破";
       allyEl.textContent = allies.length;
       const magazine = weaponStats().magazine; hpBarEl.style.width = `${clamp(hp, 0, 100)}%`; clipBarEl.style.width = `${clamp((clip / magazine) * 100, 0, 100)}%`; hpReadEl.textContent = Math.max(0, Math.ceil(hp)); clipReadEl.textContent = `${clip}/${magazine}`;
-      effectEl.textContent = shieldTime > 0 ? `防壁 ${shieldTime.toFixed(1)}s` : reloadTimer > 0 ? `リロード ${reloadTimer.toFixed(1)}s` : `${weaponNames[weapon.type]} Lv${weapon.level}`;
+      effectEl.textContent = shieldTime > 0 ? `防壁 ${shieldTime.toFixed(1)}s` : reloadTimer > 0 ? `リロード ${reloadTimer.toFixed(1)}s` : weaponSlots.map(w=>`${weaponNames[w.type]}${w.level}`).join("+");
       updateInventoryHud();
       updateMissionHud();
+      renderLoadout(); drawAbilityRadar();
     }
     function updateInventoryHud() { [0, 1].forEach((index) => { const item = inventory[index]; const label = item ? itemIcons[item] : "-"; const name = item ? itemNames[item] : "空"; bagButtons[index].innerHTML = `<strong>${label}</strong><span>${name}</span>`; useButtons[index].innerHTML = `<strong>${label}</strong><span>${name}</span>`; }); }
+    function renderLoadout(){weaponLoadoutEl.replaceChildren(...[0,1,2].map(i=>{const slot=weaponSlots[i],box=document.createElement("div"),mark=document.createElement("strong"),name=document.createElement("span");box.className="equip";mark.textContent=slot?weaponMarks[slot.type]:"空";name.textContent=slot?`${weaponNames[slot.type]} Lv${slot.level}`:"未装備";box.append(mark,name);return box;}));}
+    function drawAbilityRadar(){const labels=["攻撃","速度","防御","回避","武器"],values=[upgrades.attack,upgrades.speed,upgrades.defense,Math.min(5,1+Math.floor(clears/2)),Math.min(5,weaponSlots.reduce((n,w)=>n+w.level,0))],cx=140,cy=96,r=64;abilityCtx.clearRect(0,0,280,190);abilityCtx.strokeStyle="#475569";abilityCtx.fillStyle="#94a3b8";abilityCtx.font="12px Segoe UI";for(let ring=1;ring<=5;ring++){abilityCtx.beginPath();labels.forEach((_,i)=>{const a=-Math.PI/2+i*Math.PI*2/5,x=cx+Math.cos(a)*r*ring/5,y=cy+Math.sin(a)*r*ring/5;i?abilityCtx.lineTo(x,y):abilityCtx.moveTo(x,y)});abilityCtx.closePath();abilityCtx.stroke()}abilityCtx.beginPath();values.forEach((v,i)=>{const a=-Math.PI/2+i*Math.PI*2/5,x=cx+Math.cos(a)*r*v/5,y=cy+Math.sin(a)*r*v/5;i?abilityCtx.lineTo(x,y):abilityCtx.moveTo(x,y)});abilityCtx.closePath();abilityCtx.fillStyle="#38bdf866";abilityCtx.fill();abilityCtx.strokeStyle="#38bdf8";abilityCtx.lineWidth=3;abilityCtx.stroke();abilityCtx.lineWidth=1;labels.forEach((label,i)=>{const a=-Math.PI/2+i*Math.PI*2/5,x=cx+Math.cos(a)*(r+23),y=cy+Math.sin(a)*(r+23);abilityCtx.fillStyle="#e2e8f0";abilityCtx.textAlign="center";abilityCtx.fillText(`${label}${values[i]}`,x,y+4)})}
     function ensureAudio() {
       if (!audio.enabled || audio.ctx) return;
       audio.ctx = new (window.AudioContext || window.webkitAudioContext)();
@@ -256,7 +268,7 @@
       ["ammo","heal","weapon"].forEach((type,i)=>items.push({x:clamp(player.x+(start.x<world.w/2?1:-1)*(220+i*115),60,world.w-60),y:clamp(player.y+(i-1)*90,60,world.h-60),r:15,type,life:40}));
       boss=spawnBoss(); camera.x=clamp(player.x-canvas.width/2,0,world.w-canvas.width); camera.y=clamp(player.y-canvas.height/2,0,world.h-canvas.height);
     }
-    function damagePlayer(amount) { if (invulnerable > 0) return; hp -= shieldTime > 0 ? amount * .35 : amount; combo = 0; comboTimer = 0; }
+    function damagePlayer(amount) { if (invulnerable > 0) return; const reduced=amount*(1-(upgrades.defense-1)*.16); hp -= shieldTime > 0 ? reduced * .35 : Math.max(1,reduced); combo = 0; comboTimer = 0; }
     function burst(x, y, color, count=10) { for (let i = 0; i < count; i += 1) { const a = rand(0, Math.PI * 2); const s = rand(45, 180); particles.push({ x, y, vx:Math.cos(a) * s, vy:Math.sin(a) * s, r:rand(2, 5), life:rand(.25, .75), max:.75, color }); } }
     function chooseEnemyType() {
       const roll = Math.random();
@@ -292,7 +304,7 @@
     }
     function spawnItem() {
       const roll = Math.random();
-      const type = roll > .82 ? storedItemTypes[Math.floor(rand(0, storedItemTypes.length))] : roll > .64 ? "weapon" : roll > .35 ? "ammo" : "heal";
+      const boosts=["speedUp","defenseUp","attackUp"],type = roll > .86 ? "weapon" : roll > .72 ? boosts[Math.floor(rand(0,boosts.length))] : roll > .61 ? storedItemTypes[Math.floor(rand(0, storedItemTypes.length))] : roll > .31 ? "ammo" : "heal";
       items.push({ x:clamp(player.x + rand(-520, 520), 60, world.w - 60), y:clamp(player.y + rand(-420, 420), 60, world.h - 60), r:15, type, life:18 });
     }
     function dropItemAt(x, y, type, life=16) { items.push({ x:clamp(x, 60, world.w - 60), y:clamp(y, 60, world.h - 60), r:type === "weapon" ? 16 : 14, type, life }); }
@@ -302,6 +314,7 @@
       if (enemy.type === "bloater" && roll < .34) return "heal";
       if (enemy.type === "summoner" && roll < .48) return "ammo";
       if (enemy.type === "stalker" && roll < .22) return "weapon";
+      if (roll < .08) return ["speedUp","defenseUp","attackUp"][Math.floor(rand(0,3))];
       if (roll < .24) return "ammo";
       if (roll < .31) return "heal";
       if (roll < .36) return storedItemTypes[Math.floor(rand(0, storedItemTypes.length))];
@@ -317,7 +330,8 @@
     function collectItem(item) {
       if (item.type === "ammo") { reserveAmmo = Math.min(260, reserveAmmo + 42); if (clip <= 0) startReload(); flash("弾薬補給"); tone(520, .07, "sine", .035); return; }
       if (item.type === "heal") { hp = Math.min(100, hp + 28); flash("自動修理"); tone(420, .1, "sine", .035); return; }
-      if (item.type === "weapon") { const types = ["burst", "spread", "pierce"]; weapon.type = types[Math.floor(rand(0, types.length))]; weapon.level = Math.min(5, weapon.level + 1); weapon.damage = 24 + weapon.level * 7; weapon.ttl = 22; clip = Math.min(clip + 4, weaponStats().magazine); flash(`${weaponNames[weapon.type]} 強化`); tone(760, .12, "square", .04); return; }
+      if (["speedUp","defenseUp","attackUp"].includes(item.type)) { const key=item.type==="speedUp"?"speed":item.type==="defenseUp"?"defense":"attack"; upgrades[key]=Math.min(5,upgrades[key]+1); flash(`${itemNames[item.type]} Lv${upgrades[key]}`); tone(840,.12,"sine",.045); updateHud(); return; }
+      if (item.type === "weapon") { const types=["burst","spread","pierce","homing","orbit","blade"],type=types[Math.floor(rand(0,types.length))];let slot=weaponSlots.find(w=>w.type===type);if(slot)slot.level=Math.min(5,slot.level+1);else if(weaponSlots.length<3){slot={type,level:1};weaponSlots.push(slot)}else{slot=weaponSlots[Math.floor(rand(0,weaponSlots.length))];slot.level=Math.min(5,slot.level+1)}weapon.type=slot.type;weapon.level=slot.level;weapon.damage=24+upgrades.attack*6;weapon.ttl=999;clip=Math.min(clip+5,weaponStats().magazine);flash(`${weaponNames[slot.type]} Lv${slot.level} / ${weaponSlots.length}枠`);tone(760,.12,"square",.04);updateHud();return; }
       if (inventory.length < 2) { inventory.push(item.type); flash(`${itemNames[item.type]} 入手`); tone(680, .08, "sine", .035); }
       else { reserveAmmo = Math.min(260, reserveAmmo + 18); flash("道具箱満杯"); tone(180, .08, "triangle", .03); }
     }
@@ -338,7 +352,7 @@
       let dx = stickState.x, dy = stickState.y; if (Math.hypot(dx, dy) < .08) { dx = 0; dy = 0; }
       if (keys.has("arrowleft") || keys.has("a")) dx -= 1; if (keys.has("arrowright") || keys.has("d")) dx += 1; if (keys.has("arrowup") || keys.has("w")) dy -= 1; if (keys.has("arrowdown") || keys.has("s")) dy += 1;
       const len = Math.hypot(dx, dy); const oldX = player.x, oldY = player.y;
-      if (len > 0) { const boost = (keys.has("shift") || controls.boost) ? 1.5 : 1; const focus = (keys.has("control") || controls.focus) ? .48 : 1; player.x += dx / len * player.speed * boost * focus * dt; player.y += dy / len * player.speed * boost * focus * dt; }
+      if (len > 0) { const boost = (keys.has("shift") || controls.boost) ? 1.5 : 1; const focus = (keys.has("control") || controls.focus) ? .48 : 1, speedBoost=1+(upgrades.speed-1)*.25; player.x += dx / len * player.speed * speedBoost * boost * focus * dt; player.y += dy / len * player.speed * speedBoost * boost * focus * dt; }
       player.x = clamp(player.x, player.r, world.w - player.r); player.y = clamp(player.y, player.r, world.h - player.r); distanceTravelled += Math.hypot(player.x - oldX, player.y - oldY) / 10;
       if (hitsObstacle(player.x,player.y)) { player.x=oldX; player.y=oldY; }
       const aim = pointer.active ? screenToWorld(pointer.x, pointer.y) : { x:player.x + 1, y:player.y }; player.angle = Math.atan2(aim.y - player.y, aim.x - player.x);
@@ -352,7 +366,7 @@
       const oldX=player.x,oldY=player.y; player.x = clamp(player.x + dx * 190, player.r, world.w - player.r); player.y = clamp(player.y + dy * 190, player.r, world.h - player.r); if(hitsObstacle(player.x,player.y)){player.x=oldX;player.y=oldY;}
       dashCooldown = 2.5; invulnerable = .38; dashStateEl.textContent = "2.5"; burst(player.x, player.y, "#c4b5fd", 24); flash("緊急回避"); tone(820, .08, "sine", .04);
     }
-    function weaponStats() { return { magazine:weapon.type === "burst" ? 18 : weapon.type === "spread" ? 10 : weapon.type === "pierce" ? 9 : 12, reload:Math.max(.65, 1.25 - weapon.level * .08), range:weapon.type === "pierce" ? 620 : 540 }; }
+    function weaponStats() { const top=Math.max(...weaponSlots.map(w=>w.level));return { magazine:14+top*2, reload:Math.max(.65,1.25-top*.07), range:620 }; }
     function findTarget(range) { let target = null, bestDistance = range; if (boss) { const d = distance(player, boss); if (d < bestDistance) { bestDistance = d; target = boss; } } enemies.forEach((enemy) => { const d = distance(player, enemy); if (d < bestDistance) { bestDistance = d; target = enemy; } }); return target; }
     function findTargetFrom(source, range) { let target = null, bestDistance = range; if (boss) { const d = distance(source, boss); if (d < bestDistance) { bestDistance = d; target = boss; } } enemies.forEach((enemy) => { const d = distance(source, enemy); if (d < bestDistance) { bestDistance = d; target = enemy; } }); return target; }
     function allyShoot(ally, target) { const a = Math.atan2(target.y - ally.y, target.x - ally.x); bullets.push({ x:ally.x + Math.cos(a) * 14, y:ally.y + Math.sin(a) * 14, vx:Math.cos(a) * 420, vy:Math.sin(a) * 420, r:4, life:.85, damage:ally.damage, pierce:1, ally:true }); ally.cool = ally.cooldown; }
@@ -383,29 +397,19 @@
     }
     function startReload() { if (reloadTimer <= 0 && clip < weaponStats().magazine && reserveAmmo > 0) { reloadTimer = weaponStats().reload; flash("自動リロード"); } }
     function finishReload() { const stats = weaponStats(); const need = stats.magazine - clip; const loaded = Math.min(need, reserveAmmo); clip += loaded; reserveAmmo -= loaded; reloadTimer = 0; tone(380, .05, "sine", .03); }
-    function autoShoot() {
-      if (fireCooldown > 0 || reloadTimer > 0 || !running || paused) return;
-      const stats = weaponStats(); const target = findTarget(stats.range);
-      if (!target) { if (clip <= 0) startReload(); return; }
-      if (clip <= 0) { startReload(); return; }
-      const type = weapon.type; const count = type === "spread" ? 5 : type === "burst" ? 2 : 1; const spread = type === "spread" ? .42 : type === "burst" ? .1 : 0; const pierce = type === "pierce" ? 2 + weapon.level : 1;
-      player.angle = Math.atan2(target.y - player.y, target.x - player.x);
-      for (let i = 0; i < count; i += 1) {
-        const offset = count === 1 ? 0 : (i - (count - 1) / 2) * spread; const a = player.angle + offset;
-        bullets.push({ x:player.x + Math.cos(a) * 20, y:player.y + Math.sin(a) * 20, vx:Math.cos(a) * 620, vy:Math.sin(a) * 620, r:5, life:.95, damage:weapon.damage + weapon.level * 7, pierce });
-      }
-      clip -= 1; fireCooldown = type === "burst" ? .12 : type === "spread" ? .22 : .18; tone(220 + weapon.level * 35, .045, "square", .035);
-      if (clip <= 0) startReload();
-    }
+    function fireWeapon(slot,target){if(["orbit","blade"].includes(slot.type))return;const type=slot.type,level=slot.level,count=type==="spread"?3+level:type==="burst"?2+Math.floor(level/2):1,spread=type==="spread"?.18:type==="burst"?.06:0,pierce=type==="pierce"?2+level:1,speed=type==="homing"?390:620,damage=(18+level*6)*(1+(upgrades.attack-1)*.25);player.angle=Math.atan2(target.y-player.y,target.x-player.x);for(let i=0;i<count;i++){const offset=count===1?0:(i-(count-1)/2)*spread,a=player.angle+offset;bullets.push({x:player.x+Math.cos(a)*20,y:player.y+Math.sin(a)*20,vx:Math.cos(a)*speed,vy:Math.sin(a)*speed,r:type==="homing"?6:5,life:type==="homing"?1.5:.95,damage,pierce,homing:type==="homing"})}}
+    function autoShoot(){if(fireCooldown>0||reloadTimer>0||!running||paused)return;const target=findTarget(weaponStats().range);if(!target){if(clip<=0)startReload();return}if(clip<=0){startReload();return}weaponSlots.forEach(slot=>fireWeapon(slot,target));clip-=1;fireCooldown=.22;tone(220+upgrades.attack*35,.045,"square",.035);if(clip<=0)startReload()}
+    function specialPoints(type,level){const count=type==="orbit"?2+Math.floor(level/2):3+level,radius=type==="orbit"?58+level*5:38+level*4,speed=type==="orbit"?650:360;return Array.from({length:count},(_,i)=>{const a=performance.now()/speed+i*Math.PI*2/count;return{x:player.x+Math.cos(a)*radius,y:player.y+Math.sin(a)*radius}})}
+    function updateSpecialWeapons(dt){weaponSlots.forEach(slot=>{if(!["orbit","blade"].includes(slot.type))return;const points=specialPoints(slot.type,slot.level),damage=(slot.type==="orbit"?20:34)*slot.level*(1+(upgrades.attack-1)*.2);points.forEach(p=>{enemies.forEach(e=>{if(distance(p,e)<e.r+13)e.hp-=damage*dt});if(boss&&distance(p,boss)<boss.r+14)boss.hp-=damage*dt})})}
     function update(dt, now) {
       updateMusic(now); if (!running || paused) { updateParticles(dt); return; }
       if (performance.now() > flashUntil) stateEl.textContent = combo > 1 ? `${combo} COMBO` : "進行中"; shieldTime = Math.max(0, shieldTime - dt); dashCooldown = Math.max(0, dashCooldown - dt); invulnerable = Math.max(0, invulnerable - dt); comboTimer = Math.max(0, comboTimer - dt); if (comboTimer <= 0) combo = 0; dashStateEl.textContent = dashCooldown > 0 ? dashCooldown.toFixed(1) : "OK";
-      movePlayer(dt); fireCooldown = Math.max(0, fireCooldown - dt); if (reloadTimer > 0) { reloadTimer = Math.max(0, reloadTimer - dt); if (reloadTimer <= 0) finishReload(); } weapon.ttl = Math.max(0, weapon.ttl - dt); if (weapon.ttl <= 0 && weapon.type !== "single") { weapon = { type:"single", level:Math.max(1, weapon.level - 1), ttl:0, damage:24 }; clip = Math.min(clip, weaponStats().magazine); }
+      movePlayer(dt); fireCooldown = Math.max(0, fireCooldown - dt); if (reloadTimer > 0) { reloadTimer = Math.max(0, reloadTimer - dt); if (reloadTimer <= 0) finishReload(); }
       if (terrain.hazards.some(h=>distance(player,h)<h.r+player.r)) damagePlayer(7*dt);
       autoShoot();
-      updateEquipment(dt);
+      updateSpecialWeapons(dt);
       enemyTimer -= dt; itemTimer -= dt; recruitTimer -= dt; if (enemyTimer <= 0) { spawnEnemy(); if (wave > 2 && Math.random() < .55) spawnEnemy(); if (wave > 5 && Math.random() < .35) spawnEnemy(); enemyTimer = Math.max(.055, .34 - wave * .018); } if (itemTimer <= 0) { spawnItem(); itemTimer = rand(4.5, 7.5); } if (recruitTimer <= 0) { spawnRecruit(); recruitTimer = rand(12, 20); }
-      bullets.forEach((b) => { b.life -= dt; b.x += b.vx * dt; b.y += b.vy * dt; }); bullets = bullets.filter((b) => b.life > 0 && b.x > 0 && b.y > 0 && b.x < world.w && b.y < world.h && b.pierce > 0);
+      bullets.forEach((b) => { if(b.homing&&!b.enemy){const target=findTargetFrom(b,500);if(target){const speed=Math.hypot(b.vx,b.vy),a=Math.atan2(target.y-b.y,target.x-b.x);b.vx=b.vx*.86+Math.cos(a)*speed*.14;b.vy=b.vy*.86+Math.sin(a)*speed*.14}}b.life -= dt; b.x += b.vx * dt; b.y += b.vy * dt; }); bullets = bullets.filter((b) => b.life > 0 && b.x > 0 && b.y > 0 && b.x < world.w && b.y < world.h && b.pierce > 0);
       enemies.forEach((e) => {
         e.hit = Math.max(0, e.hit - dt); const d = Math.max(1, distance(e, player)); const speed = e.speed * (1 + wave * .08); let tx = player.x, ty = player.y;
         if (e.evasive && d < 220) { tx = e.x - (player.x - e.x); ty = e.y - (player.y - e.y); }
@@ -454,13 +458,14 @@
       stars.forEach((s) => { const x = ((s.x - camera.x * .42) % canvas.width + canvas.width) % canvas.width; const y = ((s.y - camera.y * .42) % canvas.height + canvas.height) % canvas.height; ctx.fillStyle = `rgba(219,234,254,${s.a})`; ctx.beginPath(); ctx.arc(x, y, s.r, 0, Math.PI * 2); ctx.fill(); });
       ctx.strokeStyle = "rgba(148,163,184,.12)"; ctx.lineWidth = 1; const gx = -camera.x % 80; const gy = -camera.y % 80; for (let x = gx; x < canvas.width; x += 80) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke(); } for (let y = gy; y < canvas.height; y += 80) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke(); }
     }
-    function drawTerrain(){terrain.hazards.forEach(h=>{const x=worldX(h.x),y=worldY(h.y);ctx.fillStyle=terrain.theme.hazard+"33";ctx.strokeStyle=terrain.theme.hazard;ctx.lineWidth=2;ctx.beginPath();ctx.arc(x,y,h.r,0,Math.PI*2);ctx.fill();ctx.stroke();});terrain.obstacles.forEach(o=>{const x=worldX(o.x),y=worldY(o.y);ctx.fillStyle=terrain.theme.rock;ctx.strokeStyle="#ffffff22";ctx.lineWidth=3;ctx.beginPath();ctx.arc(x,y,o.r,0,Math.PI*2);ctx.fill();ctx.stroke();});}
+    function drawTerrain(){terrain.hazards.forEach(h=>{const x=worldX(h.x),y=worldY(h.y),pulse=.72+Math.sin(performance.now()/240+h.x)*.15;ctx.save();ctx.shadowColor=terrain.theme.hazard;ctx.shadowBlur=12;ctx.fillStyle=terrain.theme.hazard+"2b";ctx.strokeStyle=terrain.theme.hazard;ctx.globalAlpha=pulse;ctx.lineWidth=2;ctx.beginPath();ctx.arc(x,y,h.r,0,Math.PI*2);ctx.fill();ctx.stroke();ctx.restore();});terrain.obstacles.forEach(o=>{const x=worldX(o.x),y=worldY(o.y),g=ctx.createRadialGradient(x-o.r*.3,y-o.r*.35,2,x,y,o.r);g.addColorStop(0,"#ffffff38");g.addColorStop(.25,terrain.theme.rock);g.addColorStop(1,"#020617");ctx.fillStyle=g;ctx.strokeStyle="#ffffff32";ctx.lineWidth=3;ctx.beginPath();ctx.arc(x,y,o.r,0,Math.PI*2);ctx.fill();ctx.stroke();});}
     function drawCircle(obj, color, glow) { ctx.save(); ctx.shadowColor = glow; ctx.shadowBlur = 14; ctx.fillStyle = color; ctx.beginPath(); ctx.arc(worldX(obj.x), worldY(obj.y), obj.r, 0, Math.PI * 2); ctx.fill(); ctx.restore(); }
     function pixelRect(x, y, px, py, w, h, size, color) { ctx.fillStyle = color; ctx.fillRect(Math.round(x + px * size), Math.round(y + py * size), w * size, h * size); }
     function drawPixelSprite(x, y, size, color, kind) {
       ctx.save(); ctx.translate(Math.round(x - 4 * size), Math.round(y - 4 * size));
       const dark = "#111827", light = "#f8fafc";
-      if (kind === "player") { pixelRect(0,0,3,0,2,1,size,light); pixelRect(0,0,2,1,4,2,size,color); pixelRect(0,0,1,3,6,2,size,color); pixelRect(0,0,3,5,2,2,size,light); pixelRect(0,0,0,4,1,2,size,"#0ea5e9"); pixelRect(0,0,7,4,1,2,size,"#0ea5e9"); }
+      if (kind === "cat") { pixelRect(0,0,1,0,2,2,size,color);pixelRect(0,0,6,0,2,2,size,color);pixelRect(0,0,1,1,7,4,size,color);pixelRect(0,0,2,2,1,1,size,dark);pixelRect(0,0,6,2,1,1,size,dark);pixelRect(0,0,4,3,1,1,size,"#fda4af");pixelRect(0,0,3,4,3,1,size,light);pixelRect(0,0,2,5,5,3,size,color);pixelRect(0,0,1,7,2,1,size,color);pixelRect(0,0,6,7,2,1,size,color);pixelRect(0,0,7,5,2,1,size,color);pixelRect(0,0,8,4,1,2,size,color); }
+      else if (kind === "player") { pixelRect(0,0,3,0,2,1,size,light); pixelRect(0,0,2,1,4,2,size,color); pixelRect(0,0,1,3,6,2,size,color); pixelRect(0,0,3,5,2,2,size,light); pixelRect(0,0,0,4,1,2,size,"#0ea5e9"); pixelRect(0,0,7,4,1,2,size,"#0ea5e9"); }
       else if (kind === "item") { pixelRect(0,0,2,1,4,1,size,light); pixelRect(0,0,1,2,6,5,size,color); pixelRect(0,0,3,3,2,2,size,light); }
       else { pixelRect(0,0,2,0,4,1,size,dark); pixelRect(0,0,1,1,6,4,size,color); pixelRect(0,0,2,5,1,2,size,color); pixelRect(0,0,5,5,1,2,size,color); pixelRect(0,0,2,2,1,1,size,dark); pixelRect(0,0,5,2,1,1,size,dark); if (kind === "boss") pixelRect(0,0,0,1,1,5,size,"#f59e0b"); }
       ctx.restore();
@@ -468,14 +473,17 @@
     function drawGoal() { ctx.save(); const x = worldX(goal.x), y = worldY(goal.y); const locked = Boolean(boss); ctx.strokeStyle = locked ? "#f97316" : "#22c55e"; ctx.lineWidth = 5; ctx.shadowColor = locked ? "rgba(249,115,22,.8)" : "rgba(34,197,94,.8)"; ctx.shadowBlur = 18; ctx.beginPath(); ctx.arc(x, y, goal.r + Math.sin(performance.now() / 170) * 4, 0, Math.PI * 2); ctx.stroke(); ctx.fillStyle = locked ? "rgba(249,115,22,.13)" : "rgba(34,197,94,.15)"; ctx.fill(); if (locked) { ctx.shadowBlur = 0; ctx.strokeStyle = "rgba(255,255,255,.65)"; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(x - 22, y - 22); ctx.lineTo(x + 22, y + 22); ctx.moveTo(x + 22, y - 22); ctx.lineTo(x - 22, y + 22); ctx.stroke(); } ctx.restore(); }
     function enemyColor(type) { return type === "runner" ? "#fb7185" : type === "brute" ? "#991b1b" : type === "spitter" ? "#a78bfa" : type === "armored" ? "#64748b" : type === "bloater" ? "#84cc16" : type === "summoner" ? "#22c55e" : type === "stalker" ? "#f97316" : "#ef4444"; }
     function drawEnemy(e) { const color = enemyColor(e.type); const x = worldX(e.x), y = worldY(e.y); drawPixelSprite(x, y, e.type === "brute" || e.type === "armored" ? 6 : 5, e.hit > 0 ? "#fff7ed" : color, "enemy"); if (e.type === "armored") { ctx.strokeStyle = "rgba(226,232,240,.8)"; ctx.lineWidth = 3; ctx.strokeRect(x - 19, y - 19, 38, 38); } if (e.type === "summoner") { ctx.strokeStyle = "rgba(132,204,22,.8)"; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x, y, e.r + 7, 0, Math.PI * 2); ctx.stroke(); } }
-    function drawRecruit(recruit) { const x = worldX(recruit.x), y = worldY(recruit.y); drawPixelSprite(x, y, 4, recruit.color, "player"); ctx.strokeStyle = "rgba(255,255,255,.75)"; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x, y, recruit.r + 8 + Math.sin(performance.now() / 180) * 2, 0, Math.PI * 2); ctx.stroke(); }
-    function drawAlly(ally) { const x = worldX(ally.x), y = worldY(ally.y); drawPixelSprite(x, y, 4, ally.color, "player"); const w = 30, hpw = w * clamp(ally.hp / ally.maxHp, 0, 1); ctx.fillStyle = "rgba(15,23,42,.8)"; ctx.fillRect(x - w / 2, y - ally.r - 14, w, 4); ctx.fillStyle = ally.color; ctx.fillRect(x - w / 2, y - ally.r - 14, hpw, 4); }
+    function drawRecruit(recruit) { const x = worldX(recruit.x), y = worldY(recruit.y); ctx.shadowColor=recruit.color;ctx.shadowBlur=12;drawPixelSprite(x, y, 4, recruit.color, "cat");ctx.shadowBlur=0; ctx.strokeStyle = "rgba(255,255,255,.75)"; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x, y, recruit.r + 8 + Math.sin(performance.now() / 180) * 2, 0, Math.PI * 2); ctx.stroke(); }
+    function drawAlly(ally) { const x = worldX(ally.x), y = worldY(ally.y); ctx.shadowColor=ally.color;ctx.shadowBlur=10;drawPixelSprite(x, y, 4, ally.color, "cat");ctx.shadowBlur=0; const w = 30, hpw = w * clamp(ally.hp / ally.maxHp, 0, 1); ctx.fillStyle = "rgba(15,23,42,.8)"; ctx.fillRect(x - w / 2, y - ally.r - 14, w, 4); ctx.fillStyle = ally.color; ctx.fillRect(x - w / 2, y - ally.r - 14, hpw, 4); }
     function drawBoss() { if (!boss) return; const x = worldX(boss.x), y = worldY(boss.y); drawPixelSprite(x, y, 9, boss.hit > 0 ? "#fff7ed" : "#7f1d1d", "boss"); ctx.save(); ctx.strokeStyle = "#f59e0b"; ctx.lineWidth = 4; ctx.beginPath(); ctx.arc(x, y, boss.r + 10 + Math.sin(performance.now() / 130) * 3, 0, Math.PI * 2); ctx.stroke(); const w = 92, hpw = w * clamp(boss.hp / boss.maxHp, 0, 1); ctx.fillStyle = "rgba(15,23,42,.82)"; ctx.fillRect(x - w / 2, y - boss.r - 24, w, 8); ctx.fillStyle = "#f59e0b"; ctx.fillRect(x - w / 2, y - boss.r - 24, hpw, 8); ctx.restore(); }
-    function drawPlayer() { trail.forEach((t) => { ctx.fillStyle = `rgba(56,189,248,${t.life * .36})`; ctx.beginPath(); ctx.arc(worldX(t.x), worldY(t.y), t.r * t.life, 0, Math.PI * 2); ctx.fill(); }); const x = worldX(player.x), y = worldY(player.y); if (shieldTime > 0) { ctx.strokeStyle = "rgba(56,189,248,.75)"; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(x, y, 30, 0, Math.PI * 2); ctx.stroke(); } ctx.save(); ctx.translate(x, y); ctx.rotate(player.angle); drawPixelSprite(0, 0, 5, "#38bdf8", "player"); ctx.restore(); }
+    function drawPlayer() { trail.forEach((t) => { ctx.fillStyle = `rgba(56,189,248,${t.life * .36})`; ctx.beginPath(); ctx.arc(worldX(t.x), worldY(t.y), t.r * t.life, 0, Math.PI * 2); ctx.fill(); }); const x = worldX(player.x), y = worldY(player.y); if (shieldTime > 0||invulnerable>0) { ctx.strokeStyle = invulnerable>0?"#c4b5fd":"rgba(56,189,248,.75)"; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(x, y, 30, 0, Math.PI * 2); ctx.stroke(); } ctx.save();ctx.shadowColor="#38bdf8";ctx.shadowBlur=16;drawPixelSprite(x,y,5,"#38bdf8","cat");ctx.restore(); }
+    function drawSpecialWeapons(){weaponSlots.forEach(slot=>{if(!["orbit","blade"].includes(slot.type))return;specialPoints(slot.type,slot.level).forEach((p,i)=>{const x=worldX(p.x),y=worldY(p.y);ctx.save();ctx.translate(x,y);ctx.rotate(performance.now()/180+i);ctx.shadowColor=slot.type==="orbit"?"#22d3ee":"#f472b6";ctx.shadowBlur=14;ctx.fillStyle=slot.type==="orbit"?"#67e8f9":"#f9a8d4";if(slot.type==="orbit"){ctx.beginPath();ctx.arc(0,0,7,0,Math.PI*2);ctx.fill();ctx.fillStyle="#fff";ctx.fillRect(-2,-2,4,4)}else{ctx.beginPath();ctx.moveTo(0,-13);ctx.lineTo(5,0);ctx.lineTo(0,13);ctx.lineTo(-5,0);ctx.closePath();ctx.fill()}ctx.restore()})})}
     function drawParticles() { particles.forEach((p) => { ctx.globalAlpha = Math.max(0, p.life / p.max); ctx.fillStyle = p.color; ctx.beginPath(); ctx.arc(worldX(p.x), worldY(p.y), p.r, 0, Math.PI * 2); ctx.fill(); ctx.globalAlpha = 1; }); }
-    function drawItem(item) { const color = item.type === "weapon" ? "#a78bfa" : item.type === "heal" || item.type === "medkit" ? "#22c55e" : item.type === "bomb" ? "#ef4444" : item.type === "shield" ? "#38bdf8" : "#f59e0b"; const x = worldX(item.x), y = worldY(item.y); drawPixelSprite(x, y, 4, color, "item"); ctx.strokeStyle = "rgba(255,255,255,.75)"; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x, y, item.r + 6, 0, Math.PI * 2); ctx.stroke(); }
+    function drawItem(item) { const colors={weapon:"#a78bfa",heal:"#22c55e",medkit:"#22c55e",bomb:"#ef4444",shield:"#38bdf8",speedUp:"#22d3ee",defenseUp:"#60a5fa",attackUp:"#fb7185",ammo:"#f59e0b"},color=colors[item.type]||"#f59e0b"; const x = worldX(item.x), y = worldY(item.y);ctx.save();ctx.shadowColor=color;ctx.shadowBlur=12;drawPixelSprite(x, y, 4, color, "item");ctx.restore();ctx.fillStyle="#fff";ctx.font="800 11px Segoe UI";ctx.textAlign="center";ctx.fillText(itemIcons[item.type]||"◆",x,y+4);ctx.strokeStyle="rgba(255,255,255,.75)";ctx.lineWidth=2;ctx.beginPath();ctx.arc(x,y,item.r+6,0,Math.PI*2);ctx.stroke(); }
     function drawTextCenter(text, subtext) { ctx.fillStyle = "rgba(219,234,254,.95)"; ctx.font = "700 30px Segoe UI, sans-serif"; ctx.textAlign = "center"; ctx.fillText(text, canvas.width / 2, canvas.height / 2 - 10); if (subtext) { ctx.font = "500 16px Segoe UI, sans-serif"; ctx.fillText(subtext, canvas.width / 2, canvas.height / 2 + 24); } }
-    function draw() { drawBackground(); drawTerrain(); drawGoal(); items.forEach(drawItem); recruits.forEach(drawRecruit); bullets.forEach((b) => drawCircle(b, b.enemy ? "#fb7185" : b.ally ? "#93c5fd" : "#f8fafc", b.enemy ? "rgba(251,113,133,.8)" : "rgba(226,232,240,.8)")); enemies.forEach(drawEnemy); drawBoss(); allies.forEach(drawAlly); drawPlayer(); drawParticles(); ctx.fillStyle = "rgba(219,234,254,.92)"; ctx.font = "600 13px Segoe UI, sans-serif"; ctx.textAlign = "left"; ctx.fillText(`ST ${wave} ${terrain.theme.name} / Gate ${boss ? "LOCK" : "OPEN"}`, 10, 22); ctx.fillText(`S ${score}  HP ${Math.max(0,Math.ceil(hp))}  AM ${clip}/${reserveAmmo}`, 10, 43); if (combo > 1) { ctx.fillStyle="#fbbf24"; ctx.font="800 20px Segoe UI, sans-serif"; ctx.fillText(`${combo} COMBO`,10,68); } if (!running && score === 0) drawTextCenter("▶で開始", "ゲートへ到達せよ"); if (paused) drawTextCenter("一時停止中", "設定を閉じると再開します"); }
+    function drawHudBar(x,y,w,value,color,label){ctx.fillStyle="rgba(2,6,23,.78)";ctx.fillRect(x,y,w,10);ctx.fillStyle=color;ctx.fillRect(x+1,y+1,(w-2)*clamp(value,0,1),8);ctx.strokeStyle="#ffffff55";ctx.strokeRect(x+.5,y+.5,w-1,9);ctx.fillStyle="#f8fafc";ctx.font="800 10px Segoe UI";ctx.textAlign="left";ctx.fillText(label,x+4,y+8)}
+    function drawGameGauges(){const stats=weaponStats();drawHudBar(10,29,130,hp/100,"#22c55e",`HP ${Math.max(0,Math.ceil(hp))}`);drawHudBar(10,43,130,clip/stats.magazine,"#f59e0b",reloadTimer>0?"AM 装填中":`AM ${clip}/${reserveAmmo}`);drawHudBar(10,57,130,1-dashCooldown/2.5,"#a78bfa",dashCooldown>0?`回避 ${dashCooldown.toFixed(1)}`:"回避 OK")}
+    function draw() { drawBackground(); drawTerrain(); drawGoal(); items.forEach(drawItem); recruits.forEach(drawRecruit); bullets.forEach((b) => drawCircle(b, b.enemy ? "#fb7185" : b.ally ? "#93c5fd" : "#f8fafc", b.enemy ? "rgba(251,113,133,.8)" : "rgba(226,232,240,.8)")); enemies.forEach(drawEnemy); drawBoss(); allies.forEach(drawAlly); drawSpecialWeapons(); drawPlayer(); drawParticles(); ctx.fillStyle = "rgba(219,234,254,.92)"; ctx.font = "600 13px Segoe UI, sans-serif"; ctx.textAlign = "left"; ctx.fillText(`ST ${wave} ${terrain.theme.name} / Gate ${boss ? "LOCK" : "OPEN"}  S ${score}`, 10, 18);drawGameGauges();if (combo > 1) { ctx.fillStyle="#fbbf24"; ctx.font="800 18px Segoe UI, sans-serif"; ctx.fillText(`${combo} COMBO`,10,84); } if (!running && score === 0) drawTextCenter("▶で開始", "ゲートへ到達せよ"); if (paused) drawTextCenter("一時停止中", "設定を閉じると再開します"); }
     function syncViewportHeight(){const height=Math.floor(window.visualViewport?.height||window.innerHeight);document.documentElement.style.setProperty("--app-height",`${height}px`);}
     function resizeCanvas() { const rect=canvas.getBoundingClientRect(); if (matchMedia("(max-width:560px)").matches) { canvas.width=Math.max(240,Math.round(rect.width)); canvas.height=Math.max(240,Math.round(rect.height)); } else { canvas.width=920; canvas.height=690; } draw(); }
     function loop(now) { const dt = Math.min(.033, (now - lastTime) / 1000 || 0); lastTime = now; update(dt, now); draw(); requestAnimationFrame(loop); }
