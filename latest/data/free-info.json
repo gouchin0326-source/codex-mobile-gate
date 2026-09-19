@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-19T22:28:01.575415+00:00",
-  "lastSuccessAt": "2026-09-19T22:28:01.575415+00:00",
+  "updatedAt": "2026-09-19T22:38:01.608291+00:00",
+  "lastSuccessAt": "2026-09-19T22:38:01.608291+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -151,9 +151,9 @@
     {
       "genre": "災害",
       "count": 3,
-      "signal": "M 0.3 - 0 km N of The Geysers, CA / M 1.3 - 4 km WNW of Santa Paula, CA / M 2.1 - 17 km ESE of Balmorhea, Texas",
+      "signal": "M 0.2 - 3 km WSW of Anza, CA / M 0.3 - 0 km N of The Geysers, CA / M 1.3 - 4 km WNW of Santa Paula, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438622",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335303",
       "score": 1
     }
   ],
@@ -275,10 +275,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.3 - 0 km N of The Geysers, CA",
-      "summary": "0 km N of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438622",
-      "published": "2026-09-19T22:21:20.290000+00:00",
+      "title": "M 0.2 - 3 km WSW of Anza, CA",
+      "summary": "3 km WSW of Anza, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335303",
+      "published": "2026-09-19T22:28:46.860000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -705,10 +705,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.3 - 4 km WNW of Santa Paula, CA",
-      "summary": "4 km WNW of Santa Paula, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335295",
-      "published": "2026-09-19T22:20:46.550000+00:00",
+      "title": "M 0.3 - 0 km N of The Geysers, CA",
+      "summary": "0 km N of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438622",
+      "published": "2026-09-19T22:21:20.290000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -718,10 +718,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.1 - 17 km ESE of Balmorhea, Texas",
-      "summary": "17 km ESE of Balmorhea, Texas",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026smuzcb",
-      "published": "2026-09-19T22:20:46.072000+00:00",
+      "title": "M 1.3 - 4 km WNW of Santa Paula, CA",
+      "summary": "4 km WNW of Santa Paula, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335295",
+      "published": "2026-09-19T22:20:46.550000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -732,64 +732,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T22:28:01.575415+00:00",
-      "lastAttemptAt": "2026-09-19T22:28:01.575415+00:00",
+      "lastSuccessAt": "2026-09-19T22:38:01.608291+00:00",
+      "lastAttemptAt": "2026-09-19T22:38:01.608291+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T22:28:01.575415+00:00",
-      "lastAttemptAt": "2026-09-19T22:28:01.575415+00:00",
+      "lastSuccessAt": "2026-09-19T22:38:01.608291+00:00",
+      "lastAttemptAt": "2026-09-19T22:38:01.608291+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T22:28:01.575415+00:00",
-      "lastAttemptAt": "2026-09-19T22:28:01.575415+00:00",
+      "lastSuccessAt": "2026-09-19T22:38:01.608291+00:00",
+      "lastAttemptAt": "2026-09-19T22:38:01.608291+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T22:28:01.575415+00:00",
-      "lastAttemptAt": "2026-09-19T22:28:01.575415+00:00",
+      "lastSuccessAt": "2026-09-19T22:38:01.608291+00:00",
+      "lastAttemptAt": "2026-09-19T22:38:01.608291+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T22:28:01.575415+00:00",
-      "lastAttemptAt": "2026-09-19T22:28:01.575415+00:00",
+      "lastSuccessAt": "2026-09-19T22:38:01.608291+00:00",
+      "lastAttemptAt": "2026-09-19T22:38:01.608291+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T22:28:01.575415+00:00",
-      "lastAttemptAt": "2026-09-19T22:28:01.575415+00:00",
+      "lastSuccessAt": "2026-09-19T22:38:01.608291+00:00",
+      "lastAttemptAt": "2026-09-19T22:38:01.608291+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T22:28:01.575415+00:00",
-      "lastAttemptAt": "2026-09-19T22:28:01.575415+00:00",
+      "lastSuccessAt": "2026-09-19T22:38:01.608291+00:00",
+      "lastAttemptAt": "2026-09-19T22:38:01.608291+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-19T22:28:01.575415+00:00",
-      "lastAttemptAt": "2026-09-19T22:28:01.575415+00:00",
+      "lastSuccessAt": "2026-09-19T22:38:01.608291+00:00",
+      "lastAttemptAt": "2026-09-19T22:38:01.608291+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
