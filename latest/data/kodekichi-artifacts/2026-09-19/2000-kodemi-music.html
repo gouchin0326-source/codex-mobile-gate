@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>コデ美の夕方の差分と改善ラボ</title><style>
+:root{--accent:#7650a8;--paper:#fffdf7;--ink:#18364b}*{box-sizing:border-box}body{margin:0;background:#eef7f1;color:var(--ink);font-family:system-ui,sans-serif}
+main{max-width:680px;margin:auto;padding:18px}section{background:var(--paper);border:2px solid #bed8cb;border-radius:18px;padding:18px;box-shadow:0 8px 22px #18364b18}
+h1{font-size:clamp(1.4rem,6vw,2.1rem);margin:.2em 0}button{min-height:48px;border:0;border-radius:12px;padding:10px 16px;background:var(--accent);color:white;font-weight:800;font-size:1rem}
+.card{min-height:110px;margin:16px 0;padding:16px;border-radius:14px;background:#fff;border:2px dashed var(--accent);font-weight:750}.row{display:flex;gap:8px;flex-wrap:wrap}.muted{font-size:.85rem;color:#526b62}details{margin-top:16px}
+input{width:100%;min-height:48px;margin-top:6px;border:2px solid var(--accent);border-radius:10px;padding:10px;font-size:1rem}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style></head><body><main><section>
+<p>生成日 2026-09-19・20:00／Gemini + Google Search共同設計</p><h1>コデ美の夕方の差分と改善ラボ</h1>
+<p>朝の成果と新着知識から次の音楽改善を1件に絞る</p><div id="card" class="card" aria-live="polite"></div>
+<div class="row"><button id="next">音楽を奏でる</button><button id="export">📤 記録を書き出す</button></div>
+<p id="status" class="muted" aria-live="polite">0回進みました。</p>
+<details><summary>検索を使った開発メモ</summary><p>## 取得事実
+
+・開発：GitHub Copilot weekly releases — September 14（GitHub更新）
+・開発：Upcoming deprecation of selected GitHub Copilot models in mid-October（GitHub更新）
+・技術：Benchmarking Wild vs Mold（技術RSS）
+・AI：Introducing the Australian Youth Safety Blueprint（ChatGPT / OpenAI公式）
+・天気：富山: 通常 / 警戒情報なし
+・情報更新時刻：2026-09-19T07:48:01.822664+00:00
+
+## 次への反映
+
+コデ郎の公開情報一覧から音楽の雰囲気候補を選ぶ。ニュース本文を創作の事実根拠にせず、音量と非音声代替を維持する。</p></details>
+</section></main><script>
+const cards=["朝の成果と新着知識から次の音楽改善を1件に絞る", "音楽・物語・居心地を担当し、コデ朗の知識を音の体験へ変える", "三人の工程：夕方の差分と改善"];let step=0;const card=document.querySelector('#card'),status=document.querySelector('#status');
+function render(){card.textContent=cards[step%cards.length];status.textContent=`${step}回進みました。`;localStorage.setItem('progress',String(step))}
+step=Number(localStorage.getItem('progress')||0);render();document.querySelector('#next').onclick=()=>{const ctx=new AudioContext(),notes=[261.63,329.63,392,523.25];notes.forEach((hz,i)=>{const o=ctx.createOscillator(),g=ctx.createGain();o.frequency.value=hz;o.type='sine';g.gain.setValueAtTime(.0001,ctx.currentTime+i*.22);g.gain.exponentialRampToValueAtTime(.15,ctx.currentTime+i*.22+.03);g.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+i*.22+.5);o.connect(g).connect(ctx.destination);o.start(ctx.currentTime+i*.22);o.stop(ctx.currentTime+i*.22+.52)});step++;render()};
+document.querySelector('#export').onclick=()=>{const data={title:"コデ美の夕方の差分と改善ラボ",step,card:cards[step%cards.length],exportedAt:new Date().toISOString()};const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));a.download="kodemi-2000-record.json";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
+</script></body></html>

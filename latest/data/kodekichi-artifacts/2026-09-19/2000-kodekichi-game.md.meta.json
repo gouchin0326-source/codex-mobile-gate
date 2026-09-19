@@ -1,0 +1,32 @@
+{
+  "lane": "app",
+  "ts": "2026-09-19T16:56:52+09:00",
+  "artifact": "2000-kodekichi-game.md",
+  "prompt": "コデ吉 / 朝の成果と新着知識から次のゲーム改善を1件に絞る",
+  "source": "local",
+  "backend": "codex",
+  "model": "deterministic-rules",
+  "seconds": 0,
+  "gates": {
+    "separate_character_artifact": {
+      "pass": true,
+      "note": "kodekichi"
+    },
+    "collection_mode": {
+      "pass": true,
+      "note": "公開RSS/API・ルール処理（外部AI 0回）"
+    },
+    "citations": {
+      "pass": true,
+      "note": "4 sources"
+    },
+    "daily_budget": {
+      "pass": true,
+      "note": "2/6; this slot AI=False"
+    },
+    "graceful_degradation": {
+      "pass": true,
+      "note": "Gemini利用枠待ちのため公開RSS/APIへ縮退: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, he"
+    }
+  }
+}

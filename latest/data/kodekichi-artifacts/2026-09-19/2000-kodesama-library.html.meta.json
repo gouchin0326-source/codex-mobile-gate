@@ -1,0 +1,36 @@
+{
+  "lane": "research",
+  "ts": "2026-09-19T16:56:52+09:00",
+  "artifact": "2000-kodesama-library.html",
+  "prompt": "コデ朗 / 一日の情報差分と利用枠を確認し、古い情報を除いて二人への影響を整理する",
+  "source": "local",
+  "backend": "codex",
+  "model": "deterministic-rules",
+  "seconds": 0,
+  "gates": {
+    "html_first": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "mobile": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "accessible_status": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "export": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "offline": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "substantial": {
+      "pass": true,
+      "note": "local deterministic gate"
+    }
+  }
+}
