@@ -1,0 +1,40 @@
+{
+  "lane": "music",
+  "ts": "2026-09-20T22:00:02+09:00",
+  "artifact": "2200-kodemi-music.html",
+  "prompt": "コデ美 / リズムをまねる反応ゲーム",
+  "source": "local",
+  "backend": "codex",
+  "model": "deterministic-rules",
+  "seconds": 0,
+  "gates": {
+    "html_first": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "mobile": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "accessible_status": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "export": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "offline": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "substantial": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "interactive": {
+      "pass": true,
+      "note": "local deterministic gate"
+    }
+  }
+}
