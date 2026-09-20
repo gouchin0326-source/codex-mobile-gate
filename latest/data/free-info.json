@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-20T07:18:02.069963+00:00",
-  "lastSuccessAt": "2026-09-20T07:18:02.069963+00:00",
+  "updatedAt": "2026-09-20T07:28:02.009181+00:00",
+  "lastSuccessAt": "2026-09-20T07:28:02.009181+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 4,
-      "signal": "M 2.5 - 25 km S of Port Graham, Alaska / M 0.9 - 73 km NW of Ninilchik, Alaska / M 0.4 - 17 km ESE of Anza, CA",
+      "signal": "M 2.4 - 29 km SE of Central, Alaska / M 2.5 - 25 km S of Port Graham, Alaska / M 0.9 - 73 km NW of Ninilchik, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqlsqi",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqmmxq",
       "score": 1
     },
     {
@@ -275,10 +275,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.5 - 25 km S of Port Graham, Alaska",
-      "summary": "25 km S of Port Graham, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqlsqi",
-      "published": "2026-09-20T06:59:28.429000+00:00",
+      "title": "M 2.4 - 29 km SE of Central, Alaska",
+      "summary": "29 km SE of Central, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqmmxq",
+      "published": "2026-09-20T07:22:53.092000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -687,6 +687,19 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 2.5 - 25 km S of Port Graham, Alaska",
+      "summary": "25 km S of Port Graham, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqlsqi",
+      "published": "2026-09-20T06:59:28.429000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 0.9 - 73 km NW of Ninilchik, Alaska",
       "summary": "73 km NW of Ninilchik, Alaska",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqlmrc",
@@ -708,83 +721,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.4 - 11 km N of Glacier View, Alaska",
-      "summary": "11 km N of Glacier View, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqlivy",
-      "published": "2026-09-20T06:48:14.239000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T07:18:02.069963+00:00",
-      "lastAttemptAt": "2026-09-20T07:18:02.069963+00:00",
+      "lastSuccessAt": "2026-09-20T07:28:02.009181+00:00",
+      "lastAttemptAt": "2026-09-20T07:28:02.009181+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T07:18:02.069963+00:00",
-      "lastAttemptAt": "2026-09-20T07:18:02.069963+00:00",
+      "lastSuccessAt": "2026-09-20T07:28:02.009181+00:00",
+      "lastAttemptAt": "2026-09-20T07:28:02.009181+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T07:18:02.069963+00:00",
-      "lastAttemptAt": "2026-09-20T07:18:02.069963+00:00",
+      "lastSuccessAt": "2026-09-20T07:28:02.009181+00:00",
+      "lastAttemptAt": "2026-09-20T07:28:02.009181+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T07:18:02.069963+00:00",
-      "lastAttemptAt": "2026-09-20T07:18:02.069963+00:00",
+      "lastSuccessAt": "2026-09-20T07:28:02.009181+00:00",
+      "lastAttemptAt": "2026-09-20T07:28:02.009181+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T07:18:02.069963+00:00",
-      "lastAttemptAt": "2026-09-20T07:18:02.069963+00:00",
+      "lastSuccessAt": "2026-09-20T07:28:02.009181+00:00",
+      "lastAttemptAt": "2026-09-20T07:28:02.009181+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T07:18:02.069963+00:00",
-      "lastAttemptAt": "2026-09-20T07:18:02.069963+00:00",
+      "lastSuccessAt": "2026-09-20T07:28:02.009181+00:00",
+      "lastAttemptAt": "2026-09-20T07:28:02.009181+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T07:18:02.069963+00:00",
-      "lastAttemptAt": "2026-09-20T07:18:02.069963+00:00",
+      "lastSuccessAt": "2026-09-20T07:28:02.009181+00:00",
+      "lastAttemptAt": "2026-09-20T07:28:02.009181+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T07:18:02.069963+00:00",
-      "lastAttemptAt": "2026-09-20T07:18:02.069963+00:00",
+      "lastSuccessAt": "2026-09-20T07:28:02.009181+00:00",
+      "lastAttemptAt": "2026-09-20T07:28:02.009181+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
