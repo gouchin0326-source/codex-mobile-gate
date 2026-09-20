@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-20T06:38:02.943982+00:00",
-  "lastSuccessAt": "2026-09-20T06:38:02.943982+00:00",
+  "updatedAt": "2026-09-20T06:48:01.826417+00:00",
+  "lastSuccessAt": "2026-09-20T06:48:01.826417+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 4,
-      "signal": "M 1.9 - 32 km SSE of Cantwell, Alaska / M 1.4 - 10 km WSW of Corona, CA / M 0.7 - 88 km NNW of Karluk, Alaska",
+      "signal": "M 2.0 - 13 km ESE of Ferry, Alaska / M 1.9 - 32 km SSE of Cantwell, Alaska / M 1.4 - 10 km WSW of Corona, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqkves",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqkyvn",
       "score": 1
     },
     {
@@ -275,10 +275,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.9 - 32 km SSE of Cantwell, Alaska",
-      "summary": "32 km SSE of Cantwell, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqkves",
-      "published": "2026-09-20T06:32:24.684000+00:00",
+      "title": "M 2.0 - 13 km ESE of Ferry, Alaska",
+      "summary": "13 km ESE of Ferry, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqkyvn",
+      "published": "2026-09-20T06:36:40.356000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -687,6 +687,19 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 1.9 - 32 km SSE of Cantwell, Alaska",
+      "summary": "32 km SSE of Cantwell, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqkves",
+      "published": "2026-09-20T06:32:24.684000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 1.4 - 10 km WSW of Corona, CA",
       "summary": "10 km WSW of Corona, CA",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335431",
@@ -708,83 +721,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.5 - 40 km ESE of Malaga, New Mexico",
-      "summary": "40 km ESE of Malaga, New Mexico",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026snkpgh",
-      "published": "2026-09-20T06:12:12.167000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T06:38:02.943982+00:00",
-      "lastAttemptAt": "2026-09-20T06:38:02.943982+00:00",
+      "lastSuccessAt": "2026-09-20T06:48:01.826417+00:00",
+      "lastAttemptAt": "2026-09-20T06:48:01.826417+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T06:38:02.943982+00:00",
-      "lastAttemptAt": "2026-09-20T06:38:02.943982+00:00",
+      "lastSuccessAt": "2026-09-20T06:48:01.826417+00:00",
+      "lastAttemptAt": "2026-09-20T06:48:01.826417+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T06:38:02.943982+00:00",
-      "lastAttemptAt": "2026-09-20T06:38:02.943982+00:00",
+      "lastSuccessAt": "2026-09-20T06:48:01.826417+00:00",
+      "lastAttemptAt": "2026-09-20T06:48:01.826417+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T06:38:02.943982+00:00",
-      "lastAttemptAt": "2026-09-20T06:38:02.943982+00:00",
+      "lastSuccessAt": "2026-09-20T06:48:01.826417+00:00",
+      "lastAttemptAt": "2026-09-20T06:48:01.826417+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T06:38:02.943982+00:00",
-      "lastAttemptAt": "2026-09-20T06:38:02.943982+00:00",
+      "lastSuccessAt": "2026-09-20T06:48:01.826417+00:00",
+      "lastAttemptAt": "2026-09-20T06:48:01.826417+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T06:38:02.943982+00:00",
-      "lastAttemptAt": "2026-09-20T06:38:02.943982+00:00",
+      "lastSuccessAt": "2026-09-20T06:48:01.826417+00:00",
+      "lastAttemptAt": "2026-09-20T06:48:01.826417+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T06:38:02.943982+00:00",
-      "lastAttemptAt": "2026-09-20T06:38:02.943982+00:00",
+      "lastSuccessAt": "2026-09-20T06:48:01.826417+00:00",
+      "lastAttemptAt": "2026-09-20T06:48:01.826417+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T06:38:02.943982+00:00",
-      "lastAttemptAt": "2026-09-20T06:38:02.943982+00:00",
+      "lastSuccessAt": "2026-09-20T06:48:01.826417+00:00",
+      "lastAttemptAt": "2026-09-20T06:48:01.826417+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
