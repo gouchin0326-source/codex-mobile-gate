@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-20T06:08:01.792365+00:00",
-  "lastSuccessAt": "2026-09-20T06:08:01.792365+00:00",
+  "updatedAt": "2026-09-20T06:18:01.839503+00:00",
+  "lastSuccessAt": "2026-09-20T06:18:01.839503+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 4,
-      "signal": "M 1.5 - 22 km NNW of Borrego Springs, CA / M 1.0 - 81 km WNW of Karluk, Alaska / M 1.4 - 77 km WNW of Karluk, Alaska",
+      "signal": "M 1.5 - 40 km ESE of Malaga, New Mexico / M 1.5 - 15 km NNE of Balmorhea, Texas / M 1.5 - 22 km NNW of Borrego Springs, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335423",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026snkpgh",
       "score": 1
     },
     {
@@ -275,10 +275,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.5 - 22 km NNW of Borrego Springs, CA",
-      "summary": "22 km NNW of Borrego Springs, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335423",
-      "published": "2026-09-20T06:03:43.050000+00:00",
+      "title": "M 1.5 - 40 km ESE of Malaga, New Mexico",
+      "summary": "40 km ESE of Malaga, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026snkpgh",
+      "published": "2026-09-20T06:12:12.167000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -687,36 +687,36 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 1.5 - 15 km NNE of Balmorhea, Texas",
+      "summary": "15 km NNE of Balmorhea, Texas",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026snkkpm",
+      "published": "2026-09-20T06:06:44.092000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.5 - 22 km NNW of Borrego Springs, CA",
+      "summary": "22 km NNW of Borrego Springs, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335423",
+      "published": "2026-09-20T06:03:43.050000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 1.0 - 81 km WNW of Karluk, Alaska",
       "summary": "81 km WNW of Karluk, Alaska",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqjvzh",
       "published": "2026-09-20T06:03:23.010000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.4 - 77 km WNW of Karluk, Alaska",
-      "summary": "77 km WNW of Karluk, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqjjrs",
-      "published": "2026-09-20T05:49:12.509000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.0 - 76 km WNW of Karluk, Alaska",
-      "summary": "76 km WNW of Karluk, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqjgxd",
-      "published": "2026-09-20T05:46:00.133000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -727,64 +727,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T06:08:01.792365+00:00",
-      "lastAttemptAt": "2026-09-20T06:08:01.792365+00:00",
+      "lastSuccessAt": "2026-09-20T06:18:01.839503+00:00",
+      "lastAttemptAt": "2026-09-20T06:18:01.839503+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T06:08:01.792365+00:00",
-      "lastAttemptAt": "2026-09-20T06:08:01.792365+00:00",
+      "lastSuccessAt": "2026-09-20T06:18:01.839503+00:00",
+      "lastAttemptAt": "2026-09-20T06:18:01.839503+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T06:08:01.792365+00:00",
-      "lastAttemptAt": "2026-09-20T06:08:01.792365+00:00",
+      "lastSuccessAt": "2026-09-20T06:18:01.839503+00:00",
+      "lastAttemptAt": "2026-09-20T06:18:01.839503+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T06:08:01.792365+00:00",
-      "lastAttemptAt": "2026-09-20T06:08:01.792365+00:00",
+      "lastSuccessAt": "2026-09-20T06:18:01.839503+00:00",
+      "lastAttemptAt": "2026-09-20T06:18:01.839503+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T06:08:01.792365+00:00",
-      "lastAttemptAt": "2026-09-20T06:08:01.792365+00:00",
+      "lastSuccessAt": "2026-09-20T06:18:01.839503+00:00",
+      "lastAttemptAt": "2026-09-20T06:18:01.839503+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T06:08:01.792365+00:00",
-      "lastAttemptAt": "2026-09-20T06:08:01.792365+00:00",
+      "lastSuccessAt": "2026-09-20T06:18:01.839503+00:00",
+      "lastAttemptAt": "2026-09-20T06:18:01.839503+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T06:08:01.792365+00:00",
-      "lastAttemptAt": "2026-09-20T06:08:01.792365+00:00",
+      "lastSuccessAt": "2026-09-20T06:18:01.839503+00:00",
+      "lastAttemptAt": "2026-09-20T06:18:01.839503+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T06:08:01.792365+00:00",
-      "lastAttemptAt": "2026-09-20T06:08:01.792365+00:00",
+      "lastSuccessAt": "2026-09-20T06:18:01.839503+00:00",
+      "lastAttemptAt": "2026-09-20T06:18:01.839503+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
