@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-20T11:48:01.259541+00:00",
-  "lastSuccessAt": "2026-09-20T11:48:01.259541+00:00",
+  "updatedAt": "2026-09-20T11:58:01.512139+00:00",
+  "lastSuccessAt": "2026-09-20T11:58:01.512139+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 4,
-      "signal": "M 1.2 - 9 km SW of Grapevine, CA / M 0.8 - 10 km NW of The Geysers, CA / M 0.8 - 22 km NNE of Indio, CA",
+      "signal": "M 0.6 - 4 km NNW of The Geysers, CA / M 1.5 - 39 km ESE of Malaga, New Mexico / M 1.2 - 9 km SW of Grapevine, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335503",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438867",
       "score": 1
     },
     {
@@ -275,10 +275,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.2 - 9 km SW of Grapevine, CA",
-      "summary": "9 km SW of Grapevine, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335503",
-      "published": "2026-09-20T11:22:04.580000+00:00",
+      "title": "M 0.6 - 4 km NNW of The Geysers, CA",
+      "summary": "4 km NNW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438867",
+      "published": "2026-09-20T11:54:00.970000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -687,36 +687,36 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 1.5 - 39 km ESE of Malaga, New Mexico",
+      "summary": "39 km ESE of Malaga, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026snvqxt",
+      "published": "2026-09-20T11:45:53.738000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.2 - 9 km SW of Grapevine, CA",
+      "summary": "9 km SW of Grapevine, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335503",
+      "published": "2026-09-20T11:22:04.580000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 0.8 - 10 km NW of The Geysers, CA",
       "summary": "10 km NW of The Geysers, CA",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438857",
       "published": "2026-09-20T11:13:58.800000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.8 - 22 km NNE of Indio, CA",
-      "summary": "22 km NNE of Indio, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335495",
-      "published": "2026-09-20T11:08:41.970000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.2 - 2 km SE of Pacifica, CA",
-      "summary": "2 km SE of Pacifica, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438852",
-      "published": "2026-09-20T11:03:47.950000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -727,64 +727,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T11:48:01.259541+00:00",
-      "lastAttemptAt": "2026-09-20T11:48:01.259541+00:00",
+      "lastSuccessAt": "2026-09-20T11:58:01.512139+00:00",
+      "lastAttemptAt": "2026-09-20T11:58:01.512139+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T11:48:01.259541+00:00",
-      "lastAttemptAt": "2026-09-20T11:48:01.259541+00:00",
+      "lastSuccessAt": "2026-09-20T11:58:01.512139+00:00",
+      "lastAttemptAt": "2026-09-20T11:58:01.512139+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T11:48:01.259541+00:00",
-      "lastAttemptAt": "2026-09-20T11:48:01.259541+00:00",
+      "lastSuccessAt": "2026-09-20T11:58:01.512139+00:00",
+      "lastAttemptAt": "2026-09-20T11:58:01.512139+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T11:48:01.259541+00:00",
-      "lastAttemptAt": "2026-09-20T11:48:01.259541+00:00",
+      "lastSuccessAt": "2026-09-20T11:58:01.512139+00:00",
+      "lastAttemptAt": "2026-09-20T11:58:01.512139+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T11:48:01.259541+00:00",
-      "lastAttemptAt": "2026-09-20T11:48:01.259541+00:00",
+      "lastSuccessAt": "2026-09-20T11:58:01.512139+00:00",
+      "lastAttemptAt": "2026-09-20T11:58:01.512139+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T11:48:01.259541+00:00",
-      "lastAttemptAt": "2026-09-20T11:48:01.259541+00:00",
+      "lastSuccessAt": "2026-09-20T11:58:01.512139+00:00",
+      "lastAttemptAt": "2026-09-20T11:58:01.512139+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T11:48:01.259541+00:00",
-      "lastAttemptAt": "2026-09-20T11:48:01.259541+00:00",
+      "lastSuccessAt": "2026-09-20T11:58:01.512139+00:00",
+      "lastAttemptAt": "2026-09-20T11:58:01.512139+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T11:48:01.259541+00:00",
-      "lastAttemptAt": "2026-09-20T11:48:01.259541+00:00",
+      "lastSuccessAt": "2026-09-20T11:58:01.512139+00:00",
+      "lastAttemptAt": "2026-09-20T11:58:01.512139+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
