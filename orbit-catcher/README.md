@@ -13,6 +13,7 @@ CODEXGATE向けの単一HTMLゲームです。巨大マップを移動し、無�
 - Touch/PC pointer: Use the stick, boost, and precision buttons below the game area.
 - Touch/PC pointer: The two right-side buttons use toolbox items.
 - Touch/PC pointer: The pink button activates the ultimate when its gauge reaches 100%.
+- Touch: Quickly flick the movement stick for a short speed burst. This does not grant invulnerability.
 - Pause/resume: Use the side control button, or press P while playing.
 
 ## Gameplay
@@ -21,9 +22,10 @@ CODEXGATE向けの単一HTMLゲームです。巨大マップを移動し、無�
 - Gate boss: Each gate starts locked by a boss-class enemy guarding the entrance. The gate opens only after the boss is defeated.
 - Enemies: Walkers, runners, brutes, spitters, armored zombies, bloaters, summoners, and stalkers.
 - Drops: Some enemies drop ammo, repair, or weapon pickups. Stronger or special enemies have better odds for useful drops.
-- Rescue: Elite enemies surround and attack captive cats. Defeat every guard, then touch the cat to recruit it.
+- Rescue: Tough elite guards surround captive cats and use telegraphed charges. Defeat every guard, then touch the cat to recruit it.
 - Allies: Rookies use twin shots, medics heal, scouts fire homing shots, and guards use heavy piercing shots.
-- Ultimate: Kills charge the gauge. At 100%, `百烈肉球・猫嵐` clears hostile shots and damages all enemies with a cat cut-in.
+- Difficulty: Stage 1 teaches the basics; proximity acceleration begins later, and telegraphed enemy charges expand from stage 3 onward.
+- Ultimate: Kills slowly charge the gauge. At 100%, `肉球乱舞・猫嵐` clears hostile shots and damages all enemies with a lightweight paw storm.
 - Performance limits: 6 allies, 48 ally shots, 120 enemies, 340 total shots, and 160 particles.
 - Weapon: Starts as a single-shot gun that fires automatically.
 - Powerups: Weapon pickups can temporarily switch to burst, spread, or pierce shots.
