@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-20T09:38:00.975466+00:00",
-  "lastSuccessAt": "2026-09-20T09:38:00.975466+00:00",
+  "updatedAt": "2026-09-20T09:48:01.021058+00:00",
+  "lastSuccessAt": "2026-09-20T09:48:01.021058+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 4,
-      "signal": "M 6.4 - 49 km NNE of Kainantu, Papua New Guinea / M 2.5 - 74 km WNW of Ninilchik, Alaska / M 0.6 - 8 km NW of The Geysers, CA",
+      "signal": "M 1.6 - 27 km WSW of Coyanosa, Texas / M 6.4 - 49 km NNE of Kainantu, Papua New Guinea / M 2.5 - 74 km WNW of Ninilchik, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tiqc",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026snrqui",
       "score": 1
     },
     {
@@ -275,10 +275,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 6.4 - 49 km NNE of Kainantu, Papua New Guinea",
-      "summary": "49 km NNE of Kainantu, Papua New Guinea",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tiqc",
-      "published": "2026-09-20T09:17:35.624000+00:00",
+      "title": "M 1.6 - 27 km WSW of Coyanosa, Texas",
+      "summary": "27 km WSW of Coyanosa, Texas",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026snrqui",
+      "published": "2026-09-20T09:45:06.297000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -687,6 +687,19 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 6.4 - 49 km NNE of Kainantu, Papua New Guinea",
+      "summary": "49 km NNE of Kainantu, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tiqc",
+      "published": "2026-09-20T09:17:35.624000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 2.5 - 74 km WNW of Ninilchik, Alaska",
       "summary": "74 km WNW of Ninilchik, Alaska",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqqbej",
@@ -708,83 +721,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.9 - 2 km ENE of Colton, CA",
-      "summary": "2 km ENE of Colton, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335487",
-      "published": "2026-09-20T08:57:39.180000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T09:38:00.975466+00:00",
-      "lastAttemptAt": "2026-09-20T09:38:00.975466+00:00",
+      "lastSuccessAt": "2026-09-20T09:48:01.021058+00:00",
+      "lastAttemptAt": "2026-09-20T09:48:01.021058+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T09:38:00.975466+00:00",
-      "lastAttemptAt": "2026-09-20T09:38:00.975466+00:00",
+      "lastSuccessAt": "2026-09-20T09:48:01.021058+00:00",
+      "lastAttemptAt": "2026-09-20T09:48:01.021058+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T09:38:00.975466+00:00",
-      "lastAttemptAt": "2026-09-20T09:38:00.975466+00:00",
+      "lastSuccessAt": "2026-09-20T09:48:01.021058+00:00",
+      "lastAttemptAt": "2026-09-20T09:48:01.021058+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T09:38:00.975466+00:00",
-      "lastAttemptAt": "2026-09-20T09:38:00.975466+00:00",
+      "lastSuccessAt": "2026-09-20T09:48:01.021058+00:00",
+      "lastAttemptAt": "2026-09-20T09:48:01.021058+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T09:38:00.975466+00:00",
-      "lastAttemptAt": "2026-09-20T09:38:00.975466+00:00",
+      "lastSuccessAt": "2026-09-20T09:48:01.021058+00:00",
+      "lastAttemptAt": "2026-09-20T09:48:01.021058+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T09:38:00.975466+00:00",
-      "lastAttemptAt": "2026-09-20T09:38:00.975466+00:00",
+      "lastSuccessAt": "2026-09-20T09:48:01.021058+00:00",
+      "lastAttemptAt": "2026-09-20T09:48:01.021058+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T09:38:00.975466+00:00",
-      "lastAttemptAt": "2026-09-20T09:38:00.975466+00:00",
+      "lastSuccessAt": "2026-09-20T09:48:01.021058+00:00",
+      "lastAttemptAt": "2026-09-20T09:48:01.021058+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T09:38:00.975466+00:00",
-      "lastAttemptAt": "2026-09-20T09:38:00.975466+00:00",
+      "lastSuccessAt": "2026-09-20T09:48:01.021058+00:00",
+      "lastAttemptAt": "2026-09-20T09:48:01.021058+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
