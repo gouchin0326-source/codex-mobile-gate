@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-20T23:18:01.561515+00:00",
-  "lastSuccessAt": "2026-09-20T23:18:01.561515+00:00",
+  "updatedAt": "2026-09-20T23:28:01.911760+00:00",
+  "lastSuccessAt": "2026-09-20T23:28:01.911760+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 1.2 - 5 km NW of Boron, CA / M 0.7 - 8 km NW of The Geysers, CA / M 1.1 - 6 km NNW of The Geysers, CA",
+      "signal": "M 0.8 - 6 km NW of The Geysers, CA / M 1.5 - 60 km NW of Rampart, Alaska / M 1.2 - 5 km NW of Boron, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335751",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75439177",
       "score": 1
     },
     {
@@ -257,10 +257,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.2 - 5 km NW of Boron, CA",
-      "summary": "5 km NW of Boron, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335751",
-      "published": "2026-09-20T23:12:49.670000+00:00",
+      "title": "M 0.8 - 6 km NW of The Geysers, CA",
+      "summary": "6 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75439177",
+      "published": "2026-09-20T23:21:57.400000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -668,6 +668,32 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 1.5 - 60 km NW of Rampart, Alaska",
+      "summary": "60 km NW of Rampart, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026srsknc",
+      "published": "2026-09-20T23:19:42.018000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.2 - 5 km NW of Boron, CA",
+      "summary": "5 km NW of Boron, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335751",
+      "published": "2026-09-20T23:12:49.670000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 0.7 - 8 km NW of The Geysers, CA",
       "summary": "8 km NW of The Geysers, CA",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75439167",
@@ -689,96 +715,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.5 - 13 km N of Borrego Springs, CA",
-      "summary": "13 km N of Borrego Springs, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335735",
-      "published": "2026-09-20T23:03:15.690000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.1 - 5 km SW of Morton, Washington",
-      "summary": "5 km SW of Morton, Washington",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714106481",
-      "published": "2026-09-20T22:56:21.750000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T23:18:01.561515+00:00",
-      "lastAttemptAt": "2026-09-20T23:18:01.561515+00:00",
+      "lastSuccessAt": "2026-09-20T23:28:01.911760+00:00",
+      "lastAttemptAt": "2026-09-20T23:28:01.911760+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T23:18:01.561515+00:00",
-      "lastAttemptAt": "2026-09-20T23:18:01.561515+00:00",
+      "lastSuccessAt": "2026-09-20T23:28:01.911760+00:00",
+      "lastAttemptAt": "2026-09-20T23:28:01.911760+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T23:18:01.561515+00:00",
-      "lastAttemptAt": "2026-09-20T23:18:01.561515+00:00",
+      "lastSuccessAt": "2026-09-20T23:28:01.911760+00:00",
+      "lastAttemptAt": "2026-09-20T23:28:01.911760+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T23:18:01.561515+00:00",
-      "lastAttemptAt": "2026-09-20T23:18:01.561515+00:00",
+      "lastSuccessAt": "2026-09-20T23:28:01.911760+00:00",
+      "lastAttemptAt": "2026-09-20T23:28:01.911760+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T23:18:01.561515+00:00",
-      "lastAttemptAt": "2026-09-20T23:18:01.561515+00:00",
+      "lastSuccessAt": "2026-09-20T23:28:01.911760+00:00",
+      "lastAttemptAt": "2026-09-20T23:28:01.911760+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T23:18:01.561515+00:00",
-      "lastAttemptAt": "2026-09-20T23:18:01.561515+00:00",
+      "lastSuccessAt": "2026-09-20T23:28:01.911760+00:00",
+      "lastAttemptAt": "2026-09-20T23:28:01.911760+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T23:18:01.561515+00:00",
-      "lastAttemptAt": "2026-09-20T23:18:01.561515+00:00",
+      "lastSuccessAt": "2026-09-20T23:28:01.911760+00:00",
+      "lastAttemptAt": "2026-09-20T23:28:01.911760+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T23:18:01.561515+00:00",
-      "lastAttemptAt": "2026-09-20T23:18:01.561515+00:00",
+      "lastSuccessAt": "2026-09-20T23:28:01.911760+00:00",
+      "lastAttemptAt": "2026-09-20T23:28:01.911760+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
