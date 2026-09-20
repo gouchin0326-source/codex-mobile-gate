@@ -1,0 +1,14 @@
+{
+  "lane": "app",
+  "ts": "2026-09-20T00:00:00+09:00",
+  "artifact": "index.html",
+  "prompt": "軽快さと爽快感を維持し、強敵から猫仲間を救出するイベント、色別の仲間攻撃、撃破で溜まる必殺技とカットインを追加する。スマホ負荷上限を検証する。",
+  "source": "codex",
+  "backend": "codex",
+  "model": "gpt-5.6-sol",
+  "gates": {
+    "mobile_390x844": { "pass": true, "note": "固定1画面、操作欄下余白28px" },
+    "rescue_and_ultimate": { "pass": true, "note": "救出ロック解除、4種仲間攻撃、必殺発動をCDP検証" },
+    "load_caps": { "pass": true, "note": "敵120・総弾340・仲間弾48・粒子160・仲間6を上限化" }
+  }
+}
