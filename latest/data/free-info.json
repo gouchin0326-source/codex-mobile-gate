@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-20T08:58:00.863365+00:00",
-  "lastSuccessAt": "2026-09-20T08:58:00.863365+00:00",
+  "updatedAt": "2026-09-20T09:08:01.010510+00:00",
+  "lastSuccessAt": "2026-09-20T09:08:01.010510+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 4,
-      "signal": "M 1.0 - 11 km N of Coso Junction, CA / M 1.7 - 20 km E of McFarland, CA / M 0.9 - 9 km S of Campo, CA",
+      "signal": "M 1.9 - 2 km ENE of Colton, CA / M 1.0 - 11 km N of Coso Junction, CA / M 5.3 - 64 km W of Cafayate, Argentina",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335479",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335487",
       "score": 1
     },
     {
@@ -275,10 +275,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.0 - 11 km N of Coso Junction, CA",
-      "summary": "11 km N of Coso Junction, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335479",
-      "published": "2026-09-20T08:50:17.890000+00:00",
+      "title": "M 1.9 - 2 km ENE of Colton, CA",
+      "summary": "2 km ENE of Colton, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335487",
+      "published": "2026-09-20T08:57:39.180000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -687,36 +687,36 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 1.0 - 11 km N of Coso Junction, CA",
+      "summary": "11 km N of Coso Junction, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335479",
+      "published": "2026-09-20T08:50:17.890000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 5.3 - 64 km W of Cafayate, Argentina",
+      "summary": "64 km W of Cafayate, Argentina",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tiq2",
+      "published": "2026-09-20T08:47:54.457000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 1.7 - 20 km E of McFarland, CA",
       "summary": "20 km E of McFarland, CA",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335471",
       "published": "2026-09-20T08:46:38.530000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.9 - 9 km S of Campo, CA",
-      "summary": "9 km S of Campo, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335463",
-      "published": "2026-09-20T08:25:06.770000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.8 - 9 km WNW of Cobb, CA",
-      "summary": "9 km WNW of Cobb, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438817",
-      "published": "2026-09-20T08:21:35.980000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -727,64 +727,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T08:58:00.863365+00:00",
-      "lastAttemptAt": "2026-09-20T08:58:00.863365+00:00",
+      "lastSuccessAt": "2026-09-20T09:08:01.010510+00:00",
+      "lastAttemptAt": "2026-09-20T09:08:01.010510+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T08:58:00.863365+00:00",
-      "lastAttemptAt": "2026-09-20T08:58:00.863365+00:00",
+      "lastSuccessAt": "2026-09-20T09:08:01.010510+00:00",
+      "lastAttemptAt": "2026-09-20T09:08:01.010510+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T08:58:00.863365+00:00",
-      "lastAttemptAt": "2026-09-20T08:58:00.863365+00:00",
+      "lastSuccessAt": "2026-09-20T09:08:01.010510+00:00",
+      "lastAttemptAt": "2026-09-20T09:08:01.010510+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T08:58:00.863365+00:00",
-      "lastAttemptAt": "2026-09-20T08:58:00.863365+00:00",
+      "lastSuccessAt": "2026-09-20T09:08:01.010510+00:00",
+      "lastAttemptAt": "2026-09-20T09:08:01.010510+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T08:58:00.863365+00:00",
-      "lastAttemptAt": "2026-09-20T08:58:00.863365+00:00",
+      "lastSuccessAt": "2026-09-20T09:08:01.010510+00:00",
+      "lastAttemptAt": "2026-09-20T09:08:01.010510+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T08:58:00.863365+00:00",
-      "lastAttemptAt": "2026-09-20T08:58:00.863365+00:00",
+      "lastSuccessAt": "2026-09-20T09:08:01.010510+00:00",
+      "lastAttemptAt": "2026-09-20T09:08:01.010510+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T08:58:00.863365+00:00",
-      "lastAttemptAt": "2026-09-20T08:58:00.863365+00:00",
+      "lastSuccessAt": "2026-09-20T09:08:01.010510+00:00",
+      "lastAttemptAt": "2026-09-20T09:08:01.010510+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T08:58:00.863365+00:00",
-      "lastAttemptAt": "2026-09-20T08:58:00.863365+00:00",
+      "lastSuccessAt": "2026-09-20T09:08:01.010510+00:00",
+      "lastAttemptAt": "2026-09-20T09:08:01.010510+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
