@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-20T07:38:01.904266+00:00",
-  "lastSuccessAt": "2026-09-20T07:38:01.904266+00:00",
+  "updatedAt": "2026-09-20T07:48:00.938895+00:00",
+  "lastSuccessAt": "2026-09-20T07:48:00.938895+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 4,
-      "signal": "M 2.0 - 8 km S of Pāhala, Hawaii / M 2.4 - 29 km SE of Central, Alaska / M 2.5 - 25 km S of Port Graham, Alaska",
+      "signal": "M 1.4 - 75 km WNW of Karluk, Alaska / M 1.2 - 8 km NW of The Geysers, CA / M 1.1 - 9 km SW of Niland, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75040647",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqnctp",
       "score": 1
     },
     {
@@ -275,10 +275,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.0 - 8 km S of Pāhala, Hawaii",
-      "summary": "8 km S of Pāhala, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75040647",
-      "published": "2026-09-20T07:31:46.070000+00:00",
+      "title": "M 1.4 - 75 km WNW of Karluk, Alaska",
+      "summary": "75 km WNW of Karluk, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqnctp",
+      "published": "2026-09-20T07:41:09.842000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -687,10 +687,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.4 - 29 km SE of Central, Alaska",
-      "summary": "29 km SE of Central, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqmmxq",
-      "published": "2026-09-20T07:22:53.092000+00:00",
+      "title": "M 1.2 - 8 km NW of The Geysers, CA",
+      "summary": "8 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438807",
+      "published": "2026-09-20T07:38:09.720000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -700,10 +700,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.5 - 25 km S of Port Graham, Alaska",
-      "summary": "25 km S of Port Graham, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqlsqi",
-      "published": "2026-09-20T06:59:28.429000+00:00",
+      "title": "M 1.1 - 9 km SW of Niland, CA",
+      "summary": "9 km SW of Niland, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335447",
+      "published": "2026-09-20T07:38:04.070000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -713,10 +713,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.9 - 73 km NW of Ninilchik, Alaska",
-      "summary": "73 km NW of Ninilchik, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqlmrc",
-      "published": "2026-09-20T06:52:37.330000+00:00",
+      "title": "M 2.0 - 8 km S of Pāhala, Hawaii",
+      "summary": "8 km S of Pāhala, Hawaii",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75040647",
+      "published": "2026-09-20T07:31:46.070000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -727,64 +727,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T07:38:01.904266+00:00",
-      "lastAttemptAt": "2026-09-20T07:38:01.904266+00:00",
+      "lastSuccessAt": "2026-09-20T07:48:00.938895+00:00",
+      "lastAttemptAt": "2026-09-20T07:48:00.938895+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T07:38:01.904266+00:00",
-      "lastAttemptAt": "2026-09-20T07:38:01.904266+00:00",
+      "lastSuccessAt": "2026-09-20T07:48:00.938895+00:00",
+      "lastAttemptAt": "2026-09-20T07:48:00.938895+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T07:38:01.904266+00:00",
-      "lastAttemptAt": "2026-09-20T07:38:01.904266+00:00",
+      "lastSuccessAt": "2026-09-20T07:48:00.938895+00:00",
+      "lastAttemptAt": "2026-09-20T07:48:00.938895+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T07:38:01.904266+00:00",
-      "lastAttemptAt": "2026-09-20T07:38:01.904266+00:00",
+      "lastSuccessAt": "2026-09-20T07:48:00.938895+00:00",
+      "lastAttemptAt": "2026-09-20T07:48:00.938895+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T07:38:01.904266+00:00",
-      "lastAttemptAt": "2026-09-20T07:38:01.904266+00:00",
+      "lastSuccessAt": "2026-09-20T07:48:00.938895+00:00",
+      "lastAttemptAt": "2026-09-20T07:48:00.938895+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T07:38:01.904266+00:00",
-      "lastAttemptAt": "2026-09-20T07:38:01.904266+00:00",
+      "lastSuccessAt": "2026-09-20T07:48:00.938895+00:00",
+      "lastAttemptAt": "2026-09-20T07:48:00.938895+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T07:38:01.904266+00:00",
-      "lastAttemptAt": "2026-09-20T07:38:01.904266+00:00",
+      "lastSuccessAt": "2026-09-20T07:48:00.938895+00:00",
+      "lastAttemptAt": "2026-09-20T07:48:00.938895+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T07:38:01.904266+00:00",
-      "lastAttemptAt": "2026-09-20T07:38:01.904266+00:00",
+      "lastSuccessAt": "2026-09-20T07:48:00.938895+00:00",
+      "lastAttemptAt": "2026-09-20T07:48:00.938895+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
