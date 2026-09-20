@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-20T02:48:01.610736+00:00",
-  "lastSuccessAt": "2026-09-20T02:48:01.610736+00:00",
+  "updatedAt": "2026-09-20T02:58:01.595251+00:00",
+  "lastSuccessAt": "2026-09-20T02:58:01.595251+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -151,9 +151,9 @@
     {
       "genre": "災害",
       "count": 3,
-      "signal": "M 0.7 - 8 km NW of The Geysers, CA / M 2.0 - 13 km SE of Pāhala, Hawaii / M 2.3 - 5 km SSW of Volcano, Hawaii",
+      "signal": "M 1.2 - 8 km W of Cobb, CA / M 1.1 - 8 km NW of The Geysers, CA / M 0.7 - 8 km NW of The Geysers, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438742",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438762",
       "score": 1
     }
   ],
@@ -275,10 +275,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.7 - 8 km NW of The Geysers, CA",
-      "summary": "8 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438742",
-      "published": "2026-09-20T02:33:08.390000+00:00",
+      "title": "M 1.2 - 8 km W of Cobb, CA",
+      "summary": "8 km W of Cobb, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438762",
+      "published": "2026-09-20T02:55:33.940000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -705,10 +705,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.0 - 13 km SE of Pāhala, Hawaii",
-      "summary": "13 km SE of Pāhala, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75040502",
-      "published": "2026-09-20T02:28:43.140000+00:00",
+      "title": "M 1.1 - 8 km NW of The Geysers, CA",
+      "summary": "8 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438752",
+      "published": "2026-09-20T02:52:04.610000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -718,10 +718,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.3 - 5 km SSW of Volcano, Hawaii",
-      "summary": "5 km SSW of Volcano, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75040492",
-      "published": "2026-09-20T02:17:27.420000+00:00",
+      "title": "M 0.7 - 8 km NW of The Geysers, CA",
+      "summary": "8 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438742",
+      "published": "2026-09-20T02:33:08.390000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -732,64 +732,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T02:48:01.610736+00:00",
-      "lastAttemptAt": "2026-09-20T02:48:01.610736+00:00",
+      "lastSuccessAt": "2026-09-20T02:58:01.595251+00:00",
+      "lastAttemptAt": "2026-09-20T02:58:01.595251+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T02:48:01.610736+00:00",
-      "lastAttemptAt": "2026-09-20T02:48:01.610736+00:00",
+      "lastSuccessAt": "2026-09-20T02:58:01.595251+00:00",
+      "lastAttemptAt": "2026-09-20T02:58:01.595251+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T02:48:01.610736+00:00",
-      "lastAttemptAt": "2026-09-20T02:48:01.610736+00:00",
+      "lastSuccessAt": "2026-09-20T02:58:01.595251+00:00",
+      "lastAttemptAt": "2026-09-20T02:58:01.595251+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T02:48:01.610736+00:00",
-      "lastAttemptAt": "2026-09-20T02:48:01.610736+00:00",
+      "lastSuccessAt": "2026-09-20T02:58:01.595251+00:00",
+      "lastAttemptAt": "2026-09-20T02:58:01.595251+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T02:48:01.610736+00:00",
-      "lastAttemptAt": "2026-09-20T02:48:01.610736+00:00",
+      "lastSuccessAt": "2026-09-20T02:58:01.595251+00:00",
+      "lastAttemptAt": "2026-09-20T02:58:01.595251+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T02:48:01.610736+00:00",
-      "lastAttemptAt": "2026-09-20T02:48:01.610736+00:00",
+      "lastSuccessAt": "2026-09-20T02:58:01.595251+00:00",
+      "lastAttemptAt": "2026-09-20T02:58:01.595251+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T02:48:01.610736+00:00",
-      "lastAttemptAt": "2026-09-20T02:48:01.610736+00:00",
+      "lastSuccessAt": "2026-09-20T02:58:01.595251+00:00",
+      "lastAttemptAt": "2026-09-20T02:58:01.595251+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T02:48:01.610736+00:00",
-      "lastAttemptAt": "2026-09-20T02:48:01.610736+00:00",
+      "lastSuccessAt": "2026-09-20T02:58:01.595251+00:00",
+      "lastAttemptAt": "2026-09-20T02:58:01.595251+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
