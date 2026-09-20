@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-20T04:48:01.859228+00:00",
-  "lastSuccessAt": "2026-09-20T04:48:01.859228+00:00",
+  "updatedAt": "2026-09-20T04:58:01.866116+00:00",
+  "lastSuccessAt": "2026-09-20T04:58:01.866116+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -151,9 +151,9 @@
     {
       "genre": "災害",
       "count": 3,
-      "signal": "M 0.8 - 16 km W of Searles Valley, CA / M 2.3 - 22 km E of Beluga, Alaska / M 1.0 - 38 km E of Minto, Alaska",
+      "signal": "M 1.5 - 34 km SW of Independence, CA / M 2.3 - 10 km SW of Toms Place, CA / M 0.8 - 16 km W of Searles Valley, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335367",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335375",
       "score": 1
     }
   ],
@@ -275,10 +275,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.8 - 16 km W of Searles Valley, CA",
-      "summary": "16 km W of Searles Valley, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335367",
-      "published": "2026-09-20T04:42:29.200000+00:00",
+      "title": "M 1.5 - 34 km SW of Independence, CA",
+      "summary": "34 km SW of Independence, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335375",
+      "published": "2026-09-20T04:48:22.060000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -705,10 +705,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.3 - 22 km E of Beluga, Alaska",
-      "summary": "22 km E of Beluga, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqgyfq",
-      "published": "2026-09-20T04:36:03.486000+00:00",
+      "title": "M 2.3 - 10 km SW of Toms Place, CA",
+      "summary": "10 km SW of Toms Place, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75438772",
+      "published": "2026-09-20T04:48:05.160000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -718,10 +718,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.0 - 38 km E of Minto, Alaska",
-      "summary": "38 km E of Minto, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sqgrtn",
-      "published": "2026-09-20T04:28:33.392000+00:00",
+      "title": "M 0.8 - 16 km W of Searles Valley, CA",
+      "summary": "16 km W of Searles Valley, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335367",
+      "published": "2026-09-20T04:42:29.200000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -732,64 +732,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T04:48:01.859228+00:00",
-      "lastAttemptAt": "2026-09-20T04:48:01.859228+00:00",
+      "lastSuccessAt": "2026-09-20T04:58:01.866116+00:00",
+      "lastAttemptAt": "2026-09-20T04:58:01.866116+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T04:48:01.859228+00:00",
-      "lastAttemptAt": "2026-09-20T04:48:01.859228+00:00",
+      "lastSuccessAt": "2026-09-20T04:58:01.866116+00:00",
+      "lastAttemptAt": "2026-09-20T04:58:01.866116+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T04:48:01.859228+00:00",
-      "lastAttemptAt": "2026-09-20T04:48:01.859228+00:00",
+      "lastSuccessAt": "2026-09-20T04:58:01.866116+00:00",
+      "lastAttemptAt": "2026-09-20T04:58:01.866116+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T04:48:01.859228+00:00",
-      "lastAttemptAt": "2026-09-20T04:48:01.859228+00:00",
+      "lastSuccessAt": "2026-09-20T04:58:01.866116+00:00",
+      "lastAttemptAt": "2026-09-20T04:58:01.866116+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T04:48:01.859228+00:00",
-      "lastAttemptAt": "2026-09-20T04:48:01.859228+00:00",
+      "lastSuccessAt": "2026-09-20T04:58:01.866116+00:00",
+      "lastAttemptAt": "2026-09-20T04:58:01.866116+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T04:48:01.859228+00:00",
-      "lastAttemptAt": "2026-09-20T04:48:01.859228+00:00",
+      "lastSuccessAt": "2026-09-20T04:58:01.866116+00:00",
+      "lastAttemptAt": "2026-09-20T04:58:01.866116+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T04:48:01.859228+00:00",
-      "lastAttemptAt": "2026-09-20T04:48:01.859228+00:00",
+      "lastSuccessAt": "2026-09-20T04:58:01.866116+00:00",
+      "lastAttemptAt": "2026-09-20T04:58:01.866116+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-20T04:48:01.859228+00:00",
-      "lastAttemptAt": "2026-09-20T04:48:01.859228+00:00",
+      "lastSuccessAt": "2026-09-20T04:58:01.866116+00:00",
+      "lastAttemptAt": "2026-09-20T04:58:01.866116+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
