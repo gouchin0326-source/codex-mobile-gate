@@ -2,6 +2,8 @@
 
 CODEXGATE向けの単一HTMLゲームです。巨大マップを移動し、無尽蔵に出るゾンビを撃ちながらゲートへ到達します。ゲートを突破するたびに周回が進み、敵の数と強さが上がります。
 
+舞台は猫が暮らす空き地・路地・河川敷・公園です。土管、木箱、柵、タイヤ、ゴミ箱が進路を変える障害物になります。
+
 ## Controls
 
 - PC: Move with arrow keys or WASD.
@@ -10,6 +12,7 @@ CODEXGATE向けの単一HTMLゲームです。巨大マップを移動し、無�
 - PC: Hold Shift to boost, and Ctrl for precision movement.
 - Touch/PC pointer: Use the stick, boost, and precision buttons below the game area.
 - Touch/PC pointer: The two right-side buttons use toolbox items.
+- Touch/PC pointer: The pink button activates the ultimate when its gauge reaches 100%.
 - Pause/resume: Use the side control button, or press P while playing.
 
 ## Gameplay
@@ -18,7 +21,10 @@ CODEXGATE向けの単一HTMLゲームです。巨大マップを移動し、無�
 - Gate boss: Each gate starts locked by a boss-class enemy guarding the entrance. The gate opens only after the boss is defeated.
 - Enemies: Walkers, runners, brutes, spitters, armored zombies, bloaters, summoners, and stalkers.
 - Drops: Some enemies drop ammo, repair, or weapon pickups. Stronger or special enemies have better odds for useful drops.
-- Allies: Weak survivors can appear randomly on the map. Touch them to recruit them. Rookies, medics, scouts, and guards fight beside you, but they have low durability and can be defeated quickly.
+- Rescue: Elite enemies surround and attack captive cats. Defeat every guard, then touch the cat to recruit it.
+- Allies: Rookies use twin shots, medics heal, scouts fire homing shots, and guards use heavy piercing shots.
+- Ultimate: Kills charge the gauge. At 100%, `百烈肉球・猫嵐` clears hostile shots and damages all enemies with a cat cut-in.
+- Performance limits: 6 allies, 48 ally shots, 120 enemies, 340 total shots, and 160 particles.
 - Weapon: Starts as a single-shot gun that fires automatically.
 - Powerups: Weapon pickups can temporarily switch to burst, spread, or pierce shots.
 - Items: Ammo, repairs, and weapon pickups are used automatically.
