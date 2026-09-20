@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-20T14:08:24.454489+00:00",
-  "sourceUpdatedAt": "2026-09-20T14:08:01.543795+00:00",
+  "updatedAt": "2026-09-20T21:27:48.075223+00:00",
+  "sourceUpdatedAt": "2026-09-20T21:27:27.459141+00:00",
   "status": "fresh",
   "mode": "today-rule-based",
   "codexTokenUse": "0 when run by GitHub Actions",
-  "count": 2,
+  "count": 1,
   "message": "最大5件をルールで選択",
   "limits": {
     "maxItems": 5,
@@ -12,28 +12,15 @@
   },
   "items": [
     {
-      "id": "lobsters:4",
+      "id": "lobsters:6",
       "genre": "技術",
-      "title": "we have a year to fix security everywhere",
+      "title": "ChatGPT now knows what you do on other websites via ad collector",
       "reason": "技術の新着を確認",
-      "publishedAt": "2026-09-19T19:27:46+00:00",
-      "observedAt": "2026-09-20T14:08:01.543795+00:00",
+      "publishedAt": "2026-09-20T17:43:10+00:00",
+      "observedAt": "2026-09-20T21:27:27.459141+00:00",
       "source": "技術RSS",
-      "url": "https://jyn.dev/a-year-to-fix-security/",
-      "score": 2,
-      "stale": false,
-      "processing": "rule-based"
-    },
-    {
-      "id": "lobsters:19",
-      "genre": "技術",
-      "title": "I Built Non-Autoregressive Decision Models a Year Ago. Then a Frontier Lab Called It a \"Breakthrough\"",
-      "reason": "技術の新着を確認",
-      "publishedAt": "2026-09-19T13:41:57+00:00",
-      "observedAt": "2026-09-20T14:08:01.543795+00:00",
-      "source": "技術RSS",
-      "url": "https://dev.to/nandakishor_m_6cc0adfde9f/i-built-non-autoregressive-decision-models-a-year-ago-then-a-frontier-lab-called-it-a-18me",
-      "score": 2,
+      "url": "https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/",
+      "score": 1,
       "stale": false,
       "processing": "rule-based"
     }
