@@ -1,11 +1,11 @@
 # CODEXGATE News Brief
 
-- 更新: 2026-09-20T09:08:01.010510+00:00
+- 更新: 2026-09-20T09:18:00.958673+00:00
 - 取得: GitHub Actions/Python
 - Codex: 0%想定（自動実行時）
 - 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。
 
 - [開発] CG開発・GitHub運用へ反映候補 / GitHub Copilot weekly releases — September 14 / Upcoming deprecation o
 - [AI] AI/Codex運用の変化を確認 / Create your best tracks yet with Lyria 3.5 in Gemini. / Our framework 
-- [災害] 更新あり。必要時だけ確認 / M 1.9 - 2 km ENE of Colton, CA / M 1.0 - 11 km N of Coso Junction, CA 
+- [災害] 更新あり。必要時だけ確認 / M 2.5 - 74 km WNW of Ninilchik, Alaska / M 0.6 - 8 km NW of The Geyser
 - [技術] 更新あり。必要時だけ確認 / we have a year to fix security everywhere / I Built Non-Autoregressive
