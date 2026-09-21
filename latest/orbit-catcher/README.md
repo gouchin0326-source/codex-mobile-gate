@@ -52,6 +52,7 @@ CODEXGATE向けの単一HTML猫アクションです。自宅から縄張りマ�
 - Tabby reactions: A fixed-priority controller shows only one of hit crying, critical trembling, healing lick, pickup surprise, dodge crouch, combo swagger, reload fatigue, or rescue sparkle at once.
 - Cat styles: Tap the home-screen cat-style badge to cycle persistent tabby, calico, black, and white hero coats; gameplay stats stay identical.
 - Cat cast base: The four coats are now stable named characters—モカ、ミケ、クロ、シロ—with a personality and lightweight signature accessory reusable across future cat apps.
+- Comic gait: The reusable cat sprite now shows away-facing head markings, toward-facing expressions, alternating paws, body bob/sway, and a two-beat tail response across all eight movement directions.
 - Audio: Browser-generated sound effects and a small looping music pattern can be toggled with the sound button.
 
 ## Missions
