@@ -2,7 +2,7 @@
   "lane": "app",
   "ts": "2026-09-21T16:10:00+09:00",
   "artifact": "index.html",
-  "prompt": "外部AI優先の節約開発で、共通猫キャラクターへ軽量な8方向コミカル歩行を追加する。",
+  "prompt": "外部AI優先の節約開発で、モカの猫部屋と全画面共通の軽量コミカル移動を追加する。",
   "source": "codex",
   "backend": "codex",
   "model": "gpt-5.6-sol",
@@ -26,6 +26,8 @@
     "tabby_reactions": { "pass": true, "note": "8反応を固定優先順位・単一タイマー・追加画像なしで実装" },
     "cat_styles": { "pass": true, "note": "茶トラ・三毛・黒猫・白猫を自宅タップ切替、主人公全画面反映・保存" },
     "cat_cast_base": { "pass": true, "note": "モカ・ミケ・クロ・シロへ固定ID・性格・軽量アクセサリーを付与" },
-    "comic_8way_gait": { "pass": true, "note": "上下向き描き分け・交互足・上下動・横揺れ・尻尾2拍を追加画像なしで実装" }
+    "comic_8way_gait": { "pass": true, "note": "上下向き描き分け・交互足・上下動・横揺れ・尻尾2拍を追加画像なしで実装" },
+    "cat_room": { "pass": true, "note": "窓・猫タワー・ベッド・爪とぎ・器・毛糸・玄関をCanvas軽量描画" },
+    "overworld_cat_motion": { "pass": true, "note": "大きい主人公にも後ろ姿・交互足・上下動・横揺れ・尻尾反応を反映" }
   }
 }

@@ -1,21 +1,28 @@
 {
-  "generatedAt": "2026-09-21T21:04:02+09:00",
+  "generatedAt": "2026-09-21T21:09:56+09:00",
   "note": "公開時点の目安。Claude・Codex・CG系アプリの共通ガバナー合算値。",
-  "used": 14,
+  "used": 15,
   "limit": 302,
-  "remaining": 288,
+  "remaining": 287,
   "busy": false,
   "cooldown": null,
   "providers": {
-    "gemini": {"used": 14, "limit": 300},
+    "gemini": {"used": 15, "limit": 300},
     "codex": {"used": 0, "limit": 2}
   },
   "requesters": {
-    "codex": 12,
+    "codex": 13,
     "claude": 0,
     "kodekichi": 2,
     "kodemi": 0,
     "cg": 0,
     "app": 0
+  },
+  "channels": {
+    "codex": "残量率で管理",
+    "geminiPaidChat": "別枠・CG回数管理外",
+    "chatgptPaidChat": "別枠・CG回数管理外",
+    "geminiApi": "300回/日の運用目安",
+    "googleSearch": "検索枠・AI回数外"
   }
 }

@@ -731,6 +731,11 @@
       <div class="auto-list">
         <div class="auto-line">役割: Codexが司令塔、外部AI調査、実装だけ短く使う</div>
         <div class="auto-line">定期監視: 残量を見て、重開発/節約/軽作業を判断</div>
+        <div class="auto-line">Codex: アプリ統合・検証（残量は上の「残」で確認）</div>
+        <div class="auto-line">Gemini有料チャット: 別枠・CGでは回数管理しない</div>
+        <div class="auto-line">ChatGPT有料チャット: 別枠・CGでは回数管理しない</div>
+        <div class="auto-line" id="gemini-api-line">Gemini API: 利用目安を確認中</div>
+        <div class="auto-line">Google検索: 検索枠・AI利用回数に含めない</div>
       </div>
       <div class="phone-grid">
         <a class="app-icon updated" href="./latest/external-ai-brief-compressor/index.html"><b class="glyph g-tool">圧</b><span>AI圧縮</span></a>
@@ -905,7 +910,9 @@
         const notice = document.querySelector("#external-ai-notice");
         if (!notice) return;
         const users = data.requesters || {}, gemini = data.providers?.gemini || {};
-        notice.innerHTML = `<b>AI</b><span>外部AI ${data.used}/${data.limit}</span><i>C${users.codex || 0}・Cl${users.claude || 0}・吉${users.kodekichi || 0} / G${gemini.used || 0}</i>`;
+        notice.innerHTML = `<b>API</b><span>Gemini API ${gemini.used || 0}/${gemini.limit || 300}</span><i>C${users.codex || 0}・Cl${users.claude || 0}・吉${users.kodekichi || 0}</i>`;
+        const apiLine = document.querySelector("#gemini-api-line");
+        if (apiLine) apiLine.textContent = `Gemini API: ${gemini.used || 0}/${gemini.limit || 300}回（Claude・Codex・CG共通の目安）`;
         if (data.busy || (data.cooldown && new Date(data.cooldown) > new Date())) notice.classList.add("warn");
       })
       .catch(() => {});
