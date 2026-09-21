@@ -2,7 +2,7 @@
   "lane": "app",
   "ts": "2026-09-21T16:10:00+09:00",
   "artifact": "index.html",
-  "prompt": "節約開発の実証として、外部AIの差分設計を使い猫種4色の切替と永続保存を追加する。",
+  "prompt": "外部AI優先の節約開発で、猫4種を今後の猫アプリへ再利用できる固有キャラクター基盤へ進化させる。",
   "source": "codex",
   "backend": "codex",
   "model": "gpt-5.6-sol",
@@ -24,6 +24,7 @@
     "cute_cat_pixel": { "pass": true, "note": "猫耳・目・口元・ひげ・尻尾・肉球・瞬き・3表情を390x844確認" },
     "tabby_gestures": { "pass": true, "note": "耳ぴく・尻尾・毛づくろい・伏せ・逆毛・飛びかかり・喜びを座標差分で実装" },
     "tabby_reactions": { "pass": true, "note": "8反応を固定優先順位・単一タイマー・追加画像なしで実装" },
-    "cat_styles": { "pass": true, "note": "茶トラ・三毛・黒猫・白猫を自宅タップ切替、主人公全画面反映・保存" }
+    "cat_styles": { "pass": true, "note": "茶トラ・三毛・黒猫・白猫を自宅タップ切替、主人公全画面反映・保存" },
+    "cat_cast_base": { "pass": true, "note": "モカ・ミケ・クロ・シロへ固定ID・性格・軽量アクセサリーを付与" }
   }
 }
