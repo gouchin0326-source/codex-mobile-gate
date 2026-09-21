@@ -21,7 +21,8 @@ CODEXGATE向けの単一HTML猫アクションです。自宅から縄張りマ�
 - Campaign: 猫を操作して`自宅の玄関 → 縄張りマップ → 事件アイコン → 戦闘 → 自宅帰還`を固定1画面で進行します。
 - Events: 空き地・路地裏・河川敷の事件は危険度と猫小判報酬が異なります。
 - World movement: 自宅と縄張りは戦闘と同じ8方向スティックで歩き、事件はアイコンへの接触だけで開始します。
-- Buddy cats: 自宅で攻撃・防御・回復型のお供を選択し、戦闘へ1匹同行させられます。
+- Home cat hub: 猫部屋では4匹が軽量な自律行動を行い、猫を直接タップすると操作を交代します。戦闘同行猫は操作猫に応じて自動編成されます。
+- Radial difficulty: 自宅から離れた事件ほど危険度・報酬・戦闘マップ規模が上がります。
 - Map scale: 危険度1〜5に応じて戦闘マップが段階的に広がります。
 - Boss hunt: 規定数の雑魚を倒すと大ボスが出現し、画面外では方向矢印が案内します。
 - Armory: 戦闘小判と成功報酬で武器を解放・強化し、合計重量10以内で複数武器を同時装備できます。
@@ -50,7 +51,7 @@ CODEXGATE向けの単一HTML猫アクションです。自宅から縄張りマ�
 - Cat pixels: The hero now has triangular ears, inner-ear color, large expressive eyes, muzzle, cheeks, whiskers, collar bell, curved tail, short paws, paw pads, blinking, and happy/panic/hurt faces.
 - Tabby gestures: One lightweight state-driven gesture is shown at a time—ear twitch, tail sway/run bob, grooming, alert crouch, hit fur-ruffle, ultimate pounce, or homecoming victory jump.
 - Tabby reactions: A fixed-priority controller shows only one of hit crying, critical trembling, healing lick, pickup surprise, dodge crouch, combo swagger, reload fatigue, or rescue sparkle at once.
-- Cat styles: Tap the home-screen cat-style badge to cycle persistent tabby, calico, black, and white hero coats; gameplay stats stay identical.
+- Cat selection: Tap Moka, Mike, Kuro, or Shiro directly in the cat room to choose the playable cat; each keeps its own role and weapon affinity.
 - Cat cast base: The four coats are now stable named characters—モカ、ミケ、クロ、シロ—with a personality and lightweight signature accessory reusable across future cat apps.
 - Comic gait: The reusable cat sprite now shows away-facing head markings, toward-facing expressions, alternating paws, body bob/sway, and a two-beat tail response across all eight movement directions.
 - Cat room: Home is now a warm indoor room with a window, cat tower, bed, scratching post, bowl, yarn toy, and the mission door; the large hero also uses lightweight away-facing and alternating-paw motion.

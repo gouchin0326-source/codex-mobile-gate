@@ -1,8 +1,8 @@
 {
   "lane": "app",
-  "ts": "2026-09-21T16:10:00+09:00",
+  "ts": "2026-09-21T23:57:30+09:00",
   "artifact": "index.html",
-  "prompt": "外部AI優先の節約開発で、猫4種の固有能力・武器相性・軽量状態異常を追加する。",
+  "prompt": "外部AI優先の節約開発で、自宅を4匹の自律猫ハブにし、直接操作交代・8方向表現・外周高難度を追加する。",
   "source": "codex",
   "backend": "codex",
   "model": "gpt-5.6-sol",
@@ -16,7 +16,7 @@
     "weapon_weight": { "pass": true, "note": "8武器・重量10・解放強化・永続保存・1斉射18発上限" },
     "boss_hunt": { "pass": true, "note": "危険度別撃破条件・遅延出現・画面外方向矢印" },
     "overworld_flow": { "pass": true, "note": "390x844で猫操作→玄関→縄張り→アイコン接触→戦闘を実操作確認" },
-    "buddy_select": { "pass": true, "note": "攻撃・防御・回復のお供選択と戦闘同行" },
+    "buddy_select": { "pass": true, "note": "自宅の手動お供選択を廃止し、操作猫から戦闘同行猫を自動編成" },
     "armory_visuals": { "pass": true, "note": "390x844で8武器の絵・効果・状態・重量・操作をスクロールなし確認" },
     "run_growth": { "pass": true, "note": "RUN限定HUD・MAX代替報酬・帰宅敗北時初期化・恒久装備復元" },
     "nonstop_juice": { "pass": true, "note": "着弾スパーク24上限・微振動・必殺フラッシュ、停止処理なし" },
@@ -30,6 +30,9 @@
     "cat_room": { "pass": true, "note": "窓・猫タワー・ベッド・爪とぎ・器・毛糸・玄関をCanvas軽量描画" },
     "overworld_cat_motion": { "pass": true, "note": "大きい主人公にも後ろ姿・交互足・上下動・横揺れ・尻尾反応を反映" },
     "cat_roles": { "pass": true, "note": "モカ=均衡、ミケ=速度、クロ=火力、シロ=制御防御。得意武器は威力15%増" },
-    "weapon_status": { "pass": true, "note": "貫通・毛玉ノックバック、追尾鈍足、レーザー攻撃低下。ボス耐性付き" }
+    "weapon_status": { "pass": true, "note": "貫通・毛玉ノックバック、追尾鈍足、レーザー攻撃低下。ボス耐性付き" },
+    "home_cat_hub": { "pass": true, "note": "猫部屋に4匹を同時表示・自律移動・直接タップで操作交代" },
+    "radial_difficulty": { "pass": true, "note": "自宅から外周へ危険度1〜5の事件を段階配置" },
+    "eight_direction_readability": { "pass": true, "note": "左右反転・前後顔・斜めリーン・交互足で8方向を描き分け" }
   }
 }
