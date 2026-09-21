@@ -331,7 +331,7 @@
 
     .decision-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 7px;
     }
 
@@ -689,6 +689,7 @@
         <a class="notice" id="weather-notice" href="./latest/weather-info/index.html"><b>天</b><span>富山</span><i>読込中</i></a>
         <a class="notice" id="health-notice" href="./latest/gate-health/index.html"><b>CG</b><span>更新</span><i>確認中</i></a>
         <a class="notice" id="usage-notice" href="./latest/codex-usage/index.html"><b>残</b><span>Codex</span><i>確認中</i></a>
+        <a class="notice" id="external-ai-notice" href="./latest/data/external-ai-usage.json"><b>AI</b><span>外部AI</span><i>確認中</i></a>
       </div>
     </section>
 
@@ -895,6 +896,17 @@
           if (notice) notice.classList.add("warn");
           document.querySelectorAll("[data-usage-icon]").forEach((el) => el.classList.add("danger"));
         }
+      })
+      .catch(() => {});
+    fetch("./latest/data/external-ai-usage.json?v=" + Date.now())
+      .then((res) => res.ok ? res.json() : null)
+      .then((data) => {
+        if (!data) return;
+        const notice = document.querySelector("#external-ai-notice");
+        if (!notice) return;
+        const users = data.requesters || {}, gemini = data.providers?.gemini || {};
+        notice.innerHTML = `<b>AI</b><span>外部AI ${data.used}/${data.limit}</span><i>C${users.codex || 0}・Cl${users.claude || 0}・吉${users.kodekichi || 0} / G${gemini.used || 0}</i>`;
+        if (data.busy || (data.cooldown && new Date(data.cooldown) > new Date())) notice.classList.add("warn");
       })
       .catch(() => {});
     fetch("./data/free_info_schedule.json?v=" + Date.now())
