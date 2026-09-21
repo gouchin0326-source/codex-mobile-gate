@@ -54,6 +54,7 @@ CODEXGATE向けの単一HTML猫アクションです。自宅から縄張りマ�
 - Cat cast base: The four coats are now stable named characters—モカ、ミケ、クロ、シロ—with a personality and lightweight signature accessory reusable across future cat apps.
 - Comic gait: The reusable cat sprite now shows away-facing head markings, toward-facing expressions, alternating paws, body bob/sway, and a two-beat tail response across all eight movement directions.
 - Cat room: Home is now a warm indoor room with a window, cat tower, bed, scratching post, bowl, yarn toy, and the mission door; the large hero also uses lightweight away-facing and alternating-paw motion.
+- Cat roles and control effects: モカ is balanced, ミケ is agile, クロ is power-focused, and シロ specializes in control/defense. Preferred weapons gain 15% damage; pierce/hairball knock enemies back, homing slows, and laser weakens attacks with capped boss resistance.
 - Audio: Browser-generated sound effects and a small looping music pattern can be toggled with the sound button.
 
 ## Missions
