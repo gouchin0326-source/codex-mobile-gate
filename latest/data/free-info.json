@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-21T02:18:01.779193+00:00",
-  "lastSuccessAt": "2026-09-21T02:18:01.779193+00:00",
+  "updatedAt": "2026-09-21T02:28:01.791633+00:00",
+  "lastSuccessAt": "2026-09-21T02:28:01.791633+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 1.4 - 6 km NNE of Beaumont, CA / M 4.1 - 238 km ESE of Makarov, Russia / M 1.6 - 40 km NW of Toyah, Texas",
+      "signal": "M 2.2 - 72 km NNW of Aleneva, Alaska / M 0.8 - 3 km ESE of Cabazon, CA / M 1.2 - 6 km NNE of Beaumont, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335807",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026srymeg",
       "score": 1
     },
     {
@@ -257,10 +257,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.4 - 6 km NNE of Beaumont, CA",
-      "summary": "6 km NNE of Beaumont, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335807",
-      "published": "2026-09-21T02:14:25.920000+00:00",
+      "title": "M 2.2 - 72 km NNW of Aleneva, Alaska",
+      "summary": "72 km NNW of Aleneva, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026srymeg",
+      "published": "2026-09-21T02:21:32.797000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -668,6 +668,32 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 0.8 - 3 km ESE of Cabazon, CA",
+      "summary": "3 km ESE of Cabazon, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335815",
+      "published": "2026-09-21T02:15:13.100000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.2 - 6 km NNE of Beaumont, CA",
+      "summary": "6 km NNE of Beaumont, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335807",
+      "published": "2026-09-21T02:14:25.970000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 4.1 - 238 km ESE of Makarov, Russia",
       "summary": "238 km ESE of Makarov, Russia",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tiuu",
@@ -689,96 +715,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.7 - 9 km NE of Borrego Springs, CA",
-      "summary": "9 km NE of Borrego Springs, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335799",
-      "published": "2026-09-21T01:50:25.350000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.0 - 0 km NNW of Eden Roc, Hawaii",
-      "summary": "0 km NNW of Eden Roc, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75041007",
-      "published": "2026-09-21T01:41:38.470000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T02:18:01.779193+00:00",
-      "lastAttemptAt": "2026-09-21T02:18:01.779193+00:00",
+      "lastSuccessAt": "2026-09-21T02:28:01.791633+00:00",
+      "lastAttemptAt": "2026-09-21T02:28:01.791633+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T02:18:01.779193+00:00",
-      "lastAttemptAt": "2026-09-21T02:18:01.779193+00:00",
+      "lastSuccessAt": "2026-09-21T02:28:01.791633+00:00",
+      "lastAttemptAt": "2026-09-21T02:28:01.791633+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T02:18:01.779193+00:00",
-      "lastAttemptAt": "2026-09-21T02:18:01.779193+00:00",
+      "lastSuccessAt": "2026-09-21T02:28:01.791633+00:00",
+      "lastAttemptAt": "2026-09-21T02:28:01.791633+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T02:18:01.779193+00:00",
-      "lastAttemptAt": "2026-09-21T02:18:01.779193+00:00",
+      "lastSuccessAt": "2026-09-21T02:28:01.791633+00:00",
+      "lastAttemptAt": "2026-09-21T02:28:01.791633+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T02:18:01.779193+00:00",
-      "lastAttemptAt": "2026-09-21T02:18:01.779193+00:00",
+      "lastSuccessAt": "2026-09-21T02:28:01.791633+00:00",
+      "lastAttemptAt": "2026-09-21T02:28:01.791633+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T02:18:01.779193+00:00",
-      "lastAttemptAt": "2026-09-21T02:18:01.779193+00:00",
+      "lastSuccessAt": "2026-09-21T02:28:01.791633+00:00",
+      "lastAttemptAt": "2026-09-21T02:28:01.791633+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T02:18:01.779193+00:00",
-      "lastAttemptAt": "2026-09-21T02:18:01.779193+00:00",
+      "lastSuccessAt": "2026-09-21T02:28:01.791633+00:00",
+      "lastAttemptAt": "2026-09-21T02:28:01.791633+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T02:18:01.779193+00:00",
-      "lastAttemptAt": "2026-09-21T02:18:01.779193+00:00",
+      "lastSuccessAt": "2026-09-21T02:28:01.791633+00:00",
+      "lastAttemptAt": "2026-09-21T02:28:01.791633+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
