@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-21T13:08:04.452903+00:00",
-  "lastSuccessAt": "2026-09-21T13:08:04.452903+00:00",
+  "updatedAt": "2026-09-21T13:18:04.543091+00:00",
+  "lastSuccessAt": "2026-09-21T13:18:04.543091+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -135,7 +135,7 @@
     {
       "genre": "AI",
       "count": 8,
-      "signal": "Create your best tracks yet with Lyria 3.5 in Gemini. / Our framework for reporting model misalignment / How to connect AI usage to business value",
+      "signal": "Create your best tracks yet with Lyria 3.5 in Gemini. / How to connect AI usage to business value / How V7 gives AI agents institutional memory",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
       "score": 4
@@ -159,9 +159,9 @@
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 0.7 - 26 km NNE of Kernville, CA",
+      "signal": "M 1.5 - 6 km NNE of Toyah, Texas",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335959",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026spugdh",
       "score": 1
     }
   ],
@@ -251,10 +251,10 @@
       "provider": "chatgpt",
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "Our framework for reporting model misalignment",
-      "summary": "OpenAI shares a framework for tracking, investigating, and disclosing model misalignment, alongside six reports of unexpected or concerning model behavior.",
-      "url": "https://openai.com/index/model-misalignment-reporting-framework",
-      "published": "2026-09-16T17:00:00+00:00",
+      "title": "How to connect AI usage to business value",
+      "summary": "Learn how ChatGPT Work and Codex analytics help teams understand AI usage and spend, identify training needs, and connect adoption to business outcomes.",
+      "url": "https://openai.com/index/how-to-connect-ai-usage-to-business-value",
+      "published": "2026-09-16T12:00:00+00:00",
       "score": 3,
       "tags": [
         "AI",
@@ -284,10 +284,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.7 - 26 km NNE of Kernville, CA",
-      "summary": "26 km NNE of Kernville, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335959",
-      "published": "2026-09-21T12:59:53.170000+00:00",
+      "title": "M 1.5 - 6 km NNE of Toyah, Texas",
+      "summary": "6 km NNE of Toyah, Texas",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026spugdh",
+      "published": "2026-09-21T13:12:16.442000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -419,25 +419,6 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "How to connect AI usage to business value",
-      "summary": "Learn how ChatGPT Work and Codex analytics help teams understand AI usage and spend, identify training needs, and connect adoption to business outcomes.",
-      "url": "https://openai.com/index/how-to-connect-ai-usage-to-business-value",
-      "published": "2026-09-16T12:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "研究"
       ]
     },
     {
@@ -657,6 +638,24 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "How V7 gives AI agents institutional memory",
+      "summary": "Using GPT-5.6, V7 turns scattered company files into context agents can use to complete complex, source-linked work.",
+      "url": "https://openai.com/index/v7",
+      "published": "2026-09-21T00:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -750,64 +749,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T13:08:04.452903+00:00",
-      "lastAttemptAt": "2026-09-21T13:08:04.452903+00:00",
+      "lastSuccessAt": "2026-09-21T13:18:04.543091+00:00",
+      "lastAttemptAt": "2026-09-21T13:18:04.543091+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T13:08:04.452903+00:00",
-      "lastAttemptAt": "2026-09-21T13:08:04.452903+00:00",
+      "lastSuccessAt": "2026-09-21T13:18:04.543091+00:00",
+      "lastAttemptAt": "2026-09-21T13:18:04.543091+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T13:08:04.452903+00:00",
-      "lastAttemptAt": "2026-09-21T13:08:04.452903+00:00",
+      "lastSuccessAt": "2026-09-21T13:18:04.543091+00:00",
+      "lastAttemptAt": "2026-09-21T13:18:04.543091+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T13:08:04.452903+00:00",
-      "lastAttemptAt": "2026-09-21T13:08:04.452903+00:00",
+      "lastSuccessAt": "2026-09-21T13:18:04.543091+00:00",
+      "lastAttemptAt": "2026-09-21T13:18:04.543091+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T13:08:04.452903+00:00",
-      "lastAttemptAt": "2026-09-21T13:08:04.452903+00:00",
+      "lastSuccessAt": "2026-09-21T13:18:04.543091+00:00",
+      "lastAttemptAt": "2026-09-21T13:18:04.543091+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T13:08:04.452903+00:00",
-      "lastAttemptAt": "2026-09-21T13:08:04.452903+00:00",
+      "lastSuccessAt": "2026-09-21T13:18:04.543091+00:00",
+      "lastAttemptAt": "2026-09-21T13:18:04.543091+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T13:08:04.452903+00:00",
-      "lastAttemptAt": "2026-09-21T13:08:04.452903+00:00",
+      "lastSuccessAt": "2026-09-21T13:18:04.543091+00:00",
+      "lastAttemptAt": "2026-09-21T13:18:04.543091+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T13:08:04.452903+00:00",
-      "lastAttemptAt": "2026-09-21T13:08:04.452903+00:00",
+      "lastSuccessAt": "2026-09-21T13:18:04.543091+00:00",
+      "lastAttemptAt": "2026-09-21T13:18:04.543091+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

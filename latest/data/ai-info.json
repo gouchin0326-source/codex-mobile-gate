@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21T13:08:04.452903+00:00",
+  "updatedAt": "2026-09-21T13:18:04.543091+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -18,7 +18,7 @@
       "genre": "AI",
       "count": 8,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "Create your best tracks yet with Lyria 3.5 in Gemini. / Our framework for reporting model misalignment / How to connect AI usage to business value",
+      "signal": "Create your best tracks yet with Lyria 3.5 in Gemini. / How to connect AI usage to business value / How V7 gives AI agents institutional memory",
       "topUrl": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
       "score": 4
     },
@@ -294,25 +294,6 @@
       "provider": "chatgpt",
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "Our framework for reporting model misalignment",
-      "summary": "OpenAI shares a framework for tracking, investigating, and disclosing model misalignment, alongside six reports of unexpected or concerning model behavior.",
-      "url": "https://openai.com/index/model-misalignment-reporting-framework",
-      "published": "2026-09-16T17:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
       "title": "How to connect AI usage to business value",
       "summary": "Learn how ChatGPT Work and Codex analytics help teams understand AI usage and spend, identify training needs, and connect adoption to business outcomes.",
       "url": "https://openai.com/index/how-to-connect-ai-usage-to-business-value",
@@ -539,6 +520,24 @@
         "論文",
         "研究"
       ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "How V7 gives AI agents institutional memory",
+      "summary": "Using GPT-5.6, V7 turns scattered company files into context agents can use to complete complex, source-linked work.",
+      "url": "https://openai.com/index/v7",
+      "published": "2026-09-21T00:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
     }
   ],
   "providerWatch": {
@@ -586,15 +585,15 @@
         ],
         "latest": [
           {
-            "title": "Our framework for reporting model misalignment",
-            "url": "https://openai.com/index/model-misalignment-reporting-framework",
-            "published": "2026-09-16T17:00:00+00:00",
-            "source": "ChatGPT / OpenAI公式"
-          },
-          {
             "title": "How to connect AI usage to business value",
             "url": "https://openai.com/index/how-to-connect-ai-usage-to-business-value",
             "published": "2026-09-16T12:00:00+00:00",
+            "source": "ChatGPT / OpenAI公式"
+          },
+          {
+            "title": "How V7 gives AI agents institutional memory",
+            "url": "https://openai.com/index/v7",
+            "published": "2026-09-21T00:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           },
           {
@@ -701,5 +700,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-21T13:08:04.452903+00:00"
+  "lastSuccessAt": "2026-09-21T13:18:04.543091+00:00"
 }
