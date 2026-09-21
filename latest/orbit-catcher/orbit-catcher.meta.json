@@ -1,6 +1,6 @@
 {
   "lane": "app",
-  "ts": "2026-09-22T00:28:28+09:00",
+  "ts": "2026-09-22T00:42:06+09:00",
   "artifact": "index.html",
   "prompt": "部屋猫の描画を修復し、自宅中央を広く空け、4匹固有の重量0武器を通常装備と併用できるようにする。",
   "source": "codex",
@@ -34,8 +34,9 @@
     "home_cat_hub": { "pass": true, "note": "部屋専用の一体型猫絵で4匹同時表示・重なり防止・自律移動・直接操作交代" },
     "radial_difficulty": { "pass": true, "note": "自宅から外周へ危険度1〜5の事件を段階配置" },
     "eight_direction_readability": { "pass": true, "note": "左右反転・前後顔・斜めリーン・交互足で8方向を描き分け" },
-    "room_cat_sprite_integrity": { "pass": true, "note": "耳・顔・胴体・脚・尻尾を接続した専用スプライトで390x844表示確認" },
+    "room_cat_sprite_integrity": { "pass": true, "note": "戦闘猫と同じ顔・配色の横長四足ドット猫へ統一し、390x844表示確認" },
     "wide_home_layout": { "pass": true, "note": "中央パネルを撤去し、猫情報・工房・説明を端へ移動。自律移動範囲を拡大" },
-    "cat_signature_weapons": { "pass": true, "note": "毛糸追尾・猫じゃらし旋風・猫鳴波・ゴロゴロ衝撃波を重量0で個別実装" }
+    "cat_signature_weapons": { "pass": true, "note": "毛糸追尾・猫じゃらし旋風・猫鳴波・ゴロゴロ衝撃波を重量0で個別実装" },
+    "room_cat_quadruped": { "pass": true, "note": "二足立ち風の縦胴と矩形選択枠を廃止。四足・横胴・8方向姿勢・楕円足元表示" }
   }
 }

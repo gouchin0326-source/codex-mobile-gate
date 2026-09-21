@@ -54,7 +54,7 @@ CODEXGATE向けの単一HTML猫アクションです。自宅から縄張りマ�
 - Cat selection: Tap Moka, Mike, Kuro, or Shiro directly in the cat room to choose the playable cat; each keeps its own role and weapon affinity.
 - Cat cast base: The four coats are now stable named characters—モカ、ミケ、クロ、シロ—with a personality and lightweight signature accessory reusable across future cat apps.
 - Comic gait: The reusable cat sprite now shows away-facing head markings, toward-facing expressions, alternating paws, body bob/sway, and a two-beat tail response across all eight movement directions.
-- Cat room: Home uses a dedicated connected-body pixel sprite for all four cats, prevents overlap, and keeps faces, ears, legs, and tails readable while they wander.
+- Cat room: Home uses a low, four-legged pixel-cat silhouette matching battle colors and facial features; 8-way facing changes front/back/side/diagonal posture without an upright humanoid look.
 - Wide home: 中央の説明パネルをなくして移動範囲を上下左右へ拡大し、猫情報と工房は画面端へ配置します。
 - Signature weapons: モカ=毛糸追尾、ミケ=猫じゃらし旋風、クロ=猫鳴波、シロ=ゴロゴロ衝撃波を重量0で常時装備し、通常武器と同時に使えます。
 - Cat roles and control effects: モカ is balanced, ミケ is agile, クロ is power-focused, and シロ specializes in control/defense. Preferred weapons gain 15% damage; pierce/hairball knock enemies back, homing slows, and laser weakens attacks with capped boss resistance.
