@@ -8,7 +8,7 @@
 ```
 
 ```js
-HoshiCats.draw(ctx,{x:100,y:100,catId:"moka",direction:0,walking:true,phase:4});
+HoshiCats.draw(ctx,{x:100,y:100,catId:"moka",direction:0,walking:true,phase:4,motion:true});
 ```
 
-見た目だけを共有し、武器・能力・セーブは各ゲーム側で管理する。
+`motion:false` で呼吸・耳・尻尾の微動を停止できる。見た目だけを共有し、武器・能力・セーブは各ゲーム側で管理する。

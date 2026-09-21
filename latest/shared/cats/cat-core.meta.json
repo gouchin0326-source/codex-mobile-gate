@@ -1,6 +1,6 @@
 {
   "lane": "app",
-  "ts": "2026-09-22T07:16:16+09:00",
+  "ts": "2026-09-22T07:21:47+09:00",
   "artifact": "cat-core.js",
   "prompt": "にゃんパニッ！の4匹・8方向ドット猫を複数の軽量猫ゲームで共有できる描画基盤へ分離する。",
   "source": "codex+gemini",
@@ -10,6 +10,7 @@
     "shared_api": { "pass": true, "note": "HoshiCats.getCat/drawを公開" },
     "canvas_isolation": { "pass": true, "note": "全描画でsave/restoreが一致" },
     "four_cats_eight_directions": { "pass": true, "note": "4匹×8方向=32描画を検証" },
-    "game_separation": { "pass": true, "note": "能力・武器・セーブは各ゲーム側に保持" }
+    "game_separation": { "pass": true, "note": "能力・武器・セーブは各ゲーム側に保持" },
+    "lightweight_motion": { "pass": true, "note": "呼吸・片耳・尻尾・四足歩行を追加描画なし、Math.sin最大2回で実装" }
   }
 }
