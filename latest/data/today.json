@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-09-21T14:38:26.249393+00:00",
-  "sourceUpdatedAt": "2026-09-21T14:38:01.419262+00:00",
-  "status": "fresh",
+  "updatedAt": "2026-09-21T14:49:12.346722+00:00",
+  "sourceUpdatedAt": "2026-09-21T14:48:01.821938+00:00",
+  "status": "stale",
   "mode": "today-rule-based",
   "codexTokenUse": "0 when run by GitHub Actions",
   "count": 4,
@@ -17,11 +17,11 @@
       "title": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers",
       "reason": "論文の新着で、設定した重要語と一致",
       "publishedAt": "2026-09-21T04:00:00+00:00",
-      "observedAt": "2026-09-21T14:38:01.419262+00:00",
+      "observedAt": "2026-09-21T14:48:01.821938+00:00",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2609.21061",
       "score": 3,
-      "stale": false,
+      "stale": true,
       "processing": "rule-based"
     },
     {
@@ -30,11 +30,11 @@
       "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
       "reason": "論文の新着を確認",
       "publishedAt": "2026-09-21T04:00:00+00:00",
-      "observedAt": "2026-09-21T14:38:01.419262+00:00",
+      "observedAt": "2026-09-21T14:48:01.821938+00:00",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2609.20971",
       "score": 2,
-      "stale": false,
+      "stale": true,
       "processing": "rule-based"
     },
     {
@@ -43,11 +43,11 @@
       "title": "How V7 gives AI agents institutional memory",
       "reason": "AIの新着を確認",
       "publishedAt": "2026-09-21T00:00:00+00:00",
-      "observedAt": "2026-09-21T14:38:01.419262+00:00",
+      "observedAt": "2026-09-21T14:48:01.821938+00:00",
       "source": "ChatGPT / OpenAI公式",
       "url": "https://openai.com/index/v7",
       "score": 2,
-      "stale": false,
+      "stale": true,
       "processing": "rule-based"
     },
     {
@@ -56,13 +56,19 @@
       "title": "What are you doing this week?",
       "reason": "技術の新着を確認",
       "publishedAt": "2026-09-21T12:30:37+00:00",
-      "observedAt": "2026-09-21T14:38:01.419262+00:00",
+      "observedAt": "2026-09-21T14:48:01.821938+00:00",
       "source": "技術RSS",
       "url": "https://lobste.rs/s/fyngrv/what_are_you_doing_this_week",
       "score": 1,
-      "stale": false,
+      "stale": true,
       "processing": "rule-based"
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "github-changelog",
+      "error": "Remote end closed connection without response",
+      "fallbackItems": 6
+    }
+  ]
 }
