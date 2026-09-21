@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-21T03:58:01.752657+00:00",
-  "lastSuccessAt": "2026-09-21T03:58:01.752657+00:00",
+  "updatedAt": "2026-09-21T04:08:03.566297+00:00",
+  "lastSuccessAt": "2026-09-21T04:08:03.566297+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -134,19 +134,19 @@
     },
     {
       "genre": "AI",
-      "count": 12,
+      "count": 8,
       "signal": "Create your best tracks yet with Lyria 3.5 in Gemini. / Our framework for reporting model misalignment / How to connect AI usage to business value",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
       "score": 4
     },
     {
-      "genre": "災害",
-      "count": 5,
-      "signal": "M 0.3 - 6 km WNW of Cobb, CA / M 1.5 - 8 km NNW of Pinnacles, CA / M 1.4 - 59 km NNW of Karluk, Alaska",
+      "genre": "論文",
+      "count": 8,
+      "signal": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers / RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models / Attention-Aware Routing: Cou",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75439257",
-      "score": 1
+      "topUrl": "https://arxiv.org/abs/2609.21061",
+      "score": 3
     },
     {
       "genre": "技術",
@@ -154,6 +154,14 @@
       "signal": "Bot-free self-hosted analytics with GoatCounter on NixOS",
       "decision": "更新あり。必要時だけ確認",
       "topUrl": "https://vincent.bernat.ch/en/blog/2026-goatcounter",
+      "score": 1
+    },
+    {
+      "genre": "災害",
+      "count": 1,
+      "signal": "M 1.9 - 55 km NNW of Petersville, Alaska",
+      "decision": "更新あり。必要時だけ確認",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ssbyhh",
       "score": 1
     }
   ],
@@ -217,6 +225,25 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers",
+      "summary": "arXiv:2609.21061v1 Announce Type: new Abstract: Automatic target recognition (ATR) with synthetic aperture sonar (SAS) supports advanced naval capabilities, but deep learning is constrained by scarce target imagery, back",
+      "url": "https://arxiv.org/abs/2609.21061",
+      "published": "2026-09-21T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "制作",
+        "研究"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -257,10 +284,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.3 - 6 km WNW of Cobb, CA",
-      "summary": "6 km WNW of Cobb, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75439257",
-      "published": "2026-09-21T03:47:37.130000+00:00",
+      "title": "M 1.9 - 55 km NNW of Petersville, Alaska",
+      "summary": "55 km NNW of Petersville, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ssbyhh",
+      "published": "2026-09-21T04:05:27.006000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -504,6 +531,132 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
+      "summary": "arXiv:2609.20971v1 Announce Type: new Abstract: Long-context large language model inference is increasingly limited by prefill, where dense self-attention processes the entire prompt before generation begins. Sparse bloc",
+      "url": "https://arxiv.org/abs/2609.20971",
+      "published": "2026-09-21T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
+      "summary": "arXiv:2609.20974v1 Announce Type: new Abstract: In Mixture-of-Experts language models, the router typically selects and weights experts based on the token's hidden state, utilizing limited contextual information. We prop",
+      "url": "https://arxiv.org/abs/2609.20974",
+      "published": "2026-09-21T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "CaLR: Causal Latent Revision for Robust Diffusion Reasoning",
+      "summary": "arXiv:2609.20981v1 Announce Type: new Abstract: Autoregressive (AR) models suffer from local greediness, while diffusion language models (DLMs) often lack the strict causal structure required for reasoning. To combine th",
+      "url": "https://arxiv.org/abs/2609.20981",
+      "published": "2026-09-21T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Detecting Hallucination in LLMs: Tracing the Topological Signatures of Impaired Context Sharing",
+      "summary": "arXiv:2609.21096v1 Announce Type: new Abstract: In this work, we examine the topology of information flow patterns within attention graphs to effectively distinguish hallucinated from non-hallucinated responses. We analy",
+      "url": "https://arxiv.org/abs/2609.21096",
+      "published": "2026-09-21T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Decoupling Internal Representational Changes and Causal Importance in Fine-Tuned Large Language Models",
+      "summary": "arXiv:2609.21113v1 Announce Type: new Abstract: Fine-tuning has emerged as a widely adopted approach for adapting LLMs to a variety of downstream tasks. However, how it reshapes their internal mechanisms remains poorly u",
+      "url": "https://arxiv.org/abs/2609.21113",
+      "published": "2026-09-21T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "TinyCeNN-LM: Quality-Gated Conversion of Pretrained Attention with CeNN-Inspired Cellular-Recurrent Layers",
+      "summary": "arXiv:2609.21139v1 Announce Type: new Abstract: Replacing attention in a pretrained language model is a compatibility problem: a plausible substitute may alter representations expected by later layers. TinyCeNN-LM introd",
+      "url": "https://arxiv.org/abs/2609.21139",
+      "published": "2026-09-21T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Clinician-Grounded Quality Assurance for AI-Assisted Psychiatric Intake",
+      "summary": "arXiv:2609.21149v1 Announce Type: new Abstract: Before patients can use AI-assisted psychiatric intake systems, health systems need practical ways to routinely evaluate these tools against their clinical standards for qu",
+      "url": "https://arxiv.org/abs/2609.21149",
+      "published": "2026-09-21T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -591,194 +744,70 @@
         "AI",
         "重要"
       ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Hex turns complex analysis into visual reports with GPT‑6 Astra",
-      "summary": "GPT-6 Astra helps Hex’s data agents turn answers into interactive visualizations that employees are proud to share.",
-      "url": "https://openai.com/index/hex-gpt-6-astra",
-      "published": "2026-09-16T12:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "google-gemini",
-      "platform": "AI",
-      "label": "Gemini公式",
-      "genre": "AI",
-      "provider": "gemini",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
-      "summary": "Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking are our most advanced live dialogue models yet, built for natural conversation.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
-      "published": "2026-09-15T17:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "研究"
-      ]
-    },
-    {
-      "source": "google-gemini",
-      "platform": "AI",
-      "label": "Gemini公式",
-      "genre": "AI",
-      "provider": "gemini",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "DevFest is back",
-      "summary": "DevFest 2026 is back and here’s how you can connect with one of the more than 800 global events to build, secure, and scale in the agentic AI era.",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/",
-      "published": "2026-09-14T16:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "google-gemini",
-      "platform": "AI",
-      "label": "Gemini公式",
-      "genre": "AI",
-      "provider": "gemini",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Introducing Gemini 3.8 Flash and 3.8 Flash Cyber",
-      "summary": "Gemini 3.8 Flash and 3.8 Flash Cyber deliver next-generation intelligence for agentic workflows and cybersecurity.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
-      "published": "2026-09-02T15:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.5 - 8 km NNW of Pinnacles, CA",
-      "summary": "8 km NNW of Pinnacles, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75439252",
-      "published": "2026-09-21T03:28:19.660000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.4 - 59 km NNW of Karluk, Alaska",
-      "summary": "59 km NNW of Karluk, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ssarak",
-      "published": "2026-09-21T03:27:15.159000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.8 - 1 km NW of The Geysers, CA",
-      "summary": "1 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75439247",
-      "published": "2026-09-21T03:09:17.930000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.6 - 10 km NW of The Geysers, CA",
-      "summary": "10 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75439242",
-      "published": "2026-09-21T03:02:39+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T03:58:01.752657+00:00",
-      "lastAttemptAt": "2026-09-21T03:58:01.752657+00:00",
+      "lastSuccessAt": "2026-09-21T04:08:03.566297+00:00",
+      "lastAttemptAt": "2026-09-21T04:08:03.566297+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T03:58:01.752657+00:00",
-      "lastAttemptAt": "2026-09-21T03:58:01.752657+00:00",
+      "lastSuccessAt": "2026-09-21T04:08:03.566297+00:00",
+      "lastAttemptAt": "2026-09-21T04:08:03.566297+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T03:58:01.752657+00:00",
-      "lastAttemptAt": "2026-09-21T03:58:01.752657+00:00",
+      "lastSuccessAt": "2026-09-21T04:08:03.566297+00:00",
+      "lastAttemptAt": "2026-09-21T04:08:03.566297+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T03:58:01.752657+00:00",
-      "lastAttemptAt": "2026-09-21T03:58:01.752657+00:00",
+      "lastSuccessAt": "2026-09-21T04:08:03.566297+00:00",
+      "lastAttemptAt": "2026-09-21T04:08:03.566297+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T03:58:01.752657+00:00",
-      "lastAttemptAt": "2026-09-21T03:58:01.752657+00:00",
+      "lastSuccessAt": "2026-09-21T04:08:03.566297+00:00",
+      "lastAttemptAt": "2026-09-21T04:08:03.566297+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T03:58:01.752657+00:00",
-      "lastAttemptAt": "2026-09-21T03:58:01.752657+00:00",
+      "lastSuccessAt": "2026-09-21T04:08:03.566297+00:00",
+      "lastAttemptAt": "2026-09-21T04:08:03.566297+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T03:58:01.752657+00:00",
-      "lastAttemptAt": "2026-09-21T03:58:01.752657+00:00",
+      "lastSuccessAt": "2026-09-21T04:08:03.566297+00:00",
+      "lastAttemptAt": "2026-09-21T04:08:03.566297+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T03:58:01.752657+00:00",
-      "lastAttemptAt": "2026-09-21T03:58:01.752657+00:00",
+      "lastSuccessAt": "2026-09-21T04:08:03.566297+00:00",
+      "lastAttemptAt": "2026-09-21T04:08:03.566297+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
