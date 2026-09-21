@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-21T01:28:01.634910+00:00",
-  "lastSuccessAt": "2026-09-21T01:28:01.634910+00:00",
+  "updatedAt": "2026-09-21T01:38:02.066573+00:00",
+  "lastSuccessAt": "2026-09-21T01:38:02.066573+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,10 +143,10 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 1.6 - 5 km NW of Happy Valley, Alaska / M 4.9 - 26 km SE of Saimbeyli, Turkey / M 0.3 - 8 km NW of The Geysers, CA",
+      "signal": "M 1.5 - 17 km WNW of Tehachapi, CA / M 0.7 - 1 km W of Lake Henshaw, CA / M 1.8 - 75 km E of Lime Village, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026srwhug",
-      "score": 1
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335783",
+      "score": 3
     },
     {
       "genre": "技術",
@@ -217,6 +217,21 @@
       ]
     },
     {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.5 - 17 km WNW of Tehachapi, CA",
+      "summary": "17 km WNW of Tehachapi, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335783",
+      "published": "2026-09-21T01:26:00.330000+00:00",
+      "score": 3,
+      "tags": [
+        "災害",
+        "重要",
+        "開発"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -251,19 +266,6 @@
       "tags": [
         "AI",
         "重要"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.6 - 5 km NW of Happy Valley, Alaska",
-      "summary": "5 km NW of Happy Valley, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026srwhug",
-      "published": "2026-09-21T01:16:29.307000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
       ]
     },
     {
@@ -668,49 +670,49 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 0.7 - 1 km W of Lake Henshaw, CA",
+      "summary": "1 km W of Lake Henshaw, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335791",
+      "published": "2026-09-21T01:31:07.140000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.8 - 75 km E of Lime Village, Alaska",
+      "summary": "75 km E of Lime Village, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026srwsol",
+      "published": "2026-09-21T01:28:55.405000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.6 - 5 km NW of Happy Valley, Alaska",
+      "summary": "5 km NW of Happy Valley, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026srwhug",
+      "published": "2026-09-21T01:16:29.307000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 4.9 - 26 km SE of Saimbeyli, Turkey",
       "summary": "26 km SE of Saimbeyli, Turkey",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tiui",
       "published": "2026-09-21T01:02:04.529000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.3 - 8 km NW of The Geysers, CA",
-      "summary": "8 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75439212",
-      "published": "2026-09-21T00:58:16.490000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.6 - 17 km ESE of Livengood, Alaska",
-      "summary": "17 km ESE of Livengood, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026srvrmj",
-      "published": "2026-09-21T00:57:40.813000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.9 - 14 km NNE of Pāhala, Hawaii",
-      "summary": "14 km NNE of Pāhala, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75040987",
-      "published": "2026-09-21T00:56:33.680000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -721,64 +723,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:28:01.634910+00:00",
-      "lastAttemptAt": "2026-09-21T01:28:01.634910+00:00",
+      "lastSuccessAt": "2026-09-21T01:38:02.066573+00:00",
+      "lastAttemptAt": "2026-09-21T01:38:02.066573+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:28:01.634910+00:00",
-      "lastAttemptAt": "2026-09-21T01:28:01.634910+00:00",
+      "lastSuccessAt": "2026-09-21T01:38:02.066573+00:00",
+      "lastAttemptAt": "2026-09-21T01:38:02.066573+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:28:01.634910+00:00",
-      "lastAttemptAt": "2026-09-21T01:28:01.634910+00:00",
+      "lastSuccessAt": "2026-09-21T01:38:02.066573+00:00",
+      "lastAttemptAt": "2026-09-21T01:38:02.066573+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:28:01.634910+00:00",
-      "lastAttemptAt": "2026-09-21T01:28:01.634910+00:00",
+      "lastSuccessAt": "2026-09-21T01:38:02.066573+00:00",
+      "lastAttemptAt": "2026-09-21T01:38:02.066573+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:28:01.634910+00:00",
-      "lastAttemptAt": "2026-09-21T01:28:01.634910+00:00",
+      "lastSuccessAt": "2026-09-21T01:38:02.066573+00:00",
+      "lastAttemptAt": "2026-09-21T01:38:02.066573+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:28:01.634910+00:00",
-      "lastAttemptAt": "2026-09-21T01:28:01.634910+00:00",
+      "lastSuccessAt": "2026-09-21T01:38:02.066573+00:00",
+      "lastAttemptAt": "2026-09-21T01:38:02.066573+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:28:01.634910+00:00",
-      "lastAttemptAt": "2026-09-21T01:28:01.634910+00:00",
+      "lastSuccessAt": "2026-09-21T01:38:02.066573+00:00",
+      "lastAttemptAt": "2026-09-21T01:38:02.066573+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:28:01.634910+00:00",
-      "lastAttemptAt": "2026-09-21T01:28:01.634910+00:00",
+      "lastSuccessAt": "2026-09-21T01:38:02.066573+00:00",
+      "lastAttemptAt": "2026-09-21T01:38:02.066573+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
