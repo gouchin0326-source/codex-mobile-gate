@@ -44,6 +44,7 @@ CODEXGATE向けの単一HTML猫アクションです。自宅から縄張りマ�
 - Resources: Ammo pickups matter because enemies keep coming, and automatic reload cannot help once reserve ammo is empty.
 - Support items: Repair pickups restore durability.
 - Visuals: Characters and items use simple pixel-style sprites instead of plain circles.
+- Nonstop effects: Capped impact sparks, short camera micro-shake, and ultimate/boss flashes add punch without pausing combat.
 - Audio: Browser-generated sound effects and a small looping music pattern can be toggled with the sound button.
 
 ## Missions

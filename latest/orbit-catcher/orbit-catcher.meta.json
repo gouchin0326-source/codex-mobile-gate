@@ -1,8 +1,8 @@
 {
   "lane": "app",
-  "ts": "2026-09-21T13:15:00+09:00",
+  "ts": "2026-09-21T13:50:00+09:00",
   "artifact": "index.html",
-  "prompt": "戦闘中の成長をRUN限定として明示し、帰宅・敗北時の強制解除とMAX取得時の小判・回復変換を追加する。",
+  "prompt": "サクサク感を保ったまま、上限付き着弾スパーク・微振動・必殺とボス撃破フラッシュを追加する。",
   "source": "codex",
   "backend": "codex",
   "model": "gpt-5.6-sol",
@@ -11,13 +11,14 @@
     "rescue_and_ultimate": { "pass": true, "note": "救出ロック解除、4種仲間攻撃、必殺発動をCDP検証" },
     "load_caps": { "pass": true, "note": "敵120・総弾340・仲間弾48・粒子160・仲間6を上限化" },
     "cat_world": { "pass": true, "note": "宇宙語彙と星景を除去し、地上4テーマ・障害物5種へ変更" },
-    "combat_difficulty": { "pass": true, "note": "段階突進・強化護衛・フリック加速・必殺ロックをCDP検証" }
-    ,"campaign_flow": { "pass": true, "note": "自宅→縄張り→事件→戦闘を390x844実機相当で確認" },
+    "combat_difficulty": { "pass": true, "note": "段階突進・強化護衛・フリック加速・必殺ロックをCDP検証" },
+    "campaign_flow": { "pass": true, "note": "自宅→縄張り→事件→戦闘を390x844実機相当で確認" },
     "weapon_weight": { "pass": true, "note": "8武器・重量10・解放強化・永続保存・1斉射18発上限" },
     "boss_hunt": { "pass": true, "note": "危険度別撃破条件・遅延出現・画面外方向矢印" },
     "overworld_flow": { "pass": true, "note": "390x844で猫操作→玄関→縄張り→アイコン接触→戦闘を実操作確認" },
     "buddy_select": { "pass": true, "note": "攻撃・防御・回復のお供選択と戦闘同行" },
     "armory_visuals": { "pass": true, "note": "390x844で8武器の絵・効果・状態・重量・操作をスクロールなし確認" },
-    "run_growth": { "pass": true, "note": "RUN限定HUD・MAX代替報酬・帰宅敗北時初期化・恒久装備復元" }
+    "run_growth": { "pass": true, "note": "RUN限定HUD・MAX代替報酬・帰宅敗北時初期化・恒久装備復元" },
+    "nonstop_juice": { "pass": true, "note": "着弾スパーク24上限・微振動・必殺フラッシュ、停止処理なし" }
   }
 }
