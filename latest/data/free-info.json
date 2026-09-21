@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-21T08:48:00.998265+00:00",
-  "lastSuccessAt": "2026-09-21T08:48:00.998265+00:00",
+  "updatedAt": "2026-09-21T08:58:01.033161+00:00",
+  "lastSuccessAt": "2026-09-21T08:58:01.033161+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -159,10 +159,10 @@
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 2.3 - 45 km WNW of Anchor Point, Alaska",
+      "signal": "M 0.8 - 3 km S of Tehachapi, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sskvxt",
-      "score": 1
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335887",
+      "score": 3
     }
   ],
   "items": [
@@ -225,6 +225,21 @@
       ]
     },
     {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.8 - 3 km S of Tehachapi, CA",
+      "summary": "3 km S of Tehachapi, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335887",
+      "published": "2026-09-21T08:48:27.900000+00:00",
+      "score": 3,
+      "tags": [
+        "災害",
+        "重要",
+        "開発"
+      ]
+    },
+    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -278,19 +293,6 @@
       "tags": [
         "AI",
         "重要"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.3 - 45 km WNW of Anchor Point, Alaska",
-      "summary": "45 km WNW of Anchor Point, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sskvxt",
-      "published": "2026-09-21T08:32:36.847000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
       ]
     },
     {
@@ -750,64 +752,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T08:48:00.998265+00:00",
-      "lastAttemptAt": "2026-09-21T08:48:00.998265+00:00",
+      "lastSuccessAt": "2026-09-21T08:58:01.033161+00:00",
+      "lastAttemptAt": "2026-09-21T08:58:01.033161+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T08:48:00.998265+00:00",
-      "lastAttemptAt": "2026-09-21T08:48:00.998265+00:00",
+      "lastSuccessAt": "2026-09-21T08:58:01.033161+00:00",
+      "lastAttemptAt": "2026-09-21T08:58:01.033161+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T08:48:00.998265+00:00",
-      "lastAttemptAt": "2026-09-21T08:48:00.998265+00:00",
+      "lastSuccessAt": "2026-09-21T08:58:01.033161+00:00",
+      "lastAttemptAt": "2026-09-21T08:58:01.033161+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T08:48:00.998265+00:00",
-      "lastAttemptAt": "2026-09-21T08:48:00.998265+00:00",
+      "lastSuccessAt": "2026-09-21T08:58:01.033161+00:00",
+      "lastAttemptAt": "2026-09-21T08:58:01.033161+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T08:48:00.998265+00:00",
-      "lastAttemptAt": "2026-09-21T08:48:00.998265+00:00",
+      "lastSuccessAt": "2026-09-21T08:58:01.033161+00:00",
+      "lastAttemptAt": "2026-09-21T08:58:01.033161+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T08:48:00.998265+00:00",
-      "lastAttemptAt": "2026-09-21T08:48:00.998265+00:00",
+      "lastSuccessAt": "2026-09-21T08:58:01.033161+00:00",
+      "lastAttemptAt": "2026-09-21T08:58:01.033161+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T08:48:00.998265+00:00",
-      "lastAttemptAt": "2026-09-21T08:48:00.998265+00:00",
+      "lastSuccessAt": "2026-09-21T08:58:01.033161+00:00",
+      "lastAttemptAt": "2026-09-21T08:58:01.033161+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T08:48:00.998265+00:00",
-      "lastAttemptAt": "2026-09-21T08:48:00.998265+00:00",
+      "lastSuccessAt": "2026-09-21T08:58:01.033161+00:00",
+      "lastAttemptAt": "2026-09-21T08:58:01.033161+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
