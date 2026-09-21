@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-21T00:48:01.936971+00:00",
-  "lastSuccessAt": "2026-09-21T00:48:01.936971+00:00",
+  "updatedAt": "2026-09-21T00:58:02.651850+00:00",
+  "lastSuccessAt": "2026-09-21T00:58:02.651850+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 1.7 - 2 km NNE of Pleasant Hill, CA / M 1.8 - 58 km WNW of Beatty, Nevada / M 0.8 - 8 km SSE of Redlands, CA",
+      "signal": "M 0.5 - 15 km WSW of Searles Valley, CA / M 1.7 - 2 km NNE of Pleasant Hill, CA / M 1.8 - 58 km WNW of Beatty, Nevada",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75439207",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335775",
       "score": 1
     },
     {
@@ -257,10 +257,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.7 - 2 km NNE of Pleasant Hill, CA",
-      "summary": "2 km NNE of Pleasant Hill, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75439207",
-      "published": "2026-09-21T00:44:24.700000+00:00",
+      "title": "M 0.5 - 15 km WSW of Searles Valley, CA",
+      "summary": "15 km WSW of Searles Valley, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335775",
+      "published": "2026-09-21T00:48:25.290000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -668,6 +668,19 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 1.7 - 2 km NNE of Pleasant Hill, CA",
+      "summary": "2 km NNE of Pleasant Hill, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75439207",
+      "published": "2026-09-21T00:44:24.700000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 1.8 - 58 km WNW of Beatty, Nevada",
       "summary": "58 km WNW of Beatty, Nevada",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00924680",
@@ -702,83 +715,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.4 - 68 km N of Larsen Bay, Alaska",
-      "summary": "68 km N of Larsen Bay, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026srucdt",
-      "published": "2026-09-21T00:10:00.666000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T00:48:01.936971+00:00",
-      "lastAttemptAt": "2026-09-21T00:48:01.936971+00:00",
+      "lastSuccessAt": "2026-09-21T00:58:02.651850+00:00",
+      "lastAttemptAt": "2026-09-21T00:58:02.651850+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T00:48:01.936971+00:00",
-      "lastAttemptAt": "2026-09-21T00:48:01.936971+00:00",
+      "lastSuccessAt": "2026-09-21T00:58:02.651850+00:00",
+      "lastAttemptAt": "2026-09-21T00:58:02.651850+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T00:48:01.936971+00:00",
-      "lastAttemptAt": "2026-09-21T00:48:01.936971+00:00",
+      "lastSuccessAt": "2026-09-21T00:58:02.651850+00:00",
+      "lastAttemptAt": "2026-09-21T00:58:02.651850+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T00:48:01.936971+00:00",
-      "lastAttemptAt": "2026-09-21T00:48:01.936971+00:00",
+      "lastSuccessAt": "2026-09-21T00:58:02.651850+00:00",
+      "lastAttemptAt": "2026-09-21T00:58:02.651850+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T00:48:01.936971+00:00",
-      "lastAttemptAt": "2026-09-21T00:48:01.936971+00:00",
+      "lastSuccessAt": "2026-09-21T00:58:02.651850+00:00",
+      "lastAttemptAt": "2026-09-21T00:58:02.651850+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T00:48:01.936971+00:00",
-      "lastAttemptAt": "2026-09-21T00:48:01.936971+00:00",
+      "lastSuccessAt": "2026-09-21T00:58:02.651850+00:00",
+      "lastAttemptAt": "2026-09-21T00:58:02.651850+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T00:48:01.936971+00:00",
-      "lastAttemptAt": "2026-09-21T00:48:01.936971+00:00",
+      "lastSuccessAt": "2026-09-21T00:58:02.651850+00:00",
+      "lastAttemptAt": "2026-09-21T00:58:02.651850+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T00:48:01.936971+00:00",
-      "lastAttemptAt": "2026-09-21T00:48:01.936971+00:00",
+      "lastSuccessAt": "2026-09-21T00:58:02.651850+00:00",
+      "lastAttemptAt": "2026-09-21T00:58:02.651850+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
