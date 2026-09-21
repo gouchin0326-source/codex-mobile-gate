@@ -1,23 +1,23 @@
 {
-  "updated_at": "2026-09-21T22:00:03+09:00",
-  "date": "2026-09-21",
+  "updated_at": "2026-09-22T08:00:02+09:00",
+  "date": "2026-09-22",
   "window": "08:00–22:00",
   "model": "gemini-3.5-flash-lite",
   "mode": "public RSS/API continuous collection + Gemini morning/evening synthesis / three separated character lanes",
   "request_policy": "public collection uses 0 AI; all external requests use the shared serialized governor",
   "gemini_budget": {
-    "date": "2026-09-21",
+    "date": "2026-09-22",
     "timezone": "Asia/Tokyo",
-    "used": 17,
+    "used": 4,
     "limit": 302,
-    "remaining": 285,
+    "remaining": 298,
     "busy": false,
     "providers": {
       "gemini": {
-        "used": 17,
+        "used": 4,
         "limit": 300,
-        "remaining": 283,
-        "cooldownUntil": "2026-09-21T20:30:02+09:00"
+        "remaining": 296,
+        "cooldownUntil": null
       },
       "codex": {
         "used": 0,
@@ -27,72 +27,27 @@
       }
     },
     "requesters": {
-      "codex": 15,
+      "codex": 4,
       "claude": 0,
-      "kodekichi": 2,
+      "kodekichi": 0,
       "kodemi": 0,
       "cg": 0,
       "app": 0
     }
   },
-  "completed": 9,
+  "completed": 0,
   "failed": 0,
-  "deferred": 0,
-  "game_deliveries": 3,
-  "music_deliveries": 3,
-  "library_deliveries": 3,
-  "character_notes": 9,
-  "published_artifacts": {
-    "0800-autonomy-decision.json": "data/kodekichi-artifacts/2026-09-21/0800-autonomy-decision.json",
-    "0800-autonomy-decision.json.meta.json": "data/kodekichi-artifacts/2026-09-21/0800-autonomy-decision.json.meta.json",
-    "0800-kodekichi-game.html": "data/kodekichi-artifacts/2026-09-21/0800-kodekichi-game.html",
-    "0800-kodekichi-game.html.meta.json": "data/kodekichi-artifacts/2026-09-21/0800-kodekichi-game.html.meta.json",
-    "0800-kodekichi-game.md": "data/kodekichi-artifacts/2026-09-21/0800-kodekichi-game.md",
-    "0800-kodekichi-game.md.meta.json": "data/kodekichi-artifacts/2026-09-21/0800-kodekichi-game.md.meta.json",
-    "0800-kodemi-music.html": "data/kodekichi-artifacts/2026-09-21/0800-kodemi-music.html",
-    "0800-kodemi-music.html.meta.json": "data/kodekichi-artifacts/2026-09-21/0800-kodemi-music.html.meta.json",
-    "0800-kodemi-music.md": "data/kodekichi-artifacts/2026-09-21/0800-kodemi-music.md",
-    "0800-kodemi-music.md.meta.json": "data/kodekichi-artifacts/2026-09-21/0800-kodemi-music.md.meta.json",
-    "0800-kodesama-library.html": "data/kodekichi-artifacts/2026-09-21/0800-kodesama-library.html",
-    "0800-kodesama-library.html.meta.json": "data/kodekichi-artifacts/2026-09-21/0800-kodesama-library.html.meta.json",
-    "0800-kodesama-research.md": "data/kodekichi-artifacts/2026-09-21/0800-kodesama-research.md",
-    "0800-kodesama-research.md.meta.json": "data/kodekichi-artifacts/2026-09-21/0800-kodesama-research.md.meta.json",
-    "0800-three-agent-exchange.md": "data/kodekichi-artifacts/2026-09-21/0800-three-agent-exchange.md",
-    "0800-three-agent-exchange.md.meta.json": "data/kodekichi-artifacts/2026-09-21/0800-three-agent-exchange.md.meta.json",
-    "2000-autonomy-decision.json": "data/kodekichi-artifacts/2026-09-21/2000-autonomy-decision.json",
-    "2000-autonomy-decision.json.meta.json": "data/kodekichi-artifacts/2026-09-21/2000-autonomy-decision.json.meta.json",
-    "2000-kodekichi-game.html": "data/kodekichi-artifacts/2026-09-21/2000-kodekichi-game.html",
-    "2000-kodekichi-game.html.meta.json": "data/kodekichi-artifacts/2026-09-21/2000-kodekichi-game.html.meta.json",
-    "2000-kodekichi-game.md": "data/kodekichi-artifacts/2026-09-21/2000-kodekichi-game.md",
-    "2000-kodekichi-game.md.meta.json": "data/kodekichi-artifacts/2026-09-21/2000-kodekichi-game.md.meta.json",
-    "2000-kodemi-music.html": "data/kodekichi-artifacts/2026-09-21/2000-kodemi-music.html",
-    "2000-kodemi-music.html.meta.json": "data/kodekichi-artifacts/2026-09-21/2000-kodemi-music.html.meta.json",
-    "2000-kodemi-music.md": "data/kodekichi-artifacts/2026-09-21/2000-kodemi-music.md",
-    "2000-kodemi-music.md.meta.json": "data/kodekichi-artifacts/2026-09-21/2000-kodemi-music.md.meta.json",
-    "2000-kodesama-library.html": "data/kodekichi-artifacts/2026-09-21/2000-kodesama-library.html",
-    "2000-kodesama-library.html.meta.json": "data/kodekichi-artifacts/2026-09-21/2000-kodesama-library.html.meta.json",
-    "2000-kodesama-research.md": "data/kodekichi-artifacts/2026-09-21/2000-kodesama-research.md",
-    "2000-kodesama-research.md.meta.json": "data/kodekichi-artifacts/2026-09-21/2000-kodesama-research.md.meta.json",
-    "2000-three-agent-exchange.md": "data/kodekichi-artifacts/2026-09-21/2000-three-agent-exchange.md",
-    "2000-three-agent-exchange.md.meta.json": "data/kodekichi-artifacts/2026-09-21/2000-three-agent-exchange.md.meta.json",
-    "2200-autonomy-decision.json": "data/kodekichi-artifacts/2026-09-21/2200-autonomy-decision.json",
-    "2200-autonomy-decision.json.meta.json": "data/kodekichi-artifacts/2026-09-21/2200-autonomy-decision.json.meta.json",
-    "2200-kodekichi-game.html": "data/kodekichi-artifacts/2026-09-21/2200-kodekichi-game.html",
-    "2200-kodekichi-game.html.meta.json": "data/kodekichi-artifacts/2026-09-21/2200-kodekichi-game.html.meta.json",
-    "2200-kodekichi-game.md": "data/kodekichi-artifacts/2026-09-21/2200-kodekichi-game.md",
-    "2200-kodekichi-game.md.meta.json": "data/kodekichi-artifacts/2026-09-21/2200-kodekichi-game.md.meta.json",
-    "2200-kodemi-music.html": "data/kodekichi-artifacts/2026-09-21/2200-kodemi-music.html",
-    "2200-kodemi-music.html.meta.json": "data/kodekichi-artifacts/2026-09-21/2200-kodemi-music.html.meta.json",
-    "2200-kodemi-music.md": "data/kodekichi-artifacts/2026-09-21/2200-kodemi-music.md",
-    "2200-kodemi-music.md.meta.json": "data/kodekichi-artifacts/2026-09-21/2200-kodemi-music.md.meta.json",
-    "2200-kodesama-library.html": "data/kodekichi-artifacts/2026-09-21/2200-kodesama-library.html",
-    "2200-kodesama-library.html.meta.json": "data/kodekichi-artifacts/2026-09-21/2200-kodesama-library.html.meta.json",
-    "2200-kodesama-research.md": "data/kodekichi-artifacts/2026-09-21/2200-kodesama-research.md",
-    "2200-kodesama-research.md.meta.json": "data/kodekichi-artifacts/2026-09-21/2200-kodesama-research.md.meta.json",
-    "2200-three-agent-exchange.md": "data/kodekichi-artifacts/2026-09-21/2200-three-agent-exchange.md",
-    "2200-three-agent-exchange.md.meta.json": "data/kodekichi-artifacts/2026-09-21/2200-three-agent-exchange.md.meta.json"
-  },
-  "pending_slots": [],
+  "deferred": 3,
+  "game_deliveries": 0,
+  "music_deliveries": 0,
+  "library_deliveries": 0,
+  "character_notes": 0,
+  "published_artifacts": {},
+  "pending_slots": [
+    "08:00",
+    "20:00",
+    "22:00"
+  ],
   "agent_board": [
     {
       "id": "kodekichi",
@@ -121,84 +76,13 @@
       "actual": [
         {
           "time": "08:00",
-          "status": "passed",
-          "task": "公開情報を覚えて答える記憶ゲーム",
-          "artifact": "data/kodekichi-artifacts/2026-09-21/0800-kodekichi-game.html",
-          "exchange": "data/kodekichi-artifacts/2026-09-21/0800-three-agent-exchange.md",
-          "decision": {
-            "candidate": "memory",
-            "goal": "公開情報を覚えて答える記憶ゲーム",
-            "axis": "useful",
-            "why": "羅針盤のuseful=2.56、採用4回。前回と違う遊び方で知識を定着させる",
-            "rejected": [
-              {
-                "candidate": "fact_sort",
-                "goal": "情報を分類して得点するゲーム",
-                "why": "羅針盤truthful=1.0・採用1回で優先点が低い"
-              },
-              {
-                "candidate": "choice",
-                "goal": "三体の判断を選ぶ分岐ゲーム",
-                "why": "羅針盤playable=1.24・採用2回で優先点が低い"
-              }
-            ]
-          },
-          "degraded": true,
-          "note": "Gemini利用枠待ちのため公開RSS/APIへ縮退: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, he"
-        },
-        {
-          "time": "20:00",
-          "status": "passed",
-          "task": "情報を分類して得点するゲーム",
-          "artifact": "data/kodekichi-artifacts/2026-09-21/2000-kodekichi-game.html",
-          "exchange": "data/kodekichi-artifacts/2026-09-21/2000-three-agent-exchange.md",
-          "decision": {
-            "candidate": "fact_sort",
-            "goal": "情報を分類して得点するゲーム",
-            "axis": "truthful",
-            "why": "羅針盤のtruthful=1.0、採用1回。調査結果を遊びながら理解できる",
-            "rejected": [
-              {
-                "candidate": "memory",
-                "goal": "公開情報を覚えて答える記憶ゲーム",
-                "why": "羅針盤useful=2.68・採用5回で優先点が低い"
-              },
-              {
-                "candidate": "choice",
-                "goal": "三体の判断を選ぶ分岐ゲーム",
-                "why": "羅針盤playable=1.24・採用2回で優先点が低い"
-              }
-            ]
-          },
-          "degraded": true,
-          "note": "Gemini利用枠待ちのため公開RSS/APIへ縮退: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, he"
-        },
-        {
-          "time": "22:00",
-          "status": "passed",
-          "task": "公開情報を覚えて答える記憶ゲーム",
-          "artifact": "data/kodekichi-artifacts/2026-09-21/2200-kodekichi-game.html",
-          "exchange": "data/kodekichi-artifacts/2026-09-21/2200-three-agent-exchange.md",
-          "decision": {
-            "candidate": "memory",
-            "goal": "公開情報を覚えて答える記憶ゲーム",
-            "axis": "useful",
-            "why": "羅針盤のuseful=2.92、採用5回。前回と違う遊び方で知識を定着させる",
-            "rejected": [
-              {
-                "candidate": "choice",
-                "goal": "三体の判断を選ぶ分岐ゲーム",
-                "why": "羅針盤playable=1.24・採用2回で優先点が低い"
-              },
-              {
-                "candidate": "fact_sort",
-                "goal": "情報を分類して得点するゲーム",
-                "why": "羅針盤truthful=1.12・採用2回で優先点が低い"
-              }
-            ]
-          },
+          "status": "deferred",
+          "task": null,
+          "artifact": null,
+          "exchange": null,
+          "decision": null,
           "degraded": false,
-          "note": "完了"
+          "note": "外部AIの共通間隔中です。あと21秒待ってください。"
         }
       ]
     },
@@ -229,84 +113,13 @@
       "actual": [
         {
           "time": "08:00",
-          "status": "passed",
-          "task": "気分を混ぜる音色メーカー",
-          "artifact": "data/kodekichi-artifacts/2026-09-21/0800-kodemi-music.html",
-          "exchange": "data/kodekichi-artifacts/2026-09-21/0800-three-agent-exchange.md",
-          "decision": {
-            "candidate": "mood",
-            "goal": "気分を混ぜる音色メーカー",
-            "axis": "visible",
-            "why": "羅針盤のvisible=1.72、採用2回。調査内容を感情と音へ変換する",
-            "rejected": [
-              {
-                "candidate": "sequencer",
-                "goal": "4音ステップシーケンサー",
-                "why": "羅針盤playable=1.24・採用1回で優先点が低い"
-              },
-              {
-                "candidate": "echo",
-                "goal": "リズムをまねる反応ゲーム",
-                "why": "羅針盤useful=2.56・採用4回で優先点が低い"
-              }
-            ]
-          },
-          "degraded": true,
-          "note": "Gemini利用枠待ちのため公開RSS/APIへ縮退: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, he"
-        },
-        {
-          "time": "20:00",
-          "status": "passed",
-          "task": "リズムをまねる反応ゲーム",
-          "artifact": "data/kodekichi-artifacts/2026-09-21/2000-kodemi-music.html",
-          "exchange": "data/kodekichi-artifacts/2026-09-21/2000-three-agent-exchange.md",
-          "decision": {
-            "candidate": "echo",
-            "goal": "リズムをまねる反応ゲーム",
-            "axis": "useful",
-            "why": "羅針盤のuseful=2.68、採用4回。音楽を受け身でなく操作体験にする",
-            "rejected": [
-              {
-                "candidate": "sequencer",
-                "goal": "4音ステップシーケンサー",
-                "why": "羅針盤playable=1.24・採用1回で優先点が低い"
-              },
-              {
-                "candidate": "mood",
-                "goal": "気分を混ぜる音色メーカー",
-                "why": "羅針盤visible=2.05・採用3回で優先点が低い"
-              }
-            ]
-          },
-          "degraded": true,
-          "note": "Gemini利用枠待ちのため公開RSS/APIへ縮退: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, he"
-        },
-        {
-          "time": "22:00",
-          "status": "passed",
-          "task": "4音ステップシーケンサー",
-          "artifact": "data/kodekichi-artifacts/2026-09-21/2200-kodemi-music.html",
-          "exchange": "data/kodekichi-artifacts/2026-09-21/2200-three-agent-exchange.md",
-          "decision": {
-            "candidate": "sequencer",
-            "goal": "4音ステップシーケンサー",
-            "axis": "playable",
-            "why": "羅針盤のplayable=1.24、採用1回。ゲームの状態を自分で鳴らして確かめられる",
-            "rejected": [
-              {
-                "candidate": "mood",
-                "goal": "気分を混ぜる音色メーカー",
-                "why": "羅針盤visible=2.14・採用3回で優先点が低い"
-              },
-              {
-                "candidate": "echo",
-                "goal": "リズムをまねる反応ゲーム",
-                "why": "羅針盤useful=2.92・採用5回で優先点が低い"
-              }
-            ]
-          },
+          "status": "deferred",
+          "task": null,
+          "artifact": null,
+          "exchange": null,
+          "decision": null,
           "degraded": false,
-          "note": "完了"
+          "note": "外部AIの共通間隔中です。あと21秒待ってください。"
         }
       ]
     },
@@ -337,93 +150,22 @@
       "actual": [
         {
           "time": "08:00",
-          "status": "passed",
-          "task": "出典と鮮度を点検する資料棚",
-          "artifact": "data/kodekichi-artifacts/2026-09-21/0800-kodesama-library.html",
-          "exchange": "data/kodekichi-artifacts/2026-09-21/0800-three-agent-exchange.md",
-          "decision": {
-            "candidate": "source",
-            "goal": "出典と鮮度を点検する資料棚",
-            "axis": "visible",
-            "why": "羅針盤のvisible=1.72、採用2回。推測と確認済み情報を分ける",
-            "rejected": [
-              {
-                "candidate": "search",
-                "goal": "三体の根拠を横断検索する図書館",
-                "why": "羅針盤useful=2.56・採用4回で優先点が低い"
-              },
-              {
-                "candidate": "compare",
-                "goal": "新旧情報を比較する調査盤",
-                "why": "羅針盤truthful=1.0・採用1回で優先点が低い"
-              }
-            ]
-          },
-          "degraded": true,
-          "note": "Gemini利用枠待ちのため公開RSS/APIへ縮退: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, he"
-        },
-        {
-          "time": "20:00",
-          "status": "passed",
-          "task": "三体の根拠を横断検索する図書館",
-          "artifact": "data/kodekichi-artifacts/2026-09-21/2000-kodesama-library.html",
-          "exchange": "data/kodekichi-artifacts/2026-09-21/2000-three-agent-exchange.md",
-          "decision": {
-            "candidate": "search",
-            "goal": "三体の根拠を横断検索する図書館",
-            "axis": "useful",
-            "why": "羅針盤のuseful=2.68、採用4回。事実・判断・成果を一か所で確認できる",
-            "rejected": [
-              {
-                "candidate": "source",
-                "goal": "出典と鮮度を点検する資料棚",
-                "why": "羅針盤visible=2.05・採用3回で優先点が低い"
-              },
-              {
-                "candidate": "compare",
-                "goal": "新旧情報を比較する調査盤",
-                "why": "羅針盤truthful=1.0・採用1回で優先点が低い"
-              }
-            ]
-          },
-          "degraded": true,
-          "note": "Gemini利用枠待ちのため公開RSS/APIへ縮退: Gemini HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, he"
-        },
-        {
-          "time": "22:00",
-          "status": "passed",
-          "task": "出典と鮮度を点検する資料棚",
-          "artifact": "data/kodekichi-artifacts/2026-09-21/2200-kodesama-library.html",
-          "exchange": "data/kodekichi-artifacts/2026-09-21/2200-three-agent-exchange.md",
-          "decision": {
-            "candidate": "source",
-            "goal": "出典と鮮度を点検する資料棚",
-            "axis": "visible",
-            "why": "羅針盤のvisible=2.14、採用3回。推測と確認済み情報を分ける",
-            "rejected": [
-              {
-                "candidate": "compare",
-                "goal": "新旧情報を比較する調査盤",
-                "why": "羅針盤truthful=1.12・採用1回で優先点が低い"
-              },
-              {
-                "candidate": "search",
-                "goal": "三体の根拠を横断検索する図書館",
-                "why": "羅針盤useful=2.92・採用5回で優先点が低い"
-              }
-            ]
-          },
+          "status": "deferred",
+          "task": null,
+          "artifact": null,
+          "exchange": null,
+          "decision": null,
           "degraded": false,
-          "note": "完了"
+          "note": "外部AIの共通間隔中です。あと21秒待ってください。"
         }
       ]
     }
   ],
   "directions": [],
   "tomorrow_plan": {
-    "date": "2026-09-22",
+    "date": "2026-09-23",
     "status": "approved",
-    "createdAt": "2026-09-21T08:00:03+09:00",
+    "createdAt": "2026-09-22T08:00:02+09:00",
     "author": "コデ郎",
     "source": "deterministic-rules",
     "aiRequests": 0,
@@ -462,7 +204,7 @@
     ]
   },
   "autonomy_trace": {
-    "state": "learning-complete",
+    "state": "working",
     "trigger": "10分監視と時刻条件から自動開始",
     "selection": "前日実績・失敗・重複・利用枠を規則評価し、人の追加指示なしで次課題を選択",
     "cycle": [
@@ -475,14 +217,14 @@
       "学習"
     ],
     "latest_decision": {
-      "at": "2026-09-21T22:00:02+09:00",
-      "slot": "22:00",
+      "at": "2026-09-22T08:00:02+09:00",
+      "slot": "08:00",
       "trigger": "定時便で観察を開始",
       "compass": {
-        "useful": 2.92,
-        "playable": 1.24,
+        "useful": 3.04,
+        "playable": 1.36,
         "truthful": 1.12,
-        "visible": 2.14
+        "visible": 2.35
       },
       "cycle": [
         "観察",
@@ -495,15 +237,15 @@
       ],
       "agents": {
         "kodekichi": {
-          "candidate": "memory",
-          "goal": "公開情報を覚えて答える記憶ゲーム",
-          "axis": "useful",
-          "why": "羅針盤のuseful=2.92、採用5回。前回と違う遊び方で知識を定着させる",
+          "candidate": "choice",
+          "goal": "三体の判断を選ぶ分岐ゲーム",
+          "axis": "playable",
+          "why": "羅針盤のplayable=1.36、採用2回。相談内容をプレイヤーの選択へ変える",
           "rejected": [
             {
-              "candidate": "choice",
-              "goal": "三体の判断を選ぶ分岐ゲーム",
-              "why": "羅針盤playable=1.24・採用2回で優先点が低い"
+              "candidate": "memory",
+              "goal": "公開情報を覚えて答える記憶ゲーム",
+              "why": "羅針盤useful=3.04・採用6回で優先点が低い"
             },
             {
               "candidate": "fact_sort",
@@ -513,28 +255,28 @@
           ]
         },
         "kodemi": {
-          "candidate": "sequencer",
-          "goal": "4音ステップシーケンサー",
-          "axis": "playable",
-          "why": "羅針盤のplayable=1.24、採用1回。ゲームの状態を自分で鳴らして確かめられる",
+          "candidate": "mood",
+          "goal": "気分を混ぜる音色メーカー",
+          "axis": "visible",
+          "why": "羅針盤のvisible=2.35、採用3回。調査内容を感情と音へ変換する",
           "rejected": [
-            {
-              "candidate": "mood",
-              "goal": "気分を混ぜる音色メーカー",
-              "why": "羅針盤visible=2.14・採用3回で優先点が低い"
-            },
             {
               "candidate": "echo",
               "goal": "リズムをまねる反応ゲーム",
-              "why": "羅針盤useful=2.92・採用5回で優先点が低い"
+              "why": "羅針盤useful=3.04・採用5回で優先点が低い"
+            },
+            {
+              "candidate": "sequencer",
+              "goal": "4音ステップシーケンサー",
+              "why": "羅針盤playable=1.36・採用2回で優先点が低い"
             }
           ]
         },
         "kodesama": {
-          "candidate": "source",
-          "goal": "出典と鮮度を点検する資料棚",
-          "axis": "visible",
-          "why": "羅針盤のvisible=2.14、採用3回。推測と確認済み情報を分ける",
+          "candidate": "search",
+          "goal": "三体の根拠を横断検索する図書館",
+          "axis": "useful",
+          "why": "羅針盤のuseful=3.04、採用5回。事実・判断・成果を一か所で確認できる",
           "rejected": [
             {
               "candidate": "compare",
@@ -542,14 +284,13 @@
               "why": "羅針盤truthful=1.12・採用1回で優先点が低い"
             },
             {
-              "candidate": "search",
-              "goal": "三体の根拠を横断検索する図書館",
-              "why": "羅針盤useful=2.92・採用5回で優先点が低い"
+              "candidate": "source",
+              "goal": "出典と鮮度を点検する資料棚",
+              "why": "羅針盤visible=2.35・採用4回で優先点が低い"
             }
           ]
         }
-      },
-      "result": "passed"
+      }
     },
     "compass": {
       "useful": 3.04,
@@ -559,7 +300,7 @@
     },
     "experience_count": 30,
     "next_action": "コデ郎が利用枠と前日実績を先に確認し、承認済み方向指示に沿って三人の重複しない改善を進める",
-    "next_date": "2026-09-22",
+    "next_date": "2026-09-23",
     "human_direction_count": 0
   },
   "value_metrics": {
@@ -568,40 +309,40 @@
         "id": "kodekichi",
         "name": "コデ吉",
         "planned": 3,
-        "completed": 3,
+        "completed": 0,
         "failed": 0,
-        "deferred": 0,
-        "degraded": 2,
+        "deferred": 1,
+        "degraded": 0,
         "rework_events": 0,
-        "reusable": 3,
-        "pass_rate": 100,
-        "reuse_ready_rate": 100
+        "reusable": 0,
+        "pass_rate": null,
+        "reuse_ready_rate": null
       },
       {
         "id": "kodemi",
         "name": "コデ美",
         "planned": 3,
-        "completed": 3,
+        "completed": 0,
         "failed": 0,
-        "deferred": 0,
-        "degraded": 2,
+        "deferred": 1,
+        "degraded": 0,
         "rework_events": 0,
-        "reusable": 3,
-        "pass_rate": 100,
-        "reuse_ready_rate": 100
+        "reusable": 0,
+        "pass_rate": null,
+        "reuse_ready_rate": null
       },
       {
         "id": "kodesama",
         "name": "コデ郎",
         "planned": 3,
-        "completed": 3,
+        "completed": 0,
         "failed": 0,
-        "deferred": 0,
-        "degraded": 2,
+        "deferred": 1,
+        "degraded": 0,
         "rework_events": 0,
-        "reusable": 3,
-        "pass_rate": 100,
-        "reuse_ready_rate": 100
+        "reusable": 0,
+        "pass_rate": null,
+        "reuse_ready_rate": null
       }
     ],
     "definitions": {
@@ -614,7 +355,7 @@
   "ha_lane_snapshot": {
     "available": true,
     "state": "ready",
-    "updatedAt": "2026-09-21T21:59:22+09:00",
+    "updatedAt": "2026-09-22T07:59:52+09:00",
     "ageMinutes": 0,
     "gpu": {
       "status": "idle",
@@ -631,9 +372,9 @@
       },
       "gemini": {
         "status": "available",
-        "used": 11,
+        "used": 0,
         "limit": 1500,
-        "remaining": 1489,
+        "remaining": 1500,
         "resetAt": null
       },
       "codex": {
@@ -650,13 +391,13 @@
   "dispatch": {
     "check_interval_minutes": 10,
     "state": "ready",
-    "next_pending": null,
+    "next_pending": "08:00",
     "joint_request": "コデ郎→コデ吉→コデ美を1要求へ統合"
   },
   "codex_token_saving": {
     "owner": "コデ郎",
-    "completed_agent_tasks": 9,
-    "external_ai_attempts": 17,
+    "completed_agent_tasks": 0,
+    "external_ai_attempts": 4,
     "avoided_separate_requests": 0,
     "codex_lane_used": 0,
     "rule": "共同便、公開情報の直接取得、429時の無AI縮退を確認してから開発を進める",
@@ -664,7 +405,7 @@
   },
   "google_drive": {
     "status": "synced",
-    "target": "G:\\マイドライブ\\CODEX\\kodekichi-autonomy\\2026-09-21",
-    "files": 53
+    "target": "G:\\マイドライブ\\CODEX\\kodekichi-autonomy\\2026-09-22",
+    "files": 1
   }
 }
