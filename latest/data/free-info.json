@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-21T01:38:02.066573+00:00",
-  "lastSuccessAt": "2026-09-21T01:38:02.066573+00:00",
+  "updatedAt": "2026-09-21T01:48:01.707634+00:00",
+  "lastSuccessAt": "2026-09-21T01:48:01.707634+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,7 +143,7 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 1.5 - 17 km WNW of Tehachapi, CA / M 0.7 - 1 km W of Lake Henshaw, CA / M 1.8 - 75 km E of Lime Village, Alaska",
+      "signal": "M 1.5 - 17 km WNW of Tehachapi, CA / M 2.0 - 0 km NNW of Eden Roc, Hawaii / M 0.5 - 5 km WNW of Cobb, CA",
       "decision": "更新あり。必要時だけ確認",
       "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335783",
       "score": 3
@@ -670,10 +670,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.7 - 1 km W of Lake Henshaw, CA",
-      "summary": "1 km W of Lake Henshaw, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335791",
-      "published": "2026-09-21T01:31:07.140000+00:00",
+      "title": "M 2.0 - 0 km NNW of Eden Roc, Hawaii",
+      "summary": "0 km NNW of Eden Roc, Hawaii",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75041007",
+      "published": "2026-09-21T01:41:38.470000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -683,10 +683,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.8 - 75 km E of Lime Village, Alaska",
-      "summary": "75 km E of Lime Village, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026srwsol",
-      "published": "2026-09-21T01:28:55.405000+00:00",
+      "title": "M 0.5 - 5 km WNW of Cobb, CA",
+      "summary": "5 km WNW of Cobb, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75439232",
+      "published": "2026-09-21T01:40:10.310000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -696,10 +696,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.6 - 5 km NW of Happy Valley, Alaska",
-      "summary": "5 km NW of Happy Valley, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026srwhug",
-      "published": "2026-09-21T01:16:29.307000+00:00",
+      "title": "M 1.6 - 40 km NW of Toyah, Texas",
+      "summary": "40 km NW of Toyah, Texas",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026soxgyn",
+      "published": "2026-09-21T01:39:14.625000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -709,10 +709,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 4.9 - 26 km SE of Saimbeyli, Turkey",
-      "summary": "26 km SE of Saimbeyli, Turkey",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tiui",
-      "published": "2026-09-21T01:02:04.529000+00:00",
+      "title": "M 2.7 - 74 km NE of Punta Cana, Dominican Republic",
+      "summary": "74 km NE of Punta Cana, Dominican Republic",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tium",
+      "published": "2026-09-21T01:33:52.760000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -723,64 +723,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:38:02.066573+00:00",
-      "lastAttemptAt": "2026-09-21T01:38:02.066573+00:00",
+      "lastSuccessAt": "2026-09-21T01:48:01.707634+00:00",
+      "lastAttemptAt": "2026-09-21T01:48:01.707634+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:38:02.066573+00:00",
-      "lastAttemptAt": "2026-09-21T01:38:02.066573+00:00",
+      "lastSuccessAt": "2026-09-21T01:48:01.707634+00:00",
+      "lastAttemptAt": "2026-09-21T01:48:01.707634+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:38:02.066573+00:00",
-      "lastAttemptAt": "2026-09-21T01:38:02.066573+00:00",
+      "lastSuccessAt": "2026-09-21T01:48:01.707634+00:00",
+      "lastAttemptAt": "2026-09-21T01:48:01.707634+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:38:02.066573+00:00",
-      "lastAttemptAt": "2026-09-21T01:38:02.066573+00:00",
+      "lastSuccessAt": "2026-09-21T01:48:01.707634+00:00",
+      "lastAttemptAt": "2026-09-21T01:48:01.707634+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:38:02.066573+00:00",
-      "lastAttemptAt": "2026-09-21T01:38:02.066573+00:00",
+      "lastSuccessAt": "2026-09-21T01:48:01.707634+00:00",
+      "lastAttemptAt": "2026-09-21T01:48:01.707634+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:38:02.066573+00:00",
-      "lastAttemptAt": "2026-09-21T01:38:02.066573+00:00",
+      "lastSuccessAt": "2026-09-21T01:48:01.707634+00:00",
+      "lastAttemptAt": "2026-09-21T01:48:01.707634+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:38:02.066573+00:00",
-      "lastAttemptAt": "2026-09-21T01:38:02.066573+00:00",
+      "lastSuccessAt": "2026-09-21T01:48:01.707634+00:00",
+      "lastAttemptAt": "2026-09-21T01:48:01.707634+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:38:02.066573+00:00",
-      "lastAttemptAt": "2026-09-21T01:38:02.066573+00:00",
+      "lastSuccessAt": "2026-09-21T01:48:01.707634+00:00",
+      "lastAttemptAt": "2026-09-21T01:48:01.707634+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
