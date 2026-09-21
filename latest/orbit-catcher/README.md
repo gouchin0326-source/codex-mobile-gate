@@ -50,6 +50,7 @@ CODEXGATE向けの単一HTML猫アクションです。自宅から縄張りマ�
 - Cat pixels: The hero now has triangular ears, inner-ear color, large expressive eyes, muzzle, cheeks, whiskers, collar bell, curved tail, short paws, paw pads, blinking, and happy/panic/hurt faces.
 - Tabby gestures: One lightweight state-driven gesture is shown at a time—ear twitch, tail sway/run bob, grooming, alert crouch, hit fur-ruffle, ultimate pounce, or homecoming victory jump.
 - Tabby reactions: A fixed-priority controller shows only one of hit crying, critical trembling, healing lick, pickup surprise, dodge crouch, combo swagger, reload fatigue, or rescue sparkle at once.
+- Cat styles: Tap the home-screen cat-style badge to cycle persistent tabby, calico, black, and white hero coats; gameplay stats stay identical.
 - Audio: Browser-generated sound effects and a small looping music pattern can be toggled with the sound button.
 
 ## Missions
