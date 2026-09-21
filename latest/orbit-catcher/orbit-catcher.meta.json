@@ -1,8 +1,8 @@
 {
   "lane": "app",
-  "ts": "2026-09-21T12:05:00+09:00",
+  "ts": "2026-09-21T12:40:00+09:00",
   "artifact": "index.html",
-  "prompt": "自宅と縄張りで猫を操作し、玄関と事件アイコンへの接触で遷移する一続きの世界、お供猫選択、自宅帰還を追加する。",
+  "prompt": "武器工房を専用ピクセル武器絵、効果説明、Lv・重量・装備状態・価格が一目で分かる2列カードへ改善する。",
   "source": "codex",
   "backend": "codex",
   "model": "gpt-5.6-sol",
@@ -16,6 +16,7 @@
     "weapon_weight": { "pass": true, "note": "8武器・重量10・解放強化・永続保存・1斉射18発上限" },
     "boss_hunt": { "pass": true, "note": "危険度別撃破条件・遅延出現・画面外方向矢印" },
     "overworld_flow": { "pass": true, "note": "390x844で猫操作→玄関→縄張り→アイコン接触→戦闘を実操作確認" },
-    "buddy_select": { "pass": true, "note": "攻撃・防御・回復のお供選択と戦闘同行" }
+    "buddy_select": { "pass": true, "note": "攻撃・防御・回復のお供選択と戦闘同行" },
+    "armory_visuals": { "pass": true, "note": "390x844で8武器の絵・効果・状態・重量・操作をスクロールなし確認" }
   }
 }
