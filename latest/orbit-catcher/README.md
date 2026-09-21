@@ -54,9 +54,12 @@ CODEXGATE向けの単一HTML猫アクションです。自宅から縄張りマ�
 - Cat selection: Tap Moka, Mike, Kuro, or Shiro directly in the cat room to choose the playable cat; each keeps its own role and weapon affinity.
 - Cat cast base: The four coats are now stable named characters—モカ、ミケ、クロ、シロ—with a personality and lightweight signature accessory reusable across future cat apps.
 - Comic gait: The reusable cat sprite now shows away-facing head markings, toward-facing expressions, alternating paws, body bob/sway, and a two-beat tail response across all eight movement directions.
-- Cat room: Home uses a low, four-legged pixel-cat silhouette matching battle colors and facial features; 8-way facing changes front/back/side/diagonal posture without an upright humanoid look.
+- Unified hero cat: 自宅・縄張りマップ・戦闘は同じ大きな目、ほっぺ、口元、三角耳、四足、尻尾のドット猫を使い、8方向で姿勢と歩行足を変えます。
 - Wide home: 中央の説明パネルをなくして移動範囲を上下左右へ拡大し、猫情報と工房は画面端へ配置します。
 - Signature weapons: モカ=毛糸追尾、ミケ=猫じゃらし旋風、クロ=猫鳴波、シロ=ゴロゴロ衝撃波を重量0で常時装備し、通常武器と同時に使えます。
+- Personal armories: 猫タブごとに商品5種と重量10の装備セットを個別保存します。モカ=魚骨、ミケ=カリカリ散弾、クロ=猫爪、シロ=冷え肉球を追加しています。
+- Character ultimates: モカは全体均衡攻撃、ミケは長い無敵と高速化、クロは大火力、シロは回復・防壁・減速を発動します。
+- Dodge depth: フリックダッシュは0.46秒無敵。危険度上昇ごとに敵HP・接触威力・速度・突進率も段階強化されます。
 - Cat roles and control effects: モカ is balanced, ミケ is agile, クロ is power-focused, and シロ specializes in control/defense. Preferred weapons gain 15% damage; pierce/hairball knock enemies back, homing slows, and laser weakens attacks with capped boss resistance.
 - Audio: Browser-generated sound effects and a small looping music pattern can be toggled with the sound button.
 
