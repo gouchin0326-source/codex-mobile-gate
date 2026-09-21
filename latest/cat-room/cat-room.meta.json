@@ -1,0 +1,15 @@
+{
+  "lane": "app",
+  "ts": "2026-09-22T08:03:11+09:00",
+  "artifact": "index.html",
+  "prompt": "CGに全猫ゲーム共通のドット猫素材・仕草・開発データを確認できる猫素材研究室を作る。",
+  "source": "codex+gemini",
+  "backend": "codex",
+  "model": "gpt-5.6-sol",
+  "gates": {
+    "shared_assets": { "pass": true, "note": "HoshiCats共通4匹を直接参照" },
+    "motion_viewer": { "pass": true, "note": "8方向・歩行・静止・仕草ON/OFF" },
+    "load_budget": { "pass": true, "note": "Canvas 1・RAF 1・外部画像0" },
+    "mobile_ui": { "pass": true, "note": "390px幅・44px操作・横スクロールなし" }
+  }
+}
