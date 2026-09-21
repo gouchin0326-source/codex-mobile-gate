@@ -27,6 +27,7 @@ CODEXGATE向けの単一HTML猫アクションです。自宅から縄張りマ�
 - Armory: 戦闘小判と成功報酬で武器を解放・強化し、合計重量10以内で複数武器を同時装備できます。
 - Armory display: 8武器を専用ピクセル絵、効果、Lv、重量、装備中表示、価格付きの2列カードで比較できます。
 - Performance: 1回の自動射撃を最大18発に制限し、多武器同時発射時も既存の総弾数上限を守ります。
+- Run growth: 戦闘内の攻撃・速度・防御・一時武器LvはRUN限定です。帰宅・敗北時に解除され、MAX取得時は戦闘小判と回復へ変換されます。
 - Goal: Defeat the gate boss, then enter the green gate.
 - Gate boss: Each gate starts locked by a boss-class enemy guarding the entrance. The gate opens only after the boss is defeated.
 - Enemies: Walkers, runners, brutes, spitters, armored zombies, bloaters, summoners, and stalkers.

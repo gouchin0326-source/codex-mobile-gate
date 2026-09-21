@@ -1,8 +1,8 @@
 {
   "lane": "app",
-  "ts": "2026-09-21T12:40:00+09:00",
+  "ts": "2026-09-21T13:15:00+09:00",
   "artifact": "index.html",
-  "prompt": "武器工房を専用ピクセル武器絵、効果説明、Lv・重量・装備状態・価格が一目で分かる2列カードへ改善する。",
+  "prompt": "戦闘中の成長をRUN限定として明示し、帰宅・敗北時の強制解除とMAX取得時の小判・回復変換を追加する。",
   "source": "codex",
   "backend": "codex",
   "model": "gpt-5.6-sol",
@@ -17,6 +17,7 @@
     "boss_hunt": { "pass": true, "note": "危険度別撃破条件・遅延出現・画面外方向矢印" },
     "overworld_flow": { "pass": true, "note": "390x844で猫操作→玄関→縄張り→アイコン接触→戦闘を実操作確認" },
     "buddy_select": { "pass": true, "note": "攻撃・防御・回復のお供選択と戦闘同行" },
-    "armory_visuals": { "pass": true, "note": "390x844で8武器の絵・効果・状態・重量・操作をスクロールなし確認" }
+    "armory_visuals": { "pass": true, "note": "390x844で8武器の絵・効果・状態・重量・操作をスクロールなし確認" },
+    "run_growth": { "pass": true, "note": "RUN限定HUD・MAX代替報酬・帰宅敗北時初期化・恒久装備復元" }
   }
 }
