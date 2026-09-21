@@ -1,6 +1,6 @@
 # CODEXGATE News Brief
 
-- 更新: 2026-09-21T04:38:01.901517+00:00
+- 更新: 2026-09-21T04:48:01.903808+00:00
 - 取得: GitHub Actions/Python
 - Codex: 0%想定（自動実行時）
 - 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。
@@ -9,4 +9,4 @@
 - [AI] AI/Codex運用の変化を確認 / Create your best tracks yet with Lyria 3.5 in Gemini. / Our framework 
 - [論文] 更新あり。必要時だけ確認 / LoRA Enhanced Contrastive Learning with SAS Vision Transformers / RBS-
 - [技術] 更新あり。必要時だけ確認 / Bot-free self-hosted analytics with GoatCounter on NixOS
-- [災害] 更新あり。必要時だけ確認 / M 0.4 - 26 km NNE of Packwood, Washington
+- [災害] 更新あり。必要時だけ確認 / M 0.6 - 5 km S of Cabazon, CA
