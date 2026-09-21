@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-21T01:18:01.796669+00:00",
-  "lastSuccessAt": "2026-09-21T01:18:01.796669+00:00",
+  "updatedAt": "2026-09-21T01:28:01.634910+00:00",
+  "lastSuccessAt": "2026-09-21T01:28:01.634910+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 0.3 - 8 km NW of The Geysers, CA / M 1.6 - 17 km ESE of Livengood, Alaska / M 2.9 - 14 km NNE of Pāhala, Hawaii",
+      "signal": "M 1.6 - 5 km NW of Happy Valley, Alaska / M 4.9 - 26 km SE of Saimbeyli, Turkey / M 0.3 - 8 km NW of The Geysers, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75439212",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026srwhug",
       "score": 1
     },
     {
@@ -257,10 +257,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.3 - 8 km NW of The Geysers, CA",
-      "summary": "8 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75439212",
-      "published": "2026-09-21T00:58:16.490000+00:00",
+      "title": "M 1.6 - 5 km NW of Happy Valley, Alaska",
+      "summary": "5 km NW of Happy Valley, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026srwhug",
+      "published": "2026-09-21T01:16:29.307000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -668,6 +668,32 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 4.9 - 26 km SE of Saimbeyli, Turkey",
+      "summary": "26 km SE of Saimbeyli, Turkey",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tiui",
+      "published": "2026-09-21T01:02:04.529000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.3 - 8 km NW of The Geysers, CA",
+      "summary": "8 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75439212",
+      "published": "2026-09-21T00:58:16.490000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 1.6 - 17 km ESE of Livengood, Alaska",
       "summary": "17 km ESE of Livengood, Alaska",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026srvrmj",
@@ -689,96 +715,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.6 - 21 km SSE of Volcano, Hawaii",
-      "summary": "21 km SSE of Volcano, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75040982",
-      "published": "2026-09-21T00:56:11.240000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.5 - 15 km WSW of Searles Valley, CA",
-      "summary": "15 km WSW of Searles Valley, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335775",
-      "published": "2026-09-21T00:48:25.290000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:18:01.796669+00:00",
-      "lastAttemptAt": "2026-09-21T01:18:01.796669+00:00",
+      "lastSuccessAt": "2026-09-21T01:28:01.634910+00:00",
+      "lastAttemptAt": "2026-09-21T01:28:01.634910+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:18:01.796669+00:00",
-      "lastAttemptAt": "2026-09-21T01:18:01.796669+00:00",
+      "lastSuccessAt": "2026-09-21T01:28:01.634910+00:00",
+      "lastAttemptAt": "2026-09-21T01:28:01.634910+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:18:01.796669+00:00",
-      "lastAttemptAt": "2026-09-21T01:18:01.796669+00:00",
+      "lastSuccessAt": "2026-09-21T01:28:01.634910+00:00",
+      "lastAttemptAt": "2026-09-21T01:28:01.634910+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:18:01.796669+00:00",
-      "lastAttemptAt": "2026-09-21T01:18:01.796669+00:00",
+      "lastSuccessAt": "2026-09-21T01:28:01.634910+00:00",
+      "lastAttemptAt": "2026-09-21T01:28:01.634910+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:18:01.796669+00:00",
-      "lastAttemptAt": "2026-09-21T01:18:01.796669+00:00",
+      "lastSuccessAt": "2026-09-21T01:28:01.634910+00:00",
+      "lastAttemptAt": "2026-09-21T01:28:01.634910+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:18:01.796669+00:00",
-      "lastAttemptAt": "2026-09-21T01:18:01.796669+00:00",
+      "lastSuccessAt": "2026-09-21T01:28:01.634910+00:00",
+      "lastAttemptAt": "2026-09-21T01:28:01.634910+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:18:01.796669+00:00",
-      "lastAttemptAt": "2026-09-21T01:18:01.796669+00:00",
+      "lastSuccessAt": "2026-09-21T01:28:01.634910+00:00",
+      "lastAttemptAt": "2026-09-21T01:28:01.634910+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:18:01.796669+00:00",
-      "lastAttemptAt": "2026-09-21T01:18:01.796669+00:00",
+      "lastSuccessAt": "2026-09-21T01:28:01.634910+00:00",
+      "lastAttemptAt": "2026-09-21T01:28:01.634910+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
