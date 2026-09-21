@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-21T12:18:01.158462+00:00",
-  "lastSuccessAt": "2026-09-21T12:18:01.158462+00:00",
+  "updatedAt": "2026-09-21T12:28:01.166907+00:00",
+  "lastSuccessAt": "2026-09-21T12:28:01.166907+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -151,17 +151,17 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "What happened to the Snowden archive",
+      "signal": "Do you use :visited on links?",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://libroot.org/posts/what-happened-to-the-snowden-archive",
+      "topUrl": "https://kevquirk.com/do-you-use-visited-on-links",
       "score": 1
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 2.1 - 15 km NNE of Rampart, Alaska",
+      "signal": "M 2.0 - 22 km N of Pāhala, Hawaii",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ssrxqq",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75041207",
       "score": 1
     }
   ],
@@ -284,10 +284,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.1 - 15 km NNE of Rampart, Alaska",
-      "summary": "15 km NNE of Rampart, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ssrxqq",
-      "published": "2026-09-21T12:04:28.942000+00:00",
+      "title": "M 2.0 - 22 km N of Pāhala, Hawaii",
+      "summary": "22 km N of Pāhala, Hawaii",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75041207",
+      "published": "2026-09-21T12:20:06.310000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -299,12 +299,12 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "その他",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "What happened to the Snowden archive",
+      "title": "Do you use :visited on links?",
       "summary": "Comments",
-      "url": "https://libroot.org/posts/what-happened-to-the-snowden-archive",
-      "published": "2026-09-21T08:56:58+00:00",
+      "url": "https://kevquirk.com/do-you-use-visited-on-links",
+      "published": "2026-09-21T11:42:15+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -750,64 +750,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T12:18:01.158462+00:00",
-      "lastAttemptAt": "2026-09-21T12:18:01.158462+00:00",
+      "lastSuccessAt": "2026-09-21T12:28:01.166907+00:00",
+      "lastAttemptAt": "2026-09-21T12:28:01.166907+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T12:18:01.158462+00:00",
-      "lastAttemptAt": "2026-09-21T12:18:01.158462+00:00",
+      "lastSuccessAt": "2026-09-21T12:28:01.166907+00:00",
+      "lastAttemptAt": "2026-09-21T12:28:01.166907+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T12:18:01.158462+00:00",
-      "lastAttemptAt": "2026-09-21T12:18:01.158462+00:00",
+      "lastSuccessAt": "2026-09-21T12:28:01.166907+00:00",
+      "lastAttemptAt": "2026-09-21T12:28:01.166907+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T12:18:01.158462+00:00",
-      "lastAttemptAt": "2026-09-21T12:18:01.158462+00:00",
+      "lastSuccessAt": "2026-09-21T12:28:01.166907+00:00",
+      "lastAttemptAt": "2026-09-21T12:28:01.166907+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T12:18:01.158462+00:00",
-      "lastAttemptAt": "2026-09-21T12:18:01.158462+00:00",
+      "lastSuccessAt": "2026-09-21T12:28:01.166907+00:00",
+      "lastAttemptAt": "2026-09-21T12:28:01.166907+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T12:18:01.158462+00:00",
-      "lastAttemptAt": "2026-09-21T12:18:01.158462+00:00",
+      "lastSuccessAt": "2026-09-21T12:28:01.166907+00:00",
+      "lastAttemptAt": "2026-09-21T12:28:01.166907+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T12:18:01.158462+00:00",
-      "lastAttemptAt": "2026-09-21T12:18:01.158462+00:00",
+      "lastSuccessAt": "2026-09-21T12:28:01.166907+00:00",
+      "lastAttemptAt": "2026-09-21T12:28:01.166907+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T12:18:01.158462+00:00",
-      "lastAttemptAt": "2026-09-21T12:18:01.158462+00:00",
+      "lastSuccessAt": "2026-09-21T12:28:01.166907+00:00",
+      "lastAttemptAt": "2026-09-21T12:28:01.166907+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
