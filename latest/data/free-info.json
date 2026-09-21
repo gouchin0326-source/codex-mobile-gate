@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-21T01:58:01.705935+00:00",
-  "lastSuccessAt": "2026-09-21T01:58:01.705935+00:00",
+  "updatedAt": "2026-09-21T02:08:01.685493+00:00",
+  "lastSuccessAt": "2026-09-21T02:08:01.685493+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,10 +143,10 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 1.5 - 17 km WNW of Tehachapi, CA / M 0.7 - 9 km NE of Borrego Springs, CA / M 2.0 - 0 km NNW of Eden Roc, Hawaii",
+      "signal": "M 1.6 - 40 km NW of Toyah, Texas / M 0.7 - 9 km NE of Borrego Springs, CA / M 2.0 - 0 km NNW of Eden Roc, Hawaii",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335783",
-      "score": 3
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026soxvxe",
+      "score": 1
     },
     {
       "genre": "技術",
@@ -217,21 +217,6 @@
       ]
     },
     {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.5 - 17 km WNW of Tehachapi, CA",
-      "summary": "17 km WNW of Tehachapi, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41335783",
-      "published": "2026-09-21T01:26:00.330000+00:00",
-      "score": 3,
-      "tags": [
-        "災害",
-        "重要",
-        "開発"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -266,6 +251,19 @@
       "tags": [
         "AI",
         "重要"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.6 - 40 km NW of Toyah, Texas",
+      "summary": "40 km NW of Toyah, Texas",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026soxvxe",
+      "published": "2026-09-21T01:56:33.082000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
       ]
     },
     {
@@ -696,10 +694,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.5 - 5 km WNW of Cobb, CA",
-      "summary": "5 km WNW of Cobb, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75439232",
-      "published": "2026-09-21T01:40:10.310000+00:00",
+      "title": "M 5.5 - 35 km NNE of Ruteng, Indonesia",
+      "summary": "35 km NNE of Ruteng, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tiur",
+      "published": "2026-09-21T01:41:36.315000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -709,10 +707,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.6 - 40 km NW of Toyah, Texas",
-      "summary": "40 km NW of Toyah, Texas",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026soxgyn",
-      "published": "2026-09-21T01:39:14.625000+00:00",
+      "title": "M 0.5 - 5 km WNW of Cobb, CA",
+      "summary": "5 km WNW of Cobb, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75439232",
+      "published": "2026-09-21T01:40:10.310000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -723,64 +721,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:58:01.705935+00:00",
-      "lastAttemptAt": "2026-09-21T01:58:01.705935+00:00",
+      "lastSuccessAt": "2026-09-21T02:08:01.685493+00:00",
+      "lastAttemptAt": "2026-09-21T02:08:01.685493+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:58:01.705935+00:00",
-      "lastAttemptAt": "2026-09-21T01:58:01.705935+00:00",
+      "lastSuccessAt": "2026-09-21T02:08:01.685493+00:00",
+      "lastAttemptAt": "2026-09-21T02:08:01.685493+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:58:01.705935+00:00",
-      "lastAttemptAt": "2026-09-21T01:58:01.705935+00:00",
+      "lastSuccessAt": "2026-09-21T02:08:01.685493+00:00",
+      "lastAttemptAt": "2026-09-21T02:08:01.685493+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:58:01.705935+00:00",
-      "lastAttemptAt": "2026-09-21T01:58:01.705935+00:00",
+      "lastSuccessAt": "2026-09-21T02:08:01.685493+00:00",
+      "lastAttemptAt": "2026-09-21T02:08:01.685493+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:58:01.705935+00:00",
-      "lastAttemptAt": "2026-09-21T01:58:01.705935+00:00",
+      "lastSuccessAt": "2026-09-21T02:08:01.685493+00:00",
+      "lastAttemptAt": "2026-09-21T02:08:01.685493+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:58:01.705935+00:00",
-      "lastAttemptAt": "2026-09-21T01:58:01.705935+00:00",
+      "lastSuccessAt": "2026-09-21T02:08:01.685493+00:00",
+      "lastAttemptAt": "2026-09-21T02:08:01.685493+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:58:01.705935+00:00",
-      "lastAttemptAt": "2026-09-21T01:58:01.705935+00:00",
+      "lastSuccessAt": "2026-09-21T02:08:01.685493+00:00",
+      "lastAttemptAt": "2026-09-21T02:08:01.685493+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-21T01:58:01.705935+00:00",
-      "lastAttemptAt": "2026-09-21T01:58:01.705935+00:00",
+      "lastSuccessAt": "2026-09-21T02:08:01.685493+00:00",
+      "lastAttemptAt": "2026-09-21T02:08:01.685493+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
