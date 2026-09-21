@@ -45,6 +45,9 @@ CODEXGATE向けの単一HTML猫アクションです。自宅から縄張りマ�
 - Support items: Repair pickups restore durability.
 - Visuals: Characters and items use simple pixel-style sprites instead of plain circles.
 - Nonstop effects: Capped impact sparks, short camera micro-shake, and ultimate/boss flashes add punch without pausing combat.
+- Panic action: Nearby enemies trigger a pulsing danger frame, speed lines, warning callout, sweat, and startled cat face without stopping play.
+- Ultimate cut-in: `肉球乱舞・猫嵐` uses a cat portrait, 12 concentration lines, gold trim, paw marks, and full-screen paw storm.
+- Cat pixels: The hero now has triangular ears, inner-ear color, large expressive eyes, muzzle, cheeks, whiskers, collar bell, curved tail, short paws, paw pads, blinking, and happy/panic/hurt faces.
 - Audio: Browser-generated sound effects and a small looping music pattern can be toggled with the sound button.
 
 ## Missions

@@ -1,8 +1,8 @@
 {
   "lane": "app",
-  "ts": "2026-09-21T13:50:00+09:00",
+  "ts": "2026-09-21T14:20:00+09:00",
   "artifact": "index.html",
-  "prompt": "サクサク感を保ったまま、上限付き着弾スパーク・微振動・必殺とボス撃破フラッシュを追加する。",
+  "prompt": "停止なしで必殺カットインとパニック感を豪華にし、主人公を表情豊かな猫ドット絵へ作り直す。",
   "source": "codex",
   "backend": "codex",
   "model": "gpt-5.6-sol",
@@ -19,6 +19,8 @@
     "buddy_select": { "pass": true, "note": "攻撃・防御・回復のお供選択と戦闘同行" },
     "armory_visuals": { "pass": true, "note": "390x844で8武器の絵・効果・状態・重量・操作をスクロールなし確認" },
     "run_growth": { "pass": true, "note": "RUN限定HUD・MAX代替報酬・帰宅敗北時初期化・恒久装備復元" },
-    "nonstop_juice": { "pass": true, "note": "着弾スパーク24上限・微振動・必殺フラッシュ、停止処理なし" }
+    "nonstop_juice": { "pass": true, "note": "着弾スパーク24上限・微振動・必殺フラッシュ、停止処理なし" },
+    "panic_cutin": { "pass": true, "note": "接近脅威表示・集中線12本・肉球嵐、停止処理なし" },
+    "cute_cat_pixel": { "pass": true, "note": "猫耳・目・口元・ひげ・尻尾・肉球・瞬き・3表情を390x844確認" }
   }
 }
