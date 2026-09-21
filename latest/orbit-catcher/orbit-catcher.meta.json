@@ -1,8 +1,8 @@
 {
   "lane": "app",
-  "ts": "2026-09-21T11:20:00+09:00",
+  "ts": "2026-09-21T12:05:00+09:00",
   "artifact": "index.html",
-  "prompt": "危険度別マップ拡大、雑魚撃破による大ボス出現と方向矢印、戦闘小判、重量10の複数武器・武器工房を追加する。",
+  "prompt": "自宅と縄張りで猫を操作し、玄関と事件アイコンへの接触で遷移する一続きの世界、お供猫選択、自宅帰還を追加する。",
   "source": "codex",
   "backend": "codex",
   "model": "gpt-5.6-sol",
@@ -14,6 +14,8 @@
     "combat_difficulty": { "pass": true, "note": "段階突進・強化護衛・フリック加速・必殺ロックをCDP検証" }
     ,"campaign_flow": { "pass": true, "note": "自宅→縄張り→事件→戦闘を390x844実機相当で確認" },
     "weapon_weight": { "pass": true, "note": "8武器・重量10・解放強化・永続保存・1斉射18発上限" },
-    "boss_hunt": { "pass": true, "note": "危険度別撃破条件・遅延出現・画面外方向矢印" }
+    "boss_hunt": { "pass": true, "note": "危険度別撃破条件・遅延出現・画面外方向矢印" },
+    "overworld_flow": { "pass": true, "note": "390x844で猫操作→玄関→縄張り→アイコン接触→戦闘を実操作確認" },
+    "buddy_select": { "pass": true, "note": "攻撃・防御・回復のお供選択と戦闘同行" }
   }
 }
