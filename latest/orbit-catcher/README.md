@@ -1,6 +1,8 @@
-# Orbit Catcher: Gate Run
+# にゃんパニ！
 
-CODEXGATE向けの単一HTMLゲームです。巨大マップを移動し、無尽蔵に出るゾンビを撃ちながらゲートへ到達します。ゲートを突破するたびに周回が進み、敵の数と強さが上がります。
+CODEXGATE向けの単一HTML猫アクションです。自宅から縄張りマップへ出て、危険度・報酬付き事件を選ぶと既存の軽快なシューティング戦闘が始まります。
+
+舞台は猫が暮らす空き地・路地・河川敷・公園です。土管、木箱、柵、タイヤ、ゴミ箱が進路を変える障害物になります。
 
 ## Controls
 
@@ -10,15 +12,23 @@ CODEXGATE向けの単一HTMLゲームです。巨大マップを移動し、無�
 - PC: Hold Shift to boost, and Ctrl for precision movement.
 - Touch/PC pointer: Use the stick, boost, and precision buttons below the game area.
 - Touch/PC pointer: The two right-side buttons use toolbox items.
+- Touch/PC pointer: The pink button activates the ultimate when its gauge reaches 100%.
+- Touch: Quickly flick the movement stick for a short speed burst. This does not grant invulnerability.
 - Pause/resume: Use the side control button, or press P while playing.
 
 ## Gameplay
 
+- Campaign: `自宅 → 縄張りマップ → 事件 → 戦闘 → 報酬`を固定1画面で進行します。
+- Events: 空き地・路地裏・河川敷の事件は危険度と猫小判報酬が異なります。
 - Goal: Defeat the gate boss, then enter the green gate.
 - Gate boss: Each gate starts locked by a boss-class enemy guarding the entrance. The gate opens only after the boss is defeated.
 - Enemies: Walkers, runners, brutes, spitters, armored zombies, bloaters, summoners, and stalkers.
 - Drops: Some enemies drop ammo, repair, or weapon pickups. Stronger or special enemies have better odds for useful drops.
-- Allies: Weak survivors can appear randomly on the map. Touch them to recruit them. Rookies, medics, scouts, and guards fight beside you, but they have low durability and can be defeated quickly.
+- Rescue: Tough elite guards surround captive cats and use telegraphed charges. Defeat every guard, then touch the cat to recruit it.
+- Allies: Rookies use twin shots, medics heal, scouts fire homing shots, and guards use heavy piercing shots.
+- Difficulty: Stage 1 teaches the basics; proximity acceleration begins later, and telegraphed enemy charges expand from stage 3 onward.
+- Ultimate: Kills slowly charge the gauge. At 100%, `肉球乱舞・猫嵐` clears hostile shots and damages all enemies with a lightweight paw storm.
+- Performance limits: 6 allies, 48 ally shots, 120 enemies, 340 total shots, and 160 particles.
 - Weapon: Starts as a single-shot gun that fires automatically.
 - Powerups: Weapon pickups can temporarily switch to burst, spread, or pierce shots.
 - Items: Ammo, repairs, and weapon pickups are used automatically.

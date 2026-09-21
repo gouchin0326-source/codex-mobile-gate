@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NYAN GATE RUN</title>
+  <title>にゃんパニ！</title>
   <style>
     :root { --bg:#0b1020; --panel:#ffffff; --ink:#172033; --muted:#667085; --line:#d9dee7; --blue:#2563eb; --cyan:#0891b2; --green:#16a34a; --red:#dc2626; --amber:#d97706; --violet:#7c3aed; }
     * { box-sizing:border-box; }
@@ -51,7 +51,8 @@
     .overlay { position:absolute; inset:auto 12px 12px 12px; display:flex; justify-content:space-between; align-items:end; gap:8px; color:#dbeafe; pointer-events:none; font-size:12px; }
     .badge { display:inline-flex; align-items:center; min-height:26px; padding:3px 9px; border:1px solid rgba(255,255,255,.18); border-radius:999px; background:rgba(15,23,42,.72); backdrop-filter:blur(6px); }
     .status-line { min-height:18px; color:var(--muted); font-size:12px; }
-    .controls { width:min(100%, 920px); justify-self:center; background:#fff; border:1px solid var(--line); border-radius:8px; padding:10px; display:grid; grid-template-columns:1fr auto auto; gap:10px; align-items:center; }
+    .controls { width:min(100%, 920px); justify-self:center; background:#fff; border:1px solid var(--line); border-radius:8px; padding:10px; display:grid; grid-template-columns:1fr auto auto; gap:10px; align-items:center; transition:opacity .18s; }
+    .controls.inactive { opacity:.28; pointer-events:none; }
     .stick { width:138px; height:138px; border:1px solid #cbd5e1; border-radius:999px; background:radial-gradient(circle at center, #eff6ff 0 30%, #dbeafe 31% 100%); position:relative; justify-self:center; touch-action:none; user-select:none; }
     .stick::before { content:""; position:absolute; inset:20px; border:1px dashed #93c5fd; border-radius:999px; }
     .stick-knob { width:56px; height:56px; border-radius:999px; background:#1d4ed8; color:#fff; display:grid; place-items:center; font-size:12px; font-weight:800; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); box-shadow:0 8px 20px rgba(37,99,235,.28); pointer-events:none; }
@@ -96,11 +97,12 @@
       .dash { background:#7c3aed; border-color:#a78bfa; }
       .use-slot span { font-size:8px; }
       .control-note { display:none; }
+      .controls.inactive { opacity:.28; pointer-events:none; }
     }
   </style>
 </head>
 <body>
-  <header><h1>NYAN GATE RUN</h1><div class="muted">肉球でゲートを駆け抜けろ</div></header>
+  <header><h1>にゃんパニ！</h1><div class="muted">猫の縄張りドタバタ大作戦</div></header>
   <main>
     <aside>
       <div class="settings-head"><strong>設定・記録</strong><button class="secondary" id="settings-close" type="button">閉じる</button></div>
@@ -122,7 +124,7 @@
       <div class="panel legend"><div><span class="dot player"></span> 自機</div><div><span class="dot goal"></span> ゲート: 到達でクリア</div><div><span class="dot zombie"></span> ゾンビ: 接触で耐久低下</div><div><span class="dot item"></span> 弾薬/武器/回復</div></div>
     </aside>
     <div class="play-wrap">
-      <div class="stage"><canvas id="game" width="920" height="690" aria-label="NYAN GATE RUNのゲーム画面"></canvas><div class="mobile-actions"><button id="mobile-start" type="button" aria-label="ゲーム開始">▶</button><button id="mobile-settings" type="button" aria-label="設定を開く">⚙</button></div><div class="overlay"><span class="badge" id="state">準備中</span><span class="badge" id="effect">通常</span></div></div>
+      <div class="stage"><canvas id="game" width="920" height="690" aria-label="にゃんパニ！のゲーム画面"></canvas><div class="mobile-actions"><button id="mobile-start" type="button" aria-label="画面を切り替える">地図</button><button id="mobile-settings" type="button" aria-label="設定を開く">⚙</button></div><div class="overlay"><span class="badge" id="state">自宅</span><span class="badge" id="effect">通常</span></div></div>
       <div class="controls" aria-label="ゲーム操作パネル"><div class="stick" id="stick" aria-label="移動スティック" role="application"><div class="stick-knob" id="stickKnob">移動</div></div><button class="round dash" id="dash" type="button" aria-label="緊急回避"><strong>回避</strong><span id="dash-state">OK</span></button><button class="round ultimate" id="ultimate" type="button" aria-label="必殺技"><strong>必殺</strong><span id="ultimate-state">0%</span></button><button class="round use-slot" id="use-slot-0" aria-label="道具1"><strong>-</strong><span>道具1</span></button><button class="round use-slot" id="use-slot-1" aria-label="道具2"><strong>-</strong><span>道具2</span></button><div class="control-note">射撃とリロードは自動。回避中は無敵。PCはWASD/矢印、Spaceで回避。</div></div>
     </div>
   </main>
@@ -172,6 +174,7 @@
     const abilityRadar = document.querySelector("#ability-radar");
     const abilityCtx = abilityRadar.getContext("2d");
     const weaponLoadoutEl = document.querySelector("#weapon-loadout");
+    const controlsPanel = document.querySelector(".controls");
     const bestKey = "codex.orbit-catcher.best.v4";
     const missionPool = [
       { id:"reach-gate", label:"ゲートに1回到達する", target:1, reward:180, metric:"clears" },
@@ -215,6 +218,12 @@
     let weaponSlots = [{type:"single",level:1}];
     let player = { x:180, y:180, r:16, speed:205, angle:0, facing:0, walking:false, walkPhase:0 };
     let goal = { x:2850, y:2050, r:46 };
+    const territoryEvents = [
+      { id:"vacant", name:"空き地SOS", danger:1, reward:80, x:.24, y:.34, color:"#fbbf24" },
+      { id:"alley", name:"路地裏パニック", danger:2, reward:140, x:.70, y:.28, color:"#fb7185" },
+      { id:"river", name:"河川敷の大騒動", danger:3, reward:220, x:.57, y:.68, color:"#a78bfa" }
+    ];
+    let gameScene = "home", selectedTerritoryEvent = null, territoryCoins = 0, territoryRank = 1;
     let enemies = [], bullets = [], items = [], inventory = [], recruits = [], allies = [], particles = [], trail = [], skillEffects = [], boss = null, lastResult = null, mission = pickMission();
     function rand(min, max) { return min + Math.random() * (max - min); }
     function clamp(value, min, max) { return Math.max(min, Math.min(max, value)); }
@@ -225,13 +234,17 @@
     function missionValue() { if (mission.metric === "clears") return clears; if (mission.metric === "kills") return kills; if (mission.metric === "ammoScore") return clip + reserveAmmo > 0 ? score : 0; if (mission.metric === "distance") return distanceTravelled; if (mission.metric === "brutes") return brutes; return 0; }
     function missionComplete() { return missionValue() >= mission.target; }
     function updateMissionHud() { const value = Math.min(mission.target, Math.floor(missionValue())); const percent = clamp((value / mission.target) * 100, 0, 100); missionTextEl.textContent = mission.label; missionRewardEl.textContent = missionComplete() ? `達成 +${mission.reward}` : `+${mission.reward}`; missionFillEl.style.width = `${percent}%`; missionProgressEl.textContent = `${value} / ${mission.target}`; }
+    function setScene(scene) { gameScene = scene; running = scene === "battle" && running; controlsPanel.classList.toggle("inactive", scene !== "battle"); startButton.textContent = scene === "home" ? "縄張りへ" : scene === "map" ? "自宅へ" : "やり直す"; mobileStartButton.textContent = scene === "home" ? "地図" : scene === "map" ? "家" : "↻"; stateEl.textContent = scene === "home" ? "自宅" : scene === "map" ? "縄張り" : "進行中"; }
+    function openTerritory() { running = false; paused = false; selectedTerritoryEvent = null; setScene("map"); }
+    function startTerritoryEvent(eventData) { selectedTerritoryEvent = eventData; resetRound(); }
+    function primaryAction() { if (gameScene === "home") openTerritory(); else if (gameScene === "map") setScene("home"); else resetRound(); }
     function resetRound() {
-      score = 0; wave = 1; hp = 100; clip = 12; reserveAmmo = 90; shieldTime = 0; catnipTime = 0; catPawCooldown = 0; feverTime = 0; catLives = 1; catCouncil = 0; kills = 0; clears = 0; brutes = 0; alliesMet = 0; alliesLost = 0; distanceTravelled = 0; fireCooldown = 0; reloadTimer = 0; enemyTimer = .16; itemTimer = 2; recruitTimer = 7; droneCooldown = .6; orbitalCooldown = 1.4; novaCharge = 0; ultimateCharge = 0; ultimateLock = 0; rescueSerial = 0; flickBoostTime = 0; flickCooldown = 0; flickVX = 0; flickVY = 0; pawStorm = null; cutin = null; flashUntil = 0; missionAnnounced = false; combo = 0; comboTimer = 0; dashCooldown = 0; invulnerable = 0;
+      score = 0; wave = selectedTerritoryEvent?.danger || 1; hp = 100; clip = 12; reserveAmmo = 90; shieldTime = 0; catnipTime = 0; catPawCooldown = 0; feverTime = 0; catLives = 1; catCouncil = 0; kills = 0; clears = 0; brutes = 0; alliesMet = 0; alliesLost = 0; distanceTravelled = 0; fireCooldown = 0; reloadTimer = 0; enemyTimer = .16; itemTimer = 2; recruitTimer = 7; droneCooldown = .6; orbitalCooldown = 1.4; novaCharge = 0; ultimateCharge = 0; ultimateLock = 0; rescueSerial = 0; flickBoostTime = 0; flickCooldown = 0; flickVX = 0; flickVY = 0; pawStorm = null; cutin = null; flashUntil = 0; missionAnnounced = false; combo = 0; comboTimer = 0; dashCooldown = 0; invulnerable = 0;
       weapon = { type:"single", level:1, ttl:0, damage:24 };
       upgrades = { attack:1, speed:1, defense:1 }; weaponSlots = [{type:"single",level:1}];
       player = { x:180, y:180, r:16, speed:205, angle:0, facing:0, walking:false, walkPhase:0 };
-      enemies = []; bullets = []; items = []; inventory = []; recruits = []; allies = []; particles = []; trail = []; skillEffects = []; generateStage(1); running = true; paused = false; lastTime = performance.now();
-      startButton.textContent = "やり直す"; mobileStartButton.textContent = "↻"; pauseButton.textContent = "一時停止"; flash(`STAGE 1 ${terrain.theme.name}`); updateHud(); ensureAudio();
+      enemies = []; bullets = []; items = []; inventory = []; recruits = []; allies = []; particles = []; trail = []; skillEffects = []; generateStage(wave); running = true; paused = false; lastTime = performance.now(); setScene("battle");
+      pauseButton.textContent = "一時停止"; flash(selectedTerritoryEvent ? `${selectedTerritoryEvent.name} 危険度${wave}` : `STAGE ${wave} ${terrain.theme.name}`); updateHud(); ensureAudio();
     }
     function updateHud() {
       scoreEl.textContent = score; bestEl.textContent = best; waveEl.textContent = wave; hpEl.textContent = Math.max(0, Math.ceil(hp)); ammoEl.textContent = reloadTimer > 0 ? `装填中/${reserveAmmo}` : `${clip}/${reserveAmmo}`; weaponEl.textContent = `${weaponSlots.length}/3`; killsEl.textContent = kills;
@@ -477,11 +490,12 @@
       items.forEach((item) => item.life -= dt); items = items.filter((item) => { if (item.life <= 0) return false; if (distance(item, player) > item.r + player.r) return true; collectItem(item); burst(item.x, item.y, item.type === "weapon" ? "#a78bfa" : item.type === "ammo" ? "#f59e0b" : item.type === "heal" ? "#22c55e" : "#38bdf8", 13); return false; });
       if (boss && boss.hp <= 0) { score += 220 + wave * 80; brutes += 1;if(ultimateLock<=0)ultimateCharge=Math.min(100,ultimateCharge+20); burst(boss.x, boss.y, "#f59e0b", 34); items.push({ x:boss.x, y:boss.y, r:16, type:"weapon", life:20 }, { x:boss.x + 28, y:boss.y + 18, r:15, type:"ammo", life:20 }); boss = null; flash("番人撃破: ゲート解放"); tone(980, .18, "sine", .05); }
       updateParticles(dt);const view=viewSize();camera.x=clamp(player.x-view.w/2,0,world.w-view.w);camera.y=clamp(player.y-view.h/2,0,world.h-view.h);
-      if (distance(player, goal) < player.r + goal.r) { if (boss) flash("番人を倒せ"); else clearGate(); }
+      if (distance(player, goal) < player.r + goal.r) { if (boss) flash("番人を倒せ"); else if(selectedTerritoryEvent) finishTerritoryEvent(); else clearGate(); }
       if (missionComplete() && !missionAnnounced) { missionAnnounced = true; flash("ミッション達成"); }
       if (hp <= 0) endRound(false); updateHud();
     }
     function clearGate() { clears += 1; wave += 1; score += 250 + wave * 60; reserveAmmo = Math.min(260, reserveAmmo + 55); hp = Math.min(100, hp + 25); enemies=[]; bullets=[]; items=[]; recruits=[]; particles=[]; trail=[]; generateStage(wave); for(let i=0;i<Math.min(18,5+wave);i++)spawnEnemy(); flash(`STAGE ${wave} ${terrain.theme.name}`); burst(player.x, player.y, "#22c55e", 30); tone(880, .16, "sine", .05); }
+    function finishTerritoryEvent() { const clearedEvent = selectedTerritoryEvent; clears += 1; score += 250 + clearedEvent.reward; territoryCoins += clearedEvent.reward; territoryRank += 1; if(score>best){best=score;writeBest(best)} lastResult={finishedAt:new Date().toISOString(),cleared:true,event:clearedEvent.name,reward:clearedEvent.reward,score,best,wave,hp:Math.ceil(hp),kills}; running=false; paused=false; selectedTerritoryEvent=null; setScene("map"); stateEl.textContent=`成功 +${clearedEvent.reward}小判`; updateHud(); tone(880,.16,"sine",.05); }
     function updateParticles(dt) { particles.forEach((p) => { p.life -= dt; p.x += p.vx * dt; p.y += p.vy * dt; p.vx *= .96; p.vy *= .96; }); particles = particles.filter((p) => p.life > 0); trail.forEach((t) => t.life -= dt); trail = trail.filter((t) => t.life > 0);skillEffects.forEach(e=>e.life-=dt);skillEffects=skillEffects.filter(e=>e.life>0); }
     function endRound(cleared) { running = false; paused = false; const missionDone = missionComplete(); if (missionDone) score += mission.reward; lastResult = { finishedAt:new Date().toISOString(), cleared, score, best:Math.max(best, score), wave, hp:Math.max(0, Number(hp.toFixed(1))), clip, reserveAmmo, inventory:[...inventory], kills, clears, brutes, distanceTravelled:Number(distanceTravelled.toFixed(1)), weapon:{ ...weapon }, mission:{ ...mission, complete:missionDone } }; if (score > best) { best = score; writeBest(best); stateEl.textContent = "最高記録"; } else { stateEl.textContent = "終了"; } startButton.textContent = "開始"; mobileStartButton.textContent = "▶"; pauseButton.textContent = "一時停止"; updateHud(); }
     function worldX(x) { return x - camera.x; }
@@ -523,14 +537,16 @@
     function drawParticles() { drawSkillEffects();bullets.forEach(drawCatWeaponOverlay);drawCuteCatFace(worldX(player.x),worldY(player.y));particles.forEach((p) => { ctx.globalAlpha = Math.max(0, p.life / p.max); ctx.fillStyle = p.color; ctx.beginPath(); ctx.arc(worldX(p.x), worldY(p.y), p.r, 0, Math.PI * 2); ctx.fill(); ctx.globalAlpha = 1; }); }
     function drawItemGlyph(type,x,y){ctx.save();ctx.translate(x,y);ctx.strokeStyle="#fff";ctx.fillStyle="#fff";ctx.lineWidth=3;ctx.lineCap="square";if(type==="attackUp"){ctx.beginPath();ctx.moveTo(0,-11);ctx.lineTo(8,-2);ctx.lineTo(3,-2);ctx.lineTo(3,10);ctx.lineTo(-3,10);ctx.lineTo(-3,-2);ctx.lineTo(-8,-2);ctx.closePath();ctx.fill()}else if(type==="speedUp"){[-6,2].forEach(o=>{ctx.beginPath();ctx.moveTo(-8,o-4);ctx.lineTo(0,o);ctx.lineTo(-8,o+4);ctx.stroke();ctx.beginPath();ctx.moveTo(1,o-4);ctx.lineTo(9,o);ctx.lineTo(1,o+4);ctx.stroke()})}else if(type==="defenseUp"||type==="shield"){ctx.beginPath();ctx.moveTo(0,-11);ctx.lineTo(9,-7);ctx.lineTo(7,5);ctx.lineTo(0,11);ctx.lineTo(-7,5);ctx.lineTo(-9,-7);ctx.closePath();ctx.stroke()}else if(type==="heal"||type==="medkit"){ctx.fillRect(-3,-11,6,22);ctx.fillRect(-11,-3,22,6)}else if(type==="ammo"){ctx.fillRect(-9,-8,5,16);ctx.fillRect(-2,-11,5,19);ctx.fillRect(5,-8,5,16)}else if(type==="catnip"){ctx.beginPath();ctx.arc(0,3,6,0,Math.PI*2);ctx.fill();[[-7,-5],[-2,-9],[4,-9],[8,-4]].forEach(([px,py])=>{ctx.beginPath();ctx.arc(px,py,3,0,Math.PI*2);ctx.fill()})}else if(type==="weapon"){for(let i=0;i<8;i++){const a=i*Math.PI/4,r=i%2?5:11,px=Math.cos(a)*r,py=Math.sin(a)*r;i?ctx.lineTo(px,py):ctx.moveTo(px,py)}ctx.closePath();ctx.fill()}else if(type==="bomb"){ctx.beginPath();ctx.arc(0,2,9,0,Math.PI*2);ctx.fill();ctx.strokeStyle="#fff";ctx.beginPath();ctx.moveTo(4,-7);ctx.lineTo(9,-12);ctx.stroke()}else{ctx.font="900 10px Segoe UI";ctx.textAlign="center";ctx.fillText(itemIcons[type]||"◆",0,4)}ctx.restore()}
     function drawItem(item) { const colors={weapon:"#a78bfa",heal:"#22c55e",medkit:"#22c55e",bomb:"#ef4444",shield:"#38bdf8",catnip:"#86efac",speedUp:"#22d3ee",defenseUp:"#3b82f6",attackUp:"#f43f5e",ammo:"#f59e0b"},color=colors[item.type]||"#f59e0b",x=worldX(item.x),y=worldY(item.y),pulse=1+Math.sin(performance.now()/120+item.x)*.06;ctx.save();ctx.translate(x,y);ctx.scale(pulse,pulse);ctx.shadowColor=color;ctx.shadowBlur=18;ctx.fillStyle=color+"cc";ctx.beginPath();ctx.arc(0,0,item.r+5,0,Math.PI*2);ctx.fill();ctx.strokeStyle="#ffffffcc";ctx.lineWidth=2;ctx.stroke();ctx.restore();drawItemGlyph(item.type,x,y); }
-    function drawTextCenter(text, subtext) { if(text==="▶で開始"){text="NYAN GATE RUN";subtext="▶ 肉球で駆け抜けろ"}ctx.fillStyle = "rgba(219,234,254,.95)"; ctx.font = "700 30px Segoe UI, sans-serif"; ctx.textAlign = "center"; ctx.fillText(text, canvas.width / 2, canvas.height / 2 - 10); if (subtext) { ctx.font = "500 16px Segoe UI, sans-serif"; ctx.fillText(subtext, canvas.width / 2, canvas.height / 2 + 24); } }
+    function drawTextCenter(text, subtext) { if(text==="▶で開始"){text="にゃんパニ！";subtext="▶ 猫の縄張りへ"}ctx.fillStyle = "rgba(219,234,254,.95)"; ctx.font = "700 30px Segoe UI, sans-serif"; ctx.textAlign = "center"; ctx.fillText(text, canvas.width / 2, canvas.height / 2 - 10); if (subtext) { ctx.font = "500 16px Segoe UI, sans-serif"; ctx.fillText(subtext, canvas.width / 2, canvas.height / 2 + 24); } }
     function drawHudBar(x,y,w,value,color,label){ctx.fillStyle="rgba(2,6,23,.78)";ctx.fillRect(x,y,w,10);ctx.fillStyle=color;ctx.fillRect(x+1,y+1,(w-2)*clamp(value,0,1),8);ctx.strokeStyle="#ffffff55";ctx.strokeRect(x+.5,y+.5,w-1,9);ctx.fillStyle="#f8fafc";ctx.font="800 10px Segoe UI";ctx.textAlign="left";ctx.fillText(label,x+4,y+8)}
     function drawGameGauges(){const stats=weaponStats();drawHudBar(10,29,130,hp/100,"#22c55e",`HP ${Math.max(0,Math.ceil(hp))}`);drawHudBar(10,43,130,clip/stats.magazine,"#f59e0b",reloadTimer>0?"AM 装填中":`AM ${clip}/${reserveAmmo}`);drawHudBar(10,57,130,1-dashCooldown/2.5,"#a78bfa",flickBoostTime>0?"フリック加速!":dashCooldown>0?`回避 ${dashCooldown.toFixed(1)}`:"回避 OK");drawHudBar(10,71,130,ultimateCharge/100,"#f472b6",ultimateLock>0?`必殺封印 ${ultimateLock.toFixed(1)}`:ultimateCharge>=100?"必殺 READY":`必殺 ${Math.floor(ultimateCharge)}%`)}
     function drawCutin(){if(!cutin)return;const progress=1-cutin.life/cutin.max,alpha=Math.min(1,progress/.14,cutin.life/.18),y=canvas.height*.28,slide=(1-Math.min(1,progress/.18))*-canvas.width*.15;ctx.save();ctx.globalAlpha=alpha;ctx.translate(slide,0);ctx.fillStyle="rgba(2,6,23,.9)";ctx.fillRect(0,y-39,canvas.width,78);ctx.fillStyle=cutin.color;ctx.fillRect(0,y-39,8,78);if(cutin.cat)drawCuteCatFace(48,y-2);ctx.textAlign="left";ctx.fillStyle="#fff";ctx.font="900 24px Segoe UI";ctx.fillText(cutin.title,cutin.cat?92:22,y-5);ctx.fillStyle=cutin.color;ctx.font="800 13px Segoe UI";ctx.fillText(cutin.sub,cutin.cat?92:22,y+20);ctx.restore()}
     function drawPaw(x,y,size,color,alpha){ctx.save();ctx.globalAlpha=alpha;ctx.fillStyle=color;ctx.shadowColor=color;ctx.shadowBlur=renderDetail===1?10:0;ctx.beginPath();ctx.ellipse(x,y+size*.22,size*.5,size*.42,0,0,Math.PI*2);ctx.fill();[[-.48,-.34],[-.17,-.56],[.2,-.56],[.5,-.3]].forEach(([dx,dy])=>{ctx.beginPath();ctx.arc(x+dx*size,y+dy*size,size*.19,0,Math.PI*2);ctx.fill()});ctx.restore()}
     function drawPawStorm(){if(!pawStorm)return;const p=1-pawStorm.life/pawStorm.max,alpha=Math.min(1,p/.12,pawStorm.life/.18);for(let i=0;i<18;i++){const x=(i*83+p*240)%canvas.width,y=(i*137+Math.sin(p*8+i)*35+canvas.height)%canvas.height,size=10+(i%4)*3;drawPaw(x,y,size,i%2?"#f9a8d4":"#f472b6",alpha*.86)}}
     function drawMiniRadar(){const values=abilityValues(),cx=332,cy=95,r=23;ctx.save();ctx.fillStyle="rgba(2,6,23,.84)";ctx.fillRect(287,58,89,101);ctx.strokeStyle="rgba(103,232,249,.45)";ctx.strokeRect(287.5,58.5,88,100);ctx.fillStyle="#e0f2fe";ctx.font="800 9px Segoe UI";ctx.textAlign="center";ctx.fillText("猫能力",cx,69);for(let ring=1;ring<=5;ring++){ctx.strokeStyle="rgba(148,163,184,.22)";ctx.beginPath();values.forEach((_,i)=>{const a=-Math.PI/2+i*Math.PI*2/5,px=cx+Math.cos(a)*r*ring/5,py=cy+Math.sin(a)*r*ring/5;i?ctx.lineTo(px,py):ctx.moveTo(px,py)});ctx.closePath();ctx.stroke()}ctx.beginPath();values.forEach((v,i)=>{const a=-Math.PI/2+i*Math.PI*2/5,px=cx+Math.cos(a)*r*v/5,py=cy+Math.sin(a)*r*v/5;i?ctx.lineTo(px,py):ctx.moveTo(px,py)});ctx.closePath();ctx.fillStyle="rgba(34,211,238,.5)";ctx.fill();ctx.strokeStyle="#67e8f9";ctx.lineWidth=2;ctx.stroke();ctx.font="800 9px Segoe UI";ctx.fillStyle="#f8fafc";ctx.fillText(`攻${values[0]}  速${values[1]}  防${values[2]}`,cx,134);ctx.fillText(`避${values[3]}  武${values[4]}  命${catLives}`,cx,149);ctx.restore()}
-    function draw() { drawBackground();const z=viewZoom();ctx.save();ctx.scale(z,z);drawTerrain();drawGoal();items.forEach(drawItem);recruits.forEach(drawRecruit);bullets.forEach(drawProjectile);enemies.forEach(drawEnemy);drawBoss();allies.forEach(drawAlly);drawSpecialWeapons();drawPlayer();drawParticles();ctx.restore();ctx.fillStyle="rgba(219,234,254,.92)";ctx.font="600 13px Segoe UI, sans-serif";ctx.textAlign="left";ctx.fillText(`ST ${wave} ${terrain.theme.name} / Gate ${boss ? "LOCK" : "OPEN"}  S ${score}`,10,18);drawGameGauges();drawMiniRadar();if(combo>1){ctx.fillStyle="#fbbf24";ctx.font="800 18px Segoe UI, sans-serif";ctx.fillText(`${combo} COMBO`,10,101)}drawPawStorm();drawCutin();if(!running&&score===0)drawTextCenter("▶で開始","ゲートへ到達せよ");if(paused)drawTextCenter("一時停止中","設定を閉じると再開します")}
+    function drawHome() { const g=ctx.createLinearGradient(0,0,0,canvas.height);g.addColorStop(0,"#67c6e8");g.addColorStop(.56,"#fef3c7");g.addColorStop(.57,"#84a94b");g.addColorStop(1,"#365b35");ctx.fillStyle=g;ctx.fillRect(0,0,canvas.width,canvas.height);const cx=canvas.width/2,cy=canvas.height*.53;ctx.fillStyle="#fbbf24";ctx.fillRect(cx-92,cy-72,184,118);ctx.fillStyle="#ef4444";ctx.beginPath();ctx.moveTo(cx-116,cy-72);ctx.lineTo(cx,cy-145);ctx.lineTo(cx+116,cy-72);ctx.fill();ctx.fillStyle="#713f12";ctx.fillRect(cx-24,cy-10,48,56);drawCuteCatFace(cx,cy+76);ctx.textAlign="center";ctx.fillStyle="#fff";ctx.font="900 34px Segoe UI";ctx.fillText("にゃんパニ！",cx,64);ctx.font="700 14px Segoe UI";ctx.fillText("猫の縄張りドタバタ大作戦",cx,88);ctx.fillStyle="#111827dd";ctx.fillRect(cx-100,canvas.height-78,200,48);ctx.fillStyle="#fde047";ctx.font="900 18px Segoe UI";ctx.fillText("縄張りへ出発！",cx,canvas.height-48);ctx.fillStyle="#fff";ctx.font="700 12px Segoe UI";ctx.fillText(`猫小判 ${territoryCoins}　縄張りLv ${territoryRank}`,cx,canvas.height-10);}
+    function drawTerritoryMap() { const g=ctx.createLinearGradient(0,0,0,canvas.height);g.addColorStop(0,"#bae6fd");g.addColorStop(1,"#4d7c3b");ctx.fillStyle=g;ctx.fillRect(0,0,canvas.width,canvas.height);ctx.strokeStyle="#fef3c7aa";ctx.lineWidth=12;ctx.setLineDash([18,12]);ctx.beginPath();ctx.moveTo(canvas.width*.15,canvas.height*.82);territoryEvents.forEach(e=>ctx.lineTo(canvas.width*e.x,canvas.height*e.y));ctx.stroke();ctx.setLineDash([]);ctx.fillStyle="#111827dd";ctx.fillRect(10,10,canvas.width-20,52);ctx.fillStyle="#fff";ctx.textAlign="left";ctx.font="900 20px Segoe UI";ctx.fillText("猫の縄張りマップ",24,34);ctx.font="700 12px Segoe UI";ctx.fillText(`事件をタップ　小判 ${territoryCoins}`,24,52);territoryEvents.forEach(e=>{const x=canvas.width*e.x,y=canvas.height*e.y,r=Math.max(28,Math.min(42,canvas.width*.09));ctx.fillStyle="#111827dd";ctx.beginPath();ctx.arc(x,y,r+8,0,Math.PI*2);ctx.fill();ctx.fillStyle=e.color;ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);ctx.fill();ctx.fillStyle="#111827";ctx.textAlign="center";ctx.font="900 18px Segoe UI";ctx.fillText("！",x,y+6);ctx.fillStyle="#fff";ctx.font="900 13px Segoe UI";ctx.fillText(e.name,x,y+r+24);ctx.fillStyle="#fef08a";ctx.font="800 11px Segoe UI";ctx.fillText(`危険 ${"★".repeat(e.danger)}　+${e.reward}小判`,x,y+r+40)});ctx.fillStyle="#fbbf24";ctx.fillRect(canvas.width*.08,canvas.height*.78,70,48);ctx.fillStyle="#713f12";ctx.fillRect(canvas.width*.08+25,canvas.height*.78+18,20,30);ctx.fillStyle="#fff";ctx.font="800 11px Segoe UI";ctx.textAlign="center";ctx.fillText("自宅",canvas.width*.08+35,canvas.height*.78+64);}
+    function draw() { if(gameScene==="home"){drawHome();return}if(gameScene==="map"){drawTerritoryMap();return}drawBackground();const z=viewZoom();ctx.save();ctx.scale(z,z);drawTerrain();drawGoal();items.forEach(drawItem);recruits.forEach(drawRecruit);bullets.forEach(drawProjectile);enemies.forEach(drawEnemy);drawBoss();allies.forEach(drawAlly);drawSpecialWeapons();drawPlayer();drawParticles();ctx.restore();ctx.fillStyle="rgba(219,234,254,.92)";ctx.font="600 13px Segoe UI, sans-serif";ctx.textAlign="left";ctx.fillText(`ST ${wave} ${terrain.theme.name} / Gate ${boss ? "LOCK" : "OPEN"}  S ${score}`,10,18);drawGameGauges();drawMiniRadar();if(combo>1){ctx.fillStyle="#fbbf24";ctx.font="800 18px Segoe UI, sans-serif";ctx.fillText(`${combo} COMBO`,10,101)}drawPawStorm();drawCutin();if(!running&&score===0)drawTextCenter("▶で開始","ゲートへ到達せよ");if(paused)drawTextCenter("一時停止中","設定を閉じると再開します")}
     function syncViewportHeight(){const height=Math.floor(window.visualViewport?.height||window.innerHeight);document.documentElement.style.setProperty("--app-height",`${height}px`);}
     function resizeCanvas() { const rect=canvas.getBoundingClientRect(); if (matchMedia("(max-width:560px)").matches) { canvas.width=Math.max(240,Math.round(rect.width)); canvas.height=Math.max(240,Math.round(rect.height)); } else { canvas.width=920; canvas.height=690; } draw(); }
     function loop(now) { const dt = Math.min(.033, (now - lastTime) / 1000 || 0); lastTime = now; update(dt, now); draw(); requestAnimationFrame(loop); }
@@ -545,10 +561,11 @@
     function triggerFlickBoost(dx,dy,duration){const len=Math.hypot(dx,dy);if(!running||paused||flickCooldown>0||duration>.42||len<30)return false;flickVX=dx/len;flickVY=dy/len;flickBoostTime=.34;flickCooldown=1.6;flash("フリック猫ダッシュ!");burst(player.x,player.y,"#67e8f9",12);tone(740,.06,"sine",.03);return true}
     function finishStick(event){triggerFlickBoost(event.clientX-stickState.gestureX,event.clientY-stickState.gestureY,(performance.now()-stickState.gestureAt)/1000);resetStick()}
     function resetStick() { stickState.active = false; stickState.x = 0; stickState.y = 0; stickState.power = 0; stickState.pointerId = null; stickKnob.style.transform = "translate(-50%, -50%)"; }
+    function handleSceneTap(event) { const rect=canvas.getBoundingClientRect(),x=(event.clientX-rect.left)*canvas.width/rect.width,y=(event.clientY-rect.top)*canvas.height/rect.height;if(gameScene==="home"){if(y>canvas.height-105)openTerritory();return true}if(gameScene==="map"){const hit=territoryEvents.find(e=>Math.hypot(x-canvas.width*e.x,y-canvas.height*e.y)<Math.max(50,canvas.width*.13));if(hit)startTerritoryEvent(hit);return true}return false; }
     window.addEventListener("keydown", (event) => { const key = event.key.toLowerCase(); if (["arrowleft", "arrowright", "arrowup", "arrowdown", "a", "d", "w", "s", "shift", "control"].includes(key)) { event.preventDefault(); keys.add(key); } if (key === "p" && running) togglePause(); });
     window.addEventListener("keyup", (event) => keys.delete(event.key.toLowerCase()));
     canvas.addEventListener("pointermove", (event) => { const rect = canvas.getBoundingClientRect(); pointer.x = (event.clientX - rect.left) * canvas.width / rect.width; pointer.y = (event.clientY - rect.top) * canvas.height / rect.height; pointer.active = true; });
-    canvas.addEventListener("pointerdown", (event) => { pointer.active = true; canvas.setPointerCapture(event.pointerId); });
+    canvas.addEventListener("pointerdown", (event) => { if(handleSceneTap(event))return;pointer.active = true; canvas.setPointerCapture(event.pointerId); });
     document.querySelectorAll("[data-control]").forEach((button) => { const name = button.dataset.control; button.addEventListener("pointerdown", (event) => { event.preventDefault(); setControl(name, true); button.setPointerCapture(event.pointerId); }); button.addEventListener("pointerup", () => setControl(name, false)); button.addEventListener("pointercancel", () => setControl(name, false)); button.addEventListener("pointerleave", () => setControl(name, false)); });
     stick.addEventListener("pointerdown", (event) => { event.preventDefault(); stickState.active = true; stickState.pointerId = event.pointerId;stickState.gestureX=event.clientX;stickState.gestureY=event.clientY;stickState.gestureAt=performance.now(); stick.setPointerCapture(event.pointerId); updateStickFromPointer(event); });
     stick.addEventListener("pointermove", (event) => { if (stickState.active && event.pointerId === stickState.pointerId) updateStickFromPointer(event); });
@@ -556,8 +573,8 @@
     stick.addEventListener("pointercancel", resetStick);
     dashButton.addEventListener("click", performDash);
     ultimateButton.addEventListener("click", activateUltimate);
-    startButton.addEventListener("click", resetRound);
-    mobileStartButton.addEventListener("click", resetRound);
+    startButton.addEventListener("click", primaryAction);
+    mobileStartButton.addEventListener("click", primaryAction);
     mobileSettingsButton.addEventListener("click", () => { settingsPaused = running && !paused; if (settingsPaused) togglePause(); document.body.classList.add("settings-open"); });
     settingsCloseButton.addEventListener("click", () => { document.body.classList.remove("settings-open"); if (settingsPaused && paused) togglePause(); settingsPaused = false; });
     pauseButton.addEventListener("click", togglePause);
@@ -573,7 +590,7 @@
     window.addEventListener("resize", () => { syncViewportHeight(); resizeCanvas(); });
     window.visualViewport?.addEventListener("resize", () => { syncViewportHeight(); resizeCanvas(); });
     new ResizeObserver(resizeCanvas).observe(document.querySelector(".stage"));
-    syncViewportHeight(); updateHud(); resizeCanvas(); requestAnimationFrame(loop);
+    syncViewportHeight(); updateHud(); setScene("home"); resizeCanvas(); requestAnimationFrame(loop);
   </script>
 </body>
 </html>
