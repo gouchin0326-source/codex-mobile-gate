@@ -1,8 +1,8 @@
 {
   "lane": "app",
-  "ts": "2026-09-22T21:33:21+09:00",
+  "ts": "2026-09-23T07:57:38+09:00",
   "artifact": "index.html",
-  "prompt": "猫研へGemini API生成の研究棚と、CodexなしでAI依頼・JSON取込・検証・保存・再生できる開発レーンを追加する。",
+  "prompt": "共通猫素材の猫パンチを8方向対応で高品質化し、跳躍飛びつき・全身ローリング・4猫×8方向×13仕草の自動検査を追加する。",
   "source": "codex+gemini",
   "backend": "codex",
   "model": "gpt-5.6-sol",
@@ -19,6 +19,9 @@
     "battle_sequence": { "pass": true, "note": "猫パンチ→連続爪→回転攻撃→突進を方向付きで連続再生" },
     "ai_research_shelf": { "pass": true, "note": "Gemini API生成3案を出典付きカード表示し、猫・4動作をワンタップ再生" },
     "codex_free_lane": { "pass": true, "note": "AI依頼文出力、JSON取込、許可action・方向・色・4動作検証、localStorage保存、研究棚JSON再出力" },
-    "offline_fallback": { "pass": true, "note": "API生成JSONの取得失敗時も内蔵3案で動作。APIキーは画面・保存領域へ保持しない" }
+    "offline_fallback": { "pass": true, "note": "API生成JSONの取得失敗時も内蔵3案で動作。APIキーは画面・保存領域へ保持しない" },
+    "cat_punch_v2": { "pass": true, "note": "溜め・踏込み・肩肘・丸い拳・肉球・残像・衝撃星。上下は中心軸上で真上/真下へ打撃" },
+    "acrobatics": { "pass": true, "note": "跳躍弧・空中伸身・着地を持つ飛びつきと、全身2π回転・軌跡・砂煙を持つローリング" },
+    "full_motion_audit": { "pass": true, "note": "HoshiCats v1.7.1、4猫×8方向×13仕草=416組合せ・2フレーム計832描画、失敗0" }
   }
 }
