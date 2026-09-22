@@ -1,6 +1,6 @@
 # CODEXGATE News Brief
 
-- 更新: 2026-09-22T10:18:01.309654+00:00
+- 更新: 2026-09-22T10:28:02.367771+00:00
 - 取得: GitHub Actions/Python
 - Codex: 0%想定（自動実行時）
 - 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。
@@ -9,4 +9,4 @@
 - [論文] 更新あり。必要時だけ確認 / LoRA Enhanced Contrastive Learning with SAS Vision Transformers / RBS-
 - [AI] AI/Codex運用の変化を確認 / Create your best tracks yet with Lyria 3.5 in Gemini. / Expanding Open
 - [技術] 更新あり。必要時だけ確認 / I said no and Apple said yes
-- [災害] 更新あり。必要時だけ確認 / M 1.0 - 9 km NNW of Borrego Springs, CA
+- [災害] 更新あり。必要時だけ確認 / M 1.9 - 55 km WNW of Valdez, Alaska
