@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-22T03:58:01.326773+00:00",
-  "lastSuccessAt": "2026-09-22T03:58:01.326773+00:00",
+  "updatedAt": "2026-09-22T04:08:00.838145+00:00",
+  "lastSuccessAt": "2026-09-22T04:08:00.838145+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -226,6 +226,25 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers",
+      "summary": "arXiv:2609.21061v1 Announce Type: new Abstract: Automatic target recognition (ATR) with synthetic aperture sonar (SAS) supports advanced naval capabilities, but deep learning is constrained by scarce target imagery, back",
+      "url": "https://arxiv.org/abs/2609.21061",
+      "published": "2026-09-22T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "制作",
+        "研究"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -242,25 +261,6 @@
         "AI",
         "重要",
         "開発"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers",
-      "summary": "arXiv:2609.21061v1 Announce Type: new Abstract: Automatic target recognition (ATR) with synthetic aperture sonar (SAS) supports advanced naval capabilities, but deep learning is constrained by scarce target imagery, back",
-      "url": "https://arxiv.org/abs/2609.21061",
-      "published": "2026-09-21T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "制作",
-        "研究"
       ]
     },
     {
@@ -530,6 +530,132 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
+      "summary": "arXiv:2609.20971v1 Announce Type: new Abstract: Long-context large language model inference is increasingly limited by prefill, where dense self-attention processes the entire prompt before generation begins. Sparse bloc",
+      "url": "https://arxiv.org/abs/2609.20971",
+      "published": "2026-09-22T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
+      "summary": "arXiv:2609.20974v1 Announce Type: new Abstract: In Mixture-of-Experts language models, the router typically selects and weights experts based on the token's hidden state, utilizing limited contextual information. We prop",
+      "url": "https://arxiv.org/abs/2609.20974",
+      "published": "2026-09-22T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "CaLR: Causal Latent Revision for Robust Diffusion Reasoning",
+      "summary": "arXiv:2609.20981v1 Announce Type: new Abstract: Autoregressive (AR) models suffer from local greediness, while diffusion language models (DLMs) often lack the strict causal structure required for reasoning. To combine th",
+      "url": "https://arxiv.org/abs/2609.20981",
+      "published": "2026-09-22T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Detecting Hallucination in LLMs: Tracing the Topological Signatures of Impaired Context Sharing",
+      "summary": "arXiv:2609.21096v1 Announce Type: new Abstract: In this work, we examine the topology of information flow patterns within attention graphs to effectively distinguish hallucinated from non-hallucinated responses. We analy",
+      "url": "https://arxiv.org/abs/2609.21096",
+      "published": "2026-09-22T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Decoupling Internal Representational Changes and Causal Importance in Fine-Tuned Large Language Models",
+      "summary": "arXiv:2609.21113v1 Announce Type: new Abstract: Fine-tuning has emerged as a widely adopted approach for adapting LLMs to a variety of downstream tasks. However, how it reshapes their internal mechanisms remains poorly u",
+      "url": "https://arxiv.org/abs/2609.21113",
+      "published": "2026-09-22T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "TinyCeNN-LM: Quality-Gated Conversion of Pretrained Attention with CeNN-Inspired Cellular-Recurrent Layers",
+      "summary": "arXiv:2609.21139v1 Announce Type: new Abstract: Replacing attention in a pretrained language model is a compatibility problem: a plausible substitute may alter representations expected by later layers. TinyCeNN-LM introd",
+      "url": "https://arxiv.org/abs/2609.21139",
+      "published": "2026-09-22T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Clinician-Grounded Quality Assurance for AI-Assisted Psychiatric Intake",
+      "summary": "arXiv:2609.21149v1 Announce Type: new Abstract: Before patients can use AI-assisted psychiatric intake systems, health systems need practical ways to routinely evaluate these tools against their clinical standards for qu",
+      "url": "https://arxiv.org/abs/2609.21149",
+      "published": "2026-09-22T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -584,132 +710,6 @@
       ]
     },
     {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
-      "summary": "arXiv:2609.20971v1 Announce Type: new Abstract: Long-context large language model inference is increasingly limited by prefill, where dense self-attention processes the entire prompt before generation begins. Sparse bloc",
-      "url": "https://arxiv.org/abs/2609.20971",
-      "published": "2026-09-21T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
-      "summary": "arXiv:2609.20974v1 Announce Type: new Abstract: In Mixture-of-Experts language models, the router typically selects and weights experts based on the token's hidden state, utilizing limited contextual information. We prop",
-      "url": "https://arxiv.org/abs/2609.20974",
-      "published": "2026-09-21T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "CaLR: Causal Latent Revision for Robust Diffusion Reasoning",
-      "summary": "arXiv:2609.20981v1 Announce Type: new Abstract: Autoregressive (AR) models suffer from local greediness, while diffusion language models (DLMs) often lack the strict causal structure required for reasoning. To combine th",
-      "url": "https://arxiv.org/abs/2609.20981",
-      "published": "2026-09-21T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Detecting Hallucination in LLMs: Tracing the Topological Signatures of Impaired Context Sharing",
-      "summary": "arXiv:2609.21096v1 Announce Type: new Abstract: In this work, we examine the topology of information flow patterns within attention graphs to effectively distinguish hallucinated from non-hallucinated responses. We analy",
-      "url": "https://arxiv.org/abs/2609.21096",
-      "published": "2026-09-21T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Decoupling Internal Representational Changes and Causal Importance in Fine-Tuned Large Language Models",
-      "summary": "arXiv:2609.21113v1 Announce Type: new Abstract: Fine-tuning has emerged as a widely adopted approach for adapting LLMs to a variety of downstream tasks. However, how it reshapes their internal mechanisms remains poorly u",
-      "url": "https://arxiv.org/abs/2609.21113",
-      "published": "2026-09-21T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "TinyCeNN-LM: Quality-Gated Conversion of Pretrained Attention with CeNN-Inspired Cellular-Recurrent Layers",
-      "summary": "arXiv:2609.21139v1 Announce Type: new Abstract: Replacing attention in a pretrained language model is a compatibility problem: a plausible substitute may alter representations expected by later layers. TinyCeNN-LM introd",
-      "url": "https://arxiv.org/abs/2609.21139",
-      "published": "2026-09-21T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Clinician-Grounded Quality Assurance for AI-Assisted Psychiatric Intake",
-      "summary": "arXiv:2609.21149v1 Announce Type: new Abstract: Before patients can use AI-assisted psychiatric intake systems, health systems need practical ways to routinely evaluate these tools against their clinical standards for qu",
-      "url": "https://arxiv.org/abs/2609.21149",
-      "published": "2026-09-21T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -749,64 +749,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T03:58:01.326773+00:00",
-      "lastAttemptAt": "2026-09-22T03:58:01.326773+00:00",
+      "lastSuccessAt": "2026-09-22T04:08:00.838145+00:00",
+      "lastAttemptAt": "2026-09-22T04:08:00.838145+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T03:58:01.326773+00:00",
-      "lastAttemptAt": "2026-09-22T03:58:01.326773+00:00",
+      "lastSuccessAt": "2026-09-22T04:08:00.838145+00:00",
+      "lastAttemptAt": "2026-09-22T04:08:00.838145+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T03:58:01.326773+00:00",
-      "lastAttemptAt": "2026-09-22T03:58:01.326773+00:00",
+      "lastSuccessAt": "2026-09-22T04:08:00.838145+00:00",
+      "lastAttemptAt": "2026-09-22T04:08:00.838145+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T03:58:01.326773+00:00",
-      "lastAttemptAt": "2026-09-22T03:58:01.326773+00:00",
+      "lastSuccessAt": "2026-09-22T04:08:00.838145+00:00",
+      "lastAttemptAt": "2026-09-22T04:08:00.838145+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T03:58:01.326773+00:00",
-      "lastAttemptAt": "2026-09-22T03:58:01.326773+00:00",
+      "lastSuccessAt": "2026-09-22T04:08:00.838145+00:00",
+      "lastAttemptAt": "2026-09-22T04:08:00.838145+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T03:58:01.326773+00:00",
-      "lastAttemptAt": "2026-09-22T03:58:01.326773+00:00",
+      "lastSuccessAt": "2026-09-22T04:08:00.838145+00:00",
+      "lastAttemptAt": "2026-09-22T04:08:00.838145+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T03:58:01.326773+00:00",
-      "lastAttemptAt": "2026-09-22T03:58:01.326773+00:00",
+      "lastSuccessAt": "2026-09-22T04:08:00.838145+00:00",
+      "lastAttemptAt": "2026-09-22T04:08:00.838145+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T03:58:01.326773+00:00",
-      "lastAttemptAt": "2026-09-22T03:58:01.326773+00:00",
+      "lastSuccessAt": "2026-09-22T04:08:00.838145+00:00",
+      "lastAttemptAt": "2026-09-22T04:08:00.838145+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

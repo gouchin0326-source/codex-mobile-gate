@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T03:58:01.326773+00:00",
+  "updatedAt": "2026-09-22T04:08:00.838145+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -76,6 +76,13 @@
       "url": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/"
     },
     {
+      "label": "論文",
+      "title": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers",
+      "why": "Codex/AI開発判断に関係",
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2609.21061"
+    },
+    {
       "label": "開発",
       "title": "Refreshed repository pull requests page generally available",
       "why": "Codex/AI開発判断に関係",
@@ -88,13 +95,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-09-21-github-enterprise-adds-credential-inventory-exports"
-    },
-    {
-      "label": "AI",
-      "title": "Expanding OpenAI Academy with new learning paths",
-      "why": "Codex/AI開発判断に関係",
-      "source": "ChatGPT / OpenAI公式",
-      "url": "https://openai.com/index/expanding-openai-academy-with-new-learning-paths"
     }
   ],
   "items": [
@@ -196,6 +196,25 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers",
+      "summary": "arXiv:2609.21061v1 Announce Type: new Abstract: Automatic target recognition (ATR) with synthetic aperture sonar (SAS) supports advanced naval capabilities, but deep learning is constrained by scarce target imagery, back",
+      "url": "https://arxiv.org/abs/2609.21061",
+      "published": "2026-09-22T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "制作",
+        "研究"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -248,25 +267,6 @@
         "AI",
         "重要",
         "開発"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers",
-      "summary": "arXiv:2609.21061v1 Announce Type: new Abstract: Automatic target recognition (ATR) with synthetic aperture sonar (SAS) supports advanced naval capabilities, but deep learning is constrained by scarce target imagery, back",
-      "url": "https://arxiv.org/abs/2609.21061",
-      "published": "2026-09-21T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "制作",
-        "研究"
       ]
     },
     {
@@ -414,60 +414,6 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Advisory Group on Mathematics and Artificial Intelligence",
-      "summary": "OpenAI is working with an independent Advisory Group on Mathematics and Artificial Intelligence to guide the review and communication of emerging AI results.",
-      "url": "https://openai.com/index/advisory-group-on-mathematics-and-ai",
-      "published": "2026-09-21T12:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Higgsfield AI ships new video features in a day with GPT-6 Astra",
-      "summary": "With GPT-6 Astra, Higgsfield AI makes video ad creation easier for small businesses and brings new creative tools to market faster.",
-      "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
-      "published": "2026-09-21T12:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "制作"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Building standards for the next phase of AI",
-      "summary": "OpenAI outlines a path to shared global AI standards, calling for coordinated evaluation, reporting, and governance to improve safety.",
-      "url": "https://openai.com/index/building-standards-next-phase-ai",
-      "published": "2026-09-21T10:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -478,7 +424,7 @@
       "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
       "summary": "arXiv:2609.20971v1 Announce Type: new Abstract: Long-context large language model inference is increasingly limited by prefill, where dense self-attention processes the entire prompt before generation begins. Sparse bloc",
       "url": "https://arxiv.org/abs/2609.20971",
-      "published": "2026-09-21T04:00:00+00:00",
+      "published": "2026-09-22T04:00:00+00:00",
       "score": 2,
       "tags": [
         "論文",
@@ -496,7 +442,7 @@
       "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
       "summary": "arXiv:2609.20974v1 Announce Type: new Abstract: In Mixture-of-Experts language models, the router typically selects and weights experts based on the token's hidden state, utilizing limited contextual information. We prop",
       "url": "https://arxiv.org/abs/2609.20974",
-      "published": "2026-09-21T04:00:00+00:00",
+      "published": "2026-09-22T04:00:00+00:00",
       "score": 2,
       "tags": [
         "論文",
@@ -514,7 +460,7 @@
       "title": "CaLR: Causal Latent Revision for Robust Diffusion Reasoning",
       "summary": "arXiv:2609.20981v1 Announce Type: new Abstract: Autoregressive (AR) models suffer from local greediness, while diffusion language models (DLMs) often lack the strict causal structure required for reasoning. To combine th",
       "url": "https://arxiv.org/abs/2609.20981",
-      "published": "2026-09-21T04:00:00+00:00",
+      "published": "2026-09-22T04:00:00+00:00",
       "score": 2,
       "tags": [
         "論文",
@@ -532,7 +478,61 @@
       "title": "Detecting Hallucination in LLMs: Tracing the Topological Signatures of Impaired Context Sharing",
       "summary": "arXiv:2609.21096v1 Announce Type: new Abstract: In this work, we examine the topology of information flow patterns within attention graphs to effectively distinguish hallucinated from non-hallucinated responses. We analy",
       "url": "https://arxiv.org/abs/2609.21096",
-      "published": "2026-09-21T04:00:00+00:00",
+      "published": "2026-09-22T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Decoupling Internal Representational Changes and Causal Importance in Fine-Tuned Large Language Models",
+      "summary": "arXiv:2609.21113v1 Announce Type: new Abstract: Fine-tuning has emerged as a widely adopted approach for adapting LLMs to a variety of downstream tasks. However, how it reshapes their internal mechanisms remains poorly u",
+      "url": "https://arxiv.org/abs/2609.21113",
+      "published": "2026-09-22T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "TinyCeNN-LM: Quality-Gated Conversion of Pretrained Attention with CeNN-Inspired Cellular-Recurrent Layers",
+      "summary": "arXiv:2609.21139v1 Announce Type: new Abstract: Replacing attention in a pretrained language model is a compatibility problem: a plausible substitute may alter representations expected by later layers. TinyCeNN-LM introd",
+      "url": "https://arxiv.org/abs/2609.21139",
+      "published": "2026-09-22T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Clinician-Grounded Quality Assurance for AI-Assisted Psychiatric Intake",
+      "summary": "arXiv:2609.21149v1 Announce Type: new Abstract: Before patients can use AI-assisted psychiatric intake systems, health systems need practical ways to routinely evaluate these tools against their clinical standards for qu",
+      "url": "https://arxiv.org/abs/2609.21149",
+      "published": "2026-09-22T04:00:00+00:00",
       "score": 2,
       "tags": [
         "論文",
@@ -700,5 +700,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-22T03:58:01.326773+00:00"
+  "lastSuccessAt": "2026-09-22T04:08:00.838145+00:00"
 }
