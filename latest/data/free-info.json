@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-22T13:38:01.525970+00:00",
-  "lastSuccessAt": "2026-09-22T13:38:01.525970+00:00",
+  "updatedAt": "2026-09-22T22:30:50.776199+00:00",
+  "lastSuccessAt": "2026-09-22T22:30:50.776199+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -127,7 +127,7 @@
     {
       "genre": "開発",
       "count": 15,
-      "signal": "Grok 4.7 is now available in GitHub Copilot / GitHub Copilot weekly releases — September 14 / Upcoming deprecation of selected GitHub Copilot models in mid-October",
+      "signal": "Grok 4.7 is now available in GitHub Copilot / Claude Opus 5.5 is now available in GitHub Copilot / OpenAI’s GPT-6 Sol and GPT-6 Luna now available",
       "decision": "CG開発・GitHub運用へ反映候補",
       "topUrl": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot",
       "score": 5
@@ -143,7 +143,7 @@
     {
       "genre": "AI",
       "count": 7,
-      "signal": "Create your best tracks yet with Lyria 3.5 in Gemini. / Expanding OpenAI Academy with new learning paths / Advisory Group on Mathematics and Artificial Intelligence",
+      "signal": "Create your best tracks yet with Lyria 3.5 in Gemini. / Parallel cut research time and cost in half with GPT‑6 Astra / Priorities and principles for effective third party assessmen",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
       "score": 4
@@ -151,17 +151,17 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "Looking forward to Git 2.56 - and 3.0",
+      "signal": "Design your programming languages right (2024)",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://lwn.net/SubscriberLink/1094575/2385e98583715c2b/",
-      "score": 1
+      "topUrl": "https://blog.veritates.love/design-it-right",
+      "score": 2
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.1 - 1 km E of The Geysers, CA",
+      "signal": "M 1.9 - 8 km WNW of Point Possession, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75439947",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026svisiq",
       "score": 1
     }
   ],
@@ -226,6 +226,25 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Parallel cut research time and cost in half with GPT‑6 Astra",
+      "summary": "GPT‑6 Astra allowed Parallel’s agents to research and synthesize labor-market data in half the time and at half the cost vs. prior models.",
+      "url": "https://openai.com/index/parallel-cuts-time-and-cost-with-astra",
+      "published": "2026-09-22T12:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -245,22 +264,21 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "ガジェット",
       "sourceWeight": 1,
-      "title": "Expanding OpenAI Academy with new learning paths",
-      "summary": "Explore new OpenAI Academy learning paths for employees, developers, leaders, educators, and students to build and demonstrate practical AI skills.",
-      "url": "https://openai.com/index/expanding-openai-academy-with-new-learning-paths",
-      "published": "2026-09-21T07:00:00+00:00",
-      "score": 3,
+      "title": "Design your programming languages right (2024)",
+      "summary": "Comments",
+      "url": "https://blog.veritates.love/design-it-right",
+      "published": "2026-09-22T05:21:15+00:00",
+      "score": 2,
       "tags": [
-        "AI",
-        "重要",
-        "開発"
+        "技術",
+        "制作"
       ]
     },
     {
@@ -285,30 +303,13 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.1 - 1 km E of The Geysers, CA",
-      "summary": "1 km E of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75439947",
-      "published": "2026-09-22T13:13:04.020000+00:00",
+      "title": "M 1.9 - 8 km WNW of Point Possession, Alaska",
+      "summary": "8 km WNW of Point Possession, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026svisiq",
+      "published": "2026-09-22T22:27:29.547000+00:00",
       "score": 1,
       "tags": [
         "災害"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Looking forward to Git 2.56 - and 3.0",
-      "summary": "Comments",
-      "url": "https://lwn.net/SubscriberLink/1094575/2385e98583715c2b/",
-      "published": "2026-09-22T05:23:55+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
       ]
     },
     {
@@ -317,12 +318,12 @@
       "label": "GitHub更新",
       "genre": "開発",
       "provider": null,
-      "topic": "技術",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "GitHub Copilot weekly releases — September 14",
-      "summary": "This week, GitHub Copilot adds new model selection options, code review updates, and Sentry integration in the Copilot app. There are also updates for admins, plus new agent features in… The post GitHub Copilot weekly re",
-      "url": "https://github.blog/changelog/2026-09-18-github-copilot-weekly-releases-september-14",
-      "published": "2026-09-18T19:21:22+00:00",
+      "title": "Claude Opus 5.5 is now available in GitHub Copilot",
+      "summary": "Claude Opus 5.5, Anthropic’s newest Opus model, is now available in GitHub Copilot. You can use it for agentic coding, long-running agentic tasks, and knowledge work. In early testing, Opus… The post Claude Opus 5.5 is n",
+      "url": "https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot",
+      "published": "2026-09-22T17:10:23+00:00",
       "score": 4,
       "tags": [
         "開発",
@@ -338,10 +339,10 @@
       "provider": null,
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "Upcoming deprecation of selected GitHub Copilot models in mid-October",
-      "summary": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on October 19th, 2026: Model Deprecation date… The post Upcom",
-      "url": "https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october",
-      "published": "2026-09-18T19:00:00+00:00",
+      "title": "OpenAI’s GPT-6 Sol and GPT-6 Luna now available",
+      "summary": "OpenAI’s GPT-6 family is expanding in GitHub Copilot with two additional models: GPT-6 Sol, and GPT-6 Luna. Joining the previously released GPT-6 Astra, these new options let you select the… The post OpenAI’s GPT-6 Sol a",
+      "url": "https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-gpt-6-luna-now-available",
+      "published": "2026-09-22T17:00:14+00:00",
       "score": 4,
       "tags": [
         "開発",
@@ -368,6 +369,25 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Priorities and principles for effective third party assessments",
+      "summary": "OpenAI outlines priorities and principles for rigorous, secure, and independent third-party AI safety assessments of frontier models and safeguards.",
+      "url": "https://openai.com/index/priorities-principles-third-party-assessments",
+      "published": "2026-09-22T00:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -386,21 +406,22 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Manage the code coverage ruleset condition with the REST API",
-      "summary": "You can now use the generally available REST API to manage the Restrict code coverage repository ruleset option, in addition to the existing UI support. This ruleset lets you enforce… The post Manage the code coverage ru",
-      "url": "https://github.blog/changelog/2026-09-18-manage-the-code-coverage-ruleset-condition-with-the-rest-api",
-      "published": "2026-09-18T19:23:49+00:00",
+      "title": "Expanding OpenAI Academy with new learning paths",
+      "summary": "Explore new OpenAI Academy learning paths for employees, developers, leaders, educators, and students to build and demonstrate practical AI skills.",
+      "url": "https://openai.com/index/expanding-openai-academy-with-new-learning-paths",
+      "published": "2026-09-21T07:00:00+00:00",
       "score": 3,
       "tags": [
-        "開発",
-        "重要"
+        "AI",
+        "重要",
+        "開発"
       ]
     },
     {
@@ -524,6 +545,42 @@
       "url": "https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/",
       "published": "2026-09-02T21:00:00+00:00",
       "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Introducing GPT-6 Sol and Luna",
+      "summary": "Meet GPT-6 Sol and Luna, two models that bring frontier intelligence to everyday work with different balances of capability and cost.",
+      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+      "published": "2026-09-22T18:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Security improvements for SSH",
+      "summary": "We’re removing several SSH algorithms, adding a new algorithm, and requiring larger RSA SSH keys to improve security. The changes are as follows: We’re removing the ability to use RSA… The post Security improvements for ",
+      "url": "https://github.blog/changelog/2026-09-22-security-improvements-for-ssh",
+      "published": "2026-09-22T14:11:47+00:00",
+      "score": 2,
       "tags": [
         "開発",
         "重要"
@@ -679,24 +736,6 @@
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Advisory Group on Mathematics and Artificial Intelligence",
-      "summary": "OpenAI is working with an independent Advisory Group on Mathematics and Artificial Intelligence to guide the review and communication of emerging AI results.",
-      "url": "https://openai.com/index/advisory-group-on-mathematics-and-ai",
-      "published": "2026-09-21T12:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
       "topic": "AI",
       "sourceWeight": 1,
       "title": "Higgsfield AI ships new video features in a day with GPT-6 Astra",
@@ -708,106 +747,70 @@
         "AI",
         "制作"
       ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Building standards for the next phase of AI",
-      "summary": "OpenAI outlines a path to shared global AI standards, calling for coordinated evaluation, reporting, and governance to improve safety.",
-      "url": "https://openai.com/index/building-standards-next-phase-ai",
-      "published": "2026-09-21T10:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "How V7 gives AI agents institutional memory",
-      "summary": "Using GPT-5.6, V7 turns scattered company files into context agents can use to complete complex, source-linked work.",
-      "url": "https://openai.com/index/v7",
-      "published": "2026-09-21T00:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T13:38:01.525970+00:00",
-      "lastAttemptAt": "2026-09-22T13:38:01.525970+00:00",
+      "lastSuccessAt": "2026-09-22T22:30:50.776199+00:00",
+      "lastAttemptAt": "2026-09-22T22:30:50.776199+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T13:38:01.525970+00:00",
-      "lastAttemptAt": "2026-09-22T13:38:01.525970+00:00",
+      "lastSuccessAt": "2026-09-22T22:30:50.776199+00:00",
+      "lastAttemptAt": "2026-09-22T22:30:50.776199+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T13:38:01.525970+00:00",
-      "lastAttemptAt": "2026-09-22T13:38:01.525970+00:00",
+      "lastSuccessAt": "2026-09-22T22:30:50.776199+00:00",
+      "lastAttemptAt": "2026-09-22T22:30:50.776199+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T13:38:01.525970+00:00",
-      "lastAttemptAt": "2026-09-22T13:38:01.525970+00:00",
+      "lastSuccessAt": "2026-09-22T22:30:50.776199+00:00",
+      "lastAttemptAt": "2026-09-22T22:30:50.776199+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T13:38:01.525970+00:00",
-      "lastAttemptAt": "2026-09-22T13:38:01.525970+00:00",
+      "lastSuccessAt": "2026-09-22T22:30:50.776199+00:00",
+      "lastAttemptAt": "2026-09-22T22:30:50.776199+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T13:38:01.525970+00:00",
-      "lastAttemptAt": "2026-09-22T13:38:01.525970+00:00",
+      "lastSuccessAt": "2026-09-22T22:30:50.776199+00:00",
+      "lastAttemptAt": "2026-09-22T22:30:50.776199+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T13:38:01.525970+00:00",
-      "lastAttemptAt": "2026-09-22T13:38:01.525970+00:00",
+      "lastSuccessAt": "2026-09-22T22:30:50.776199+00:00",
+      "lastAttemptAt": "2026-09-22T22:30:50.776199+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T13:38:01.525970+00:00",
-      "lastAttemptAt": "2026-09-22T13:38:01.525970+00:00",
+      "lastSuccessAt": "2026-09-22T22:30:50.776199+00:00",
+      "lastAttemptAt": "2026-09-22T22:30:50.776199+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

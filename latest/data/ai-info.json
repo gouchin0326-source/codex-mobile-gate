@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T13:38:01.525970+00:00",
+  "updatedAt": "2026-09-22T22:30:50.776199+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -10,7 +10,7 @@
       "genre": "開発",
       "count": 15,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "Grok 4.7 is now available in GitHub Copilot / GitHub Copilot weekly releases — September 14 / Upcoming deprecation of selected GitHub Copilot models in mid-October",
+      "signal": "Grok 4.7 is now available in GitHub Copilot / Claude Opus 5.5 is now available in GitHub Copilot / OpenAI’s GPT-6 Sol and GPT-6 Luna now available",
       "topUrl": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot",
       "score": 5
     },
@@ -26,7 +26,7 @@
       "genre": "AI",
       "count": 7,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "Create your best tracks yet with Lyria 3.5 in Gemini. / Expanding OpenAI Academy with new learning paths / Advisory Group on Mathematics and Artificial Intelligence",
+      "signal": "Create your best tracks yet with Lyria 3.5 in Gemini. / Parallel cut research time and cost in half with GPT‑6 Astra / Priorities and principles for effective third party assessments",
       "topUrl": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
       "score": 4
     },
@@ -34,9 +34,9 @@
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "Looking forward to Git 2.56 - and 3.0",
-      "topUrl": "https://lwn.net/SubscriberLink/1094575/2385e98583715c2b/",
-      "score": 1
+      "signal": "Design your programming languages right (2024)",
+      "topUrl": "https://blog.veritates.love/design-it-right",
+      "score": 2
     }
   ],
   "focus": [
@@ -49,17 +49,17 @@
     },
     {
       "label": "開発",
-      "title": "GitHub Copilot weekly releases — September 14",
+      "title": "Claude Opus 5.5 is now available in GitHub Copilot",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-18-github-copilot-weekly-releases-september-14"
+      "url": "https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot"
     },
     {
       "label": "開発",
-      "title": "Upcoming deprecation of selected GitHub Copilot models in mid-October",
+      "title": "OpenAI’s GPT-6 Sol and GPT-6 Luna now available",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october"
+      "url": "https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-gpt-6-luna-now-available"
     },
     {
       "label": "開発",
@@ -76,6 +76,13 @@
       "url": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/"
     },
     {
+      "label": "AI",
+      "title": "Parallel cut research time and cost in half with GPT‑6 Astra",
+      "why": "Codex/AI開発判断に関係",
+      "source": "ChatGPT / OpenAI公式",
+      "url": "https://openai.com/index/parallel-cuts-time-and-cost-with-astra"
+    },
+    {
       "label": "論文",
       "title": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers",
       "why": "Codex/AI開発判断に関係",
@@ -88,13 +95,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-09-21-refreshed-repository-pull-requests-page-generally-available"
-    },
-    {
-      "label": "開発",
-      "title": "GitHub Enterprise adds credential inventory exports",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-21-github-enterprise-adds-credential-inventory-exports"
     }
   ],
   "items": [
@@ -124,12 +124,12 @@
       "label": "GitHub更新",
       "genre": "開発",
       "provider": null,
-      "topic": "技術",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "GitHub Copilot weekly releases — September 14",
-      "summary": "This week, GitHub Copilot adds new model selection options, code review updates, and Sentry integration in the Copilot app. There are also updates for admins, plus new agent features in… The post GitHub Copilot weekly re",
-      "url": "https://github.blog/changelog/2026-09-18-github-copilot-weekly-releases-september-14",
-      "published": "2026-09-18T19:21:22+00:00",
+      "title": "Claude Opus 5.5 is now available in GitHub Copilot",
+      "summary": "Claude Opus 5.5, Anthropic’s newest Opus model, is now available in GitHub Copilot. You can use it for agentic coding, long-running agentic tasks, and knowledge work. In early testing, Opus… The post Claude Opus 5.5 is n",
+      "url": "https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot",
+      "published": "2026-09-22T17:10:23+00:00",
       "score": 4,
       "tags": [
         "開発",
@@ -145,10 +145,10 @@
       "provider": null,
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "Upcoming deprecation of selected GitHub Copilot models in mid-October",
-      "summary": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on October 19th, 2026: Model Deprecation date… The post Upcom",
-      "url": "https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october",
-      "published": "2026-09-18T19:00:00+00:00",
+      "title": "OpenAI’s GPT-6 Sol and GPT-6 Luna now available",
+      "summary": "OpenAI’s GPT-6 family is expanding in GitHub Copilot with two additional models: GPT-6 Sol, and GPT-6 Luna. Joining the previously released GPT-6 Astra, these new options let you select the… The post OpenAI’s GPT-6 Sol a",
+      "url": "https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-gpt-6-luna-now-available",
+      "published": "2026-09-22T17:00:14+00:00",
       "score": 4,
       "tags": [
         "開発",
@@ -196,6 +196,25 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Parallel cut research time and cost in half with GPT‑6 Astra",
+      "summary": "GPT‑6 Astra allowed Parallel’s agents to research and synthesize labor-market data in half the time and at half the cost vs. prior models.",
+      "url": "https://openai.com/index/parallel-cuts-time-and-cost-with-astra",
+      "published": "2026-09-22T12:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -233,6 +252,25 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Priorities and principles for effective third party assessments",
+      "summary": "OpenAI outlines priorities and principles for rigorous, secure, and independent third-party AI safety assessments of frontier models and safeguards.",
+      "url": "https://openai.com/index/priorities-principles-third-party-assessments",
+      "published": "2026-09-22T00:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -267,24 +305,6 @@
         "AI",
         "重要",
         "開発"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Manage the code coverage ruleset condition with the REST API",
-      "summary": "You can now use the generally available REST API to manage the Restrict code coverage repository ruleset option, in addition to the existing UI support. This ruleset lets you enforce… The post Manage the code coverage ru",
-      "url": "https://github.blog/changelog/2026-09-18-manage-the-code-coverage-ruleset-condition-with-the-rest-api",
-      "published": "2026-09-18T19:23:49+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
       ]
     },
     {
@@ -414,6 +434,42 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Introducing GPT-6 Sol and Luna",
+      "summary": "Meet GPT-6 Sol and Luna, two models that bring frontier intelligence to everyday work with different balances of capability and cost.",
+      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+      "published": "2026-09-22T18:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Security improvements for SSH",
+      "summary": "We’re removing several SSH algorithms, adding a new algorithm, and requiring larger RSA SSH keys to improve security. The changes are as follows: We’re removing the ability to use RSA… The post Security improvements for ",
+      "url": "https://github.blog/changelog/2026-09-22-security-improvements-for-ssh",
+      "published": "2026-09-22T14:11:47+00:00",
+      "score": 2,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -429,6 +485,24 @@
       "tags": [
         "開発",
         "重要"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "ガジェット",
+      "sourceWeight": 1,
+      "title": "Design your programming languages right (2024)",
+      "summary": "Comments",
+      "url": "https://blog.veritates.love/design-it-right",
+      "published": "2026-09-22T05:21:15+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "制作"
       ]
     },
     {
@@ -460,78 +534,6 @@
       "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
       "summary": "arXiv:2609.20974v1 Announce Type: new Abstract: In Mixture-of-Experts language models, the router typically selects and weights experts based on the token's hidden state, utilizing limited contextual information. We prop",
       "url": "https://arxiv.org/abs/2609.20974",
-      "published": "2026-09-22T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "CaLR: Causal Latent Revision for Robust Diffusion Reasoning",
-      "summary": "arXiv:2609.20981v1 Announce Type: new Abstract: Autoregressive (AR) models suffer from local greediness, while diffusion language models (DLMs) often lack the strict causal structure required for reasoning. To combine th",
-      "url": "https://arxiv.org/abs/2609.20981",
-      "published": "2026-09-22T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Detecting Hallucination in LLMs: Tracing the Topological Signatures of Impaired Context Sharing",
-      "summary": "arXiv:2609.21096v1 Announce Type: new Abstract: In this work, we examine the topology of information flow patterns within attention graphs to effectively distinguish hallucinated from non-hallucinated responses. We analy",
-      "url": "https://arxiv.org/abs/2609.21096",
-      "published": "2026-09-22T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Decoupling Internal Representational Changes and Causal Importance in Fine-Tuned Large Language Models",
-      "summary": "arXiv:2609.21113v1 Announce Type: new Abstract: Fine-tuning has emerged as a widely adopted approach for adapting LLMs to a variety of downstream tasks. However, how it reshapes their internal mechanisms remains poorly u",
-      "url": "https://arxiv.org/abs/2609.21113",
-      "published": "2026-09-22T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "TinyCeNN-LM: Quality-Gated Conversion of Pretrained Attention with CeNN-Inspired Cellular-Recurrent Layers",
-      "summary": "arXiv:2609.21139v1 Announce Type: new Abstract: Replacing attention in a pretrained language model is a compatibility problem: a plausible substitute may alter representations expected by later layers. TinyCeNN-LM introd",
-      "url": "https://arxiv.org/abs/2609.21139",
       "published": "2026-09-22T04:00:00+00:00",
       "score": 2,
       "tags": [
@@ -585,27 +587,27 @@
         ],
         "latest": [
           {
+            "title": "Parallel cut research time and cost in half with GPT‑6 Astra",
+            "url": "https://openai.com/index/parallel-cuts-time-and-cost-with-astra",
+            "published": "2026-09-22T12:00:00+00:00",
+            "source": "ChatGPT / OpenAI公式"
+          },
+          {
+            "title": "Priorities and principles for effective third party assessments",
+            "url": "https://openai.com/index/priorities-principles-third-party-assessments",
+            "published": "2026-09-22T00:00:00+00:00",
+            "source": "ChatGPT / OpenAI公式"
+          },
+          {
             "title": "Expanding OpenAI Academy with new learning paths",
             "url": "https://openai.com/index/expanding-openai-academy-with-new-learning-paths",
             "published": "2026-09-21T07:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           },
           {
-            "title": "Advisory Group on Mathematics and Artificial Intelligence",
-            "url": "https://openai.com/index/advisory-group-on-mathematics-and-ai",
-            "published": "2026-09-21T12:00:00+00:00",
-            "source": "ChatGPT / OpenAI公式"
-          },
-          {
-            "title": "Higgsfield AI ships new video features in a day with GPT-6 Astra",
-            "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
-            "published": "2026-09-21T12:00:00+00:00",
-            "source": "ChatGPT / OpenAI公式"
-          },
-          {
-            "title": "Building standards for the next phase of AI",
-            "url": "https://openai.com/index/building-standards-next-phase-ai",
-            "published": "2026-09-21T10:00:00+00:00",
+            "title": "Introducing GPT-6 Sol and Luna",
+            "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+            "published": "2026-09-22T18:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           }
         ]
@@ -700,5 +702,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-22T13:38:01.525970+00:00"
+  "lastSuccessAt": "2026-09-22T22:30:50.776199+00:00"
 }

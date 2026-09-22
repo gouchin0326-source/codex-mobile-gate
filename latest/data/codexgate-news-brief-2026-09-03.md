@@ -1,12 +1,12 @@
 # CODEXGATE News Brief
 
-- 更新: 2026-09-22T13:38:01.525970+00:00
+- 更新: 2026-09-22T22:30:50.776199+00:00
 - 取得: GitHub Actions/Python
 - Codex: 0%想定（自動実行時）
 - 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。
 
-- [開発] CG開発・GitHub運用へ反映候補 / Grok 4.7 is now available in GitHub Copilot / GitHub Copilot weekly re
+- [開発] CG開発・GitHub運用へ反映候補 / Grok 4.7 is now available in GitHub Copilot / Claude Opus 5.5 is now a
 - [論文] 更新あり。必要時だけ確認 / LoRA Enhanced Contrastive Learning with SAS Vision Transformers / RBS-
-- [AI] AI/Codex運用の変化を確認 / Create your best tracks yet with Lyria 3.5 in Gemini. / Expanding Open
-- [技術] 更新あり。必要時だけ確認 / Looking forward to Git 2.56 - and 3.0
-- [災害] 更新あり。必要時だけ確認 / M 1.1 - 1 km E of The Geysers, CA
+- [AI] AI/Codex運用の変化を確認 / Create your best tracks yet with Lyria 3.5 in Gemini. / Parallel cut r
+- [技術] 更新あり。必要時だけ確認 / Design your programming languages right (2024)
+- [災害] 更新あり。必要時だけ確認 / M 1.9 - 8 km WNW of Point Possession, Alaska
