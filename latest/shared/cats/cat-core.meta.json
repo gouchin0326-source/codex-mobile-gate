@@ -1,6 +1,6 @@
 {
   "lane": "app",
-  "ts": "2026-09-22T09:27:14+09:00",
+  "ts": "2026-09-22T09:35:44+09:00",
   "artifact": "cat-core.js",
   "prompt": "にゃんパニッ！の4匹・8方向ドット猫を複数の軽量猫ゲームで共有できる描画基盤へ分離する。",
   "source": "codex+gemini",
@@ -12,7 +12,7 @@
     "four_cats_eight_directions": { "pass": true, "note": "4匹×8方向=32描画を検証" },
     "game_separation": { "pass": true, "note": "能力・武器・セーブは各ゲーム側に保持" },
     "lightweight_motion": { "pass": true, "note": "呼吸・片耳・尻尾・四足歩行を追加描画なし、Math.sin最大2回で実装" },
-    "diagonal_pose": { "pass": true, "note": "右下・左下=斜め前、右上・左上=斜め後ろの専用ドット描画" },
-    "detail_lod": { "pass": true, "note": "横31、斜め前38、斜め後30矩形。高精細のみ最大+8" }
+    "diagonal_pose": { "pass": true, "note": "斜め前は短い胴・中央顔・両前脚・遠近差、斜め後ろも専用描画" },
+    "detail_lod": { "pass": true, "note": "横31、斜め前40、斜め後30矩形。高精細のみ最大+8" }
   }
 }
