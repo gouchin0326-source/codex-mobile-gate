@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T22:30:50.776199+00:00",
+  "updatedAt": "2026-09-22T22:38:01.513201+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -8,7 +8,7 @@
   "cards": [
     {
       "genre": "開発",
-      "count": 15,
+      "count": 16,
       "decision": "CG開発・GitHub運用へ反映候補",
       "signal": "Grok 4.7 is now available in GitHub Copilot / Claude Opus 5.5 is now available in GitHub Copilot / OpenAI’s GPT-6 Sol and GPT-6 Luna now available",
       "topUrl": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot",
@@ -24,7 +24,7 @@
     },
     {
       "genre": "AI",
-      "count": 7,
+      "count": 6,
       "decision": "AI/Codex運用の変化を確認",
       "signal": "Create your best tracks yet with Lyria 3.5 in Gemini. / Parallel cut research time and cost in half with GPT‑6 Astra / Priorities and principles for effective third party assessments",
       "topUrl": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
@@ -34,9 +34,9 @@
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "Design your programming languages right (2024)",
-      "topUrl": "https://blog.veritates.love/design-it-right",
-      "score": 2
+      "signal": "That About Wraps It Up for Stock Mac UI",
+      "topUrl": "https://inessential.com/2026/09/22/that-about-wraps-it-up-for.html",
+      "score": 1
     }
   ],
   "focus": [
@@ -76,6 +76,13 @@
       "url": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/"
     },
     {
+      "label": "開発",
+      "title": "Faster C++ code intelligence with whole codebase indexing",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-22-faster-c-code-intelligence-with-whole-codebase-indexing"
+    },
+    {
       "label": "AI",
       "title": "Parallel cut research time and cost in half with GPT‑6 Astra",
       "why": "Codex/AI開発判断に関係",
@@ -88,13 +95,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2609.21061"
-    },
-    {
-      "label": "開発",
-      "title": "Refreshed repository pull requests page generally available",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-21-refreshed-repository-pull-requests-page-generally-available"
     }
   ],
   "items": [
@@ -193,6 +193,24 @@
         "重要",
         "開発",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Faster C++ code intelligence with whole codebase indexing",
+      "summary": "C++ code intelligence in GitHub Copilot CLI is now faster with support for whole codebase indexing. C++ repositories can contain millions of lines of code across deeply connected source files… The post Faster C++ code in",
+      "url": "https://github.blog/changelog/2026-09-22-faster-c-code-intelligence-with-whole-codebase-indexing",
+      "published": "2026-09-22T22:24:48+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -488,24 +506,6 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "ガジェット",
-      "sourceWeight": 1,
-      "title": "Design your programming languages right (2024)",
-      "summary": "Comments",
-      "url": "https://blog.veritates.love/design-it-right",
-      "published": "2026-09-22T05:21:15+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "制作"
-      ]
-    },
-    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -702,5 +702,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-22T22:30:50.776199+00:00"
+  "lastSuccessAt": "2026-09-22T22:38:01.513201+00:00"
 }
