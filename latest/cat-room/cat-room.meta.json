@@ -1,8 +1,8 @@
 {
   "lane": "app",
-  "ts": "2026-09-22T18:15:30+09:00",
+  "ts": "2026-09-22T21:33:21+09:00",
   "artifact": "index.html",
-  "prompt": "猫研へ連続爪・回転攻撃・突進を追加し、4攻撃のバトルシーケンスで検証可能にする。",
+  "prompt": "猫研へGemini API生成の研究棚と、CodexなしでAI依頼・JSON取込・検証・保存・再生できる開発レーンを追加する。",
   "source": "codex+gemini",
   "backend": "codex",
   "model": "gpt-5.6-sol",
@@ -16,6 +16,9 @@
     "motion_sequencer": { "pass": true, "note": "生活・冒険・リアクション各4動作、方向連動、再生停止、0.5/1/1.5倍、スロット選択" },
     "preset_export": { "pass": true, "note": "catId・HoshiCats版・速度・方向付き動作列をJSON出力" },
     "attack_action": { "pass": true, "note": "猫パンチを単体選択・冒険プリセット・4猫比較・8方向比較へ反映" },
-    "battle_sequence": { "pass": true, "note": "猫パンチ→連続爪→回転攻撃→突進を方向付きで連続再生" }
+    "battle_sequence": { "pass": true, "note": "猫パンチ→連続爪→回転攻撃→突進を方向付きで連続再生" },
+    "ai_research_shelf": { "pass": true, "note": "Gemini API生成3案を出典付きカード表示し、猫・4動作をワンタップ再生" },
+    "codex_free_lane": { "pass": true, "note": "AI依頼文出力、JSON取込、許可action・方向・色・4動作検証、localStorage保存、研究棚JSON再出力" },
+    "offline_fallback": { "pass": true, "note": "API生成JSONの取得失敗時も内蔵3案で動作。APIキーは画面・保存領域へ保持しない" }
   }
 }

@@ -1,0 +1,49 @@
+{
+  "schema": "hoshi-cat-ai-research-v1",
+  "generatedAt": "2026-09-22T21:25:00+09:00",
+  "provider": "Gemini API",
+  "items": [
+    {
+      "id": "stretch",
+      "category": "motion",
+      "title": "のびのびストレッチ",
+      "summary": "背筋を伸ばしてリラックスする動作の解析",
+      "catId": "moka",
+      "color": "#D2B48C",
+      "steps": [
+        {"action": "sit", "direction": 0},
+        {"action": "idle", "direction": 0},
+        {"action": "sit", "direction": 4},
+        {"action": "idle", "direction": 4}
+      ]
+    },
+    {
+      "id": "turn",
+      "category": "motion",
+      "title": "くるっと方向転換",
+      "summary": "急な方向転換時の足運びの滑らかさ",
+      "catId": "mike",
+      "color": "#FFD700",
+      "steps": [
+        {"action": "walk", "direction": 0},
+        {"action": "spin", "direction": 2},
+        {"action": "walk", "direction": 4},
+        {"action": "spin", "direction": 6}
+      ]
+    },
+    {
+      "id": "groom",
+      "category": "motion",
+      "title": "毛繕いルーチン",
+      "summary": "集中して毛繕いを行う一連の動作",
+      "catId": "kuro",
+      "color": "#333333",
+      "steps": [
+        {"action": "sit", "direction": 0},
+        {"action": "groom", "direction": 0},
+        {"action": "groom", "direction": 2},
+        {"action": "idle", "direction": 0}
+      ]
+    }
+  ]
+}
