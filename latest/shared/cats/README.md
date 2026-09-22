@@ -13,4 +13,4 @@ HoshiCats.draw(ctx,{x:100,y:100,catId:"moka",direction:1,action:"pounce",phase:4
 
 `motion:false` で微動を停止。`detail:true` で最大8矩形の高精細表示、未指定時はscale 1.35以上だけ自動有効。通常ゲームは低負荷のまま。見た目だけを共有し、武器・能力・セーブは各ゲーム側で管理する。
 
-`HoshiCats.actions`: idle / walk / sit / sleep / groom / pounce / attack / hurt / happy。attackは短い前脚パンチ・肉球・3本爪を描く。
+`HoshiCats.actions`: idle / walk / sit / sleep / groom / pounce / attack / claw / spin / charge / hurt / happy。猫パンチ・連続爪・回転攻撃・突進を共通利用できる。

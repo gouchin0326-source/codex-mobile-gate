@@ -1,8 +1,8 @@
 {
   "lane": "app",
-  "ts": "2026-09-22T17:03:17+09:00",
+  "ts": "2026-09-22T18:15:30+09:00",
   "artifact": "index.html",
-  "prompt": "猫研へ4猫・8方向対応の猫パンチ攻撃アクションを追加し、冒険シーケンスへ組み込む。",
+  "prompt": "猫研へ連続爪・回転攻撃・突進を追加し、4攻撃のバトルシーケンスで検証可能にする。",
   "source": "codex+gemini",
   "backend": "codex",
   "model": "gpt-5.6-sol",
@@ -15,6 +15,7 @@
     "action_controls": { "pass": true, "note": "8動作をボタンで即時比較" },
     "motion_sequencer": { "pass": true, "note": "生活・冒険・リアクション各4動作、方向連動、再生停止、0.5/1/1.5倍、スロット選択" },
     "preset_export": { "pass": true, "note": "catId・HoshiCats版・速度・方向付き動作列をJSON出力" },
-    "attack_action": { "pass": true, "note": "猫パンチを単体選択・冒険プリセット・4猫比較・8方向比較へ反映" }
+    "attack_action": { "pass": true, "note": "猫パンチを単体選択・冒険プリセット・4猫比較・8方向比較へ反映" },
+    "battle_sequence": { "pass": true, "note": "猫パンチ→連続爪→回転攻撃→突進を方向付きで連続再生" }
   }
 }

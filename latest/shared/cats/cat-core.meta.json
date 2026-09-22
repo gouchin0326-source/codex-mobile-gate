@@ -1,8 +1,8 @@
 {
   "lane": "app",
-  "ts": "2026-09-22T17:03:17+09:00",
+  "ts": "2026-09-22T18:15:30+09:00",
   "artifact": "cat-core.js",
-  "prompt": "共通猫ライブラリへ4猫・8方向対応の短い前脚パンチ攻撃を追加する。",
+  "prompt": "共通猫ライブラリの攻撃を、猫パンチ・連続爪・回転攻撃・突進の4種類へ拡張する。",
   "source": "codex+gemini",
   "backend": "codex",
   "model": "gpt-5.6-sol",
@@ -16,6 +16,7 @@
     "detail_lod": { "pass": true, "note": "横31、斜め前40、斜め後29矩形。高精細のみ最大+8" },
     "cute_detail": { "pass": true, "note": "丸頬・小口・耳内側・肩の丸み・肉球・毛先をLOD内で表現" },
     "action_api": { "pass": true, "note": "idle/walk/sit/sleep/groom/pounce/attack/hurt/happyを共通化" },
-    "attack_action": { "pass": true, "note": "4猫×8方向で前脚パンチ・肉球・3本爪を描画。既存API互換" }
+    "attack_action": { "pass": true, "note": "4猫×8方向で前脚パンチ・肉球・3本爪を描画。既存API互換" },
+    "attack_variants": { "pass": true, "note": "claw/spin/chargeを追加。4攻撃×8方向=32通り検証、追加線・矩形を抑制" }
   }
 }

@@ -1,6 +1,6 @@
 {
   "lane": "app",
-  "ts": "2026-09-22T17:03:17+09:00",
+  "ts": "2026-09-22T18:15:30+09:00",
   "artifact": "index.html",
   "prompt": "屋根うら猫レースを左右操作、魚コンボ、肉球ブースト、障害物、ライバル、順位報酬付きで実装する。",
   "source": "codex",
@@ -43,7 +43,7 @@
     "character_ultimates": { "pass": true, "note": "均衡・速度・火力・回復制御の4必殺を分岐実装" },
     "difficulty_and_flick": { "pass": true, "note": "危険度別HP/接触/速度/突進強化、フリックダッシュ0.46秒無敵" },
     "horizontal_facing": { "pass": true, "note": "右移動は頭が右、左移動は頭が左を向く" },
-    "shared_cat_library": { "pass": true, "note": "HoshiCats v1.5.0の8方向・9動作を参照、ゲーム中detail=false固定" },
+    "shared_cat_library": { "pass": true, "note": "HoshiCats v1.6.0の8方向・12動作を参照、ゲーム中detail=false固定" },
     "giant_cat_town": { "pass": true, "note": "1800x1500カメラ追従マップ、6ジャンル区域、既存5戦闘を維持" },
     "home_game_shelf": { "pass": true, "note": "自宅から8ジャンルの装備・設定・状態を固定1画面で確認。シューティングは武器工房へ直結" },
     "fishing_game": { "pass": true, "note": "30秒タップ捕獲・連続倍率・3種得点魚・小判報酬。魚8匹上限で390x844動作確認" },
