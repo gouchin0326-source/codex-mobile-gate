@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-22T22:38:01.513201+00:00",
-  "lastSuccessAt": "2026-09-22T22:38:01.513201+00:00",
+  "updatedAt": "2026-09-22T22:48:01.428681+00:00",
+  "lastSuccessAt": "2026-09-22T22:48:01.428681+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -126,7 +126,7 @@
   "contexts": [
     {
       "genre": "開発",
-      "count": 16,
+      "count": 15,
       "signal": "Grok 4.7 is now available in GitHub Copilot / Claude Opus 5.5 is now available in GitHub Copilot / OpenAI’s GPT-6 Sol and GPT-6 Luna now available",
       "decision": "CG開発・GitHub運用へ反映候補",
       "topUrl": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot",
@@ -142,7 +142,7 @@
     },
     {
       "genre": "AI",
-      "count": 6,
+      "count": 7,
       "signal": "Create your best tracks yet with Lyria 3.5 in Gemini. / Parallel cut research time and cost in half with GPT‑6 Astra / Priorities and principles for effective third party assessmen",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
@@ -159,9 +159,9 @@
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 2.0 - 66 km ESE of Denali Park, Alaska",
+      "signal": "M 2.0 - 5 km NW of Highland, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026svizcf",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41337279",
       "score": 1
     }
   ],
@@ -285,10 +285,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.0 - 66 km ESE of Denali Park, Alaska",
-      "summary": "66 km ESE of Denali Park, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026svizcf",
-      "published": "2026-09-22T22:35:13.324000+00:00",
+      "title": "M 2.0 - 5 km NW of Highland, CA",
+      "summary": "5 km NW of Highland, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41337279",
+      "published": "2026-09-22T22:40:12.150000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -347,24 +347,6 @@
         "開発",
         "重要",
         "研究"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Faster C++ code intelligence with whole codebase indexing",
-      "summary": "C++ code intelligence in GitHub Copilot CLI is now faster with support for whole codebase indexing. C++ repositories can contain millions of lines of code across deeply connected source files… The post Faster C++ code in",
-      "url": "https://github.blog/changelog/2026-09-22-faster-c-code-intelligence-with-whole-codebase-indexing",
-      "published": "2026-09-22T22:24:48+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
       ]
     },
     {
@@ -746,70 +728,88 @@
         "論文",
         "研究"
       ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Higgsfield AI ships new video features in a day with GPT-6 Astra",
+      "summary": "With GPT-6 Astra, Higgsfield AI makes video ad creation easier for small businesses and brings new creative tools to market faster.",
+      "url": "https://openai.com/index/higgsfield-from-prompt-to-production-with-astra",
+      "published": "2026-09-21T12:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "制作"
+      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T22:38:01.513201+00:00",
-      "lastAttemptAt": "2026-09-22T22:38:01.513201+00:00",
+      "lastSuccessAt": "2026-09-22T22:48:01.428681+00:00",
+      "lastAttemptAt": "2026-09-22T22:48:01.428681+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T22:38:01.513201+00:00",
-      "lastAttemptAt": "2026-09-22T22:38:01.513201+00:00",
+      "lastSuccessAt": "2026-09-22T22:48:01.428681+00:00",
+      "lastAttemptAt": "2026-09-22T22:48:01.428681+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T22:38:01.513201+00:00",
-      "lastAttemptAt": "2026-09-22T22:38:01.513201+00:00",
+      "lastSuccessAt": "2026-09-22T22:48:01.428681+00:00",
+      "lastAttemptAt": "2026-09-22T22:48:01.428681+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T22:38:01.513201+00:00",
-      "lastAttemptAt": "2026-09-22T22:38:01.513201+00:00",
+      "lastSuccessAt": "2026-09-22T22:48:01.428681+00:00",
+      "lastAttemptAt": "2026-09-22T22:48:01.428681+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T22:38:01.513201+00:00",
-      "lastAttemptAt": "2026-09-22T22:38:01.513201+00:00",
+      "lastSuccessAt": "2026-09-22T22:48:01.428681+00:00",
+      "lastAttemptAt": "2026-09-22T22:48:01.428681+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T22:38:01.513201+00:00",
-      "lastAttemptAt": "2026-09-22T22:38:01.513201+00:00",
+      "lastSuccessAt": "2026-09-22T22:48:01.428681+00:00",
+      "lastAttemptAt": "2026-09-22T22:48:01.428681+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T22:38:01.513201+00:00",
-      "lastAttemptAt": "2026-09-22T22:38:01.513201+00:00",
+      "lastSuccessAt": "2026-09-22T22:48:01.428681+00:00",
+      "lastAttemptAt": "2026-09-22T22:48:01.428681+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-22T22:38:01.513201+00:00",
-      "lastAttemptAt": "2026-09-22T22:38:01.513201+00:00",
+      "lastSuccessAt": "2026-09-22T22:48:01.428681+00:00",
+      "lastAttemptAt": "2026-09-22T22:48:01.428681+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
