@@ -23,8 +23,8 @@
     <section class="card"><div class="label"><b>アプリ利用コード</b><span>HTML First</span></div><pre id="code"></pre><button class="copy" id="copy" type="button">コードをコピー</button></section>
   </main>
   <footer>猫の見た目は shared/cats、能力・武器・セーブは各ゲーム側で管理します。</footer>
-  <script src="../shared/cats/cat-assets.js?v=1.7.1"></script>
-  <script src="../shared/cats/cat-core.js?v=1.7.1"></script>
+  <script src="../shared/cats/cat-assets.js?v=1.7.2"></script>
+  <script src="../shared/cats/cat-core.js?v=1.7.2"></script>
   <script>
     const canvas=document.querySelector("#room"),ctx=canvas.getContext("2d"),dirMarks=["→","↘","↓","↙","←","↖","↑","↗"],accessories={bell:"鈴",ribbon:"リボン",star:"星",leaf:"葉っぱ"};
     const seqPresets={life:{name:"生活",steps:[{action:"idle",direction:7},{action:"walk",direction:0},{action:"groom",direction:2},{action:"sleep",direction:6}]},adventure:{name:"冒険",steps:[{action:"walk",direction:1},{action:"pounce",direction:3},{action:"attack",direction:5},{action:"happy",direction:7}]},battle:{name:"バトル",steps:[{action:"attack",direction:0},{action:"claw",direction:2},{action:"spin",direction:4},{action:"charge",direction:6}]},reaction:{name:"反応",steps:[{action:"idle",direction:7},{action:"hurt",direction:4},{action:"happy",direction:0},{action:"sit",direction:6}]}};
