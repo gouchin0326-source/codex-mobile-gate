@@ -1,0 +1,24 @@
+{
+  "lane": "joint",
+  "ts": "2026-09-22T22:00:02+09:00",
+  "artifact": "2200-autonomy-decision.json",
+  "prompt": "三体が羅針盤と経験から候補を比較し、次の制作課題を自己選択する",
+  "source": "codex",
+  "backend": "codex",
+  "model": "deterministic-compass",
+  "seconds": 0,
+  "gates": {
+    "self_selected": {
+      "pass": true,
+      "note": "three independent choices"
+    },
+    "rejected_options_recorded": {
+      "pass": true,
+      "note": "why not recorded"
+    },
+    "human_priority": {
+      "pass": true,
+      "note": "approved human directions override compass"
+    }
+  }
+}
