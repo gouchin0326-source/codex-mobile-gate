@@ -1,8 +1,8 @@
 {
   "lane": "app",
-  "ts": "2026-09-22T11:08:18+09:00",
+  "ts": "2026-09-22T16:52:05+09:00",
   "artifact": "index.html",
-  "prompt": "CGに全猫ゲーム共通のドット猫素材・仕草・開発データを確認できる猫素材研究室を作る。",
+  "prompt": "猫研を猫モーション実験室へ進化させ、方向付き4動作シーケンスの再生・速度変更・JSON出力を追加する。",
   "source": "codex+gemini",
   "backend": "codex",
   "model": "gpt-5.6-sol",
@@ -12,6 +12,8 @@
     "load_budget": { "pass": true, "note": "Canvas 1・RAF 1・外部画像0" },
     "mobile_ui": { "pass": true, "note": "390px幅・44px操作・横スクロールなし" },
     "diagonal_and_lod": { "pass": true, "note": "初期表示を専用右上姿勢、高精細は拡大猫だけ自動適用" },
-    "action_controls": { "pass": true, "note": "8動作をボタンで即時比較" }
+    "action_controls": { "pass": true, "note": "8動作をボタンで即時比較" },
+    "motion_sequencer": { "pass": true, "note": "生活・冒険・リアクション各4動作、方向連動、再生停止、0.5/1/1.5倍、スロット選択" },
+    "preset_export": { "pass": true, "note": "catId・HoshiCats版・速度・方向付き動作列をJSON出力" }
   }
 }
