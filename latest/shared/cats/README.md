@@ -1,6 +1,6 @@
 # Hoshi Cats
 
-共通の軽量Canvas猫素材。描画原点は足元中央、方向は右から時計回りに0〜7。
+共通の軽量Canvas猫素材。描画原点は足元中央、方向は右から時計回りに0〜7。上下左右に加え、右下・左下は斜め前、右上・左上は斜め後ろの専用姿勢を使う。
 
 ```html
 <script src="../shared/cats/cat-assets.js"></script>
