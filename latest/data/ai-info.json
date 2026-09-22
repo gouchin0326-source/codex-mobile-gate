@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22T01:48:01.649850+00:00",
+  "updatedAt": "2026-09-22T01:58:01.457673+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -8,19 +8,11 @@
   "cards": [
     {
       "genre": "開発",
-      "count": 14,
+      "count": 15,
       "decision": "CG開発・GitHub運用へ反映候補",
       "signal": "Grok 4.7 is now available in GitHub Copilot / GitHub Copilot weekly releases — September 14 / Upcoming deprecation of selected GitHub Copilot models in mid-October",
       "topUrl": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot",
       "score": 5
-    },
-    {
-      "genre": "AI",
-      "count": 8,
-      "decision": "AI/Codex運用の変化を確認",
-      "signal": "Create your best tracks yet with Lyria 3.5 in Gemini. / Expanding OpenAI Academy with new learning paths / Advisory Group on Mathematics and Artificial Intelligence",
-      "topUrl": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
-      "score": 4
     },
     {
       "genre": "論文",
@@ -29,6 +21,14 @@
       "signal": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers / RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models / Attention-Aware Routing: Coupling Routing and Attention in MoEs",
       "topUrl": "https://arxiv.org/abs/2609.21061",
       "score": 3
+    },
+    {
+      "genre": "AI",
+      "count": 7,
+      "decision": "AI/Codex運用の変化を確認",
+      "signal": "Create your best tracks yet with Lyria 3.5 in Gemini. / Expanding OpenAI Academy with new learning paths / Advisory Group on Mathematics and Artificial Intelligence",
+      "topUrl": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
+      "score": 4
     },
     {
       "genre": "技術",
@@ -77,6 +77,13 @@
     },
     {
       "label": "開発",
+      "title": "Refreshed repository pull requests page generally available",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-21-refreshed-repository-pull-requests-page-generally-available"
+    },
+    {
+      "label": "開発",
       "title": "GitHub Enterprise adds credential inventory exports",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
@@ -88,13 +95,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "ChatGPT / OpenAI公式",
       "url": "https://openai.com/index/expanding-openai-academy-with-new-learning-paths"
-    },
-    {
-      "label": "論文",
-      "title": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.21061"
     }
   ],
   "items": [
@@ -193,6 +193,24 @@
         "重要",
         "開発",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Refreshed repository pull requests page generally available",
+      "summary": "The new repository pull requests page is now generally available to all GitHub users. Highlights The new page makes it easier to find and act on pull requests in a… The post Refreshed repository pull requests page genera",
+      "url": "https://github.blog/changelog/2026-09-21-refreshed-repository-pull-requests-page-generally-available",
+      "published": "2026-09-22T01:25:53+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -520,24 +538,6 @@
         "論文",
         "研究"
       ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Decoupling Internal Representational Changes and Causal Importance in Fine-Tuned Large Language Models",
-      "summary": "arXiv:2609.21113v1 Announce Type: new Abstract: Fine-tuning has emerged as a widely adopted approach for adapting LLMs to a variety of downstream tasks. However, how it reshapes their internal mechanisms remains poorly u",
-      "url": "https://arxiv.org/abs/2609.21113",
-      "published": "2026-09-21T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
     }
   ],
   "providerWatch": {
@@ -700,5 +700,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-22T01:48:01.649850+00:00"
+  "lastSuccessAt": "2026-09-22T01:58:01.457673+00:00"
 }
