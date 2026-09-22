@@ -1,8 +1,8 @@
 {
   "lane": "app",
-  "ts": "2026-09-23T08:08:38+09:00",
+  "ts": "2026-09-23T08:42:43+09:00",
   "artifact": "index.html",
-  "prompt": "猫パンチの腕を短くし、猫らしい体格を保ったまま8方向の打撃表現を維持する。",
+  "prompt": "猫パンチ時に後ろ足の踏ん張りを加え、8方向の軽量な動作表現を改善する。",
   "source": "codex+gemini",
   "backend": "codex",
   "model": "gpt-5.6-sol",
@@ -20,8 +20,8 @@
     "ai_research_shelf": { "pass": true, "note": "Gemini API生成3案を出典付きカード表示し、猫・4動作をワンタップ再生" },
     "codex_free_lane": { "pass": true, "note": "AI依頼文出力、JSON取込、許可action・方向・色・4動作検証、localStorage保存、研究棚JSON再出力" },
     "offline_fallback": { "pass": true, "note": "API生成JSONの取得失敗時も内蔵3案で動作。APIキーは画面・保存領域へ保持しない" },
-    "cat_punch_v2": { "pass": true, "note": "最大到達を39pxから30pxへ短縮。溜め・踏込み・肉球・残像・衝撃星と8方向を維持" },
+    "cat_punch_v2": { "pass": true, "note": "最大到達30px。踏み込み時に後ろ足が蹴る。肉球・残像・衝撃星と8方向を維持" },
     "acrobatics": { "pass": true, "note": "跳躍弧・空中伸身・着地を持つ飛びつきと、全身2π回転・軌跡・砂煙を持つローリング" },
-    "full_motion_audit": { "pass": true, "note": "HoshiCats v1.7.2、4猫×8方向×13仕草=416組合せ・2フレーム計832描画、失敗0" }
+    "full_motion_audit": { "pass": true, "note": "HoshiCats v1.7.3。猫パンチ上下と390px幅を再確認。全動作監査の直近結果はv1.7.2で832描画・失敗0" }
   }
 }
