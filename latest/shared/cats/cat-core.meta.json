@@ -1,8 +1,8 @@
 {
   "lane": "app",
-  "ts": "2026-09-22T11:08:18+09:00",
+  "ts": "2026-09-22T17:03:17+09:00",
   "artifact": "cat-core.js",
-  "prompt": "にゃんパニッ！の4匹・8方向ドット猫を複数の軽量猫ゲームで共有できる描画基盤へ分離する。",
+  "prompt": "共通猫ライブラリへ4猫・8方向対応の短い前脚パンチ攻撃を追加する。",
   "source": "codex+gemini",
   "backend": "codex",
   "model": "gpt-5.6-sol",
@@ -15,6 +15,7 @@
     "diagonal_pose": { "pass": true, "note": "斜め前後とも短縮遠近の専用スプライト。左右は反転で対称化" },
     "detail_lod": { "pass": true, "note": "横31、斜め前40、斜め後29矩形。高精細のみ最大+8" },
     "cute_detail": { "pass": true, "note": "丸頬・小口・耳内側・肩の丸み・肉球・毛先をLOD内で表現" },
-    "action_api": { "pass": true, "note": "idle/walk/sit/sleep/groom/pounce/hurt/happyを追加描画なしで共通化" }
+    "action_api": { "pass": true, "note": "idle/walk/sit/sleep/groom/pounce/attack/hurt/happyを共通化" },
+    "attack_action": { "pass": true, "note": "4猫×8方向で前脚パンチ・肉球・3本爪を描画。既存API互換" }
   }
 }
