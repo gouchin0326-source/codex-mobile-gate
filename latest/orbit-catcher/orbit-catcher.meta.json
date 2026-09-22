@@ -1,8 +1,8 @@
 {
   "lane": "app",
-  "ts": "2026-09-22T13:48:38+09:00",
+  "ts": "2026-09-22T13:57:55+09:00",
   "artifact": "index.html",
-  "prompt": "自宅にゲーム準備棚を追加し、6ジャンルの装備・設定・開発状態を固定1画面で確認可能にする。",
+  "prompt": "ゲーム準備棚を8ジャンルへ増設し、軽量な30秒魚とりゲームを実プレイ可能にする。",
   "source": "codex",
   "backend": "codex",
   "model": "gpt-5.6-sol",
@@ -45,6 +45,7 @@
     "horizontal_facing": { "pass": true, "note": "右移動は頭が右、左移動は頭が左を向く" },
     "shared_cat_library": { "pass": true, "note": "HoshiCats v1.4.0の8方向・8動作を参照、ゲーム中detail=false固定" },
     "giant_cat_town": { "pass": true, "note": "1800x1500カメラ追従マップ、6ジャンル区域、既存5戦闘を維持" },
-    "home_game_shelf": { "pass": true, "note": "自宅から6ジャンルの装備・設定・状態を固定1画面で確認。シューティングは武器工房へ直結" }
+    "home_game_shelf": { "pass": true, "note": "自宅から8ジャンルの装備・設定・状態を固定1画面で確認。シューティングは武器工房へ直結" },
+    "fishing_game": { "pass": true, "note": "30秒タップ捕獲・連続倍率・3種得点魚・小判報酬。魚8匹上限で390x844動作確認" }
   }
 }
