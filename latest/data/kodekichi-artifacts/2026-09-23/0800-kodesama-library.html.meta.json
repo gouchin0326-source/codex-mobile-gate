@@ -1,0 +1,40 @@
+{
+  "lane": "research",
+  "ts": "2026-09-23T08:00:02+09:00",
+  "artifact": "0800-kodesama-library.html",
+  "prompt": "コデ郎 / 三体の根拠を横断検索する図書館",
+  "source": "local",
+  "backend": "codex",
+  "model": "deterministic-rules",
+  "seconds": 0,
+  "gates": {
+    "html_first": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "mobile": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "accessible_status": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "export": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "offline": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "substantial": {
+      "pass": true,
+      "note": "local deterministic gate"
+    },
+    "interactive": {
+      "pass": true,
+      "note": "local deterministic gate"
+    }
+  }
+}
