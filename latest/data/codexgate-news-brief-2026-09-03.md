@@ -1,6 +1,6 @@
 # CODEXGATE News Brief
 
-- 更新: 2026-09-22T00:48:01.498939+00:00
+- 更新: 2026-09-22T00:58:01.430076+00:00
 - 取得: GitHub Actions/Python
 - Codex: 0%想定（自動実行時）
 - 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。
@@ -9,4 +9,4 @@
 - [AI] AI/Codex運用の変化を確認 / Create your best tracks yet with Lyria 3.5 in Gemini. / Expanding Open
 - [論文] 更新あり。必要時だけ確認 / LoRA Enhanced Contrastive Learning with SAS Vision Transformers / RBS-
 - [技術] 更新あり。必要時だけ確認 / rift - a tiling window manager for macos
-- [災害] 更新あり。必要時だけ確認 / M 2.1 - 3 km S of Indios, Puerto Rico
+- [災害] 更新あり。必要時だけ確認 / M 0.7 - 13 km NW of The Geysers, CA
