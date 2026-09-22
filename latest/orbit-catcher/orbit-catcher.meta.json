@@ -1,6 +1,6 @@
 {
   "lane": "app",
-  "ts": "2026-09-22T10:10:21+09:00",
+  "ts": "2026-09-22T11:08:18+09:00",
   "artifact": "index.html",
   "prompt": "主人公猫を全画面で同一のかわいい四足ドット絵へ統一し、猫別工房・装備保存・追加武器・固有必殺・無敵フリック・敵強化を実装する。",
   "source": "codex",
@@ -43,6 +43,7 @@
     "character_ultimates": { "pass": true, "note": "均衡・速度・火力・回復制御の4必殺を分岐実装" },
     "difficulty_and_flick": { "pass": true, "note": "危険度別HP/接触/速度/突進強化、フリックダッシュ0.46秒無敵" },
     "horizontal_facing": { "pass": true, "note": "右移動は頭が右、左移動は頭が左を向く" },
-    "shared_cat_library": { "pass": true, "note": "HoshiCats v1.3.0の専用8方向描画を参照、ゲーム中detail=false固定" }
+    "shared_cat_library": { "pass": true, "note": "HoshiCats v1.4.0の8方向・8動作を参照、ゲーム中detail=false固定" },
+    "giant_cat_town": { "pass": true, "note": "1800x1500カメラ追従マップ、6ジャンル区域、既存5戦闘を維持" }
   }
 }

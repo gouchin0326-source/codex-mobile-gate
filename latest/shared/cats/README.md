@@ -8,7 +8,9 @@
 ```
 
 ```js
-HoshiCats.draw(ctx,{x:100,y:100,catId:"moka",direction:1,walking:true,phase:4,motion:true,detail:false});
+HoshiCats.draw(ctx,{x:100,y:100,catId:"moka",direction:1,action:"pounce",phase:4,motion:true,detail:false});
 ```
 
 `motion:false` で微動を停止。`detail:true` で最大8矩形の高精細表示、未指定時はscale 1.35以上だけ自動有効。通常ゲームは低負荷のまま。見た目だけを共有し、武器・能力・セーブは各ゲーム側で管理する。
+
+`HoshiCats.actions`: idle / walk / sit / sleep / groom / pounce / hurt / happy。変形のみで矩形数は増えない。
