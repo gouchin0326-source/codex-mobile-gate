@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23T11:08:01.146039+00:00",
+  "updatedAt": "2026-09-23T11:18:03.603756+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -115,7 +115,8 @@
         "開発",
         "重要",
         "研究"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "github-changelog",
@@ -134,7 +135,8 @@
         "開発",
         "重要",
         "研究"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "github-changelog",
@@ -153,7 +155,8 @@
         "開発",
         "重要",
         "研究"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "github-blog",
@@ -172,7 +175,8 @@
         "開発",
         "重要",
         "研究"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "google-gemini",
@@ -192,7 +196,8 @@
         "重要",
         "開発",
         "研究"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "arxiv-ai",
@@ -211,7 +216,8 @@
         "論文",
         "制作",
         "研究"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "github-changelog",
@@ -229,7 +235,8 @@
       "tags": [
         "開発",
         "重要"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "github-changelog",
@@ -247,7 +254,8 @@
       "tags": [
         "開発",
         "重要"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "openai",
@@ -284,7 +292,8 @@
       "tags": [
         "開発",
         "重要"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "openai",
@@ -306,25 +315,6 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Expanding OpenAI Academy with new learning paths",
-      "summary": "Explore new OpenAI Academy learning paths for employees, developers, leaders, educators, and students to build and demonstrate practical AI skills.",
-      "url": "https://openai.com/index/expanding-openai-academy-with-new-learning-paths",
-      "published": "2026-09-21T07:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "開発"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -340,7 +330,8 @@
       "tags": [
         "開発",
         "重要"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "github-blog",
@@ -358,7 +349,8 @@
       "tags": [
         "開発",
         "重要"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "github-blog",
@@ -376,7 +368,8 @@
       "tags": [
         "開発",
         "重要"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "github-blog",
@@ -394,7 +387,8 @@
       "tags": [
         "開発",
         "重要"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "github-blog",
@@ -412,7 +406,8 @@
       "tags": [
         "開発",
         "重要"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "github-blog",
@@ -430,7 +425,8 @@
       "tags": [
         "開発",
         "重要"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "github-blog",
@@ -448,7 +444,8 @@
       "tags": [
         "開発",
         "重要"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "arxiv-ai",
@@ -466,7 +463,8 @@
       "tags": [
         "論文",
         "研究"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "arxiv-ai",
@@ -484,7 +482,8 @@
       "tags": [
         "論文",
         "研究"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "arxiv-ai",
@@ -502,7 +501,8 @@
       "tags": [
         "論文",
         "研究"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "arxiv-ai",
@@ -520,7 +520,8 @@
       "tags": [
         "論文",
         "研究"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "arxiv-ai",
@@ -538,7 +539,27 @@
       "tags": [
         "論文",
         "研究"
-      ]
+      ],
+      "stale": true
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Replication Without Persistence in Hosted LLMs: Measurement Sensitivity in Action-Time Belief Evaluation",
+      "summary": "arXiv:2609.22478v1 Announce Type: new Abstract: Behavioural evaluations of hosted language models can vary because the evaluated service, the measurement instrument, or both differ across runs. We separate three validati",
+      "url": "https://arxiv.org/abs/2609.22478",
+      "published": "2026-09-23T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ],
+      "stale": true
     }
   ],
   "providerWatch": {
@@ -598,9 +619,9 @@
             "source": "ChatGPT / OpenAI公式"
           },
           {
-            "title": "Expanding OpenAI Academy with new learning paths",
-            "url": "https://openai.com/index/expanding-openai-academy-with-new-learning-paths",
-            "published": "2026-09-21T07:00:00+00:00",
+            "title": "Grab and OpenAI bring practical AI skills to Southeast Asia",
+            "url": "https://openai.com/index/grab-openai-ai-skills-southeast-asia",
+            "published": "2026-09-23T00:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           },
           {
@@ -700,6 +721,6 @@
       "assessment": "6回はサービス上限ではなく、配管確認用の厳しい初期値。両方利用は2回消費するため最大3案件となる。まず12回で数日計測し、429と残量を見て段階調整する。"
     }
   },
-  "status": "fresh",
-  "lastSuccessAt": "2026-09-23T11:08:01.146039+00:00"
+  "status": "stale",
+  "lastSuccessAt": "2026-09-23T11:18:03.603756+00:00"
 }
