@@ -1,18 +1,18 @@
 {
-  "updatedAt": "2026-09-23T00:58:01.590287+00:00",
+  "updatedAt": "2026-09-23T01:08:07.065754+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "Grok 4.7 is now available in GitHub Copilot",
+  "topLine": "Claude Opus 5.5 is now available in GitHub Copilot",
   "cards": [
     {
       "genre": "開発",
       "count": 16,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "Grok 4.7 is now available in GitHub Copilot / Claude Opus 5.5 is now available in GitHub Copilot / OpenAI’s GPT-6 Sol and GPT-6 Luna now available",
-      "topUrl": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot",
-      "score": 5
+      "signal": "Claude Opus 5.5 is now available in GitHub Copilot / OpenAI’s GPT-6 Sol and GPT-6 Luna now available / Project HydraFusion: Frontier quality via multi-model orchestration",
+      "topUrl": "https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot",
+      "score": 4
     },
     {
       "genre": "論文",
@@ -40,13 +40,6 @@
     }
   ],
   "focus": [
-    {
-      "label": "開発",
-      "title": "Grok 4.7 is now available in GitHub Copilot",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot"
-    },
     {
       "label": "開発",
       "title": "Claude Opus 5.5 is now available in GitHub Copilot",
@@ -77,6 +70,13 @@
     },
     {
       "label": "開発",
+      "title": "New features and improvements in Copilot for JetBrains",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-22-new-features-and-improvements-in-copilot-for-jetbrains"
+    },
+    {
+      "label": "開発",
       "title": "Faster C++ code intelligence with whole codebase indexing",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
@@ -98,26 +98,6 @@
     }
   ],
   "items": [
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Grok 4.7 is now available in GitHub Copilot",
-      "summary": "Grok 4.7, xAI’s latest reasoning model, is now rolling out in GitHub Copilot. Building on Grok 4.6, it is designed for agentic coding and complex, multistep workflows. This model is… The post Grok 4.7 is now available in",
-      "url": "https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot",
-      "published": "2026-09-21T14:54:12+00:00",
-      "score": 5,
-      "tags": [
-        "開発",
-        "重要",
-        "制作",
-        "研究"
-      ]
-    },
     {
       "source": "github-changelog",
       "platform": "開発",
@@ -193,6 +173,24 @@
         "重要",
         "開発",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "New features and improvements in Copilot for JetBrains",
+      "summary": "GitHub Copilot for JetBrains 1.18.0 brings AI-assisted tool approvals, more control over agent conversations, and shared skills and instructions for your organization. You can also review plans with the Codex… The post N",
+      "url": "https://github.blog/changelog/2026-09-22-new-features-and-improvements-in-copilot-for-jetbrains",
+      "published": "2026-09-23T00:34:18+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -702,5 +700,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-23T00:58:01.590287+00:00"
+  "lastSuccessAt": "2026-09-23T01:08:07.065754+00:00"
 }
