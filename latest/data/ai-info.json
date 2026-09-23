@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23T12:58:01.246751+00:00",
+  "updatedAt": "2026-09-23T13:08:04.434256+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -34,9 +34,9 @@
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "The GNOME LLM Policy That I Want",
-      "topUrl": "https://blogs.gnome.org/alatiera/2026/09/23/the-gnome-llm-policy-that-i-want/",
-      "score": 1
+      "signal": "The GitHub wiki is an anti-pattern",
+      "topUrl": "https://michaelheap.com/github-wiki-is-an-antipattern/",
+      "score": 3
     }
   ],
   "focus": [
@@ -76,25 +76,25 @@
       "url": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/"
     },
     {
+      "label": "開発",
+      "title": "Developers want more efficient software. Here’s what over 1000 GitHub users told us they need.",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub",
+      "url": "https://github.blog/news-insights/research/developers-want-more-efficient-software-heres-what-over-1000-github-users-told-us-they-need/"
+    },
+    {
+      "label": "技術",
+      "title": "The GitHub wiki is an anti-pattern",
+      "why": "Codex/AI開発判断に関係",
+      "source": "技術RSS",
+      "url": "https://michaelheap.com/github-wiki-is-an-antipattern/"
+    },
+    {
       "label": "論文",
       "title": "Learning 3D biophysical cell properties from 2D images and cell-population statistics",
       "why": "Codex/AI開発判断に関係",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2609.22410"
-    },
-    {
-      "label": "開発",
-      "title": "New features and improvements in Copilot for JetBrains",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-22-new-features-and-improvements-in-copilot-for-jetbrains"
-    },
-    {
-      "label": "開発",
-      "title": "Faster C++ code intelligence with whole codebase indexing",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-22-faster-c-code-intelligence-with-whole-codebase-indexing"
     }
   ],
   "items": [
@@ -192,6 +192,43 @@
         "重要",
         "開発",
         "研究"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Developers want more efficient software. Here’s what over 1000 GitHub users told us they need.",
+      "summary": "New research from GitHub and Yale Program on Climate Change Communication finds strong demand for tools, measurement, and practical guidance that can help developers reduce wasted compute. The post Developers want more e",
+      "url": "https://github.blog/news-insights/research/developers-want-more-efficient-software-heres-what-over-1000-github-users-told-us-they-need/",
+      "published": "2026-09-23T13:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "The GitHub wiki is an anti-pattern",
+      "summary": "Comments",
+      "url": "https://michaelheap.com/github-wiki-is-an-antipattern/",
+      "published": "2026-09-23T11:48:39+00:00",
+      "score": 3,
+      "tags": [
+        "技術",
+        "重要",
+        "開発"
       ]
     },
     {
@@ -414,24 +451,6 @@
       ]
     },
     {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh my!",
-      "summary": "From loop engineering to harnesses, squads, and open weights, the GitHub Podcast breaks down the AI terms showing up in developer conversations. The post Decoding the new AI lingo: Loops, harnesses, squads, hill climbing",
-      "url": "https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/",
-      "published": "2026-09-02T21:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -514,24 +533,6 @@
       "title": "Social Influence and the Allocation of Scientific Attention in AI Populations",
       "summary": "arXiv:2609.22408v1 Announce Type: new Abstract: AI systems are becoming participants in the evaluation and use of scientific research. They encounter citation counts, download statistics and lists of popular articles dev",
       "url": "https://arxiv.org/abs/2609.22408",
-      "published": "2026-09-23T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Goal-driven Variant Categorization",
-      "summary": "arXiv:2609.22475v1 Announce Type: new Abstract: Process discovery rarely yields a single coherent process structure. For analysis, a common step is to cluster process variants based on structural similarity and then assi",
-      "url": "https://arxiv.org/abs/2609.22475",
       "published": "2026-09-23T04:00:00+00:00",
       "score": 2,
       "tags": [
@@ -700,5 +701,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-23T12:58:01.246751+00:00"
+  "lastSuccessAt": "2026-09-23T13:08:04.434256+00:00"
 }
