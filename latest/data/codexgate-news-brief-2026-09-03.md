@@ -1,6 +1,6 @@
 # CODEXGATE News Brief
 
-- 更新: 2026-09-23T10:18:03.186246+00:00
+- 更新: 2026-09-23T10:28:01.174226+00:00
 - 取得: GitHub Actions/Python
 - Codex: 0%想定（自動実行時）
 - 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。
@@ -9,4 +9,4 @@
 - [論文] 更新あり。必要時だけ確認 / Learning 3D biophysical cell properties from 2D images and cell-popula
 - [AI] AI/Codex運用の変化を確認 / Create your best tracks yet with Lyria 3.5 in Gemini. / Parallel cut r
 - [技術] 更新あり。必要時だけ確認 / How to talk about "AI" without adding to the anthropomorphization
-- [災害] 更新あり。必要時だけ確認 / M 2.8 - 50 km W of Anchor Point, Alaska
+- [災害] 更新あり。必要時だけ確認 / M 0.7 - 10 km S of Idyllwild, CA
