@@ -5,6 +5,7 @@
 ```html
 <script src="../shared/cats/cat-assets.js"></script>
 <script src="../shared/cats/cat-core.js"></script>
+<script src="../shared/cats/cat-combat.js"></script>
 ```
 
 ```js
@@ -13,4 +14,6 @@ HoshiCats.draw(ctx,{x:100,y:100,catId:"moka",direction:1,action:"pounce",phase:4
 
 `motion:false` で微動を停止。`detail:true` で最大8矩形の高精細表示、未指定時はscale 1.35以上だけ自動有効。通常ゲームは低負荷のまま。見た目だけを共有し、武器・能力・セーブは各ゲーム側で管理する。
 
-`HoshiCats.actions`: idle / walk / sit / sleep / groom / pounce / attack / claw / spin / charge / hurt / happy。猫パンチ・連続爪・回転攻撃・突進を共通利用できる。
+`HoshiCats.actions`: idle / walk / sit / sleep / groom / pounce / roll / attack / claw / kick / spin / charge / hurt / happy。`actionTime`（ミリ秒）を渡すと攻撃・跳躍・回転を押下時点から再生できる。
+
+`HoshiCatCombat` は猫研の3視点戦闘テストで使う軽量・再利用可能な判定部品。`create(view)` / `reset(model,view)` / `step(model,actor,dt,now)` / `stickLevel(magnitude)` / `dashTilt(previous,current,elapsedMs)` を公開。`view` は `side` / `vertical` / `isometric`、`dt` は秒、`now` はミリ秒。描画・入力・セーブは各ゲーム側で実装する。

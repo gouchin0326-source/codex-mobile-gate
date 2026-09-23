@@ -2,7 +2,7 @@
   "lane": "app",
   "ts": "2026-09-23T10:08:08+09:00",
   "artifact": "index.html",
-  "prompt": "PCキー・スマホスティックで猫アクションを手動検証。フリックダッシュ、3段コンボ、移動ローリング、練習標的を追加する。",
+  "prompt": "横・縦・斜めの3視点を敵と戦える試験場にし、スティックの強さ・速さ・攻撃タイミングで動作を分岐する。",
   "source": "codex+gemini",
   "backend": "codex",
   "model": "gpt-6-astra",
@@ -29,6 +29,7 @@
     "alternating_claws": { "pass": true, "note": "左右前足の位置差14px、伸長差12px。出す側だけ3本の爪線を描画" },
     "acrobatics": { "pass": true, "note": "跳躍弧・空中伸身・着地を持つ飛びつきと、全身2π回転・軌跡・砂煙を持つローリング" },
     "full_motion_audit": { "pass": true, "note": "HoshiCats v1.7.8、4猫×8方向×14仕草=448組合せ・計896描画、失敗0。Canvas 1・RAF 1" },
-    "interactive_combat": { "pass": true, "note": "WASD/矢印、J/K/Space/L、スマホスティック、キー2連打・フリックダッシュ、パンチ→爪→キック、移動ローリングと練習標的の命中/回避表示。390px/1280px表示を検査" }
+    "interactive_combat": { "pass": true, "note": "WASD/矢印、J/K/Space/L、スマホスティック、キー2連打・フリックダッシュ、パンチ→爪→キック、移動ローリング。390px/1280px表示を検査" },
+    "three_view_test_game": { "pass": true, "note": "横・縦・斜め視点ごとに敵が追跡・攻撃。HP・被弾無敵・命中・撃破・復帰・波を表示。弱倒しで低速、強倒しで高速、素早い倒し込みでダッシュ、倒し始め＋攻撃でダッシュパンチ" }
   }
 }

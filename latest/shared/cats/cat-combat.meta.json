@@ -1,0 +1,14 @@
+{
+  "lane": "app",
+  "ts": "2026-09-23T20:54:49+09:00",
+  "artifact": "cat-combat.js",
+  "prompt": "猫研の横・縦・斜め3視点で再利用する軽量な敵AI、命中、被弾、回避、撃破、リスポーン判定を共通化する。",
+  "source": "codex+gemini",
+  "backend": "codex",
+  "gates": {
+    "three_views": {"pass": true, "note": "side / vertical / isometricで敵の追跡・接触・攻撃を試験"},
+    "combat_loop": {"pass": true, "note": "HP・被弾無敵・攻撃1回判定・ノックバック・撃破・次の波・復帰を試験"},
+    "input_semantics": {"pass": true, "note": "弱倒し/強倒しと素早い倒し込みの判定を公開"},
+    "load_budget": {"pass": true, "note": "DOM/Canvas/画像を追加せず純粋な更新関数として実装"}
+  }
+}
