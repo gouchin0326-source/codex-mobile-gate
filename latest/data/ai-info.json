@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23T03:58:01.674439+00:00",
+  "updatedAt": "2026-09-23T04:08:01.930047+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -18,8 +18,8 @@
       "genre": "論文",
       "count": 8,
       "decision": "必要時だけ確認",
-      "signal": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers / RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models / Attention-Aware Routing: Coupling Routing and Attention in MoEs",
-      "topUrl": "https://arxiv.org/abs/2609.21061",
+      "signal": "Learning 3D biophysical cell properties from 2D images and cell-population statistics / Didactic knowledge or Clinical Cases? How Data Types Shape Medical Large Language Models / An Affordable AI-Integrated Smart Cane fo",
+      "topUrl": "https://arxiv.org/abs/2609.22410",
       "score": 3
     },
     {
@@ -76,6 +76,13 @@
       "url": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/"
     },
     {
+      "label": "論文",
+      "title": "Learning 3D biophysical cell properties from 2D images and cell-population statistics",
+      "why": "Codex/AI開発判断に関係",
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2609.22410"
+    },
+    {
       "label": "開発",
       "title": "New features and improvements in Copilot for JetBrains",
       "why": "Codex/AI開発判断に関係",
@@ -88,13 +95,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-09-22-faster-c-code-intelligence-with-whole-codebase-indexing"
-    },
-    {
-      "label": "AI",
-      "title": "Parallel cut research time and cost in half with GPT‑6 Astra",
-      "why": "Codex/AI開発判断に関係",
-      "source": "ChatGPT / OpenAI公式",
-      "url": "https://openai.com/index/parallel-cuts-time-and-cost-with-astra"
     }
   ],
   "items": [
@@ -195,6 +195,25 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "制作",
+      "sourceWeight": 1,
+      "title": "Learning 3D biophysical cell properties from 2D images and cell-population statistics",
+      "summary": "arXiv:2609.22410v1 Announce Type: new Abstract: Inferring 3D cellular properties from 2D microscopy is difficult when a reference instrument reports only population statistics rather than labels for individual cells. Her",
+      "url": "https://arxiv.org/abs/2609.22410",
+      "published": "2026-09-23T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "制作",
+        "研究"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -246,25 +265,6 @@
       "tags": [
         "AI",
         "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers",
-      "summary": "arXiv:2609.21061v1 Announce Type: new Abstract: Automatic target recognition (ATR) with synthetic aperture sonar (SAS) supports advanced naval capabilities, but deep learning is constrained by scarce target imagery, back",
-      "url": "https://arxiv.org/abs/2609.21061",
-      "published": "2026-09-22T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "制作",
         "研究"
       ]
     },
@@ -451,57 +451,21 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "Introducing GPT-6 Sol and Luna",
-      "summary": "Meet GPT-6 Sol and Luna, two models that bring frontier intelligence to everyday work with different balances of capability and cost.",
-      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
-      "published": "2026-09-22T18:00:00+00:00",
+      "title": "Didactic knowledge or Clinical Cases? How Data Types Shape Medical Large Language Models",
+      "summary": "arXiv:2609.22161v1 Announce Type: new Abstract: Medical large language models are commonly trained on mixtures of didactic data (e.g., textbooks) and clinical data (e.g., patient records), yet how these data types differ",
+      "url": "https://arxiv.org/abs/2609.22161",
+      "published": "2026-09-23T04:00:00+00:00",
       "score": 2,
       "tags": [
-        "AI",
+        "論文",
         "研究"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Security improvements for SSH",
-      "summary": "We’re removing several SSH algorithms, adding a new algorithm, and requiring larger RSA SSH keys to improve security. The changes are as follows: We’re removing the ability to use RSA… The post Security improvements for ",
-      "url": "https://github.blog/changelog/2026-09-22-security-improvements-for-ssh",
-      "published": "2026-09-22T14:11:47+00:00",
-      "score": 2,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Deprecation notice: All-platform CodeQL bundle",
-      "summary": "Starting with CodeQL CLI 2.27.0, the all-platform CodeQL bundle (i.e., codeql-bundle.tar.gz and codeql-bundle.tar.zst), which includes the binaries for all supported platforms up to this release, is marked as deprecated.",
-      "url": "https://github.blog/changelog/2026-09-22-deprecation-notice-all-platform-codeql-bundle",
-      "published": "2026-09-22T09:21:03+00:00",
-      "score": 2,
-      "tags": [
-        "開発",
-        "重要"
       ]
     },
     {
@@ -512,10 +476,46 @@
       "provider": null,
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
-      "summary": "arXiv:2609.20971v1 Announce Type: new Abstract: Long-context large language model inference is increasingly limited by prefill, where dense self-attention processes the entire prompt before generation begins. Sparse bloc",
-      "url": "https://arxiv.org/abs/2609.20971",
-      "published": "2026-09-22T04:00:00+00:00",
+      "title": "An Affordable AI-Integrated Smart Cane for Multimodal Mobility Assistance of Visually Impaired Users",
+      "summary": "arXiv:2609.22277v1 Announce Type: new Abstract: Visual impairment affects over 2.2 billion people worldwide, yet conventional white canes cannot detect elevated hazards or provide semantic environmental context. Existing",
+      "url": "https://arxiv.org/abs/2609.22277",
+      "published": "2026-09-23T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "PAANI : On Device Visual Evidence Fusion and Explainable Guidance for River Robot Simulation",
+      "summary": "arXiv:2609.22353v1 Announce Type: new Abstract: Mobile river monitoring robots must interpret obstacles and water boundaries that geographic waypoints alone cannot describe. On resource constrained platforms, converting ",
+      "url": "https://arxiv.org/abs/2609.22353",
+      "published": "2026-09-23T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Social Influence and the Allocation of Scientific Attention in AI Populations",
+      "summary": "arXiv:2609.22408v1 Announce Type: new Abstract: AI systems are becoming participants in the evaluation and use of scientific research. They encounter citation counts, download statistics and lists of popular articles dev",
+      "url": "https://arxiv.org/abs/2609.22408",
+      "published": "2026-09-23T04:00:00+00:00",
       "score": 2,
       "tags": [
         "論文",
@@ -530,10 +530,10 @@
       "provider": null,
       "topic": "その他",
       "sourceWeight": 1,
-      "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
-      "summary": "arXiv:2609.20974v1 Announce Type: new Abstract: In Mixture-of-Experts language models, the router typically selects and weights experts based on the token's hidden state, utilizing limited contextual information. We prop",
-      "url": "https://arxiv.org/abs/2609.20974",
-      "published": "2026-09-22T04:00:00+00:00",
+      "title": "Goal-driven Variant Categorization",
+      "summary": "arXiv:2609.22475v1 Announce Type: new Abstract: Process discovery rarely yields a single coherent process structure. For analysis, a common step is to cluster process variants based on structural similarity and then assi",
+      "url": "https://arxiv.org/abs/2609.22475",
+      "published": "2026-09-23T04:00:00+00:00",
       "score": 2,
       "tags": [
         "論文",
@@ -701,5 +701,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-23T03:58:01.674439+00:00"
+  "lastSuccessAt": "2026-09-23T04:08:01.930047+00:00"
 }
