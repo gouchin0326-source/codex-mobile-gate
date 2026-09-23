@@ -1,11 +1,11 @@
 {
   "lane": "app",
-  "ts": "2026-09-23T08:47:11+09:00",
+  "ts": "2026-09-23T09:06:09+09:00",
   "artifact": "index.html",
-  "prompt": "共通猫の連続爪を8方向に対応させ、軽量なドット絵動作として検証する。",
+  "prompt": "猫研に4動作編集と3環境×3視点を試せるテスト動作ルームを追加する。",
   "source": "codex+gemini",
   "backend": "codex",
-  "model": "gpt-5.6-sol",
+  "model": "gpt-6-astra",
   "gates": {
     "shared_assets": { "pass": true, "note": "HoshiCats共通4匹を直接参照" },
     "motion_viewer": { "pass": true, "note": "8方向・歩行・静止・仕草ON/OFF" },
@@ -14,6 +14,7 @@
     "diagonal_and_lod": { "pass": true, "note": "初期表示を専用右上姿勢、高精細は拡大猫だけ自動適用" },
     "action_controls": { "pass": true, "note": "8動作をボタンで即時比較" },
     "motion_sequencer": { "pass": true, "note": "生活・冒険・リアクション各4動作、方向連動、再生停止、0.5/1/1.5倍、スロット選択" },
+    "test_motion_room": { "pass": true, "note": "4動作と8方向を編集し、猫部屋・路地・屋根×横スクロール・斜め視点・縦スクロールで再生。障害物・速度切替、JSON保存。Canvas 1・RAF 1" },
     "preset_export": { "pass": true, "note": "catId・HoshiCats版・速度・方向付き動作列をJSON出力" },
     "attack_action": { "pass": true, "note": "猫パンチを単体選択・冒険プリセット・4猫比較・8方向比較へ反映" },
     "battle_sequence": { "pass": true, "note": "猫パンチ→連続爪→回転攻撃→突進を方向付きで連続再生" },
