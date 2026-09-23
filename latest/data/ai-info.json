@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-09-23T02:28:01.574109+00:00",
+  "updatedAt": "2026-09-23T02:38:10.537667+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "Claude Opus 5.5 is now available in GitHub Copilot",
+  "topLine": "OpenTelemetry in the GitHub Copilot app",
   "cards": [
     {
       "genre": "開発",
       "count": 16,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "Claude Opus 5.5 is now available in GitHub Copilot / OpenAI’s GPT-6 Sol and GPT-6 Luna now available / Project HydraFusion: Frontier quality via multi-model orchestration",
-      "topUrl": "https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot",
+      "signal": "OpenTelemetry in the GitHub Copilot app / Claude Opus 5.5 is now available in GitHub Copilot / OpenAI’s GPT-6 Sol and GPT-6 Luna now available",
+      "topUrl": "https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app",
       "score": 4
     },
     {
@@ -40,6 +40,13 @@
     }
   ],
   "focus": [
+    {
+      "label": "開発",
+      "title": "OpenTelemetry in the GitHub Copilot app",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app"
+    },
     {
       "label": "開発",
       "title": "Claude Opus 5.5 is now available in GitHub Copilot",
@@ -88,16 +95,28 @@
       "why": "Codex/AI開発判断に関係",
       "source": "ChatGPT / OpenAI公式",
       "url": "https://openai.com/index/parallel-cuts-time-and-cost-with-astra"
-    },
-    {
-      "label": "論文",
-      "title": "LoRA Enhanced Contrastive Learning with SAS Vision Transformers",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.21061"
     }
   ],
   "items": [
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "OpenTelemetry in the GitHub Copilot app",
+      "summary": "Understand how Copilot agents perform and interact with models and tools. The GitHub Copilot app now supports OpenTelemetry (OTel) configuration through enterprise-managed settings. OTel is an open source observability f",
+      "url": "https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app",
+      "published": "2026-09-23T02:14:54+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
+      ]
+    },
     {
       "source": "github-changelog",
       "platform": "開発",
@@ -284,24 +303,6 @@
         "AI",
         "重要",
         "研究"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "GitHub Enterprise adds credential inventory exports",
-      "summary": "Enterprise owners can now export a complete inventory of every credential that can access their enterprise (e.g., SSH keys, classic and fine-grained personal access tokens, OAuth App access tokens, and… The post GitHub E",
-      "url": "https://github.blog/changelog/2026-09-21-github-enterprise-adds-credential-inventory-exports",
-      "published": "2026-09-21T21:13:18+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
       ]
     },
     {
@@ -700,5 +701,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-23T02:28:01.574109+00:00"
+  "lastSuccessAt": "2026-09-23T02:38:10.537667+00:00"
 }

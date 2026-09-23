@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-23T02:28:01.574109+00:00",
-  "lastSuccessAt": "2026-09-23T02:28:01.574109+00:00",
+  "updatedAt": "2026-09-23T02:38:10.537667+00:00",
+  "lastSuccessAt": "2026-09-23T02:38:10.537667+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -127,9 +127,9 @@
     {
       "genre": "開発",
       "count": 16,
-      "signal": "Claude Opus 5.5 is now available in GitHub Copilot / OpenAI’s GPT-6 Sol and GPT-6 Luna now available / Project HydraFusion: Frontier quality via multi-model orchestration",
+      "signal": "OpenTelemetry in the GitHub Copilot app / Claude Opus 5.5 is now available in GitHub Copilot / OpenAI’s GPT-6 Sol and GPT-6 Luna now available",
       "decision": "CG開発・GitHub運用へ反映候補",
-      "topUrl": "https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot",
+      "topUrl": "https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app",
       "score": 4
     },
     {
@@ -159,9 +159,9 @@
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 0.2 - 64 km ENE of Pedro Bay, Alaska",
+      "signal": "M 1.1 - 5 km NW of The Geysers, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026svqnsk",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75440222",
       "score": 1
     }
   ],
@@ -172,12 +172,12 @@
       "label": "GitHub更新",
       "genre": "開発",
       "provider": null,
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Claude Opus 5.5 is now available in GitHub Copilot",
-      "summary": "Claude Opus 5.5, Anthropic’s newest Opus model, is now available in GitHub Copilot. You can use it for agentic coding, long-running agentic tasks, and knowledge work. In early testing, Opus… The post Claude Opus 5.5 is n",
-      "url": "https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot",
-      "published": "2026-09-22T17:10:23+00:00",
+      "title": "OpenTelemetry in the GitHub Copilot app",
+      "summary": "Understand how Copilot agents perform and interact with models and tools. The GitHub Copilot app now supports OpenTelemetry (OTel) configuration through enterprise-managed settings. OTel is an open source observability f",
+      "url": "https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app",
+      "published": "2026-09-23T02:14:54+00:00",
       "score": 4,
       "tags": [
         "開発",
@@ -284,10 +284,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.2 - 64 km ENE of Pedro Bay, Alaska",
-      "summary": "64 km ENE of Pedro Bay, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026svqnsk",
-      "published": "2026-09-23T02:21:58.920000+00:00",
+      "title": "M 1.1 - 5 km NW of The Geysers, CA",
+      "summary": "5 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75440222",
+      "published": "2026-09-23T02:27:43.380000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -308,6 +308,25 @@
       "score": 1,
       "tags": [
         "技術"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Claude Opus 5.5 is now available in GitHub Copilot",
+      "summary": "Claude Opus 5.5, Anthropic’s newest Opus model, is now available in GitHub Copilot. You can use it for agentic coding, long-running agentic tasks, and knowledge work. In early testing, Opus… The post Claude Opus 5.5 is n",
+      "url": "https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot",
+      "published": "2026-09-22T17:10:23+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
       ]
     },
     {
@@ -400,24 +419,6 @@
         "AI",
         "重要",
         "研究"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "GitHub Enterprise adds credential inventory exports",
-      "summary": "Enterprise owners can now export a complete inventory of every credential that can access their enterprise (e.g., SSH keys, classic and fine-grained personal access tokens, OAuth App access tokens, and… The post GitHub E",
-      "url": "https://github.blog/changelog/2026-09-21-github-enterprise-adds-credential-inventory-exports",
-      "published": "2026-09-21T21:13:18+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
       ]
     },
     {
@@ -750,64 +751,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-23T02:28:01.574109+00:00",
-      "lastAttemptAt": "2026-09-23T02:28:01.574109+00:00",
+      "lastSuccessAt": "2026-09-23T02:38:10.537667+00:00",
+      "lastAttemptAt": "2026-09-23T02:38:10.537667+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-23T02:28:01.574109+00:00",
-      "lastAttemptAt": "2026-09-23T02:28:01.574109+00:00",
+      "lastSuccessAt": "2026-09-23T02:38:10.537667+00:00",
+      "lastAttemptAt": "2026-09-23T02:38:10.537667+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-23T02:28:01.574109+00:00",
-      "lastAttemptAt": "2026-09-23T02:28:01.574109+00:00",
+      "lastSuccessAt": "2026-09-23T02:38:10.537667+00:00",
+      "lastAttemptAt": "2026-09-23T02:38:10.537667+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-23T02:28:01.574109+00:00",
-      "lastAttemptAt": "2026-09-23T02:28:01.574109+00:00",
+      "lastSuccessAt": "2026-09-23T02:38:10.537667+00:00",
+      "lastAttemptAt": "2026-09-23T02:38:10.537667+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-23T02:28:01.574109+00:00",
-      "lastAttemptAt": "2026-09-23T02:28:01.574109+00:00",
+      "lastSuccessAt": "2026-09-23T02:38:10.537667+00:00",
+      "lastAttemptAt": "2026-09-23T02:38:10.537667+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-23T02:28:01.574109+00:00",
-      "lastAttemptAt": "2026-09-23T02:28:01.574109+00:00",
+      "lastSuccessAt": "2026-09-23T02:38:10.537667+00:00",
+      "lastAttemptAt": "2026-09-23T02:38:10.537667+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-23T02:28:01.574109+00:00",
-      "lastAttemptAt": "2026-09-23T02:28:01.574109+00:00",
+      "lastSuccessAt": "2026-09-23T02:38:10.537667+00:00",
+      "lastAttemptAt": "2026-09-23T02:38:10.537667+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-23T02:28:01.574109+00:00",
-      "lastAttemptAt": "2026-09-23T02:28:01.574109+00:00",
+      "lastSuccessAt": "2026-09-23T02:38:10.537667+00:00",
+      "lastAttemptAt": "2026-09-23T02:38:10.537667+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
