@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23T14:58:01.481357+00:00",
+  "updatedAt": "2026-09-23T15:08:01.133366+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -77,6 +77,13 @@
     },
     {
       "label": "開発",
+      "title": "Local sandboxing in the GitHub Copilot app",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-23-local-sandboxing-in-the-github-copilot-app"
+    },
+    {
+      "label": "開発",
       "title": "Developers want more efficient software. Here’s what over 1000 GitHub users told us they need.",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
@@ -88,13 +95,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "技術RSS",
       "url": "https://michaelheap.com/github-wiki-is-an-antipattern/"
-    },
-    {
-      "label": "論文",
-      "title": "Learning 3D biophysical cell properties from 2D images and cell-population statistics",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.22410"
     }
   ],
   "items": [
@@ -192,6 +192,24 @@
         "重要",
         "開発",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Local sandboxing in the GitHub Copilot app",
+      "summary": "Local sandboxing helps reduce the potential impact of unintended commands by limiting access to files, network resources, and credentials on your machine. In the GitHub Copilot app, you configure it… The post Local sandb",
+      "url": "https://github.blog/changelog/2026-09-23-local-sandboxing-in-the-github-copilot-app",
+      "published": "2026-09-23T15:00:57+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -303,24 +321,6 @@
         "AI",
         "重要",
         "研究"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Refreshed repository pull requests page generally available",
-      "summary": "The new repository pull requests page is now generally available to all GitHub users. Highlights The new page makes it easier to find and act on pull requests in a… The post Refreshed repository pull requests page genera",
-      "url": "https://github.blog/changelog/2026-09-21-refreshed-repository-pull-requests-page-generally-available",
-      "published": "2026-09-22T01:25:53+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
       ]
     },
     {
@@ -701,5 +701,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-23T14:58:01.481357+00:00"
+  "lastSuccessAt": "2026-09-23T15:08:01.133366+00:00"
 }
