@@ -1,0 +1,24 @@
+{
+  "lane": "joint",
+  "ts": "2026-09-24T08:00:02+09:00",
+  "artifact": "0800-three-agent-exchange.md",
+  "prompt": "コデ郎の調査をコデ吉・コデ美へ渡し、三体で相互レビューする",
+  "source": "local",
+  "backend": "codex",
+  "model": "deterministic-rules",
+  "seconds": 0,
+  "gates": {
+    "three_sections": {
+      "pass": true,
+      "note": "three agents"
+    },
+    "cross_review": {
+      "pass": true,
+      "note": "knowledge -> game/music -> mutual review"
+    },
+    "shared_lane": {
+      "pass": true,
+      "note": "one serialized joint request"
+    }
+  }
+}
