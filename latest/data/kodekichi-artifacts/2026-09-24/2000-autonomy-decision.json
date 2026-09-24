@@ -1,0 +1,76 @@
+{
+  "at": "2026-09-24T20:00:02+09:00",
+  "slot": "20:00",
+  "trigger": "定時便で観察を開始",
+  "compass": {
+    "useful": 4.12,
+    "playable": 1.6,
+    "truthful": 1.36,
+    "visible": 3.49
+  },
+  "cycle": [
+    "観察",
+    "候補比較",
+    "三体相談",
+    "自己選択",
+    "制作",
+    "門",
+    "学習"
+  ],
+  "agents": {
+    "kodekichi": {
+      "candidate": "memory",
+      "goal": "公開情報を覚えて答える記憶ゲーム",
+      "axis": "useful",
+      "why": "羅針盤のuseful=4.12、採用9回。前回と違う遊び方で知識を定着させる",
+      "rejected": [
+        {
+          "candidate": "fact_sort",
+          "goal": "情報を分類して得点するゲーム",
+          "why": "羅針盤truthful=1.36・採用3回で優先点が低い"
+        },
+        {
+          "candidate": "choice",
+          "goal": "三体の判断を選ぶ分岐ゲーム",
+          "why": "羅針盤playable=1.6・採用4回で優先点が低い"
+        }
+      ]
+    },
+    "kodemi": {
+      "candidate": "mood",
+      "goal": "気分を混ぜる音色メーカー",
+      "axis": "visible",
+      "why": "羅針盤のvisible=3.49、採用6回。調査内容を感情と音へ変換する",
+      "rejected": [
+        {
+          "candidate": "sequencer",
+          "goal": "4音ステップシーケンサー",
+          "why": "羅針盤playable=1.6・採用2回で優先点が低い"
+        },
+        {
+          "candidate": "echo",
+          "goal": "リズムをまねる反応ゲーム",
+          "why": "羅針盤useful=4.12・採用8回で優先点が低い"
+        }
+      ]
+    },
+    "kodesama": {
+      "candidate": "source",
+      "goal": "出典と鮮度を点検する資料棚",
+      "axis": "visible",
+      "why": "羅針盤のvisible=3.49、採用6回。推測と確認済み情報を分ける",
+      "rejected": [
+        {
+          "candidate": "search",
+          "goal": "三体の根拠を横断検索する図書館",
+          "why": "羅針盤useful=4.12・採用8回で優先点が低い"
+        },
+        {
+          "candidate": "compare",
+          "goal": "新旧情報を比較する調査盤",
+          "why": "羅針盤truthful=1.36・採用2回で優先点が低い"
+        }
+      ]
+    }
+  }
+}
