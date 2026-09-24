@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-09-24T06:18:01.825593+00:00",
-  "lastSuccessAt": "2026-09-24T06:18:01.825593+00:00",
-  "status": "fresh",
+  "updatedAt": "2026-09-24T06:28:01.963247+00:00",
+  "lastSuccessAt": "2026-09-24T06:28:01.963247+00:00",
+  "status": "stale",
   "mode": "zero-token-social-trends",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "public API/RSS only; no login bypass; no unauthorized scraping; short excerpts + URL only",
@@ -16,29 +16,6 @@
     "Google News": 60
   },
   "topics": [
-    {
-      "topic": "スポーツ",
-      "count": 8,
-      "attention": 24,
-      "headline": "【関大スポーツ編集局】関大スポーツ333号発行のお知らせ - 関大スポーツ編集局",
-      "urls": [
-        {
-          "title": "【関大スポーツ編集局】関大スポーツ333号発行のお知らせ - 関大スポーツ編集局",
-          "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE1lcUdZNjA5Y0lWekJhZy0zOUNabk9mbnZaZGNscXhQVEJuY3o4X1FoSkdtZEZDa3I2Ymc0Q1J0ZkRPcUlSellJ?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "スポーツクライミング部の2選手が 第20回アジア競技大会（2026/愛知・名古屋）に出場 - setsunan.ac.jp",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9TRzhiVTlfbjhjdUNNamdONFdZXzd6dWItTjZ1UmVMY3BwWHNjLVAtaWpJaVI3aHZleTQ0djhCN0dzOHVoSlJicmVlbFdYSnhzN1ZYM25n?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "東京eスポーツフェスタ2027 10月3日に多摩プレイベントを開催します - my.metro.tokyo.lg.jp",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBmbWRGWnJLMzdtTkxIWUhFbkZlOThFY3lkTUxYcGZzQ0FWdUhYbWRWa1dxdXJnVmttRjB0Nnhya2xlSVdXd3hCQnJ0a1E5V2RrU1ZDNFVYcnNoOVJSSDlVUVRuVkhGb25r?oc=5",
-          "platform": "Google News"
-        }
-      ]
-    },
     {
       "topic": "AI",
       "count": 6,
@@ -58,6 +35,29 @@
         {
           "title": "Claude Codeが「AGENTS.md」に対応。CLAUDE.mdが存在しない場合、自動的に読み込み - Publickey",
           "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFB0WTRhTXJqM3Y0UEZJQ01PZmFoQUZZaFo5UEJrZURQUnpxeUIxTTNVelRDUXBaV2dWcV9Id05JdFhrNmUtOW9IeFFvV3JBUnpHQ2otMFp2NWJLeThTeWJ4eFktMTJZaGxPVmczdjRKTWMzZU9D?oc=5",
+          "platform": "Google News"
+        }
+      ]
+    },
+    {
+      "topic": "スポーツ",
+      "count": 7,
+      "attention": 21,
+      "headline": "【関大スポーツ編集局】関大スポーツ333号発行のお知らせ - 関大スポーツ編集局",
+      "urls": [
+        {
+          "title": "【関大スポーツ編集局】関大スポーツ333号発行のお知らせ - 関大スポーツ編集局",
+          "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE1lcUdZNjA5Y0lWekJhZy0zOUNabk9mbnZaZGNscXhQVEJuY3o4X1FoSkdtZEZDa3I2Ymc0Q1J0ZkRPcUlSellJ?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "スポーツクライミング部の2選手が 第20回アジア競技大会（2026/愛知・名古屋）に出場 - setsunan.ac.jp",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9TRzhiVTlfbjhjdUNNamdONFdZXzd6dWItTjZ1UmVMY3BwWHNjLVAtaWpJaVI3aHZleTQ0djhCN0dzOHVoSlJicmVlbFdYSnhzN1ZYM25n?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "東京eスポーツフェスタ2027 10月3日に多摩プレイベントを開催します - my.metro.tokyo.lg.jp",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBmbWRGWnJLMzdtTkxIWUhFbkZlOThFY3lkTUxYcGZzQ0FWdUhYbWRWa1dxdXJnVmttRjB0Nnhya2xlSVdXd3hCQnJ0a1E5V2RrU1ZDNFVYcnNoOVJSSDlVUVRuVkhGb25r?oc=5",
           "platform": "Google News"
         }
       ]
@@ -86,34 +86,39 @@
       ]
     },
     {
-      "topic": "健康",
-      "count": 5,
-      "attention": 15,
-      "headline": "【新潟医療福祉大学】本学を代表機関とする「にいがた健康・スポーツ医科学ネットワーク」がJSC「地方公共団体等が行うパラアスリート発掘・育成の取組推進事業」に採択 - PR TIMES",
+      "topic": "エンタメ",
+      "count": 6,
+      "attention": 18,
+      "headline": "元カラテカ入江慎也、芸能界に「未練はめちゃくちゃある」…中目黒で街頭インタビュー受け、テレビへの本音吐露 - smart-flash.jp",
       "urls": [
         {
-          "title": "【新潟医療福祉大学】本学を代表機関とする「にいがた健康・スポーツ医科学ネットワーク」がJSC「地方公共団体等が行うパラアスリート発掘・育成の取組推進事業」に採択",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBudEc3Rmg4SkVUQm1Sd3pOMU5VMjlNQTdaYTZEYnExcTF0eE9sbmV1ZEJaWUVSTmVUNV9DUUh5RGxTV0RqTzgyemE3c2RaeUZtN2p1SUZyRi1HR1dMci13RWNOOU0tM2F6Ymc?oc=5",
+          "title": "元カラテカ入江慎也、芸能界に「未練はめちゃくちゃある」…中目黒で街頭インタビュー受け、テレビへの本音吐露 - smart-flash.jp",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9WVUc3b0MwZUZXTlA3bXZoZTFlMTRNeDVmWlVCZUhOVGJPOWxRSVFOUXFnS0hzdkRfN3VqX1BvUzBxUzdWY3I5ckxrR2RFdk9wVm1FMkxnZzNUYkRlYjlQWmRDejdTVWZmZk1tX2tkbWtXcmhJQ0pF?oc=5",
           "platform": "Google News"
         },
         {
-          "title": "メンタルヘルスＴ Research Memo（3）：コストリーダーシップと差別化を両立させ、競争優位を構築（1） - ｄメニューニュース",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPQ3FlVzJOWDVHall6dmZJT01Rdy1WSGtBeVdQQlRKSmZVeUd1bVJxa0FFeTJYTmV6cG1iN1QtUmFfUTF2NXNfR3J3Q1dNN3c0aDRIMWdPd3Y3bDJybWlpblFkNkZKSGE0SmhhUlUxV1c1ekY3MC1yQlJxbTRwTlRmRG5JQUlQeDIxdEh2MNIBjAFBVV95cUxPQ3FlVzJOWDVHall6dmZJT01Rdy1WSGtBeVdQQlRKSmZVeUd1bVJxa0FFeTJYTmV6cG1iN1QtUmFfUTF2NXNfR3J3Q1dNN3c0aDRIMWdPd3Y3bDJybWlpblFkNkZKSGE0SmhhUlUxV1c1ekY3MC1yQlJxbTRwTlRmRG5JQUlQeDIxdEh2MA?oc=5",
+          "title": "「カッコよくキマってるね」LE SSERAFIM・宮脇咲良、米国へそ出し衣装のオフショットに反響「最近の衣装ヤバくないかな」「ナイススタイル」 - 中日新聞We",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5RZW1faWlicFpUUExGUEQ0TGVKRXAwUDBQUjZzckpBdDhLVmppTmIwUmRRdUhXOHN2ZFNCTWE3ejhUR1dPVlZUc1d6TEpiM3JqQ3V5cQ?oc=5",
           "platform": "Google News"
         },
         {
-          "title": "タイ政府が大麻管理法案を閣議承認 医療・健康目的に限定へ - newsclip.be",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1nQ1QxaHFURWlsMzBOSXVGSTZrSG5JLUZxR2dKVjU0a3cycG0zUnVjUzNZNm5VckcyWG1TVURYVm90TGdXZkctajlXVElEbk9wUkxhcXlWT2k0Zw?oc=5",
+          "title": "「男性アイドルが付き合いたくなるのもわかる」小山璃奈、開放的なタンクトップ姿が話題に「今の芸能界で1番可愛い」の声も - 中日新聞Web",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9kTjJJTnEzYzZzaEROSV9wcHN1LVZvYVdFVmwtMV9WcHNRVHczdmR1QnNrdTFDUVNrZ2lxbzJtNDhLT0hhN3VpOFQ4TG5keC1UVHFiOA?oc=5",
           "platform": "Google News"
         }
       ]
     },
     {
       "topic": "科学",
-      "count": 5,
-      "attention": 15,
-      "headline": "謎の小さな赤い天体「LRD」は急成長するブラックホールの可能性 国立天文台 - マイナビニュース",
+      "count": 6,
+      "attention": 18,
+      "headline": "ステラクレードル株式会社、第70回宇宙科学技術連合講演会への登壇が決定。日本発の人工重力研究で “暮らす宇宙” - ニコニコニュース",
       "urls": [
+        {
+          "title": "ステラクレードル株式会社、第70回宇宙科学技術連合講演会への登壇が決定。日本発の人工重力研究で “暮らす宇宙” - ニコニコニュース",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9yb3BJTE1hVnduQTdhUkNsMk5pcHVkcExhaFQxekZkakFIMFR3TDR1M2xPN1pEV3JmYnB5U1Z0d1ZpOXVDdndBTGVkSTR3R0tjMGJsY3BaWUFNSGk5OVA3SFZ1WWozYkJ4WmNLNWNXS3N4VF94SkE?oc=5",
+          "platform": "Google News"
+        },
         {
           "title": "謎の小さな赤い天体「LRD」は急成長するブラックホールの可能性 国立天文台 - マイナビニュース",
           "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5lQUxvejlYRGRrcExLYnRwLVYwd0pESDZld1NlVUFDNnJXYXlYRkUwVFVOQk1wOFVyMUF2R2dOQjBMblJaLWtIZm42Q3U1YmFUNGdmeXBKc2NVM25RREs5ZXdWNWFQeENx?oc=5",
@@ -123,10 +128,28 @@
           "title": "画像2 / 7＞宇宙には不思議がいっぱい！ポケモンと一緒に宇宙の神秘を学ぶ「ポケモン天文台」が11月より全国の博物館を巡回 - ウォーカープラス",
           "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9IZEh6d2g3OVhCY0x0UlRENVE0c0xvY19JdEJGUHhZRHRLbnpEanhHZXp1QldxT1lPQ19ETTNTNDEyRVd1Qkg4X0NnVXRlTU01dTliM3hFRFhwcm5EaUlwdTF0WWdDamkzZ1NvUWdn?oc=5",
           "platform": "Google News"
+        }
+      ]
+    },
+    {
+      "topic": "健康",
+      "count": 5,
+      "attention": 15,
+      "headline": "【新潟医療福祉大学】本学を代表機関とする「にいがた健康・スポーツ医科学ネットワーク」がJSC「地方公共団体等が行うパラアスリート発掘・育成の取組推進事業」に採択 - prtimes.jp",
+      "urls": [
+        {
+          "title": "【新潟医療福祉大学】本学を代表機関とする「にいがた健康・スポーツ医科学ネットワーク」がJSC「地方公共団体等が行うパラアスリート発掘・育成の取組推進事業」に採択",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBudEc3Rmg4SkVUQm1Sd3pOMU5VMjlNQTdaYTZEYnExcTF0eE9sbmV1ZEJaWUVSTmVUNV9DUUh5RGxTV0RqTzgyemE3c2RaeUZtN2p1SUZyRi1HR1dMci13RWNOOU0tM2F6Ymc?oc=5",
+          "platform": "Google News"
         },
         {
-          "title": "受賞者に問う科学の未来 - 日経サイエンス",
-          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1ORUNnb2V4LWJaZUtFMFV3YlJLNXVGYkpTa1dsMVRsWkM3SHJic1BtbGVkTGhoVmZIU0Y1bnFGdllHTllOaGJyMnBsa2JOVHNGdWtzWjFtM2h0QQ?oc=5",
+          "title": "緑内障で視力を失っても続けた努力、企業経営で成功した男性が聾学校に寄付…俳優ＭＥＧＵＭＩさんも活動に賛同 - 読売新聞",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNcTVBMVg3amZycW16QVJWU05jVzZPYXl1MkJvNXZETXVteXNsczVVcjg3aEN0d1BhcmRCYjlRSHI0YmtlTm1uMVJFd3hUUVlCVEpqWlhvMm1GYW53Ym9uUTc0bTgxVnVCcUQ5Y0NzM1l1OEE0SVlPcDFOZmhhdW1ubVdRY1gzeTloNDBpMnlYTDltdw?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "メンタルヘルスＴ Research Memo（3）：コストリーダーシップと差別化を両立させ、競争優位を構築（1） - ｄメニューニュース",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPQ3FlVzJOWDVHall6dmZJT01Rdy1WSGtBeVdQQlRKSmZVeUd1bVJxa0FFeTJYTmV6cG1iN1QtUmFfUTF2NXNfR3J3Q1dNN3c0aDRIMWdPd3Y3bDJybWlpblFkNkZKSGE0SmhhUlUxV1c1ekY3MC1yQlJxbTRwTlRmRG5JQUlQeDIxdEh2MNIBjAFBVV95cUxPQ3FlVzJOWDVHall6dmZJT01Rdy1WSGtBeVdQQlRKSmZVeUd1bVJxa0FFeTJYTmV6cG1iN1QtUmFfUTF2NXNfR3J3Q1dNN3c0aDRIMWdPd3Y3bDJybWlpblFkNkZKSGE0SmhhUlUxV1c1ekY3MC1yQlJxbTRwTlRmRG5JQUlQeDIxdEh2MA?oc=5",
           "platform": "Google News"
         }
       ]
@@ -157,7 +180,7 @@
     {
       "topic": "ゲーム",
       "count": 4,
-      "attention": 13,
+      "attention": 14,
       "headline": "『スーパーダンガンロンパ２×２』新キャラ「東 才空太郎」公開！CVは花江夏樹さん - gamewith.jp",
       "urls": [
         {
@@ -166,59 +189,13 @@
           "platform": "Google News"
         },
         {
+          "title": "全10タイトルのお得な割引セール！『HappinetGAMES ダウンロードセール in September』開催中 - ゲームハック",
+          "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBXd2ZNeGJPRUNFUS1xbUs4bHRpUm4wVkVhZm1ManJVWkEzRDhKeWxKMkNvQnoyNGVXaVFRLTJiY1BPeXJpZGfSAUZBVV95cUxQV3dmTXhiT0VDRVEtcW1LOGx0aVJuMFZFYWZtTGpyVVpBM0Q4SnlsSjJDb0J6MjRlV2lRUS0yYmNQT3lyaWRn?oc=5",
+          "platform": "Google News"
+        },
+        {
           "title": "『エストポリス伝記I＆II』が2027年発売決定！ 名作RPGがNintendo Switch2などで復活 - appbank.net",
           "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9kQXJSY3ZvN2hlSTBlODdzYnZjLXhxTWVoU050aldDalZJWld0REJaOE9LcE81MnJodDFlb2Q0dmZCd0E3bnNvTEQ0Ym0xY0hXeUswMlRxX1U0NWxPemZwYg?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "ロールプレイングゲーム『エストポリス伝記 I＆II』2027年発売決定！ - Mantan Web",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9hVVRkalNCVlRLbkhvdjE1dzZfR2lveDN2ZHlZSUVPT0NPTVNrbldIR0FmNHpfek5SbjlUeDVIWE40N2xLTlYweEdWTHVjOFFCcnNSR2pWeFZ3OFoyaVhsMFhiRURsSmFRdk96U3FpRXFvUmhfT1E?oc=5",
-          "platform": "Google News"
-        }
-      ]
-    },
-    {
-      "topic": "エンタメ",
-      "count": 4,
-      "attention": 12,
-      "headline": "「カッコよくキマってるね」LE SSERAFIM・宮脇咲良、米国へそ出し衣装のオフショットに反響「最近の衣装ヤバくないかな」「ナイススタイル」 - 中日新聞Web",
-      "urls": [
-        {
-          "title": "「カッコよくキマってるね」LE SSERAFIM・宮脇咲良、米国へそ出し衣装のオフショットに反響「最近の衣装ヤバくないかな」「ナイススタイル」 - 中日新聞We",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5RZW1faWlicFpUUExGUEQ0TGVKRXAwUDBQUjZzckpBdDhLVmppTmIwUmRRdUhXOHN2ZFNCTWE3ejhUR1dPVlZUc1d6TEpiM3JqQ3V5cQ?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "駒木根葵汰、ドラマ「天狗の台所」シーズン3で「羽使いは達人級になってきました」 共演の越山敬達の20センチ身長アップに「お兄ちゃんとして悔しさも…」と心境複雑 ",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9tdGhlWUNYbnVwZEU5ZHYyeWE2a1V3QkZXTGVSZTVBRVhBbmkyWWMwMXotYllkSTd2UkNtVnI4OFNUNmtOUV9XOV9fQzFaSU1vcTMtVA?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "『風、薫る』最終回直前にネット困惑「ほんとに明日で終わる？」「どうやってまとめるん？」展開詰め込みにツッコミの声 - 中日新聞Web",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBFTzNPRVRyRVlIdUpkSno1NkwzXzhWb0JxbXBrVFYxUm9IcnRkeDdNLXZTbHZ3NHZxRlJ4TWJQQWpLYTc5NEtJcXgwa0JrQ0ZUTnd4WQ?oc=5",
-          "platform": "Google News"
-        }
-      ]
-    },
-    {
-      "topic": "社会",
-      "count": 4,
-      "attention": 12,
-      "headline": "「なぜ遥とお腹の子の命が…」元交際相手のネイリスト殺害事件 検察側が拘禁刑21年を求刑 被害女性の夫が厳罰訴え 茨城・水戸市 - FNNプライムオンライン",
-      "urls": [
-        {
-          "title": "「なぜ遥とお腹の子の命が…」元交際相手のネイリスト殺害事件 検察側が拘禁刑21年を求刑 被害女性の夫が厳罰訴え 茨城・水戸市 - FNNプライムオンライン",
-          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1fcURwZjA5bG9oRkNQQzl4WWEzUEROT0Nrd3YtMHU5RHRZODJ6NE1BaC0xbExWX2FWRV9uMzNNZjJtTjVxWThkS1dweWUyZw?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "台風で堤防決壊の印旛沼付近 ソーラーパネルから煙 けが人なし [千葉県] - 朝日新聞",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBkYzg1YVhQTmxXbTBZc2g3X1VnZmI1RW5JSmZhZUFNc19YZkZYZU9GSjFWTkZ3YWZ6SWxtMGota0hES0NWZWp2WExBU3hzb0lnaEpQTlhxTUJnaE5QWUh0R2ZRN3dWTEU?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "JR貨物職員側から何度もわいろ要求か 福岡県警が勤務先を家宅捜索 [福岡県] - 朝日新聞",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE91SFBScXh6Q2pFUUp6NUk5d1J6aGVSemc0S0lRQV85ZWYxQUpObHZpYkpaMV80cFVkVjd1NlQyWDFqU0pvbmhfV1BFaFN1M2dsYVQ0NEY1QWdheXdqTFVmZzNUZEJBR2c?oc=5",
           "platform": "Google News"
         }
       ]
@@ -240,7 +217,7 @@
           "platform": "Google News"
         },
         {
-          "title": "全事業者をギフト会社に！自社商品をギフトとして届ける「Catalog Gift Studio（カタログギフトスタジオ）」を10月1日提供開始 - PR TIME",
+          "title": "全事業者をギフト会社に！自社商品をギフトとして届ける「Catalog Gift Studio（カタログギフトスタジオ）」を10月1日提供開始 - prtimes",
           "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1lMWZkZjNNVWRCdFpPSllyYUd0a25QS1ZVNDlULUVpWlVYaV96QmFSQ0QxYnU5cXA1b2NaVm1WbkpQX0ZVZkpqTm9LRlJ2bk15UWtjNmxFM2RIejBDY0lrYmxNZGRidGZzbHc?oc=5",
           "platform": "Google News"
         }
@@ -270,9 +247,50 @@
       ]
     },
     {
-      "topic": "災害",
+      "topic": "社会",
       "count": 3,
       "attention": 9,
+      "headline": "「なぜ遥とお腹の子の命が…」元交際相手のネイリスト殺害事件 検察側が拘禁刑21年を求刑 被害女性の夫が厳罰訴え 茨城・水戸市 - FNNプライムオンライン",
+      "urls": [
+        {
+          "title": "「なぜ遥とお腹の子の命が…」元交際相手のネイリスト殺害事件 検察側が拘禁刑21年を求刑 被害女性の夫が厳罰訴え 茨城・水戸市 - FNNプライムオンライン",
+          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1fcURwZjA5bG9oRkNQQzl4WWEzUEROT0Nrd3YtMHU5RHRZODJ6NE1BaC0xbExWX2FWRV9uMzNNZjJtTjVxWThkS1dweWUyZw?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "台風で堤防決壊の印旛沼付近 ソーラーパネルから煙 けが人なし [千葉県] - 朝日新聞",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBkYzg1YVhQTmxXbTBZc2g3X1VnZmI1RW5JSmZhZUFNc19YZkZYZU9GSjFWTkZ3YWZ6SWxtMGota0hES0NWZWp2WExBU3hzb0lnaEpQTlhxTUJnaE5QWUh0R2ZRN3dWTEU?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "匿流捜査「今の手法に限界」 被害止まらず、焦りと遠隔解析への期待 - 朝日新聞",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNaTJscTFCSFI4bFZleVRUbVNRTWZyYmFlcFlkdWhsQUF5RTBfMW5KRXZCaHNxN3VCV3A3SkZyVVFCWmk4YWRHNDZuaER1Ym9EZVh0YWRQbi02TW9aQ212dXJ4TklTQ3M2UDEwTGtCaEdtRkFUVjNkYmxDT2pwcXV3a09pVFdQZkE?oc=5",
+          "platform": "Google News"
+        }
+      ]
+    },
+    {
+      "topic": "技術",
+      "count": 2,
+      "attention": 6,
+      "headline": "中国シャオミ、Androidスマホで「Apple Watch連携」できる謎の新技術 まるでアップル端末かのように振る舞う - オタク総研",
+      "urls": [
+        {
+          "title": "中国シャオミ、Androidスマホで「Apple Watch連携」できる謎の新技術 まるでアップル端末かのように振る舞う - オタク総研",
+          "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1CMktjam1CbmNMdWpoRHRDZll1TVlwNWI0cWFaRDZRelExNy1jbFI3bXoyV21LWEdrTDV2aktKbnlwUE1NSU53Zmo5Zw?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "三菱電機デジタルイノベーション、スマホでトラック積載率を計測する「Rulerless Truck」 - Infoseek",
+          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9SUlR3aGRMLW0ycnUyZkdMaW1NOExUNW9tX3BtNjVMYTA0dmZXZGRsMnNES0FNZUdNbWN3eXFNQndTak9XNGpLM0ZxSjFNeC0tdUJ0T0ZmWFlwOGdKUGljZw?oc=5",
+          "platform": "Google News"
+        }
+      ]
+    },
+    {
+      "topic": "災害",
+      "count": 2,
+      "attention": 6,
       "headline": "震度1 岐阜県美濃東部 2026年09月24日12:39ごろ 地震詳細 | 山梨のニュース | ＵＴＹテレビ山梨 - TBS NEWS DIG",
       "urls": [
         {
@@ -284,41 +302,18 @@
           "title": "災害予測および警報能力の強化。 - Vietnam.vn",
           "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9Ka3dtNnZnMXp3eXJPdWZ2YmlsSXRMS0ZYckN0MTRHbmh3ZzljWEJ4NTA5ajhWTzFIeHJGeU1ieXBVNEJ2WTM3RFoxdldwSGlBMUZRUUpXQnBDbmU4b24zVDRTY0pWNVhBeElQUFlXUTlKaFh6clZEVg?oc=5",
           "platform": "Google News"
-        },
-        {
-          "title": "豪雨なのに水がない－そんな時代に住まいをどうつくる - Housing Tribune Online",
-          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1Qd05FZnpVd2thVVFESTBFMVFSZ0J4Y1VZTlYtSlhCY1R3RE44RDVQWUJMMXRaVE5uUk5adlp0dUFpSmRnTmdTbDNjUnNuanNLUlE?oc=5",
-          "platform": "Google News"
         }
       ]
     },
     {
       "topic": "政治",
-      "count": 2,
-      "attention": 6,
+      "count": 1,
+      "attention": 3,
       "headline": "政府は、外資系経済の発展に関する政治局決議を実施するための行動計画を発表した。 - Vietnam.vn",
       "urls": [
         {
           "title": "政府は、外資系経済の発展に関する政治局決議を実施するための行動計画を発表した。 - Vietnam.vn",
           "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPYU5mSzZLVS1ZMGk4M2VmTDVHdkJHeG52TkJGb0o1OVVoU2l2N3RCR3N3N0x5X2VvZkJqRlNEYmVWbXM4VmZwakpQOGJ3Nm9vbTBSeUpJb3I0QkQ2Znh2U3p1c1dtRUJvaWF5Z2JpbDVRNG16c3M3R0hhcEVwUzVQNUIxR28yTEhmckhsMk55RFNqNlVmWTg4Qkw4bDM3OFRjYUFsMjc4czBiVUYzbFFfTllZQUdiR0ZVT3pSOTlCbHZJNFJMTHVrcFRTOGZRN2x0d2dpZ1o4Y0FYU0FfcXJvVUV3?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "「効果的な大衆動員」運動における最良の実践方法を推進する。 - Vietnam.vn",
-          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOZEtMTEJEVWpWeHFldDU0cF95ckhzNGlPbl9fTnVxMWRsNkVFdmo3cmlzWlRVazFlQV9hS09iY3lXeGl4MXpoazI5T0V1OWxoUUxoSTVFMlpCSjlvdS0yR254bnppWVo4OTJtNVNfVHg3OW1vTVNuVmQ4ZHU2ZzBFUVRUUQ?oc=5",
-          "platform": "Google News"
-        }
-      ]
-    },
-    {
-      "topic": "技術",
-      "count": 1,
-      "attention": 3,
-      "headline": "三菱電機デジタルイノベーション、スマホでトラック積載率を計測する「Rulerless Truck」 - Infoseek",
-      "urls": [
-        {
-          "title": "三菱電機デジタルイノベーション、スマホでトラック積載率を計測する「Rulerless Truck」 - Infoseek",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9SUlR3aGRMLW0ycnUyZkdMaW1NOExUNW9tX3BtNjVMYTA0dmZXZGRsMnNES0FNZUdNbWN3eXFNQndTak9XNGpLM0ZxSjFNeC0tdUJ0T0ZmWFlwOGdKUGljZw?oc=5",
           "platform": "Google News"
         }
       ]
@@ -331,18 +326,18 @@
     },
     {
       "word": "web",
-      "count": 10
-    },
-    {
-      "word": "news",
-      "count": 8
-    },
-    {
-      "word": "vietnam",
-      "count": 8
+      "count": 12
     },
     {
       "word": "anthropic",
+      "count": 6
+    },
+    {
+      "word": "news",
+      "count": 6
+    },
+    {
+      "word": "vietnam",
       "count": 6
     },
     {
@@ -499,10 +494,10 @@
       "provider": null,
       "topic": "技術",
       "sourceWeight": 3,
-      "title": "三菱電機デジタルイノベーション、スマホでトラック積載率を計測する「Rulerless Truck」 - Infoseek",
-      "summary": "三菱電機デジタルイノベーション、スマホでトラック積載率を計測する「Rulerless Truck」 Infoseek",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9SUlR3aGRMLW0ycnUyZkdMaW1NOExUNW9tX3BtNjVMYTA0dmZXZGRsMnNES0FNZUdNbWN3eXFNQndTak9XNGpLM0ZxSjFNeC0tdUJ0T0ZmWFlwOGdKUGljZw?oc=5",
-      "published": "2026-09-24T05:48:17+00:00",
+      "title": "中国シャオミ、Androidスマホで「Apple Watch連携」できる謎の新技術 まるでアップル端末かのように振る舞う - オタク総研",
+      "summary": "中国シャオミ、Androidスマホで「Apple Watch連携」できる謎の新技術 まるでアップル端末かのように振る舞う オタク総研",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1CMktjam1CbmNMdWpoRHRDZll1TVlwNWI0cWFaRDZRelExNy1jbFI3bXoyV21LWEdrTDV2aktKbnlwUE1NSU53Zmo5Zw?oc=5",
+      "published": "2026-09-24T06:13:21+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -537,8 +532,8 @@
       "provider": null,
       "topic": "健康",
       "sourceWeight": 3,
-      "title": "【新潟医療福祉大学】本学を代表機関とする「にいがた健康・スポーツ医科学ネットワーク」がJSC「地方公共団体等が行うパラアスリート発掘・育成の取組推進事業」に採択 - PR TIMES",
-      "summary": "【新潟医療福祉大学】本学を代表機関とする「にいがた健康・スポーツ医科学ネットワーク」がJSC「地方公共団体等が行うパラアスリート発掘・育成の取組推進事業」に採択 PR TIMES",
+      "title": "【新潟医療福祉大学】本学を代表機関とする「にいがた健康・スポーツ医科学ネットワーク」がJSC「地方公共団体等が行うパラアスリート発掘・育成の取組推進事業」に採択 - prtimes.jp",
+      "summary": "【新潟医療福祉大学】本学を代表機関とする「にいがた健康・スポーツ医科学ネットワーク」がJSC「地方公共団体等が行うパラアスリート発掘・育成の取組推進事業」に採択 prtimes.jp",
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBudEc3Rmg4SkVUQm1Sd3pOMU5VMjlNQTdaYTZEYnExcTF0eE9sbmV1ZEJaWUVSTmVUNV9DUUh5RGxTV0RqTzgyemE3c2RaeUZtN2p1SUZyRi1HR1dMci13RWNOOU0tM2F6Ymc?oc=5",
       "published": "2026-09-24T06:00:02+00:00",
       "score": 1,
@@ -575,10 +570,10 @@
       "provider": null,
       "topic": "エンタメ",
       "sourceWeight": 3,
-      "title": "「カッコよくキマってるね」LE SSERAFIM・宮脇咲良、米国へそ出し衣装のオフショットに反響「最近の衣装ヤバくないかな」「ナイススタイル」 - 中日新聞Web",
-      "summary": "「カッコよくキマってるね」LE SSERAFIM・宮脇咲良、米国へそ出し衣装のオフショットに反響「最近の衣装ヤバくないかな」「ナイススタイル」 中日新聞Web",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5RZW1faWlicFpUUExGUEQ0TGVKRXAwUDBQUjZzckpBdDhLVmppTmIwUmRRdUhXOHN2ZFNCTWE3ejhUR1dPVlZUc1d6TEpiM3JqQ3V5cQ?oc=5",
-      "published": "2026-09-24T06:06:16+00:00",
+      "title": "元カラテカ入江慎也、芸能界に「未練はめちゃくちゃある」…中目黒で街頭インタビュー受け、テレビへの本音吐露 - smart-flash.jp",
+      "summary": "元カラテカ入江慎也、芸能界に「未練はめちゃくちゃある」…中目黒で街頭インタビュー受け、テレビへの本音吐露 smart-flash.jp",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9WVUc3b0MwZUZXTlA3bXZoZTFlMTRNeDVmWlVCZUhOVGJPOWxRSVFOUXFnS0hzdkRfN3VqX1BvUzBxUzdWY3I5ckxrR2RFdk9wVm1FMkxnZzNUYkRlYjlQWmRDejdTVWZmZk1tX2tkbWtXcmhJQ0pF?oc=5",
+      "published": "2026-09-24T06:20:00+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -614,10 +609,10 @@
       "provider": null,
       "topic": "科学",
       "sourceWeight": 3,
-      "title": "謎の小さな赤い天体「LRD」は急成長するブラックホールの可能性 国立天文台 - マイナビニュース",
-      "summary": "謎の小さな赤い天体「LRD」は急成長するブラックホールの可能性 国立天文台 マイナビニュース",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5lQUxvejlYRGRrcExLYnRwLVYwd0pESDZld1NlVUFDNnJXYXlYRkUwVFVOQk1wOFVyMUF2R2dOQjBMblJaLWtIZm42Q3U1YmFUNGdmeXBKc2NVM25RREs5ZXdWNWFQeENx?oc=5",
-      "published": "2026-09-24T06:10:00+00:00",
+      "title": "ステラクレードル株式会社、第70回宇宙科学技術連合講演会への登壇が決定。日本発の人工重力研究で “暮らす宇宙” - ニコニコニュース",
+      "summary": "ステラクレードル株式会社、第70回宇宙科学技術連合講演会への登壇が決定。日本発の人工重力研究で “暮らす宇宙” ニコニコニュース",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9yb3BJTE1hVnduQTdhUkNsMk5pcHVkcExhaFQxekZkakFIMFR3TDR1M2xPN1pEV3JmYnB5U1Z0d1ZpOXVDdndBTGVkSTR3R0tjMGJsY3BaWUFNSGk5OVA3SFZ1WWozYkJ4WmNLNWNXS3N4VF94SkE?oc=5",
+      "published": "2026-09-24T06:15:28+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -637,6 +632,26 @@
       "summary": "『スーパーダンガンロンパ２×２』新キャラ「東 才空太郎」公開！CVは花江夏樹さん gamewith.jp",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB2Wmo5dFlPMU9RMFZWangwbEZmT0dHdzFqRkdERDFvZzNOenNtRS1RZ3VyMVdjcklLLW1pckRYeEY4TUZqZFc2U2txZl9XY1BqZkVSNkNTOW9vVk0?oc=5",
       "published": "2026-09-24T03:56:10+00:00",
+      "score": 2,
+      "tags": [
+        "SNS",
+        "制作"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-game-jp",
+      "platform": "Google News",
+      "label": "日本ニュース ゲーム",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "ゲーム",
+      "sourceWeight": 3,
+      "title": "全10タイトルのお得な割引セール！『HappinetGAMES ダウンロードセール in September』開催中 - ゲームハック",
+      "summary": "全10タイトルのお得な割引セール！『HappinetGAMES ダウンロードセール in September』開催中 ゲームハック",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBXd2ZNeGJPRUNFUS1xbUs4bHRpUm4wVkVhZm1ManJVWkEzRDhKeWxKMkNvQnoyNGVXaVFRLTJiY1BPeXJpZGfSAUZBVV95cUxQV3dmTXhiT0VDRVEtcW1LOGx0aVJuMFZFYWZtTGpyVVpBM0Q4SnlsSjJDb0J6MjRlV2lRUS0yYmNQT3lyaWRn?oc=5",
+      "published": "2026-09-24T03:03:42+00:00",
       "score": 2,
       "tags": [
         "SNS",
@@ -686,6 +701,44 @@
       "region": "日本語優先"
     },
     {
+      "source": "news-science-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 科学",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "科学",
+      "sourceWeight": 3,
+      "title": "謎の小さな赤い天体「LRD」は急成長するブラックホールの可能性 国立天文台 - マイナビニュース",
+      "summary": "謎の小さな赤い天体「LRD」は急成長するブラックホールの可能性 国立天文台 マイナビニュース",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5lQUxvejlYRGRrcExLYnRwLVYwd0pESDZld1NlVUFDNnJXYXlYRkUwVFVOQk1wOFVyMUF2R2dOQjBMblJaLWtIZm42Q3U1YmFUNGdmeXBKc2NVM25RREs5ZXdWNWFQeENx?oc=5",
+      "published": "2026-09-24T06:10:00+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-entertainment-jp",
+      "platform": "Google News",
+      "label": "日本ニュース エンタメ",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "エンタメ",
+      "sourceWeight": 3,
+      "title": "「カッコよくキマってるね」LE SSERAFIM・宮脇咲良、米国へそ出し衣装のオフショットに反響「最近の衣装ヤバくないかな」「ナイススタイル」 - 中日新聞Web",
+      "summary": "「カッコよくキマってるね」LE SSERAFIM・宮脇咲良、米国へそ出し衣装のオフショットに反響「最近の衣装ヤバくないかな」「ナイススタイル」 中日新聞Web",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5RZW1faWlicFpUUExGUEQ0TGVKRXAwUDBQUjZzckpBdDhLVmppTmIwUmRRdUhXOHN2ZFNCTWE3ejhUR1dPVlZUc1d6TEpiM3JqQ3V5cQ?oc=5",
+      "published": "2026-09-24T06:06:16+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
       "source": "news-ai-jp",
       "platform": "Google News",
       "label": "日本ニュース AI",
@@ -693,10 +746,67 @@
       "provider": null,
       "topic": "AI",
       "sourceWeight": 3,
-      "title": "Anthropic、Claude「Projects」を再設計 資料・会話をまとめる作業空間から、Claude Codeを並列指揮する“司令塔”へ - ledge.ai",
-      "summary": "Anthropic、Claude「Projects」を再設計 資料・会話をまとめる作業空間から、Claude Codeを並列指揮する“司令塔”へ ledge.ai",
+      "title": "Anthropic、Claude「Projects」を再設計 資料・会話をまとめる作業空間から、Claude Codeを並列指揮する“司令塔”へ - Ledge.ai",
+      "summary": "Anthropic、Claude「Projects」を再設計 資料・会話をまとめる作業空間から、Claude Codeを並列指揮する“司令塔”へ Ledge.ai",
       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9GS0tHLThQemRPenZpV0RxcDRPN0NIcDBNd000UkVrbk5OdGllbnN3YV9hZHE3bjJIRGFEcGVQejJyaGhoaWxhbHhIZ2lLQWE3X0t4MldJVnlTbW5xQnRj?oc=5",
       "published": "2026-09-24T05:58:04+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-tech-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 技術",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 3,
+      "title": "三菱電機デジタルイノベーション、スマホでトラック積載率を計測する「Rulerless Truck」 - Infoseek",
+      "summary": "三菱電機デジタルイノベーション、スマホでトラック積載率を計測する「Rulerless Truck」 Infoseek",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9SUlR3aGRMLW0ycnUyZkdMaW1NOExUNW9tX3BtNjVMYTA0dmZXZGRsMnNES0FNZUdNbWN3eXFNQndTak9XNGpLM0ZxSjFNeC0tdUJ0T0ZmWFlwOGdKUGljZw?oc=5",
+      "published": "2026-09-24T05:48:17+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-health-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 健康",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "健康",
+      "sourceWeight": 3,
+      "title": "緑内障で視力を失っても続けた努力、企業経営で成功した男性が聾学校に寄付…俳優ＭＥＧＵＭＩさんも活動に賛同 - 読売新聞",
+      "summary": "緑内障で視力を失っても続けた努力、企業経営で成功した男性が聾学校に寄付…俳優ＭＥＧＵＭＩさんも活動に賛同 読売新聞",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNcTVBMVg3amZycW16QVJWU05jVzZPYXl1MkJvNXZETXVteXNsczVVcjg3aEN0d1BhcmRCYjlRSHI0YmtlTm1uMVJFd3hUUVlCVEpqWlhvMm1GYW53Ym9uUTc0bTgxVnVCcUQ5Y0NzM1l1OEE0SVlPcDFOZmhhdW1ubVdRY1gzeTloNDBpMnlYTDltdw?oc=5",
+      "published": "2026-09-24T05:45:00+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-entertainment-jp",
+      "platform": "Google News",
+      "label": "日本ニュース エンタメ",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "エンタメ",
+      "sourceWeight": 3,
+      "title": "「男性アイドルが付き合いたくなるのもわかる」小山璃奈、開放的なタンクトップ姿が話題に「今の芸能界で1番可愛い」の声も - 中日新聞Web",
+      "summary": "「男性アイドルが付き合いたくなるのもわかる」小山璃奈、開放的なタンクトップ姿が話題に「今の芸能界で1番可愛い」の声も 中日新聞Web",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9kTjJJTnEzYzZzaEROSV9wcHN1LVZvYVdFVmwtMV9WcHNRVHczdmR1QnNrdTFDUVNrZ2lxbzJtNDhLT0hhN3VpOFQ4TG5keC1UVHFiOA?oc=5",
+      "published": "2026-09-24T05:44:14+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -792,6 +902,25 @@
       "summary": "【知事の部屋】表敬訪問（「国際経済オリンピック2026深圳大会」日本代表選手） my.metro.tokyo.lg.jp",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE43UXljM1F3UEpYbTFwUGFHMW5aWEF1NFF0bG9Jc3MzbWVxWXVjb01MWkpCeXh2bU51NG5idy15ZmxJN2h2NWt4c3ZlejVJOFFTOHB1U0pTRERGdUxJTF8yd1JmcW50aXpp?oc=5",
       "published": "2026-09-24T04:23:11+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-society-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 社会",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "社会",
+      "sourceWeight": 3,
+      "title": "匿流捜査「今の手法に限界」 被害止まらず、焦りと遠隔解析への期待 - 朝日新聞",
+      "summary": "匿流捜査「今の手法に限界」 被害止まらず、焦りと遠隔解析への期待 朝日新聞",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNaTJscTFCSFI4bFZleVRUbVNRTWZyYmFlcFlkdWhsQUF5RTBfMW5KRXZCaHNxN3VCV3A3SkZyVVFCWmk4YWRHNDZuaER1Ym9EZVh0YWRQbi02TW9aQ212dXJ4TklTQ3M2UDEwTGtCaEdtRkFUVjNkYmxDT2pwcXV3a09pVFdQZkE?oc=5",
+      "published": "2026-09-24T04:19:54+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -990,25 +1119,6 @@
       "region": "日本語優先"
     },
     {
-      "source": "news-health-jp",
-      "platform": "Google News",
-      "label": "日本ニュース 健康",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "健康",
-      "sourceWeight": 3,
-      "title": "結核罹患率、大阪が全国ワースト １０月から高齢者の定期接種 - 47NEWS",
-      "summary": "結核罹患率、大阪が全国ワースト １０月から高齢者の定期接種 47NEWS",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1vZE84SEpkRC1meUNhUHV4RjFzRTQ5T3JBLU9yTmlLZHZTdTNwYzdrZ1BFVG9EZktNU2l1cUdvd3hxV3J6UWJnaEMwTQ?oc=5",
-      "published": "2026-09-24T03:23:00+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
       "source": "news-science-jp",
       "platform": "Google News",
       "label": "日本ニュース 科学",
@@ -1077,25 +1187,6 @@
       "summary": "【9/25-27 富山おでかけ】富山まつり＆体格祭で盛り上がろう！キッチンカーフェス・お月見・カニ・キバナコスモス…富山は秋祭り一色！｜おでかけ｜nan-nan｜富山を楽しむオススメ情報 KNB WEB",
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBYV0Y1aTNrb3Vzbi03OUk3TmVzb0pVNFBZRlNzSlptX1RmazlBZUM0NVg2M2hYdVRUcnZMT1dNNFBBdU1EUkd4RE1PbENod3gtV21tNVNTZEQ?oc=5",
       "published": "2026-09-24T03:03:23+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
-      "source": "news-game-jp",
-      "platform": "Google News",
-      "label": "日本ニュース ゲーム",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "ゲーム",
-      "sourceWeight": 3,
-      "title": "過去最大の割引率の『ダライアス』シリーズDLソフトが多数登場!最大85%OFF！「ダライアスオータムセール2026」開催！ - ゲームハック",
-      "summary": "過去最大の割引率の『ダライアス』シリーズDLソフトが多数登場!最大85%OFF！「ダライアスオータムセール2026」開催！ ゲームハック",
-      "url": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE44WnZkRjZHTVVONDJ3MmR4WUJZbEJaZWJlY21oSDhqNzhvcGFuNVAxV0ZTRHRNVzhGWGlmUHRZTWPSAUZBVV95cUxQMU9oNlJ5MFlSR1hTdko1RFE3UjRxTlVxMEtURDZZTzNza0JiVFc5WGhvajR1azBMWG9VSDBLM1VyX0ozQ29B?oc=5",
-      "published": "2026-09-24T03:03:09+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -1275,25 +1366,6 @@
       "region": "日本語優先"
     },
     {
-      "source": "news-society-jp",
-      "platform": "Google News",
-      "label": "日本ニュース 社会",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "社会",
-      "sourceWeight": 3,
-      "title": "JR貨物職員側から何度もわいろ要求か 福岡県警が勤務先を家宅捜索 [福岡県] - 朝日新聞",
-      "summary": "JR貨物職員側から何度もわいろ要求か 福岡県警が勤務先を家宅捜索 [福岡県] 朝日新聞",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE91SFBScXh6Q2pFUUp6NUk5d1J6aGVSemc0S0lRQV85ZWYxQUpObHZpYkpaMV80cFVkVjd1NlQyWDFqU0pvbmhfV1BFaFN1M2dsYVQ0NEY1QWdheXdqTFVmZzNUZEJBR2c?oc=5",
-      "published": "2026-09-24T02:08:11+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
       "source": "news-health-jp",
       "platform": "Google News",
       "label": "日本ニュース 健康",
@@ -1339,8 +1411,8 @@
       "provider": null,
       "topic": "ビジネス",
       "sourceWeight": 3,
-      "title": "全事業者をギフト会社に！自社商品をギフトとして届ける「Catalog Gift Studio（カタログギフトスタジオ）」を10月1日提供開始 - PR TIMES",
-      "summary": "全事業者をギフト会社に！自社商品をギフトとして届ける「Catalog Gift Studio（カタログギフトスタジオ）」を10月1日提供開始 PR TIMES",
+      "title": "全事業者をギフト会社に！自社商品をギフトとして届ける「Catalog Gift Studio（カタログギフトスタジオ）」を10月1日提供開始 - prtimes.jp",
+      "summary": "全事業者をギフト会社に！自社商品をギフトとして届ける「Catalog Gift Studio（カタログギフトスタジオ）」を10月1日提供開始 prtimes.jp",
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1lMWZkZjNNVWRCdFpPSllyYUd0a25QS1ZVNDlULUVpWlVYaV96QmFSQ0QxYnU5cXA1b2NaVm1WbkpQX0ZVZkpqTm9LRlJ2bk15UWtjNmxFM2RIejBDY0lrYmxNZGRidGZzbHc?oc=5",
       "published": "2026-09-24T01:30:10+00:00",
       "score": 1,
@@ -1438,82 +1510,6 @@
       "summary": "商店街で伸び伸びスポーツ 鶴岡、銀座通り子どもたちが挑戦 山形新聞",
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9SUHZZYlJoRUJSOS15SGR0UC0xX2ZyUlJkQ2N4ODlzQU5SUFdQVUlJMklINHNjVkpKODFQS0VEU1hhbWVMNGlCaVNSYnNUNU5Vc0k5a2x4RF8waDAyU0JKd2xDUDFKOEtQNjEtY2h1QQ?oc=5",
       "published": "2026-09-24T01:01:00+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
-      "source": "news-society-jp",
-      "platform": "Google News",
-      "label": "日本ニュース 社会",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "社会",
-      "sourceWeight": 3,
-      "title": "60代の男が自宅で20代女性にわいせつな行為 徳島県警が逮捕 - 徳島新聞デジタル",
-      "summary": "60代の男が自宅で20代女性にわいせつな行為 徳島県警が逮捕 徳島新聞デジタル",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1RN3NYXy03TXVFRzF3Q0MyTDQ5TU1CQ2VoaUNVU05oMjdFWHlEOVVOR09TSTJNRGRxcW13RzAzUElFb1ZMZU5NSkFEaU14SHh4WXpVSmp3?oc=5",
-      "published": "2026-09-24T00:25:00+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
-      "source": "news-politics-jp",
-      "platform": "Google News",
-      "label": "日本ニュース 政治",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "政治",
-      "sourceWeight": 3,
-      "title": "「効果的な大衆動員」運動における最良の実践方法を推進する。 - Vietnam.vn",
-      "summary": "「効果的な大衆動員」運動における最良の実践方法を推進する。 Vietnam.vn",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOZEtMTEJEVWpWeHFldDU0cF95ckhzNGlPbl9fTnVxMWRsNkVFdmo3cmlzWlRVazFlQV9hS09iY3lXeGl4MXpoazI5T0V1OWxoUUxoSTVFMlpCSjlvdS0yR254bnppWVo4OTJtNVNfVHg3OW1vTVNuVmQ4ZHU2ZzBFUVRUUQ?oc=5",
-      "published": "2026-09-24T00:09:19+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
-      "source": "news-sports-jp",
-      "platform": "Google News",
-      "label": "日本ニュース スポーツ",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "スポーツ",
-      "sourceWeight": 3,
-      "title": "～日本のひなた宮崎国スポ・障スポ記念～「スポーツ短歌コンクール」について - pref.miyazaki.lg.jp",
-      "summary": "～日本のひなた宮崎国スポ・障スポ記念～「スポーツ短歌コンクール」について pref.miyazaki.lg.jp",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPVlE5TGhuT2RSdC1YSHJJb2FadDhmTmZkNFo0QlFhNjA1dlZZcEQ3UEU3eEpIM1ZHSjFjUTZJbXBCU08xUnpYWUVaRllYclhlUlJNQXREeUZCSm1EOTREV2szbHdzQV9iSENfUHlkRWpoSjh5TUVPQWM0X284ZkVqUmM5UUVtYndpejQ4eg?oc=5",
-      "published": "2026-09-24T00:05:28+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
-      "source": "news-disaster-jp",
-      "platform": "Google News",
-      "label": "日本ニュース 災害",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "災害",
-      "sourceWeight": 3,
-      "title": "豪雨なのに水がない－そんな時代に住まいをどうつくる - Housing Tribune Online",
-      "summary": "豪雨なのに水がない－そんな時代に住まいをどうつくる Housing Tribune Online",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1Qd05FZnpVd2thVVFESTBFMVFSZ0J4Y1VZTlYtSlhCY1R3RE44RDVQWUJMMXRaVE5uUk5adlp0dUFpSmRnTmdTbDNjUnNuanNLUlE?oc=5",
-      "published": "2026-09-24T00:03:34+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -1679,139 +1675,146 @@
     {
       "id": "news-ai-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T06:18:01.825593+00:00",
-      "lastAttemptAt": "2026-09-24T06:18:01.825593+00:00",
+      "lastSuccessAt": "2026-09-24T06:28:01.963247+00:00",
+      "lastAttemptAt": "2026-09-24T06:28:01.963247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-economy-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T06:18:01.825593+00:00",
-      "lastAttemptAt": "2026-09-24T06:18:01.825593+00:00",
+      "lastSuccessAt": "2026-09-24T06:28:01.963247+00:00",
+      "lastAttemptAt": "2026-09-24T06:28:01.963247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-disaster-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T06:18:01.825593+00:00",
-      "lastAttemptAt": "2026-09-24T06:18:01.825593+00:00",
+      "lastSuccessAt": "2026-09-24T06:28:01.963247+00:00",
+      "lastAttemptAt": "2026-09-24T06:28:01.963247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-politics-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T06:18:01.825593+00:00",
-      "lastAttemptAt": "2026-09-24T06:18:01.825593+00:00",
+      "lastSuccessAt": "2026-09-24T06:28:01.963247+00:00",
+      "lastAttemptAt": "2026-09-24T06:28:01.963247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-society-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T06:18:01.825593+00:00",
-      "lastAttemptAt": "2026-09-24T06:18:01.825593+00:00",
+      "lastSuccessAt": "2026-09-24T06:28:01.963247+00:00",
+      "lastAttemptAt": "2026-09-24T06:28:01.963247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-world-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T06:18:01.825593+00:00",
-      "lastAttemptAt": "2026-09-24T06:18:01.825593+00:00",
+      "lastSuccessAt": "2026-09-24T06:28:01.963247+00:00",
+      "lastAttemptAt": "2026-09-24T06:28:01.963247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-tech-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T06:18:01.825593+00:00",
-      "lastAttemptAt": "2026-09-24T06:18:01.825593+00:00",
+      "lastSuccessAt": "2026-09-24T06:28:01.963247+00:00",
+      "lastAttemptAt": "2026-09-24T06:28:01.963247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-sports-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T06:18:01.825593+00:00",
-      "lastAttemptAt": "2026-09-24T06:18:01.825593+00:00",
+      "lastSuccessAt": "2026-09-24T06:28:01.963247+00:00",
+      "lastAttemptAt": "2026-09-24T06:28:01.963247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-health-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T06:18:01.825593+00:00",
-      "lastAttemptAt": "2026-09-24T06:18:01.825593+00:00",
+      "lastSuccessAt": "2026-09-24T06:28:01.963247+00:00",
+      "lastAttemptAt": "2026-09-24T06:28:01.963247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-toyama-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T06:18:01.825593+00:00",
-      "lastAttemptAt": "2026-09-24T06:18:01.825593+00:00",
+      "lastSuccessAt": "2026-09-24T06:28:01.963247+00:00",
+      "lastAttemptAt": "2026-09-24T06:28:01.963247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-entertainment-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T06:18:01.825593+00:00",
-      "lastAttemptAt": "2026-09-24T06:18:01.825593+00:00",
+      "lastSuccessAt": "2026-09-24T06:28:01.963247+00:00",
+      "lastAttemptAt": "2026-09-24T06:28:01.963247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-business-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T06:18:01.825593+00:00",
-      "lastAttemptAt": "2026-09-24T06:18:01.825593+00:00",
+      "lastSuccessAt": "2026-09-24T06:28:01.963247+00:00",
+      "lastAttemptAt": "2026-09-24T06:28:01.963247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-life-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T06:18:01.825593+00:00",
-      "lastAttemptAt": "2026-09-24T06:18:01.825593+00:00",
+      "lastSuccessAt": "2026-09-24T06:28:01.963247+00:00",
+      "lastAttemptAt": "2026-09-24T06:28:01.963247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-science-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T06:18:01.825593+00:00",
-      "lastAttemptAt": "2026-09-24T06:18:01.825593+00:00",
+      "lastSuccessAt": "2026-09-24T06:28:01.963247+00:00",
+      "lastAttemptAt": "2026-09-24T06:28:01.963247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-game-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T06:18:01.825593+00:00",
-      "lastAttemptAt": "2026-09-24T06:18:01.825593+00:00",
+      "lastSuccessAt": "2026-09-24T06:28:01.963247+00:00",
+      "lastAttemptAt": "2026-09-24T06:28:01.963247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "mastodon-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T06:18:01.825593+00:00",
-      "lastAttemptAt": "2026-09-24T06:18:01.825593+00:00",
+      "lastSuccessAt": "2026-09-24T06:28:01.963247+00:00",
+      "lastAttemptAt": "2026-09-24T06:28:01.963247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "mastodon-codex",
-      "status": "fresh",
-      "lastSuccessAt": "2026-09-24T06:18:01.825593+00:00",
-      "lastAttemptAt": "2026-09-24T06:18:01.825593+00:00",
+      "status": "unavailable",
+      "lastSuccessAt": "2026-09-13T00:21:31.356337+00:00",
+      "lastAttemptAt": "2026-09-24T06:28:01.963247+00:00",
       "retryAfterAt": null,
-      "errorCode": null
+      "errorCode": "TimeoutError"
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "mastodon-codex",
+      "platform": "Mastodon",
+      "error": "The read operation timed out",
+      "fallbackItems": 0
+    }
+  ]
 }
