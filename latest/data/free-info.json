@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-24T10:18:01.090711+00:00",
-  "lastSuccessAt": "2026-09-24T10:18:01.090711+00:00",
+  "updatedAt": "2026-09-24T10:28:01.014038+00:00",
+  "lastSuccessAt": "2026-09-24T10:28:01.014038+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -151,17 +151,17 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "The Story of Mel",
+      "signal": "Pick OS is a Living Fossil of Computer History",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://users.cs.utah.edu/~elb/folklore/mel.html",
+      "topUrl": "https://csixty4.medium.com/pick-is-a-living-fossil-of-computer-history-36d74408d557",
       "score": 1
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 0.9 - 68 km NW of Karluk, Alaska",
+      "signal": "M 1.0 - 2 km NW of Muscoy, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sybrit",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41338375",
       "score": 1
     }
   ],
@@ -284,10 +284,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.9 - 68 km NW of Karluk, Alaska",
-      "summary": "68 km NW of Karluk, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sybrit",
-      "published": "2026-09-24T09:55:17.800000+00:00",
+      "title": "M 1.0 - 2 km NW of Muscoy, CA",
+      "summary": "2 km NW of Muscoy, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41338375",
+      "published": "2026-09-24T10:24:26.460000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -299,12 +299,12 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "その他",
+      "topic": "開発",
       "sourceWeight": 1,
-      "title": "The Story of Mel",
+      "title": "Pick OS is a Living Fossil of Computer History",
       "summary": "Comments",
-      "url": "https://users.cs.utah.edu/~elb/folklore/mel.html",
-      "published": "2026-09-24T04:09:40+00:00",
+      "url": "https://csixty4.medium.com/pick-is-a-living-fossil-of-computer-history-36d74408d557",
+      "published": "2026-09-24T06:14:19+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -757,64 +757,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T10:18:01.090711+00:00",
-      "lastAttemptAt": "2026-09-24T10:18:01.090711+00:00",
+      "lastSuccessAt": "2026-09-24T10:28:01.014038+00:00",
+      "lastAttemptAt": "2026-09-24T10:28:01.014038+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T10:18:01.090711+00:00",
-      "lastAttemptAt": "2026-09-24T10:18:01.090711+00:00",
+      "lastSuccessAt": "2026-09-24T10:28:01.014038+00:00",
+      "lastAttemptAt": "2026-09-24T10:28:01.014038+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T10:18:01.090711+00:00",
-      "lastAttemptAt": "2026-09-24T10:18:01.090711+00:00",
+      "lastSuccessAt": "2026-09-24T10:28:01.014038+00:00",
+      "lastAttemptAt": "2026-09-24T10:28:01.014038+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T10:18:01.090711+00:00",
-      "lastAttemptAt": "2026-09-24T10:18:01.090711+00:00",
+      "lastSuccessAt": "2026-09-24T10:28:01.014038+00:00",
+      "lastAttemptAt": "2026-09-24T10:28:01.014038+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T10:18:01.090711+00:00",
-      "lastAttemptAt": "2026-09-24T10:18:01.090711+00:00",
+      "lastSuccessAt": "2026-09-24T10:28:01.014038+00:00",
+      "lastAttemptAt": "2026-09-24T10:28:01.014038+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T10:18:01.090711+00:00",
-      "lastAttemptAt": "2026-09-24T10:18:01.090711+00:00",
+      "lastSuccessAt": "2026-09-24T10:28:01.014038+00:00",
+      "lastAttemptAt": "2026-09-24T10:28:01.014038+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T10:18:01.090711+00:00",
-      "lastAttemptAt": "2026-09-24T10:18:01.090711+00:00",
+      "lastSuccessAt": "2026-09-24T10:28:01.014038+00:00",
+      "lastAttemptAt": "2026-09-24T10:28:01.014038+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T10:18:01.090711+00:00",
-      "lastAttemptAt": "2026-09-24T10:18:01.090711+00:00",
+      "lastSuccessAt": "2026-09-24T10:28:01.014038+00:00",
+      "lastAttemptAt": "2026-09-24T10:28:01.014038+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
