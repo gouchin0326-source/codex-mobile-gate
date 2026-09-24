@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-09-24T08:08:02.139409+00:00",
-  "lastSuccessAt": "2026-09-24T08:08:02.139409+00:00",
-  "status": "stale",
+  "updatedAt": "2026-09-24T08:18:01.896175+00:00",
+  "lastSuccessAt": "2026-09-24T08:18:01.896175+00:00",
+  "status": "fresh",
   "mode": "zero-token-social-trends",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "public API/RSS only; no login bypass; no unauthorized scraping; short excerpts + URL only",
@@ -16,6 +16,29 @@
     "Google News": 60
   },
   "topics": [
+    {
+      "topic": "ゲーム",
+      "count": 7,
+      "attention": 24,
+      "headline": "『スーパーダンガンロンパ２×２』新キャラ「東 才空太郎」公開！CVは花江夏樹さん - GameWith",
+      "urls": [
+        {
+          "title": "『スーパーダンガンロンパ２×２』新キャラ「東 才空太郎」公開！CVは花江夏樹さん - GameWith",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB2Wmo5dFlPMU9RMFZWangwbEZmT0dHdzFqRkdERDFvZzNOenNtRS1RZ3VyMVdjcklLLW1pckRYeEY4TUZqZFc2U2txZl9XY1BqZkVSNkNTOW9vVk0?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "収集・育成サッカーRPG『イナズマイレブン 英雄たちのヴィクトリーロード』日本ゲーム大賞2026優秀賞を受賞 - gamerszone.jp",
+          "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBLQ0d0WmwwRkd0elFvQlRoTll0RlA5OG15eFEyNkhRX1YteXdoSTIyczM0S0RGVjI4T0JYNUtpVFJBbHF6S0tv?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "全10タイトルのお得な割引セール！『HappinetGAMES ダウンロードセール in September』開催中 - PR TIMES",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBpdEU4STdRV2dsTlVDQXpSTHVmNXVtSTlLYWlpa0U5NUhCak1CaWhjel9oU3RyYklqS2hUN1lTRHZMRFBQNEtFeEZiZnNScnhETXdFWUxQSWpjQU9ldGJBM0VFOXkwRWROeXc?oc=5",
+          "platform": "Google News"
+        }
+      ]
+    },
     {
       "topic": "健康",
       "count": 7,
@@ -40,9 +63,32 @@
       ]
     },
     {
+      "topic": "社会",
+      "count": 6,
+      "attention": 18,
+      "headline": "飲食店の看板を蹴って割る 器物損壊容疑で17歳少年逮捕 山電の曽根駅構内|事件・事故 - 神戸新聞",
+      "urls": [
+        {
+          "title": "飲食店の看板を蹴って割る 器物損壊容疑で17歳少年逮捕 山電の曽根駅構内|事件・事故 - 神戸新聞",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9EYzRaTFg0OTVpQ1JfcVNyT28zR3RhMFpfa1QzdmJEbUM5cTRxdnhxSzNISzhQRllic1B1aVZDbXhVeU5YVEtlMUs2dkNEc0Qtck1td2Z2T2tVN1o5SV9kLWxKNDRLSTYxdWJPVw?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "【速報】飯塚事件弁護団、DNA型不一致と主張 - 47NEWS",
+          "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1obVN2NWNCSjJsMVh4dWN5Y09RMnd0VEk5dEJwUF9oOFppTENyd083NDFaUUdEVWxkeVhUaTg5UkZZX0dmbGJROFFhcw?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "第二神明で乗用車8台とトレーラー2台絡む多重事故 男性が救急搬送 影響で須磨IC－月見山IC間で通行止め - 神戸新聞",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBEQ0RrVGs3dDZOTWVsZ19yd01qVmxMX3lBU0RIeFFhUzRRSy1KZXA0Q1hVZmJxZ1Q4eFQ4UmpLd1VJb2d0ZTRaUVYwckcyd1NtN3d0bkpkTXNlRURKLUlPdFFaVnV6YVRVTEJ5WQ?oc=5",
+          "platform": "Google News"
+        }
+      ]
+    },
+    {
       "topic": "AI",
-      "count": 5,
-      "attention": 19,
+      "count": 4,
+      "attention": 16,
       "headline": "Claude Opus 5.5とGPT-6 Sol／Lunaが登場、API料金引き下げと処理効率の向上を訴求 - 財経新聞",
       "urls": [
         {
@@ -58,52 +104,6 @@
         {
           "title": "Claude Codeが「AGENTS.md」に対応。CLAUDE.mdが存在しない場合、自動的に読み込み - Publickey",
           "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFB0WTRhTXJqM3Y0UEZJQ01PZmFoQUZZaFo5UEJrZURQUnpxeUIxTTNVelRDUXBaV2dWcV9Id05JdFhrNmUtOW9IeFFvV3JBUnpHQ2otMFp2NWJLeThTeWJ4eFktMTJZaGxPVmczdjRKTWMzZU9D?oc=5",
-          "platform": "Google News"
-        }
-      ]
-    },
-    {
-      "topic": "社会",
-      "count": 6,
-      "attention": 18,
-      "headline": "【速報】飯塚事件弁護団、DNA型不一致と主張 - 47NEWS",
-      "urls": [
-        {
-          "title": "【速報】飯塚事件弁護団、DNA型不一致と主張 - 47NEWS",
-          "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1obVN2NWNCSjJsMVh4dWN5Y09RMnd0VEk5dEJwUF9oOFppTENyd083NDFaUUdEVWxkeVhUaTg5UkZZX0dmbGJROFFhcw?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "第二神明で乗用車8台とトレーラー2台絡む多重事故 男性が救急搬送 影響で須磨IC－月見山IC間で通行止め - 神戸新聞",
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBEQ0RrVGs3dDZOTWVsZ19yd01qVmxMX3lBU0RIeFFhUzRRSy1KZXA0Q1hVZmJxZ1Q4eFQ4UmpLd1VJb2d0ZTRaUVYwckcyd1NtN3d0bkpkTXNlRURKLUlPdFFaVnV6YVRVTEJ5WQ?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "不明１０年、女性の通帳発見 - 福井新聞社",
-          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBLME9uNlhJSHlETmVIMGVJLVMzXzd5VjZRSTZiZzhaZkxDUnY0Q2RkQlI1OXNrSjBXdVV0NnNVcWpZc1ZneVdKZmFOWVpDa1U2MDJydGJIaXF3WV9zUVE?oc=5",
-          "platform": "Google News"
-        }
-      ]
-    },
-    {
-      "topic": "ゲーム",
-      "count": 5,
-      "attention": 18,
-      "headline": "『スーパーダンガンロンパ２×２』新キャラ「東 才空太郎」公開！CVは花江夏樹さん - GameWith",
-      "urls": [
-        {
-          "title": "『スーパーダンガンロンパ２×２』新キャラ「東 才空太郎」公開！CVは花江夏樹さん - GameWith",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB2Wmo5dFlPMU9RMFZWangwbEZmT0dHdzFqRkdERDFvZzNOenNtRS1RZ3VyMVdjcklLLW1pckRYeEY4TUZqZFc2U2txZl9XY1BqZkVSNkNTOW9vVk0?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "収集・育成サッカーRPG『イナズマイレブン 英雄たちのヴィクトリーロード』日本ゲーム大賞2026優秀賞を受賞 - gamerszone.jp",
-          "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFBLQ0d0WmwwRkd0elFvQlRoTll0RlA5OG15eFEyNkhRX1YteXdoSTIyczM0S0RGVjI4T0JYNUtpVFJBbHF6S0tv?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "全10タイトルのお得な割引セール！『HappinetGAMES ダウンロードセール in September』開催中 - PR TIMES",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBpdEU4STdRV2dsTlVDQXpSTHVmNXVtSTlLYWlpa0U5NUhCak1CaWhjel9oU3RyYklqS2hUN1lTRHZMRFBQNEtFeEZiZnNScnhETXdFWUxQSWpjQU9ldGJBM0VFOXkwRWROeXc?oc=5",
           "platform": "Google News"
         }
       ]
@@ -132,19 +132,42 @@
       ]
     },
     {
-      "topic": "スポーツ",
+      "topic": "災害",
       "count": 5,
       "attention": 15,
-      "headline": "＜やらまいか！ニュースポーツ＞ボール遅く、奥は深く ピックルボール - 中日新聞Web",
+      "headline": "Xinhua Silk Road：中国の気象早期警報ソリューションが、より多くの国が気候変動の課題に取り組むのを支援 - 河北新報オンライン",
       "urls": [
         {
-          "title": "＜やらまいか！ニュースポーツ＞ボール遅く、奥は深く ピックルボール - 中日新聞Web",
-          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9HdzdoRWFISzdDZDNSRWFKd2FBRzh3WksxZFZnUGtnaHhIcFFzcW5kUTRTV054TjVvN3BtV29KVTN4TnJmWnoyLThWNTA0MDgtYThlVUNVSlFEdUotaTVOdEVManlfYVY1Yi13?oc=5",
+          "title": "Xinhua Silk Road：中国の気象早期警報ソリューションが、より多くの国が気候変動の課題に取り組むのを支援 - 河北新報オンライン",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBYTnAxd0t1MFFzblFMNVFpcTBqYWU4T2N6Q3BwSWlGS0JPbE5lTmZSNW1SQ1poNmNkVDZsdVdkeDJ4QUk0MkFDTklJS3oyYTFubHQ5cmtGYVZfdXVE?oc=5",
           "platform": "Google News"
         },
         {
-          "title": "「新体操×スポーツ科学→現場と人がどう変わった？」 四天王寺大学社会学部人間福祉学科 橋元 真央 准教授が問いかける 指導者・元代表選手・科学者による公開ウェビ",
-          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE4tTnlKMF9kUWZuVVBpMi1FWWNsYzNZR1hJeUNnM25Sc2IxSjZvVTMwVVM4MTNycnJyczRvb1ZHRDZZSnQ4ZkxWc29HTzhHUQ?oc=5",
+          "title": "（やさしい朝日新聞）地震や防災気象情報をＸでも 迫る危険、平易で強い表現でお知らせ - 朝日新聞",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE8weVZNTzBVWWpvTzhhcHozbHFFUkN5ckI1QWpXWUl1MDVfX0hFUWxMVEZ6Yl9MSWFkdTlIdjB6MF81ZDQwVldQczRvMWJtQkY4MFVNVGZzQmF4dVpE?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "台風影響運休などの可能性シルバーウィーク期間中 - 朝日放送",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9kcjJwQkktVkpWWlpPNTRXX3NmMU5FZXA0d21qYU5QdDFEVVU5cS0wajA3WWtQaVpHbm53YUpNTUluRGw0dG5jN05PVDVVdFpxWGRwS09xX0FnUVU2eUYtZnE0VDFYZzQ?oc=5",
+          "platform": "Google News"
+        }
+      ]
+    },
+    {
+      "topic": "スポーツ",
+      "count": 4,
+      "attention": 12,
+      "headline": "11歳がeスポーツ決勝へ ぷよぷよ - Yahoo!ニュース",
+      "urls": [
+        {
+          "title": "11歳がeスポーツ決勝へ ぷよぷよ - Yahoo!ニュース",
+          "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBiMnFGNnRDakZCMW82NzA4Q0NUclR1NHp6cWQzdm51Y1pnN0hESzBwd3BrQnFKT0ZaZWY5UEVmQnFyS1d4S3JSZHZyVXlpR1pS?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "＜やらまいか！ニュースポーツ＞ボール遅く、奥は深く ピックルボール - 中日新聞Web",
+          "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9HdzdoRWFISzdDZDNSRWFKd2FBRzh3WksxZFZnUGtnaHhIcFFzcW5kUTRTV054TjVvN3BtV29KVTN4TnJmWnoyLThWNTA0MDgtYThlVUNVSlFEdUotaTVOdEVManlfYVY1Yi13?oc=5",
           "platform": "Google News"
         },
         {
@@ -155,9 +178,32 @@
       ]
     },
     {
+      "topic": "政治",
+      "count": 4,
+      "attention": 12,
+      "headline": "政府のオンライン新聞は、デジタル変革を加速させ、コミュニケーション効果を高めている。 - Vietnam.vn",
+      "urls": [
+        {
+          "title": "政府のオンライン新聞は、デジタル変革を加速させ、コミュニケーション効果を高めている。 - Vietnam.vn",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNdEV4cVZDMVFtcGx3RUVfVXU2RkRZWTdRdDExNnRHRVVEU3FOdzZZLWk1TnYzbGxPZkFaNzR5N1lNQ1prUUZTWW1TSml2Z2tGR2VEWU44VjhXWVplMWpYWGVLdG5qWjF3VFVjQ2RkLXhiOEVWbHhRbUFDZmJkZkU1UXNRb2dQNlhsdndXelhhQ3VsWkpSTS03RzNwNEpwUVZuTjFR?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "2026年第3四半期政府党委員会会議（指令07-CT/TWについて） - Vietnam.vn",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPcUI5V3dOZEVNOGMwR1llV0ktcjhOUFM5NlBiWU5JR0ZTbVJrLTUtVW1yVDRsYjgyU3Y0UDZXdDhXV0tPak1HYjNkU1JyTXBsemQxMmNBMG5Rb0x3WnBWM2RsbzBVMEU5N3FrS2hEa1lBY2ZuNk1OZG9xREZXbjBjNFJqejI5b2VGemVuMzFzOEo3dTQ?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "党の決議および指示を「8つの明確な原則」に従って実施する - Vietnam.vn",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdkx1M0lKQmgyTzBnWE45R1VES2dHTnlkaTdFd2hIaFF0OHpwREhTNFlnZ095Vkd4Z2F0NFpFZkVKb29BaWhOTkU5WDFRWDJYYzNYZkM3R2ZxMlNsQ2kzSVVrdFFrTGxsWlNNYUZaZnptS0dfSDYyZTBLUjA4YnNEUzRjX2ZOS0RadEJldWFn?oc=5",
+          "platform": "Google News"
+        }
+      ]
+    },
+    {
       "topic": "経済",
-      "count": 5,
-      "attention": 15,
+      "count": 4,
+      "attention": 12,
       "headline": "FRONTEO、経済産業省が推進する「オレンジイノベーション・プロジェクト」に参画 - 株式会社FRONTEO",
       "urls": [
         {
@@ -178,69 +224,23 @@
       ]
     },
     {
-      "topic": "政治",
-      "count": 4,
-      "attention": 12,
-      "headline": "2026年第3四半期政府党委員会会議（指令07-CT/TWについて） - Vietnam.vn",
-      "urls": [
-        {
-          "title": "2026年第3四半期政府党委員会会議（指令07-CT/TWについて） - Vietnam.vn",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPcUI5V3dOZEVNOGMwR1llV0ktcjhOUFM5NlBiWU5JR0ZTbVJrLTUtVW1yVDRsYjgyU3Y0UDZXdDhXV0tPak1HYjNkU1JyTXBsemQxMmNBMG5Rb0x3WnBWM2RsbzBVMEU5N3FrS2hEa1lBY2ZuNk1OZG9xREZXbjBjNFJqejI5b2VGemVuMzFzOEo3dTQ?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "党の決議および指示を「8つの明確な原則」に従って実施する - Vietnam.vn",
-          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNdkx1M0lKQmgyTzBnWE45R1VES2dHTnlkaTdFd2hIaFF0OHpwREhTNFlnZ095Vkd4Z2F0NFpFZkVKb29BaWhOTkU5WDFRWDJYYzNYZkM3R2ZxMlNsQ2kzSVVrdFFrTGxsWlNNYUZaZnptS0dfSDYyZTBLUjA4YnNEUzRjX2ZOS0RadEJldWFn?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "京都ピックアップコラム 黒川創 「保守」か、「反動」か｜京都新聞デジタル 京都・滋賀のニュースサイト - kyoto-np.co.jp",
-          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1tNENCbGYzU2R5WUFvSkQwYkxHaW5WM3otekh5UjJKaXMtb2VQTWJFcGNOSzhMZEwwUWtUNWprbWZqVnkzTXhHaVVvTzAwNGdqbEU0Qi1fQXU?oc=5",
-          "platform": "Google News"
-        }
-      ]
-    },
-    {
-      "topic": "災害",
-      "count": 4,
-      "attention": 12,
-      "headline": "Xinhua Silk Road：中国の気象早期警報ソリューションが、より多くの国が気候変動の課題に取り組むのを支援 - 河北新報オンライン",
-      "urls": [
-        {
-          "title": "Xinhua Silk Road：中国の気象早期警報ソリューションが、より多くの国が気候変動の課題に取り組むのを支援 - 河北新報オンライン",
-          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBYTnAxd0t1MFFzblFMNVFpcTBqYWU4T2N6Q3BwSWlGS0JPbE5lTmZSNW1SQ1poNmNkVDZsdVdkeDJ4QUk0MkFDTklJS3oyYTFubHQ5cmtGYVZfdXVE?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "（やさしい朝日新聞）地震や防災気象情報をＸでも 迫る危険、平易で強い表現でお知らせ - 朝日新聞",
-          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOUS1vZi1DbXI5eDRaQVN1R0hVSkRlMEZpdDZUbWR4aWQ1c2ZyV0R2UHVLaFkwVEhsQXQyS1R2QXhwcks4R0xVaC1VZkU1dG4zbW5RZzUzZ2dFU3ptMlJXLU5KYndoRlZpWWxCMS1ORkt0aExaZHRfSEo1MjRnNlY1M2d5ZWhmSXVNRXlyMjRZUTltcmJEdzRfbXN1ZzlBa1k0emVlZ29XUENOSlJsVXpuVUZwTVp3aWVNZW5FTg?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "台風影響運休などの可能性シルバーウィーク期間中 - 朝日放送",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9kcjJwQkktVkpWWlpPNTRXX3NmMU5FZXA0d21qYU5QdDFEVVU5cS0wajA3WWtQaVpHbm53YUpNTUluRGw0dG5jN05PVDVVdFpxWGRwS09xX0FnUVU2eUYtZnE0VDFYZzQ?oc=5",
-          "platform": "Google News"
-        }
-      ]
-    },
-    {
       "topic": "国際",
       "count": 3,
       "attention": 9,
-      "headline": "WAFI 2026世界アグリフードイノベーション会議が北京市平谷区で正式に開幕 - Infoseek",
+      "headline": "世界の量子企業9割が国境を越えたサプライチェーンに依存：グローバル調査で判明 - QUANTUM BUSINESS MAGAZINE -",
       "urls": [
+        {
+          "title": "世界の量子企業9割が国境を越えたサプライチェーンに依存：グローバル調査で判明 - QUANTUM BUSINESS MAGAZINE -",
+          "url": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxPZE8tRnBhRlYxU3JDel9xVXkyUXFKdEFDc3NDQk5nbWFScWtIbnBUT0pUTHhRM3pnZGhKWWtIRjEwd2JIWkd0STZXcjJtN2owQUV2RHRUNUI0UDlLcUx2THlpRGdoTjBwYVhqZzY4UV9XdW85R3dxbVVlc0wyYkVXbzJJaVRFck5TMzBZZmQ0dFU5aFc3ZVE4d05vQlF6TldhMmhrb29JY1JTbWZEWV81ZWxjQVFqVmt1bm1QaDJNcm1Uc0FBUlNJUFQzdk9iTnMyaG44QjhfTlRNbU44bFhjNHNwQmJVZ0hKSkwxZldaZ3BDQm5TX05OazZwMlRGRWF2aDFoOG90SVFEbTdNYkdLaGFIS3ZSQU41N1kzVlRodFZFVjZlUzNWX0JyeVh4Y2x4cjdEZU4xT0xnOU91OTJscTF3UlJpeF9UQVNmVTFud01jQ29xNGtiMUw4VEdhNEpXbU93LVZR?oc=5",
+          "platform": "Google News"
+        },
         {
           "title": "WAFI 2026世界アグリフードイノベーション会議が北京市平谷区で正式に開幕 - Infoseek",
           "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE04TkpSVkZWSDVpc0x2YWFsRHVwM3o0Z2I0a05OcGZ1T0VfekYtVTJFdWY5MzIyRFdkMDFWcV9Xc05wTmRjTllNR2g3THNNQlJMTVl4R2RMUG1wU2FZcW5CWEh2R2p0Zms?oc=5",
           "platform": "Google News"
         },
         {
-          "title": "【10/24 イベント開催のお知らせ】世界の教育「IB」を体験 英語でおばけに立ち向かえ！「Talk Talk Halloween!」 - ニコニコニュース",
-          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5Bb2xGY1d2SzJNWjdhU1lnMWJxbnU3WXhxb3VScVd3LXZTTHAyMFdtWnI5c3hLTEFTWEowdHlEUDVnSHdsQ011X243bnAyTjEyUS1rY0FqOXJZSGRVRXRSamcxSk5xSFlhMkNUZDRqRDF2NURRd0FfNG9Rbw?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "世界の国際観光客到着数、2026年上半期は6.9億人で0.4％増、中東22％減、西欧は猛暑影響、通年予測を下方修正 ―UNツーリズム（トラベルボイス） - ne",
+          "title": "世界の国際観光客到着数、2026年上半期は6.9億人で0.4％増、中東22％減、西欧は猛暑影響、通年予測を下方修正 ―UNツーリズム（トラベルボイス） - Ya",
           "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1OcmdHZlJTdEdlbTNWNTA4OW8welIyY2hqX2Q3MEtCUEFfeTROb2xXS3VzQktLVHN0NENZYm1NYUFPenhZNnUxaTRFYnRMNHpVUTF1RkYwNWZycTdWQjE4Y2FSVWJwOTdMS3FKS2VDOGdxdGFXRlduenRpazc3REk?oc=5",
           "platform": "Google News"
         }
@@ -258,7 +258,7 @@
           "platform": "Google News"
         },
         {
-          "title": "中国シャオミ、Androidスマホで「Apple Watch連携」できる謎の新技術 まるでアップル端末かのように振る舞う（オタク総研） - news.yahoo",
+          "title": "中国シャオミ、Androidスマホで「Apple Watch連携」できる謎の新技術 まるでアップル端末かのように振る舞う（オタク総研） - Yahoo!ニュース",
           "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBXSjM1RENUNlhtZzVaanVRRjRQUThhOUtRekdWQ2lhaFlPcWVMT3NyUUY4X1VWbDBWZWk1VG5zZnhoaHFJZnhwOGVBZGMxX1UzOEVQOFFvYkRQMGoybGVTQTcwSlg1WnRMb1huLVl1c0haZTNPUmZpN2h1LUNGOEk?oc=5",
           "platform": "Google News"
         },
@@ -332,10 +332,10 @@
       "topic": "生活",
       "count": 1,
       "attention": 3,
-      "headline": "― 全てのお子さまにランドセルを ― ランドセルメーカー協和が取り組む「子育て応援プロジェクト」 - senken.co.jp",
+      "headline": "― 全てのお子さまにランドセルを ― ランドセルメーカー協和が取り組む「子育て応援プロジェクト」 - 繊研新聞",
       "urls": [
         {
-          "title": "― 全てのお子さまにランドセルを ― ランドセルメーカー協和が取り組む「子育て応援プロジェクト」 - senken.co.jp",
+          "title": "― 全てのお子さまにランドセルを ― ランドセルメーカー協和が取り組む「子育て応援プロジェクト」 - 繊研新聞",
           "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZGNzdTFVYVRRQWlYQVNVYWlBWWhLMWk5VEFJOU91U1c3eTVmRl9QNG5VSU5peEc5aUhHajhzYnZ6ZVhQNGdXSXpXWU4zaXJPbzNBOTZuT3Rpekl2eG1zRDJxbGRkczl4YVB0elE1YmsxWFF1TGMzbkhlY0xucC1sbklELWlORVgyMWtHUW15ZEIxT3QwZDR1ZUlNdHAyeloyY01jLVdWdlBhX2ZtU3c?oc=5",
           "platform": "Google News"
         }
@@ -345,18 +345,14 @@
   "trends": [
     {
       "word": "news",
-      "count": 14
+      "count": 10
     },
     {
       "word": "claude",
-      "count": 12
+      "count": 8
     },
     {
-      "word": "anthropic",
-      "count": 6
-    },
-    {
-      "word": "code",
+      "word": "vietnam",
       "count": 6
     },
     {
@@ -364,7 +360,15 @@
       "count": 6
     },
     {
+      "word": "anthropic",
+      "count": 4
+    },
+    {
       "word": "chosunbiz",
+      "count": 4
+    },
+    {
+      "word": "code",
       "count": 4
     },
     {
@@ -380,15 +384,11 @@
       "count": 4
     },
     {
-      "word": "rpg",
+      "word": "nintendo",
       "count": 4
     },
     {
-      "word": "talk",
-      "count": 4
-    },
-    {
-      "word": "times",
+      "word": "nnn",
       "count": 4
     }
   ],
@@ -460,10 +460,10 @@
       "provider": null,
       "topic": "政治",
       "sourceWeight": 3,
-      "title": "2026年第3四半期政府党委員会会議（指令07-CT/TWについて） - Vietnam.vn",
-      "summary": "2026年第3四半期政府党委員会会議（指令07-CT/TWについて） Vietnam.vn",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPcUI5V3dOZEVNOGMwR1llV0ktcjhOUFM5NlBiWU5JR0ZTbVJrLTUtVW1yVDRsYjgyU3Y0UDZXdDhXV0tPak1HYjNkU1JyTXBsemQxMmNBMG5Rb0x3WnBWM2RsbzBVMEU5N3FrS2hEa1lBY2ZuNk1OZG9xREZXbjBjNFJqejI5b2VGemVuMzFzOEo3dTQ?oc=5",
-      "published": "2026-09-24T07:43:27+00:00",
+      "title": "政府のオンライン新聞は、デジタル変革を加速させ、コミュニケーション効果を高めている。 - Vietnam.vn",
+      "summary": "政府のオンライン新聞は、デジタル変革を加速させ、コミュニケーション効果を高めている。 Vietnam.vn",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNdEV4cVZDMVFtcGx3RUVfVXU2RkRZWTdRdDExNnRHRVVEU3FOdzZZLWk1TnYzbGxPZkFaNzR5N1lNQ1prUUZTWW1TSml2Z2tGR2VEWU44VjhXWVplMWpYWGVLdG5qWjF3VFVjQ2RkLXhiOEVWbHhRbUFDZmJkZkU1UXNRb2dQNlhsdndXelhhQ3VsWkpSTS03RzNwNEpwUVZuTjFR?oc=5",
+      "published": "2026-09-24T08:11:22+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -479,10 +479,10 @@
       "provider": null,
       "topic": "社会",
       "sourceWeight": 3,
-      "title": "【速報】飯塚事件弁護団、DNA型不一致と主張 - 47NEWS",
-      "summary": "【速報】飯塚事件弁護団、DNA型不一致と主張 47NEWS",
-      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1obVN2NWNCSjJsMVh4dWN5Y09RMnd0VEk5dEJwUF9oOFppTENyd083NDFaUUdEVWxkeVhUaTg5UkZZX0dmbGJROFFhcw?oc=5",
-      "published": "2026-09-24T07:46:03+00:00",
+      "title": "飲食店の看板を蹴って割る 器物損壊容疑で17歳少年逮捕 山電の曽根駅構内|事件・事故 - 神戸新聞",
+      "summary": "飲食店の看板を蹴って割る 器物損壊容疑で17歳少年逮捕 山電の曽根駅構内|事件・事故 神戸新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9EYzRaTFg0OTVpQ1JfcVNyT28zR3RhMFpfa1QzdmJEbUM5cTRxdnhxSzNISzhQRllic1B1aVZDbXhVeU5YVEtlMUs2dkNEc0Qtck1td2Z2T2tVN1o5SV9kLWxKNDRLSTYxdWJPVw?oc=5",
+      "published": "2026-09-24T07:47:12+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -498,10 +498,10 @@
       "provider": null,
       "topic": "国際",
       "sourceWeight": 3,
-      "title": "WAFI 2026世界アグリフードイノベーション会議が北京市平谷区で正式に開幕 - Infoseek",
-      "summary": "WAFI 2026世界アグリフードイノベーション会議が北京市平谷区で正式に開幕 Infoseek",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE04TkpSVkZWSDVpc0x2YWFsRHVwM3o0Z2I0a05OcGZ1T0VfekYtVTJFdWY5MzIyRFdkMDFWcV9Xc05wTmRjTllNR2g3THNNQlJMTVl4R2RMUG1wU2FZcW5CWEh2R2p0Zms?oc=5",
-      "published": "2026-09-24T06:26:00+00:00",
+      "title": "世界の量子企業9割が国境を越えたサプライチェーンに依存：グローバル調査で判明 - QUANTUM BUSINESS MAGAZINE -",
+      "summary": "世界の量子企業9割が国境を越えたサプライチェーンに依存：グローバル調査で判明 QUANTUM BUSINESS MAGAZINE -",
+      "url": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxPZE8tRnBhRlYxU3JDel9xVXkyUXFKdEFDc3NDQk5nbWFScWtIbnBUT0pUTHhRM3pnZGhKWWtIRjEwd2JIWkd0STZXcjJtN2owQUV2RHRUNUI0UDlLcUx2THlpRGdoTjBwYVhqZzY4UV9XdW85R3dxbVVlc0wyYkVXbzJJaVRFck5TMzBZZmQ0dFU5aFc3ZVE4d05vQlF6TldhMmhrb29JY1JTbWZEWV81ZWxjQVFqVmt1bm1QaDJNcm1Uc0FBUlNJUFQzdk9iTnMyaG44QjhfTlRNbU44bFhjNHNwQmJVZ0hKSkwxZldaZ3BDQm5TX05OazZwMlRGRWF2aDFoOG90SVFEbTdNYkdLaGFIS3ZSQU41N1kzVlRodFZFVjZlUzNWX0JyeVh4Y2x4cjdEZU4xT0xnOU91OTJscTF3UlJpeF9UQVNmVTFud01jQ29xNGtiMUw4VEdhNEpXbU93LVZR?oc=5",
+      "published": "2026-09-24T07:09:07+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -536,10 +536,10 @@
       "provider": null,
       "topic": "スポーツ",
       "sourceWeight": 3,
-      "title": "＜やらまいか！ニュースポーツ＞ボール遅く、奥は深く ピックルボール - 中日新聞Web",
-      "summary": "＜やらまいか！ニュースポーツ＞ボール遅く、奥は深く ピックルボール 中日新聞Web",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9HdzdoRWFISzdDZDNSRWFKd2FBRzh3WksxZFZnUGtnaHhIcFFzcW5kUTRTV054TjVvN3BtV29KVTN4TnJmWnoyLThWNTA0MDgtYThlVUNVSlFEdUotaTVOdEVManlfYVY1Yi13?oc=5",
-      "published": "2026-09-24T07:30:42+00:00",
+      "title": "11歳がeスポーツ決勝へ ぷよぷよ - Yahoo!ニュース",
+      "summary": "11歳がeスポーツ決勝へ ぷよぷよ Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBiMnFGNnRDakZCMW82NzA4Q0NUclR1NHp6cWQzdm51Y1pnN0hESzBwd3BrQnFKT0ZaZWY5UEVmQnFyS1d4S3JSZHZyVXlpR1pS?oc=5",
+      "published": "2026-09-24T07:39:57+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -632,8 +632,8 @@
       "provider": null,
       "topic": "生活",
       "sourceWeight": 3,
-      "title": "― 全てのお子さまにランドセルを ― ランドセルメーカー協和が取り組む「子育て応援プロジェクト」 - senken.co.jp",
-      "summary": "― 全てのお子さまにランドセルを ― ランドセルメーカー協和が取り組む「子育て応援プロジェクト」 senken.co.jp",
+      "title": "― 全てのお子さまにランドセルを ― ランドセルメーカー協和が取り組む「子育て応援プロジェクト」 - 繊研新聞",
+      "summary": "― 全てのお子さまにランドセルを ― ランドセルメーカー協和が取り組む「子育て応援プロジェクト」 繊研新聞",
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZGNzdTFVYVRRQWlYQVNVYWlBWWhLMWk5VEFJOU91U1c3eTVmRl9QNG5VSU5peEc5aUhHajhzYnZ6ZVhQNGdXSXpXWU4zaXJPbzNBOTZuT3Rpekl2eG1zRDJxbGRkczl4YVB0elE1YmsxWFF1TGMzbkhlY0xucC1sbklELWlORVgyMWtHUW15ZEIxT3QwZDR1ZUlNdHAyeloyY01jLVdWdlBhX2ZtU3c?oc=5",
       "published": "2026-09-24T08:07:05+00:00",
       "score": 1,
@@ -782,6 +782,25 @@
       "region": "日本語優先"
     },
     {
+      "source": "news-society-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 社会",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "社会",
+      "sourceWeight": 3,
+      "title": "【速報】飯塚事件弁護団、DNA型不一致と主張 - 47NEWS",
+      "summary": "【速報】飯塚事件弁護団、DNA型不一致と主張 47NEWS",
+      "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1obVN2NWNCSjJsMVh4dWN5Y09RMnd0VEk5dEJwUF9oOFppTENyd083NDFaUUdEVWxkeVhUaTg5UkZZX0dmbGJROFFhcw?oc=5",
+      "published": "2026-09-24T07:46:03+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
       "source": "news-science-jp",
       "platform": "Google News",
       "label": "日本ニュース 科学",
@@ -793,6 +812,25 @@
       "summary": "北極圏の宇宙拠点「エスレンジ宇宙センター」が開設60周年を迎える sorae 宇宙へのポータルサイト",
       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5xcUZFMW1NdEJYZjFLV3dsYXY3RkMtTl9uQ2kzQVhRS1FFMklDbEwxTjg2ZDdkTWpQSVc0ZE1sVWJQZ1ZOc2hKelVpS3pZVG42ZzlseGNJVTEtNzJ1TTc2Y0pJbXk?oc=5",
       "published": "2026-09-24T07:45:37+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-politics-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 政治",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "政治",
+      "sourceWeight": 3,
+      "title": "2026年第3四半期政府党委員会会議（指令07-CT/TWについて） - Vietnam.vn",
+      "summary": "2026年第3四半期政府党委員会会議（指令07-CT/TWについて） Vietnam.vn",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPcUI5V3dOZEVNOGMwR1llV0ktcjhOUFM5NlBiWU5JR0ZTbVJrLTUtVW1yVDRsYjgyU3Y0UDZXdDhXV0tPak1HYjNkU1JyTXBsemQxMmNBMG5Rb0x3WnBWM2RsbzBVMEU5N3FrS2hEa1lBY2ZuNk1OZG9xREZXbjBjNFJqejI5b2VGemVuMzFzOEo3dTQ?oc=5",
+      "published": "2026-09-24T07:43:27+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -839,6 +877,25 @@
       "region": "日本語優先"
     },
     {
+      "source": "news-sports-jp",
+      "platform": "Google News",
+      "label": "日本ニュース スポーツ",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "スポーツ",
+      "sourceWeight": 3,
+      "title": "＜やらまいか！ニュースポーツ＞ボール遅く、奥は深く ピックルボール - 中日新聞Web",
+      "summary": "＜やらまいか！ニュースポーツ＞ボール遅く、奥は深く ピックルボール 中日新聞Web",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9HdzdoRWFISzdDZDNSRWFKd2FBRzh3WksxZFZnUGtnaHhIcFFzcW5kUTRTV054TjVvN3BtV29KVTN4TnJmWnoyLThWNTA0MDgtYThlVUNVSlFEdUotaTVOdEVManlfYVY1Yi13?oc=5",
+      "published": "2026-09-24T07:30:42+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
       "source": "news-disaster-jp",
       "platform": "Google News",
       "label": "日本ニュース 災害",
@@ -848,7 +905,7 @@
       "sourceWeight": 3,
       "title": "（やさしい朝日新聞）地震や防災気象情報をＸでも 迫る危険、平易で強い表現でお知らせ - 朝日新聞",
       "summary": "（やさしい朝日新聞）地震や防災気象情報をＸでも 迫る危険、平易で強い表現でお知らせ 朝日新聞",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOUS1vZi1DbXI5eDRaQVN1R0hVSkRlMEZpdDZUbWR4aWQ1c2ZyV0R2UHVLaFkwVEhsQXQyS1R2QXhwcks4R0xVaC1VZkU1dG4zbW5RZzUzZ2dFU3ptMlJXLU5KYndoRlZpWWxCMS1ORkt0aExaZHRfSEo1MjRnNlY1M2d5ZWhmSXVNRXlyMjRZUTltcmJEdzRfbXN1ZzlBa1k0emVlZ29XUENOSlJsVXpuVUZwTVp3aWVNZW5FTg?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE8weVZNTzBVWWpvTzhhcHozbHFFUkN5ckI1QWpXWUl1MDVfX0hFUWxMVEZ6Yl9MSWFkdTlIdjB6MF81ZDQwVldQczRvMWJtQkY4MFVNVGZzQmF4dVpE?oc=5",
       "published": "2026-09-24T07:30:00+00:00",
       "score": 1,
       "tags": [
@@ -877,36 +934,17 @@
       "region": "日本語優先"
     },
     {
-      "source": "news-society-jp",
+      "source": "news-game-jp",
       "platform": "Google News",
-      "label": "日本ニュース 社会",
+      "label": "日本ニュース ゲーム",
       "genre": "SNS",
       "provider": null,
-      "topic": "社会",
+      "topic": "ゲーム",
       "sourceWeight": 3,
-      "title": "不明１０年、女性の通帳発見 - 福井新聞社",
-      "summary": "不明１０年、女性の通帳発見 福井新聞社",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBLME9uNlhJSHlETmVIMGVJLVMzXzd5VjZRSTZiZzhaZkxDUnY0Q2RkQlI1OXNrSjBXdVV0NnNVcWpZc1ZneVdKZmFOWVpDa1U2MDJydGJIaXF3WV9zUVE?oc=5",
-      "published": "2026-09-24T07:03:58+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
-      "source": "news-politics-jp",
-      "platform": "Google News",
-      "label": "日本ニュース 政治",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "政治",
-      "sourceWeight": 3,
-      "title": "京都ピックアップコラム 黒川創 「保守」か、「反動」か｜京都新聞デジタル 京都・滋賀のニュースサイト - kyoto-np.co.jp",
-      "summary": "京都ピックアップコラム 黒川創 「保守」か、「反動」か｜京都新聞デジタル 京都・滋賀のニュースサイト kyoto-np.co.jp",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1tNENCbGYzU2R5WUFvSkQwYkxHaW5WM3otekh5UjJKaXMtb2VQTWJFcGNOSzhMZEwwUWtUNWprbWZqVnkzTXhHaVVvTzAwNGdqbEU0Qi1fQXU?oc=5",
-      "published": "2026-09-24T07:00:00+00:00",
+      "title": "『SCARLET NEXUS』体験版が5月21日より配信開始！最新ゲーム情報＆ダブル主人公声優PVも公開 - toy-people.com",
+      "summary": "『SCARLET NEXUS』体験版が5月21日より配信開始！最新ゲーム情報＆ダブル主人公声優PVも公開 toy-people.com",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE8wSTV2QlVLRmJaWGRkNFZQV3ZLVTJSVW9ldGM5UlFSVE9UZ2F6X3pnVGFydDVXcmlPeXZkdjh4Yi03VkVrNEZtRGFBOHhBWkk?oc=5",
+      "published": "2026-09-24T07:19:01+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -925,25 +963,6 @@
       "title": "飯塚事件、3回目の再審請求へ 「DNA型は別人」新たな鑑定書得る [福岡県] - 朝日新聞",
       "summary": "飯塚事件、3回目の再審請求へ 「DNA型は別人」新たな鑑定書得る [福岡県] 朝日新聞",
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9BMVE0RnhOSmtYdnBqQnNSUG05WDdrZWdZQWtHN1paSkxjM0lBQWNRVGFnYkM5aEZEV1RjNmd0WE94dDNzNGpWems1YW55b2l2VDJvMUNzazBaWFhFOXI1czctbGo1aHM?oc=5",
-      "published": "2026-09-24T07:00:00+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
-      "source": "news-sports-jp",
-      "platform": "Google News",
-      "label": "日本ニュース スポーツ",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "スポーツ",
-      "sourceWeight": 3,
-      "title": "「新体操×スポーツ科学→現場と人がどう変わった？」 四天王寺大学社会学部人間福祉学科 橋元 真央 准教授が問いかける 指導者・元代表選手・科学者による公開ウェビナーを 10月4日から全8回配信 - アットプレス",
-      "summary": "「新体操×スポーツ科学→現場と人がどう変わった？」 四天王寺大学社会学部人間福祉学科 橋元 真央 准教授が問いかける 指導者・元代表選手・科学者による公開ウェビナーを 10月4日から全8回配信 アットプレス",
-      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE4tTnlKMF9kUWZuVVBpMi1FWWNsYzNZR1hJeUNnM25Sc2IxSjZvVTMwVVM4MTNycnJyczRvb1ZHRDZZSnQ4ZkxWc29HTzhHUQ?oc=5",
       "published": "2026-09-24T07:00:00+00:00",
       "score": 1,
       "tags": [
@@ -1048,6 +1067,25 @@
       "region": "日本語優先"
     },
     {
+      "source": "news-world-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 国際",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "国際",
+      "sourceWeight": 3,
+      "title": "WAFI 2026世界アグリフードイノベーション会議が北京市平谷区で正式に開幕 - Infoseek",
+      "summary": "WAFI 2026世界アグリフードイノベーション会議が北京市平谷区で正式に開幕 Infoseek",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE04TkpSVkZWSDVpc0x2YWFsRHVwM3o0Z2I0a05OcGZ1T0VfekYtVTJFdWY5MzIyRFdkMDFWcV9Xc05wTmRjTllNR2g3THNNQlJMTVl4R2RMUG1wU2FZcW5CWEh2R2p0Zms?oc=5",
+      "published": "2026-09-24T06:26:00+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
       "source": "news-entertainment-jp",
       "platform": "Google News",
       "label": "日本ニュース エンタメ",
@@ -1074,8 +1112,8 @@
       "provider": null,
       "topic": "技術",
       "sourceWeight": 3,
-      "title": "中国シャオミ、Androidスマホで「Apple Watch連携」できる謎の新技術 まるでアップル端末かのように振る舞う（オタク総研） - news.yahoo.co.jp",
-      "summary": "中国シャオミ、Androidスマホで「Apple Watch連携」できる謎の新技術 まるでアップル端末かのように振る舞う（オタク総研） news.yahoo.co.jp",
+      "title": "中国シャオミ、Androidスマホで「Apple Watch連携」できる謎の新技術 まるでアップル端末かのように振る舞う（オタク総研） - Yahoo!ニュース",
+      "summary": "中国シャオミ、Androidスマホで「Apple Watch連携」できる謎の新技術 まるでアップル端末かのように振る舞う（オタク総研） Yahoo!ニュース",
       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBXSjM1RENUNlhtZzVaanVRRjRQUThhOUtRekdWQ2lhaFlPcWVMT3NyUUY4X1VWbDBWZWk1VG5zZnhoaHFJZnhwOGVBZGMxX1UzOEVQOFFvYkRQMGoybGVTQTcwSlg1WnRMb1huLVl1c0haZTNPUmZpN2h1LUNGOEk?oc=5",
       "published": "2026-09-24T06:20:00+00:00",
       "score": 1,
@@ -1162,17 +1200,17 @@
       "region": "日本語優先"
     },
     {
-      "source": "news-ai-jp",
+      "source": "news-disaster-jp",
       "platform": "Google News",
-      "label": "日本ニュース AI",
+      "label": "日本ニュース 災害",
       "genre": "SNS",
       "provider": null,
-      "topic": "AI",
+      "topic": "災害",
       "sourceWeight": 3,
-      "title": "Anthropic、Claude「Projects」を再設計 資料・会話をまとめる作業空間から、Claude Codeを並列指揮する“司令塔”へ - ledge.ai",
-      "summary": "Anthropic、Claude「Projects」を再設計 資料・会話をまとめる作業空間から、Claude Codeを並列指揮する“司令塔”へ ledge.ai",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9GS0tHLThQemRPenZpV0RxcDRPN0NIcDBNd000UkVrbk5OdGllbnN3YV9hZHE3bjJIRGFEcGVQejJyaGhoaWxhbHhIZ2lLQWE3X0t4MldJVnlTbW5xQnRj?oc=5",
-      "published": "2026-09-24T05:58:04+00:00",
+      "title": "【画像100枚】印旛沼で堤防“決壊” 太陽光発電施設で火事も 台風25号で千葉や神奈川で被害相次ぐ JR内房線は全線再開に3カ月 停電復旧の見通し立たない地域も【台風情報まとめ】 - テレ朝NEWS",
+      "summary": "【画像100枚】印旛沼で堤防“決壊” 太陽光発電施設で火事も 台風25号で千葉や神奈川で被害相次ぐ JR内房線は全線再開に3カ月 停電復旧の見通し立たない地域も【台風情報まとめ】 テレ朝NEWS",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFAyUGlVVnJjaExWVFhqbGVpek1iakNpNnJXdzhfUUdpcFdsYkRXRnpiczJadmpYbnBDYWNwQ2NXd0UxXzFsUUhPOEhhX1FYNGFteXB2TGE2aGV5NkZxVjR0NmhmajVxTVgtRlJtZ290TkE2UQ?oc=5",
+      "published": "2026-09-24T05:50:00+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -1226,8 +1264,8 @@
       "provider": null,
       "topic": "健康",
       "sourceWeight": 3,
-      "title": "緑内障で視力を失っても続けた努力、企業経営で成功した男性が聾学校に寄付…俳優ＭＥＧＵＭＩさんも活動に賛同 - yomiuri.co.jp",
-      "summary": "緑内障で視力を失っても続けた努力、企業経営で成功した男性が聾学校に寄付…俳優ＭＥＧＵＭＩさんも活動に賛同 yomiuri.co.jp",
+      "title": "緑内障で視力を失っても続けた努力、企業経営で成功した男性が聾学校に寄付…俳優ＭＥＧＵＭＩさんも活動に賛同 - 読売新聞",
+      "summary": "緑内障で視力を失っても続けた努力、企業経営で成功した男性が聾学校に寄付…俳優ＭＥＧＵＭＩさんも活動に賛同 読売新聞",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQZWtVOEo2eWY2RlVSVmpsTHpQNnF2X0FFTVpSaEMwZTBxQkJfSlRBTnVMS21QbnlmeWRxWUw1U0lpQlhERUVMUUVjTWNxc0FqS05HaHk3MTNXU2tIZm9PWGRKbTI4NlNJbzN3bW5CQm9wQURmVDZpaEp1TnpfUE9JSnZ3RGdMZVRrcjhPVW5tZHo3RVJ1ZHNWWXBCRDNmQQ?oc=5",
       "published": "2026-09-24T05:45:00+00:00",
       "score": 1,
@@ -1257,6 +1295,25 @@
       "region": "日本語優先"
     },
     {
+      "source": "news-game-jp",
+      "platform": "Google News",
+      "label": "日本ニュース ゲーム",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "ゲーム",
+      "sourceWeight": 3,
+      "title": "Nintendo Switch™ 2 版『FINAL FANTASY X/X-2 HD Remaster』が初セール！「スクエニ AUTUMN SALE」開催 - ゲームハック",
+      "summary": "Nintendo Switch™ 2 版『FINAL FANTASY X/X-2 HD Remaster』が初セール！「スクエニ AUTUMN SALE」開催 ゲームハック",
+      "url": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE9BWThvYV95S1I2V0ctc01JeFFWcVJMYzZ4RmRIcUJRcDdsSnZ3dVFRTTExX216REFIYkJ1LU1pZi3SAUZBVV95cUxPd3JUb2dfanFoNl9JQVRQbUluMUg5T1lmU2MyVExHMzRxWVRWbmlmOUpwb2I3OXFRTE4wUFBUalJnRzc2WWh3?oc=5",
+      "published": "2026-09-24T05:33:07+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
       "source": "news-society-jp",
       "platform": "Google News",
       "label": "日本ニュース 社会",
@@ -1264,8 +1321,8 @@
       "provider": null,
       "topic": "社会",
       "sourceWeight": 3,
-      "title": "水戸ネイリスト殺害事件 元交際相手に拘禁刑21年求刑 今月30日に判決（2026年9月23日掲載）｜日テレNEWS NNN - news.ntv.co.jp",
-      "summary": "水戸ネイリスト殺害事件 元交際相手に拘禁刑21年求刑 今月30日に判決（2026年9月23日掲載）｜日テレNEWS NNN news.ntv.co.jp",
+      "title": "水戸ネイリスト殺害事件 元交際相手に拘禁刑21年求刑 今月30日に判決（2026年9月23日掲載）｜日テレNEWS NNN - 日テレNEWS NNN",
+      "summary": "水戸ネイリスト殺害事件 元交際相手に拘禁刑21年求刑 今月30日に判決（2026年9月23日掲載）｜日テレNEWS NNN 日テレNEWS NNN",
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE00c0UwMF9EUnFDQlY4VUhkSm5iM1FLZU5jcHRSYXJ2Vk5FOVdiUzJReU8xbVhYSEtZTTF0eVZCSWpIc0l6SUFDWTFmMFVfSndQVnlOU29OX3I1RWdrLTZuMGlPdUZkOVl6cU1TVlZFaEFRQ2xjcWhwajA1ZXo?oc=5",
       "published": "2026-09-24T05:33:00+00:00",
       "score": 1,
@@ -1314,25 +1371,6 @@
       "region": "日本語優先"
     },
     {
-      "source": "news-world-jp",
-      "platform": "Google News",
-      "label": "日本ニュース 国際",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "国際",
-      "sourceWeight": 3,
-      "title": "【10/24 イベント開催のお知らせ】世界の教育「IB」を体験 英語でおばけに立ち向かえ！「Talk Talk Halloween!」 - ニコニコニュース",
-      "summary": "【10/24 イベント開催のお知らせ】世界の教育「IB」を体験 英語でおばけに立ち向かえ！「Talk Talk Halloween!」 ニコニコニュース",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5Bb2xGY1d2SzJNWjdhU1lnMWJxbnU3WXhxb3VScVd3LXZTTHAyMFdtWnI5c3hLTEFTWEowdHlEUDVnSHdsQ011X243bnAyTjEyUS1rY0FqOXJZSGRVRXRSamcxSk5xSFlhMkNUZDRqRDF2NURRd0FfNG9Rbw?oc=5",
-      "published": "2026-09-24T04:51:29+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
       "source": "news-toyama-jp",
       "platform": "Google News",
       "label": "日本ニュース 富山",
@@ -1359,8 +1397,8 @@
       "provider": null,
       "topic": "国際",
       "sourceWeight": 3,
-      "title": "世界の国際観光客到着数、2026年上半期は6.9億人で0.4％増、中東22％減、西欧は猛暑影響、通年予測を下方修正 ―UNツーリズム（トラベルボイス） - news.yahoo.co.jp",
-      "summary": "世界の国際観光客到着数、2026年上半期は6.9億人で0.4％増、中東22％減、西欧は猛暑影響、通年予測を下方修正 ―UNツーリズム（トラベルボイス） news.yahoo.co.jp",
+      "title": "世界の国際観光客到着数、2026年上半期は6.9億人で0.4％増、中東22％減、西欧は猛暑影響、通年予測を下方修正 ―UNツーリズム（トラベルボイス） - Yahoo!ニュース",
+      "summary": "世界の国際観光客到着数、2026年上半期は6.9億人で0.4％増、中東22％減、西欧は猛暑影響、通年予測を下方修正 ―UNツーリズム（トラベルボイス） Yahoo!ニュース",
       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1OcmdHZlJTdEdlbTNWNTA4OW8welIyY2hqX2Q3MEtCUEFfeTROb2xXS3VzQktLVHN0NENZYm1NYUFPenhZNnUxaTRFYnRMNHpVUTF1RkYwNWZycTdWQjE4Y2FSVWJwOTdMS3FKS2VDOGdxdGFXRlduenRpazc3REk?oc=5",
       "published": "2026-09-24T04:30:19+00:00",
       "score": 1,
@@ -1496,44 +1534,6 @@
       "summary": "震度1 岐阜県美濃東部 2026年09月24日12:39ごろ 地震詳細 | 山梨のニュース | ＵＴＹテレビ山梨 TBS NEWS DIG",
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPbWJoVmc2bndkaFhRSF92YlFyOE4tVjNGMjBXdDI0V0lBOGdNQ0FZeDh4blNGX1pwa2NqRkZVaTg1c1IydXQzQ2dxSG1ScG9mVEZwVXRGZlFTaHNmRGhVUjl3VzZmQTdSUzNmaTBuYmdCMmoyNEI0ejlIQ0FfLTZ1RkI0T3gybXM?oc=5",
       "published": "2026-09-24T03:44:53+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
-      "source": "news-sports-jp",
-      "platform": "Google News",
-      "label": "日本ニュース スポーツ",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "スポーツ",
-      "sourceWeight": 3,
-      "title": "【ｅスポーツ】「無双」「エグい」11歳栗原悠輝が“ぷよぷよ”で圧倒 ３連勝でＡ組首位通過（日刊スポーツ） - news.yahoo.co.jp",
-      "summary": "【ｅスポーツ】「無双」「エグい」11歳栗原悠輝が“ぷよぷよ”で圧倒 ３連勝でＡ組首位通過（日刊スポーツ） news.yahoo.co.jp",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5uMmlkOW15WVdaV3ZSRVhDQ1VkVlI3QlhkQ0h6bVZiUndCVVpGejdGZnJpaTZ2aDlmMEE4Q2t1Zkd6OGYya0hSUFlkbGFvb2tJRUhSRTNhSndtUjdQV2NXSzE1dEpnalpTSkk3bDdXV2FHUHdRMG9CVnR4dk5UR2M?oc=5",
-      "published": "2026-09-24T03:38:47+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
-      "source": "news-economy-jp",
-      "platform": "Google News",
-      "label": "日本ニュース 経済",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "経済",
-      "sourceWeight": 3,
-      "title": "イランのホルムズ提案は経済的困窟の兆候か時間稼ぎか？ - アラブニュース",
-      "summary": "イランのホルムズ提案は経済的困窟の兆候か時間稼ぎか？ アラブニュース",
-      "url": "https://news.google.com/rss/articles/CBMigwNBVV95cUxOY1MyaFBSalN6SG5lNUMzODBRSE5YVXpVZXBkSl9aeEJyU1JJX3B5NmttODBLZzRxUmtPdHpDczRPSFRrbjRnZFpVZEdTQjdPSXhvNFBIX25wbW5zOGdaY1RYcEt5QmlZSUpfM0ZuWGx1cWlMY3VpOG9tMWw5azRXR3lQeWhBampoLUc1NldLUVJEV2N0WGVSb1EzbDFmN3BvcVAzblFPZ0dxRFU2VjN0UzlqcGlNUU9TNjRHOVZDNWpMTnlBRWQ4b3g0aW44b2RLQTIwU0JsM3FjOEtORVNfQVAzODlhUURpdDBVTlVaX2hJWDNEN2tUa3IwYTRxT0NoN21NY0ZINnhCSHF3N1g1NzVHTzRwVTlhdWRUSkJ4OFJrQi1kR2RSTURXQi1Wa3BISkpmM1MwS3daWEUtOHBGZjBKS0JjSkRhWG9ZUnlYRS1MS2lfQ1M1YnNqN2tjcWw4ZzhHWmlSQTlJaC1wc01qOVZ6M1ktMEMtZzlvOFl6Z3pLeTQ?oc=5",
-      "published": "2026-09-24T03:37:20+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -1699,152 +1699,139 @@
     {
       "id": "news-ai-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T08:08:02.139409+00:00",
-      "lastAttemptAt": "2026-09-24T08:08:02.139409+00:00",
+      "lastSuccessAt": "2026-09-24T08:18:01.896175+00:00",
+      "lastAttemptAt": "2026-09-24T08:18:01.896175+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-economy-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T08:08:02.139409+00:00",
-      "lastAttemptAt": "2026-09-24T08:08:02.139409+00:00",
+      "lastSuccessAt": "2026-09-24T08:18:01.896175+00:00",
+      "lastAttemptAt": "2026-09-24T08:18:01.896175+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-disaster-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T08:08:02.139409+00:00",
-      "lastAttemptAt": "2026-09-24T08:08:02.139409+00:00",
+      "lastSuccessAt": "2026-09-24T08:18:01.896175+00:00",
+      "lastAttemptAt": "2026-09-24T08:18:01.896175+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-politics-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T08:08:02.139409+00:00",
-      "lastAttemptAt": "2026-09-24T08:08:02.139409+00:00",
+      "lastSuccessAt": "2026-09-24T08:18:01.896175+00:00",
+      "lastAttemptAt": "2026-09-24T08:18:01.896175+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-society-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T08:08:02.139409+00:00",
-      "lastAttemptAt": "2026-09-24T08:08:02.139409+00:00",
+      "lastSuccessAt": "2026-09-24T08:18:01.896175+00:00",
+      "lastAttemptAt": "2026-09-24T08:18:01.896175+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-world-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T08:08:02.139409+00:00",
-      "lastAttemptAt": "2026-09-24T08:08:02.139409+00:00",
+      "lastSuccessAt": "2026-09-24T08:18:01.896175+00:00",
+      "lastAttemptAt": "2026-09-24T08:18:01.896175+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-tech-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T08:08:02.139409+00:00",
-      "lastAttemptAt": "2026-09-24T08:08:02.139409+00:00",
+      "lastSuccessAt": "2026-09-24T08:18:01.896175+00:00",
+      "lastAttemptAt": "2026-09-24T08:18:01.896175+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-sports-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T08:08:02.139409+00:00",
-      "lastAttemptAt": "2026-09-24T08:08:02.139409+00:00",
+      "lastSuccessAt": "2026-09-24T08:18:01.896175+00:00",
+      "lastAttemptAt": "2026-09-24T08:18:01.896175+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-health-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T08:08:02.139409+00:00",
-      "lastAttemptAt": "2026-09-24T08:08:02.139409+00:00",
+      "lastSuccessAt": "2026-09-24T08:18:01.896175+00:00",
+      "lastAttemptAt": "2026-09-24T08:18:01.896175+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-toyama-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T08:08:02.139409+00:00",
-      "lastAttemptAt": "2026-09-24T08:08:02.139409+00:00",
+      "lastSuccessAt": "2026-09-24T08:18:01.896175+00:00",
+      "lastAttemptAt": "2026-09-24T08:18:01.896175+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-entertainment-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T08:08:02.139409+00:00",
-      "lastAttemptAt": "2026-09-24T08:08:02.139409+00:00",
+      "lastSuccessAt": "2026-09-24T08:18:01.896175+00:00",
+      "lastAttemptAt": "2026-09-24T08:18:01.896175+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-business-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T08:08:02.139409+00:00",
-      "lastAttemptAt": "2026-09-24T08:08:02.139409+00:00",
+      "lastSuccessAt": "2026-09-24T08:18:01.896175+00:00",
+      "lastAttemptAt": "2026-09-24T08:18:01.896175+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-life-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T08:08:02.139409+00:00",
-      "lastAttemptAt": "2026-09-24T08:08:02.139409+00:00",
+      "lastSuccessAt": "2026-09-24T08:18:01.896175+00:00",
+      "lastAttemptAt": "2026-09-24T08:18:01.896175+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-science-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T08:08:02.139409+00:00",
-      "lastAttemptAt": "2026-09-24T08:08:02.139409+00:00",
+      "lastSuccessAt": "2026-09-24T08:18:01.896175+00:00",
+      "lastAttemptAt": "2026-09-24T08:18:01.896175+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-game-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T08:08:02.139409+00:00",
-      "lastAttemptAt": "2026-09-24T08:08:02.139409+00:00",
+      "lastSuccessAt": "2026-09-24T08:18:01.896175+00:00",
+      "lastAttemptAt": "2026-09-24T08:18:01.896175+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "mastodon-ai",
-      "status": "unavailable",
-      "lastSuccessAt": "2026-09-13T00:23:05.116061+00:00",
-      "lastAttemptAt": "2026-09-24T08:08:02.139409+00:00",
+      "status": "fresh",
+      "lastSuccessAt": "2026-09-24T08:18:01.896175+00:00",
+      "lastAttemptAt": "2026-09-24T08:18:01.896175+00:00",
       "retryAfterAt": null,
-      "errorCode": "TimeoutError"
+      "errorCode": null
     },
     {
       "id": "mastodon-codex",
-      "status": "unavailable",
-      "lastSuccessAt": "2026-09-13T00:21:31.356337+00:00",
-      "lastAttemptAt": "2026-09-24T08:08:02.139409+00:00",
+      "status": "fresh",
+      "lastSuccessAt": "2026-09-24T08:18:01.896175+00:00",
+      "lastAttemptAt": "2026-09-24T08:18:01.896175+00:00",
       "retryAfterAt": null,
-      "errorCode": "TimeoutError"
+      "errorCode": null
     }
   ],
-  "errors": [
-    {
-      "source": "mastodon-ai",
-      "platform": "Mastodon",
-      "error": "The read operation timed out",
-      "fallbackItems": 0
-    },
-    {
-      "source": "mastodon-codex",
-      "platform": "Mastodon",
-      "error": "The read operation timed out",
-      "fallbackItems": 0
-    }
-  ]
+  "errors": []
 }
