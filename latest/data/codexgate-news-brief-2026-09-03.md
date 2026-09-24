@@ -1,6 +1,6 @@
 # CODEXGATE News Brief
 
-- 更新: 2026-09-24T05:38:01.860542+00:00
+- 更新: 2026-09-24T05:48:02.150990+00:00
 - 取得: GitHub Actions/Python
 - Codex: 0%想定（自動実行時）
 - 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。
@@ -9,4 +9,4 @@
 - [論文] 更新あり。必要時だけ確認 / Building Socio-Affective Artificial Intelligence for Interactive Multi
 - [AI] AI/Codex運用の変化を確認 / Create your best tracks yet with Lyria 3.5 in Gemini. / Gemini 3.8 tex
 - [技術] 更新あり。必要時だけ確認 / The Story of Mel
-- [災害] 更新あり。必要時だけ確認 / M 2.1 - 80 km ENE of Ouzinkie, Alaska
+- [災害] 更新あり。必要時だけ確認 / M 1.1 - 4 km NW of The Geysers, CA
