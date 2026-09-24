@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-24T03:58:02.054396+00:00",
-  "lastSuccessAt": "2026-09-24T03:58:02.054396+00:00",
+  "updatedAt": "2026-09-24T04:08:01.938607+00:00",
+  "lastSuccessAt": "2026-09-24T04:08:01.938607+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -133,20 +133,20 @@
       "score": 4
     },
     {
+      "genre": "論文",
+      "count": 8,
+      "signal": "Building Socio-Affective Artificial Intelligence for Interactive Multi-Agent Simulations / Escaping Python Dependency Hell: A Hybrid Replay-and-Repair Pipeline for Python Dependenc",
+      "decision": "更新あり。必要時だけ確認",
+      "topUrl": "https://arxiv.org/abs/2609.26927",
+      "score": 4
+    },
+    {
       "genre": "AI",
-      "count": 9,
+      "count": 6,
       "signal": "Create your best tracks yet with Lyria 3.5 in Gemini. / Gemini 3.8 text-to-speech says hello / Two years of OpenAI Academy",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
       "score": 4
-    },
-    {
-      "genre": "論文",
-      "count": 5,
-      "signal": "Learning 3D biophysical cell properties from 2D images and cell-population statistics / Didactic knowledge or Clinical Cases? How Data Types Shape Medical Large Language Models / A",
-      "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://arxiv.org/abs/2609.22410",
-      "score": 3
     },
     {
       "genre": "技術",
@@ -159,13 +159,33 @@
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 2.4 - 12 km WSW of Chester, CA",
+      "signal": "M 2.9 - 50 km E of Yakutat, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75440672",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sxpvgj",
       "score": 1
     }
   ],
   "items": [
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Building Socio-Affective Artificial Intelligence for Interactive Multi-Agent Simulations",
+      "summary": "arXiv:2609.26927v1 Announce Type: new Abstract: The objective of this article is to provide design principles and a software architecture for enabling interaction between humans and multiple agents in simulated dynamic w",
+      "url": "https://arxiv.org/abs/2609.26927",
+      "published": "2026-09-24T04:00:00+00:00",
+      "score": 4,
+      "tags": [
+        "論文",
+        "重要",
+        "制作",
+        "研究"
+      ]
+    },
     {
       "source": "github-changelog",
       "platform": "開発",
@@ -225,25 +245,6 @@
       ]
     },
     {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "制作",
-      "sourceWeight": 1,
-      "title": "Learning 3D biophysical cell properties from 2D images and cell-population statistics",
-      "summary": "arXiv:2609.22410v1 Announce Type: new Abstract: Inferring 3D cellular properties from 2D microscopy is difficult when a reference instrument reports only population statistics rather than labels for individual cells. Her",
-      "url": "https://arxiv.org/abs/2609.22410",
-      "published": "2026-09-23T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "制作",
-        "研究"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -283,10 +284,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.4 - 12 km WSW of Chester, CA",
-      "summary": "12 km WSW of Chester, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75440672",
-      "published": "2026-09-24T03:44:47.720000+00:00",
+      "title": "M 2.9 - 50 km E of Yakutat, Alaska",
+      "summary": "50 km E of Yakutat, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sxpvgj",
+      "published": "2026-09-24T03:59:56.424000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -307,6 +308,26 @@
       "score": 1,
       "tags": [
         "技術"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Escaping Python Dependency Hell: A Hybrid Replay-and-Repair Pipeline for Python Dependency Resolution",
+      "summary": "arXiv:2609.26952v1 Announce Type: new Abstract: Dependency conflicts in Python ecosystems arise from incompatible version constraints, missing packages, and undocumented compatibility relationships, causing many real-wor",
+      "url": "https://arxiv.org/abs/2609.26952",
+      "published": "2026-09-24T04:00:00+00:00",
+      "score": 4,
+      "tags": [
+        "論文",
+        "重要",
+        "開発",
+        "研究"
       ]
     },
     {
@@ -343,6 +364,101 @@
       "score": 4,
       "tags": [
         "開発",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Silent Failures in Agent-Tool Interaction: An Audit of ToolUniverse",
+      "summary": "arXiv:2609.26836v1 Announce Type: new Abstract: Agentic AI systems are increasingly adopting automated pipelines that integrate multiple tools. While prior research and benchmarks have studied about task success and task",
+      "url": "https://arxiv.org/abs/2609.26836",
+      "published": "2026-09-24T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Harness as a Language: A Minimalist Agent Framework With Maximal Expressivity",
+      "summary": "arXiv:2609.26891v1 Announce Type: new Abstract: Modern language-model agents are built around the \\textit{agent loop}, where the LLM is placed in an environment exposing a set of tools, and the LLM has full control over ",
+      "url": "https://arxiv.org/abs/2609.26891",
+      "published": "2026-09-24T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "TwinCheck: Evidence-Grounded Negative-Twin Verification for Stateful Tool Agents",
+      "summary": "arXiv:2609.26911v1 Announce Type: new Abstract: A single locally plausible tool call can derail an otherwise successful agent trajectory. Suspicion alone does not justify intervention, because the replacement itself can ",
+      "url": "https://arxiv.org/abs/2609.26911",
+      "published": "2026-09-24T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Same evidence, different judgments: Evidence noncommutative in vision/speech-text conflicts",
+      "summary": "arXiv:2609.26986v1 Announce Type: new Abstract: For multimodal large language models, when images or speech conflict with accompanying text, measured text reliance can entangle modality preference with evidence position.",
+      "url": "https://arxiv.org/abs/2609.26986",
+      "published": "2026-09-24T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "制作",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Reinforcement Learning with Decomposed Subtasks",
+      "summary": "arXiv:2609.27035v1 Announce Type: new Abstract: Group Relative Policy Optimization (GRPO) and related policy-gradient methods for training language model agents collapse an entire multi-turn rollout into a single scalar ",
+      "url": "https://arxiv.org/abs/2609.27035",
+      "published": "2026-09-24T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
         "重要",
         "研究"
       ]
@@ -583,6 +699,24 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Which Objectives Need a Dial? Predicting Objective Conflict and Covering Trade-offs in Steerable Pluralistic Alignment",
+      "summary": "arXiv:2609.26929v1 Announce Type: new Abstract: People hold diverse, sometimes conflicting values, so no single aligned model can satisfy everyone. Pluralistic alignment therefore calls for steerable models that can bala",
+      "url": "https://arxiv.org/abs/2609.26929",
+      "published": "2026-09-24T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -617,196 +751,70 @@
         "AI",
         "重要"
       ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "How invideo improves color grading 3x with GPT‑6 Astra",
-      "summary": "With GPT‑6 Astra, invideo plans edits with greater precision, improves color correction and grading threefold, and produces 50 custom effects in one day.",
-      "url": "https://openai.com/index/invideo-builds-with-gpt-6-astra",
-      "published": "2026-09-23T12:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "制作"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Ringg’s AI agents resolve up to 65% of customer calls with OpenAI",
-      "summary": "Using GPT-5.6, Ringg powers multilingual agents across voice, chat, WhatsApp, and web for 90% less cost vs. GPT-4.1.",
-      "url": "https://openai.com/index/ringg",
-      "published": "2026-09-23T12:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Introducing MentalHealthBench",
-      "summary": "MentalHealthBench is an expert-informed benchmark for evaluating helpful and safe AI responses across realistic mental health conversations.",
-      "url": "https://openai.com/index/introducing-mentalhealthbench",
-      "published": "2026-09-23T10:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Didactic knowledge or Clinical Cases? How Data Types Shape Medical Large Language Models",
-      "summary": "arXiv:2609.22161v1 Announce Type: new Abstract: Medical large language models are commonly trained on mixtures of didactic data (e.g., textbooks) and clinical data (e.g., patient records), yet how these data types differ",
-      "url": "https://arxiv.org/abs/2609.22161",
-      "published": "2026-09-23T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "An Affordable AI-Integrated Smart Cane for Multimodal Mobility Assistance of Visually Impaired Users",
-      "summary": "arXiv:2609.22277v1 Announce Type: new Abstract: Visual impairment affects over 2.2 billion people worldwide, yet conventional white canes cannot detect elevated hazards or provide semantic environmental context. Existing",
-      "url": "https://arxiv.org/abs/2609.22277",
-      "published": "2026-09-23T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "PAANI : On Device Visual Evidence Fusion and Explainable Guidance for River Robot Simulation",
-      "summary": "arXiv:2609.22353v1 Announce Type: new Abstract: Mobile river monitoring robots must interpret obstacles and water boundaries that geographic waypoints alone cannot describe. On resource constrained platforms, converting ",
-      "url": "https://arxiv.org/abs/2609.22353",
-      "published": "2026-09-23T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Social Influence and the Allocation of Scientific Attention in AI Populations",
-      "summary": "arXiv:2609.22408v1 Announce Type: new Abstract: AI systems are becoming participants in the evaluation and use of scientific research. They encounter citation counts, download statistics and lists of popular articles dev",
-      "url": "https://arxiv.org/abs/2609.22408",
-      "published": "2026-09-23T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T03:58:02.054396+00:00",
-      "lastAttemptAt": "2026-09-24T03:58:02.054396+00:00",
+      "lastSuccessAt": "2026-09-24T04:08:01.938607+00:00",
+      "lastAttemptAt": "2026-09-24T04:08:01.938607+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T03:58:02.054396+00:00",
-      "lastAttemptAt": "2026-09-24T03:58:02.054396+00:00",
+      "lastSuccessAt": "2026-09-24T04:08:01.938607+00:00",
+      "lastAttemptAt": "2026-09-24T04:08:01.938607+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T03:58:02.054396+00:00",
-      "lastAttemptAt": "2026-09-24T03:58:02.054396+00:00",
+      "lastSuccessAt": "2026-09-24T04:08:01.938607+00:00",
+      "lastAttemptAt": "2026-09-24T04:08:01.938607+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T03:58:02.054396+00:00",
-      "lastAttemptAt": "2026-09-24T03:58:02.054396+00:00",
+      "lastSuccessAt": "2026-09-24T04:08:01.938607+00:00",
+      "lastAttemptAt": "2026-09-24T04:08:01.938607+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T03:58:02.054396+00:00",
-      "lastAttemptAt": "2026-09-24T03:58:02.054396+00:00",
+      "lastSuccessAt": "2026-09-24T04:08:01.938607+00:00",
+      "lastAttemptAt": "2026-09-24T04:08:01.938607+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T03:58:02.054396+00:00",
-      "lastAttemptAt": "2026-09-24T03:58:02.054396+00:00",
+      "lastSuccessAt": "2026-09-24T04:08:01.938607+00:00",
+      "lastAttemptAt": "2026-09-24T04:08:01.938607+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T03:58:02.054396+00:00",
-      "lastAttemptAt": "2026-09-24T03:58:02.054396+00:00",
+      "lastSuccessAt": "2026-09-24T04:08:01.938607+00:00",
+      "lastAttemptAt": "2026-09-24T04:08:01.938607+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T03:58:02.054396+00:00",
-      "lastAttemptAt": "2026-09-24T03:58:02.054396+00:00",
+      "lastSuccessAt": "2026-09-24T04:08:01.938607+00:00",
+      "lastAttemptAt": "2026-09-24T04:08:01.938607+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

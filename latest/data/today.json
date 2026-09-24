@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-24T03:58:26.157344+00:00",
-  "sourceUpdatedAt": "2026-09-24T03:58:02.054396+00:00",
+  "updatedAt": "2026-09-24T04:08:24.656110+00:00",
+  "sourceUpdatedAt": "2026-09-24T04:08:01.938607+00:00",
   "status": "fresh",
   "mode": "today-rule-based",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -12,12 +12,38 @@
   },
   "items": [
     {
-      "id": "github-changelog:0",
+      "id": "arxiv-ai:0",
+      "genre": "論文",
+      "title": "Building Socio-Affective Artificial Intelligence for Interactive Multi-Agent Simulations",
+      "reason": "論文の新着で、設定した重要語と一致",
+      "publishedAt": "2026-09-24T04:00:00+00:00",
+      "observedAt": "2026-09-24T04:08:01.938607+00:00",
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2609.26927",
+      "score": 4,
+      "stale": false,
+      "processing": "rule-based"
+    },
+    {
+      "id": "arxiv-ai:8",
+      "genre": "論文",
+      "title": "Escaping Python Dependency Hell: A Hybrid Replay-and-Repair Pipeline for Python Dependency Resolution",
+      "reason": "論文の新着で、設定した重要語と一致",
+      "publishedAt": "2026-09-24T04:00:00+00:00",
+      "observedAt": "2026-09-24T04:08:01.938607+00:00",
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2609.26952",
+      "score": 4,
+      "stale": false,
+      "processing": "rule-based"
+    },
+    {
+      "id": "github-changelog:1",
       "genre": "開発",
       "title": "OpenTelemetry in the GitHub Copilot app",
       "reason": "開発の新着で、設定した重要語と一致",
       "publishedAt": "2026-09-23T02:14:54+00:00",
-      "observedAt": "2026-09-24T03:58:02.054396+00:00",
+      "observedAt": "2026-09-24T04:08:01.938607+00:00",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app",
       "score": 4,
@@ -25,12 +51,12 @@
       "processing": "rule-based"
     },
     {
-      "id": "github-changelog:8",
+      "id": "github-changelog:9",
       "genre": "開発",
       "title": "Claude Opus 5.5 is now available in GitHub Copilot",
       "reason": "開発の新着で、設定した重要語と一致",
       "publishedAt": "2026-09-22T17:10:23+00:00",
-      "observedAt": "2026-09-24T03:58:02.054396+00:00",
+      "observedAt": "2026-09-24T04:08:01.938607+00:00",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot",
       "score": 4,
@@ -38,41 +64,15 @@
       "processing": "rule-based"
     },
     {
-      "id": "google-gemini:13",
+      "id": "google-gemini:19",
       "genre": "AI",
       "title": "Gemini 3.8 text-to-speech says hello",
       "reason": "AIの新着で、設定した重要語と一致",
       "publishedAt": "2026-09-23T15:15:00+00:00",
-      "observedAt": "2026-09-24T03:58:02.054396+00:00",
+      "observedAt": "2026-09-24T04:08:01.938607+00:00",
       "source": "Gemini公式",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
       "score": 3,
-      "stale": false,
-      "processing": "rule-based"
-    },
-    {
-      "id": "arxiv-ai:3",
-      "genre": "論文",
-      "title": "Learning 3D biophysical cell properties from 2D images and cell-population statistics",
-      "reason": "論文の新着で、設定した重要語と一致",
-      "publishedAt": "2026-09-23T04:00:00+00:00",
-      "observedAt": "2026-09-24T03:58:02.054396+00:00",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.22410",
-      "score": 3,
-      "stale": false,
-      "processing": "rule-based"
-    },
-    {
-      "id": "openai:4",
-      "genre": "AI",
-      "title": "Two years of OpenAI Academy",
-      "reason": "AIの新着を確認",
-      "publishedAt": "2026-09-23T16:00:00+00:00",
-      "observedAt": "2026-09-24T03:58:02.054396+00:00",
-      "source": "ChatGPT / OpenAI公式",
-      "url": "https://openai.com/index/two-years-of-openai-academy",
-      "score": 2,
       "stale": false,
       "processing": "rule-based"
     }
