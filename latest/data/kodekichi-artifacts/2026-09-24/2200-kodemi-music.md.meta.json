@@ -1,0 +1,32 @@
+{
+  "lane": "music",
+  "ts": "2026-09-24T22:00:02+09:00",
+  "artifact": "2200-kodemi-music.md",
+  "prompt": "コデ美 / 4音ステップシーケンサー",
+  "source": "local",
+  "backend": "codex",
+  "model": "deterministic-rules",
+  "seconds": 0,
+  "gates": {
+    "separate_character_artifact": {
+      "pass": true,
+      "note": "kodemi"
+    },
+    "collection_mode": {
+      "pass": true,
+      "note": "公開RSS/API・ルール処理（外部AI 0回）"
+    },
+    "citations": {
+      "pass": true,
+      "note": "5 sources"
+    },
+    "daily_budget": {
+      "pass": true,
+      "note": "97/302; this slot AI=False"
+    },
+    "graceful_degradation": {
+      "pass": true,
+      "note": "fallback not required"
+    }
+  }
+}
