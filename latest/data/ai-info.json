@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-09-24T15:18:01.509298+00:00",
+  "updatedAt": "2026-09-24T20:30:32.155427+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "Building Socio-Affective Artificial Intelligence for Interactive Multi-Agent Simulations",
+  "topLine": "When chat is the wrong UI",
   "cards": [
     {
       "genre": "開発",
       "count": 16,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "OpenTelemetry in the GitHub Copilot app / Claude Opus 5.5 is now available in GitHub Copilot / OpenAI’s GPT-6 Sol and GPT-6 Luna now available",
-      "topUrl": "https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app",
+      "signal": "When chat is the wrong UI / OpenTelemetry in the GitHub Copilot app / Claude Opus 5.5 is now available in GitHub Copilot",
+      "topUrl": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
       "score": 4
     },
     {
@@ -26,20 +26,27 @@
       "genre": "AI",
       "count": 6,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "Create your best tracks yet with Lyria 3.5 in Gemini. / Gemini 3.8 text-to-speech says hello / Two years of OpenAI Academy",
-      "topUrl": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
-      "score": 4
+      "signal": "Gemini 3.8 text-to-speech says hello / Two years of OpenAI Academy / OpenAI extends cyber access to Ukraine for civilian defense",
+      "topUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
+      "score": 3
     },
     {
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "agent-shell 0.78 updates",
-      "topUrl": "https://xenodium.com/agent-shell-0-78-updates",
-      "score": 2
+      "signal": "AI Workers' Inquiry 2026",
+      "topUrl": "https://techworkersinquiry.org/ai/",
+      "score": 1
     }
   ],
   "focus": [
+    {
+      "label": "開発",
+      "title": "When chat is the wrong UI",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub",
+      "url": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/"
+    },
     {
       "label": "論文",
       "title": "Building Socio-Affective Artificial Intelligence for Interactive Multi-Agent Simulations",
@@ -77,17 +84,10 @@
     },
     {
       "label": "開発",
-      "title": "Project HydraFusion: Frontier quality via multi-model orchestration",
+      "title": "AI-powered fuzzing with the GitHub Security Lab Taskflow Agent",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
-      "url": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/"
-    },
-    {
-      "label": "AI",
-      "title": "Create your best tracks yet with Lyria 3.5 in Gemini.",
-      "why": "Codex/AI開発判断に関係",
-      "source": "Gemini公式",
-      "url": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/"
+      "url": "https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/"
     },
     {
       "label": "論文",
@@ -98,6 +98,25 @@
     }
   ],
   "items": [
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "When chat is the wrong UI",
+      "summary": "What is a developer to do when they need something more tangible than a chat box? Enter canvases. The post When chat is the wrong UI appeared first on The GitHub Blog .",
+      "url": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
+      "published": "2026-09-24T20:00:00+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "制作"
+      ]
+    },
     {
       "source": "arxiv-ai",
       "platform": "論文",
@@ -203,35 +222,14 @@
       "provider": null,
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "Project HydraFusion: Frontier quality via multi-model orchestration",
-      "summary": "In controlled offline evaluations, HydraFusion’s selective coding workflows matched or exceeded the evaluated Opus 5 baseline while reducing estimated workflow cost. Now available as a research preview in GitHub Copilot.",
-      "url": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/",
-      "published": "2026-09-04T16:04:14+00:00",
-      "score": 4,
+      "title": "AI-powered fuzzing with the GitHub Security Lab Taskflow Agent",
+      "summary": "In this blog post, I explain how to use the new fuzzing taskflow based on the GitHub Security Lab Taskflow Agent AI framework. The post AI-powered fuzzing with the GitHub Security Lab Taskflow Agent appeared first on The",
+      "url": "https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/",
+      "published": "2026-09-24T18:26:12+00:00",
+      "score": 3,
       "tags": [
         "開発",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "google-gemini",
-      "platform": "AI",
-      "label": "Gemini公式",
-      "genre": "AI",
-      "provider": "gemini",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Create your best tracks yet with Lyria 3.5 in Gemini.",
-      "summary": "Lyria 3.5, our best-sounding music generation model, is now available in the Gemini app and the Gemini API. Lyria 3.5 brings more expressive vocals and richer musical ar…",
-      "url": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
-      "published": "2026-09-04T16:00:00+00:00",
-      "score": 4,
-      "tags": [
-        "AI",
-        "重要",
-        "開発",
-        "研究"
+        "重要"
       ]
     },
     {
@@ -608,6 +606,12 @@
             "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
             "published": "2026-09-23T12:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
+          },
+          {
+            "title": "How invideo improves color grading 3x with GPT‑6 Astra",
+            "url": "https://openai.com/index/invideo-builds-with-gpt-6-astra",
+            "published": "2026-09-23T12:00:00+00:00",
+            "source": "ChatGPT / OpenAI公式"
           }
         ]
       },
@@ -636,12 +640,6 @@
           "google-gemini"
         ],
         "latest": [
-          {
-            "title": "Create your best tracks yet with Lyria 3.5 in Gemini.",
-            "url": "https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/",
-            "published": "2026-09-04T16:00:00+00:00",
-            "source": "Gemini公式"
-          },
           {
             "title": "Gemini 3.8 text-to-speech says hello",
             "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
@@ -707,5 +705,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-24T15:18:01.509298+00:00"
+  "lastSuccessAt": "2026-09-24T20:30:32.155427+00:00"
 }
