@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-24T04:48:01.956044+00:00",
-  "lastSuccessAt": "2026-09-24T04:48:01.956044+00:00",
+  "updatedAt": "2026-09-24T04:58:01.892923+00:00",
+  "lastSuccessAt": "2026-09-24T04:58:01.892923+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -151,17 +151,17 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "Beware overreliance on metaphor",
+      "signal": "The Story of Mel",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://evnm.substack.com/p/beware-overreliance-on-metaphor",
+      "topUrl": "https://users.cs.utah.edu/~elb/folklore/mel.html",
       "score": 1
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.0 - 9 km WNW of The Geysers, CA",
+      "signal": "M 2.8 - 16 km SE of Karluk, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75440697",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sxrotv",
       "score": 1
     }
   ],
@@ -284,10 +284,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.0 - 9 km WNW of The Geysers, CA",
-      "summary": "9 km WNW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75440697",
-      "published": "2026-09-24T04:39:31.860000+00:00",
+      "title": "M 2.8 - 16 km SE of Karluk, Alaska",
+      "summary": "16 km SE of Karluk, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026sxrotv",
+      "published": "2026-09-24T04:53:54.476000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -301,10 +301,10 @@
       "provider": null,
       "topic": "その他",
       "sourceWeight": 1,
-      "title": "Beware overreliance on metaphor",
+      "title": "The Story of Mel",
       "summary": "Comments",
-      "url": "https://evnm.substack.com/p/beware-overreliance-on-metaphor",
-      "published": "2026-09-23T23:39:21+00:00",
+      "url": "https://users.cs.utah.edu/~elb/folklore/mel.html",
+      "published": "2026-09-24T04:09:40+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -757,64 +757,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T04:48:01.956044+00:00",
-      "lastAttemptAt": "2026-09-24T04:48:01.956044+00:00",
+      "lastSuccessAt": "2026-09-24T04:58:01.892923+00:00",
+      "lastAttemptAt": "2026-09-24T04:58:01.892923+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T04:48:01.956044+00:00",
-      "lastAttemptAt": "2026-09-24T04:48:01.956044+00:00",
+      "lastSuccessAt": "2026-09-24T04:58:01.892923+00:00",
+      "lastAttemptAt": "2026-09-24T04:58:01.892923+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T04:48:01.956044+00:00",
-      "lastAttemptAt": "2026-09-24T04:48:01.956044+00:00",
+      "lastSuccessAt": "2026-09-24T04:58:01.892923+00:00",
+      "lastAttemptAt": "2026-09-24T04:58:01.892923+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T04:48:01.956044+00:00",
-      "lastAttemptAt": "2026-09-24T04:48:01.956044+00:00",
+      "lastSuccessAt": "2026-09-24T04:58:01.892923+00:00",
+      "lastAttemptAt": "2026-09-24T04:58:01.892923+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T04:48:01.956044+00:00",
-      "lastAttemptAt": "2026-09-24T04:48:01.956044+00:00",
+      "lastSuccessAt": "2026-09-24T04:58:01.892923+00:00",
+      "lastAttemptAt": "2026-09-24T04:58:01.892923+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T04:48:01.956044+00:00",
-      "lastAttemptAt": "2026-09-24T04:48:01.956044+00:00",
+      "lastSuccessAt": "2026-09-24T04:58:01.892923+00:00",
+      "lastAttemptAt": "2026-09-24T04:58:01.892923+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T04:48:01.956044+00:00",
-      "lastAttemptAt": "2026-09-24T04:48:01.956044+00:00",
+      "lastSuccessAt": "2026-09-24T04:58:01.892923+00:00",
+      "lastAttemptAt": "2026-09-24T04:58:01.892923+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T04:48:01.956044+00:00",
-      "lastAttemptAt": "2026-09-24T04:48:01.956044+00:00",
+      "lastSuccessAt": "2026-09-24T04:58:01.892923+00:00",
+      "lastAttemptAt": "2026-09-24T04:58:01.892923+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
