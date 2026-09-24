@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-24T12:58:01.685234+00:00",
-  "lastSuccessAt": "2026-09-24T12:58:01.685234+00:00",
+  "updatedAt": "2026-09-24T13:08:02.549274+00:00",
+  "lastSuccessAt": "2026-09-24T13:08:02.549274+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -151,10 +151,10 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "Pick OS is a Living Fossil of Computer History",
+      "signal": "agent-shell 0.78 updates",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://csixty4.medium.com/pick-is-a-living-fossil-of-computer-history-36d74408d557",
-      "score": 1
+      "topUrl": "https://xenodium.com/agent-shell-0-78-updates",
+      "score": 2
     },
     {
       "genre": "災害",
@@ -245,6 +245,24 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "agent-shell 0.78 updates",
+      "summary": "Comments",
+      "url": "https://xenodium.com/agent-shell-0-78-updates",
+      "published": "2026-09-24T11:34:00+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "重要"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -291,23 +309,6 @@
       "score": 1,
       "tags": [
         "災害"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Pick OS is a Living Fossil of Computer History",
-      "summary": "Comments",
-      "url": "https://csixty4.medium.com/pick-is-a-living-fossil-of-computer-history-36d74408d557",
-      "published": "2026-09-24T06:14:19+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
       ]
     },
     {
@@ -757,64 +758,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T12:58:01.685234+00:00",
-      "lastAttemptAt": "2026-09-24T12:58:01.685234+00:00",
+      "lastSuccessAt": "2026-09-24T13:08:02.549274+00:00",
+      "lastAttemptAt": "2026-09-24T13:08:02.549274+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T12:58:01.685234+00:00",
-      "lastAttemptAt": "2026-09-24T12:58:01.685234+00:00",
+      "lastSuccessAt": "2026-09-24T13:08:02.549274+00:00",
+      "lastAttemptAt": "2026-09-24T13:08:02.549274+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T12:58:01.685234+00:00",
-      "lastAttemptAt": "2026-09-24T12:58:01.685234+00:00",
+      "lastSuccessAt": "2026-09-24T13:08:02.549274+00:00",
+      "lastAttemptAt": "2026-09-24T13:08:02.549274+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T12:58:01.685234+00:00",
-      "lastAttemptAt": "2026-09-24T12:58:01.685234+00:00",
+      "lastSuccessAt": "2026-09-24T13:08:02.549274+00:00",
+      "lastAttemptAt": "2026-09-24T13:08:02.549274+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T12:58:01.685234+00:00",
-      "lastAttemptAt": "2026-09-24T12:58:01.685234+00:00",
+      "lastSuccessAt": "2026-09-24T13:08:02.549274+00:00",
+      "lastAttemptAt": "2026-09-24T13:08:02.549274+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T12:58:01.685234+00:00",
-      "lastAttemptAt": "2026-09-24T12:58:01.685234+00:00",
+      "lastSuccessAt": "2026-09-24T13:08:02.549274+00:00",
+      "lastAttemptAt": "2026-09-24T13:08:02.549274+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T12:58:01.685234+00:00",
-      "lastAttemptAt": "2026-09-24T12:58:01.685234+00:00",
+      "lastSuccessAt": "2026-09-24T13:08:02.549274+00:00",
+      "lastAttemptAt": "2026-09-24T13:08:02.549274+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-24T12:58:01.685234+00:00",
-      "lastAttemptAt": "2026-09-24T12:58:01.685234+00:00",
+      "lastSuccessAt": "2026-09-24T13:08:02.549274+00:00",
+      "lastAttemptAt": "2026-09-24T13:08:02.549274+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
