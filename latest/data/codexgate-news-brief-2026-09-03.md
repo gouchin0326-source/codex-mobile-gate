@@ -1,6 +1,6 @@
 # CODEXGATE News Brief
 
-- 更新: 2026-09-24T00:18:01.500474+00:00
+- 更新: 2026-09-24T00:28:01.453828+00:00
 - 取得: GitHub Actions/Python
 - Codex: 0%想定（自動実行時）
 - 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。
@@ -9,4 +9,4 @@
 - [AI] AI/Codex運用の変化を確認 / Airbnb widens access to GPT-6 Astra and OpenAI frontier models / Creat
 - [論文] 更新あり。必要時だけ確認 / Learning 3D biophysical cell properties from 2D images and cell-popula
 - [技術] 更新あり。必要時だけ確認 / Ideas on modernizing the open-source desktop
-- [災害] 更新あり。必要時だけ確認 / M 3.0 - 13 km ENE of Slana, Alaska
+- [災害] 更新あり。必要時だけ確認 / M 2.3 - 20 km ESE of Naalehu, Hawaii
