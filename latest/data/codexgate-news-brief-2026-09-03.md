@@ -1,6 +1,6 @@
 # CODEXGATE News Brief
 
-- 更新: 2026-09-24T21:48:01.613473+00:00
+- 更新: 2026-09-24T21:58:03.649829+00:00
 - 取得: GitHub Actions/Python
 - Codex: 0%想定（自動実行時）
 - 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。
@@ -9,4 +9,4 @@
 - [論文] 更新あり。必要時だけ確認 / Building Socio-Affective Artificial Intelligence for Interactive Multi
 - [AI] AI/Codex運用の変化を確認 / Gemini 3.8 text-to-speech says hello / Two years of OpenAI Academy / O
 - [技術] 更新あり。必要時だけ確認 / F-Droid 2.0
-- [災害] 更新あり。必要時だけ確認 / M 1.7 - 5 km WSW of Volcano, Hawaii
+- [災害] 更新あり。必要時だけ確認 / M 1.6 - 6 km SE of McCleary, Washington
