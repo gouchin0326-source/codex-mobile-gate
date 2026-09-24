@@ -1,6 +1,6 @@
 # CODEXGATE News Brief
 
-- 更新: 2026-09-24T00:48:01.769511+00:00
+- 更新: 2026-09-24T00:58:01.495984+00:00
 - 取得: GitHub Actions/Python
 - Codex: 0%想定（自動実行時）
 - 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。
@@ -9,4 +9,4 @@
 - [AI] AI/Codex運用の変化を確認 / Airbnb widens access to GPT-6 Astra and OpenAI frontier models / Creat
 - [論文] 更新あり。必要時だけ確認 / Learning 3D biophysical cell properties from 2D images and cell-popula
 - [技術] 更新あり。必要時だけ確認 / Ideas on modernizing the open-source desktop
-- [災害] 更新あり。必要時だけ確認 / M 0.3 - 7 km WNW of Cobb, CA
+- [災害] 更新あり。必要時だけ確認 / M 0.7 - 0 km SSE of The Geysers, CA
