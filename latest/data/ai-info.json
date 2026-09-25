@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T22:58:01.922042+00:00",
+  "updatedAt": "2026-09-25T23:08:01.437269+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -63,6 +63,13 @@
     },
     {
       "label": "開発",
+      "title": "Usage metrics API adds pull request review stages",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-25-usage-metrics-api-adds-pull-request-review-stages"
+    },
+    {
+      "label": "開発",
       "title": "Changes to query results in the GitHub Actions API and UI",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
@@ -88,13 +95,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-09-25-codeql-2-27-1-adds-c-and-c-query-and-kotlin-2-4-20-support"
-    },
-    {
-      "label": "論文",
-      "title": "When Should Forecasting Agents Reason? Behavioral Stress Tests for Reliability Routing",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.28475"
     }
   ],
   "items": [
@@ -153,6 +153,24 @@
         "開発",
         "重要",
         "制作"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "Usage metrics API adds pull request review stages",
+      "summary": "The enterprise and organization repository-level Copilot usage metrics reports now break down how long pull requests spend in each stage of review. A new pull_request_review_times array on each repos-1-day row… The post ",
+      "url": "https://github.blog/changelog/2026-09-25-usage-metrics-api-adds-pull-request-review-stages",
+      "published": "2026-09-25T21:09:40+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -315,24 +333,6 @@
       "summary": "We’re introducing a new global default policy for generally available GitHub Copilot features and supported client capabilities in enterprise and organization Copilot settings. For the next 28 days, you can… The post Def",
       "url": "https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise",
       "published": "2026-09-25T03:13:23+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Require proof of presence for high-impact actions",
-      "summary": "You can now require an interactive re-authentication or a multi-factor challenge before members take high-impact actions on GitHub Enterprise Cloud accounts. Proof of presence is an expansion of GitHub’s sudo… The post R",
-      "url": "https://github.blog/changelog/2026-09-24-require-proof-of-presence-for-high-impact-actions",
-      "published": "2026-09-24T20:28:33+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -699,5 +699,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-25T22:58:01.922042+00:00"
+  "lastSuccessAt": "2026-09-25T23:08:01.437269+00:00"
 }

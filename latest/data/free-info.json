@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-25T22:58:01.922042+00:00",
-  "lastSuccessAt": "2026-09-25T22:58:01.922042+00:00",
+  "updatedAt": "2026-09-25T23:08:01.437269+00:00",
+  "lastSuccessAt": "2026-09-25T23:08:01.437269+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -159,9 +159,9 @@
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 2.3 - 46 km WSW of Carlsbad, CA",
+      "signal": "M 1.8 - 23 km N of Valdez, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339183",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026taxzil",
       "score": 1
     }
   ],
@@ -282,10 +282,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.3 - 46 km WSW of Carlsbad, CA",
-      "summary": "46 km WSW of Carlsbad, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339183",
-      "published": "2026-09-25T22:48:15.970000+00:00",
+      "title": "M 1.8 - 23 km N of Valdez, Alaska",
+      "summary": "23 km N of Valdez, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026taxzil",
+      "published": "2026-09-25T23:03:30.520000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -325,6 +325,24 @@
         "開発",
         "重要",
         "制作"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "Usage metrics API adds pull request review stages",
+      "summary": "The enterprise and organization repository-level Copilot usage metrics reports now break down how long pull requests spend in each stage of review. A new pull_request_review_times array on each repos-1-day row… The post ",
+      "url": "https://github.blog/changelog/2026-09-25-usage-metrics-api-adds-pull-request-review-stages",
+      "published": "2026-09-25T21:09:40+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -468,24 +486,6 @@
       "summary": "We’re introducing a new global default policy for generally available GitHub Copilot features and supported client capabilities in enterprise and organization Copilot settings. For the next 28 days, you can… The post Def",
       "url": "https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise",
       "published": "2026-09-25T03:13:23+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Require proof of presence for high-impact actions",
-      "summary": "You can now require an interactive re-authentication or a multi-factor challenge before members take high-impact actions on GitHub Enterprise Cloud accounts. Proof of presence is an expansion of GitHub’s sudo… The post R",
-      "url": "https://github.blog/changelog/2026-09-24-require-proof-of-presence-for-high-impact-actions",
-      "published": "2026-09-24T20:28:33+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -749,64 +749,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T22:58:01.922042+00:00",
-      "lastAttemptAt": "2026-09-25T22:58:01.922042+00:00",
+      "lastSuccessAt": "2026-09-25T23:08:01.437269+00:00",
+      "lastAttemptAt": "2026-09-25T23:08:01.437269+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T22:58:01.922042+00:00",
-      "lastAttemptAt": "2026-09-25T22:58:01.922042+00:00",
+      "lastSuccessAt": "2026-09-25T23:08:01.437269+00:00",
+      "lastAttemptAt": "2026-09-25T23:08:01.437269+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T22:58:01.922042+00:00",
-      "lastAttemptAt": "2026-09-25T22:58:01.922042+00:00",
+      "lastSuccessAt": "2026-09-25T23:08:01.437269+00:00",
+      "lastAttemptAt": "2026-09-25T23:08:01.437269+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T22:58:01.922042+00:00",
-      "lastAttemptAt": "2026-09-25T22:58:01.922042+00:00",
+      "lastSuccessAt": "2026-09-25T23:08:01.437269+00:00",
+      "lastAttemptAt": "2026-09-25T23:08:01.437269+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T22:58:01.922042+00:00",
-      "lastAttemptAt": "2026-09-25T22:58:01.922042+00:00",
+      "lastSuccessAt": "2026-09-25T23:08:01.437269+00:00",
+      "lastAttemptAt": "2026-09-25T23:08:01.437269+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T22:58:01.922042+00:00",
-      "lastAttemptAt": "2026-09-25T22:58:01.922042+00:00",
+      "lastSuccessAt": "2026-09-25T23:08:01.437269+00:00",
+      "lastAttemptAt": "2026-09-25T23:08:01.437269+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T22:58:01.922042+00:00",
-      "lastAttemptAt": "2026-09-25T22:58:01.922042+00:00",
+      "lastSuccessAt": "2026-09-25T23:08:01.437269+00:00",
+      "lastAttemptAt": "2026-09-25T23:08:01.437269+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T22:58:01.922042+00:00",
-      "lastAttemptAt": "2026-09-25T22:58:01.922042+00:00",
+      "lastSuccessAt": "2026-09-25T23:08:01.437269+00:00",
+      "lastAttemptAt": "2026-09-25T23:08:01.437269+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
