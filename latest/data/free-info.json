@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-25T09:28:02.250128+00:00",
-  "lastSuccessAt": "2026-09-25T09:28:02.250128+00:00",
+  "updatedAt": "2026-09-25T09:38:03.234270+00:00",
+  "lastSuccessAt": "2026-09-25T09:38:03.234270+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -151,17 +151,17 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "Pencils Down, Eyes Open: A Rails Developer After Rails World",
+      "signal": "Goodbye Google",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://caio.ca/blog/pencils-down-eyes-open-rails-world",
-      "score": 2
+      "topUrl": "https://robert.ocallahan.org/2026/09/goodbye-google.html",
+      "score": 1
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 2.3 - 1 km WSW of Pāhala, Hawaii",
+      "signal": "M 1.7 - 12 km NNE of Pāhala, Hawaii",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75043597",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75043602",
       "score": 1
     }
   ],
@@ -243,24 +243,6 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Pencils Down, Eyes Open: A Rails Developer After Rails World",
-      "summary": "Comments",
-      "url": "https://caio.ca/blog/pencils-down-eyes-open-rails-world",
-      "published": "2026-09-25T01:31:43+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "開発"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -300,13 +282,30 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.3 - 1 km WSW of Pāhala, Hawaii",
-      "summary": "1 km WSW of Pāhala, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75043597",
-      "published": "2026-09-25T08:58:09.220000+00:00",
+      "title": "M 1.7 - 12 km NNE of Pāhala, Hawaii",
+      "summary": "12 km NNE of Pāhala, Hawaii",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75043602",
+      "published": "2026-09-25T09:26:01.660000+00:00",
       "score": 1,
       "tags": [
         "災害"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Goodbye Google",
+      "summary": "Comments",
+      "url": "https://robert.ocallahan.org/2026/09/goodbye-google.html",
+      "published": "2026-09-25T05:51:12+00:00",
+      "score": 1,
+      "tags": [
+        "技術"
       ]
     },
     {
@@ -749,64 +748,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T09:28:02.250128+00:00",
-      "lastAttemptAt": "2026-09-25T09:28:02.250128+00:00",
+      "lastSuccessAt": "2026-09-25T09:38:03.234270+00:00",
+      "lastAttemptAt": "2026-09-25T09:38:03.234270+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T09:28:02.250128+00:00",
-      "lastAttemptAt": "2026-09-25T09:28:02.250128+00:00",
+      "lastSuccessAt": "2026-09-25T09:38:03.234270+00:00",
+      "lastAttemptAt": "2026-09-25T09:38:03.234270+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T09:28:02.250128+00:00",
-      "lastAttemptAt": "2026-09-25T09:28:02.250128+00:00",
+      "lastSuccessAt": "2026-09-25T09:38:03.234270+00:00",
+      "lastAttemptAt": "2026-09-25T09:38:03.234270+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T09:28:02.250128+00:00",
-      "lastAttemptAt": "2026-09-25T09:28:02.250128+00:00",
+      "lastSuccessAt": "2026-09-25T09:38:03.234270+00:00",
+      "lastAttemptAt": "2026-09-25T09:38:03.234270+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T09:28:02.250128+00:00",
-      "lastAttemptAt": "2026-09-25T09:28:02.250128+00:00",
+      "lastSuccessAt": "2026-09-25T09:38:03.234270+00:00",
+      "lastAttemptAt": "2026-09-25T09:38:03.234270+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T09:28:02.250128+00:00",
-      "lastAttemptAt": "2026-09-25T09:28:02.250128+00:00",
+      "lastSuccessAt": "2026-09-25T09:38:03.234270+00:00",
+      "lastAttemptAt": "2026-09-25T09:38:03.234270+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T09:28:02.250128+00:00",
-      "lastAttemptAt": "2026-09-25T09:28:02.250128+00:00",
+      "lastSuccessAt": "2026-09-25T09:38:03.234270+00:00",
+      "lastAttemptAt": "2026-09-25T09:38:03.234270+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T09:28:02.250128+00:00",
-      "lastAttemptAt": "2026-09-25T09:28:02.250128+00:00",
+      "lastSuccessAt": "2026-09-25T09:38:03.234270+00:00",
+      "lastAttemptAt": "2026-09-25T09:38:03.234270+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
