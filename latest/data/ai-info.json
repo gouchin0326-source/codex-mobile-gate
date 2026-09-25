@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-09-25T14:58:02.198773+00:00",
+  "updatedAt": "2026-09-25T15:08:01.789333+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "When chat is the wrong UI",
+  "topLine": "Improving site performance by shipping more CSS",
   "cards": [
     {
       "genre": "開発",
       "count": 16,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "When chat is the wrong UI / OpenTelemetry in the GitHub Copilot app / CodeQL 2.27.1 adds C and C++ query and Kotlin 2.4.20 support",
-      "topUrl": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
+      "signal": "Improving site performance by shipping more CSS / When chat is the wrong UI / OpenTelemetry in the GitHub Copilot app",
+      "topUrl": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/",
       "score": 4
     },
     {
@@ -40,6 +40,13 @@
     }
   ],
   "focus": [
+    {
+      "label": "開発",
+      "title": "Improving site performance by shipping more CSS",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub",
+      "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/"
+    },
     {
       "label": "開発",
       "title": "When chat is the wrong UI",
@@ -88,16 +95,28 @@
       "why": "Codex/AI開発判断に関係",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2609.28609"
-    },
-    {
-      "label": "開発",
-      "title": "Default Enablement of Copilot Features for Copilot Business and Enterprise",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise"
     }
   ],
   "items": [
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Improving site performance by shipping more CSS",
+      "summary": "A look at how a design system shipped major changes without breaking the world. The post Improving site performance by shipping more CSS appeared first on The GitHub Blog .",
+      "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/",
+      "published": "2026-09-25T15:00:00+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "制作"
+      ]
+    },
     {
       "source": "github-blog",
       "platform": "開発",
@@ -466,24 +485,6 @@
       ]
     },
     {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "GitHub Copilot app for Beginners: Using the diff, terminal, and browser",
-      "summary": "Checking agent-generated code usually means hopping between tabs. Learn how to view diffs, run terminal commands, and preview web apps side by side in the GitHub Copilot app. The post GitHub Copilot app for Beginners: Us",
-      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-using-the-diff-terminal-and-browser/",
-      "published": "2026-09-10T21:31:19+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -698,5 +699,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-25T14:58:02.198773+00:00"
+  "lastSuccessAt": "2026-09-25T15:08:01.789333+00:00"
 }

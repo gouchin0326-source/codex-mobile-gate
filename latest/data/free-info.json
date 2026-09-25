@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-25T14:58:02.198773+00:00",
-  "lastSuccessAt": "2026-09-25T14:58:02.198773+00:00",
+  "updatedAt": "2026-09-25T15:08:01.789333+00:00",
+  "lastSuccessAt": "2026-09-25T15:08:01.789333+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -127,9 +127,9 @@
     {
       "genre": "開発",
       "count": 16,
-      "signal": "When chat is the wrong UI / OpenTelemetry in the GitHub Copilot app / CodeQL 2.27.1 adds C and C++ query and Kotlin 2.4.20 support",
+      "signal": "Improving site performance by shipping more CSS / When chat is the wrong UI / OpenTelemetry in the GitHub Copilot app",
       "decision": "CG開発・GitHub運用へ反映候補",
-      "topUrl": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
+      "topUrl": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/",
       "score": 4
     },
     {
@@ -159,9 +159,9 @@
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 0.9 - 85 km NNW of Karluk, Alaska",
+      "signal": "M 0.7 - 9 km WNW of Anza, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026taghpr",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41338991",
       "score": 1
     }
   ],
@@ -172,12 +172,12 @@
       "label": "GitHub",
       "genre": "開発",
       "provider": null,
-      "topic": "その他",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "When chat is the wrong UI",
-      "summary": "What is a developer to do when they need something more tangible than a chat box? Enter canvases. The post When chat is the wrong UI appeared first on The GitHub Blog .",
-      "url": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
-      "published": "2026-09-24T20:00:00+00:00",
+      "title": "Improving site performance by shipping more CSS",
+      "summary": "A look at how a design system shipped major changes without breaking the world. The post Improving site performance by shipping more CSS appeared first on The GitHub Blog .",
+      "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/",
+      "published": "2026-09-25T15:00:00+00:00",
       "score": 4,
       "tags": [
         "開発",
@@ -282,10 +282,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.9 - 85 km NNW of Karluk, Alaska",
-      "summary": "85 km NNW of Karluk, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026taghpr",
-      "published": "2026-09-25T14:13:18.122000+00:00",
+      "title": "M 0.7 - 9 km WNW of Anza, CA",
+      "summary": "9 km WNW of Anza, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41338991",
+      "published": "2026-09-25T15:03:11.720000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -306,6 +306,25 @@
       "score": 1,
       "tags": [
         "技術"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "When chat is the wrong UI",
+      "summary": "What is a developer to do when they need something more tangible than a chat box? Enter canvases. The post When chat is the wrong UI appeared first on The GitHub Blog .",
+      "url": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
+      "published": "2026-09-24T20:00:00+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "制作"
       ]
     },
     {
@@ -600,24 +619,6 @@
       ]
     },
     {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "GitHub Copilot app for Beginners: Using the diff, terminal, and browser",
-      "summary": "Checking agent-generated code usually means hopping between tabs. Learn how to view diffs, run terminal commands, and preview web apps side by side in the GitHub Copilot app. The post GitHub Copilot app for Beginners: Us",
-      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-using-the-diff-terminal-and-browser/",
-      "published": "2026-09-10T21:31:19+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -748,64 +749,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T14:58:02.198773+00:00",
-      "lastAttemptAt": "2026-09-25T14:58:02.198773+00:00",
+      "lastSuccessAt": "2026-09-25T15:08:01.789333+00:00",
+      "lastAttemptAt": "2026-09-25T15:08:01.789333+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T14:58:02.198773+00:00",
-      "lastAttemptAt": "2026-09-25T14:58:02.198773+00:00",
+      "lastSuccessAt": "2026-09-25T15:08:01.789333+00:00",
+      "lastAttemptAt": "2026-09-25T15:08:01.789333+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T14:58:02.198773+00:00",
-      "lastAttemptAt": "2026-09-25T14:58:02.198773+00:00",
+      "lastSuccessAt": "2026-09-25T15:08:01.789333+00:00",
+      "lastAttemptAt": "2026-09-25T15:08:01.789333+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T14:58:02.198773+00:00",
-      "lastAttemptAt": "2026-09-25T14:58:02.198773+00:00",
+      "lastSuccessAt": "2026-09-25T15:08:01.789333+00:00",
+      "lastAttemptAt": "2026-09-25T15:08:01.789333+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T14:58:02.198773+00:00",
-      "lastAttemptAt": "2026-09-25T14:58:02.198773+00:00",
+      "lastSuccessAt": "2026-09-25T15:08:01.789333+00:00",
+      "lastAttemptAt": "2026-09-25T15:08:01.789333+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T14:58:02.198773+00:00",
-      "lastAttemptAt": "2026-09-25T14:58:02.198773+00:00",
+      "lastSuccessAt": "2026-09-25T15:08:01.789333+00:00",
+      "lastAttemptAt": "2026-09-25T15:08:01.789333+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T14:58:02.198773+00:00",
-      "lastAttemptAt": "2026-09-25T14:58:02.198773+00:00",
+      "lastSuccessAt": "2026-09-25T15:08:01.789333+00:00",
+      "lastAttemptAt": "2026-09-25T15:08:01.789333+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T14:58:02.198773+00:00",
-      "lastAttemptAt": "2026-09-25T14:58:02.198773+00:00",
+      "lastSuccessAt": "2026-09-25T15:08:01.789333+00:00",
+      "lastAttemptAt": "2026-09-25T15:08:01.789333+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
