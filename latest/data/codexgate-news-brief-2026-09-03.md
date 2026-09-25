@@ -1,6 +1,6 @@
 # CODEXGATE News Brief
 
-- 更新: 2026-09-25T21:37:58.066897+00:00
+- 更新: 2026-09-25T21:48:01.584027+00:00
 - 取得: GitHub Actions/Python
 - Codex: 0%想定（自動実行時）
 - 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。
@@ -9,4 +9,4 @@
 - [論文] 更新あり。必要時だけ確認 / When Should Forecasting Agents Reason? Behavioral Stress Tests for Rel
 - [AI] AI/Codex運用の変化を確認 / Gemini 3.8 text-to-speech says hello / Proaction boosts sales 60% and 
 - [技術] 更新あり。必要時だけ確認 / Commodified Intelligence
-- [災害] 更新あり。必要時だけ確認 / M 1.3 - 4 km NW of The Geysers, CA
+- [災害] 更新あり。必要時だけ確認 / M 1.7 - 12 km SE of Livermore, CA
