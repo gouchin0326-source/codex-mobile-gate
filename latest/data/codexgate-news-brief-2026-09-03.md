@@ -1,6 +1,6 @@
 # CODEXGATE News Brief
 
-- 更新: 2026-09-25T03:28:01.238727+00:00
+- 更新: 2026-09-25T03:38:01.170609+00:00
 - 取得: GitHub Actions/Python
 - Codex: 0%想定（自動実行時）
 - 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。
@@ -9,4 +9,4 @@
 - [論文] 更新あり。必要時だけ確認 / Building Socio-Affective Artificial Intelligence for Interactive Multi
 - [AI] AI/Codex運用の変化を確認 / Gemini 3.8 text-to-speech says hello / Two years of OpenAI Academy / O
 - [技術] 更新あり。必要時だけ確認 / SourceHut account takeover via build logs (XSS in ansi2html.py)
-- [災害] 更新あり。必要時だけ確認 / M 0.8 - 7 km NW of The Geysers, CA
+- [災害] 更新あり。必要時だけ確認 / M 0.8 - 11 km WNW of The Geysers, CA
