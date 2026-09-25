@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T23:28:01.628332+00:00",
+  "updatedAt": "2026-09-25T23:38:01.990764+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -63,6 +63,13 @@
     },
     {
       "label": "開発",
+      "title": "Enterprise managed settings in-product validator",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-25-enterprise-managed-settings-in-product-validator"
+    },
+    {
+      "label": "開発",
       "title": "Usage metrics API adds pull request review stages",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
@@ -88,13 +95,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
       "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/"
-    },
-    {
-      "label": "開発",
-      "title": "CodeQL 2.27.1 adds C and C++ query and Kotlin 2.4.20 support",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-25-codeql-2-27-1-adds-c-and-c-query-and-kotlin-2-4-20-support"
     }
   ],
   "items": [
@@ -153,6 +153,24 @@
         "開発",
         "重要",
         "制作"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Enterprise managed settings in-product validator",
+      "summary": "You can now use an in-product validator for enterprise managed settings for GitHub Copilot. The validator detects malformed JSON, unsupported configurations, invalid team mappings, and other errors that can prevent… The ",
+      "url": "https://github.blog/changelog/2026-09-25-enterprise-managed-settings-in-product-validator",
+      "published": "2026-09-25T23:24:57+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -319,24 +337,6 @@
         "論文",
         "重要",
         "研究"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Default Enablement of Copilot features for Copilot Business and Enterprise",
-      "summary": "We’re introducing a new global default policy for generally available GitHub Copilot features and supported client capabilities in enterprise and organization Copilot settings. For the next 28 days, you can… The post Def",
-      "url": "https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise",
-      "published": "2026-09-25T03:13:23+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
       ]
     },
     {
@@ -699,5 +699,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-25T23:28:01.628332+00:00"
+  "lastSuccessAt": "2026-09-25T23:38:01.990764+00:00"
 }

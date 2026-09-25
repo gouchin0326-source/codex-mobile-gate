@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-25T23:28:01.628332+00:00",
-  "lastSuccessAt": "2026-09-25T23:28:01.628332+00:00",
+  "updatedAt": "2026-09-25T23:38:01.990764+00:00",
+  "lastSuccessAt": "2026-09-25T23:38:01.990764+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -159,9 +159,9 @@
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.1 - 4 km WSW of Anza, CA",
+      "signal": "M 0.7 - 7 km NW of The Geysers, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339191",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442042",
       "score": 1
     }
   ],
@@ -282,10 +282,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.1 - 4 km WSW of Anza, CA",
-      "summary": "4 km WSW of Anza, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339191",
-      "published": "2026-09-25T23:23:58.460000+00:00",
+      "title": "M 0.7 - 7 km NW of The Geysers, CA",
+      "summary": "7 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442042",
+      "published": "2026-09-25T23:32:41.190000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -325,6 +325,24 @@
         "開発",
         "重要",
         "制作"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Enterprise managed settings in-product validator",
+      "summary": "You can now use an in-product validator for enterprise managed settings for GitHub Copilot. The validator detects malformed JSON, unsupported configurations, invalid team mappings, and other errors that can prevent… The ",
+      "url": "https://github.blog/changelog/2026-09-25-enterprise-managed-settings-in-product-validator",
+      "published": "2026-09-25T23:24:57+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -472,24 +490,6 @@
         "論文",
         "重要",
         "研究"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Default Enablement of Copilot features for Copilot Business and Enterprise",
-      "summary": "We’re introducing a new global default policy for generally available GitHub Copilot features and supported client capabilities in enterprise and organization Copilot settings. For the next 28 days, you can… The post Def",
-      "url": "https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise",
-      "published": "2026-09-25T03:13:23+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
       ]
     },
     {
@@ -749,64 +749,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T23:28:01.628332+00:00",
-      "lastAttemptAt": "2026-09-25T23:28:01.628332+00:00",
+      "lastSuccessAt": "2026-09-25T23:38:01.990764+00:00",
+      "lastAttemptAt": "2026-09-25T23:38:01.990764+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T23:28:01.628332+00:00",
-      "lastAttemptAt": "2026-09-25T23:28:01.628332+00:00",
+      "lastSuccessAt": "2026-09-25T23:38:01.990764+00:00",
+      "lastAttemptAt": "2026-09-25T23:38:01.990764+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T23:28:01.628332+00:00",
-      "lastAttemptAt": "2026-09-25T23:28:01.628332+00:00",
+      "lastSuccessAt": "2026-09-25T23:38:01.990764+00:00",
+      "lastAttemptAt": "2026-09-25T23:38:01.990764+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T23:28:01.628332+00:00",
-      "lastAttemptAt": "2026-09-25T23:28:01.628332+00:00",
+      "lastSuccessAt": "2026-09-25T23:38:01.990764+00:00",
+      "lastAttemptAt": "2026-09-25T23:38:01.990764+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T23:28:01.628332+00:00",
-      "lastAttemptAt": "2026-09-25T23:28:01.628332+00:00",
+      "lastSuccessAt": "2026-09-25T23:38:01.990764+00:00",
+      "lastAttemptAt": "2026-09-25T23:38:01.990764+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T23:28:01.628332+00:00",
-      "lastAttemptAt": "2026-09-25T23:28:01.628332+00:00",
+      "lastSuccessAt": "2026-09-25T23:38:01.990764+00:00",
+      "lastAttemptAt": "2026-09-25T23:38:01.990764+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T23:28:01.628332+00:00",
-      "lastAttemptAt": "2026-09-25T23:28:01.628332+00:00",
+      "lastSuccessAt": "2026-09-25T23:38:01.990764+00:00",
+      "lastAttemptAt": "2026-09-25T23:38:01.990764+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T23:28:01.628332+00:00",
-      "lastAttemptAt": "2026-09-25T23:28:01.628332+00:00",
+      "lastSuccessAt": "2026-09-25T23:38:01.990764+00:00",
+      "lastAttemptAt": "2026-09-25T23:38:01.990764+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
