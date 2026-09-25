@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T10:58:01.818088+00:00",
+  "updatedAt": "2026-09-25T11:08:01.689131+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -10,7 +10,7 @@
       "genre": "開発",
       "count": 16,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "When chat is the wrong UI / OpenTelemetry in the GitHub Copilot app / Default Enablement of Copilot Features for Copilot Business and Enterprise",
+      "signal": "When chat is the wrong UI / OpenTelemetry in the GitHub Copilot app / CodeQL 2.27.1 adds C and C++ query and Kotlin 2.4.20 support",
       "topUrl": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
       "score": 4
     },
@@ -55,6 +55,13 @@
       "url": "https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app"
     },
     {
+      "label": "開発",
+      "title": "CodeQL 2.27.1 adds C and C++ query and Kotlin 2.4.20 support",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-25-codeql-2-27-1-adds-c-and-c-query-and-kotlin-2-4-20-support"
+    },
+    {
       "label": "論文",
       "title": "When Should Forecasting Agents Reason? Behavioral Stress Tests for Reliability Routing",
       "why": "Codex/AI開発判断に関係",
@@ -88,13 +95,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise"
-    },
-    {
-      "label": "開発",
-      "title": "Require proof of presence for high-impact actions",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-24-require-proof-of-presence-for-high-impact-actions"
     }
   ],
   "items": [
@@ -134,6 +134,24 @@
         "開発",
         "重要",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "CodeQL 2.27.1 adds C and C++ query and Kotlin 2.4.20 support",
+      "summary": "CodeQL 2.27.1 adds new queries for C/C++ and C#, support for Kotlin 2.4.20, and query-accuracy improvements. CodeQL is the static analysis engine behind GitHub code scanning, which helps you find… The post CodeQL 2.27.1 ",
+      "url": "https://github.blog/changelog/2026-09-25-codeql-2-27-1-adds-c-and-c-query-and-kotlin-2-4-20-support",
+      "published": "2026-09-25T09:55:23+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -387,24 +405,6 @@
       "summary": "GitHub Copilot for JetBrains 1.18.0 brings AI-assisted tool approvals, more control over agent conversations, and shared skills and instructions for your organization. You can also review plans with the Codex… The post N",
       "url": "https://github.blog/changelog/2026-09-22-new-features-and-improvements-in-copilot-for-jetbrains",
       "published": "2026-09-23T00:34:18+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Faster C++ code intelligence with whole codebase indexing",
-      "summary": "C++ code intelligence in GitHub Copilot CLI is now faster with support for whole codebase indexing. C++ repositories can contain millions of lines of code across deeply connected source files… The post Faster C++ code in",
-      "url": "https://github.blog/changelog/2026-09-22-faster-c-code-intelligence-with-whole-codebase-indexing",
-      "published": "2026-09-22T22:24:48+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -698,5 +698,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-25T10:58:01.818088+00:00"
+  "lastSuccessAt": "2026-09-25T11:08:01.689131+00:00"
 }
