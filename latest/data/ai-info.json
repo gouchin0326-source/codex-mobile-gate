@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T04:28:01.409352+00:00",
+  "updatedAt": "2026-09-25T04:38:01.304188+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -10,7 +10,7 @@
       "genre": "開発",
       "count": 16,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "When chat is the wrong UI / OpenTelemetry in the GitHub Copilot app / Claude Opus 5.5 is now available in GitHub Copilot",
+      "signal": "When chat is the wrong UI / OpenTelemetry in the GitHub Copilot app / Default Enablement of Copilot Features for Copilot Business and Enterprise",
       "topUrl": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
       "score": 4
     },
@@ -55,13 +55,6 @@
       "url": "https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app"
     },
     {
-      "label": "開発",
-      "title": "Claude Opus 5.5 is now available in GitHub Copilot",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot"
-    },
-    {
       "label": "論文",
       "title": "When Should Forecasting Agents Reason? Behavioral Stress Tests for Reliability Routing",
       "why": "Codex/AI開発判断に関係",
@@ -88,6 +81,13 @@
       "why": "Codex/AI開発判断に関係",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2609.28609"
+    },
+    {
+      "label": "開発",
+      "title": "Default Enablement of Copilot Features for Copilot Business and Enterprise",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise"
     },
     {
       "label": "開発",
@@ -129,25 +129,6 @@
       "summary": "Understand how Copilot agents perform and interact with models and tools. The GitHub Copilot app now supports OpenTelemetry (OTel) configuration through enterprise-managed settings. OTel is an open source observability f",
       "url": "https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app",
       "published": "2026-09-23T02:14:54+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Claude Opus 5.5 is now available in GitHub Copilot",
-      "summary": "Claude Opus 5.5, Anthropic’s newest Opus model, is now available in GitHub Copilot. You can use it for agentic coding, long-running agentic tasks, and knowledge work. In early testing, Opus… The post Claude Opus 5.5 is n",
-      "url": "https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot",
-      "published": "2026-09-22T17:10:23+00:00",
       "score": 4,
       "tags": [
         "開発",
@@ -229,6 +210,24 @@
         "論文",
         "重要",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Default Enablement of Copilot Features for Copilot Business and Enterprise",
+      "summary": "We’re introducing a new global default policy for generally available GitHub Copilot features and supported client capabilities in enterprise and organization Copilot settings. For the next 28 days, you can… The post Def",
+      "url": "https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise",
+      "published": "2026-09-25T03:13:23+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -699,5 +698,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-25T04:28:01.409352+00:00"
+  "lastSuccessAt": "2026-09-25T04:38:01.304188+00:00"
 }

@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-25T04:28:01.409352+00:00",
-  "lastSuccessAt": "2026-09-25T04:28:01.409352+00:00",
+  "updatedAt": "2026-09-25T04:38:01.304188+00:00",
+  "lastSuccessAt": "2026-09-25T04:38:01.304188+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -127,7 +127,7 @@
     {
       "genre": "開発",
       "count": 16,
-      "signal": "When chat is the wrong UI / OpenTelemetry in the GitHub Copilot app / Claude Opus 5.5 is now available in GitHub Copilot",
+      "signal": "When chat is the wrong UI / OpenTelemetry in the GitHub Copilot app / Default Enablement of Copilot Features for Copilot Business and Enterprise",
       "decision": "CG開発・GitHub運用へ反映候補",
       "topUrl": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
       "score": 4
@@ -159,9 +159,9 @@
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 2.2 - 31 km W of Anderson, Alaska",
+      "signal": "M 0.8 - 11 km WNW of The Geysers, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026szmivm",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75441387",
       "score": 1
     }
   ],
@@ -282,10 +282,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.2 - 31 km W of Anderson, Alaska",
-      "summary": "31 km W of Anderson, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026szmivm",
-      "published": "2026-09-25T04:14:58.991000+00:00",
+      "title": "M 0.8 - 11 km WNW of The Geysers, CA",
+      "summary": "11 km WNW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75441387",
+      "published": "2026-09-25T04:35:40.950000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -306,25 +306,6 @@
       "score": 1,
       "tags": [
         "技術"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Claude Opus 5.5 is now available in GitHub Copilot",
-      "summary": "Claude Opus 5.5, Anthropic’s newest Opus model, is now available in GitHub Copilot. You can use it for agentic coding, long-running agentic tasks, and knowledge work. In early testing, Opus… The post Claude Opus 5.5 is n",
-      "url": "https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot",
-      "published": "2026-09-22T17:10:23+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
-        "研究"
       ]
     },
     {
@@ -382,6 +363,24 @@
         "論文",
         "重要",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Default Enablement of Copilot Features for Copilot Business and Enterprise",
+      "summary": "We’re introducing a new global default policy for generally available GitHub Copilot features and supported client capabilities in enterprise and organization Copilot settings. For the next 28 days, you can… The post Def",
+      "url": "https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise",
+      "published": "2026-09-25T03:13:23+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -749,64 +748,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T04:28:01.409352+00:00",
-      "lastAttemptAt": "2026-09-25T04:28:01.409352+00:00",
+      "lastSuccessAt": "2026-09-25T04:38:01.304188+00:00",
+      "lastAttemptAt": "2026-09-25T04:38:01.304188+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T04:28:01.409352+00:00",
-      "lastAttemptAt": "2026-09-25T04:28:01.409352+00:00",
+      "lastSuccessAt": "2026-09-25T04:38:01.304188+00:00",
+      "lastAttemptAt": "2026-09-25T04:38:01.304188+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T04:28:01.409352+00:00",
-      "lastAttemptAt": "2026-09-25T04:28:01.409352+00:00",
+      "lastSuccessAt": "2026-09-25T04:38:01.304188+00:00",
+      "lastAttemptAt": "2026-09-25T04:38:01.304188+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T04:28:01.409352+00:00",
-      "lastAttemptAt": "2026-09-25T04:28:01.409352+00:00",
+      "lastSuccessAt": "2026-09-25T04:38:01.304188+00:00",
+      "lastAttemptAt": "2026-09-25T04:38:01.304188+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T04:28:01.409352+00:00",
-      "lastAttemptAt": "2026-09-25T04:28:01.409352+00:00",
+      "lastSuccessAt": "2026-09-25T04:38:01.304188+00:00",
+      "lastAttemptAt": "2026-09-25T04:38:01.304188+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T04:28:01.409352+00:00",
-      "lastAttemptAt": "2026-09-25T04:28:01.409352+00:00",
+      "lastSuccessAt": "2026-09-25T04:38:01.304188+00:00",
+      "lastAttemptAt": "2026-09-25T04:38:01.304188+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T04:28:01.409352+00:00",
-      "lastAttemptAt": "2026-09-25T04:28:01.409352+00:00",
+      "lastSuccessAt": "2026-09-25T04:38:01.304188+00:00",
+      "lastAttemptAt": "2026-09-25T04:38:01.304188+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T04:28:01.409352+00:00",
-      "lastAttemptAt": "2026-09-25T04:28:01.409352+00:00",
+      "lastSuccessAt": "2026-09-25T04:38:01.304188+00:00",
+      "lastAttemptAt": "2026-09-25T04:38:01.304188+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
