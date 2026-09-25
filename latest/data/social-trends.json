@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-09-25T08:08:01.389328+00:00",
-  "lastSuccessAt": "2026-09-25T08:08:01.389328+00:00",
-  "status": "fresh",
+  "updatedAt": "2026-09-25T08:18:01.439044+00:00",
+  "lastSuccessAt": "2026-09-25T08:18:01.439044+00:00",
+  "status": "stale",
   "mode": "zero-token-social-trends",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "public API/RSS only; no login bypass; no unauthorized scraping; short excerpts + URL only",
@@ -16,6 +16,29 @@
     "Google News": 60
   },
   "topics": [
+    {
+      "topic": "エンタメ",
+      "count": 8,
+      "attention": 24,
+      "headline": "Ｃ・モンゴメリー、三振最多タイ＝村上の同僚、２２３個目―米大リーグ - sp.m.jiji.com",
+      "urls": [
+        {
+          "title": "Ｃ・モンゴメリー、三振最多タイ＝村上の同僚、２２３個目―米大リーグ - sp.m.jiji.com",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE52Y1VDZjVXMWxsR0FYTWtzOHQydEJhTC11ZmVEeVB5UlYwVzNHTkx4dXlWRThUS2NHZlp2Z1lGU1ZGTC1ZTWY5Rlg5cGM0bHFVeExzSQ?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "円相場、１５８円０８～０９銭＝２５日午後５時現在 - sp.m.jiji.com",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBQbkEyY2Z4aTdkemZad19iXzBGMkkzYWEzWWJ4SDd2ZUFYQWVrWTRCUURzU3hyZVhIUE1xcEFmWEtPOUp5eXFuMVAwSEpxTGlkaUJQTQ?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "パ・リーグ公示（２５日）＝プロ野球 - sp.m.jiji.com",
+          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE54bEJ1RTVOcHhuR0hpbm5jRTF2bl9HRkU0cTZPYXNEcTJvTFgwd1FqU2ZiWWtqMXdNN0ZqWVdyRGZwSVB6RmxLMkZTbzc4SmtzYk1YZA?oc=5",
+          "platform": "Google News"
+        }
+      ]
+    },
     {
       "topic": "経済",
       "count": 8,
@@ -35,29 +58,6 @@
         {
           "title": "経済学部 坪井教授が宇都宮市豊郷地区女性防火クラブで「災害時における避難所の空間設計と設営に関するワークショップ」を行いました - teikyo-u.ac.jp",
           "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBHRVU2ZDljekJ2ajJrUEVUbjZuZGE1UmI4M1RIMzl1bURxek5vTlc4Z1VRUV9DeDRFa3ZjeUZCbkJoWXBhVlc4ZEdlNzQtWnZkb2Uza3N3?oc=5",
-          "platform": "Google News"
-        }
-      ]
-    },
-    {
-      "topic": "エンタメ",
-      "count": 7,
-      "attention": 21,
-      "headline": "パ・リーグ公示（２５日）＝プロ野球 - sp.m.jiji.com",
-      "urls": [
-        {
-          "title": "パ・リーグ公示（２５日）＝プロ野球 - sp.m.jiji.com",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE54bEJ1RTVOcHhuR0hpbm5jRTF2bl9HRkU0cTZPYXNEcTJvTFgwd1FqU2ZiWWtqMXdNN0ZqWVdyRGZwSVB6RmxLMkZTbzc4SmtzYk1YZA?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "セ・リーグ公示（２５日）＝プロ野球 - sp.m.jiji.com",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9IZ1dzU05uTTloM2wxbzRzeHRKNVpPM0F0U2p6MGdhUU9ZS0VqN052Q0c1d2QyUnZuWjFSV3ctMWFFdVJyWVNONm9oYUQwYVN6MUdhUg?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "高齢者統計で訂正＝厚労省 - sp.m.jiji.com",
-          "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1YVWFWVG56REc3VzQ0S0tPdWp6V19JZEFyVDhoOWw4WldhMXF5Vkl3VmtoYXJLUHpwQzdtUTBxc01mT2JGNE91S2o5RDJ2YUJybmxCdw?oc=5",
           "platform": "Google News"
         }
       ]
@@ -86,9 +86,32 @@
       ]
     },
     {
+      "topic": "スポーツ",
+      "count": 5,
+      "attention": 15,
+      "headline": "第6回EBiDAN大運動会『スポーツマンヒップ！』オフィシャルグッズ 〈事前購入・会場受取〉実施のお知らせ - M!LKオフィシャルサイト",
+      "urls": [
+        {
+          "title": "第6回EBiDAN大運動会『スポーツマンヒップ！』オフィシャルグッズ 〈事前購入・会場受取〉実施のお知らせ - M!LKオフィシャルサイト",
+          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE8tWDVzNExySFExX1hPUGY4N0NKejJRcmZOSURUMFRScGdJODgyY3Z1RFRBLWtCRkZTcmdLMUlhcHNMbUFZNF81d0lPRU4?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "All-Photonics Connect powered by IOWNとボリュメトリックビデオ技術による世界初のスポーツ観戦体験の実証に成功 - ntt-e",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5xdFhjUU5pUVFPMUFESUpJVjZMS3o1aEREMDZRc2pkRG9NaFI5QjRqWWxTRE9CWkZyVXlSSlRmX1NNTjU2TFAxMFFYRGNWX2s2TWd2MGVPZGZBQl9ER0VxWlBSbVNlY3JfbkE?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "競技空間を遠隔地でリアルタイムに再現するスポーツ観戦体験を実証 キヤノンのボリュメトリックビデオ技術・MRシステムとNTT等の提唱する「IOWN APN」を活用",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE95LXhMYjhMSTU2ZHNVVkdWbG5iMEVJM0JzSlZoUXU3YTJyM3AxRF9WSWVKUEdwX2FhVHlENGpuZ25LZnoyZmczMG9BRTl4dkJYcVFtOVBweHp1MWs?oc=5",
+          "platform": "Google News"
+        }
+      ]
+    },
+    {
       "topic": "健康",
-      "count": 6,
-      "attention": 18,
+      "count": 5,
+      "attention": 15,
       "headline": "行方 なめがた地域医療センター 新医療法人へ事業承継で協議 - NHKニュース",
       "urls": [
         {
@@ -102,31 +125,8 @@
           "platform": "Google News"
         },
         {
-          "title": "朝日大学スクールバス（教育懇談会 法学部・経営学部・保健医療学部健康スポーツ科学科）の特別ダイヤについて - asahi-u.ac.jp",
-          "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5ESm5ENVVNLXE2LThFUERhS0JscnhXakd5TkM3dC03blR4dFNaeVY4dXpCSnRLdTBDZlUwSUhsam5CYkJJaEVfY2V4UFhlZ0c0RWNOQlduNA?oc=5",
-          "platform": "Google News"
-        }
-      ]
-    },
-    {
-      "topic": "スポーツ",
-      "count": 5,
-      "attention": 15,
-      "headline": "第6回EBiDAN大運動会『スポーツマンヒップ！』オフィシャルグッズ 〈事前購入・会場受取〉実施のお知らせ - M!LKオフィシャルサイト",
-      "urls": [
-        {
-          "title": "第6回EBiDAN大運動会『スポーツマンヒップ！』オフィシャルグッズ 〈事前購入・会場受取〉実施のお知らせ - M!LKオフィシャルサイト",
-          "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE8tWDVzNExySFExX1hPUGY4N0NKejJRcmZOSURUMFRScGdJODgyY3Z1RFRBLWtCRkZTcmdLMUlhcHNMbUFZNF81d0lPRU4?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "アジア大会、11歳がeスポーツ「ぷよぷよ」で決勝へ──日本選手団最年少 - ITmedia",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBSbjF0YWhxQWVOajRDTVo3UzcwVGpIRjAxZEtpUXo0UGVLeGJpS29WVy1FUkZVdTBNeURvOE4yQ2xDa01tR19yZ09uMy1DdTJLbERaTmhJZ21pS1pFLW1OeHdOTWVtbm9rUXc?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "競技空間を遠隔地でリアルタイムに再現するスポーツ観戦体験を実証 キヤノンのボリュメトリックビデオ技術・MRシステムとNTT等の提唱する「IOWN APN」を活用",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE95LXhMYjhMSTU2ZHNVVkdWbG5iMEVJM0JzSlZoUXU3YTJyM3AxRF9WSWVKUEdwX2FhVHlENGpuZ25LZnoyZmczMG9BRTl4dkJYcVFtOVBweHp1MWs?oc=5",
+          "title": "飲食店事業者向け 食物アレルギーオンライン講習会を開催します - my.metro.tokyo.lg.jp",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE92UW5DcDFwelZaZmIzbWRWY1pTdklFYUZpaURCUGhnSU1HSFFxYVJTMDA1aFBLVmVXRG1Rc3FzNkc1em91V2U2R3BjaUhHTzlTazFPc2szOFhBWHdXR1gwRl9zZjF3aDg4?oc=5",
           "platform": "Google News"
         }
       ]
@@ -148,7 +148,7 @@
           "platform": "Google News"
         },
         {
-          "title": "クマ出没に備え商業施設で富山市内初の「緊急銃猟」訓練 フューチャーシティーファボーレ従業員ら約30人 避難手順を確認 - newsdig.tbs.co.jp",
+          "title": "クマ出没に備え商業施設で富山市内初の「緊急銃猟」訓練 フューチャーシティーファボーレ従業員ら約30人 避難手順を確認 - TBS NEWS DIG",
           "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5tNGE0cVlDdUt5NFlEcnhyUkxDZVJobjJlQkpHZUxwMWxCVm5qMFhSdG9MVDFnMUpYTzN3NEFPcmxCeFE5SEVFRWtIMWNSc0pRbFZESFhzQzJWUQ?oc=5",
           "platform": "Google News"
         }
@@ -173,6 +173,29 @@
         {
           "title": "【最大85%オフ】『ダライアス』シリーズや『スペースインベーダー』『パズルボブル』など人気アーケード移植作も対象のタイトーオータムセール2026開催中 - 電撃",
           "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5IOGdZSmNQVGEyU1gydjctX0puMUxsbFljbzFtV1JIWV9TbHYydTVMaVdsWU1GclNNR3hRRXFmemMyY2pLOFVfeGk1X0tjNWx3YV9CWUZucTNnUQ?oc=5",
+          "platform": "Google News"
+        }
+      ]
+    },
+    {
+      "topic": "災害",
+      "count": 4,
+      "attention": 12,
+      "headline": "震度1 熊本県熊本地方 2026年09月25日17:04ごろ 地震詳細 | 山梨のニュース | ＵＴＹテレビ山梨 - TBS NEWS DIG",
+      "urls": [
+        {
+          "title": "震度1 熊本県熊本地方 2026年09月25日17:04ごろ 地震詳細 | 山梨のニュース | ＵＴＹテレビ山梨 - TBS NEWS DIG",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPek4zeWhkZF9GMzJHQjJsNjBGZlQ4SWx5Z0c5bFN6OW54czJaQ1BjeGVMN1F4MWxIbzU0YVFzMWk2SHpBdnFFTExEb3JRRzFUV0lHZTRlc3dTd3NCSEhZbzktendFQXF6WEtaRzFNbGZxOU5iMVpieEpfUFJwQnEtLWdBWmpfTWM?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "連続する台風接近で大雨のおそれ ハザードマップで土砂災害リスクを確認 - ニコニコニュース",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBTM0czX1JFNXRoTC1MdnlPemYySDk2VnI3M1BzSnZPNjFJRkc4Tk1YZjJuZEI2cVdsd1FPTUEtMEZUSnloeEpBSVNIS0Vyemx1VktXTFpyS0QyMWMwR1N2N1lEeTUxUlg0cngwbXhUdkZ2THc?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "震度1 福島県中通り 2026年09月25日13:11ごろ 地震詳細 | 山梨のニュース | ＵＴＹテレビ山梨 - TBS NEWS DIG",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdkdHU2xjWFJqTi1qdnJSRjNqNVYwV3FHalBNanpodW92bzNXZlFDTGRRYnpLM0d4aWNuMnVETExmVFl6UUMxeTRZTmFhU25QRGxwc3JzcmNtajFSaG4tWDRySWY2YWFab3JQZnMyNWJobWNqbF80WUY4T3BVMV9pYmJLdUpkczg?oc=5",
           "platform": "Google News"
         }
       ]
@@ -224,29 +247,6 @@
       ]
     },
     {
-      "topic": "災害",
-      "count": 3,
-      "attention": 9,
-      "headline": "連続する台風接近で大雨のおそれ ハザードマップで土砂災害リスクを確認 - ニコニコニュース",
-      "urls": [
-        {
-          "title": "連続する台風接近で大雨のおそれ ハザードマップで土砂災害リスクを確認 - ニコニコニュース",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBTM0czX1JFNXRoTC1MdnlPemYySDk2VnI3M1BzSnZPNjFJRkc4Tk1YZjJuZEI2cVdsd1FPTUEtMEZUSnloeEpBSVNIS0Vyemx1VktXTFpyS0QyMWMwR1N2N1lEeTUxUlg0cngwbXhUdkZ2THc?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "震度1 福島県中通り 2026年09月25日13:11ごろ 地震詳細 | 山梨のニュース | ＵＴＹテレビ山梨 - newsdig.tbs.co.jp",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdkdHU2xjWFJqTi1qdnJSRjNqNVYwV3FHalBNanpodW92bzNXZlFDTGRRYnpLM0d4aWNuMnVETExmVFl6UUMxeTRZTmFhU25QRGxwc3JzcmNtajFSaG4tWDRySWY2YWFab3JQZnMyNWJobWNqbF80WUY4T3BVMV9pYmJLdUpkczg?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "NTT東日本千葉事業部、台風25号被災地域の電話料金を無料に - news.infoseek.co.jp",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeHJLbW0zVXpQWXZBc2ZvRlNkU2JmLVUwQ1dyRE5nZndmdWNkTDFaNDBwUW01d0djSmk4Z3JPZGxXRVlvMlFiRVgwY3BvUDVUVTZkNUVVNXZXdWljdFhOYjBjWGVZTFA4T3p5U2RmS2RwZmNWU0ZWeXJzdlVlVFlIWVVHRlR6LWFYSGFQdmh6R3YtdjhwTkl3T9IBmAFBVV95cUxOeHJLbW0zVXpQWXZBc2ZvRlNkU2JmLVUwQ1dyRE5nZndmdWNkTDFaNDBwUW01d0djSmk4Z3JPZGxXRVlvMlFiRVgwY3BvUDVUVTZkNUVVNXZXdWljdFhOYjBjWGVZTFA4T3p5U2RmS2RwZmNWU0ZWeXJzdlVlVFlIWVVHRlR6LWFYSGFQdmh6R3YtdjhwTkl3Tw?oc=5",
-          "platform": "Google News"
-        }
-      ]
-    },
-    {
       "topic": "社会",
       "count": 3,
       "attention": 9,
@@ -270,24 +270,6 @@
       ]
     },
     {
-      "topic": "国際",
-      "count": 2,
-      "attention": 6,
-      "headline": "土石流「世界への警告」 ネパール首相、国連総会で気候変動対策訴え：時事ドットコム - 時事ドットコム",
-      "urls": [
-        {
-          "title": "土石流「世界への警告」 ネパール首相、国連総会で気候変動対策訴え：時事ドットコム - 時事ドットコム",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBvSEVtY0xwY0E2YmRBQV9LaHpScG1XYjVsdXNUV3V6ZFl0aXZoWGlwOFprYVFlWXdSWUZkQlpyMkdIeEZfZjQtelBEbzlpZkRHaDdrRUprenMzSmdUS2JGOVRqUQ?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "「ダンス・リトル・バード」 世界中が踊ったスイス人アコーディオン奏者の一曲 - SWI swissinfo.ch",
-          "url": "https://news.google.com/rss/articles/CBMi-ARBVV95cUxQTFR2UU1vOGppS3JoejRCN2JkXzhPQkc3MGFVX2xiMVFMVDdrOFdTUklGcWdXaER2c3dySlBwLTV5RmFmaDNaaWo5VGtsR1lfYnFaaEhNQVliMlo1YmhkWnItOTNUY1RtWUVWbUFYTjgtc3BtQWgzaHd3MlZLTDI2T25KeUlIYWpYWHFpOENNZTN6X0pLVVlxWnk1QjIybWNHcXMtb3VzMEpobGZTekJQRzY2RFhBQ0lETHFkYlBuN1oyd3FyRU85bS13cW1oQktMcDNjaHQ3T2pXaWlzOEJka0UtaDFEajY5d0E5YXM4dDR2TXZlWUlneGFmallCcUtaWF9oWFdvUHQ3XzNRM0dteWo2SF9nZ0w5c2o3aDcxbWZYYTNBaTVCVHRtYnJxZDNpUkJhbXpJS0QtSzQ3bjItNzZBLWxuVS1nQWVCNkJITm9RcllLYTJkYVBiLV9na2RZdEZ3NDVKdVlyRU9fRG9xRHhYMWM2OEZRQXpRa25WMzlIc3RYTW9lb1BaR2hod0ttSk1DTlRCdmVVeWJ6QUxyaC1pTUtTU3RVMjNheFlVWHRXZ24tZ2dyemtGT3RBaHF5MDNoelhuYVYyOWk4eHpSMjcwb0NfV1VlY1ZEc01ybWhEaWhoOXQ3eUs4WU10YUEzeXVNSEJqMEw2bnY2bUFScFNfcmRWa1pyMkhCZ0M0U0FLWDVkbWc0Vl93R0RVeG96a0xvNk1vbzJOQjg1OVE3Zy1zUVJpZk1Ebk9TYUpHME5ZSEJfNE1ScGFhM2VaV0lmMUtMcWdlQVVsdkdkSWZKN1Q1QkxvTGV3WFNMd293SHl0dmY1aWZadQ?oc=5",
-          "platform": "Google News"
-        }
-      ]
-    },
-    {
       "topic": "政治",
       "count": 2,
       "attention": 6,
@@ -301,6 +283,19 @@
         {
           "title": "ベトナム行政処分を強化へ｜電気・水道・ネット停止や罰金上限引き上げを提案 - access-online.net",
           "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE51NFpXLTNHMm5mLWtxT1diN0NZWGRjZGxWRDdNRlVnS3ZsczhzWEczSVNBRXpFbmlpMWZIUnVrbXJ4aWtNdHFrQk9NaEtKbE4wX2QxYk4zSE5LNTEyVjBUTGMyT0gyRDN2SHRMUmlLM3l2TlNS?oc=5",
+          "platform": "Google News"
+        }
+      ]
+    },
+    {
+      "topic": "国際",
+      "count": 1,
+      "attention": 3,
+      "headline": "土石流「世界への警告」 ネパール首相、国連総会で気候変動対策訴え：時事ドットコム - 時事ドットコム",
+      "urls": [
+        {
+          "title": "土石流「世界への警告」 ネパール首相、国連総会で気候変動対策訴え：時事ドットコム - 時事ドットコム",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBvSEVtY0xwY0E2YmRBQV9LaHpScG1XYjVsdXNUV3V6ZFl0aXZoWGlwOFprYVFlWXdSWUZkQlpyMkdIeEZfZjQtelBEbzlpZkRHaDdrRUprenMzSmdUS2JGOVRqUQ?oc=5",
           "platform": "Google News"
         }
       ]
@@ -335,7 +330,11 @@
   "trends": [
     {
       "word": "jiji",
-      "count": 12
+      "count": 14
+    },
+    {
+      "word": "news",
+      "count": 10
     },
     {
       "word": "prtimes",
@@ -346,7 +345,15 @@
       "count": 6
     },
     {
+      "word": "dig",
+      "count": 6
+    },
+    {
       "word": "openai",
+      "count": 6
+    },
+    {
+      "word": "tbs",
       "count": 6
     },
     {
@@ -367,18 +374,6 @@
     },
     {
       "word": "gamewith",
-      "count": 4
-    },
-    {
-      "word": "global",
-      "count": 4
-    },
-    {
-      "word": "news",
-      "count": 4
-    },
-    {
-      "word": "newsdig",
       "count": 4
     }
   ],
@@ -430,10 +425,10 @@
       "provider": null,
       "topic": "災害",
       "sourceWeight": 3,
-      "title": "連続する台風接近で大雨のおそれ ハザードマップで土砂災害リスクを確認 - ニコニコニュース",
-      "summary": "連続する台風接近で大雨のおそれ ハザードマップで土砂災害リスクを確認 ニコニコニュース",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBTM0czX1JFNXRoTC1MdnlPemYySDk2VnI3M1BzSnZPNjFJRkc4Tk1YZjJuZEI2cVdsd1FPTUEtMEZUSnloeEpBSVNIS0Vyemx1VktXTFpyS0QyMWMwR1N2N1lEeTUxUlg0cngwbXhUdkZ2THc?oc=5",
-      "published": "2026-09-25T07:48:17+00:00",
+      "title": "震度1 熊本県熊本地方 2026年09月25日17:04ごろ 地震詳細 | 山梨のニュース | ＵＴＹテレビ山梨 - TBS NEWS DIG",
+      "summary": "震度1 熊本県熊本地方 2026年09月25日17:04ごろ 地震詳細 | 山梨のニュース | ＵＴＹテレビ山梨 TBS NEWS DIG",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPek4zeWhkZF9GMzJHQjJsNjBGZlQ4SWx5Z0c5bFN6OW54czJaQ1BjeGVMN1F4MWxIbzU0YVFzMWk2SHpBdnFFTExEb3JRRzFUV0lHZTRlc3dTd3NCSEhZbzktendFQXF6WEtaRzFNbGZxOU5iMVpieEpfUFJwQnEtLWdBWmpfTWM?oc=5",
+      "published": "2026-09-25T08:13:46+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -582,10 +577,10 @@
       "provider": null,
       "topic": "エンタメ",
       "sourceWeight": 3,
-      "title": "パ・リーグ公示（２５日）＝プロ野球 - sp.m.jiji.com",
-      "summary": "パ・リーグ公示（２５日）＝プロ野球 sp.m.jiji.com",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE54bEJ1RTVOcHhuR0hpbm5jRTF2bl9HRkU0cTZPYXNEcTJvTFgwd1FqU2ZiWWtqMXdNN0ZqWVdyRGZwSVB6RmxLMkZTbzc4SmtzYk1YZA?oc=5",
-      "published": "2026-09-25T07:59:00+00:00",
+      "title": "Ｃ・モンゴメリー、三振最多タイ＝村上の同僚、２２３個目―米大リーグ - sp.m.jiji.com",
+      "summary": "Ｃ・モンゴメリー、三振最多タイ＝村上の同僚、２２３個目―米大リーグ sp.m.jiji.com",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE52Y1VDZjVXMWxsR0FYTWtzOHQydEJhTC11ZmVEeVB5UlYwVzNHTkx4dXlWRThUS2NHZlp2Z1lGU1ZGTC1ZTWY5Rlg5cGM0bHFVeExzSQ?oc=5",
+      "published": "2026-09-25T08:11:00+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -759,10 +754,67 @@
       "provider": null,
       "topic": "エンタメ",
       "sourceWeight": 3,
+      "title": "円相場、１５８円０８～０９銭＝２５日午後５時現在 - sp.m.jiji.com",
+      "summary": "円相場、１５８円０８～０９銭＝２５日午後５時現在 sp.m.jiji.com",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBQbkEyY2Z4aTdkemZad19iXzBGMkkzYWEzWWJ4SDd2ZUFYQWVrWTRCUURzU3hyZVhIUE1xcEFmWEtPOUp5eXFuMVAwSEpxTGlkaUJQTQ?oc=5",
+      "published": "2026-09-25T08:10:00+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-entertainment-jp",
+      "platform": "Google News",
+      "label": "日本ニュース エンタメ",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "エンタメ",
+      "sourceWeight": 3,
+      "title": "パ・リーグ公示（２５日）＝プロ野球 - sp.m.jiji.com",
+      "summary": "パ・リーグ公示（２５日）＝プロ野球 sp.m.jiji.com",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE54bEJ1RTVOcHhuR0hpbm5jRTF2bl9HRkU0cTZPYXNEcTJvTFgwd1FqU2ZiWWtqMXdNN0ZqWVdyRGZwSVB6RmxLMkZTbzc4SmtzYk1YZA?oc=5",
+      "published": "2026-09-25T07:59:00+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-entertainment-jp",
+      "platform": "Google News",
+      "label": "日本ニュース エンタメ",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "エンタメ",
+      "sourceWeight": 3,
       "title": "セ・リーグ公示（２５日）＝プロ野球 - sp.m.jiji.com",
       "summary": "セ・リーグ公示（２５日）＝プロ野球 sp.m.jiji.com",
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9IZ1dzU05uTTloM2wxbzRzeHRKNVpPM0F0U2p6MGdhUU9ZS0VqN052Q0c1d2QyUnZuWjFSV3ctMWFFdVJyWVNONm9oYUQwYVN6MUdhUg?oc=5",
       "published": "2026-09-25T07:58:00+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-disaster-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 災害",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "災害",
+      "sourceWeight": 3,
+      "title": "連続する台風接近で大雨のおそれ ハザードマップで土砂災害リスクを確認 - ニコニコニュース",
+      "summary": "連続する台風接近で大雨のおそれ ハザードマップで土砂災害リスクを確認 ニコニコニュース",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBTM0czX1JFNXRoTC1MdnlPemYySDk2VnI3M1BzSnZPNjFJRkc4Tk1YZjJuZEI2cVdsd1FPTUEtMEZUSnloeEpBSVNIS0Vyemx1VktXTFpyS0QyMWMwR1N2N1lEeTUxUlg0cngwbXhUdkZ2THc?oc=5",
+      "published": "2026-09-25T07:48:17+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -904,25 +956,6 @@
       "region": "日本語優先"
     },
     {
-      "source": "news-sports-jp",
-      "platform": "Google News",
-      "label": "日本ニュース スポーツ",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "スポーツ",
-      "sourceWeight": 3,
-      "title": "アジア大会、11歳がeスポーツ「ぷよぷよ」で決勝へ──日本選手団最年少 - ITmedia",
-      "summary": "アジア大会、11歳がeスポーツ「ぷよぷよ」で決勝へ──日本選手団最年少 ITmedia",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBSbjF0YWhxQWVOajRDTVo3UzcwVGpIRjAxZEtpUXo0UGVLeGJpS29WVy1FUkZVdTBNeURvOE4yQ2xDa01tR19yZ09uMy1DdTJLbERaTmhJZ21pS1pFLW1OeHdOTWVtbm9rUXc?oc=5",
-      "published": "2026-09-25T06:43:27+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
       "source": "news-science-jp",
       "platform": "Google News",
       "label": "日本ニュース 科学",
@@ -1009,7 +1042,45 @@
       "title": "9/29(火) vs 富山 試合観戦ルールについて | URAWA RED DIAMONDS OFFICIAL WEBSITE - 浦和レッドダイヤモンズ公式サイト",
       "summary": "9/29(火) vs 富山 試合観戦ルールについて | URAWA RED DIAMONDS OFFICIAL WEBSITE 浦和レッドダイヤモンズ公式サイト",
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE11dmtJZHJmQVFSVE4zVkJadjExeVNKN0ZOajJMc0VQRi1WejlGcmtlQ1prajJYRHE2MnlDQlRaNlZMYXg1N0h1SEN5ck1LSm9GSlltdnZKVUI?oc=5",
-      "published": "2026-09-25T06:06:45+00:00",
+      "published": "2026-09-25T06:06:03+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-sports-jp",
+      "platform": "Google News",
+      "label": "日本ニュース スポーツ",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "スポーツ",
+      "sourceWeight": 3,
+      "title": "All-Photonics Connect powered by IOWNとボリュメトリックビデオ技術による世界初のスポーツ観戦体験の実証に成功 - ntt-east.co.jp",
+      "summary": "All-Photonics Connect powered by IOWNとボリュメトリックビデオ技術による世界初のスポーツ観戦体験の実証に成功 ntt-east.co.jp",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5xdFhjUU5pUVFPMUFESUpJVjZMS3o1aEREMDZRc2pkRG9NaFI5QjRqWWxTRE9CWkZyVXlSSlRmX1NNTjU2TFAxMFFYRGNWX2s2TWd2MGVPZGZBQl9ER0VxWlBSbVNlY3JfbkE?oc=5",
+      "published": "2026-09-25T06:03:43+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-health-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 健康",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "健康",
+      "sourceWeight": 3,
+      "title": "飲食店事業者向け 食物アレルギーオンライン講習会を開催します - my.metro.tokyo.lg.jp",
+      "summary": "飲食店事業者向け 食物アレルギーオンライン講習会を開催します my.metro.tokyo.lg.jp",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE92UW5DcDFwelZaZmIzbWRWY1pTdklFYUZpaURCUGhnSU1HSFFxYVJTMDA1aFBLVmVXRG1Rc3FzNkc1em91V2U2R3BjaUhHTzlTazFPc2szOFhBWHdXR1gwRl9zZjF3aDg4?oc=5",
+      "published": "2026-09-25T06:02:04+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -1029,25 +1100,6 @@
       "summary": "競技空間を遠隔地でリアルタイムに再現するスポーツ観戦体験を実証 キヤノンのボリュメトリックビデオ技術・MRシステムとNTT等の提唱する「IOWN APN」を活用 | キヤノングローバル Canon Global",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE95LXhMYjhMSTU2ZHNVVkdWbG5iMEVJM0JzSlZoUXU3YTJyM3AxRF9WSWVKUEdwX2FhVHlENGpuZ25LZnoyZmczMG9BRTl4dkJYcVFtOVBweHp1MWs?oc=5",
       "published": "2026-09-25T06:01:17+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
-      "source": "news-world-jp",
-      "platform": "Google News",
-      "label": "日本ニュース 国際",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "国際",
-      "sourceWeight": 3,
-      "title": "「ダンス・リトル・バード」 世界中が踊ったスイス人アコーディオン奏者の一曲 - SWI swissinfo.ch",
-      "summary": "「ダンス・リトル・バード」 世界中が踊ったスイス人アコーディオン奏者の一曲 SWI swissinfo.ch",
-      "url": "https://news.google.com/rss/articles/CBMi-ARBVV95cUxQTFR2UU1vOGppS3JoejRCN2JkXzhPQkc3MGFVX2xiMVFMVDdrOFdTUklGcWdXaER2c3dySlBwLTV5RmFmaDNaaWo5VGtsR1lfYnFaaEhNQVliMlo1YmhkWnItOTNUY1RtWUVWbUFYTjgtc3BtQWgzaHd3MlZLTDI2T25KeUlIYWpYWHFpOENNZTN6X0pLVVlxWnk1QjIybWNHcXMtb3VzMEpobGZTekJQRzY2RFhBQ0lETHFkYlBuN1oyd3FyRU85bS13cW1oQktMcDNjaHQ3T2pXaWlzOEJka0UtaDFEajY5d0E5YXM4dDR2TXZlWUlneGFmallCcUtaWF9oWFdvUHQ3XzNRM0dteWo2SF9nZ0w5c2o3aDcxbWZYYTNBaTVCVHRtYnJxZDNpUkJhbXpJS0QtSzQ3bjItNzZBLWxuVS1nQWVCNkJITm9RcllLYTJkYVBiLV9na2RZdEZ3NDVKdVlyRU9fRG9xRHhYMWM2OEZRQXpRa25WMzlIc3RYTW9lb1BaR2hod0ttSk1DTlRCdmVVeWJ6QUxyaC1pTUtTU3RVMjNheFlVWHRXZ24tZ2dyemtGT3RBaHF5MDNoelhuYVYyOWk4eHpSMjcwb0NfV1VlY1ZEc01ybWhEaWhoOXQ3eUs4WU10YUEzeXVNSEJqMEw2bnY2bUFScFNfcmRWa1pyMkhCZ0M0U0FLWDVkbWc0Vl93R0RVeG96a0xvNk1vbzJOQjg1OVE3Zy1zUVJpZk1Ebk9TYUpHME5ZSEJfNE1ScGFhM2VaV0lmMUtMcWdlQVVsdkdkSWZKN1Q1QkxvTGV3WFNMd293SHl0dmY1aWZadQ?oc=5",
-      "published": "2026-09-25T06:00:00+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -1086,25 +1138,6 @@
       "summary": "ダクルコ社に新しい取締役会長が就任した。 Vietnam.vn",
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBKWnd3WTYtVmlhYWNpZ1FodUxtT1BEZ05Zd0ZPT0tlczRndjlZOFVBY2hvR2hXMndaaWE3UDVfeGpKblc3djNNNERqSnFRa1U2SzFvQzVFZGNkNnJRYjF6ZEZSRGFnNU1kaFVyTkI1MXUyaG5xWGc?oc=5",
       "published": "2026-09-25T05:47:28+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
-      "source": "news-entertainment-jp",
-      "platform": "Google News",
-      "label": "日本ニュース エンタメ",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "エンタメ",
-      "sourceWeight": 3,
-      "title": "錦織圭「悔いなく終わりたい」 - sp.m.jiji.com",
-      "summary": "錦織圭「悔いなく終わりたい」 sp.m.jiji.com",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBLdzlQVXR3SEhfQW9DanlTZGFLN2x4MDVoMmUyeWZBWl9OQTBiSWRicVNfWFI1UE5MZHU1enJ3Slh5ZEp2bl9sUW15Xy1BWHprVUI1aFJzYW5oTlBxbGc?oc=5",
-      "published": "2026-09-25T05:46:00+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -1158,8 +1191,8 @@
       "provider": null,
       "topic": "富山",
       "sourceWeight": 3,
-      "title": "クマ出没に備え商業施設で富山市内初の「緊急銃猟」訓練 フューチャーシティーファボーレ従業員ら約30人 避難手順を確認 - newsdig.tbs.co.jp",
-      "summary": "クマ出没に備え商業施設で富山市内初の「緊急銃猟」訓練 フューチャーシティーファボーレ従業員ら約30人 避難手順を確認 newsdig.tbs.co.jp",
+      "title": "クマ出没に備え商業施設で富山市内初の「緊急銃猟」訓練 フューチャーシティーファボーレ従業員ら約30人 避難手順を確認 - TBS NEWS DIG",
+      "summary": "クマ出没に備え商業施設で富山市内初の「緊急銃猟」訓練 フューチャーシティーファボーレ従業員ら約30人 避難手順を確認 TBS NEWS DIG",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5tNGE0cVlDdUt5NFlEcnhyUkxDZVJobjJlQkpHZUxwMWxCVm5qMFhSdG9MVDFnMUpYTzN3NEFPcmxCeFE5SEVFRWtIMWNSc0pRbFZESFhzQzJWUQ?oc=5",
       "published": "2026-09-25T05:30:00+00:00",
       "score": 1,
@@ -1398,25 +1431,6 @@
       "region": "日本語優先"
     },
     {
-      "source": "news-health-jp",
-      "platform": "Google News",
-      "label": "日本ニュース 健康",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "健康",
-      "sourceWeight": 3,
-      "title": "第179回老年学・老年医学公開講座 人生100年「社会参加」を再設計する－超高齢期を豊かに生きる処方箋－ - my.metro.tokyo.lg.jp",
-      "summary": "第179回老年学・老年医学公開講座 人生100年「社会参加」を再設計する－超高齢期を豊かに生きる処方箋－ my.metro.tokyo.lg.jp",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5XdXpxaGZJWGs5MGh5T1pkZHl2SlVmWncya1ZkWTJXbllpUGZYRXNxaHcwUm5NNy1WZ0ROT2JGMFJ1X2VSa0doS1NwNUUtZGZ1Y1hXcnU2SmQzeDQyUlVHaDFWZi1ScVBW?oc=5",
-      "published": "2026-09-25T04:36:03+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
       "source": "news-disaster-jp",
       "platform": "Google News",
       "label": "日本ニュース 災害",
@@ -1424,8 +1438,8 @@
       "provider": null,
       "topic": "災害",
       "sourceWeight": 3,
-      "title": "震度1 福島県中通り 2026年09月25日13:11ごろ 地震詳細 | 山梨のニュース | ＵＴＹテレビ山梨 - newsdig.tbs.co.jp",
-      "summary": "震度1 福島県中通り 2026年09月25日13:11ごろ 地震詳細 | 山梨のニュース | ＵＴＹテレビ山梨 newsdig.tbs.co.jp",
+      "title": "震度1 福島県中通り 2026年09月25日13:11ごろ 地震詳細 | 山梨のニュース | ＵＴＹテレビ山梨 - TBS NEWS DIG",
+      "summary": "震度1 福島県中通り 2026年09月25日13:11ごろ 地震詳細 | 山梨のニュース | ＵＴＹテレビ山梨 TBS NEWS DIG",
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdkdHU2xjWFJqTi1qdnJSRjNqNVYwV3FHalBNanpodW92bzNXZlFDTGRRYnpLM0d4aWNuMnVETExmVFl6UUMxeTRZTmFhU25QRGxwc3JzcmNtajFSaG4tWDRySWY2YWFab3JQZnMyNWJobWNqbF80WUY4T3BVMV9pYmJLdUpkczg?oc=5",
       "published": "2026-09-25T04:31:12+00:00",
       "score": 1,
@@ -1504,25 +1518,6 @@
       "summary": "NTT東日本千葉事業部、台風25号被災地域の電話料金を無料に news.infoseek.co.jp",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeHJLbW0zVXpQWXZBc2ZvRlNkU2JmLVUwQ1dyRE5nZndmdWNkTDFaNDBwUW01d0djSmk4Z3JPZGxXRVlvMlFiRVgwY3BvUDVUVTZkNUVVNXZXdWljdFhOYjBjWGVZTFA4T3p5U2RmS2RwZmNWU0ZWeXJzdlVlVFlIWVVHRlR6LWFYSGFQdmh6R3YtdjhwTkl3T9IBmAFBVV95cUxOeHJLbW0zVXpQWXZBc2ZvRlNkU2JmLVUwQ1dyRE5nZndmdWNkTDFaNDBwUW01d0djSmk4Z3JPZGxXRVlvMlFiRVgwY3BvUDVUVTZkNUVVNXZXdWljdFhOYjBjWGVZTFA4T3p5U2RmS2RwZmNWU0ZWeXJzdlVlVFlIWVVHRlR6LWFYSGFQdmh6R3YtdjhwTkl3Tw?oc=5",
       "published": "2026-09-25T03:53:17+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
-      "source": "news-health-jp",
-      "platform": "Google News",
-      "label": "日本ニュース 健康",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "健康",
-      "sourceWeight": 3,
-      "title": "『北海道で暮らすというコト』オンライントークライブVol.２ セカンドライフ移住を10月22日（木）に開催します！ - pref.hokkaido.lg.jp",
-      "summary": "『北海道で暮らすというコト』オンライントークライブVol.２ セカンドライフ移住を10月22日（木）に開催します！ pref.hokkaido.lg.jp",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9mSVpZb20xSHpUY0NONmJHM2xsZE9qLS16dTgxdk1OUGo5QXVNOWwtaUs4eXQ4WlR1dFo1OE1iNUFQUE00ZDAyV2Jpd2p4Y2drcWs4WDhwb0huTnBDTnhleHRhSnBYQnhNOU05T2pB?oc=5",
-      "published": "2026-09-25T03:51:34+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -1688,139 +1683,152 @@
     {
       "id": "news-ai-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:08:01.389328+00:00",
-      "lastAttemptAt": "2026-09-25T08:08:01.389328+00:00",
+      "lastSuccessAt": "2026-09-25T08:18:01.439044+00:00",
+      "lastAttemptAt": "2026-09-25T08:18:01.439044+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-economy-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:08:01.389328+00:00",
-      "lastAttemptAt": "2026-09-25T08:08:01.389328+00:00",
+      "lastSuccessAt": "2026-09-25T08:18:01.439044+00:00",
+      "lastAttemptAt": "2026-09-25T08:18:01.439044+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-disaster-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:08:01.389328+00:00",
-      "lastAttemptAt": "2026-09-25T08:08:01.389328+00:00",
+      "lastSuccessAt": "2026-09-25T08:18:01.439044+00:00",
+      "lastAttemptAt": "2026-09-25T08:18:01.439044+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-politics-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:08:01.389328+00:00",
-      "lastAttemptAt": "2026-09-25T08:08:01.389328+00:00",
+      "lastSuccessAt": "2026-09-25T08:18:01.439044+00:00",
+      "lastAttemptAt": "2026-09-25T08:18:01.439044+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-society-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:08:01.389328+00:00",
-      "lastAttemptAt": "2026-09-25T08:08:01.389328+00:00",
+      "lastSuccessAt": "2026-09-25T08:18:01.439044+00:00",
+      "lastAttemptAt": "2026-09-25T08:18:01.439044+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-world-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:08:01.389328+00:00",
-      "lastAttemptAt": "2026-09-25T08:08:01.389328+00:00",
+      "lastSuccessAt": "2026-09-25T08:18:01.439044+00:00",
+      "lastAttemptAt": "2026-09-25T08:18:01.439044+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-tech-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:08:01.389328+00:00",
-      "lastAttemptAt": "2026-09-25T08:08:01.389328+00:00",
+      "lastSuccessAt": "2026-09-25T08:18:01.439044+00:00",
+      "lastAttemptAt": "2026-09-25T08:18:01.439044+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-sports-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:08:01.389328+00:00",
-      "lastAttemptAt": "2026-09-25T08:08:01.389328+00:00",
+      "lastSuccessAt": "2026-09-25T08:18:01.439044+00:00",
+      "lastAttemptAt": "2026-09-25T08:18:01.439044+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-health-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:08:01.389328+00:00",
-      "lastAttemptAt": "2026-09-25T08:08:01.389328+00:00",
+      "lastSuccessAt": "2026-09-25T08:18:01.439044+00:00",
+      "lastAttemptAt": "2026-09-25T08:18:01.439044+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-toyama-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:08:01.389328+00:00",
-      "lastAttemptAt": "2026-09-25T08:08:01.389328+00:00",
+      "lastSuccessAt": "2026-09-25T08:18:01.439044+00:00",
+      "lastAttemptAt": "2026-09-25T08:18:01.439044+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-entertainment-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:08:01.389328+00:00",
-      "lastAttemptAt": "2026-09-25T08:08:01.389328+00:00",
+      "lastSuccessAt": "2026-09-25T08:18:01.439044+00:00",
+      "lastAttemptAt": "2026-09-25T08:18:01.439044+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-business-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:08:01.389328+00:00",
-      "lastAttemptAt": "2026-09-25T08:08:01.389328+00:00",
+      "lastSuccessAt": "2026-09-25T08:18:01.439044+00:00",
+      "lastAttemptAt": "2026-09-25T08:18:01.439044+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-life-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:08:01.389328+00:00",
-      "lastAttemptAt": "2026-09-25T08:08:01.389328+00:00",
+      "lastSuccessAt": "2026-09-25T08:18:01.439044+00:00",
+      "lastAttemptAt": "2026-09-25T08:18:01.439044+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-science-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:08:01.389328+00:00",
-      "lastAttemptAt": "2026-09-25T08:08:01.389328+00:00",
+      "lastSuccessAt": "2026-09-25T08:18:01.439044+00:00",
+      "lastAttemptAt": "2026-09-25T08:18:01.439044+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-game-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:08:01.389328+00:00",
-      "lastAttemptAt": "2026-09-25T08:08:01.389328+00:00",
+      "lastSuccessAt": "2026-09-25T08:18:01.439044+00:00",
+      "lastAttemptAt": "2026-09-25T08:18:01.439044+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "mastodon-ai",
-      "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:08:01.389328+00:00",
-      "lastAttemptAt": "2026-09-25T08:08:01.389328+00:00",
+      "status": "unavailable",
+      "lastSuccessAt": "2026-09-13T00:23:05.116061+00:00",
+      "lastAttemptAt": "2026-09-25T08:18:01.439044+00:00",
       "retryAfterAt": null,
-      "errorCode": null
+      "errorCode": "TimeoutError"
     },
     {
       "id": "mastodon-codex",
-      "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:08:01.389328+00:00",
-      "lastAttemptAt": "2026-09-25T08:08:01.389328+00:00",
+      "status": "unavailable",
+      "lastSuccessAt": "2026-09-13T00:21:31.356337+00:00",
+      "lastAttemptAt": "2026-09-25T08:18:01.439044+00:00",
       "retryAfterAt": null,
-      "errorCode": null
+      "errorCode": "TimeoutError"
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "mastodon-ai",
+      "platform": "Mastodon",
+      "error": "The read operation timed out",
+      "fallbackItems": 0
+    },
+    {
+      "source": "mastodon-codex",
+      "platform": "Mastodon",
+      "error": "The read operation timed out",
+      "fallbackItems": 0
+    }
+  ]
 }

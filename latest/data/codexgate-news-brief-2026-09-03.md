@@ -1,6 +1,6 @@
 # CODEXGATE News Brief
 
-- 更新: 2026-09-25T08:08:01.389328+00:00
+- 更新: 2026-09-25T08:18:01.439044+00:00
 - 取得: GitHub Actions/Python
 - Codex: 0%想定（自動実行時）
 - 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。
@@ -9,4 +9,4 @@
 - [論文] 更新あり。必要時だけ確認 / When Should Forecasting Agents Reason? Behavioral Stress Tests for Rel
 - [AI] AI/Codex運用の変化を確認 / Gemini 3.8 text-to-speech says hello / Two years of OpenAI Academy / O
 - [技術] 更新あり。必要時だけ確認 / Lobsters: Rename vibecoding to llms (Greasemonkey script)
-- [災害] 更新あり。必要時だけ確認 / M 1.9 - 127 km SSW of McCarthy, Alaska
+- [災害] 更新あり。必要時だけ確認 / M 1.1 - 6 km WSW of Brawley, CA
