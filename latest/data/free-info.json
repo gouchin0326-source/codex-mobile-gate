@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-25T08:38:01.479546+00:00",
-  "lastSuccessAt": "2026-09-25T08:38:01.479546+00:00",
+  "updatedAt": "2026-09-25T08:48:01.456178+00:00",
+  "lastSuccessAt": "2026-09-25T08:48:01.456178+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -151,17 +151,17 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "Lobsters: Rename vibecoding to llms (Greasemonkey script)",
+      "signal": "Pencils Down, Eyes Open: A Rails Developer After Rails World",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://greasyfork.org/en/scripts?by=1646191",
-      "score": 1
+      "topUrl": "https://caio.ca/blog/pencils-down-eyes-open-rails-world",
+      "score": 2
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.1 - 2 km NE of Danville, CA",
+      "signal": "M 1.3 - 11 km W of Progreso, B.C., MX",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75441472",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41338871",
       "score": 1
     }
   ],
@@ -243,6 +243,24 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Pencils Down, Eyes Open: A Rails Developer After Rails World",
+      "summary": "Comments",
+      "url": "https://caio.ca/blog/pencils-down-eyes-open-rails-world",
+      "published": "2026-09-25T01:31:43+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "開発"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -282,30 +300,13 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.1 - 2 km NE of Danville, CA",
-      "summary": "2 km NE of Danville, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75441472",
-      "published": "2026-09-25T08:31:52.230000+00:00",
+      "title": "M 1.3 - 11 km W of Progreso, B.C., MX",
+      "summary": "11 km W of Progreso, B.C., MX",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41338871",
+      "published": "2026-09-25T08:42:41.720000+00:00",
       "score": 1,
       "tags": [
         "災害"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Lobsters: Rename vibecoding to llms (Greasemonkey script)",
-      "summary": "Comments",
-      "url": "https://greasyfork.org/en/scripts?by=1646191",
-      "published": "2026-09-25T05:33:53+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
       ]
     },
     {
@@ -748,64 +749,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:38:01.479546+00:00",
-      "lastAttemptAt": "2026-09-25T08:38:01.479546+00:00",
+      "lastSuccessAt": "2026-09-25T08:48:01.456178+00:00",
+      "lastAttemptAt": "2026-09-25T08:48:01.456178+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:38:01.479546+00:00",
-      "lastAttemptAt": "2026-09-25T08:38:01.479546+00:00",
+      "lastSuccessAt": "2026-09-25T08:48:01.456178+00:00",
+      "lastAttemptAt": "2026-09-25T08:48:01.456178+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:38:01.479546+00:00",
-      "lastAttemptAt": "2026-09-25T08:38:01.479546+00:00",
+      "lastSuccessAt": "2026-09-25T08:48:01.456178+00:00",
+      "lastAttemptAt": "2026-09-25T08:48:01.456178+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:38:01.479546+00:00",
-      "lastAttemptAt": "2026-09-25T08:38:01.479546+00:00",
+      "lastSuccessAt": "2026-09-25T08:48:01.456178+00:00",
+      "lastAttemptAt": "2026-09-25T08:48:01.456178+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:38:01.479546+00:00",
-      "lastAttemptAt": "2026-09-25T08:38:01.479546+00:00",
+      "lastSuccessAt": "2026-09-25T08:48:01.456178+00:00",
+      "lastAttemptAt": "2026-09-25T08:48:01.456178+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:38:01.479546+00:00",
-      "lastAttemptAt": "2026-09-25T08:38:01.479546+00:00",
+      "lastSuccessAt": "2026-09-25T08:48:01.456178+00:00",
+      "lastAttemptAt": "2026-09-25T08:48:01.456178+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:38:01.479546+00:00",
-      "lastAttemptAt": "2026-09-25T08:38:01.479546+00:00",
+      "lastSuccessAt": "2026-09-25T08:48:01.456178+00:00",
+      "lastAttemptAt": "2026-09-25T08:48:01.456178+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T08:38:01.479546+00:00",
-      "lastAttemptAt": "2026-09-25T08:38:01.479546+00:00",
+      "lastSuccessAt": "2026-09-25T08:48:01.456178+00:00",
+      "lastAttemptAt": "2026-09-25T08:48:01.456178+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
