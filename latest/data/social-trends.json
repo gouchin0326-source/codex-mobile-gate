@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-09-25T13:58:01.715261+00:00",
-  "lastSuccessAt": "2026-09-25T13:58:01.715261+00:00",
-  "status": "fresh",
+  "updatedAt": "2026-09-25T14:08:01.697015+00:00",
+  "lastSuccessAt": "2026-09-25T14:08:01.697015+00:00",
+  "status": "stale",
   "mode": "zero-token-social-trends",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "public API/RSS only; no login bypass; no unauthorized scraping; short excerpts + URL only",
@@ -16,6 +16,29 @@
     "Google News": 60
   },
   "topics": [
+    {
+      "topic": "政治",
+      "count": 8,
+      "attention": 24,
+      "headline": "インテリジェンス強化の有識者会議 28日に初開催へ - KSBニュース",
+      "urls": [
+        {
+          "title": "インテリジェンス強化の有識者会議 28日に初開催へ - KSBニュース",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5tX2xyLWpzMFFLTFFsWElnWWZHV3RxSjJfc19EVU4ydDhJSFNjcTI2YkNoM2xqdTNJWWFhOHBNaXh6U3lqanRqU3BuWC1TOWw4aXlhbEtR?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "米中首脳会談トランプ氏異例発言に波紋 政府内から「気持ちの良いものではない」木原官房長官「引き続き高い関心を持って注視」 - FNNプライムオンライン",
+          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFB6dHJfemFSWjVWVGE5NURFOFU0aFRiTG1CZVFjSlJ3TElXN3dNbmFWWExoSXZBdzV5dXh4cVhhMHdxZ2JMZUM4aE05V3NWdw?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "情報力、２８日有識者初会合 政府、活動の重点方針決定 - 時事ドットコム",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAzekN5S1NwUVBGTlJWYkJQekd4dEU5RldNcVduSC1yOTlDaE5GbG9Od2Rhbk5vd2tQbUxIVG44dzlDYUM5TzRGUi16NU95Rk1nNzJLQTZUQkJFQUhjellaVXZQVQ?oc=5",
+          "platform": "Google News"
+        }
+      ]
+    },
     {
       "topic": "エンタメ",
       "count": 7,
@@ -35,29 +58,6 @@
         {
           "title": "◎強風下でドローン飛行 - 時事通信ニュース",
           "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9lVlZvdjlUT1VtWkgwLUtYYWxaaVh0NmFvOGt2V3poRHFhNGw2dHJmc1hCNGJIWG5ZVzFFZ3FEd3d0aXRrVDVwRWF4d01EV0FfdWRiUw?oc=5",
-          "platform": "Google News"
-        }
-      ]
-    },
-    {
-      "topic": "政治",
-      "count": 7,
-      "attention": 21,
-      "headline": "インテリジェンス強化の有識者会議 28日に初開催へ - KSBニュース",
-      "urls": [
-        {
-          "title": "インテリジェンス強化の有識者会議 28日に初開催へ - KSBニュース",
-          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5tX2xyLWpzMFFLTFFsWElnWWZHV3RxSjJfc19EVU4ydDhJSFNjcTI2YkNoM2xqdTNJWWFhOHBNaXh6U3lqanRqU3BuWC1TOWw4aXlhbEtR?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "米中首脳会談トランプ氏異例発言に波紋 政府内から「気持ちの良いものではない」木原官房長官「引き続き高い関心を持って注視」 - FNNプライムオンライン",
-          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFB6dHJfemFSWjVWVGE5NURFOFU0aFRiTG1CZVFjSlJ3TElXN3dNbmFWWExoSXZBdzV5dXh4cVhhMHdxZ2JMZUM4aE05V3NWdw?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "情報力、２８日有識者初会合 政府、活動の重点方針決定 - 時事ドットコム",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAzekN5S1NwUVBGTlJWYkJQekd4dEU5RldNcVduSC1yOTlDaE5GbG9Od2Rhbk5vd2tQbUxIVG44dzlDYUM5TzRGUi16NU95Rk1nNzJLQTZUQkJFQUhjellaVXZQVQ?oc=5",
           "platform": "Google News"
         }
       ]
@@ -89,8 +89,13 @@
       "topic": "富山",
       "count": 6,
       "attention": 18,
-      "headline": "富山市の国勢調査過大報告問題 市議会が説明求めるも市側「総務省の審査に関わるため回答差し控える」 富山県富山市 - Yahoo!ニュース",
+      "headline": "竜王戦七番勝負で藤井聡太竜王に挑む富山出身の服部慎一郎七段を応援、縁の深い魚津市で１０月１０日に第１局のパブリックビューイング開催 - 読売新聞",
       "urls": [
+        {
+          "title": "竜王戦七番勝負で藤井聡太竜王に挑む富山出身の服部慎一郎七段を応援、縁の深い魚津市で１０月１０日に第１局のパブリックビューイング開催 - 読売新聞",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9aSGRZWnFqUXZsQXdCVU14T0ZBWk83emRzWk1CU2VGX3l5bDlHc21VSWExLU5hUEFoMlNyY0RmMDdkRm01dFhIaGVLd1RLRGoxbUg0RDZlQ3JKX1Brd254MTJhdEJycE1NcHduT1RNVQ?oc=5",
+          "platform": "Google News"
+        },
         {
           "title": "富山市の国勢調査過大報告問題 市議会が説明求めるも市側「総務省の審査に関わるため回答差し控える」 富山県富山市 - Yahoo!ニュース",
           "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9PaG9hRXJnVzU3MDEwMGV1ZzFHTWNuOGRHZnJJR3VLZFlHTFZhR1BlU25ESkNCdmVHNzJGVEdkd1JxZjFabDRSZDg0NFdPTnY1amtzODctM2NFYjJoaUpXZGFhczZoT0d3aFQ5b3k4NktWOWVyRTZuQXhfUnlxRzQ?oc=5",
@@ -99,11 +104,6 @@
         {
           "title": "2026-27シーズン 9/26-9/27 VS 富山 - b-warriors.net",
           "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5EbXhPMzlUa0haTDEtM1RjSEhfaHd3ZUtkc29wbTYwTWdqbjA1VTdzQWhsTHBYUlNkT0dMcXNoSWtLZjNackd0WTBrZTVHVW4wWXpPUVBCZGI1VDVyeXlwUUJWOA?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "富山県の今日のアメダスの記録(09月25日) - tenki.jp",
-          "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9taXJ6WVNqbWRRU0Q0Qi1YSl82bzd4dGh6RUpyaXFpRjFzakNoTUdsbGtRMVJhUG9MWTFJakJUR1FOUVh0YVBiX2g2NGRUZw?oc=5",
           "platform": "Google News"
         }
       ]
@@ -155,36 +155,13 @@
       ]
     },
     {
-      "topic": "経済",
-      "count": 5,
-      "attention": 15,
-      "headline": "米中は膠着の時代へ ともに打ち負かせず、争えば「相互に経済破壊」 - 朝日新聞",
-      "urls": [
-        {
-          "title": "米中は膠着の時代へ ともに打ち負かせず、争えば「相互に経済破壊」 - 朝日新聞",
-          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBxUjl5SjctZTZBNWV5YnF5N0ZXNE4zZ2hBd1YxSFEzV2VCemZEWWZXdlE0NHZDcDdCcU5HWlBBaUU2UlFPWl9SYUlJVzZyLVQ4b2p4SkVpZWhMck0tb28zdFc3UlVoc3c?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "令和９年度助成金募集（一般公募）[高橋産業経済研究財団] - konan-u.ac.jp",
-          "url": "https://news.google.com/rss/articles/CBMi2gJBVV95cUxQcGkyZkpvbnFsN09Wa1RZLWl4SzFNbWlUX09oNHlaRmg5cTVIMDdJWGN1a0dSNDBabmxGbFFBYmdsQkhZODQ2WGx0TnlwRDdsclo2bmo0dHFCUVdRa3JKcE5OYU82MEdLT2liak5LLXhWak12WnZ0VWJQTlVWUk4tb0VqUmxSNUdyS25XMXA5ZUZQNDlUTXFOay1ES0YzcUctWWlJQ1Q1dVM3alotdjc4azd5ZlduQzlVeXQxN1M0YVNDMm80X2hYX2Z0RXlwbUVnSWNkY3hSdk9IenN5alNFbWo4MEIxYXRvLW9YYzFnT3VRMUlKeVFxSm9yXzBXWGhEN2JweUpfdzBJSlBEUUhPVFdqRHlTT094dHBZZ2RQTHU3RDZxZUo2SGxvaHJzSU9KT2d0bkxEY2Rta2xTc1Zfcmk2dXQ5RTBRbS1FTmNqWG0tNnJSaDBGZ0ZB?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "「日本スタートアップ大賞2026」の表彰式を行いました - meti.go.jp",
-          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE4zdkNKeTZpWnUxdS1VTVdwc3NQWHZpdXZNRkw5OWpkRDBMWVVEZVNoSTdfeHhMT29HRlJxVVAya3ZhdmlwTWFPX0k5VmVza28wUzdsUUExZEF6ZjI0MG16X2xRbw?oc=5",
-          "platform": "Google News"
-        }
-      ]
-    },
-    {
       "topic": "ゲーム",
       "count": 4,
       "attention": 13,
-      "headline": "『蒼き雷霆 ガンヴォルト トライアングルエディション Nintendo Switch 2 Edition』限定版BOX描き下ろしイラスト公開！ - GameWith",
+      "headline": "『蒼き雷霆 ガンヴォルト トライアングルエディション Nintendo Switch 2 Edition』限定版BOX描き下ろしイラスト公開！ - gamewith.jp",
       "urls": [
         {
-          "title": "『蒼き雷霆 ガンヴォルト トライアングルエディション Nintendo Switch 2 Edition』限定版BOX描き下ろしイラスト公開！ - GameWi",
+          "title": "『蒼き雷霆 ガンヴォルト トライアングルエディション Nintendo Switch 2 Edition』限定版BOX描き下ろしイラスト公開！ - gamewi",
           "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5DUmtyWk9MRDRNMjlsUkRaYTY1bjFpN01nWUNNSU5CRzdOcW1GSGRSNUhmOVhmcGR2d0JqU3lOdGFRMGZ5ZzFYejFGZkVaQWFVUHRFWTJiRUhnQ1k?oc=5",
           "platform": "Google News"
         },
@@ -196,6 +173,29 @@
         {
           "title": "『東方紅魔郷：New Classic ～ the Embodiment of Scarlet Devil.』 ver. 1.0.6アップデートのお知らせ - 東",
           "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBsaGx0cGYzUHJCZk9JdUVzdnl2NDItdmhaODlOMGRzTmZ3aUN0cExOZ0otX1Q1M0dxMGtkOUJRNldmeVkxNEF3RlRjZm9tc2NH?oc=5",
+          "platform": "Google News"
+        }
+      ]
+    },
+    {
+      "topic": "スポーツ",
+      "count": 4,
+      "attention": 12,
+      "headline": "Bリーグ - B.PREMIER - テキスト速報 - スポーツナビ",
+      "urls": [
+        {
+          "title": "Bリーグ - B.PREMIER - テキスト速報 - スポーツナビ",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFByT0dzNXBVZjRwRFd4cVVnQXdPclVfdFFscTNjNkVvYU11b2xiU256Ty1GRncwa1EwdEo2bXFJMktlS0lCYmhDdDBLQi13aXdBRGwtUDNvY3lNb0NxSUpCaklWX1ctZms3QmV1WFE3UWoxRjdu?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "【一般軟式】スポーツマスターズ 松本拠点のALPHAが日本一 : nines WEB - targma.jp",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBDT084X3U2TlpCS3RsZWZLNzNMNjBJY3YxZUVJMmZCdWF5TVpjU0tteFpqb1F4c3c5Tl9RVkFaTGlVa05ic0tIaVBJb004MnVnNGk1QWNmUVoxdUg3eEpj?oc=5",
+          "platform": "Google News"
+        },
+        {
+          "title": "プロ野球速報：試合結果・順位 - 道新スポーツ",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPV2drcnNWQ0tReTgxQk01TzBMdTlzNEVSVVZ6ek10OWNDS2I3cXBBNDkzbTA5UFVjZ19nbXkzTlVrMzlvLUx3RGR5blh6bzJLWjJtYU5GOFc2d0tjYXhuSkZJUnRldXZJVWUyNVE3elZySDl2SlRXbUtDNjRPdU11ZzR5T0Ytd20zSm1CcFJRYjQyMWJOMTAwNjQwSmRyTUIwbXBIQmR1YVBvR2RzWDRtdGRST2xYY3p6NFAxS1NsRW8?oc=5",
           "platform": "Google News"
         }
       ]
@@ -224,47 +224,42 @@
       ]
     },
     {
-      "topic": "ビジネス",
-      "count": 3,
-      "attention": 11,
-      "headline": "統合ビルセキュリティーシステム「MELSAFETY-R(メルセーフティー アール)」発売 - PR TIMES",
+      "topic": "経済",
+      "count": 4,
+      "attention": 12,
+      "headline": "米中は膠着の時代へ ともに打ち負かせず、争えば「相互に経済破壊」 - 朝日新聞",
       "urls": [
         {
-          "title": "統合ビルセキュリティーシステム「MELSAFETY-R(メルセーフティー アール)」発売 - PR TIMES",
-          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBhQk1KeVlzLTloU0NkaW5xMWpWVDRPWmRNdERwQ2R3Zld3N2FTejk4d2lIZ3ctUWZEX2gtdDRoN1VGV2pFd1BJMmhpRGtDaVJ3M3VSbXZxZ3JmNnB6T0ZPZUNoWWIycVVrYmc?oc=5",
+          "title": "米中は膠着の時代へ ともに打ち負かせず、争えば「相互に経済破壊」 - 朝日新聞",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBxUjl5SjctZTZBNWV5YnF5N0ZXNE4zZ2hBd1YxSFEzV2VCemZEWWZXdlE0NHZDcDdCcU5HWlBBaUU2UlFPWl9SYUlJVzZyLVQ4b2p4SkVpZWhMck0tb28zdFc3UlVoc3c?oc=5",
           "platform": "Google News"
         },
         {
-          "title": "HENNGE One、個人情報・情報資産管理プラットフォーム「Flows」と SSO 連携 - scan.netsecurity.ne.jp",
-          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5kYVhuNDhuSWNubWwwUGkzai1qU1JBOENXemE5aFlORHJZWFVWY25FQW9LWkxYeXdYcHRDemZvU3ZYTnlQdEtNZHlnVEY3Tl9CMHRvU0pQNkhFRXd0RnMwVWRlSjg2NWdCSHRSeQ?oc=5",
+          "title": "令和９年度助成金募集（一般公募）[高橋産業経済研究財団] - konan-u.ac.jp",
+          "url": "https://news.google.com/rss/articles/CBMi2gJBVV95cUxQcGkyZkpvbnFsN09Wa1RZLWl4SzFNbWlUX09oNHlaRmg5cTVIMDdJWGN1a0dSNDBabmxGbFFBYmdsQkhZODQ2WGx0TnlwRDdsclo2bmo0dHFCUVdRa3JKcE5OYU82MEdLT2liak5LLXhWak12WnZ0VWJQTlVWUk4tb0VqUmxSNUdyS25XMXA5ZUZQNDlUTXFOay1ES0YzcUctWWlJQ1Q1dVM3alotdjc4azd5ZlduQzlVeXQxN1M0YVNDMm80X2hYX2Z0RXlwbUVnSWNkY3hSdk9IenN5alNFbWo4MEIxYXRvLW9YYzFnT3VRMUlKeVFxSm9yXzBXWGhEN2JweUpfdzBJSlBEUUhPVFdqRHlTT094dHBZZ2RQTHU3RDZxZUo2SGxvaHJzSU9KT2d0bkxEY2Rta2xTc1Zfcmk2dXQ5RTBRbS1FTmNqWG0tNnJSaDBGZ0ZB?oc=5",
           "platform": "Google News"
         },
         {
-          "title": "Enable Bootcampが実現する次世代人材育成—AIとフィードバックで成長を促すプログラム - voix.jp",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9GYXc1cFY0bWphZGlMXzdpdDZzcTNuaGd5ZXpMUTlLYXZiSzE2cl9HNXBiQXV2Ti1kMzU0ZzZKYy1YandEdUJlQjZhWk9mN2pubm95alQzSk9NMkRKeTJkMHNqaXhCcXRsbkM2Q2ZpZjByYkk?oc=5",
+          "title": "「日本スタートアップ大賞2026」の表彰式を行いました - meti.go.jp",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE4zdkNKeTZpWnUxdS1VTVdwc3NQWHZpdXZNRkw5OWpkRDBMWVVEZVNoSTdfeHhMT29HRlJxVVAya3ZhdmlwTWFPX0k5VmVza28wUzdsUUExZEF6ZjI0MG16X2xRbw?oc=5",
           "platform": "Google News"
         }
       ]
     },
     {
-      "topic": "スポーツ",
-      "count": 3,
-      "attention": 9,
-      "headline": "「第4回多摩川スポーツフェス」が9/27（日）多摩川ゴルフ俱楽部で開催、天然芝のスポーツ体験にキッチンカーも - 武蔵小杉ブログ（武蔵小杉ライフ 公式ブログ）",
+      "topic": "ビジネス",
+      "count": 2,
+      "attention": 8,
+      "headline": "統合ビルセキュリティーシステム「MELSAFETY-R(メルセーフティー アール)」発売 - ニコニコニュース",
       "urls": [
         {
-          "title": "「第4回多摩川スポーツフェス」が9/27（日）多摩川ゴルフ俱楽部で開催、天然芝のスポーツ体験にキッチンカーも - 武蔵小杉ブログ（武蔵小杉ライフ 公式ブログ）",
-          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE10eThQMmk4WWdMc09WUzRxVi1oTGJCaTNFVzQxa0t2OG8xb3laUVNzWnpWZFhrWWV3UjRGSmRGQi1rbF8zMzI1UnF3WUgzakpkc1h5QUZqVHJudFVIRnc?oc=5",
+          "title": "統合ビルセキュリティーシステム「MELSAFETY-R(メルセーフティー アール)」発売 - ニコニコニュース",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5ZX3JKQkhXYXRSRGJzRXBYUGItaWtoNlQyeWE3ZlU2UmJWalpHOS1WbW5iemRhNnNRU0Z3NGhOdXlsQWoxX0dYaFRUMWl6X3JSbThVaWFQcW9yY0NFODMzdzFjc0VXREljNm9wa09oXzhPNXRhNlZ2U2lsSQ?oc=5",
           "platform": "Google News"
         },
         {
-          "title": "Bリーグ - B.PREMIER - テキスト速報 - スポーツナビ",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFByT0dzNXBVZjRwRFd4cVVnQXdPclVfdFFscTNjNkVvYU11b2xiU256Ty1GRncwa1EwdEo2bXFJMktlS0lCYmhDdDBLQi13aXdBRGwtUDNvY3lNb0NxSUpCaklWX1ctZms3QmV1WFE3UWoxRjdu?oc=5",
-          "platform": "Google News"
-        },
-        {
-          "title": "【一般軟式】スポーツマスターズ 松本拠点のALPHAが日本一 : nines WEB - targma.jp",
-          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBDT084X3U2TlpCS3RsZWZLNzNMNjBJY3YxZUVJMmZCdWF5TVpjU0tteFpqb1F4c3c5Tl9RVkFaTGlVa05ic0tIaVBJb004MnVnNGk1QWNmUVoxdUg3eEpj?oc=5",
+          "title": "HENNGE One、個人情報・情報資産管理プラットフォーム「Flows」と SSO 連携 - ScanNetSecurity",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5kYVhuNDhuSWNubWwwUGkzai1qU1JBOENXemE5aFlORHJZWFVWY25FQW9LWkxYeXdYcHRDemZvU3ZYTnlQdEtNZHlnVEY3Tl9CMHRvU0pQNkhFRXd0RnMwVWRlSjg2NWdCSHRSeQ?oc=5",
           "platform": "Google News"
         }
       ]
@@ -330,14 +325,18 @@
   "trends": [
     {
       "word": "news",
+      "count": 12
+    },
+    {
+      "word": "yahoo",
+      "count": 10
+    },
+    {
+      "word": "nnn",
       "count": 8
     },
     {
       "word": "openai",
-      "count": 8
-    },
-    {
-      "word": "yahoo",
       "count": 8
     },
     {
@@ -358,10 +357,6 @@
     },
     {
       "word": "nintendo",
-      "count": 4
-    },
-    {
-      "word": "nnn",
       "count": 4
     },
     {
@@ -428,7 +423,7 @@
       "title": "26日 関東は警報級大雨の恐れ - Yahoo!ニュース",
       "summary": "26日 関東は警報級大雨の恐れ Yahoo!ニュース",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9yQk9hS2RWcXNzaGh6YS1kMy1jQWV6S20wdHpjSEt0TUtfOUxrT3REUm95TnctTUhJV2doNkJINzZoVUh6Q1phMGRfVXJmdVo0?oc=5",
-      "published": "2026-09-25T10:36:09+00:00",
+      "published": "2026-09-25T13:36:08+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -520,10 +515,10 @@
       "provider": null,
       "topic": "スポーツ",
       "sourceWeight": 3,
-      "title": "「第4回多摩川スポーツフェス」が9/27（日）多摩川ゴルフ俱楽部で開催、天然芝のスポーツ体験にキッチンカーも - 武蔵小杉ブログ（武蔵小杉ライフ 公式ブログ）",
-      "summary": "「第4回多摩川スポーツフェス」が9/27（日）多摩川ゴルフ俱楽部で開催、天然芝のスポーツ体験にキッチンカーも 武蔵小杉ブログ（武蔵小杉ライフ 公式ブログ）",
-      "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE10eThQMmk4WWdMc09WUzRxVi1oTGJCaTNFVzQxa0t2OG8xb3laUVNzWnpWZFhrWWV3UjRGSmRGQi1rbF8zMzI1UnF3WUgzakpkc1h5QUZqVHJudFVIRnc?oc=5",
-      "published": "2026-09-25T13:46:16+00:00",
+      "title": "Bリーグ - B.PREMIER - テキスト速報 - スポーツナビ",
+      "summary": "Bリーグ - B.PREMIER - テキスト速報 スポーツナビ",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFByT0dzNXBVZjRwRFd4cVVnQXdPclVfdFFscTNjNkVvYU11b2xiU256Ty1GRncwa1EwdEo2bXFJMktlS0lCYmhDdDBLQi13aXdBRGwtUDNvY3lNb0NxSUpCaklWX1ctZms3QmV1WFE3UWoxRjdu?oc=5",
+      "published": "2026-09-25T13:36:32+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -558,10 +553,10 @@
       "provider": null,
       "topic": "富山",
       "sourceWeight": 3,
-      "title": "富山市の国勢調査過大報告問題 市議会が説明求めるも市側「総務省の審査に関わるため回答差し控える」 富山県富山市 - Yahoo!ニュース",
-      "summary": "富山市の国勢調査過大報告問題 市議会が説明求めるも市側「総務省の審査に関わるため回答差し控える」 富山県富山市 Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9PaG9hRXJnVzU3MDEwMGV1ZzFHTWNuOGRHZnJJR3VLZFlHTFZhR1BlU25ESkNCdmVHNzJGVEdkd1JxZjFabDRSZDg0NFdPTnY1amtzODctM2NFYjJoaUpXZGFhczZoT0d3aFQ5b3k4NktWOWVyRTZuQXhfUnlxRzQ?oc=5",
-      "published": "2026-09-25T11:55:00+00:00",
+      "title": "竜王戦七番勝負で藤井聡太竜王に挑む富山出身の服部慎一郎七段を応援、縁の深い魚津市で１０月１０日に第１局のパブリックビューイング開催 - 読売新聞",
+      "summary": "竜王戦七番勝負で藤井聡太竜王に挑む富山出身の服部慎一郎七段を応援、縁の深い魚津市で１０月１０日に第１局のパブリックビューイング開催 読売新聞",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9aSGRZWnFqUXZsQXdCVU14T0ZBWk83emRzWk1CU2VGX3l5bDlHc21VSWExLU5hUEFoMlNyY0RmMDdkRm01dFhIaGVLd1RLRGoxbUg0RDZlQ3JKX1Brd254MTJhdEJycE1NcHduT1RNVQ?oc=5",
+      "published": "2026-09-25T13:25:00+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -596,10 +591,10 @@
       "provider": null,
       "topic": "ビジネス",
       "sourceWeight": 3,
-      "title": "統合ビルセキュリティーシステム「MELSAFETY-R(メルセーフティー アール)」発売 - PR TIMES",
-      "summary": "統合ビルセキュリティーシステム「MELSAFETY-R(メルセーフティー アール)」発売 PR TIMES",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBhQk1KeVlzLTloU0NkaW5xMWpWVDRPWmRNdERwQ2R3Zld3N2FTejk4d2lIZ3ctUWZEX2gtdDRoN1VGV2pFd1BJMmhpRGtDaVJ3M3VSbXZxZ3JmNnB6T0ZPZUNoWWIycVVrYmc?oc=5",
-      "published": "2026-09-25T02:04:37+00:00",
+      "title": "統合ビルセキュリティーシステム「MELSAFETY-R(メルセーフティー アール)」発売 - ニコニコニュース",
+      "summary": "統合ビルセキュリティーシステム「MELSAFETY-R(メルセーフティー アール)」発売 ニコニコニュース",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5ZX3JKQkhXYXRSRGJzRXBYUGItaWtoNlQyeWE3ZlU2UmJWalpHOS1WbW5iemRhNnNRU0Z3NGhOdXlsQWoxX0dYaFRUMWl6X3JSbThVaWFQcW9yY0NFODMzdzFjc0VXREljNm9wa09oXzhPNXRhNlZ2U2lsSQ?oc=5",
+      "published": "2026-09-25T09:15:26+00:00",
       "score": 2,
       "tags": [
         "SNS",
@@ -654,8 +649,8 @@
       "provider": null,
       "topic": "ゲーム",
       "sourceWeight": 3,
-      "title": "『蒼き雷霆 ガンヴォルト トライアングルエディション Nintendo Switch 2 Edition』限定版BOX描き下ろしイラスト公開！ - GameWith",
-      "summary": "『蒼き雷霆 ガンヴォルト トライアングルエディション Nintendo Switch 2 Edition』限定版BOX描き下ろしイラスト公開！ GameWith",
+      "title": "『蒼き雷霆 ガンヴォルト トライアングルエディション Nintendo Switch 2 Edition』限定版BOX描き下ろしイラスト公開！ - gamewith.jp",
+      "summary": "『蒼き雷霆 ガンヴォルト トライアングルエディション Nintendo Switch 2 Edition』限定版BOX描き下ろしイラスト公開！ gamewith.jp",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5DUmtyWk9MRDRNMjlsUkRaYTY1bjFpN01nWUNNSU5CRzdOcW1GSGRSNUhmOVhmcGR2d0JqU3lOdGFRMGZ5ZzFYejFGZkVaQWFVUHRFWTJiRUhnQ1k?oc=5",
       "published": "2026-09-25T04:49:27+00:00",
       "score": 2,
@@ -754,33 +749,14 @@
       "provider": null,
       "topic": "ビジネス",
       "sourceWeight": 3,
-      "title": "HENNGE One、個人情報・情報資産管理プラットフォーム「Flows」と SSO 連携 - scan.netsecurity.ne.jp",
-      "summary": "HENNGE One、個人情報・情報資産管理プラットフォーム「Flows」と SSO 連携 scan.netsecurity.ne.jp",
+      "title": "HENNGE One、個人情報・情報資産管理プラットフォーム「Flows」と SSO 連携 - ScanNetSecurity",
+      "summary": "HENNGE One、個人情報・情報資産管理プラットフォーム「Flows」と SSO 連携 ScanNetSecurity",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5kYVhuNDhuSWNubWwwUGkzai1qU1JBOENXemE5aFlORHJZWFVWY25FQW9LWkxYeXdYcHRDemZvU3ZYTnlQdEtNZHlnVEY3Tl9CMHRvU0pQNkhFRXd0RnMwVWRlSjg2NWdCSHRSeQ?oc=5",
       "published": "2026-09-24T23:00:06+00:00",
       "score": 2,
       "tags": [
         "SNS",
         "重要"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
-      "source": "news-sports-jp",
-      "platform": "Google News",
-      "label": "日本ニュース スポーツ",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "スポーツ",
-      "sourceWeight": 3,
-      "title": "Bリーグ - B.PREMIER - テキスト速報 - スポーツナビ",
-      "summary": "Bリーグ - B.PREMIER - テキスト速報 スポーツナビ",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFByT0dzNXBVZjRwRFd4cVVnQXdPclVfdFFscTNjNkVvYU11b2xiU256Ty1GRncwa1EwdEo2bXFJMktlS0lCYmhDdDBLQi13aXdBRGwtUDNvY3lNb0NxSUpCaklWX1ctZms3QmV1WFE3UWoxRjdu?oc=5",
-      "published": "2026-09-25T13:36:32+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
       ],
       "regionScore": 2,
       "region": "日本語優先"
@@ -854,6 +830,44 @@
       "summary": "情報力、２８日有識者初会合 政府、活動の重点方針決定 時事ドットコム",
       "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAzekN5S1NwUVBGTlJWYkJQekd4dEU5RldNcVduSC1yOTlDaE5GbG9Od2Rhbk5vd2tQbUxIVG44dzlDYUM5TzRGUi16NU95Rk1nNzJLQTZUQkJFQUhjellaVXZQVQ?oc=5",
       "published": "2026-09-25T12:03:00+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-sports-jp",
+      "platform": "Google News",
+      "label": "日本ニュース スポーツ",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "スポーツ",
+      "sourceWeight": 3,
+      "title": "プロ野球速報：試合結果・順位 - 道新スポーツ",
+      "summary": "プロ野球速報：試合結果・順位 道新スポーツ",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPV2drcnNWQ0tReTgxQk01TzBMdTlzNEVSVVZ6ek10OWNDS2I3cXBBNDkzbTA5UFVjZ19nbXkzTlVrMzlvLUx3RGR5blh6bzJLWjJtYU5GOFc2d0tjYXhuSkZJUnRldXZJVWUyNVE3elZySDl2SlRXbUtDNjRPdU11ZzR5T0Ytd20zSm1CcFJRYjQyMWJOMTAwNjQwSmRyTUIwbXBIQmR1YVBvR2RzWDRtdGRST2xYY3p6NFAxS1NsRW8?oc=5",
+      "published": "2026-09-25T12:01:33+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-toyama-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 富山",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "富山",
+      "sourceWeight": 3,
+      "title": "富山市の国勢調査過大報告問題 市議会が説明求めるも市側「総務省の審査に関わるため回答差し控える」 富山県富山市 - Yahoo!ニュース",
+      "summary": "富山市の国勢調査過大報告問題 市議会が説明求めるも市側「総務省の審査に関わるため回答差し控える」 富山県富山市 Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9PaG9hRXJnVzU3MDEwMGV1ZzFHTWNuOGRHZnJJR3VLZFlHTFZhR1BlU25ESkNCdmVHNzJGVEdkd1JxZjFabDRSZDg0NFdPTnY1amtzODctM2NFYjJoaUpXZGFhczZoT0d3aFQ5b3k4NktWOWVyRTZuQXhfUnlxRzQ?oc=5",
+      "published": "2026-09-25T11:55:00+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -987,6 +1001,25 @@
       "summary": "政府、情報活動強化へ２８日に有識者会合 沖縄タイムス社",
       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE45aXNkXzR2djJtSXBEaS00MlBnNXEydnVab1FRdVVGb1Fpam5QSDUxV0dxQlRETWlucDZsSnJ4dzJXNXRmWHZ5THdZcDFxZTZSSjBTSGNPcE5KbTVXZEE?oc=5",
       "published": "2026-09-25T10:35:06+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-sports-jp",
+      "platform": "Google News",
+      "label": "日本ニュース スポーツ",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "スポーツ",
+      "sourceWeight": 3,
+      "title": "民間企業が置き型授乳室をスポーツセンターに寄贈 横浜市（tvkニュース（テレビ神奈川）） - Yahoo!ニュース",
+      "summary": "民間企業が置き型授乳室をスポーツセンターに寄贈 横浜市（tvkニュース（テレビ神奈川）） Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE4tREttY25vQTVFanpwbUU4eE96Q1AzN0NFNmZ5N1NyUjVYQ1ZoT2xsbFdxUnBWUzh1OGs3clVMenRxZUc1WDEwTFRtN2xmREViVndsVWs5cmxyV3Z5WGVyM1JaTUgxYkJfSFNDUUdFR1BBakpVdWMtSTBDZ0JCMFU?oc=5",
+      "published": "2026-09-25T10:33:02+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -1204,25 +1237,6 @@
       "region": "日本語優先"
     },
     {
-      "source": "news-toyama-jp",
-      "platform": "Google News",
-      "label": "日本ニュース 富山",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "富山",
-      "sourceWeight": 3,
-      "title": "五箇山に伝わる古代民謡「こきりこ」の祭典始まる 富山県南砺市で26日まで - 中日新聞Web",
-      "summary": "五箇山に伝わる古代民謡「こきりこ」の祭典始まる 富山県南砺市で26日まで 中日新聞Web",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE00NVdMNFVoSXIxdG90ajBlYzJZRVMxYXJKVkxtN0wwTnVfeXQwZ1NLYllrbVMxMG9zWmxPRlBsZWNwak95bmpueWpjYUo3MFh0d0RVbw?oc=5",
-      "published": "2026-09-25T09:17:25+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
       "source": "news-entertainment-jp",
       "platform": "Google News",
       "label": "日本ニュース エンタメ",
@@ -1310,6 +1324,25 @@
       "summary": "JR九州、ポイント経済圏「ウイング広げる」 SBIと金融サービス 日本経済新聞",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1FZXlHT3haTFo3djBIVm9MVjZCMHdMMDlvZDkyQjViNEgwYi1XRWF1S1o4dTh1aVczLXB5WE1nTkJ3UFN0WHV3OEZOMFBGOW9fckxETzhMSDA0eXdxVUdwbE56ZGR3dzlFM2JIbg?oc=5",
       "published": "2026-09-25T08:56:11+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-politics-jp",
+      "platform": "Google News",
+      "label": "日本ニュース 政治",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "政治",
+      "sourceWeight": 3,
+      "title": "【中継】“親密”米中首脳会談「同盟国」発言も…日本政府の受け止め“冷静”（2026年9月25日掲載）｜日テレNEWS NNN - 日テレNEWS NNN",
+      "summary": "【中継】“親密”米中首脳会談「同盟国」発言も…日本政府の受け止め“冷静”（2026年9月25日掲載）｜日テレNEWS NNN 日テレNEWS NNN",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5VM1BWbS1jQWx6VXM4b1JROFdldlI1MHRVRWtMaDBoRzNUeGt0Tllob29GMU9ZRTZSazdNdmd4T05sWDZWQS1lOUxjU3JKemtkTzhLdzdlM09YZkdzd21Zb1pzcklBNzkzMkMyVDcxSVFEM3dYTTZSbFdFczU2dw?oc=5",
+      "published": "2026-09-25T08:54:00+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -1487,44 +1520,6 @@
       ],
       "regionScore": 2,
       "region": "日本語優先"
-    },
-    {
-      "source": "news-economy-jp",
-      "platform": "Google News",
-      "label": "日本ニュース 経済",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "経済",
-      "sourceWeight": 3,
-      "title": "【視察】経済調査会がマイクロン広島工場を視察 - 新・国民民主党",
-      "summary": "【視察】経済調査会がマイクロン広島工場を視察 新・国民民主党",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5PMjRtUkFtbkFiMjNNYmJ2Uk9lOUp5cHlzbHRNcWVPc0s1ZmxJNks3OG1ZMThIQlhmM0JrckdZaUF1elFrT2NJWkJTYTdNb3dLUi1BS3BDbGo2R1k?oc=5",
-      "published": "2026-09-25T08:06:07+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
-    },
-    {
-      "source": "news-business-jp",
-      "platform": "Google News",
-      "label": "日本ニュース ビジネス",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "ビジネス",
-      "sourceWeight": 3,
-      "title": "Enable Bootcampが実現する次世代人材育成—AIとフィードバックで成長を促すプログラム - voix.jp",
-      "summary": "Enable Bootcampが実現する次世代人材育成—AIとフィードバックで成長を促すプログラム voix.jp",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9GYXc1cFY0bWphZGlMXzdpdDZzcTNuaGd5ZXpMUTlLYXZiSzE2cl9HNXBiQXV2Ti1kMzU0ZzZKYy1YandEdUJlQjZhWk9mN2pubm95alQzSk9NMkRKeTJkMHNqaXhCcXRsbkM2Q2ZpZjByYkk?oc=5",
-      "published": "2026-09-25T07:52:31+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
     }
   ],
   "sources": [
@@ -1684,139 +1679,146 @@
     {
       "id": "news-ai-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T13:58:01.715261+00:00",
-      "lastAttemptAt": "2026-09-25T13:58:01.715261+00:00",
+      "lastSuccessAt": "2026-09-25T14:08:01.697015+00:00",
+      "lastAttemptAt": "2026-09-25T14:08:01.697015+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-economy-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T13:58:01.715261+00:00",
-      "lastAttemptAt": "2026-09-25T13:58:01.715261+00:00",
+      "lastSuccessAt": "2026-09-25T14:08:01.697015+00:00",
+      "lastAttemptAt": "2026-09-25T14:08:01.697015+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-disaster-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T13:58:01.715261+00:00",
-      "lastAttemptAt": "2026-09-25T13:58:01.715261+00:00",
+      "lastSuccessAt": "2026-09-25T14:08:01.697015+00:00",
+      "lastAttemptAt": "2026-09-25T14:08:01.697015+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-politics-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T13:58:01.715261+00:00",
-      "lastAttemptAt": "2026-09-25T13:58:01.715261+00:00",
+      "lastSuccessAt": "2026-09-25T14:08:01.697015+00:00",
+      "lastAttemptAt": "2026-09-25T14:08:01.697015+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-society-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T13:58:01.715261+00:00",
-      "lastAttemptAt": "2026-09-25T13:58:01.715261+00:00",
+      "lastSuccessAt": "2026-09-25T14:08:01.697015+00:00",
+      "lastAttemptAt": "2026-09-25T14:08:01.697015+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-world-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T13:58:01.715261+00:00",
-      "lastAttemptAt": "2026-09-25T13:58:01.715261+00:00",
+      "lastSuccessAt": "2026-09-25T14:08:01.697015+00:00",
+      "lastAttemptAt": "2026-09-25T14:08:01.697015+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-tech-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T13:58:01.715261+00:00",
-      "lastAttemptAt": "2026-09-25T13:58:01.715261+00:00",
+      "lastSuccessAt": "2026-09-25T14:08:01.697015+00:00",
+      "lastAttemptAt": "2026-09-25T14:08:01.697015+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-sports-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T13:58:01.715261+00:00",
-      "lastAttemptAt": "2026-09-25T13:58:01.715261+00:00",
+      "lastSuccessAt": "2026-09-25T14:08:01.697015+00:00",
+      "lastAttemptAt": "2026-09-25T14:08:01.697015+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-health-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T13:58:01.715261+00:00",
-      "lastAttemptAt": "2026-09-25T13:58:01.715261+00:00",
+      "lastSuccessAt": "2026-09-25T14:08:01.697015+00:00",
+      "lastAttemptAt": "2026-09-25T14:08:01.697015+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-toyama-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T13:58:01.715261+00:00",
-      "lastAttemptAt": "2026-09-25T13:58:01.715261+00:00",
+      "lastSuccessAt": "2026-09-25T14:08:01.697015+00:00",
+      "lastAttemptAt": "2026-09-25T14:08:01.697015+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-entertainment-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T13:58:01.715261+00:00",
-      "lastAttemptAt": "2026-09-25T13:58:01.715261+00:00",
+      "lastSuccessAt": "2026-09-25T14:08:01.697015+00:00",
+      "lastAttemptAt": "2026-09-25T14:08:01.697015+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-business-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T13:58:01.715261+00:00",
-      "lastAttemptAt": "2026-09-25T13:58:01.715261+00:00",
+      "lastSuccessAt": "2026-09-25T14:08:01.697015+00:00",
+      "lastAttemptAt": "2026-09-25T14:08:01.697015+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-life-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T13:58:01.715261+00:00",
-      "lastAttemptAt": "2026-09-25T13:58:01.715261+00:00",
+      "lastSuccessAt": "2026-09-25T14:08:01.697015+00:00",
+      "lastAttemptAt": "2026-09-25T14:08:01.697015+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-science-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T13:58:01.715261+00:00",
-      "lastAttemptAt": "2026-09-25T13:58:01.715261+00:00",
+      "lastSuccessAt": "2026-09-25T14:08:01.697015+00:00",
+      "lastAttemptAt": "2026-09-25T14:08:01.697015+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "news-game-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T13:58:01.715261+00:00",
-      "lastAttemptAt": "2026-09-25T13:58:01.715261+00:00",
+      "lastSuccessAt": "2026-09-25T14:08:01.697015+00:00",
+      "lastAttemptAt": "2026-09-25T14:08:01.697015+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "mastodon-ai",
-      "status": "fresh",
-      "lastSuccessAt": "2026-09-25T13:58:01.715261+00:00",
-      "lastAttemptAt": "2026-09-25T13:58:01.715261+00:00",
+      "status": "unavailable",
+      "lastSuccessAt": "2026-09-13T00:23:05.116061+00:00",
+      "lastAttemptAt": "2026-09-25T14:08:01.697015+00:00",
       "retryAfterAt": null,
-      "errorCode": null
+      "errorCode": "TimeoutError"
     },
     {
       "id": "mastodon-codex",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T13:58:01.715261+00:00",
-      "lastAttemptAt": "2026-09-25T13:58:01.715261+00:00",
+      "lastSuccessAt": "2026-09-25T14:08:01.697015+00:00",
+      "lastAttemptAt": "2026-09-25T14:08:01.697015+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "mastodon-ai",
+      "platform": "Mastodon",
+      "error": "The read operation timed out",
+      "fallbackItems": 0
+    }
+  ]
 }
