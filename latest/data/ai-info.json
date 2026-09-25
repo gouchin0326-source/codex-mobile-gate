@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-25T21:58:01.448851+00:00",
+  "updatedAt": "2026-09-25T22:08:01.765198+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -8,7 +8,7 @@
   "cards": [
     {
       "genre": "開発",
-      "count": 16,
+      "count": 15,
       "decision": "CG開発・GitHub運用へ反映候補",
       "signal": "GitHub Copilot app for Beginners: How to build custom workflows with canvases / GitHub Copilot weekly releases — September 21 / When chat is the wrong UI",
       "topUrl": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/",
@@ -24,7 +24,7 @@
     },
     {
       "genre": "AI",
-      "count": 6,
+      "count": 7,
       "decision": "AI/Codex運用の変化を確認",
       "signal": "Gemini 3.8 text-to-speech says hello / Proaction boosts sales 60% and saves 75+ hours with Codex / Two years of OpenAI Academy",
       "topUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
@@ -340,24 +340,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Expired GitHub Actions artifacts no longer shown in UI and API",
-      "summary": "Expired artifacts are no longer displayed in the GitHub Actions run summary or returned by the REST API. Previously, an expired artifact remained visible with an “Expired” pill, even though… The post Expired GitHub Actio",
-      "url": "https://github.blog/changelog/2026-09-24-expired-github-actions-artifacts-no-longer-shown-in-ui-and-api",
-      "published": "2026-09-24T19:13:02+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -537,6 +519,24 @@
         "論文",
         "研究"
       ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "DEEPO: Dual-Entropy Enhanced Policy Optimization for Hallucination in MLLMs",
+      "summary": "arXiv:2609.28570v1 Announce Type: new Abstract: Reinforcement learning (RL) is widely used to sharpen reasoning in multimodal large language models (MLLMs), yet its effect on hallucination is uneven. We trace this to two",
+      "url": "https://arxiv.org/abs/2609.28570",
+      "published": "2026-09-25T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
     }
   ],
   "providerWatch": {
@@ -699,5 +699,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-25T21:58:01.448851+00:00"
+  "lastSuccessAt": "2026-09-25T22:08:01.765198+00:00"
 }

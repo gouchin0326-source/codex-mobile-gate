@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-25T21:58:01.448851+00:00",
-  "lastSuccessAt": "2026-09-25T21:58:01.448851+00:00",
+  "updatedAt": "2026-09-25T22:08:01.765198+00:00",
+  "lastSuccessAt": "2026-09-25T22:08:01.765198+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -126,7 +126,7 @@
   "contexts": [
     {
       "genre": "開発",
-      "count": 16,
+      "count": 15,
       "signal": "GitHub Copilot app for Beginners: How to build custom workflows with canvases / GitHub Copilot weekly releases — September 21 / When chat is the wrong UI",
       "decision": "CG開発・GitHub運用へ反映候補",
       "topUrl": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/",
@@ -142,7 +142,7 @@
     },
     {
       "genre": "AI",
-      "count": 6,
+      "count": 7,
       "signal": "Gemini 3.8 text-to-speech says hello / Proaction boosts sales 60% and saves 75+ hours with Codex / Two years of OpenAI Academy",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
@@ -493,24 +493,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Expired GitHub Actions artifacts no longer shown in UI and API",
-      "summary": "Expired artifacts are no longer displayed in the GitHub Actions run summary or returned by the REST API. Previously, an expired artifact remained visible with an “Expired” pill, even though… The post Expired GitHub Actio",
-      "url": "https://github.blog/changelog/2026-09-24-expired-github-actions-artifacts-no-longer-shown-in-ui-and-api",
-      "published": "2026-09-24T19:13:02+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -743,70 +725,88 @@
         "AI",
         "重要"
       ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "How invideo improves color grading 3x with GPT‑6 Astra",
+      "summary": "With GPT‑6 Astra, invideo plans edits with greater precision, improves color correction and grading threefold, and produces 50 custom effects in one day.",
+      "url": "https://openai.com/index/invideo-builds-with-gpt-6-astra",
+      "published": "2026-09-23T12:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "制作"
+      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T21:58:01.448851+00:00",
-      "lastAttemptAt": "2026-09-25T21:58:01.448851+00:00",
+      "lastSuccessAt": "2026-09-25T22:08:01.765198+00:00",
+      "lastAttemptAt": "2026-09-25T22:08:01.765198+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T21:58:01.448851+00:00",
-      "lastAttemptAt": "2026-09-25T21:58:01.448851+00:00",
+      "lastSuccessAt": "2026-09-25T22:08:01.765198+00:00",
+      "lastAttemptAt": "2026-09-25T22:08:01.765198+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T21:58:01.448851+00:00",
-      "lastAttemptAt": "2026-09-25T21:58:01.448851+00:00",
+      "lastSuccessAt": "2026-09-25T22:08:01.765198+00:00",
+      "lastAttemptAt": "2026-09-25T22:08:01.765198+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T21:58:01.448851+00:00",
-      "lastAttemptAt": "2026-09-25T21:58:01.448851+00:00",
+      "lastSuccessAt": "2026-09-25T22:08:01.765198+00:00",
+      "lastAttemptAt": "2026-09-25T22:08:01.765198+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T21:58:01.448851+00:00",
-      "lastAttemptAt": "2026-09-25T21:58:01.448851+00:00",
+      "lastSuccessAt": "2026-09-25T22:08:01.765198+00:00",
+      "lastAttemptAt": "2026-09-25T22:08:01.765198+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T21:58:01.448851+00:00",
-      "lastAttemptAt": "2026-09-25T21:58:01.448851+00:00",
+      "lastSuccessAt": "2026-09-25T22:08:01.765198+00:00",
+      "lastAttemptAt": "2026-09-25T22:08:01.765198+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T21:58:01.448851+00:00",
-      "lastAttemptAt": "2026-09-25T21:58:01.448851+00:00",
+      "lastSuccessAt": "2026-09-25T22:08:01.765198+00:00",
+      "lastAttemptAt": "2026-09-25T22:08:01.765198+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-25T21:58:01.448851+00:00",
-      "lastAttemptAt": "2026-09-25T21:58:01.448851+00:00",
+      "lastSuccessAt": "2026-09-25T22:08:01.765198+00:00",
+      "lastAttemptAt": "2026-09-25T22:08:01.765198+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
