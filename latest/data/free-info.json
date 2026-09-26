@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-26T16:38:01.298571+00:00",
-  "lastSuccessAt": "2026-09-26T16:38:01.298571+00:00",
+  "updatedAt": "2026-09-26T20:41:52.195814+00:00",
+  "lastSuccessAt": "2026-09-26T20:41:52.195814+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,18 +143,18 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 2.0 - 16 km N of Pāhala, Hawaii / M 1.0 - 22 km NE of Minto, Alaska / M 2.4 - 64 km E of Pedro Bay, Alaska",
+      "signal": "M 1.0 - 12 km E of Desert Hot Springs, CA / M 4.4 - 65 km WSW of Ollagüe, Chile / M 2.6 - 17 km NE of Pāhala, Hawaii",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75043947",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339583",
       "score": 1
     },
     {
       "genre": "技術",
       "count": 1,
-      "signal": "Infecting the Steam Link with NixOS",
+      "signal": "The JavaScript Pun: tagged template literal",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://feyor.sh/blog/infecting-the-steam-link-with-nixos/",
-      "score": 1
+      "topUrl": "https://shukla.io/blog/2026-09/pun.html",
+      "score": 2
     }
   ],
   "items": [
@@ -216,6 +216,24 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "The JavaScript Pun: tagged template literal",
+      "summary": "Comments",
+      "url": "https://shukla.io/blog/2026-09/pun.html",
+      "published": "2026-09-26T15:37:12+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "開発"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -255,30 +273,13 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.0 - 16 km N of Pāhala, Hawaii",
-      "summary": "16 km N of Pāhala, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75043947",
-      "published": "2026-09-26T16:02:38.290000+00:00",
+      "title": "M 1.0 - 12 km E of Desert Hot Springs, CA",
+      "summary": "12 km E of Desert Hot Springs, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339583",
+      "published": "2026-09-26T19:52:26.150000+00:00",
       "score": 1,
       "tags": [
         "災害"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "ゲーム",
-      "sourceWeight": 1,
-      "title": "Infecting the Steam Link with NixOS",
-      "summary": "Comments",
-      "url": "https://feyor.sh/blog/infecting-the-steam-link-with-nixos/",
-      "published": "2026-09-26T13:45:59+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
       ]
     },
     {
@@ -664,10 +665,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.0 - 22 km NE of Minto, Alaska",
-      "summary": "22 km NE of Minto, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tcfkpt",
-      "published": "2026-09-26T15:46:04.157000+00:00",
+      "title": "M 4.4 - 65 km WSW of Ollagüe, Chile",
+      "summary": "65 km WSW of Ollagüe, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txut",
+      "published": "2026-09-26T19:48:11.508000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -677,10 +678,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.4 - 64 km E of Pedro Bay, Alaska",
-      "summary": "64 km E of Pedro Bay, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tcfgwi",
-      "published": "2026-09-26T15:42:17.302000+00:00",
+      "title": "M 2.6 - 17 km NE of Pāhala, Hawaii",
+      "summary": "17 km NE of Pāhala, Hawaii",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txux",
+      "published": "2026-09-26T19:41:54.851000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -690,10 +691,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.9 - 5 km N of Pāhala, Hawaii",
-      "summary": "5 km N of Pāhala, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75043942",
-      "published": "2026-09-26T15:25:55.620000+00:00",
+      "title": "M 2.5 - 1 km NW of Pāhala, Hawaii",
+      "summary": "1 km NW of Pāhala, Hawaii",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75043997",
+      "published": "2026-09-26T19:41:06.430000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -703,10 +704,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.3 - 82 km NNW of Karluk, Alaska",
-      "summary": "82 km NNW of Karluk, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tcensm",
-      "published": "2026-09-26T15:19:39.854000+00:00",
+      "title": "M 5.0 - 52 km NNW of Ruteng, Indonesia",
+      "summary": "52 km NNW of Ruteng, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txur",
+      "published": "2026-09-26T19:37:01.212000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -717,64 +718,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T16:38:01.298571+00:00",
-      "lastAttemptAt": "2026-09-26T16:38:01.298571+00:00",
+      "lastSuccessAt": "2026-09-26T20:41:52.195814+00:00",
+      "lastAttemptAt": "2026-09-26T20:41:52.195814+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T16:38:01.298571+00:00",
-      "lastAttemptAt": "2026-09-26T16:38:01.298571+00:00",
+      "lastSuccessAt": "2026-09-26T20:41:52.195814+00:00",
+      "lastAttemptAt": "2026-09-26T20:41:52.195814+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T16:38:01.298571+00:00",
-      "lastAttemptAt": "2026-09-26T16:38:01.298571+00:00",
+      "lastSuccessAt": "2026-09-26T20:41:52.195814+00:00",
+      "lastAttemptAt": "2026-09-26T20:41:52.195814+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T16:38:01.298571+00:00",
-      "lastAttemptAt": "2026-09-26T16:38:01.298571+00:00",
+      "lastSuccessAt": "2026-09-26T20:41:52.195814+00:00",
+      "lastAttemptAt": "2026-09-26T20:41:52.195814+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T16:38:01.298571+00:00",
-      "lastAttemptAt": "2026-09-26T16:38:01.298571+00:00",
+      "lastSuccessAt": "2026-09-26T20:41:52.195814+00:00",
+      "lastAttemptAt": "2026-09-26T20:41:52.195814+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T16:38:01.298571+00:00",
-      "lastAttemptAt": "2026-09-26T16:38:01.298571+00:00",
+      "lastSuccessAt": "2026-09-26T20:41:52.195814+00:00",
+      "lastAttemptAt": "2026-09-26T20:41:52.195814+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T16:38:01.298571+00:00",
-      "lastAttemptAt": "2026-09-26T16:38:01.298571+00:00",
+      "lastSuccessAt": "2026-09-26T20:41:52.195814+00:00",
+      "lastAttemptAt": "2026-09-26T20:41:52.195814+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T16:38:01.298571+00:00",
-      "lastAttemptAt": "2026-09-26T16:38:01.298571+00:00",
+      "lastSuccessAt": "2026-09-26T20:41:52.195814+00:00",
+      "lastAttemptAt": "2026-09-26T20:41:52.195814+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

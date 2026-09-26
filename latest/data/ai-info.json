@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-26T16:38:01.298571+00:00",
+  "updatedAt": "2026-09-26T20:41:52.195814+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -26,9 +26,9 @@
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "Infecting the Steam Link with NixOS",
-      "topUrl": "https://feyor.sh/blog/infecting-the-steam-link-with-nixos/",
-      "score": 1
+      "signal": "The JavaScript Pun: tagged template literal",
+      "topUrl": "https://shukla.io/blog/2026-09/pun.html",
+      "score": 2
     }
   ],
   "focus": [
@@ -365,6 +365,24 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "The JavaScript Pun: tagged template literal",
+      "summary": "Comments",
+      "url": "https://shukla.io/blog/2026-09/pun.html",
+      "published": "2026-09-26T15:37:12+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "開発"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -502,24 +520,6 @@
       "summary": "MentalHealthBench is an expert-informed benchmark for evaluating helpful and safe AI responses across realistic mental health conversations.",
       "url": "https://openai.com/index/introducing-mentalhealthbench",
       "published": "2026-09-23T10:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "研究"
-      ]
-    },
-    {
-      "source": "google-gemini",
-      "platform": "AI",
-      "label": "Gemini公式",
-      "genre": "AI",
-      "provider": "gemini",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
-      "summary": "Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking are our most advanced live dialogue models yet, built for natural conversation.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
-      "published": "2026-09-15T17:00:00+00:00",
       "score": 2,
       "tags": [
         "AI",
@@ -699,5 +699,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-26T16:38:01.298571+00:00"
+  "lastSuccessAt": "2026-09-26T20:41:52.195814+00:00"
 }
