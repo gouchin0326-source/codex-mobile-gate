@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-26T15:38:01.621594+00:00",
-  "lastSuccessAt": "2026-09-26T15:38:01.621594+00:00",
+  "updatedAt": "2026-09-26T15:48:01.795305+00:00",
+  "lastSuccessAt": "2026-09-26T15:48:01.795305+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 1.9 - 5 km N of Pāhala, Hawaii / M 1.3 - 82 km NNW of Karluk, Alaska / M 3.2 - 40 km SE of Esperanza, Puerto Rico",
+      "signal": "M 1.0 - 22 km NE of Minto, Alaska / M 2.4 - 64 km E of Pedro Bay, Alaska / M 1.9 - 5 km N of Pāhala, Hawaii",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75043942",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tcfkpt",
       "score": 1
     },
     {
@@ -255,10 +255,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.9 - 5 km N of Pāhala, Hawaii",
-      "summary": "5 km N of Pāhala, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75043942",
-      "published": "2026-09-26T15:25:55.620000+00:00",
+      "title": "M 1.0 - 22 km NE of Minto, Alaska",
+      "summary": "22 km NE of Minto, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tcfkpt",
+      "published": "2026-09-26T15:46:04.157000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -664,6 +664,32 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 2.4 - 64 km E of Pedro Bay, Alaska",
+      "summary": "64 km E of Pedro Bay, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tcfgwi",
+      "published": "2026-09-26T15:42:17.302000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.9 - 5 km N of Pāhala, Hawaii",
+      "summary": "5 km N of Pāhala, Hawaii",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75043942",
+      "published": "2026-09-26T15:25:55.620000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 1.3 - 82 km NNW of Karluk, Alaska",
       "summary": "82 km NNW of Karluk, Alaska",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tcensm",
@@ -685,96 +711,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 5.1 - 74 km ENE of Tadine, New Caledonia",
-      "summary": "74 km ENE of Tadine, New Caledonia",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txtn",
-      "published": "2026-09-26T15:01:36.433000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.2 - 3 km NNE of Houston, Alaska",
-      "summary": "3 km NNE of Houston, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tccqgl",
-      "published": "2026-09-26T14:22:36.441000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T15:38:01.621594+00:00",
-      "lastAttemptAt": "2026-09-26T15:38:01.621594+00:00",
+      "lastSuccessAt": "2026-09-26T15:48:01.795305+00:00",
+      "lastAttemptAt": "2026-09-26T15:48:01.795305+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T15:38:01.621594+00:00",
-      "lastAttemptAt": "2026-09-26T15:38:01.621594+00:00",
+      "lastSuccessAt": "2026-09-26T15:48:01.795305+00:00",
+      "lastAttemptAt": "2026-09-26T15:48:01.795305+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T15:38:01.621594+00:00",
-      "lastAttemptAt": "2026-09-26T15:38:01.621594+00:00",
+      "lastSuccessAt": "2026-09-26T15:48:01.795305+00:00",
+      "lastAttemptAt": "2026-09-26T15:48:01.795305+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T15:38:01.621594+00:00",
-      "lastAttemptAt": "2026-09-26T15:38:01.621594+00:00",
+      "lastSuccessAt": "2026-09-26T15:48:01.795305+00:00",
+      "lastAttemptAt": "2026-09-26T15:48:01.795305+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T15:38:01.621594+00:00",
-      "lastAttemptAt": "2026-09-26T15:38:01.621594+00:00",
+      "lastSuccessAt": "2026-09-26T15:48:01.795305+00:00",
+      "lastAttemptAt": "2026-09-26T15:48:01.795305+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T15:38:01.621594+00:00",
-      "lastAttemptAt": "2026-09-26T15:38:01.621594+00:00",
+      "lastSuccessAt": "2026-09-26T15:48:01.795305+00:00",
+      "lastAttemptAt": "2026-09-26T15:48:01.795305+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T15:38:01.621594+00:00",
-      "lastAttemptAt": "2026-09-26T15:38:01.621594+00:00",
+      "lastSuccessAt": "2026-09-26T15:48:01.795305+00:00",
+      "lastAttemptAt": "2026-09-26T15:48:01.795305+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T15:38:01.621594+00:00",
-      "lastAttemptAt": "2026-09-26T15:38:01.621594+00:00",
+      "lastSuccessAt": "2026-09-26T15:48:01.795305+00:00",
+      "lastAttemptAt": "2026-09-26T15:48:01.795305+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
