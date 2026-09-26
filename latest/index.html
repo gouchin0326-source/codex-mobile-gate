@@ -375,6 +375,10 @@
     .game-card.puzzle { background:linear-gradient(145deg,#312e81,#7c3aed); }
     .game-card.brain { background:linear-gradient(145deg,#075985,#0f766e); }
     .game-card.arcade { background:linear-gradient(145deg,#713f12,#ca8a04); }
+    .godot-frame { display:block; width:100%; height:min(70vh,720px); min-height:390px; border:0; border-radius:14px; background:#090d1c; }
+    .godot-actions { display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 14px; }
+    .godot-action { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:8px 14px; border-radius:10px; background:#172033; color:#fff; font-weight:900; text-decoration:none; }
+    .godot-action.apk { background:#15803d; }
     .shelf-title { display:flex; justify-content:space-between; align-items:end; margin:10px 0 7px; }
     .shelf-title h2 { margin:0; }
     .shelf-title small { color:var(--muted); }
@@ -598,7 +602,7 @@
 
     .tabs {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 6px;
     }
 
@@ -676,7 +680,7 @@
     .cow-file small { color:var(--muted); }
     .cow-file button { min-height:36px; border:1px solid #2563eb; border-radius:8px; background:#2563eb; color:#fff; font:inherit; font-weight:900; padding:6px 10px; }
 
-    @media(max-width:560px){.setting-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.setting-pill{padding:6px;min-height:58px}.setting-pill b{font-size:.76rem}.setting-pill span{font-size:.62rem}.play-now{min-height:132px}.play-now-copy{padding:14px}.play-now-copy strong{font-size:1.3rem}.play-now-mark{font-size:3.2rem}.game-shelf{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.game-card{min-height:96px;padding:9px}}
+    @media(max-width:560px){.setting-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.setting-pill{padding:6px;min-height:58px}.setting-pill b{font-size:.76rem}.setting-pill span{font-size:.62rem}.play-now{min-height:132px}.play-now-copy{padding:14px}.play-now-copy strong{font-size:1.3rem}.play-now-mark{font-size:3.2rem}.game-shelf{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.game-card{min-height:96px;padding:9px}.godot-frame{height:68vh;min-height:330px}}
   </style>
 </head>
 <body>
@@ -704,6 +708,7 @@
     <section>
       <div class="tabs" role="tablist" aria-label="CGアプリ分類">
         <button class="tab" type="button" role="tab" aria-selected="true" data-tab="zero">遊ぶ</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-tab="godot">GODOT</button>
         <button class="tab" type="button" role="tab" aria-selected="false" data-tab="codex">Codex</button>
         <button class="tab" type="button" role="tab" aria-selected="false" data-tab="archive">書庫</button>
         <button class="tab" type="button" role="tab" aria-selected="false" data-tab="settings">設定</button>
@@ -733,6 +738,16 @@
         <a class="app-icon updated" data-health-icon href="./gate-health/index.html"><b class="glyph g-tool">監</b><span>CG監視</span></a>
         <a class="app-icon updated" href="./zero-token-army/index.html"><b class="glyph g-data">0</b><span>無料管理</span></a>
       </div>
+    </section>
+
+    <section class="tab-panel" id="tab-godot">
+      <div class="shelf-title"><h2>GODOT</h2><small>アプリ起動・その場でプレイ</small></div>
+      <iframe class="godot-frame" id="godot-frame" title="Gravity Canvas — GODOTゲーム" data-src="./projects/gravity-canvas/index.html" allow="fullscreen; gamepad" allowfullscreen loading="lazy"></iframe>
+      <div class="godot-actions">
+        <a class="godot-action" href="./projects/gravity-canvas/index.html" target="_blank" rel="noopener">別画面で起動</a>
+        <a class="godot-action apk" href="./projects/gravity-canvas/GravityCanvas.apk" download>Android APKをダウンロード</a>
+      </div>
+      <p>ドラッグで重力場を置き、粒子を受け皿へ導くパズルです。Web版はこの画面ですぐ遊べます。</p>
     </section>
 
     <section class="tab-panel" id="tab-codex">
@@ -825,7 +840,7 @@
       forceUpdate().catch(() => location.reload());
     });
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("sw.js?v=202609141418", { updateViaCache: "none" }).catch(() => {});
+      navigator.serviceWorker.register("sw.js?v=202609270830", { updateViaCache: "none" }).catch(() => {});
     }
     function activateTab(name) {
       document.querySelectorAll(".tab").forEach((tab) => {
@@ -834,6 +849,13 @@
       document.querySelectorAll(".tab-panel").forEach((panel) => {
         panel.classList.toggle("active", panel.id === `tab-${name}`);
       });
+      if (name === "godot") {
+        const frame = document.querySelector("#godot-frame");
+        if (frame && !frame.dataset.started) {
+          frame.src = frame.dataset.src;
+          frame.dataset.started = "true";
+        }
+      }
       localStorage.setItem("cg-tab", name);
     }
     document.querySelectorAll(".tab").forEach((tab) => {
