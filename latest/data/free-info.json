@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-26T10:48:02.358166+00:00",
-  "lastSuccessAt": "2026-09-26T10:48:02.358166+00:00",
+  "updatedAt": "2026-09-26T10:58:03.268947+00:00",
+  "lastSuccessAt": "2026-09-26T10:58:03.268947+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 4.9 - 73 km ENE of Tadine, New Caledonia / M 0.0 - 12 km W of Anza, CA / M 0.4 - 9 km WNW of Anza, CA",
+      "signal": "M 0.2 - 9 km WNW of Anza, CA / M 2.5 - 52 km NNW of Petersville, Alaska / M 4.9 - 73 km ENE of Tadine, New Caledonia",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txse",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339447",
       "score": 1
     },
     {
@@ -255,10 +255,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 4.9 - 73 km ENE of Tadine, New Caledonia",
-      "summary": "73 km ENE of Tadine, New Caledonia",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txse",
-      "published": "2026-09-26T10:21:05.896000+00:00",
+      "title": "M 0.2 - 9 km WNW of Anza, CA",
+      "summary": "9 km WNW of Anza, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339447",
+      "published": "2026-09-26T10:47:41.970000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -664,6 +664,32 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 2.5 - 52 km NNW of Petersville, Alaska",
+      "summary": "52 km NNW of Petersville, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tbvlmd",
+      "published": "2026-09-26T10:47:13.728000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 4.9 - 73 km ENE of Tadine, New Caledonia",
+      "summary": "73 km ENE of Tadine, New Caledonia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txse",
+      "published": "2026-09-26T10:21:05.896000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 0.0 - 12 km W of Anza, CA",
       "summary": "12 km W of Anza, CA",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339439",
@@ -685,96 +711,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.2 - 27 km E of Coso Junction, CA",
-      "summary": "27 km E of Coso Junction, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339423",
-      "published": "2026-09-26T10:03:48.470000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.0 - 13 km SSW of Tennant, CA",
-      "summary": "13 km SSW of Tennant, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442327",
-      "published": "2026-09-26T09:54:32.440000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T10:48:02.358166+00:00",
-      "lastAttemptAt": "2026-09-26T10:48:02.358166+00:00",
+      "lastSuccessAt": "2026-09-26T10:58:03.268947+00:00",
+      "lastAttemptAt": "2026-09-26T10:58:03.268947+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T10:48:02.358166+00:00",
-      "lastAttemptAt": "2026-09-26T10:48:02.358166+00:00",
+      "lastSuccessAt": "2026-09-26T10:58:03.268947+00:00",
+      "lastAttemptAt": "2026-09-26T10:58:03.268947+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T10:48:02.358166+00:00",
-      "lastAttemptAt": "2026-09-26T10:48:02.358166+00:00",
+      "lastSuccessAt": "2026-09-26T10:58:03.268947+00:00",
+      "lastAttemptAt": "2026-09-26T10:58:03.268947+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T10:48:02.358166+00:00",
-      "lastAttemptAt": "2026-09-26T10:48:02.358166+00:00",
+      "lastSuccessAt": "2026-09-26T10:58:03.268947+00:00",
+      "lastAttemptAt": "2026-09-26T10:58:03.268947+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T10:48:02.358166+00:00",
-      "lastAttemptAt": "2026-09-26T10:48:02.358166+00:00",
+      "lastSuccessAt": "2026-09-26T10:58:03.268947+00:00",
+      "lastAttemptAt": "2026-09-26T10:58:03.268947+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T10:48:02.358166+00:00",
-      "lastAttemptAt": "2026-09-26T10:48:02.358166+00:00",
+      "lastSuccessAt": "2026-09-26T10:58:03.268947+00:00",
+      "lastAttemptAt": "2026-09-26T10:58:03.268947+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T10:48:02.358166+00:00",
-      "lastAttemptAt": "2026-09-26T10:48:02.358166+00:00",
+      "lastSuccessAt": "2026-09-26T10:58:03.268947+00:00",
+      "lastAttemptAt": "2026-09-26T10:58:03.268947+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T10:48:02.358166+00:00",
-      "lastAttemptAt": "2026-09-26T10:48:02.358166+00:00",
+      "lastSuccessAt": "2026-09-26T10:58:03.268947+00:00",
+      "lastAttemptAt": "2026-09-26T10:58:03.268947+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
