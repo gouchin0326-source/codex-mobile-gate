@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-26T21:18:02.074516+00:00",
-  "lastSuccessAt": "2026-09-26T21:18:02.074516+00:00",
+  "updatedAt": "2026-09-26T21:28:01.961822+00:00",
+  "lastSuccessAt": "2026-09-26T21:28:01.961822+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 2.3 - 15 km E of Nikiski, Alaska / M 2.8 - 17 km W of Charlotte, Texas / M 1.7 - 47 km SSE of King Salmon, Alaska",
+      "signal": "M 0.3 - 10 km WNW of The Geysers, CA / M 2.3 - 15 km E of Nikiski, Alaska / M 2.8 - 17 km W of Charlotte, Texas",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tcqjtm",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442597",
       "score": 1
     },
     {
@@ -273,10 +273,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.3 - 15 km E of Nikiski, Alaska",
-      "summary": "15 km E of Nikiski, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tcqjtm",
-      "published": "2026-09-26T21:14:55.930000+00:00",
+      "title": "M 0.3 - 10 km WNW of The Geysers, CA",
+      "summary": "10 km WNW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442597",
+      "published": "2026-09-26T21:18:30.410000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -665,6 +665,19 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 2.3 - 15 km E of Nikiski, Alaska",
+      "summary": "15 km E of Nikiski, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tcqjtm",
+      "published": "2026-09-26T21:14:55.930000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 2.8 - 17 km W of Charlotte, Texas",
       "summary": "17 km W of Charlotte, Texas",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026szoalq",
@@ -699,83 +712,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.0 - 12 km E of Desert Hot Springs, CA",
-      "summary": "12 km E of Desert Hot Springs, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339583",
-      "published": "2026-09-26T19:52:26.150000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T21:18:02.074516+00:00",
-      "lastAttemptAt": "2026-09-26T21:18:02.074516+00:00",
+      "lastSuccessAt": "2026-09-26T21:28:01.961822+00:00",
+      "lastAttemptAt": "2026-09-26T21:28:01.961822+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T21:18:02.074516+00:00",
-      "lastAttemptAt": "2026-09-26T21:18:02.074516+00:00",
+      "lastSuccessAt": "2026-09-26T21:28:01.961822+00:00",
+      "lastAttemptAt": "2026-09-26T21:28:01.961822+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T21:18:02.074516+00:00",
-      "lastAttemptAt": "2026-09-26T21:18:02.074516+00:00",
+      "lastSuccessAt": "2026-09-26T21:28:01.961822+00:00",
+      "lastAttemptAt": "2026-09-26T21:28:01.961822+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T21:18:02.074516+00:00",
-      "lastAttemptAt": "2026-09-26T21:18:02.074516+00:00",
+      "lastSuccessAt": "2026-09-26T21:28:01.961822+00:00",
+      "lastAttemptAt": "2026-09-26T21:28:01.961822+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T21:18:02.074516+00:00",
-      "lastAttemptAt": "2026-09-26T21:18:02.074516+00:00",
+      "lastSuccessAt": "2026-09-26T21:28:01.961822+00:00",
+      "lastAttemptAt": "2026-09-26T21:28:01.961822+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T21:18:02.074516+00:00",
-      "lastAttemptAt": "2026-09-26T21:18:02.074516+00:00",
+      "lastSuccessAt": "2026-09-26T21:28:01.961822+00:00",
+      "lastAttemptAt": "2026-09-26T21:28:01.961822+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T21:18:02.074516+00:00",
-      "lastAttemptAt": "2026-09-26T21:18:02.074516+00:00",
+      "lastSuccessAt": "2026-09-26T21:28:01.961822+00:00",
+      "lastAttemptAt": "2026-09-26T21:28:01.961822+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T21:18:02.074516+00:00",
-      "lastAttemptAt": "2026-09-26T21:18:02.074516+00:00",
+      "lastSuccessAt": "2026-09-26T21:28:01.961822+00:00",
+      "lastAttemptAt": "2026-09-26T21:28:01.961822+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
