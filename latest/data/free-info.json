@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-26T12:28:04.747181+00:00",
-  "lastSuccessAt": "2026-09-26T12:28:04.747181+00:00",
+  "updatedAt": "2026-09-26T12:38:07.403515+00:00",
+  "lastSuccessAt": "2026-09-26T12:38:07.403515+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,7 +143,7 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 1.0 - 6 km WNW of Calimesa, CA / M 1.4 - 18 km E of Little Lake, CA / M 1.3 - 8 km S of Chino Hills, CA",
+      "signal": "M 1.0 - 6 km WNW of Calimesa, CA / M 5.2 - 79 km NE of Tadine, New Caledonia / M 1.4 - 18 km E of Little Lake, CA",
       "decision": "更新あり。必要時だけ確認",
       "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339471",
       "score": 1
@@ -664,6 +664,19 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 5.2 - 79 km NE of Tadine, New Caledonia",
+      "summary": "79 km NE of Tadine, New Caledonia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txsz",
+      "published": "2026-09-26T12:14:20.672000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 1.4 - 18 km E of Little Lake, CA",
       "summary": "18 km E of Little Lake, CA",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339463",
@@ -698,83 +711,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.6 - 11 km N of Selah, Washington",
-      "summary": "11 km N of Selah, Washington",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714109972",
-      "published": "2026-09-26T11:56:24.820000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T12:28:04.747181+00:00",
-      "lastAttemptAt": "2026-09-26T12:28:04.747181+00:00",
+      "lastSuccessAt": "2026-09-26T12:38:07.403515+00:00",
+      "lastAttemptAt": "2026-09-26T12:38:07.403515+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T12:28:04.747181+00:00",
-      "lastAttemptAt": "2026-09-26T12:28:04.747181+00:00",
+      "lastSuccessAt": "2026-09-26T12:38:07.403515+00:00",
+      "lastAttemptAt": "2026-09-26T12:38:07.403515+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T12:28:04.747181+00:00",
-      "lastAttemptAt": "2026-09-26T12:28:04.747181+00:00",
+      "lastSuccessAt": "2026-09-26T12:38:07.403515+00:00",
+      "lastAttemptAt": "2026-09-26T12:38:07.403515+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T12:28:04.747181+00:00",
-      "lastAttemptAt": "2026-09-26T12:28:04.747181+00:00",
+      "lastSuccessAt": "2026-09-26T12:38:07.403515+00:00",
+      "lastAttemptAt": "2026-09-26T12:38:07.403515+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T12:28:04.747181+00:00",
-      "lastAttemptAt": "2026-09-26T12:28:04.747181+00:00",
+      "lastSuccessAt": "2026-09-26T12:38:07.403515+00:00",
+      "lastAttemptAt": "2026-09-26T12:38:07.403515+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T12:28:04.747181+00:00",
-      "lastAttemptAt": "2026-09-26T12:28:04.747181+00:00",
+      "lastSuccessAt": "2026-09-26T12:38:07.403515+00:00",
+      "lastAttemptAt": "2026-09-26T12:38:07.403515+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T12:28:04.747181+00:00",
-      "lastAttemptAt": "2026-09-26T12:28:04.747181+00:00",
+      "lastSuccessAt": "2026-09-26T12:38:07.403515+00:00",
+      "lastAttemptAt": "2026-09-26T12:38:07.403515+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T12:28:04.747181+00:00",
-      "lastAttemptAt": "2026-09-26T12:28:04.747181+00:00",
+      "lastSuccessAt": "2026-09-26T12:38:07.403515+00:00",
+      "lastAttemptAt": "2026-09-26T12:38:07.403515+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
