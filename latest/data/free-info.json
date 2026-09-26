@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-26T11:48:06.118351+00:00",
-  "lastSuccessAt": "2026-09-26T11:48:06.118351+00:00",
+  "updatedAt": "2026-09-26T11:58:16.646484+00:00",
+  "lastSuccessAt": "2026-09-26T11:58:16.646484+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 0.7 - 3 km S of Cobb, CA / M 1.5 - 8 km NW of Harding-Birch Lakes, Alaska / M 0.8 - 11 km WNW of The Geysers, CA",
+      "signal": "M 1.1 - 7 km NW of The Geysers, CA / M 1.7 - 21 km WNW of Seldovia, Alaska / M 0.7 - 3 km S of Cobb, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442347",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442352",
       "score": 1
     },
     {
@@ -255,10 +255,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.7 - 3 km S of Cobb, CA",
-      "summary": "3 km S of Cobb, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442347",
-      "published": "2026-09-26T11:46:11.850000+00:00",
+      "title": "M 1.1 - 7 km NW of The Geysers, CA",
+      "summary": "7 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442352",
+      "published": "2026-09-26T11:50:59.390000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -664,6 +664,32 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 1.7 - 21 km WNW of Seldovia, Alaska",
+      "summary": "21 km WNW of Seldovia, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tbxmml",
+      "published": "2026-09-26T11:48:19.695000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.7 - 3 km S of Cobb, CA",
+      "summary": "3 km S of Cobb, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442347",
+      "published": "2026-09-26T11:46:11.850000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 1.5 - 8 km NW of Harding-Birch Lakes, Alaska",
       "summary": "8 km NW of Harding-Birch Lakes, Alaska",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tbwtfi",
@@ -685,96 +711,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 4.7 - North Indian Ocean",
-      "summary": "North Indian Ocean",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txsh",
-      "published": "2026-09-26T10:53:15.123000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.2 - 9 km WNW of Anza, CA",
-      "summary": "9 km WNW of Anza, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339447",
-      "published": "2026-09-26T10:47:41.970000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T11:48:06.118351+00:00",
-      "lastAttemptAt": "2026-09-26T11:48:06.118351+00:00",
+      "lastSuccessAt": "2026-09-26T11:58:16.646484+00:00",
+      "lastAttemptAt": "2026-09-26T11:58:16.646484+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T11:48:06.118351+00:00",
-      "lastAttemptAt": "2026-09-26T11:48:06.118351+00:00",
+      "lastSuccessAt": "2026-09-26T11:58:16.646484+00:00",
+      "lastAttemptAt": "2026-09-26T11:58:16.646484+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T11:48:06.118351+00:00",
-      "lastAttemptAt": "2026-09-26T11:48:06.118351+00:00",
+      "lastSuccessAt": "2026-09-26T11:58:16.646484+00:00",
+      "lastAttemptAt": "2026-09-26T11:58:16.646484+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T11:48:06.118351+00:00",
-      "lastAttemptAt": "2026-09-26T11:48:06.118351+00:00",
+      "lastSuccessAt": "2026-09-26T11:58:16.646484+00:00",
+      "lastAttemptAt": "2026-09-26T11:58:16.646484+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T11:48:06.118351+00:00",
-      "lastAttemptAt": "2026-09-26T11:48:06.118351+00:00",
+      "lastSuccessAt": "2026-09-26T11:58:16.646484+00:00",
+      "lastAttemptAt": "2026-09-26T11:58:16.646484+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T11:48:06.118351+00:00",
-      "lastAttemptAt": "2026-09-26T11:48:06.118351+00:00",
+      "lastSuccessAt": "2026-09-26T11:58:16.646484+00:00",
+      "lastAttemptAt": "2026-09-26T11:58:16.646484+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T11:48:06.118351+00:00",
-      "lastAttemptAt": "2026-09-26T11:48:06.118351+00:00",
+      "lastSuccessAt": "2026-09-26T11:58:16.646484+00:00",
+      "lastAttemptAt": "2026-09-26T11:58:16.646484+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T11:48:06.118351+00:00",
-      "lastAttemptAt": "2026-09-26T11:48:06.118351+00:00",
+      "lastSuccessAt": "2026-09-26T11:58:16.646484+00:00",
+      "lastAttemptAt": "2026-09-26T11:58:16.646484+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
