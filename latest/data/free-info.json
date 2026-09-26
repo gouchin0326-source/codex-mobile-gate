@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-26T22:58:02.711247+00:00",
-  "lastSuccessAt": "2026-09-26T22:58:02.711247+00:00",
+  "updatedAt": "2026-09-26T23:08:01.798996+00:00",
+  "lastSuccessAt": "2026-09-26T23:08:01.798996+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 1.6 - 9 km WSW of Grapevine, CA / M 1.3 - 2 km NNW of The Geysers, CA / M 1.1 - 17 km N of Indio, CA",
+      "signal": "M 0.6 - 8 km WNW of Anza, CA / M 1.6 - 9 km WSW of Grapevine, CA / M 1.3 - 2 km NNW of The Geysers, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339615",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339623",
       "score": 1
     },
     {
@@ -273,10 +273,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.6 - 9 km WSW of Grapevine, CA",
-      "summary": "9 km WSW of Grapevine, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339615",
-      "published": "2026-09-26T22:06:10.260000+00:00",
+      "title": "M 0.6 - 8 km WNW of Anza, CA",
+      "summary": "8 km WNW of Anza, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339623",
+      "published": "2026-09-26T22:57:33.980000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -665,6 +665,19 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 1.6 - 9 km WSW of Grapevine, CA",
+      "summary": "9 km WSW of Grapevine, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339615",
+      "published": "2026-09-26T22:06:10.260000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 1.3 - 2 km NNW of The Geysers, CA",
       "summary": "2 km NNW of The Geysers, CA",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442622",
@@ -699,83 +712,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.1 - 11 km ESE of Chickaloon, Alaska",
-      "summary": "11 km ESE of Chickaloon, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tcrnff",
-      "published": "2026-09-26T21:48:54.721000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T22:58:02.711247+00:00",
-      "lastAttemptAt": "2026-09-26T22:58:02.711247+00:00",
+      "lastSuccessAt": "2026-09-26T23:08:01.798996+00:00",
+      "lastAttemptAt": "2026-09-26T23:08:01.798996+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T22:58:02.711247+00:00",
-      "lastAttemptAt": "2026-09-26T22:58:02.711247+00:00",
+      "lastSuccessAt": "2026-09-26T23:08:01.798996+00:00",
+      "lastAttemptAt": "2026-09-26T23:08:01.798996+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T22:58:02.711247+00:00",
-      "lastAttemptAt": "2026-09-26T22:58:02.711247+00:00",
+      "lastSuccessAt": "2026-09-26T23:08:01.798996+00:00",
+      "lastAttemptAt": "2026-09-26T23:08:01.798996+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T22:58:02.711247+00:00",
-      "lastAttemptAt": "2026-09-26T22:58:02.711247+00:00",
+      "lastSuccessAt": "2026-09-26T23:08:01.798996+00:00",
+      "lastAttemptAt": "2026-09-26T23:08:01.798996+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T22:58:02.711247+00:00",
-      "lastAttemptAt": "2026-09-26T22:58:02.711247+00:00",
+      "lastSuccessAt": "2026-09-26T23:08:01.798996+00:00",
+      "lastAttemptAt": "2026-09-26T23:08:01.798996+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T22:58:02.711247+00:00",
-      "lastAttemptAt": "2026-09-26T22:58:02.711247+00:00",
+      "lastSuccessAt": "2026-09-26T23:08:01.798996+00:00",
+      "lastAttemptAt": "2026-09-26T23:08:01.798996+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T22:58:02.711247+00:00",
-      "lastAttemptAt": "2026-09-26T22:58:02.711247+00:00",
+      "lastSuccessAt": "2026-09-26T23:08:01.798996+00:00",
+      "lastAttemptAt": "2026-09-26T23:08:01.798996+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T22:58:02.711247+00:00",
-      "lastAttemptAt": "2026-09-26T22:58:02.711247+00:00",
+      "lastSuccessAt": "2026-09-26T23:08:01.798996+00:00",
+      "lastAttemptAt": "2026-09-26T23:08:01.798996+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
