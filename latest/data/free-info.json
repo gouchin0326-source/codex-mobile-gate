@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-26T12:18:02.567663+00:00",
-  "lastSuccessAt": "2026-09-26T12:18:02.567663+00:00",
+  "updatedAt": "2026-09-26T12:28:04.747181+00:00",
+  "lastSuccessAt": "2026-09-26T12:28:04.747181+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 1.4 - 18 km E of Little Lake, CA / M 1.3 - 8 km S of Chino Hills, CA / M 3.1 - 4 km SW of Laupāhoehoe, Hawaii",
+      "signal": "M 1.0 - 6 km WNW of Calimesa, CA / M 1.4 - 18 km E of Little Lake, CA / M 1.3 - 8 km S of Chino Hills, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339463",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339471",
       "score": 1
     },
     {
@@ -255,10 +255,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.4 - 18 km E of Little Lake, CA",
-      "summary": "18 km E of Little Lake, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339463",
-      "published": "2026-09-26T12:07:40.850000+00:00",
+      "title": "M 1.0 - 6 km WNW of Calimesa, CA",
+      "summary": "6 km WNW of Calimesa, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339471",
+      "published": "2026-09-26T12:20:48.800000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -664,6 +664,19 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 1.4 - 18 km E of Little Lake, CA",
+      "summary": "18 km E of Little Lake, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339463",
+      "published": "2026-09-26T12:07:40.850000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 1.3 - 8 km S of Chino Hills, CA",
       "summary": "8 km S of Chino Hills, CA",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339455",
@@ -698,83 +711,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.1 - 7 km NW of The Geysers, CA",
-      "summary": "7 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442352",
-      "published": "2026-09-26T11:50:59.390000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T12:18:02.567663+00:00",
-      "lastAttemptAt": "2026-09-26T12:18:02.567663+00:00",
+      "lastSuccessAt": "2026-09-26T12:28:04.747181+00:00",
+      "lastAttemptAt": "2026-09-26T12:28:04.747181+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T12:18:02.567663+00:00",
-      "lastAttemptAt": "2026-09-26T12:18:02.567663+00:00",
+      "lastSuccessAt": "2026-09-26T12:28:04.747181+00:00",
+      "lastAttemptAt": "2026-09-26T12:28:04.747181+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T12:18:02.567663+00:00",
-      "lastAttemptAt": "2026-09-26T12:18:02.567663+00:00",
+      "lastSuccessAt": "2026-09-26T12:28:04.747181+00:00",
+      "lastAttemptAt": "2026-09-26T12:28:04.747181+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T12:18:02.567663+00:00",
-      "lastAttemptAt": "2026-09-26T12:18:02.567663+00:00",
+      "lastSuccessAt": "2026-09-26T12:28:04.747181+00:00",
+      "lastAttemptAt": "2026-09-26T12:28:04.747181+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T12:18:02.567663+00:00",
-      "lastAttemptAt": "2026-09-26T12:18:02.567663+00:00",
+      "lastSuccessAt": "2026-09-26T12:28:04.747181+00:00",
+      "lastAttemptAt": "2026-09-26T12:28:04.747181+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T12:18:02.567663+00:00",
-      "lastAttemptAt": "2026-09-26T12:18:02.567663+00:00",
+      "lastSuccessAt": "2026-09-26T12:28:04.747181+00:00",
+      "lastAttemptAt": "2026-09-26T12:28:04.747181+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T12:18:02.567663+00:00",
-      "lastAttemptAt": "2026-09-26T12:18:02.567663+00:00",
+      "lastSuccessAt": "2026-09-26T12:28:04.747181+00:00",
+      "lastAttemptAt": "2026-09-26T12:28:04.747181+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T12:18:02.567663+00:00",
-      "lastAttemptAt": "2026-09-26T12:18:02.567663+00:00",
+      "lastSuccessAt": "2026-09-26T12:28:04.747181+00:00",
+      "lastAttemptAt": "2026-09-26T12:28:04.747181+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
