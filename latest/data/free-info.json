@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-26T03:58:02.675716+00:00",
-  "lastSuccessAt": "2026-09-26T03:58:02.675716+00:00",
+  "updatedAt": "2026-09-26T04:08:02.264314+00:00",
+  "lastSuccessAt": "2026-09-26T04:08:02.264314+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -133,20 +133,20 @@
       "score": 4
     },
     {
-      "genre": "論文",
-      "count": 8,
-      "signal": "When Should Forecasting Agents Reason? Behavioral Stress Tests for Reliability Routing / PAWS: Policy-driven Agentic World Simulation / BaseCamp --- An Agentic AI Framework for Aut",
-      "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://arxiv.org/abs/2609.28475",
-      "score": 3
-    },
-    {
       "genre": "AI",
-      "count": 7,
+      "count": 11,
       "signal": "Gemini 3.8 text-to-speech says hello / Proaction boosts sales 60% and saves 75+ hours with Codex / Two years of OpenAI Academy",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
       "score": 3
+    },
+    {
+      "genre": "災害",
+      "count": 5,
+      "signal": "M 2.7 - 10 km W of Boonville, CA / M 0.8 - 8 km WNW of The Geysers, CA / M 3.7 - 10 km W of Boonville, CA",
+      "decision": "更新あり。必要時だけ確認",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442217",
+      "score": 1
     },
     {
       "genre": "技術",
@@ -154,14 +154,6 @@
       "signal": "We’re gonna need a lot more mathematicians",
       "decision": "更新あり。必要時だけ確認",
       "topUrl": "https://terrytao.wordpress.com/2026/09/24/were-gonna-need-a-lot-more-mathematicians/",
-      "score": 1
-    },
-    {
-      "genre": "災害",
-      "count": 1,
-      "signal": "M 0.8 - 8 km WNW of The Geysers, CA",
-      "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442212",
       "score": 1
     }
   ],
@@ -200,25 +192,6 @@
       "score": 4,
       "tags": [
         "開発",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "When Should Forecasting Agents Reason? Behavioral Stress Tests for Reliability Routing",
-      "summary": "arXiv:2609.28475v1 Announce Type: new Abstract: Forecasting agents increasingly combine language-model reasoning, retrieval, ensembling, and calibration, but it remains unclear when each behavior should be trusted. We st",
-      "url": "https://arxiv.org/abs/2609.28475",
-      "published": "2026-09-25T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
         "重要",
         "研究"
       ]
@@ -282,10 +255,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.8 - 8 km WNW of The Geysers, CA",
-      "summary": "8 km WNW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442212",
-      "published": "2026-09-26T03:48:58.630000+00:00",
+      "title": "M 2.7 - 10 km W of Boonville, CA",
+      "summary": "10 km W of Boonville, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442217",
+      "published": "2026-09-26T04:02:07.440000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -436,63 +409,6 @@
       ]
     },
     {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "PAWS: Policy-driven Agentic World Simulation",
-      "summary": "arXiv:2609.28547v1 Announce Type: new Abstract: Policy interventions propagate through public communication, institutional decisions, and stakeholder responses, yet datasets for financial multi-agent simulation rarely co",
-      "url": "https://arxiv.org/abs/2609.28547",
-      "published": "2026-09-25T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "BaseCamp --- An Agentic AI Framework for Automating DNA Sequencing Data Pipelines",
-      "summary": "arXiv:2609.28557v1 Announce Type: new Abstract: DNA sequencing pipelines, spanning quality control, alignment, variant calling, and annotation, are now reliably executed by workflow management systems that orchestrate es",
-      "url": "https://arxiv.org/abs/2609.28557",
-      "published": "2026-09-25T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Adversarial Closed-Loop Curriculum for Evolving Role-Playing Agents",
-      "summary": "arXiv:2609.28609v1 Announce Type: new Abstract: Role-playing agents based on large language models have been widely applied in areas such as personalized assistance and social simulation. Recent RL methods typically trai",
-      "url": "https://arxiv.org/abs/2609.28609",
-      "published": "2026-09-25T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -601,78 +517,6 @@
       ]
     },
     {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "TW3Cast: A Frozen Router of Lightly Fine-Tuned Foundation Models for Time-Series Forecasting on GIFT-Eval, Selected Entirely on the Training Split",
-      "summary": "arXiv:2609.28506v1 Announce Type: new Abstract: TW3Cast is a time-series forecasting system that reaches position 3 of 130 entries on the GIFT-Eval benchmark by mean MASE rank, as of 2026-09-14. The two entries above it ",
-      "url": "https://arxiv.org/abs/2609.28506",
-      "published": "2026-09-25T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Pistis Technical Report",
-      "summary": "arXiv:2609.28554v1 Announce Type: new Abstract: We introduce the Pistis model family, comprising 27B- and 9B-parameter multimodal large language models built on Qwen3.6 and Qwen3.5, respectively, and developed through a ",
-      "url": "https://arxiv.org/abs/2609.28554",
-      "published": "2026-09-25T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "DEEPO: Dual-Entropy Enhanced Policy Optimization for Hallucination in MLLMs",
-      "summary": "arXiv:2609.28570v1 Announce Type: new Abstract: Reinforcement learning (RL) is widely used to sharpen reasoning in multimodal large language models (MLLMs), yet its effect on hallucination is uneven. We trace this to two",
-      "url": "https://arxiv.org/abs/2609.28570",
-      "published": "2026-09-25T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "TWIST: A Proposed Benchmark for Intervention Quality in Conversational Memory, with a Human-Validated Draft-Alignment",
-      "summary": "arXiv:2609.28575v1 Announce Type: new Abstract: Long-conversation memory benchmarks increasingly test recall and prompted knowledge updates, and recent work studies evolving user beliefs and memory state. TWIST is a prop",
-      "url": "https://arxiv.org/abs/2609.28575",
-      "published": "2026-09-25T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -743,70 +587,194 @@
         "AI",
         "制作"
       ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Ringg’s AI agents resolve up to 65% of customer calls with OpenAI",
+      "summary": "Using GPT-5.6, Ringg powers multilingual agents across voice, chat, WhatsApp, and web for 90% less cost vs. GPT-4.1.",
+      "url": "https://openai.com/index/ringg",
+      "published": "2026-09-23T12:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Introducing MentalHealthBench",
+      "summary": "MentalHealthBench is an expert-informed benchmark for evaluating helpful and safe AI responses across realistic mental health conversations.",
+      "url": "https://openai.com/index/introducing-mentalhealthbench",
+      "published": "2026-09-23T10:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "研究"
+      ]
+    },
+    {
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking",
+      "summary": "Gemini 3.8 Live and Gemini 3.8 Live Extended Thinking are our most advanced live dialogue models yet, built for natural conversation.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+      "published": "2026-09-15T17:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "研究"
+      ]
+    },
+    {
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "DevFest is back",
+      "summary": "DevFest 2026 is back and here’s how you can connect with one of the more than 800 global events to build, secure, and scale in the agentic AI era.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/",
+      "published": "2026-09-14T16:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.8 - 8 km WNW of The Geysers, CA",
+      "summary": "8 km WNW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442212",
+      "published": "2026-09-26T03:48:58.630000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 3.7 - 10 km W of Boonville, CA",
+      "summary": "10 km W of Boonville, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442207",
+      "published": "2026-09-26T03:42:49.570000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.7 - 31 km N of Kernville, CA",
+      "summary": "31 km N of Kernville, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339263",
+      "published": "2026-09-26T03:39:16.720000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.3 - 60 km ESE of McCarthy, Alaska",
+      "summary": "60 km ESE of McCarthy, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tbhbao",
+      "published": "2026-09-26T03:35:20.534000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T03:58:02.675716+00:00",
-      "lastAttemptAt": "2026-09-26T03:58:02.675716+00:00",
+      "lastSuccessAt": "2026-09-26T04:08:02.264314+00:00",
+      "lastAttemptAt": "2026-09-26T04:08:02.264314+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T03:58:02.675716+00:00",
-      "lastAttemptAt": "2026-09-26T03:58:02.675716+00:00",
+      "lastSuccessAt": "2026-09-26T04:08:02.264314+00:00",
+      "lastAttemptAt": "2026-09-26T04:08:02.264314+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T03:58:02.675716+00:00",
-      "lastAttemptAt": "2026-09-26T03:58:02.675716+00:00",
+      "lastSuccessAt": "2026-09-26T04:08:02.264314+00:00",
+      "lastAttemptAt": "2026-09-26T04:08:02.264314+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T03:58:02.675716+00:00",
-      "lastAttemptAt": "2026-09-26T03:58:02.675716+00:00",
+      "lastSuccessAt": "2026-09-26T04:08:02.264314+00:00",
+      "lastAttemptAt": "2026-09-26T04:08:02.264314+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T03:58:02.675716+00:00",
-      "lastAttemptAt": "2026-09-26T03:58:02.675716+00:00",
+      "lastSuccessAt": "2026-09-26T04:08:02.264314+00:00",
+      "lastAttemptAt": "2026-09-26T04:08:02.264314+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T03:58:02.675716+00:00",
-      "lastAttemptAt": "2026-09-26T03:58:02.675716+00:00",
+      "lastSuccessAt": "2026-09-26T04:08:02.264314+00:00",
+      "lastAttemptAt": "2026-09-26T04:08:02.264314+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T03:58:02.675716+00:00",
-      "lastAttemptAt": "2026-09-26T03:58:02.675716+00:00",
+      "lastSuccessAt": "2026-09-26T04:08:02.264314+00:00",
+      "lastAttemptAt": "2026-09-26T04:08:02.264314+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T03:58:02.675716+00:00",
-      "lastAttemptAt": "2026-09-26T03:58:02.675716+00:00",
+      "lastSuccessAt": "2026-09-26T04:08:02.264314+00:00",
+      "lastAttemptAt": "2026-09-26T04:08:02.264314+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
