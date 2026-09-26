@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-26T04:08:02.264314+00:00",
-  "lastSuccessAt": "2026-09-26T04:08:02.264314+00:00",
+  "updatedAt": "2026-09-26T04:18:05.087440+00:00",
+  "lastSuccessAt": "2026-09-26T04:18:05.087440+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,17 +143,17 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 2.7 - 10 km W of Boonville, CA / M 0.8 - 8 km WNW of The Geysers, CA / M 3.7 - 10 km W of Boonville, CA",
+      "signal": "M 1.8 - 10 km W of Boonville, CA / M 0.7 - 23 km NW of Parkfield, CA / M 2.7 - 10 km W of Boonville, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442217",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442227",
       "score": 1
     },
     {
       "genre": "技術",
       "count": 1,
-      "signal": "We’re gonna need a lot more mathematicians",
+      "signal": "NetBSD Playing with disklabels",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://terrytao.wordpress.com/2026/09/24/were-gonna-need-a-lot-more-mathematicians/",
+      "topUrl": "https://movq.de/blog/postings/2026-09-25/0/POSTING-en.html",
       "score": 1
     }
   ],
@@ -255,10 +255,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.7 - 10 km W of Boonville, CA",
+      "title": "M 1.8 - 10 km W of Boonville, CA",
       "summary": "10 km W of Boonville, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442217",
-      "published": "2026-09-26T04:02:07.440000+00:00",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442227",
+      "published": "2026-09-26T04:15:28.660000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -270,12 +270,12 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "その他",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "We’re gonna need a lot more mathematicians",
+      "title": "NetBSD Playing with disklabels",
       "summary": "Comments",
-      "url": "https://terrytao.wordpress.com/2026/09/24/were-gonna-need-a-lot-more-mathematicians/",
-      "published": "2026-09-25T18:27:05+00:00",
+      "url": "https://movq.de/blog/postings/2026-09-25/0/POSTING-en.html",
+      "published": "2026-09-26T02:14:59+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -664,6 +664,32 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 0.7 - 23 km NW of Parkfield, CA",
+      "summary": "23 km NW of Parkfield, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442222",
+      "published": "2026-09-26T04:13:13.240000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 2.7 - 10 km W of Boonville, CA",
+      "summary": "10 km W of Boonville, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442217",
+      "published": "2026-09-26T04:02:07.440000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 0.8 - 8 km WNW of The Geysers, CA",
       "summary": "8 km WNW of The Geysers, CA",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442212",
@@ -685,96 +711,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.7 - 31 km N of Kernville, CA",
-      "summary": "31 km N of Kernville, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339263",
-      "published": "2026-09-26T03:39:16.720000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.3 - 60 km ESE of McCarthy, Alaska",
-      "summary": "60 km ESE of McCarthy, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tbhbao",
-      "published": "2026-09-26T03:35:20.534000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T04:08:02.264314+00:00",
-      "lastAttemptAt": "2026-09-26T04:08:02.264314+00:00",
+      "lastSuccessAt": "2026-09-26T04:18:05.087440+00:00",
+      "lastAttemptAt": "2026-09-26T04:18:05.087440+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T04:08:02.264314+00:00",
-      "lastAttemptAt": "2026-09-26T04:08:02.264314+00:00",
+      "lastSuccessAt": "2026-09-26T04:18:05.087440+00:00",
+      "lastAttemptAt": "2026-09-26T04:18:05.087440+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T04:08:02.264314+00:00",
-      "lastAttemptAt": "2026-09-26T04:08:02.264314+00:00",
+      "lastSuccessAt": "2026-09-26T04:18:05.087440+00:00",
+      "lastAttemptAt": "2026-09-26T04:18:05.087440+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T04:08:02.264314+00:00",
-      "lastAttemptAt": "2026-09-26T04:08:02.264314+00:00",
+      "lastSuccessAt": "2026-09-26T04:18:05.087440+00:00",
+      "lastAttemptAt": "2026-09-26T04:18:05.087440+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T04:08:02.264314+00:00",
-      "lastAttemptAt": "2026-09-26T04:08:02.264314+00:00",
+      "lastSuccessAt": "2026-09-26T04:18:05.087440+00:00",
+      "lastAttemptAt": "2026-09-26T04:18:05.087440+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T04:08:02.264314+00:00",
-      "lastAttemptAt": "2026-09-26T04:08:02.264314+00:00",
+      "lastSuccessAt": "2026-09-26T04:18:05.087440+00:00",
+      "lastAttemptAt": "2026-09-26T04:18:05.087440+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T04:08:02.264314+00:00",
-      "lastAttemptAt": "2026-09-26T04:08:02.264314+00:00",
+      "lastSuccessAt": "2026-09-26T04:18:05.087440+00:00",
+      "lastAttemptAt": "2026-09-26T04:18:05.087440+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T04:08:02.264314+00:00",
-      "lastAttemptAt": "2026-09-26T04:08:02.264314+00:00",
+      "lastSuccessAt": "2026-09-26T04:18:05.087440+00:00",
+      "lastAttemptAt": "2026-09-26T04:18:05.087440+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
