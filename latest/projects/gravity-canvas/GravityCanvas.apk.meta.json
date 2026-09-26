@@ -1,0 +1,15 @@
+{
+  "lane": "app",
+  "ts": "2026-09-27T08:30:00+09:00",
+  "artifact": "GravityCanvas.apk",
+  "prompt": "Installable Android debug build of Gravity Canvas.",
+  "source": "codex",
+  "backend": "codex",
+  "model": "gpt-6-luna",
+  "seconds": 0,
+  "gates": {
+    "apk_export": {"pass": true, "note": "Godot 4.7.1 Android export completed"},
+    "signature": {"pass": true, "note": "apksigner verified v2 and v3 signatures"},
+    "release_keystore": {"pass": false, "note": "Debug signing only; not intended for Google Play release"}
+  }
+}

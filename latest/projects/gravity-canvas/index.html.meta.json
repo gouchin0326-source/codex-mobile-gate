@@ -1,0 +1,14 @@
+{
+  "lane": "app",
+  "ts": "2026-09-27T08:30:00+09:00",
+  "artifact": "index.html",
+  "prompt": "Gravity Canvas Godot Web export for CG; APK download is available beside the game.",
+  "source": "codex",
+  "backend": "codex",
+  "model": "gpt-6-luna",
+  "seconds": 0,
+  "gates": {
+    "web_export": {"pass": true, "note": "Godot 4.7.1 single-threaded Web export; companion JS/WASM/PCK included"},
+    "cg_registered": {"pass": true, "note": "Linked from local CG game list and app shelf"}
+  }
+}
