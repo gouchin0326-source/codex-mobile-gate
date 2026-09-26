@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-26T09:38:02.814367+00:00",
-  "lastSuccessAt": "2026-09-26T09:38:02.814367+00:00",
+  "updatedAt": "2026-09-26T09:48:02.277817+00:00",
+  "lastSuccessAt": "2026-09-26T09:48:02.277817+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 4.8 - 78 km ENE of Tadine, New Caledonia / M 4.8 - 97 km NE of Tadine, New Caledonia / M 0.4 - 10 km S of Idyllwild, CA",
+      "signal": "M 1.3 - 15 km S of Anza, CA / M 2.1 - 59 km WNW of Ninilchik, Alaska / M 4.8 - 78 km ENE of Tadine, New Caledonia",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txs3",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339415",
       "score": 1
     },
     {
@@ -255,10 +255,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 4.8 - 78 km ENE of Tadine, New Caledonia",
-      "summary": "78 km ENE of Tadine, New Caledonia",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txs3",
-      "published": "2026-09-26T09:10:31.027000+00:00",
+      "title": "M 1.3 - 15 km S of Anza, CA",
+      "summary": "15 km S of Anza, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339415",
+      "published": "2026-09-26T09:44:42.980000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -664,6 +664,32 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
+      "title": "M 2.1 - 59 km WNW of Ninilchik, Alaska",
+      "summary": "59 km WNW of Ninilchik, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tbtimd",
+      "published": "2026-09-26T09:43:46.116000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 4.8 - 78 km ENE of Tadine, New Caledonia",
+      "summary": "78 km ENE of Tadine, New Caledonia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txs3",
+      "published": "2026-09-26T09:10:31.027000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
       "title": "M 4.8 - 97 km NE of Tadine, New Caledonia",
       "summary": "97 km NE of Tadine, New Caledonia",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txs2",
@@ -677,36 +703,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.4 - 10 km S of Idyllwild, CA",
-      "summary": "10 km S of Idyllwild, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339407",
-      "published": "2026-09-26T08:58:54.330000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.6 - 10 km S of Idyllwild, CA",
-      "summary": "10 km S of Idyllwild, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339399",
-      "published": "2026-09-26T08:56:43.430000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.6 - 10 km S of Idyllwild, CA",
-      "summary": "10 km S of Idyllwild, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339391",
-      "published": "2026-09-26T08:56:24.180000+00:00",
+      "title": "M 4.7 - 71 km ENE of Tadine, New Caledonia",
+      "summary": "71 km ENE of Tadine, New Caledonia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txs6",
+      "published": "2026-09-26T09:07:19.622000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -717,64 +717,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T09:38:02.814367+00:00",
-      "lastAttemptAt": "2026-09-26T09:38:02.814367+00:00",
+      "lastSuccessAt": "2026-09-26T09:48:02.277817+00:00",
+      "lastAttemptAt": "2026-09-26T09:48:02.277817+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T09:38:02.814367+00:00",
-      "lastAttemptAt": "2026-09-26T09:38:02.814367+00:00",
+      "lastSuccessAt": "2026-09-26T09:48:02.277817+00:00",
+      "lastAttemptAt": "2026-09-26T09:48:02.277817+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T09:38:02.814367+00:00",
-      "lastAttemptAt": "2026-09-26T09:38:02.814367+00:00",
+      "lastSuccessAt": "2026-09-26T09:48:02.277817+00:00",
+      "lastAttemptAt": "2026-09-26T09:48:02.277817+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T09:38:02.814367+00:00",
-      "lastAttemptAt": "2026-09-26T09:38:02.814367+00:00",
+      "lastSuccessAt": "2026-09-26T09:48:02.277817+00:00",
+      "lastAttemptAt": "2026-09-26T09:48:02.277817+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T09:38:02.814367+00:00",
-      "lastAttemptAt": "2026-09-26T09:38:02.814367+00:00",
+      "lastSuccessAt": "2026-09-26T09:48:02.277817+00:00",
+      "lastAttemptAt": "2026-09-26T09:48:02.277817+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T09:38:02.814367+00:00",
-      "lastAttemptAt": "2026-09-26T09:38:02.814367+00:00",
+      "lastSuccessAt": "2026-09-26T09:48:02.277817+00:00",
+      "lastAttemptAt": "2026-09-26T09:48:02.277817+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T09:38:02.814367+00:00",
-      "lastAttemptAt": "2026-09-26T09:38:02.814367+00:00",
+      "lastSuccessAt": "2026-09-26T09:48:02.277817+00:00",
+      "lastAttemptAt": "2026-09-26T09:48:02.277817+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T09:38:02.814367+00:00",
-      "lastAttemptAt": "2026-09-26T09:38:02.814367+00:00",
+      "lastSuccessAt": "2026-09-26T09:48:02.277817+00:00",
+      "lastAttemptAt": "2026-09-26T09:48:02.277817+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
