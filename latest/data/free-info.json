@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-26T14:18:02.215425+00:00",
-  "lastSuccessAt": "2026-09-26T14:18:02.215425+00:00",
+  "updatedAt": "2026-09-26T14:28:01.849164+00:00",
+  "lastSuccessAt": "2026-09-26T14:28:01.849164+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,17 +143,17 @@
     {
       "genre": "災害",
       "count": 5,
-      "signal": "M 1.9 - 28 km WNW of Karluk, Alaska / M 1.2 - 2 km S of Palomar Observatory, CA / M 1.0 - 7 km W of Cobb, CA",
+      "signal": "M 2.2 - 3 km NNE of Houston, Alaska / M 1.9 - 28 km WNW of Karluk, Alaska / M 0.9 - 2 km S of Palomar Observatory, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tccjzs",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tccqgl",
       "score": 1
     },
     {
       "genre": "技術",
       "count": 1,
-      "signal": "If we do not stop to help each other, what do we become?",
+      "signal": "Infecting the Steam Link with NixOS",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://blog.codinghorror.com/if-we-do-not-stop-to-help-each-other-what-do-we-become/",
+      "topUrl": "https://feyor.sh/blog/infecting-the-steam-link-with-nixos/",
       "score": 1
     }
   ],
@@ -255,10 +255,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.9 - 28 km WNW of Karluk, Alaska",
-      "summary": "28 km WNW of Karluk, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tccjzs",
-      "published": "2026-09-26T14:15:22.597000+00:00",
+      "title": "M 2.2 - 3 km NNE of Houston, Alaska",
+      "summary": "3 km NNE of Houston, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tccqgl",
+      "published": "2026-09-26T14:22:36.441000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -270,12 +270,12 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "その他",
+      "topic": "ゲーム",
       "sourceWeight": 1,
-      "title": "If we do not stop to help each other, what do we become?",
+      "title": "Infecting the Steam Link with NixOS",
       "summary": "Comments",
-      "url": "https://blog.codinghorror.com/if-we-do-not-stop-to-help-each-other-what-do-we-become/",
-      "published": "2026-09-26T11:02:48+00:00",
+      "url": "https://feyor.sh/blog/infecting-the-steam-link-with-nixos/",
+      "published": "2026-09-26T13:45:59+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -664,10 +664,36 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.2 - 2 km S of Palomar Observatory, CA",
+      "title": "M 1.9 - 28 km WNW of Karluk, Alaska",
+      "summary": "28 km WNW of Karluk, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tccjzs",
+      "published": "2026-09-26T14:15:22.597000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.9 - 2 km S of Palomar Observatory, CA",
       "summary": "2 km S of Palomar Observatory, CA",
       "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339527",
-      "published": "2026-09-26T14:14:42.320000+00:00",
+      "published": "2026-09-26T14:14:42.350000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 5.6 - 74 km ESE of Kokopo, Papua New Guinea",
+      "summary": "74 km ESE of Kokopo, Papua New Guinea",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txtc",
+      "published": "2026-09-26T14:08:17.704000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -685,96 +711,70 @@
       "tags": [
         "災害"
       ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.1 - 15 km SSE of Port Graham, Alaska",
-      "summary": "15 km SSE of Port Graham, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tcbwoq",
-      "published": "2026-09-26T13:59:54.810000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.1 - 2 km WSW of Anderson Springs, CA",
-      "summary": "2 km WSW of Anderson Springs, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442382",
-      "published": "2026-09-26T13:55:41.690000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T14:18:02.215425+00:00",
-      "lastAttemptAt": "2026-09-26T14:18:02.215425+00:00",
+      "lastSuccessAt": "2026-09-26T14:28:01.849164+00:00",
+      "lastAttemptAt": "2026-09-26T14:28:01.849164+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T14:18:02.215425+00:00",
-      "lastAttemptAt": "2026-09-26T14:18:02.215425+00:00",
+      "lastSuccessAt": "2026-09-26T14:28:01.849164+00:00",
+      "lastAttemptAt": "2026-09-26T14:28:01.849164+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T14:18:02.215425+00:00",
-      "lastAttemptAt": "2026-09-26T14:18:02.215425+00:00",
+      "lastSuccessAt": "2026-09-26T14:28:01.849164+00:00",
+      "lastAttemptAt": "2026-09-26T14:28:01.849164+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T14:18:02.215425+00:00",
-      "lastAttemptAt": "2026-09-26T14:18:02.215425+00:00",
+      "lastSuccessAt": "2026-09-26T14:28:01.849164+00:00",
+      "lastAttemptAt": "2026-09-26T14:28:01.849164+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T14:18:02.215425+00:00",
-      "lastAttemptAt": "2026-09-26T14:18:02.215425+00:00",
+      "lastSuccessAt": "2026-09-26T14:28:01.849164+00:00",
+      "lastAttemptAt": "2026-09-26T14:28:01.849164+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T14:18:02.215425+00:00",
-      "lastAttemptAt": "2026-09-26T14:18:02.215425+00:00",
+      "lastSuccessAt": "2026-09-26T14:28:01.849164+00:00",
+      "lastAttemptAt": "2026-09-26T14:28:01.849164+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T14:18:02.215425+00:00",
-      "lastAttemptAt": "2026-09-26T14:18:02.215425+00:00",
+      "lastSuccessAt": "2026-09-26T14:28:01.849164+00:00",
+      "lastAttemptAt": "2026-09-26T14:28:01.849164+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-26T14:18:02.215425+00:00",
-      "lastAttemptAt": "2026-09-26T14:18:02.215425+00:00",
+      "lastSuccessAt": "2026-09-26T14:28:01.849164+00:00",
+      "lastAttemptAt": "2026-09-26T14:28:01.849164+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
