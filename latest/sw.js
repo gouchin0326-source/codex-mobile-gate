@@ -1,4 +1,4 @@
-const CACHE = "codex-gate-v140-kodekichi-experience-20260919";
+const CACHE = "codex-gate-v142-genre-lab-restore-20260927";
 const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
