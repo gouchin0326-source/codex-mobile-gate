@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-27T03:28:01.903314+00:00",
-  "lastSuccessAt": "2026-09-27T03:28:01.903314+00:00",
+  "updatedAt": "2026-09-27T03:38:05.071292+00:00",
+  "lastSuccessAt": "2026-09-27T03:38:05.071292+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,9 +143,9 @@
     {
       "genre": "災害",
       "count": 4,
-      "signal": "M 2.1 - 44 km NE of Chase, Alaska / M 1.4 - 6 km ESE of Redwood Valley, CA / M 1.2 - 5 km NE of Banning, CA",
+      "signal": "M 1.2 - 20 km ESE of Anza, CA / M 2.3 - 19 km ESE of Anza, CA / M 1.6 - 20 km ESE of Anza, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tdcnwn",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339679",
       "score": 1
     },
     {
@@ -273,10 +273,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.1 - 44 km NE of Chase, Alaska",
-      "summary": "44 km NE of Chase, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tdcnwn",
-      "published": "2026-09-27T03:19:29.623000+00:00",
+      "title": "M 1.2 - 20 km ESE of Anza, CA",
+      "summary": "20 km ESE of Anza, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339679",
+      "published": "2026-09-27T03:30:32.150000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -683,10 +683,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.4 - 6 km ESE of Redwood Valley, CA",
-      "summary": "6 km ESE of Redwood Valley, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442817",
-      "published": "2026-09-27T02:55:57.720000+00:00",
+      "title": "M 2.3 - 19 km ESE of Anza, CA",
+      "summary": "19 km ESE of Anza, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339671",
+      "published": "2026-09-27T03:29:45.650000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -696,10 +696,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.2 - 5 km NE of Banning, CA",
-      "summary": "5 km NE of Banning, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339655",
-      "published": "2026-09-27T02:51:17.130000+00:00",
+      "title": "M 1.6 - 20 km ESE of Anza, CA",
+      "summary": "20 km ESE of Anza, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339663",
+      "published": "2026-09-27T03:29:29.740000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -709,10 +709,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.7 - 10 km W of Boonville, CA",
-      "summary": "10 km W of Boonville, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442812",
-      "published": "2026-09-27T02:48:08.660000+00:00",
+      "title": "M 2.1 - 44 km NE of Chase, Alaska",
+      "summary": "44 km NE of Chase, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tdcnwn",
+      "published": "2026-09-27T03:19:29.623000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -723,64 +723,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T03:28:01.903314+00:00",
-      "lastAttemptAt": "2026-09-27T03:28:01.903314+00:00",
+      "lastSuccessAt": "2026-09-27T03:38:05.071292+00:00",
+      "lastAttemptAt": "2026-09-27T03:38:05.071292+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T03:28:01.903314+00:00",
-      "lastAttemptAt": "2026-09-27T03:28:01.903314+00:00",
+      "lastSuccessAt": "2026-09-27T03:38:05.071292+00:00",
+      "lastAttemptAt": "2026-09-27T03:38:05.071292+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T03:28:01.903314+00:00",
-      "lastAttemptAt": "2026-09-27T03:28:01.903314+00:00",
+      "lastSuccessAt": "2026-09-27T03:38:05.071292+00:00",
+      "lastAttemptAt": "2026-09-27T03:38:05.071292+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T03:28:01.903314+00:00",
-      "lastAttemptAt": "2026-09-27T03:28:01.903314+00:00",
+      "lastSuccessAt": "2026-09-27T03:38:05.071292+00:00",
+      "lastAttemptAt": "2026-09-27T03:38:05.071292+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T03:28:01.903314+00:00",
-      "lastAttemptAt": "2026-09-27T03:28:01.903314+00:00",
+      "lastSuccessAt": "2026-09-27T03:38:05.071292+00:00",
+      "lastAttemptAt": "2026-09-27T03:38:05.071292+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T03:28:01.903314+00:00",
-      "lastAttemptAt": "2026-09-27T03:28:01.903314+00:00",
+      "lastSuccessAt": "2026-09-27T03:38:05.071292+00:00",
+      "lastAttemptAt": "2026-09-27T03:38:05.071292+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T03:28:01.903314+00:00",
-      "lastAttemptAt": "2026-09-27T03:28:01.903314+00:00",
+      "lastSuccessAt": "2026-09-27T03:38:05.071292+00:00",
+      "lastAttemptAt": "2026-09-27T03:38:05.071292+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T03:28:01.903314+00:00",
-      "lastAttemptAt": "2026-09-27T03:28:01.903314+00:00",
+      "lastSuccessAt": "2026-09-27T03:38:05.071292+00:00",
+      "lastAttemptAt": "2026-09-27T03:38:05.071292+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
