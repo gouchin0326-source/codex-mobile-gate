@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#172033">
-  <link rel="manifest" href="manifest.webmanifest?v=20260927-cg-entry-3">
+  <link rel="manifest" href="manifest.webmanifest?v=20260927-3games-1">
   <link rel="icon" href="latest/icon.svg" type="image/svg+xml">
   <title>CG | CODEX Gate</title>
   <style>
@@ -739,6 +739,9 @@
       <div class="godot-game-list" id="godot-game-list">
         <button class="godot-game-icon" type="button" data-godot-game="gravity-canvas">🟠 Gravity Canvas<small>反射パズル</small></button>
         <button class="godot-game-icon" type="button" data-godot-game="genre-lab-3d">🎮 Genre Lab 3D<small>回避・的当て・迷路</small></button>
+        <button class="godot-game-icon" type="button" data-godot-game="sky-spire">🏗️ 空塔<small>3D積み上げ</small></button>
+        <button class="godot-game-icon" type="button" data-godot-game="neon-sequence">💡 光の記憶<small>3D記憶ゲーム</small></button>
+        <button class="godot-game-icon" type="button" data-godot-game="orb-collector">⭐ 星の島<small>3D収集アクション</small></button>
       </div>
       <div class="godot-detail" data-godot-detail="gravity-canvas" hidden>
         <button class="godot-action" type="button" data-godot-back>← ゲーム一覧</button>
@@ -749,6 +752,21 @@
         <button class="godot-action" type="button" data-godot-back>← ゲーム一覧</button>
         <iframe class="godot-frame" title="Genre Lab 3D" data-src="./latest/projects/genre-lab-3d/index.html?v=1" allow="fullscreen; gamepad" allowfullscreen loading="lazy"></iframe>
         <div><a class="godot-action" href="./latest/projects/genre-lab-3d/index.html?v=1" target="_blank" rel="noopener">別画面で起動</a></div>
+      </div>
+      <div class="godot-detail" data-godot-detail="sky-spire" hidden>
+        <button class="godot-action" type="button" data-godot-back>← ゲーム一覧</button>
+        <iframe class="godot-frame" title="空塔" data-src="./latest/projects/sky-spire/index.html?v=1" allow="fullscreen; gamepad" allowfullscreen loading="lazy"></iframe>
+        <div><a class="godot-action" href="./latest/projects/sky-spire/index.html?v=1" target="_blank" rel="noopener">別画面で起動</a></div>
+      </div>
+      <div class="godot-detail" data-godot-detail="neon-sequence" hidden>
+        <button class="godot-action" type="button" data-godot-back>← ゲーム一覧</button>
+        <iframe class="godot-frame" title="光の記憶" data-src="./latest/projects/neon-sequence/index.html?v=1" allow="fullscreen; gamepad" allowfullscreen loading="lazy"></iframe>
+        <div><a class="godot-action" href="./latest/projects/neon-sequence/index.html?v=1" target="_blank" rel="noopener">別画面で起動</a></div>
+      </div>
+      <div class="godot-detail" data-godot-detail="orb-collector" hidden>
+        <button class="godot-action" type="button" data-godot-back>← ゲーム一覧</button>
+        <iframe class="godot-frame" title="星の島" data-src="./latest/projects/orb-collector/index.html?v=1" allow="fullscreen; gamepad" allowfullscreen loading="lazy"></iframe>
+        <div><a class="godot-action" href="./latest/projects/orb-collector/index.html?v=1" target="_blank" rel="noopener">別画面で起動</a></div>
       </div>
     </section>
 
@@ -837,13 +855,13 @@
         const regs = await navigator.serviceWorker.getRegistrations();
         await Promise.all(regs.map((reg) => reg.unregister().catch(() => reg.update().catch(() => {}))));
       }
-      location.replace(`./index.html?v=20260927-cg-entry-3&refresh=${Date.now()}`);
+      location.replace(`./index.html?v=20260927-3games-1&refresh=${Date.now()}`);
     }
     document.querySelector("#force-update")?.addEventListener("click", () => {
       forceUpdate().catch(() => location.reload());
     });
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("sw.js?v=20260927-cg-entry-3", { updateViaCache: "none" }).catch(() => {});
+      navigator.serviceWorker.register("sw.js?v=20260927-3games-1", { updateViaCache: "none" }).catch(() => {});
     }
     function activateTab(name) {
       document.querySelectorAll(".tab").forEach((tab) => {
