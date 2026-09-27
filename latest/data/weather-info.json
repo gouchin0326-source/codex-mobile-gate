@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-09-27T10:48:01.911037+00:00",
+  "updatedAt": "2026-09-27T11:08:33.146128+00:00",
   "lastSuccessAt": "2026-09-27T10:48:01.911037+00:00",
-  "status": "fresh",
+  "status": "stale",
   "mode": "primary-api-weather-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "Open-Meteo documented no-key API + JMA warning JSON; no scraping",
@@ -10,14 +10,15 @@
     "label": "注意",
     "lines": [
       "富山: 雨80%/最大1.6mm",
-      "風8.1km/h・週間雨量最大21.9mm"
+      "風8.1km/h・週間雨量最大21.9mm",
+      "気象庁警報は確認できず"
     ],
     "maxRainProbability": 80,
     "maxHourlyRain": 1.6,
     "maxDailyRain": 21.9,
     "maxWind": 8.1,
     "jmaWarnings": [],
-    "officialWarningStatus": "fresh"
+    "officialWarningStatus": "unavailable"
   },
   "nowcast": {
     "label": "富山県 雨雲ナウキャスト",
@@ -31,154 +32,8 @@
     "source": "https://www.jma.go.jp/bosai/jmatile/data/nowc/targetTimes_N2.json",
     "link": "https://www.jma.go.jp/bosai/nowc/#zoom:10/lat:36.6953/lon:137.2113/colordepth:normal/elements:hrpns&slmcs&slmcs_fcst",
     "note": "富山県を富山市中心で拡大。公式タイルは降水なしの場合に透明表示。",
-    "tiles": [
-      {
-        "x": 900,
-        "y": 397,
-        "z": 10,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260927104500/none/20260927105000/surf/hrpns/10/900/397.png"
-      },
-      {
-        "x": 901,
-        "y": 397,
-        "z": 10,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260927104500/none/20260927105000/surf/hrpns/10/901/397.png"
-      },
-      {
-        "x": 902,
-        "y": 397,
-        "z": 10,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260927104500/none/20260927105000/surf/hrpns/10/902/397.png"
-      },
-      {
-        "x": 903,
-        "y": 397,
-        "z": 10,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260927104500/none/20260927105000/surf/hrpns/10/903/397.png"
-      },
-      {
-        "x": 900,
-        "y": 398,
-        "z": 10,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260927104500/none/20260927105000/surf/hrpns/10/900/398.png"
-      },
-      {
-        "x": 901,
-        "y": 398,
-        "z": 10,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260927104500/none/20260927105000/surf/hrpns/10/901/398.png"
-      },
-      {
-        "x": 902,
-        "y": 398,
-        "z": 10,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260927104500/none/20260927105000/surf/hrpns/10/902/398.png"
-      },
-      {
-        "x": 903,
-        "y": 398,
-        "z": 10,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260927104500/none/20260927105000/surf/hrpns/10/903/398.png"
-      },
-      {
-        "x": 900,
-        "y": 399,
-        "z": 10,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260927104500/none/20260927105000/surf/hrpns/10/900/399.png"
-      },
-      {
-        "x": 901,
-        "y": 399,
-        "z": 10,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260927104500/none/20260927105000/surf/hrpns/10/901/399.png"
-      },
-      {
-        "x": 902,
-        "y": 399,
-        "z": 10,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260927104500/none/20260927105000/surf/hrpns/10/902/399.png"
-      },
-      {
-        "x": 903,
-        "y": 399,
-        "z": 10,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260927104500/none/20260927105000/surf/hrpns/10/903/399.png"
-      },
-      {
-        "x": 900,
-        "y": 400,
-        "z": 10,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260927104500/none/20260927105000/surf/hrpns/10/900/400.png"
-      },
-      {
-        "x": 901,
-        "y": 400,
-        "z": 10,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260927104500/none/20260927105000/surf/hrpns/10/901/400.png"
-      },
-      {
-        "x": 902,
-        "y": 400,
-        "z": 10,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260927104500/none/20260927105000/surf/hrpns/10/902/400.png"
-      },
-      {
-        "x": 903,
-        "y": 400,
-        "z": 10,
-        "url": "https://www.jma.go.jp/bosai/jmatile/data/nowc/20260927104500/none/20260927105000/surf/hrpns/10/903/400.png"
-      }
-    ],
-    "times": [
-      {
-        "basetime": "20260927104500",
-        "validtime": "20260927114500"
-      },
-      {
-        "basetime": "20260927104500",
-        "validtime": "20260927114000"
-      },
-      {
-        "basetime": "20260927104500",
-        "validtime": "20260927113500"
-      },
-      {
-        "basetime": "20260927104500",
-        "validtime": "20260927113000"
-      },
-      {
-        "basetime": "20260927104500",
-        "validtime": "20260927112500"
-      },
-      {
-        "basetime": "20260927104500",
-        "validtime": "20260927112000"
-      },
-      {
-        "basetime": "20260927104500",
-        "validtime": "20260927111500"
-      },
-      {
-        "basetime": "20260927104500",
-        "validtime": "20260927111000"
-      },
-      {
-        "basetime": "20260927104500",
-        "validtime": "20260927110500"
-      },
-      {
-        "basetime": "20260927104500",
-        "validtime": "20260927110000"
-      },
-      {
-        "basetime": "20260927104500",
-        "validtime": "20260927105500"
-      },
-      {
-        "basetime": "20260927104500",
-        "validtime": "20260927105000"
-      }
-    ]
+    "tiles": [],
+    "times": []
   },
   "locations": [
     {
@@ -472,19 +327,19 @@
   "sourceStates": [
     {
       "id": "jma-toyama-warning",
-      "status": "fresh",
+      "status": "stale",
       "lastSuccessAt": "2026-09-27T10:48:01.911037+00:00",
-      "lastAttemptAt": "2026-09-27T10:48:01.911037+00:00",
+      "lastAttemptAt": "2026-09-27T11:08:33.146128+00:00",
       "retryAfterAt": null,
-      "errorCode": null
+      "errorCode": "URLError"
     },
     {
       "id": "jma-nowcast",
-      "status": "fresh",
+      "status": "stale",
       "lastSuccessAt": "2026-09-27T10:48:01.911037+00:00",
-      "lastAttemptAt": "2026-09-27T10:48:01.911037+00:00",
+      "lastAttemptAt": "2026-09-27T11:08:33.146128+00:00",
       "retryAfterAt": null,
-      "errorCode": null
+      "errorCode": "URLError"
     },
     {
       "id": "open-meteo-toyama",
@@ -495,5 +350,14 @@
       "errorCode": null
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "jma-toyama-warning",
+      "error": "<urlopen error _ssl.c:1015: The handshake operation timed out>"
+    },
+    {
+      "source": "jma-nowcast",
+      "error": "<urlopen error _ssl.c:1015: The handshake operation timed out>"
+    }
+  ]
 }
