@@ -752,7 +752,7 @@
         <p>アプリのアイコンをタップして起動。</p>
       </div>
       <div class="godot-detail" id="godot-detail" hidden>
-        <div class="shelf-title"><h2>Gravity Canvas</h2><small>色を導くミラーパズル</small></div>
+        <div class="shelf-title"><h2>Gravity Canvas</h2><small>3Dの板で玉をゴールへ導くピタゴラパズル</small></div>
         <iframe class="godot-frame" title="Gravity Canvas" src="./projects/gravity-canvas/index.html" allow="fullscreen; gamepad" allowfullscreen></iframe>
         <div class="godot-actions"><a class="godot-action apk" href="./projects/gravity-canvas/GravityCanvas.apk" download>Androidアプリ（APK）</a></div>
       </div>
@@ -848,7 +848,7 @@
       forceUpdate().catch(() => location.reload());
     });
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("sw.js?v=202609271930", { updateViaCache: "none" }).then((reg) => reg.update()).catch(() => {});
+      navigator.serviceWorker.register("sw.js?v=202609272100", { updateViaCache: "none" }).then((reg) => reg.update()).catch(() => {});
     }
     function activateTab(name) {
       document.querySelectorAll(".tab").forEach((tab) => {
