@@ -1,11 +1,14 @@
 {
   "lane": "app",
-  "ts": "2026-09-27T09:17:00+09:00",
+  "ts": "2026-09-27T08:30:00+09:00",
   "artifact": "index.html",
-  "prompt": "Gravity Canvas: place and rotate up to three 3D physical boards to guide a falling ball into the goal. Godot 4.7 Web export and Android debug APK.",
+  "prompt": "Gravity Canvas Godot Web export for CG; APK download is available beside the game.",
   "source": "codex",
   "backend": "codex",
   "model": "gpt-6-luna",
   "seconds": 0,
-  "gates": {"web_export": {"pass": true, "note": "Godot 4.7.1 Web export; 3D rigid-body ball, placeable bounce boards and goal Area3D"}, "cg_registered": {"pass": true, "note": "Existing CG game icon now launches 3D puzzle"}}
+  "gates": {
+    "web_export": {"pass": true, "note": "Godot 4.7.1 single-threaded Web export; companion JS/WASM/PCK included"},
+    "cg_registered": {"pass": true, "note": "Linked from local CG game list and app shelf"}
+  }
 }
