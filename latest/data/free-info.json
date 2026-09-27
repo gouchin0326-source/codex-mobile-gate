@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-27T02:28:06.359133+00:00",
-  "lastSuccessAt": "2026-09-27T02:28:06.359133+00:00",
+  "updatedAt": "2026-09-27T02:48:04.090263+00:00",
+  "lastSuccessAt": "2026-09-27T02:48:04.090263+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -142,18 +142,18 @@
     },
     {
       "genre": "災害",
-      "count": 5,
-      "signal": "M 1.3 - 21 km NE of Minto, Alaska / M 1.5 - 34 km ESE of Skwentna, Alaska / M 1.1 - 16 km WSW of Johannesburg, CA",
+      "count": 4,
+      "signal": "M 2.2 - 26 km SSE of Nelchina, Alaska / M 1.1 - 2 km NNW of The Geysers, CA / M 2.7 - 110 km NNE of Arctic Village, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tdamgz",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tdbhfa",
       "score": 1
     },
     {
       "genre": "技術",
-      "count": 1,
-      "signal": "The JavaScript Pun: tagged template literal",
+      "count": 2,
+      "signal": "AI Agents Push Humans Out of the Loop / The JavaScript Pun: tagged template literal",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://shukla.io/blog/2026-09/pun.html",
+      "topUrl": "https://arxiv.org/abs/2608.23642",
       "score": 2
     }
   ],
@@ -221,16 +221,16 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "技術",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "The JavaScript Pun: tagged template literal",
-      "summary": "Comments",
-      "url": "https://shukla.io/blog/2026-09/pun.html",
-      "published": "2026-09-26T15:37:12+00:00",
+      "title": "AI Agents Push Humans Out of the Loop",
+      "summary": "Abstract: AI agents pose significant risks as they are granted increasing autonomy. A commonly proposed solution is human oversight and keeping a ''human in the loop'', but this is not a simple solution: Not only do curr",
+      "url": "https://arxiv.org/abs/2608.23642",
+      "published": "2026-09-26T19:21:56+00:00",
       "score": 2,
       "tags": [
         "技術",
-        "開発"
+        "重要"
       ]
     },
     {
@@ -273,10 +273,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.3 - 21 km NE of Minto, Alaska",
-      "summary": "21 km NE of Minto, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tdamgz",
-      "published": "2026-09-27T02:17:41.979000+00:00",
+      "title": "M 2.2 - 26 km SSE of Nelchina, Alaska",
+      "summary": "26 km SSE of Nelchina, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tdbhfa",
+      "published": "2026-09-27T02:41:48.789000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -500,6 +500,24 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "The JavaScript Pun: tagged template literal",
+      "summary": "Comments",
+      "url": "https://shukla.io/blog/2026-09/pun.html",
+      "published": "2026-09-26T15:37:12+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "開発"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -665,10 +683,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.5 - 34 km ESE of Skwentna, Alaska",
-      "summary": "34 km ESE of Skwentna, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tdajij",
-      "published": "2026-09-27T02:14:17.973000+00:00",
+      "title": "M 1.1 - 2 km NNW of The Geysers, CA",
+      "summary": "2 km NNW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442802",
+      "published": "2026-09-27T02:36:14.790000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -678,10 +696,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.1 - 16 km WSW of Johannesburg, CA",
-      "summary": "16 km WSW of Johannesburg, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41339647",
-      "published": "2026-09-27T02:06:39.620000+00:00",
+      "title": "M 2.7 - 110 km NNE of Arctic Village, Alaska",
+      "summary": "110 km NNE of Arctic Village, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tdbbzi",
+      "published": "2026-09-27T02:35:15.964000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -691,23 +709,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.5 - 63 km W of Karluk, Alaska",
-      "summary": "63 km W of Karluk, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tczykx",
-      "published": "2026-09-27T02:01:42.224000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.1 - 8 km SSE of Sunol, CA",
-      "summary": "8 km SSE of Sunol, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442787",
-      "published": "2026-09-27T01:47:25.340000+00:00",
+      "title": "M 5.1 - 90 km ENE of Tadine, New Caledonia",
+      "summary": "90 km ENE of Tadine, New Caledonia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txw5",
+      "published": "2026-09-27T02:22:10.562000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -718,64 +723,64 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T02:28:06.359133+00:00",
-      "lastAttemptAt": "2026-09-27T02:28:06.359133+00:00",
+      "lastSuccessAt": "2026-09-27T02:48:04.090263+00:00",
+      "lastAttemptAt": "2026-09-27T02:48:04.090263+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T02:28:06.359133+00:00",
-      "lastAttemptAt": "2026-09-27T02:28:06.359133+00:00",
+      "lastSuccessAt": "2026-09-27T02:48:04.090263+00:00",
+      "lastAttemptAt": "2026-09-27T02:48:04.090263+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T02:28:06.359133+00:00",
-      "lastAttemptAt": "2026-09-27T02:28:06.359133+00:00",
+      "lastSuccessAt": "2026-09-27T02:48:04.090263+00:00",
+      "lastAttemptAt": "2026-09-27T02:48:04.090263+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T02:28:06.359133+00:00",
-      "lastAttemptAt": "2026-09-27T02:28:06.359133+00:00",
+      "lastSuccessAt": "2026-09-27T02:48:04.090263+00:00",
+      "lastAttemptAt": "2026-09-27T02:48:04.090263+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T02:28:06.359133+00:00",
-      "lastAttemptAt": "2026-09-27T02:28:06.359133+00:00",
+      "lastSuccessAt": "2026-09-27T02:48:04.090263+00:00",
+      "lastAttemptAt": "2026-09-27T02:48:04.090263+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T02:28:06.359133+00:00",
-      "lastAttemptAt": "2026-09-27T02:28:06.359133+00:00",
+      "lastSuccessAt": "2026-09-27T02:48:04.090263+00:00",
+      "lastAttemptAt": "2026-09-27T02:48:04.090263+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T02:28:06.359133+00:00",
-      "lastAttemptAt": "2026-09-27T02:28:06.359133+00:00",
+      "lastSuccessAt": "2026-09-27T02:48:04.090263+00:00",
+      "lastAttemptAt": "2026-09-27T02:48:04.090263+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T02:28:06.359133+00:00",
-      "lastAttemptAt": "2026-09-27T02:28:06.359133+00:00",
+      "lastSuccessAt": "2026-09-27T02:48:04.090263+00:00",
+      "lastAttemptAt": "2026-09-27T02:48:04.090263+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

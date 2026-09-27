@@ -1,14 +1,14 @@
 {
   "lane": "app",
-  "ts": "2026-09-27T11:28:00+09:00",
+  "ts": "2026-09-27T08:30:00+09:00",
   "artifact": "index.html",
-  "prompt": "Gravity Canvas 3D: ball waits at visible START; preview and place sloped boards, adjust tilt, then guide to goal.",
+  "prompt": "Gravity Canvas Godot Web export for CG; APK download is available beside the game.",
   "source": "codex",
   "backend": "codex",
   "model": "gpt-6-luna",
   "seconds": 0,
   "gates": {
-    "web_export": {"pass": true, "note": "Versioned PCK avoids stale browser cache; visible START, placement and goal route tested"},
-    "cg_registered": {"pass": true, "note": "CG GODOT game icon launches embedded Web game"}
+    "web_export": {"pass": true, "note": "Godot 4.7.1 single-threaded Web export; companion JS/WASM/PCK included"},
+    "cg_registered": {"pass": true, "note": "Linked from local CG game list and app shelf"}
   }
 }

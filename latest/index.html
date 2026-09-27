@@ -375,12 +375,7 @@
     .game-card.puzzle { background:linear-gradient(145deg,#312e81,#7c3aed); }
     .game-card.brain { background:linear-gradient(145deg,#075985,#0f766e); }
     .game-card.arcade { background:linear-gradient(145deg,#713f12,#ca8a04); }
-    .godot-frame { display:block; width:100%; height:min(100vh,720px); min-height:520px; border:0; border-radius:14px; background:#090d1c; }
-    .godot-game-list { display:grid; grid-template-columns:repeat(auto-fill,minmax(92px,1fr)); gap:12px; }
-    .godot-game-icon { min-height:108px; padding:9px 6px; display:grid; align-content:center; justify-items:center; gap:8px; border:1px solid var(--line); border-radius:14px; background:var(--panel); color:var(--ink); font:inherit; cursor:pointer; }
-    .godot-game-icon b { width:58px; height:58px; display:grid; place-items:center; border-radius:16px; background:linear-gradient(145deg,#172554,#0f766e); color:#fff; font-size:1.35rem; }
-    .godot-game-icon span { font-size:.76rem; font-weight:800; text-align:center; }
-    .godot-detail[hidden], .godot-list[hidden] { display:none; }
+    .godot-frame { display:block; width:100%; height:min(70vh,720px); min-height:390px; border:0; border-radius:14px; background:#090d1c; }
     .godot-actions { display:flex; flex-wrap:wrap; gap:8px; margin:10px 0 14px; }
     .godot-action { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:8px 14px; border-radius:10px; background:#172033; color:#fff; font-weight:900; text-decoration:none; }
     .godot-action.apk { background:#15803d; }
@@ -685,7 +680,7 @@
     .cow-file small { color:var(--muted); }
     .cow-file button { min-height:36px; border:1px solid #2563eb; border-radius:8px; background:#2563eb; color:#fff; font:inherit; font-weight:900; padding:6px 10px; }
 
-    @media(max-width:560px){.setting-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.setting-pill{padding:6px;min-height:58px}.setting-pill b{font-size:.76rem}.setting-pill span{font-size:.62rem}.play-now{min-height:132px}.play-now-copy{padding:14px}.play-now-copy strong{font-size:1.3rem}.play-now-mark{font-size:3.2rem}.game-shelf{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.game-card{min-height:96px;padding:9px}.godot-frame{height:min(100vh,720px);min-height:520px}}
+    @media(max-width:560px){.setting-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}.setting-pill{padding:6px;min-height:58px}.setting-pill b{font-size:.76rem}.setting-pill span{font-size:.62rem}.play-now{min-height:132px}.play-now-copy{padding:14px}.play-now-copy strong{font-size:1.3rem}.play-now-mark{font-size:3.2rem}.game-shelf{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.game-card{min-height:96px;padding:9px}.godot-frame{height:68vh;min-height:330px}}
   </style>
 </head>
 <body>
@@ -746,16 +741,13 @@
     </section>
 
     <section class="tab-panel" id="tab-godot">
-      <div class="shelf-title"><h2>GODOTゲーム</h2><small>アイコンをタップして起動</small></div>
-      <div class="godot-list" id="godot-list">
-        <div class="godot-game-list"><button class="godot-game-icon" type="button" data-godot-game="gravity-canvas" aria-label="Gravity Canvasを起動"><b aria-hidden="true">GC</b><span>Gravity Canvas</span></button></div>
-        <p>ゲームを選んで起動。</p>
+      <div class="shelf-title"><h2>GODOT</h2><small>アプリ起動・その場でプレイ</small></div>
+      <iframe class="godot-frame" id="godot-frame" title="Gravity Canvas — GODOTゲーム" data-src="./projects/gravity-canvas/index.html" allow="fullscreen; gamepad" allowfullscreen loading="lazy"></iframe>
+      <div class="godot-actions">
+        <a class="godot-action" href="./projects/gravity-canvas/index.html" target="_blank" rel="noopener">別画面で起動</a>
+        <a class="godot-action apk" href="./projects/gravity-canvas/GravityCanvas.apk" download>Android APKをダウンロード</a>
       </div>
-      <div class="godot-detail" id="godot-detail" hidden>
-        <div class="shelf-title"><h2>Gravity Canvas</h2><small>3Dの板を配置して玉をゴールへ</small></div>
-        <iframe class="godot-frame" title="Gravity Canvas" src="./projects/gravity-canvas/index.html?cg=v147" allow="fullscreen; gamepad" allowfullscreen></iframe>
-        <p>玉の開始は左上のSTART。板を置く→盤面タップ。角度ボタンで15°ずつ調整し、準備後に落とす。</p>
-      </div>
+      <p>ドラッグで重力場を置き、粒子を受け皿へ導くパズルです。Web版はこの画面ですぐ遊べます。</p>
     </section>
 
     <section class="tab-panel" id="tab-codex">
@@ -842,13 +834,13 @@
         const regs = await navigator.serviceWorker.getRegistrations();
         await Promise.all(regs.map((reg) => reg.unregister().catch(() => reg.update().catch(() => {}))));
       }
-      location.replace(`./index.html?v=202609271250&refresh=${Date.now()}`);
+      location.replace(`./index.html?v=202609141418&refresh=${Date.now()}`);
     }
     document.querySelector("#force-update")?.addEventListener("click", () => {
       forceUpdate().catch(() => location.reload());
     });
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("sw.js?v=202609271250", { updateViaCache: "none" }).then((reg) => reg.update()).catch(() => {});
+      navigator.serviceWorker.register("sw.js?v=202609270830", { updateViaCache: "none" }).catch(() => {});
     }
     function activateTab(name) {
       document.querySelectorAll(".tab").forEach((tab) => {
@@ -858,18 +850,17 @@
         panel.classList.toggle("active", panel.id === `tab-${name}`);
       });
       if (name === "godot") {
-        document.querySelector("#godot-list")?.removeAttribute("hidden");
-        document.querySelector("#godot-detail")?.setAttribute("hidden", "");
+        const frame = document.querySelector("#godot-frame");
+        if (frame && !frame.dataset.started) {
+          frame.src = frame.dataset.src;
+          frame.dataset.started = "true";
+        }
       }
       localStorage.setItem("cg-tab", name);
     }
     document.querySelectorAll(".tab").forEach((tab) => {
       tab.addEventListener("click", () => activateTab(tab.dataset.tab));
     });
-    document.querySelectorAll("[data-godot-game]").forEach((button) => button.addEventListener("click", () => {
-      document.querySelector("#godot-list")?.setAttribute("hidden", "");
-      document.querySelector("#godot-detail")?.removeAttribute("hidden");
-    }));
     activateTab(localStorage.getItem("cg-tab") || "zero");
     function renderCowArtifacts() {
       const root = document.querySelector("#cow-published");
