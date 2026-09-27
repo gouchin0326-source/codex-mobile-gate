@@ -1,4 +1,4 @@
-const CACHE = "codex-gate-latest-v148-blade-balance-20260927";
+const CACHE = "codex-gate-latest-v149-blade-input-20260927";
 const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
