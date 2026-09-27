@@ -9,8 +9,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = "https://gouchin0326-source.github.io/codex-mobile-gate"
-GAMES = ("gravity-canvas", "genre-lab-3d")
-PACKS = {"gravity-canvas": "index-v147.pck", "genre-lab-3d": "index-v1.pck"}
+GAMES = ("gravity-canvas", "genre-lab-3d", "sky-spire", "neon-sequence", "orb-collector")
+PACKS = {"gravity-canvas": "index-v147.pck", "genre-lab-3d": "index-v1.pck", "sky-spire": "index-v1.pck", "neon-sequence": "index-v1.pck", "orb-collector": "index-v1.pck"}
 
 
 def require(condition, message):
