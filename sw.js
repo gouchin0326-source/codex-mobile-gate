@@ -1,4 +1,4 @@
-const CACHE = "codex-gate-v143-godot-root-20260927";
+const CACHE = "codex-gate-root-v144-entry-20260927";
 const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
@@ -42,7 +42,7 @@ self.addEventListener("install", (event) => {
 
 self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then((keys) => Promise.all(keys.filter((key) => key !== CACHE).map((key) => caches.delete(key))))
+    caches.keys().then((keys) => Promise.all(keys.filter((key) => key.startsWith("codex-gate-root-") && key !== CACHE).map((key) => caches.delete(key))))
   );
   self.clients.claim();
 });

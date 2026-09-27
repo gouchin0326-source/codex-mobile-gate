@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#172033">
-  <link rel="manifest" href="manifest.webmanifest?v=202609141418">
+  <link rel="manifest" href="manifest.webmanifest?v=20260927-cg-entry-3">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <title>CG | CODEX Gate</title>
   <style>
@@ -846,13 +846,13 @@
         const regs = await navigator.serviceWorker.getRegistrations();
         await Promise.all(regs.map((reg) => reg.unregister().catch(() => reg.update().catch(() => {}))));
       }
-      location.replace(`./index.html?v=202609141418&refresh=${Date.now()}`);
+      location.replace(`./index.html?v=20260927-cg-entry-3&refresh=${Date.now()}`);
     }
     document.querySelector("#force-update")?.addEventListener("click", () => {
       forceUpdate().catch(() => location.reload());
     });
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("sw.js?v=20260927-genre-lab-2", { updateViaCache: "none" }).catch(() => {});
+      navigator.serviceWorker.register("sw.js?v=20260927-cg-entry-3", { updateViaCache: "none" }).catch(() => {});
     }
     function activateTab(name) {
       document.querySelectorAll(".tab").forEach((tab) => {
