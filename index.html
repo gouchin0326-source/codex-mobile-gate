@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#172033">
-  <link rel="manifest" href="manifest.webmanifest?v=20260927-blade-1">
+  <link rel="manifest" href="manifest.webmanifest?v=20260927-blade-2">
   <link rel="icon" href="latest/icon.svg" type="image/svg+xml">
   <title>CG | CODEX Gate</title>
   <style>
@@ -771,8 +771,8 @@
       </div>
       <div class="godot-detail" data-godot-detail="blade-arena" hidden>
         <button class="godot-action" type="button" data-godot-back>← ゲーム一覧</button>
-        <iframe class="godot-frame" title="刃の庭" data-src="./latest/projects/blade-arena/index.html?v=1" allow="fullscreen; gamepad" allowfullscreen loading="lazy"></iframe>
-        <div class="godot-actions"><a class="godot-action" href="./latest/projects/blade-arena/index.html?v=1" target="_blank" rel="noopener">別画面で起動</a></div>
+        <iframe class="godot-frame" title="刃の庭" data-src="./latest/projects/blade-arena/index.html?v=2" allow="fullscreen; gamepad" allowfullscreen loading="lazy"></iframe>
+        <div class="godot-actions"><a class="godot-action" href="./latest/projects/blade-arena/index.html?v=2" target="_blank" rel="noopener">別画面で起動</a></div>
       </div>
     </section>
 
@@ -861,13 +861,13 @@
         const regs = await navigator.serviceWorker.getRegistrations();
         await Promise.all(regs.map((reg) => reg.unregister().catch(() => reg.update().catch(() => {}))));
       }
-      location.replace(`./index.html?v=20260927-blade-1&refresh=${Date.now()}`);
+      location.replace(`./index.html?v=20260927-blade-2&refresh=${Date.now()}`);
     }
     document.querySelector("#force-update")?.addEventListener("click", () => {
       forceUpdate().catch(() => location.reload());
     });
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("sw.js?v=20260927-blade-1", { updateViaCache: "none" }).catch(() => {});
+      navigator.serviceWorker.register("sw.js?v=20260927-blade-2", { updateViaCache: "none" }).catch(() => {});
     }
     function activateTab(name) {
       document.querySelectorAll(".tab").forEach((tab) => {
