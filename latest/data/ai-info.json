@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-27T11:28:01.390910+00:00",
+  "updatedAt": "2026-09-27T11:38:02.090931+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -26,8 +26,8 @@
       "genre": "技術",
       "count": 2,
       "decision": "必要時だけ確認",
-      "signal": "AI Agents Push Humans Out of the Loop / The JavaScript Pun: tagged template literal",
-      "topUrl": "https://arxiv.org/abs/2608.23642",
+      "signal": "Valve Introduces Pyrowave Video Codec In Beta For Low Latency Streaming / AI Agents Push Humans Out of the Loop",
+      "topUrl": "https://www.phoronix.com/news/Valve-Steam-Beta-Pyrowave",
       "score": 2
     }
   ],
@@ -370,6 +370,24 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "Valve Introduces Pyrowave Video Codec In Beta For Low Latency Streaming",
+      "summary": "Comments",
+      "url": "https://www.phoronix.com/news/Valve-Steam-Beta-Pyrowave",
+      "published": "2026-09-27T03:41:44+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "制作"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
       "topic": "AI",
       "sourceWeight": 1,
       "title": "AI Agents Push Humans Out of the Loop",
@@ -380,24 +398,6 @@
       "tags": [
         "技術",
         "重要"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "The JavaScript Pun: tagged template literal",
-      "summary": "Comments",
-      "url": "https://shukla.io/blog/2026-09/pun.html",
-      "published": "2026-09-26T15:37:12+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "開発"
       ]
     },
     {
@@ -699,5 +699,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-27T05:28:02.005661+00:00"
+  "lastSuccessAt": "2026-09-27T11:38:02.090931+00:00"
 }
