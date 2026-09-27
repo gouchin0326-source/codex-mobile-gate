@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-27T14:38:01.347420+00:00",
+  "updatedAt": "2026-09-27T21:30:16.020950+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -24,11 +24,11 @@
     },
     {
       "genre": "技術",
-      "count": 2,
+      "count": 3,
       "decision": "必要時だけ確認",
-      "signal": "Valve Introduces Pyrowave Video Codec In Beta For Low Latency Streaming / AI Agents Push Humans Out of the Loop",
-      "topUrl": "https://www.phoronix.com/news/Valve-Steam-Beta-Pyrowave",
-      "score": 2
+      "signal": "Don't couple your Go code to GitHub / LuaRocks Security Incident September 2026 / Valve Introduces Pyrowave Video Codec In Beta For Low Latency Streaming",
+      "topUrl": "https://iain.rocks/blog/dont-couple-your-go-code-to-github",
+      "score": 3
     }
   ],
   "focus": [
@@ -52,6 +52,13 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
       "url": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/"
+    },
+    {
+      "label": "技術",
+      "title": "Don't couple your Go code to GitHub",
+      "why": "Codex/AI開発判断に関係",
+      "source": "技術RSS",
+      "url": "https://iain.rocks/blog/dont-couple-your-go-code-to-github"
     },
     {
       "label": "開発",
@@ -80,13 +87,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-09-25-updates-to-github-copilot-for-slack-and-microsoft-teams"
-    },
-    {
-      "label": "開発",
-      "title": "Improving site performance by shipping more CSS",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub",
-      "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/"
     }
   ],
   "items": [
@@ -145,6 +145,25 @@
         "開発",
         "重要",
         "制作"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Don't couple your Go code to GitHub",
+      "summary": "Comments",
+      "url": "https://iain.rocks/blog/dont-couple-your-go-code-to-github",
+      "published": "2026-09-27T20:17:42+00:00",
+      "score": 3,
+      "tags": [
+        "技術",
+        "重要",
+        "開発"
       ]
     },
     {
@@ -370,6 +389,24 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "LuaRocks Security Incident September 2026",
+      "summary": "Comments",
+      "url": "https://luarocks.org/security-incident-september-2026",
+      "published": "2026-09-27T13:58:57+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "重要"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
       "topic": "開発",
       "sourceWeight": 1,
       "title": "Valve Introduces Pyrowave Video Codec In Beta For Low Latency Streaming",
@@ -380,24 +417,6 @@
       "tags": [
         "技術",
         "制作"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "AI Agents Push Humans Out of the Loop",
-      "summary": "Abstract: AI agents pose significant risks as they are granted increasing autonomy. A commonly proposed solution is human oversight and keeping a ''human in the loop'', but this is not a simple solution: Not only do curr",
-      "url": "https://arxiv.org/abs/2608.23642",
-      "published": "2026-09-26T19:21:56+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "重要"
       ]
     },
     {
@@ -506,24 +525,6 @@
       "tags": [
         "AI",
         "制作"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Ringg’s AI agents resolve up to 65% of customer calls with OpenAI",
-      "summary": "Using GPT-5.6, Ringg powers multilingual agents across voice, chat, WhatsApp, and web for 90% less cost vs. GPT-4.1.",
-      "url": "https://openai.com/index/ringg",
-      "published": "2026-09-23T12:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
       ]
     }
   ],
@@ -699,5 +700,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-27T11:38:02.090931+00:00"
+  "lastSuccessAt": "2026-09-27T21:30:16.020950+00:00"
 }

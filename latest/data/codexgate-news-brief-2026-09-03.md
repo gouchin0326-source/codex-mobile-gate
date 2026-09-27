@@ -1,11 +1,11 @@
 # CODEXGATE News Brief
 
-- 更新: 2026-09-27T14:38:01.347420+00:00
+- 更新: 2026-09-27T21:30:16.020950+00:00
 - 取得: GitHub Actions/Python
 - Codex: 0%想定（自動実行時）
 - 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。
 
 - [開発] CG開発・GitHub運用へ反映候補 / GitHub Copilot app for Beginners: How to build custom workflows with c
 - [AI] AI/Codex運用の変化を確認 / Gemini 3.8 text-to-speech says hello / Proaction boosts sales 60% and 
-- [災害] 更新あり。必要時だけ確認 / M 1.1 - 2 km NW of The Geysers, CA / M 2.3 - 55 km E of Denali Nationa
-- [技術] 更新あり。必要時だけ確認 / Valve Introduces Pyrowave Video Codec In Beta For Low Latency Streamin
+- [技術] 更新あり。必要時だけ確認 / Don't couple your Go code to GitHub / LuaRocks Security Incident Septe
+- [災害] 更新あり。必要時だけ確認 / M 2.0 - 47 km W of Anchor Point, Alaska / M 1.5 - 8 km NW of The Geyse
