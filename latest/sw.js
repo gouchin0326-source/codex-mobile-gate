@@ -1,4 +1,4 @@
-const CACHE = "codex-gate-v145-gravity-canvas-first-level-20260927";
+const CACHE = "codex-gate-v146-gravity-canvas-visible-start-20260927";
 const ASSETS = [
   "./index.html",
   "./manifest.webmanifest",

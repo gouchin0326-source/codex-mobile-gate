@@ -1,6 +1,6 @@
 {
   "lane": "app",
-  "ts": "2026-09-27T11:23:00+09:00",
+  "ts": "2026-09-27T11:24:00+09:00",
   "artifact": "index.html",
   "prompt": "Gravity Canvas 3D: ball waits at visible START; preview and place sloped boards, adjust tilt, then guide it to the goal.",
   "source": "codex",
@@ -8,7 +8,7 @@
   "model": "gpt-6-luna",
   "seconds": 0,
   "gates": {
-    "web_export": {"pass": true, "note": "Godot 4.7.1 Web export; ball wait, placement preview and reachable starter route smoke-tested"},
-    "cg_registered": {"pass": true, "note": "CG GODOT list icon starts embedded Web game"}
+    "web_export": {"pass": true, "note": "Godot 4.7.1 Web export; framed visible START, ball wait, preview and starter goal route tested"},
+    "cg_registered": {"pass": true, "note": "CG GODOT icon launches embedded Web game"}
   }
 }
