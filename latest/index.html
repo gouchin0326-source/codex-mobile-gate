@@ -849,7 +849,7 @@
       forceUpdate().catch(() => location.reload());
     });
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("sw.js?v=202609271700", { updateViaCache: "none" }).then((reg) => reg.update()).catch(() => {});
+      navigator.serviceWorker.register("sw.js?v=202609271800", { updateViaCache: "none" }).then((reg) => reg.update()).catch(() => {});
     }
     function activateTab(name) {
       document.querySelectorAll(".tab").forEach((tab) => {
@@ -871,7 +871,7 @@
       document.querySelector("#godot-list")?.setAttribute("hidden", "");
       document.querySelector("#godot-detail")?.removeAttribute("hidden");
     }));
-    activateTab(localStorage.getItem("cg-tab") || "zero");
+    activateTab("zero");
     function renderCowArtifacts() {
       const root = document.querySelector("#cow-published");
       if (!root) return;
