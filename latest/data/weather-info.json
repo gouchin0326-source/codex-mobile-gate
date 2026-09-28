@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-27T23:58:02.643129+00:00",
-  "lastSuccessAt": "2026-09-27T23:58:02.643129+00:00",
+  "updatedAt": "2026-09-28T00:08:00.842590+00:00",
+  "lastSuccessAt": "2026-09-28T00:08:00.842590+00:00",
   "status": "fresh",
   "mode": "primary-api-weather-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -185,16 +185,16 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "location": "富山県",
-      "updatedAt": "2026-09-27T23:28:30.393161+00:00",
+      "updatedAt": "2026-09-28T00:08:00.842590+00:00",
       "current": {
-        "time": "2026-09-28T08:15",
+        "time": "2026-09-28T09:00",
         "interval": 900,
-        "temperature_2m": 21.7,
-        "relative_humidity_2m": 91,
-        "apparent_temperature": 24.9,
+        "temperature_2m": 22.6,
+        "relative_humidity_2m": 90,
+        "apparent_temperature": 26.1,
         "precipitation": 0.1,
         "weather_code": 51,
-        "wind_speed_10m": 5.1
+        "wind_speed_10m": 5.8
       },
       "hourly": [
         {
@@ -489,8 +489,8 @@
     {
       "id": "open-meteo-toyama",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T23:28:30.393161+00:00",
-      "lastAttemptAt": "2026-09-27T23:28:30.393161+00:00",
+      "lastSuccessAt": "2026-09-28T00:08:00.842590+00:00",
+      "lastAttemptAt": "2026-09-28T00:08:00.842590+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
