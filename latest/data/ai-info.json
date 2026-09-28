@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T03:28:05.381652+00:00",
+  "updatedAt": "2026-09-28T03:38:22.695128+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -24,9 +24,9 @@
     },
     {
       "genre": "技術",
-      "count": 3,
+      "count": 2,
       "decision": "必要時だけ確認",
-      "signal": "Don't couple your Go code to GitHub / LuaRocks Security Incident September 2026 / Valve Introduces Pyrowave Video Codec In Beta For Low Latency Streaming",
+      "signal": "Don't couple your Go code to GitHub / LuaRocks Security Incident September 2026",
       "topUrl": "https://iain.rocks/blog/dont-couple-your-go-code-to-github",
       "score": 3
     }
@@ -402,24 +402,6 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Valve Introduces Pyrowave Video Codec In Beta For Low Latency Streaming",
-      "summary": "Comments",
-      "url": "https://www.phoronix.com/news/Valve-Steam-Beta-Pyrowave",
-      "published": "2026-09-27T03:41:44+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "制作"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -525,6 +507,24 @@
       "tags": [
         "AI",
         "制作"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Ringg’s AI agents resolve up to 65% of customer calls with OpenAI",
+      "summary": "Using GPT-5.6, Ringg powers multilingual agents across voice, chat, WhatsApp, and web for 90% less cost vs. GPT-4.1.",
+      "url": "https://openai.com/index/ringg",
+      "published": "2026-09-23T12:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
       ]
     }
   ],
@@ -700,5 +700,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-27T21:30:16.020950+00:00"
+  "lastSuccessAt": "2026-09-28T03:38:22.695128+00:00"
 }

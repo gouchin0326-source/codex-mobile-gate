@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-28T03:28:05.381652+00:00",
-  "lastSuccessAt": "2026-09-27T21:30:16.020950+00:00",
+  "updatedAt": "2026-09-28T03:38:22.695128+00:00",
+  "lastSuccessAt": "2026-09-28T03:38:22.695128+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -141,20 +141,20 @@
       "score": 3
     },
     {
+      "genre": "災害",
+      "count": 4,
+      "signal": "M 1.1 - 11 km SSW of Idyllwild, CA / M 2.0 - 7 km SW of Willow, Alaska / M 1.7 - 4 km SW of Guánica, Puerto Rico",
+      "decision": "更新あり。必要時だけ確認",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41340103",
+      "score": 1
+    },
+    {
       "genre": "技術",
-      "count": 3,
-      "signal": "Don't couple your Go code to GitHub / LuaRocks Security Incident September 2026 / Valve Introduces Pyrowave Video Codec In Beta For Low Latency Streaming",
+      "count": 2,
+      "signal": "Don't couple your Go code to GitHub / LuaRocks Security Incident September 2026",
       "decision": "更新あり。必要時だけ確認",
       "topUrl": "https://iain.rocks/blog/dont-couple-your-go-code-to-github",
       "score": 3
-    },
-    {
-      "genre": "災害",
-      "count": 3,
-      "signal": "M 2.0 - 47 km W of Anchor Point, Alaska / M 1.5 - 8 km NW of The Geysers, CA / M 2.6 - 73 km NNE of Petersville, Alaska",
-      "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026temugc",
-      "score": 1
     }
   ],
   "items": [
@@ -274,10 +274,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.0 - 47 km W of Anchor Point, Alaska",
-      "summary": "47 km W of Anchor Point, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026temugc",
-      "published": "2026-09-27T21:26:21.932000+00:00",
+      "title": "M 1.1 - 11 km SSW of Idyllwild, CA",
+      "summary": "11 km SSW of Idyllwild, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41340103",
+      "published": "2026-09-28T03:24:27.070000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -519,24 +519,6 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Valve Introduces Pyrowave Video Codec In Beta For Low Latency Streaming",
-      "summary": "Comments",
-      "url": "https://www.phoronix.com/news/Valve-Steam-Beta-Pyrowave",
-      "published": "2026-09-27T03:41:44+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "制作"
-      ]
-    },
-    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -702,10 +684,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.5 - 8 km NW of The Geysers, CA",
-      "summary": "8 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75443377",
-      "published": "2026-09-27T21:22:12.160000+00:00",
+      "title": "M 2.0 - 7 km SW of Willow, Alaska",
+      "summary": "7 km SW of Willow, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026teyrxj",
+      "published": "2026-09-28T03:23:31.770000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -715,10 +697,23 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.6 - 73 km NNE of Petersville, Alaska",
-      "summary": "73 km NNE of Petersville, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026temmhr",
-      "published": "2026-09-27T21:17:13.242000+00:00",
+      "title": "M 1.7 - 4 km SW of Guánica, Puerto Rico",
+      "summary": "4 km SW of Guánica, Puerto Rico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71534893",
+      "published": "2026-09-28T03:22:43.740000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.2 - 17 km N of Borrego Springs, CA",
+      "summary": "17 km N of Borrego Springs, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41340095",
+      "published": "2026-09-28T03:22:16.140000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -729,48 +724,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T21:30:16.020950+00:00",
-      "lastAttemptAt": "2026-09-27T21:30:16.020950+00:00",
+      "lastSuccessAt": "2026-09-28T03:38:22.695128+00:00",
+      "lastAttemptAt": "2026-09-28T03:38:22.695128+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T21:30:16.020950+00:00",
-      "lastAttemptAt": "2026-09-27T21:30:16.020950+00:00",
+      "lastSuccessAt": "2026-09-28T03:38:22.695128+00:00",
+      "lastAttemptAt": "2026-09-28T03:38:22.695128+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T21:30:16.020950+00:00",
-      "lastAttemptAt": "2026-09-27T21:30:16.020950+00:00",
+      "lastSuccessAt": "2026-09-28T03:38:22.695128+00:00",
+      "lastAttemptAt": "2026-09-28T03:38:22.695128+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T21:30:16.020950+00:00",
-      "lastAttemptAt": "2026-09-27T21:30:16.020950+00:00",
+      "lastSuccessAt": "2026-09-28T03:38:22.695128+00:00",
+      "lastAttemptAt": "2026-09-28T03:38:22.695128+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T21:30:16.020950+00:00",
-      "lastAttemptAt": "2026-09-27T21:30:16.020950+00:00",
+      "lastSuccessAt": "2026-09-28T03:38:22.695128+00:00",
+      "lastAttemptAt": "2026-09-28T03:38:22.695128+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T21:30:16.020950+00:00",
-      "lastAttemptAt": "2026-09-27T21:30:16.020950+00:00",
+      "lastSuccessAt": "2026-09-28T03:38:22.695128+00:00",
+      "lastAttemptAt": "2026-09-28T03:38:22.695128+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -785,8 +780,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-27T21:30:16.020950+00:00",
-      "lastAttemptAt": "2026-09-27T21:30:16.020950+00:00",
+      "lastSuccessAt": "2026-09-28T03:38:22.695128+00:00",
+      "lastAttemptAt": "2026-09-28T03:38:22.695128+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
