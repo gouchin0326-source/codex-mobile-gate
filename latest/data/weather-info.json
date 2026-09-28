@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-28T22:38:01.507650+00:00",
-  "lastSuccessAt": "2026-09-28T22:38:01.507650+00:00",
+  "updatedAt": "2026-09-28T22:48:01.376151+00:00",
+  "lastSuccessAt": "2026-09-28T22:48:01.376151+00:00",
   "status": "fresh",
   "mode": "primary-api-weather-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -9,11 +9,11 @@
     "level": "caution",
     "label": "注意",
     "lines": [
-      "富山: 雨100%/最大0.1mm",
+      "富山: 雨100%/最大0mm",
       "風6.5km/h・週間雨量最大22.7mm"
     ],
     "maxRainProbability": 100,
-    "maxHourlyRain": 0.1,
+    "maxHourlyRain": 0,
     "maxDailyRain": 22.7,
     "maxWind": 6.5,
     "jmaWarnings": [],
@@ -185,27 +185,18 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "location": "富山県",
-      "updatedAt": "2026-09-28T22:08:01.711014+00:00",
+      "updatedAt": "2026-09-28T22:48:01.376151+00:00",
       "current": {
-        "time": "2026-09-29T07:00",
+        "time": "2026-09-29T07:45",
         "interval": 900,
         "temperature_2m": 20.1,
-        "relative_humidity_2m": 88,
-        "apparent_temperature": 22.3,
+        "relative_humidity_2m": 84,
+        "apparent_temperature": 22.1,
         "precipitation": 0.0,
         "weather_code": 3,
-        "wind_speed_10m": 4.6
+        "wind_speed_10m": 3.7
       },
       "hourly": [
-        {
-          "time": "2026-09-29T07:00",
-          "temp": 20.1,
-          "humidity": 88,
-          "feelsLike": 22.3,
-          "rainProb": 100,
-          "rain": 0.1,
-          "wind": 4.6
-        },
         {
           "time": "2026-09-29T08:00",
           "temp": 20.1,
@@ -412,6 +403,15 @@
           "rainProb": 0,
           "rain": 0.0,
           "wind": 4.7
+        },
+        {
+          "time": "2026-09-30T07:00",
+          "temp": 15.3,
+          "humidity": 84,
+          "feelsLike": 15.7,
+          "rainProb": 0,
+          "rain": 0.0,
+          "wind": 2.2
         }
       ],
       "daily": [
@@ -489,8 +489,8 @@
     {
       "id": "open-meteo-toyama",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-28T22:08:01.711014+00:00",
-      "lastAttemptAt": "2026-09-28T22:08:01.711014+00:00",
+      "lastSuccessAt": "2026-09-28T22:48:01.376151+00:00",
+      "lastAttemptAt": "2026-09-28T22:48:01.376151+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
