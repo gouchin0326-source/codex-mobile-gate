@@ -1,18 +1,18 @@
 {
-  "updatedAt": "2026-09-28T14:58:01.593178+00:00",
+  "updatedAt": "2026-09-28T20:18:46.504283+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "GitHub Copilot app for Beginners: How to build custom workflows with canvases",
+  "topLine": "Claude Sonnet 5.5 in GitHub Copilot",
   "cards": [
     {
       "genre": "開発",
       "count": 15,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "GitHub Copilot app for Beginners: How to build custom workflows with canvases / GitHub Copilot weekly releases — September 21 / When chat is the wrong UI",
-      "topUrl": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/",
-      "score": 4
+      "signal": "Claude Sonnet 5.5 in GitHub Copilot / GitHub Copilot app for Beginners: How to build custom workflows with canvases / GitHub Copilot weekly releases — September 21",
+      "topUrl": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot",
+      "score": 5
     },
     {
       "genre": "論文",
@@ -26,20 +26,27 @@
       "genre": "AI",
       "count": 7,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "Gemini 3.8 text-to-speech says hello / Proaction boosts sales 60% and saves 75+ hours with Codex / Two years of OpenAI Academy",
-      "topUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
+      "signal": "See what 4 builders are making with Gemini 3.8 Flash / Gemini 3.8 text-to-speech says hello / The Lenfest Institute grows landmark program with expanded OpenAI support",
+      "topUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers/",
       "score": 3
     },
     {
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "Don't couple your Go code to GitHub",
-      "topUrl": "https://iain.rocks/blog/dont-couple-your-go-code-to-github",
-      "score": 3
+      "signal": "What Would A Serious AI Product Look Like?",
+      "topUrl": "https://blog.glyph.im/2026/09/serious-ai-product.html",
+      "score": 1
     }
   ],
   "focus": [
+    {
+      "label": "開発",
+      "title": "Claude Sonnet 5.5 in GitHub Copilot",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot"
+    },
     {
       "label": "開発",
       "title": "GitHub Copilot app for Beginners: How to build custom workflows with canvases",
@@ -62,42 +69,55 @@
       "url": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/"
     },
     {
+      "label": "開発",
+      "title": "Self-hosted runner version enforcement date has moved",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-28-self-hosted-runner-version-enforcement-date-has-moved"
+    },
+    {
+      "label": "開発",
+      "title": "Highlights from Git 2.56",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub",
+      "url": "https://github.blog/open-source/git/highlights-from-git-2-56/"
+    },
+    {
+      "label": "AI",
+      "title": "See what 4 builders are making with Gemini 3.8 Flash",
+      "why": "Codex/AI開発判断に関係",
+      "source": "Gemini公式",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers/"
+    },
+    {
       "label": "論文",
       "title": "ScopeBench: Do Agents Preserve Engagement Boundaries Under Goal Pressure?",
       "why": "Codex/AI開発判断に関係",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2609.30325"
-    },
-    {
-      "label": "論文",
-      "title": "When Is a Multi-Agent Code Judge Actually Grounded? Two Label-Free Measurements, and a Judge That Declines to Guess",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.30328"
-    },
-    {
-      "label": "論文",
-      "title": "Bridging LLM Agents and Data Spaces: An Architectural Mediation Approach using the Model Context Protocol",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.30341"
-    },
-    {
-      "label": "論文",
-      "title": "Stealth Apart, Harm Together: Skill Cascading Attacks on Skill-Based Agent Systems",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.30383"
-    },
-    {
-      "label": "技術",
-      "title": "Don't couple your Go code to GitHub",
-      "why": "Codex/AI開発判断に関係",
-      "source": "技術RSS",
-      "url": "https://iain.rocks/blog/dont-couple-your-go-code-to-github"
     }
   ],
   "items": [
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Claude Sonnet 5.5 in GitHub Copilot",
+      "summary": "Claude Sonnet 5.5, Anthropic’s newest Sonnet model, is now generally available in GitHub Copilot. It is designed for well-scoped everyday work like building features and fixing bugs. In our early… The post Claude Sonnet ",
+      "url": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot",
+      "published": "2026-09-28T18:03:57+00:00",
+      "score": 5,
+      "tags": [
+        "開発",
+        "重要",
+        "制作",
+        "研究"
+      ]
+    },
     {
       "source": "github-blog",
       "platform": "開発",
@@ -153,6 +173,61 @@
         "開発",
         "重要",
         "制作"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Self-hosted runner version enforcement date has moved",
+      "summary": "The enforcement date for GitHub Actions minimum version requirements for self-hosted runners on GitHub Enterprise Cloud has changed. The change ships Monday, September 28, 2026, and full enforcement now begins… The post ",
+      "url": "https://github.blog/changelog/2026-09-28-self-hosted-runner-version-enforcement-date-has-moved",
+      "published": "2026-09-28T19:22:46+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Highlights from Git 2.56",
+      "summary": "The open source Git project just released Git 2.56. Here is GitHub's look at some of the most interesting features and changes introduced since last time. The post Highlights from Git 2.56 appeared first on The GitHub Bl",
+      "url": "https://github.blog/open-source/git/highlights-from-git-2-56/",
+      "published": "2026-09-28T17:23:33+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "See what 4 builders are making with Gemini 3.8 Flash",
+      "summary": "See what developers have built with Gemini 3.8 Flash, our most intelligent workhorse model, launched in early September.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers/",
+      "published": "2026-09-28T16:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "開発",
+        "研究"
       ]
     },
     {
@@ -232,25 +307,6 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Don't couple your Go code to GitHub",
-      "summary": "Comments",
-      "url": "https://iain.rocks/blog/dont-couple-your-go-code-to-github",
-      "published": "2026-09-27T20:17:42+00:00",
-      "score": 3,
-      "tags": [
-        "技術",
-        "重要",
-        "開発"
-      ]
-    },
-    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -305,24 +361,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Updates to GitHub Copilot for Slack and Microsoft Teams",
-      "summary": "GitHub Copilot in Slack and Microsoft Teams now gives you more context, more control, and a clearer path from conversation to GitHub work. Whether you’re sharing files in Slack or… The post Updates to GitHub Copilot for ",
-      "url": "https://github.blog/changelog/2026-09-25-updates-to-github-copilot-for-slack-and-microsoft-teams",
-      "published": "2026-09-25T16:33:42+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -334,24 +372,6 @@
       "summary": "How we fully migrated github.com away from CSS-in-JS. The post Improving site performance by shipping more CSS appeared first on The GitHub Blog .",
       "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/",
       "published": "2026-09-25T15:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "CodeQL 2.27.1 adds C and C++ query and Kotlin 2.4.20 support",
-      "summary": "CodeQL 2.27.1 adds new queries for C/C++ and C#, support for Kotlin 2.4.20, and query-accuracy improvements. CodeQL is the static analysis engine behind GitHub code scanning, which helps you find… The post CodeQL 2.27.1 ",
-      "url": "https://github.blog/changelog/2026-09-25-codeql-2-27-1-adds-c-and-c-query-and-kotlin-2-4-20-support",
-      "published": "2026-09-25T09:55:23+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -437,33 +457,33 @@
       "label": "GitHub",
       "genre": "開発",
       "provider": null,
-      "topic": "開発",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Should you read the code, is RAG dead, and did Skills kill MCP?",
-      "summary": "We dive into these questions and other AI hot takes on the latest episode of the GitHub Podcast. The post Should you read the code, is RAG dead, and did Skills kill MCP? appeared first on The GitHub Blog .",
-      "url": "https://github.blog/ai-and-ml/should-you-read-the-code-is-rag-dead-and-did-skills-kill-mcp/",
-      "published": "2026-09-18T15:00:00+00:00",
-      "score": 3,
+      "title": "How we found 24 Android vulnerabilities using our open source AI security agent",
+      "summary": "A look at the targeted AI taskflows behind these findings, the critical Android bugs they uncovered, and how to run the same open-source agent on your own app. The post How we found 24 Android vulnerabilities using our o",
+      "url": "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/",
+      "published": "2026-09-28T19:00:00+00:00",
+      "score": 2,
       "tags": [
         "開発",
         "重要"
       ]
     },
     {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Migrating the GitHub Copilot runtime to Rust, using Copilot",
-      "summary": "A rewrite this size wasn't affordable before agents. Here's what porting the Copilot agent runtime to 800,000 lines of production Rust actually took. The post Migrating the GitHub Copilot runtime to Rust, using Copilot a",
-      "url": "https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/",
-      "published": "2026-09-17T00:26:43+00:00",
-      "score": 3,
+      "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
+      "summary": "OpenAI is expanding the Lenfest AI Collaborative and Fellowship Program with $5 million in funding and up to $5 million in software credits and engineering support.",
+      "url": "https://openai.com/index/lenfest-ai-collaborative-expansion",
+      "published": "2026-09-28T07:00:00+00:00",
+      "score": 2,
       "tags": [
-        "開発",
+        "AI",
         "重要"
       ]
     },
@@ -520,24 +540,6 @@
         "論文",
         "研究"
       ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Spectral Feedback for Test-Time Alignment of Protein Diffusion Models",
-      "summary": "arXiv:2609.30456v1 Announce Type: new Abstract: Reward maximization alignment methods for discrete diffusion models have primarily focused on steering the reverse process, either by influencing token logits or by selecti",
-      "url": "https://arxiv.org/abs/2609.30456",
-      "published": "2026-09-28T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
     }
   ],
   "providerWatch": {
@@ -585,6 +587,12 @@
         ],
         "latest": [
           {
+            "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
+            "url": "https://openai.com/index/lenfest-ai-collaborative-expansion",
+            "published": "2026-09-28T07:00:00+00:00",
+            "source": "ChatGPT / OpenAI公式"
+          },
+          {
             "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
             "url": "https://openai.com/index/proaction",
             "published": "2026-09-25T19:00:00+00:00",
@@ -600,12 +608,6 @@
             "title": "OpenAI extends cyber access to Ukraine for civilian defense",
             "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
             "published": "2026-09-23T13:00:00+00:00",
-            "source": "ChatGPT / OpenAI公式"
-          },
-          {
-            "title": "Sam Altman’s remarks at the United Nations Security Council",
-            "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
-            "published": "2026-09-23T12:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           }
         ]
@@ -635,6 +637,12 @@
           "google-gemini"
         ],
         "latest": [
+          {
+            "title": "See what 4 builders are making with Gemini 3.8 Flash",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers/",
+            "published": "2026-09-28T16:00:00+00:00",
+            "source": "Gemini公式"
+          },
           {
             "title": "Gemini 3.8 text-to-speech says hello",
             "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
@@ -700,5 +708,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-28T09:48:01.309074+00:00"
+  "lastSuccessAt": "2026-09-28T20:18:46.504283+00:00"
 }
