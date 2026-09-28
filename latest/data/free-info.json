@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-28T09:38:03.394702+00:00",
-  "lastSuccessAt": "2026-09-28T05:28:07.264502+00:00",
+  "updatedAt": "2026-09-28T09:48:01.309074+00:00",
+  "lastSuccessAt": "2026-09-28T09:48:01.309074+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -142,7 +142,7 @@
     },
     {
       "genre": "AI",
-      "count": 6,
+      "count": 7,
       "signal": "Gemini 3.8 text-to-speech says hello / Proaction boosts sales 60% and saves 75+ hours with Codex / Two years of OpenAI Academy",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
@@ -150,8 +150,8 @@
     },
     {
       "genre": "技術",
-      "count": 2,
-      "signal": "Don't couple your Go code to GitHub / LuaRocks Security Incident September 2026",
+      "count": 1,
+      "signal": "Don't couple your Go code to GitHub",
       "decision": "更新あり。必要時だけ確認",
       "topUrl": "https://iain.rocks/blog/dont-couple-your-go-code-to-github",
       "score": 3
@@ -159,9 +159,9 @@
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.1 - 11 km SSW of Idyllwild, CA",
+      "signal": "M 2.5 - 23 km SSW of Susitna, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41340103",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tfkxeo",
       "score": 1
     }
   ],
@@ -301,10 +301,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.1 - 11 km SSW of Idyllwild, CA",
-      "summary": "11 km SSW of Idyllwild, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41340103",
-      "published": "2026-09-28T03:24:27.070000+00:00",
+      "title": "M 2.5 - 23 km SSW of Susitna, Alaska",
+      "summary": "23 km SSW of Susitna, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tfkxeo",
+      "published": "2026-09-28T09:29:27.195000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -657,24 +657,6 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "LuaRocks Security Incident September 2026",
-      "summary": "Comments",
-      "url": "https://luarocks.org/security-incident-september-2026",
-      "published": "2026-09-27T13:58:57+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "重要"
-      ]
-    },
-    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -745,54 +727,72 @@
         "AI",
         "重要"
       ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "How invideo improves color grading 3x with GPT‑6 Astra",
+      "summary": "With GPT‑6 Astra, invideo plans edits with greater precision, improves color correction and grading threefold, and produces 50 custom effects in one day.",
+      "url": "https://openai.com/index/invideo-builds-with-gpt-6-astra",
+      "published": "2026-09-23T12:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "制作"
+      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-28T03:38:22.695128+00:00",
-      "lastAttemptAt": "2026-09-28T03:38:22.695128+00:00",
+      "lastSuccessAt": "2026-09-28T09:48:01.309074+00:00",
+      "lastAttemptAt": "2026-09-28T09:48:01.309074+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-28T03:38:22.695128+00:00",
-      "lastAttemptAt": "2026-09-28T03:38:22.695128+00:00",
+      "lastSuccessAt": "2026-09-28T09:48:01.309074+00:00",
+      "lastAttemptAt": "2026-09-28T09:48:01.309074+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-28T03:38:22.695128+00:00",
-      "lastAttemptAt": "2026-09-28T03:38:22.695128+00:00",
+      "lastSuccessAt": "2026-09-28T09:48:01.309074+00:00",
+      "lastAttemptAt": "2026-09-28T09:48:01.309074+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-28T03:38:22.695128+00:00",
-      "lastAttemptAt": "2026-09-28T03:38:22.695128+00:00",
+      "lastSuccessAt": "2026-09-28T09:48:01.309074+00:00",
+      "lastAttemptAt": "2026-09-28T09:48:01.309074+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-28T03:38:22.695128+00:00",
-      "lastAttemptAt": "2026-09-28T03:38:22.695128+00:00",
+      "lastSuccessAt": "2026-09-28T09:48:01.309074+00:00",
+      "lastAttemptAt": "2026-09-28T09:48:01.309074+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-28T03:38:22.695128+00:00",
-      "lastAttemptAt": "2026-09-28T03:38:22.695128+00:00",
+      "lastSuccessAt": "2026-09-28T09:48:01.309074+00:00",
+      "lastAttemptAt": "2026-09-28T09:48:01.309074+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -807,8 +807,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-28T03:38:22.695128+00:00",
-      "lastAttemptAt": "2026-09-28T03:38:22.695128+00:00",
+      "lastSuccessAt": "2026-09-28T09:48:01.309074+00:00",
+      "lastAttemptAt": "2026-09-28T09:48:01.309074+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
