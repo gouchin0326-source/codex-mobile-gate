@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-29T08:18:02.572917+00:00",
-  "lastSuccessAt": "2026-09-29T05:38:01.803007+00:00",
+  "updatedAt": "2026-09-29T08:28:01.850208+00:00",
+  "lastSuccessAt": "2026-09-29T08:28:01.850208+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -126,11 +126,19 @@
   "contexts": [
     {
       "genre": "開発",
-      "count": 15,
+      "count": 14,
       "signal": "Claude Sonnet 5.5 in GitHub Copilot / GitHub Copilot app for Beginners: How to build custom workflows with canvases / GitHub Copilot weekly releases — September 21",
       "decision": "CG開発・GitHub運用へ反映候補",
       "topUrl": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot",
       "score": 5
+    },
+    {
+      "genre": "AI",
+      "count": 8,
+      "signal": "Towards safety cases for frontier AI training / See what 4 builders are making with Gemini 3.8 Flash / Gemini 3.8 text-to-speech says hello",
+      "decision": "AI/Codex運用の変化を確認",
+      "topUrl": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
+      "score": 3
     },
     {
       "genre": "論文",
@@ -141,27 +149,19 @@
       "score": 3
     },
     {
-      "genre": "AI",
-      "count": 7,
-      "signal": "See what 4 builders are making with Gemini 3.8 Flash / Gemini 3.8 text-to-speech says hello / How we will do better for Australia",
-      "decision": "AI/Codex運用の変化を確認",
-      "topUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers/",
-      "score": 3
-    },
-    {
       "genre": "技術",
       "count": 1,
-      "signal": "What Would A Serious AI Product Look Like?",
+      "signal": "My experience writing automated tests for a SPA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://blog.glyph.im/2026/09/serious-ai-product.html",
+      "topUrl": "https://reecoute.fr/tech_blog/2026-09-28_my-experience-writing-automated-tests-for-a-spa",
       "score": 1
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.2 - 11 km NW of Parkfield, CA",
+      "signal": "M 0.7 - 9 km SW of Idyllwild, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75444142",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41340471",
       "score": 1
     }
   ],
@@ -225,6 +225,25 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Towards safety cases for frontier AI training",
+      "summary": "Our early guidelines for safety cases in frontier AI training cover technical safeguards, operational practices, and investigating misalignment incidents",
+      "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
+      "published": "2026-09-28T19:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "google-gemini",
       "platform": "AI",
       "label": "Gemini公式",
@@ -241,24 +260,6 @@
         "AI",
         "開発",
         "研究"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "How we will do better for Australia",
-      "summary": "OpenAI apologizes for incidents involving Australian government websites and outlines stronger safeguards and support to strengthen Australia’s cyber defences.",
-      "url": "https://openai.com/index/how-we-will-do-better-for-australia",
-      "published": "2026-09-29T01:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
       ]
     },
     {
@@ -283,10 +284,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.2 - 11 km NW of Parkfield, CA",
-      "summary": "11 km NW of Parkfield, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75444142",
-      "published": "2026-09-29T02:15:19.830000+00:00",
+      "title": "M 0.7 - 9 km SW of Idyllwild, CA",
+      "summary": "9 km SW of Idyllwild, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41340471",
+      "published": "2026-09-29T08:22:36.530000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -298,12 +299,12 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "What Would A Serious AI Product Look Like?",
+      "title": "My experience writing automated tests for a SPA",
       "summary": "Comments",
-      "url": "https://blog.glyph.im/2026/09/serious-ai-product.html",
-      "published": "2026-09-28T17:01:01+00:00",
+      "url": "https://reecoute.fr/tech_blog/2026-09-28_my-experience-writing-automated-tests-for-a-spa",
+      "published": "2026-09-29T06:00:10+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -658,6 +659,24 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "How we will do better for Australia",
+      "summary": "OpenAI apologises for incidents involving Australian government websites and outlines stronger safeguards and support to strengthen Australia’s cyber defences.",
+      "url": "https://openai.com/index/how-we-will-do-better-for-australia",
+      "published": "2026-09-28T19:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -728,72 +747,54 @@
         "AI",
         "重要"
       ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Agentic autofix now uses Copilot Memory",
-      "summary": "Agentic autofix now uses Copilot Memory for customers who’ve enabled it. When you use agentic autofix, it reviews existing memories for context that can help resolve security alerts. When it… The post Agentic autofix now",
-      "url": "https://github.blog/changelog/2026-09-25-agentic-autofix-now-uses-copilot-memory",
-      "published": "2026-09-25T17:25:50+00:00",
-      "score": 2,
-      "tags": [
-        "開発",
-        "重要"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-29T02:28:01.587440+00:00",
-      "lastAttemptAt": "2026-09-29T02:28:01.587440+00:00",
+      "lastSuccessAt": "2026-09-29T08:28:01.850208+00:00",
+      "lastAttemptAt": "2026-09-29T08:28:01.850208+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-29T02:28:01.587440+00:00",
-      "lastAttemptAt": "2026-09-29T02:28:01.587440+00:00",
+      "lastSuccessAt": "2026-09-29T08:28:01.850208+00:00",
+      "lastAttemptAt": "2026-09-29T08:28:01.850208+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-29T02:28:01.587440+00:00",
-      "lastAttemptAt": "2026-09-29T02:28:01.587440+00:00",
+      "lastSuccessAt": "2026-09-29T08:28:01.850208+00:00",
+      "lastAttemptAt": "2026-09-29T08:28:01.850208+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-29T02:28:01.587440+00:00",
-      "lastAttemptAt": "2026-09-29T02:28:01.587440+00:00",
+      "lastSuccessAt": "2026-09-29T08:28:01.850208+00:00",
+      "lastAttemptAt": "2026-09-29T08:28:01.850208+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-29T02:28:01.587440+00:00",
-      "lastAttemptAt": "2026-09-29T02:28:01.587440+00:00",
+      "lastSuccessAt": "2026-09-29T08:28:01.850208+00:00",
+      "lastAttemptAt": "2026-09-29T08:28:01.850208+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-29T02:28:01.587440+00:00",
-      "lastAttemptAt": "2026-09-29T02:28:01.587440+00:00",
+      "lastSuccessAt": "2026-09-29T08:28:01.850208+00:00",
+      "lastAttemptAt": "2026-09-29T08:28:01.850208+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -808,8 +809,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-29T02:28:01.587440+00:00",
-      "lastAttemptAt": "2026-09-29T02:28:01.587440+00:00",
+      "lastSuccessAt": "2026-09-29T08:28:01.850208+00:00",
+      "lastAttemptAt": "2026-09-29T08:28:01.850208+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

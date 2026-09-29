@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T08:18:02.572917+00:00",
+  "updatedAt": "2026-09-29T08:28:01.850208+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -8,11 +8,19 @@
   "cards": [
     {
       "genre": "開発",
-      "count": 15,
+      "count": 14,
       "decision": "CG開発・GitHub運用へ反映候補",
       "signal": "Claude Sonnet 5.5 in GitHub Copilot / GitHub Copilot app for Beginners: How to build custom workflows with canvases / GitHub Copilot weekly releases — September 21",
       "topUrl": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot",
       "score": 5
+    },
+    {
+      "genre": "AI",
+      "count": 8,
+      "decision": "AI/Codex運用の変化を確認",
+      "signal": "Towards safety cases for frontier AI training / See what 4 builders are making with Gemini 3.8 Flash / Gemini 3.8 text-to-speech says hello",
+      "topUrl": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
+      "score": 3
     },
     {
       "genre": "論文",
@@ -23,19 +31,11 @@
       "score": 3
     },
     {
-      "genre": "AI",
-      "count": 7,
-      "decision": "AI/Codex運用の変化を確認",
-      "signal": "See what 4 builders are making with Gemini 3.8 Flash / Gemini 3.8 text-to-speech says hello / How we will do better for Australia",
-      "topUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers/",
-      "score": 3
-    },
-    {
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "What Would A Serious AI Product Look Like?",
-      "topUrl": "https://blog.glyph.im/2026/09/serious-ai-product.html",
+      "signal": "My experience writing automated tests for a SPA",
+      "topUrl": "https://reecoute.fr/tech_blog/2026-09-28_my-experience-writing-automated-tests-for-a-spa",
       "score": 1
     }
   ],
@@ -267,6 +267,25 @@
       "tags": [
         "開発",
         "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Towards safety cases for frontier AI training",
+      "summary": "Our early guidelines for safety cases in frontier AI training cover technical safeguards, operational practices, and investigating misalignment incidents",
+      "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
+      "published": "2026-09-28T19:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
       ]
     },
     {
@@ -522,24 +541,6 @@
         "論文",
         "研究"
       ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "How we will do better for Australia",
-      "summary": "OpenAI apologizes for incidents involving Australian government websites and outlines stronger safeguards and support to strengthen Australia’s cyber defences.",
-      "url": "https://openai.com/index/how-we-will-do-better-for-australia",
-      "published": "2026-09-29T01:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
     }
   ],
   "providerWatch": {
@@ -587,9 +588,15 @@
         ],
         "latest": [
           {
+            "title": "Towards safety cases for frontier AI training",
+            "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
+            "published": "2026-09-28T19:00:00+00:00",
+            "source": "ChatGPT / OpenAI公式"
+          },
+          {
             "title": "How we will do better for Australia",
             "url": "https://openai.com/index/how-we-will-do-better-for-australia",
-            "published": "2026-09-29T01:00:00+00:00",
+            "published": "2026-09-28T19:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           },
           {
@@ -602,12 +609,6 @@
             "title": "Are you a Codex Original?",
             "url": "https://openai.com/form/codex-originals",
             "published": "2026-09-28T00:00:00+00:00",
-            "source": "ChatGPT / OpenAI公式"
-          },
-          {
-            "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
-            "url": "https://openai.com/index/proaction",
-            "published": "2026-09-25T19:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           }
         ]
@@ -708,5 +709,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-29T05:38:01.803007+00:00"
+  "lastSuccessAt": "2026-09-29T08:28:01.850208+00:00"
 }
