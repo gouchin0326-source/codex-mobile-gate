@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T14:58:01.422400+00:00",
+  "updatedAt": "2026-09-29T21:39:30.255235+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -10,7 +10,7 @@
       "genre": "開発",
       "count": 14,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "Claude Sonnet 5.5 in GitHub Copilot / GitHub Copilot app for Beginners: How to build custom workflows with canvases / GitHub Copilot weekly releases — September 21",
+      "signal": "Claude Sonnet 5.5 in GitHub Copilot / GPT-6.1 Sol in GitHub Copilot / GitHub Copilot app for Beginners: How to build custom workflows with canvases",
       "topUrl": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot",
       "score": 5
     },
@@ -18,8 +18,8 @@
       "genre": "AI",
       "count": 8,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "Towards safety cases for frontier AI training / See what 4 builders are making with Gemini 3.8 Flash / Gemini 3.8 text-to-speech says hello",
-      "topUrl": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
+      "signal": "Introducing GPT-6.1 Sol / DevDay 2026 Recap / Towards safety cases for frontier AI training",
+      "topUrl": "https://openai.com/index/introducing-gpt-6-1-sol",
       "score": 3
     },
     {
@@ -34,8 +34,8 @@
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "CoW — a stacking window manager for Wayland",
-      "topUrl": "https://cow-wm.codeberg.page/cow/",
+      "signal": "The Shell & Email",
+      "topUrl": "https://www.machtiani.chat/blogs/the-shell",
       "score": 1
     }
   ],
@@ -49,17 +49,17 @@
     },
     {
       "label": "開発",
+      "title": "GPT-6.1 Sol in GitHub Copilot",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-29-gpt-6-1-sol-in-github-copilot"
+    },
+    {
+      "label": "開発",
       "title": "GitHub Copilot app for Beginners: How to build custom workflows with canvases",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
       "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/"
-    },
-    {
-      "label": "開発",
-      "title": "GitHub Copilot weekly releases — September 21",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-25-github-copilot-weekly-releases-september-21"
     },
     {
       "label": "開発",
@@ -69,32 +69,32 @@
       "url": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/"
     },
     {
+      "label": "開発",
+      "title": "Developer policy update: Transparency, state policy, and what’s ahead",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub",
+      "url": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-transparency-state-policy-and-whats-ahead/"
+    },
+    {
+      "label": "AI",
+      "title": "Introducing GPT-6.1 Sol",
+      "why": "Codex/AI開発判断に関係",
+      "source": "ChatGPT / OpenAI公式",
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol"
+    },
+    {
+      "label": "AI",
+      "title": "DevDay 2026 Recap",
+      "why": "Codex/AI開発判断に関係",
+      "source": "ChatGPT / OpenAI公式",
+      "url": "https://openai.com/index/devday-2026-recap"
+    },
+    {
       "label": "論文",
       "title": "ScopeBench: Do Agents Preserve Engagement Boundaries Under Goal Pressure?",
       "why": "Codex/AI開発判断に関係",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2609.30325"
-    },
-    {
-      "label": "論文",
-      "title": "When Is a Multi-Agent Code Judge Actually Grounded? Two Label-Free Measurements, and a Judge That Declines to Guess",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.30328"
-    },
-    {
-      "label": "論文",
-      "title": "Bridging LLM Agents and Data Spaces: An Architectural Mediation Approach using the Model Context Protocol",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.30341"
-    },
-    {
-      "label": "論文",
-      "title": "Stealth Apart, Harm Together: Skill Cascading Attacks on Skill-Based Agent Systems",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.30383"
     }
   ],
   "items": [
@@ -119,6 +119,25 @@
       ]
     },
     {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "GPT-6.1 Sol in GitHub Copilot",
+      "summary": "GPT-6.1 Sol, the latest model from OpenAI, is now generally available and rolling out in GitHub Copilot. You can use it for agentic coding and terminal workflows with strong multistep… The post GPT-6.1 Sol in GitHub Copi",
+      "url": "https://github.blog/changelog/2026-09-29-gpt-6-1-sol-in-github-copilot",
+      "published": "2026-09-29T17:02:27+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -138,25 +157,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "GitHub Copilot weekly releases — September 21",
-      "summary": "This week’s releases add new models to Copilot, local sandboxing in the Copilot app, and updates to Copilot in Slack, Microsoft Teams, JetBrains, and VS Code. GitHub Copilot Claude Opus… The post GitHub Copilot weekly re",
-      "url": "https://github.blog/changelog/2026-09-25-github-copilot-weekly-releases-september-21",
-      "published": "2026-09-25T16:42:48+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
-        "研究"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -173,6 +173,62 @@
         "開発",
         "重要",
         "制作"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "Developer policy update: Transparency, state policy, and what’s ahead",
+      "summary": "Explore GitHub’s latest transparency data and learn more about policy updates affecting developers and open source. The post Developer policy update: Transparency, state policy, and what’s ahead appeared first on The Git",
+      "url": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-transparency-state-policy-and-whats-ahead/",
+      "published": "2026-09-29T15:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Introducing GPT-6.1 Sol",
+      "summary": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.",
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "published": "2026-09-29T10:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "開発"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "DevDay 2026 Recap",
+      "summary": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
+      "url": "https://openai.com/index/devday-2026-recap",
+      "published": "2026-09-29T10:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "開発"
       ]
     },
     {
@@ -362,24 +418,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Changes to query results in the GitHub Actions API and UI",
-      "summary": "Queries for workflow runs in the GitHub Actions API and UI now return a less precise but more accurate count of records when you search by workflow, event, status, branch,… The post Changes to query results in the GitHub",
-      "url": "https://github.blog/changelog/2026-09-25-changes-to-query-results-in-the-github-actions-api-and-ui",
-      "published": "2026-09-25T18:17:06+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -453,21 +491,38 @@
       ]
     },
     {
-      "source": "github-blog",
+      "source": "github-changelog",
       "platform": "開発",
-      "label": "GitHub",
+      "label": "GitHub更新",
       "genre": "開発",
       "provider": null,
       "topic": "技術",
       "sourceWeight": 1,
-      "title": "Developers want more efficient software. Here’s what over 1,000 GitHub users told us they need.",
-      "summary": "New research from GitHub and Yale Program on Climate Change Communication finds strong demand for tools, measurement, and practical guidance that can help developers reduce wasted compute. The post Developers want more e",
-      "url": "https://github.blog/news-insights/research/developers-want-more-efficient-software-heres-what-over-1000-github-users-told-us-they-need/",
-      "published": "2026-09-23T13:00:00+00:00",
-      "score": 3,
+      "title": "Repository custom runner settings for Dependabot",
+      "summary": "As a repository administrator, you can now configure the runner type, optional custom label, and optional runner group for Dependabot version and security updates. This extends the runner configuration already… The post ",
+      "url": "https://github.blog/changelog/2026-09-29-repository-custom-runner-settings-for-dependabot",
+      "published": "2026-09-29T19:10:00+00:00",
+      "score": 2,
       "tags": [
         "開発",
         "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Bring business context with external custom properties",
+      "summary": "You can now seamlessly bring business context about your repositories from an external system of record (e.g., a configuration management database (CMDB), an internal developer portal, or an in-house system)… The post Br",
+      "url": "https://github.blog/changelog/2026-09-29-bring-business-context-with-external-custom-properties",
+      "published": "2026-09-29T18:40:27+00:00",
+      "score": 2,
+      "tags": [
+        "開発"
       ]
     },
     {
@@ -481,60 +536,6 @@
       "title": "Bringing AI to Autonomous Systems -- From Cognition to Collective Intelligence",
       "summary": "arXiv:2609.30291v1 Announce Type: new Abstract: The purpose of this article is to highlight the central role of autonomous systems as the ultimate stage in the development of AI, to explain the underlying technical chall",
       "url": "https://arxiv.org/abs/2609.30291",
-      "published": "2026-09-29T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "A Synthetic Ground-Truth Framework for the Evaluation of Explainable AI Methods",
-      "summary": "arXiv:2609.30397v1 Announce Type: new Abstract: Evaluating explainable Artificial Intelligence (XAI) methods is a challenging task due to the lack of reliable evaluation procedures and, in particular, the absence of grou",
-      "url": "https://arxiv.org/abs/2609.30397",
-      "published": "2026-09-29T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Predicting Transmembrane Protein Topology from 3D Structure",
-      "summary": "arXiv:2609.30446v1 Announce Type: new Abstract: This paper presents a novel approach to infer protein topology using the state-of-the-art graph neural network (GNN), SchNet. The model is trained on the same dataset used ",
-      "url": "https://arxiv.org/abs/2609.30446",
-      "published": "2026-09-29T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Spectral Feedback for Test-Time Alignment of Protein Diffusion Models",
-      "summary": "arXiv:2609.30456v1 Announce Type: new Abstract: Reward maximization alignment methods for discrete diffusion models have primarily focused on steering the reverse process, either by influencing token logits or by selecti",
-      "url": "https://arxiv.org/abs/2609.30456",
       "published": "2026-09-29T04:00:00+00:00",
       "score": 2,
       "tags": [
@@ -588,27 +589,27 @@
         ],
         "latest": [
           {
+            "title": "Introducing GPT-6.1 Sol",
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol",
+            "published": "2026-09-29T10:00:00+00:00",
+            "source": "ChatGPT / OpenAI公式"
+          },
+          {
+            "title": "DevDay 2026 Recap",
+            "url": "https://openai.com/index/devday-2026-recap",
+            "published": "2026-09-29T10:00:00+00:00",
+            "source": "ChatGPT / OpenAI公式"
+          },
+          {
             "title": "Towards safety cases for frontier AI training",
             "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
             "published": "2026-09-28T19:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           },
           {
-            "title": "How we will do better for Australia",
-            "url": "https://openai.com/index/how-we-will-do-better-for-australia",
-            "published": "2026-09-28T19:00:00+00:00",
-            "source": "ChatGPT / OpenAI公式"
-          },
-          {
-            "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
-            "url": "https://openai.com/index/lenfest-ai-collaborative-expansion",
-            "published": "2026-09-28T07:00:00+00:00",
-            "source": "ChatGPT / OpenAI公式"
-          },
-          {
-            "title": "Are you a Codex Original?",
-            "url": "https://openai.com/form/codex-originals",
-            "published": "2026-09-28T00:00:00+00:00",
+            "title": "Introducing dots",
+            "url": "https://openai.com/index/introducing-dots",
+            "published": "2026-09-29T00:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           }
         ]
@@ -709,5 +710,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-29T14:38:01.589902+00:00"
+  "lastSuccessAt": "2026-09-29T21:39:30.255235+00:00"
 }

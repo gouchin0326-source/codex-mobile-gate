@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-29T14:58:01.422400+00:00",
-  "lastSuccessAt": "2026-09-29T14:38:01.589902+00:00",
+  "updatedAt": "2026-09-29T21:39:30.255235+00:00",
+  "lastSuccessAt": "2026-09-29T21:39:30.255235+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -127,7 +127,7 @@
     {
       "genre": "開発",
       "count": 14,
-      "signal": "Claude Sonnet 5.5 in GitHub Copilot / GitHub Copilot app for Beginners: How to build custom workflows with canvases / GitHub Copilot weekly releases — September 21",
+      "signal": "Claude Sonnet 5.5 in GitHub Copilot / GPT-6.1 Sol in GitHub Copilot / GitHub Copilot app for Beginners: How to build custom workflows with canvases",
       "decision": "CG開発・GitHub運用へ反映候補",
       "topUrl": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot",
       "score": 5
@@ -135,9 +135,9 @@
     {
       "genre": "AI",
       "count": 8,
-      "signal": "Towards safety cases for frontier AI training / See what 4 builders are making with Gemini 3.8 Flash / Gemini 3.8 text-to-speech says hello",
+      "signal": "Introducing GPT-6.1 Sol / DevDay 2026 Recap / Towards safety cases for frontier AI training",
       "decision": "AI/Codex運用の変化を確認",
-      "topUrl": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
+      "topUrl": "https://openai.com/index/introducing-gpt-6-1-sol",
       "score": 3
     },
     {
@@ -151,17 +151,17 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "CoW — a stacking window manager for Wayland",
+      "signal": "The Shell & Email",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://cow-wm.codeberg.page/cow/",
+      "topUrl": "https://www.machtiani.chat/blogs/the-shell",
       "score": 1
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.6 - 4 km WNW of Petersville, Alaska",
+      "signal": "M 1.2 - 6 km WNW of Cobb, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026thrdwf",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75441621",
       "score": 1
     }
   ],
@@ -206,6 +206,25 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Introducing GPT-6.1 Sol",
+      "summary": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.",
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "published": "2026-09-29T10:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "開発"
+      ]
+    },
+    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -220,25 +239,6 @@
       "score": 3,
       "tags": [
         "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Towards safety cases for frontier AI training",
-      "summary": "Our early guidelines for safety cases in frontier AI training cover technical safeguards, operational practices, and investigating misalignment incidents",
-      "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
-      "published": "2026-09-28T19:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
         "重要",
         "研究"
       ]
@@ -284,10 +284,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.6 - 4 km WNW of Petersville, Alaska",
-      "summary": "4 km WNW of Petersville, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026thrdwf",
-      "published": "2026-09-29T14:36:20.881000+00:00",
+      "title": "M 1.2 - 6 km WNW of Cobb, CA",
+      "summary": "6 km WNW of Cobb, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75441621",
+      "published": "2026-09-29T21:32:06.800000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -299,12 +299,12 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "その他",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "CoW — a stacking window manager for Wayland",
+      "title": "The Shell & Email",
       "summary": "Comments",
-      "url": "https://cow-wm.codeberg.page/cow/",
-      "published": "2026-09-29T09:07:37+00:00",
+      "url": "https://www.machtiani.chat/blogs/the-shell",
+      "published": "2026-09-29T20:14:41+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -316,12 +316,12 @@
       "label": "GitHub更新",
       "genre": "開発",
       "provider": null,
-      "topic": "技術",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "GitHub Copilot weekly releases — September 21",
-      "summary": "This week’s releases add new models to Copilot, local sandboxing in the Copilot app, and updates to Copilot in Slack, Microsoft Teams, JetBrains, and VS Code. GitHub Copilot Claude Opus… The post GitHub Copilot weekly re",
-      "url": "https://github.blog/changelog/2026-09-25-github-copilot-weekly-releases-september-21",
-      "published": "2026-09-25T16:42:48+00:00",
+      "title": "GPT-6.1 Sol in GitHub Copilot",
+      "summary": "GPT-6.1 Sol, the latest model from OpenAI, is now generally available and rolling out in GitHub Copilot. You can use it for agentic coding and terminal workflows with strong multistep… The post GPT-6.1 Sol in GitHub Copi",
+      "url": "https://github.blog/changelog/2026-09-29-gpt-6-1-sol-in-github-copilot",
+      "published": "2026-09-29T17:02:27+00:00",
       "score": 4,
       "tags": [
         "開発",
@@ -346,6 +346,43 @@
         "開発",
         "重要",
         "制作"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "Developer policy update: Transparency, state policy, and what’s ahead",
+      "summary": "Explore GitHub’s latest transparency data and learn more about policy updates affecting developers and open source. The post Developer policy update: Transparency, state policy, and what’s ahead appeared first on The Git",
+      "url": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-transparency-state-policy-and-whats-ahead/",
+      "published": "2026-09-29T15:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "DevDay 2026 Recap",
+      "summary": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
+      "url": "https://openai.com/index/devday-2026-recap",
+      "published": "2026-09-29T10:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "開発"
       ]
     },
     {
@@ -424,6 +461,25 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Towards safety cases for frontier AI training",
+      "summary": "Our early guidelines for safety cases in frontier AI training cover technical safeguards, operational practices, and investigating misalignment incidents",
+      "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
+      "published": "2026-09-28T19:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -471,24 +527,6 @@
       "summary": "The enterprise and organization repository-level Copilot usage metrics reports now break down how long pull requests spend in each stage of review. A new pull_request_review_times array on each repos-1-day row… The post ",
       "url": "https://github.blog/changelog/2026-09-25-usage-metrics-api-adds-pull-request-review-stages",
       "published": "2026-09-25T21:09:40+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Changes to query results in the GitHub Actions API and UI",
-      "summary": "Queries for workflow runs in the GitHub Actions API and UI now return a less precise but more accurate count of records when you search by workflow, event, status, branch,… The post Changes to query results in the GitHub",
-      "url": "https://github.blog/changelog/2026-09-25-changes-to-query-results-in-the-github-actions-api-and-ui",
-      "published": "2026-09-25T18:17:06+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -569,21 +607,38 @@
       ]
     },
     {
-      "source": "github-blog",
+      "source": "github-changelog",
       "platform": "開発",
-      "label": "GitHub",
+      "label": "GitHub更新",
       "genre": "開発",
       "provider": null,
       "topic": "技術",
       "sourceWeight": 1,
-      "title": "Developers want more efficient software. Here’s what over 1,000 GitHub users told us they need.",
-      "summary": "New research from GitHub and Yale Program on Climate Change Communication finds strong demand for tools, measurement, and practical guidance that can help developers reduce wasted compute. The post Developers want more e",
-      "url": "https://github.blog/news-insights/research/developers-want-more-efficient-software-heres-what-over-1000-github-users-told-us-they-need/",
-      "published": "2026-09-23T13:00:00+00:00",
-      "score": 3,
+      "title": "Repository custom runner settings for Dependabot",
+      "summary": "As a repository administrator, you can now configure the runner type, optional custom label, and optional runner group for Dependabot version and security updates. This extends the runner configuration already… The post ",
+      "url": "https://github.blog/changelog/2026-09-29-repository-custom-runner-settings-for-dependabot",
+      "published": "2026-09-29T19:10:00+00:00",
+      "score": 2,
       "tags": [
         "開発",
         "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Bring business context with external custom properties",
+      "summary": "You can now seamlessly bring business context about your repositories from an external system of record (e.g., a configuration management database (CMDB), an internal developer portal, or an in-house system)… The post Br",
+      "url": "https://github.blog/changelog/2026-09-29-bring-business-context-with-external-custom-properties",
+      "published": "2026-09-29T18:40:27+00:00",
+      "score": 2,
+      "tags": [
+        "開発"
       ]
     },
     {
@@ -666,82 +721,28 @@
       "provider": "chatgpt",
       "topic": "その他",
       "sourceWeight": 1,
+      "title": "Introducing dots",
+      "summary": "Dots by OpenAI are a proactive assistant that can keep working across complex projects and everyday tasks. Learn how dots help you stay in control while work moves forward.",
+      "url": "https://openai.com/index/introducing-dots",
+      "published": "2026-09-29T00:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "その他",
+      "sourceWeight": 1,
       "title": "How we will do better for Australia",
       "summary": "OpenAI apologises for incidents involving Australian government websites and outlines stronger safeguards and support to strengthen Australia’s cyber defences.",
       "url": "https://openai.com/index/how-we-will-do-better-for-australia",
       "published": "2026-09-28T19:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "How we found 24 Android vulnerabilities using our open source AI security agent",
-      "summary": "A look at the targeted AI taskflows behind these findings, the critical Android bugs they uncovered, and how to run the same open-source agent on your own app. The post How we found 24 Android vulnerabilities using our o",
-      "url": "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/",
-      "published": "2026-09-28T19:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
-      "summary": "OpenAI is expanding the Lenfest AI Collaborative and Fellowship Program with $5 million in funding and up to $5 million in software credits and engineering support.",
-      "url": "https://openai.com/index/lenfest-ai-collaborative-expansion",
-      "published": "2026-09-28T07:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Are you a Codex Original?",
-      "summary": "We’re collecting real stories of builders, tinkerers, researchers, and creators who are using Codex to do incredible things. If you want to be a part of the next chapter of the Codex Originals program, tell us more about",
-      "url": "https://openai.com/form/codex-originals",
-      "published": "2026-09-28T00:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
-      "summary": "With Codex, GPT-Live-1, and GPT-6 Astra, Proaction builds, operates, and sells modern fleet management faster.",
-      "url": "https://openai.com/index/proaction",
-      "published": "2026-09-25T19:00:00+00:00",
       "score": 2,
       "tags": [
         "AI",
@@ -753,48 +754,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-29T14:38:01.589902+00:00",
-      "lastAttemptAt": "2026-09-29T14:38:01.589902+00:00",
+      "lastSuccessAt": "2026-09-29T21:39:30.255235+00:00",
+      "lastAttemptAt": "2026-09-29T21:39:30.255235+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-29T14:38:01.589902+00:00",
-      "lastAttemptAt": "2026-09-29T14:38:01.589902+00:00",
+      "lastSuccessAt": "2026-09-29T21:39:30.255235+00:00",
+      "lastAttemptAt": "2026-09-29T21:39:30.255235+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-29T14:38:01.589902+00:00",
-      "lastAttemptAt": "2026-09-29T14:38:01.589902+00:00",
+      "lastSuccessAt": "2026-09-29T21:39:30.255235+00:00",
+      "lastAttemptAt": "2026-09-29T21:39:30.255235+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-29T14:38:01.589902+00:00",
-      "lastAttemptAt": "2026-09-29T14:38:01.589902+00:00",
+      "lastSuccessAt": "2026-09-29T21:39:30.255235+00:00",
+      "lastAttemptAt": "2026-09-29T21:39:30.255235+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-29T14:38:01.589902+00:00",
-      "lastAttemptAt": "2026-09-29T14:38:01.589902+00:00",
+      "lastSuccessAt": "2026-09-29T21:39:30.255235+00:00",
+      "lastAttemptAt": "2026-09-29T21:39:30.255235+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-29T14:38:01.589902+00:00",
-      "lastAttemptAt": "2026-09-29T14:38:01.589902+00:00",
+      "lastSuccessAt": "2026-09-29T21:39:30.255235+00:00",
+      "lastAttemptAt": "2026-09-29T21:39:30.255235+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -809,8 +810,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-29T14:38:01.589902+00:00",
-      "lastAttemptAt": "2026-09-29T14:38:01.589902+00:00",
+      "lastSuccessAt": "2026-09-29T21:39:30.255235+00:00",
+      "lastAttemptAt": "2026-09-29T21:39:30.255235+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
