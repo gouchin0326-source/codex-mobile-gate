@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-29T02:18:01.575419+00:00",
-  "lastSuccessAt": "2026-09-28T20:18:46.504283+00:00",
+  "updatedAt": "2026-09-29T02:28:01.587440+00:00",
+  "lastSuccessAt": "2026-09-29T02:28:01.587440+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,7 +143,7 @@
     {
       "genre": "AI",
       "count": 7,
-      "signal": "See what 4 builders are making with Gemini 3.8 Flash / Gemini 3.8 text-to-speech says hello / The Lenfest Institute grows landmark program with expanded OpenAI support",
+      "signal": "See what 4 builders are making with Gemini 3.8 Flash / Gemini 3.8 text-to-speech says hello / How we will do better for Australia",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers/",
       "score": 3
@@ -159,9 +159,9 @@
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 2.1 - 20 km SSW of Sunrise, Alaska",
+      "signal": "M 1.2 - 11 km NW of Parkfield, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tgfxhm",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75444142",
       "score": 1
     }
   ],
@@ -249,12 +249,12 @@
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
-      "topic": "AI",
+      "topic": "その他",
       "sourceWeight": 1,
-      "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
-      "summary": "OpenAI is expanding the Lenfest AI Collaborative and Fellowship Program with $5 million in funding and up to $5 million in software credits and engineering support.",
-      "url": "https://openai.com/index/lenfest-ai-collaborative-expansion",
-      "published": "2026-09-28T07:00:00+00:00",
+      "title": "How we will do better for Australia",
+      "summary": "OpenAI apologizes for incidents involving Australian government websites and outlines stronger safeguards and support to strengthen Australia’s cyber defences.",
+      "url": "https://openai.com/index/how-we-will-do-better-for-australia",
+      "published": "2026-09-29T01:00:00+00:00",
       "score": 2,
       "tags": [
         "AI",
@@ -283,10 +283,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.1 - 20 km SSW of Sunrise, Alaska",
-      "summary": "20 km SSW of Sunrise, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tgfxhm",
-      "published": "2026-09-28T19:59:16.619000+00:00",
+      "title": "M 1.2 - 11 km NW of Parkfield, CA",
+      "summary": "11 km NW of Parkfield, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75444142",
+      "published": "2026-09-29T02:15:19.830000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -604,6 +604,24 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
+      "summary": "OpenAI is expanding the Lenfest AI Collaborative and Fellowship Program with $5 million in funding and up to $5 million in software credits and engineering support.",
+      "url": "https://openai.com/index/lenfest-ai-collaborative-expansion",
+      "published": "2026-09-28T07:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -681,6 +699,24 @@
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "Are you a Codex Original?",
+      "summary": "We’re collecting real stories of builders, tinkerers, researchers, and creators who are using Codex to do incredible things. If you want to be a part of the next chapter of the Codex Originals program, tell us more about",
+      "url": "https://openai.com/form/codex-originals",
+      "published": "2026-09-28T00:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
       "topic": "技術",
       "sourceWeight": 1,
       "title": "Proaction boosts sales 60% and saves 75+ hours with Codex",
@@ -710,90 +746,54 @@
         "開発",
         "重要"
       ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Two years of OpenAI Academy",
-      "summary": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
-      "url": "https://openai.com/index/two-years-of-openai-academy",
-      "published": "2026-09-23T16:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "OpenAI extends cyber access to Ukraine for civilian defense",
-      "summary": "OpenAI is extending access to its Daybreak program to the Government of Ukraine to support the cyber defense of civilian infrastructure.",
-      "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
-      "published": "2026-09-23T13:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-28T20:18:46.504283+00:00",
-      "lastAttemptAt": "2026-09-28T20:18:46.504283+00:00",
+      "lastSuccessAt": "2026-09-29T02:28:01.587440+00:00",
+      "lastAttemptAt": "2026-09-29T02:28:01.587440+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-28T20:18:46.504283+00:00",
-      "lastAttemptAt": "2026-09-28T20:18:46.504283+00:00",
+      "lastSuccessAt": "2026-09-29T02:28:01.587440+00:00",
+      "lastAttemptAt": "2026-09-29T02:28:01.587440+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-28T20:18:46.504283+00:00",
-      "lastAttemptAt": "2026-09-28T20:18:46.504283+00:00",
+      "lastSuccessAt": "2026-09-29T02:28:01.587440+00:00",
+      "lastAttemptAt": "2026-09-29T02:28:01.587440+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-28T20:18:46.504283+00:00",
-      "lastAttemptAt": "2026-09-28T20:18:46.504283+00:00",
+      "lastSuccessAt": "2026-09-29T02:28:01.587440+00:00",
+      "lastAttemptAt": "2026-09-29T02:28:01.587440+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-28T20:18:46.504283+00:00",
-      "lastAttemptAt": "2026-09-28T20:18:46.504283+00:00",
+      "lastSuccessAt": "2026-09-29T02:28:01.587440+00:00",
+      "lastAttemptAt": "2026-09-29T02:28:01.587440+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-28T20:18:46.504283+00:00",
-      "lastAttemptAt": "2026-09-28T20:18:46.504283+00:00",
+      "lastSuccessAt": "2026-09-29T02:28:01.587440+00:00",
+      "lastAttemptAt": "2026-09-29T02:28:01.587440+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -808,8 +808,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-28T20:18:46.504283+00:00",
-      "lastAttemptAt": "2026-09-28T20:18:46.504283+00:00",
+      "lastSuccessAt": "2026-09-29T02:28:01.587440+00:00",
+      "lastAttemptAt": "2026-09-29T02:28:01.587440+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
