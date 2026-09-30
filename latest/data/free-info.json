@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-30T09:48:00.888680+00:00",
-  "lastSuccessAt": "2026-09-30T05:48:01.655860+00:00",
+  "updatedAt": "2026-09-30T09:58:00.876659+00:00",
+  "lastSuccessAt": "2026-09-30T09:58:00.876659+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -151,17 +151,17 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "Deser: Rethinking Rust Serialization",
+      "signal": "OpenBSD's ports tree keeps GPL coreutils and rejects uutils (Rust rewrite)",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://lucumr.pocoo.org/2026/9/29/deser/",
+      "topUrl": "https://www.mail-archive.com/ports%40openbsd.org/msg143892.html",
       "score": 1
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.3 - 18 km SSE of Mammoth Lakes, CA",
+      "signal": "M 0.7 - 9 km WNW of Cobb, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75441781",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75441851",
       "score": 1
     }
   ],
@@ -284,10 +284,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.3 - 18 km SSE of Mammoth Lakes, CA",
-      "summary": "18 km SSE of Mammoth Lakes, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75441781",
-      "published": "2026-09-30T03:39:32.940000+00:00",
+      "title": "M 0.7 - 9 km WNW of Cobb, CA",
+      "summary": "9 km WNW of Cobb, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75441851",
+      "published": "2026-09-30T09:50:40.280000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -299,12 +299,12 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "その他",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Deser: Rethinking Rust Serialization",
-      "summary": "Comments",
-      "url": "https://lucumr.pocoo.org/2026/9/29/deser/",
-      "published": "2026-09-29T22:02:31+00:00",
+      "title": "OpenBSD's ports tree keeps GPL coreutils and rejects uutils (Rust rewrite)",
+      "summary": "A contributor proposed a new OpenBSD port for uutils, the Rust reimplementations of GNU coreutils. The proposal met firm resistance: Stuart Henderson called it unusable, explaining that GNU coreutils exists mainly to sta",
+      "url": "https://www.mail-archive.com/ports%40openbsd.org/msg143892.html",
+      "published": "2026-09-30T07:47:04+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -752,48 +752,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-30T03:48:01.861328+00:00",
-      "lastAttemptAt": "2026-09-30T03:48:01.861328+00:00",
+      "lastSuccessAt": "2026-09-30T09:58:00.876659+00:00",
+      "lastAttemptAt": "2026-09-30T09:58:00.876659+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-30T03:48:01.861328+00:00",
-      "lastAttemptAt": "2026-09-30T03:48:01.861328+00:00",
+      "lastSuccessAt": "2026-09-30T09:58:00.876659+00:00",
+      "lastAttemptAt": "2026-09-30T09:58:00.876659+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-30T03:48:01.861328+00:00",
-      "lastAttemptAt": "2026-09-30T03:48:01.861328+00:00",
+      "lastSuccessAt": "2026-09-30T09:58:00.876659+00:00",
+      "lastAttemptAt": "2026-09-30T09:58:00.876659+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-30T03:48:01.861328+00:00",
-      "lastAttemptAt": "2026-09-30T03:48:01.861328+00:00",
+      "lastSuccessAt": "2026-09-30T09:58:00.876659+00:00",
+      "lastAttemptAt": "2026-09-30T09:58:00.876659+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-30T03:48:01.861328+00:00",
-      "lastAttemptAt": "2026-09-30T03:48:01.861328+00:00",
+      "lastSuccessAt": "2026-09-30T09:58:00.876659+00:00",
+      "lastAttemptAt": "2026-09-30T09:58:00.876659+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-30T03:48:01.861328+00:00",
-      "lastAttemptAt": "2026-09-30T03:48:01.861328+00:00",
+      "lastSuccessAt": "2026-09-30T09:58:00.876659+00:00",
+      "lastAttemptAt": "2026-09-30T09:58:00.876659+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -808,8 +808,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-30T03:48:01.861328+00:00",
-      "lastAttemptAt": "2026-09-30T03:48:01.861328+00:00",
+      "lastSuccessAt": "2026-09-30T09:58:00.876659+00:00",
+      "lastAttemptAt": "2026-09-30T09:58:00.876659+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
