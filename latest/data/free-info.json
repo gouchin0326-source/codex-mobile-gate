@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-30T03:38:01.562094+00:00",
-  "lastSuccessAt": "2026-09-29T21:39:30.255235+00:00",
+  "updatedAt": "2026-09-30T03:48:01.861328+00:00",
+  "lastSuccessAt": "2026-09-30T03:48:01.861328+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -151,17 +151,17 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "The Shell & Email",
+      "signal": "Deser: Rethinking Rust Serialization",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://www.machtiani.chat/blogs/the-shell",
+      "topUrl": "https://lucumr.pocoo.org/2026/9/29/deser/",
       "score": 1
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.2 - 6 km WNW of Cobb, CA",
+      "signal": "M 1.3 - 18 km SSE of Mammoth Lakes, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75441621",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75441781",
       "score": 1
     }
   ],
@@ -284,10 +284,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.2 - 6 km WNW of Cobb, CA",
-      "summary": "6 km WNW of Cobb, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75441621",
-      "published": "2026-09-29T21:32:06.800000+00:00",
+      "title": "M 1.3 - 18 km SSE of Mammoth Lakes, CA",
+      "summary": "18 km SSE of Mammoth Lakes, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75441781",
+      "published": "2026-09-30T03:39:32.940000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -299,12 +299,12 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "AI",
+      "topic": "その他",
       "sourceWeight": 1,
-      "title": "The Shell & Email",
+      "title": "Deser: Rethinking Rust Serialization",
       "summary": "Comments",
-      "url": "https://www.machtiani.chat/blogs/the-shell",
-      "published": "2026-09-29T20:14:41+00:00",
+      "url": "https://lucumr.pocoo.org/2026/9/29/deser/",
+      "published": "2026-09-29T22:02:31+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -722,7 +722,7 @@
       "topic": "その他",
       "sourceWeight": 1,
       "title": "Introducing dots",
-      "summary": "Dots by OpenAI are a proactive assistant that can keep working across complex projects and everyday tasks. Learn how dots help you stay in control while work moves forward.",
+      "summary": "Dots by OpenAI are proactive assistants that can keep working across complex projects and everyday tasks. Learn how dots help you stay in control while work moves forward.",
       "url": "https://openai.com/index/introducing-dots",
       "published": "2026-09-29T00:00:00+00:00",
       "score": 2,
@@ -754,48 +754,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-29T21:39:30.255235+00:00",
-      "lastAttemptAt": "2026-09-29T21:39:30.255235+00:00",
+      "lastSuccessAt": "2026-09-30T03:48:01.861328+00:00",
+      "lastAttemptAt": "2026-09-30T03:48:01.861328+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-29T21:39:30.255235+00:00",
-      "lastAttemptAt": "2026-09-29T21:39:30.255235+00:00",
+      "lastSuccessAt": "2026-09-30T03:48:01.861328+00:00",
+      "lastAttemptAt": "2026-09-30T03:48:01.861328+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-29T21:39:30.255235+00:00",
-      "lastAttemptAt": "2026-09-29T21:39:30.255235+00:00",
+      "lastSuccessAt": "2026-09-30T03:48:01.861328+00:00",
+      "lastAttemptAt": "2026-09-30T03:48:01.861328+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-29T21:39:30.255235+00:00",
-      "lastAttemptAt": "2026-09-29T21:39:30.255235+00:00",
+      "lastSuccessAt": "2026-09-30T03:48:01.861328+00:00",
+      "lastAttemptAt": "2026-09-30T03:48:01.861328+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-29T21:39:30.255235+00:00",
-      "lastAttemptAt": "2026-09-29T21:39:30.255235+00:00",
+      "lastSuccessAt": "2026-09-30T03:48:01.861328+00:00",
+      "lastAttemptAt": "2026-09-30T03:48:01.861328+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-29T21:39:30.255235+00:00",
-      "lastAttemptAt": "2026-09-29T21:39:30.255235+00:00",
+      "lastSuccessAt": "2026-09-30T03:48:01.861328+00:00",
+      "lastAttemptAt": "2026-09-30T03:48:01.861328+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -810,8 +810,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-29T21:39:30.255235+00:00",
-      "lastAttemptAt": "2026-09-29T21:39:30.255235+00:00",
+      "lastSuccessAt": "2026-09-30T03:48:01.861328+00:00",
+      "lastAttemptAt": "2026-09-30T03:48:01.861328+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
