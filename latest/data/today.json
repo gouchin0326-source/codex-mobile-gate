@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-30T05:58:01.682767+00:00",
+  "updatedAt": "2026-09-30T06:08:02.223213+00:00",
   "sourceUpdatedAt": "2026-09-30T05:48:01.655860+00:00",
   "status": "fresh",
   "mode": "today-rule-based",
@@ -11,19 +11,6 @@
     "maxPerGenre": 2
   },
   "items": [
-    {
-      "id": "github-changelog:0",
-      "genre": "開発",
-      "title": "Claude Sonnet 5.5 in GitHub Copilot",
-      "reason": "開発の新着で、設定した重要語と一致",
-      "publishedAt": "2026-09-28T18:03:57+00:00",
-      "observedAt": "2026-09-30T05:48:01.655860+00:00",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot",
-      "score": 5,
-      "stale": false,
-      "processing": "rule-based"
-    },
     {
       "id": "github-changelog:8",
       "genre": "開発",
@@ -59,6 +46,19 @@
       "observedAt": "2026-09-30T05:48:01.655860+00:00",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2609.35875",
+      "score": 3,
+      "stale": false,
+      "processing": "rule-based"
+    },
+    {
+      "id": "github-blog:11",
+      "genre": "開発",
+      "title": "Developer policy update: Transparency, state policy, and what’s ahead",
+      "reason": "開発の新着で、設定した重要語と一致",
+      "publishedAt": "2026-09-29T15:00:00+00:00",
+      "observedAt": "2026-09-30T05:48:01.655860+00:00",
+      "source": "GitHub",
+      "url": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-transparency-state-policy-and-whats-ahead/",
       "score": 3,
       "stale": false,
       "processing": "rule-based"
