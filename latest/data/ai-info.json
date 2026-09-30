@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-30T15:08:01.243584+00:00",
+  "updatedAt": "2026-09-30T20:26:25.644316+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -8,18 +8,18 @@
   "cards": [
     {
       "genre": "開発",
-      "count": 14,
+      "count": 13,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "Claude Sonnet 5.5 in GitHub Copilot / GPT-6.1 Sol in GitHub Copilot / GitHub Copilot app for Beginners: How to build custom workflows with canvases",
+      "signal": "Claude Sonnet 5.5 in GitHub Copilot / HydraFusion in VS Code and the GitHub Copilot app / GPT-6.1 Sol in GitHub Copilot",
       "topUrl": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot",
       "score": 5
     },
     {
       "genre": "AI",
-      "count": 8,
+      "count": 9,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "Introducing GPT-6.1 Sol / DevDay 2026 Recap / Towards safety cases for frontier AI training",
-      "topUrl": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "signal": "Disrupting a coordinated model-distillation campaign / Helping small businesses put AI to work / Introducing GPT-6.1 Sol",
+      "topUrl": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
       "score": 3
     },
     {
@@ -34,8 +34,8 @@
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "OpenBSD's ports tree keeps GPL coreutils and rejects uutils (Rust rewrite)",
-      "topUrl": "https://www.mail-archive.com/ports%40openbsd.org/msg143892.html",
+      "signal": "Hanami, Why?: Introductions",
+      "topUrl": "https://aaronmallen.me/writing/hanami-why-introductions",
       "score": 1
     }
   ],
@@ -46,6 +46,13 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot"
+    },
+    {
+      "label": "開発",
+      "title": "HydraFusion in VS Code and the GitHub Copilot app",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app"
     },
     {
       "label": "開発",
@@ -69,32 +76,25 @@
       "url": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/"
     },
     {
-      "label": "論文",
-      "title": "OpenAI-HuggingFace: A Reproduction & Lessons for Alignment Testing",
+      "label": "開発",
+      "title": "GitHub Advanced Security trials for GitHub Team",
       "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.35799"
-    },
-    {
-      "label": "論文",
-      "title": "Beyond Symmetric Agents: Cognitive Diversity and Multi-Agent Debate in Small Language Models",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.35875"
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-30-github-advanced-security-trials-for-github-team"
     },
     {
       "label": "開発",
-      "title": "Developer policy update: Transparency, state policy, and what’s ahead",
+      "title": "X25519-only TLS ends for GHE.com on October 7",
       "why": "Codex/AI開発判断に関係",
-      "source": "GitHub",
-      "url": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-transparency-state-policy-and-whats-ahead/"
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-09-30-x25519-only-tls-ends-for-ghe-com-on-september-15"
     },
     {
       "label": "AI",
-      "title": "Introducing GPT-6.1 Sol",
+      "title": "Disrupting a coordinated model-distillation campaign",
       "why": "Codex/AI開発判断に関係",
       "source": "ChatGPT / OpenAI公式",
-      "url": "https://openai.com/index/introducing-gpt-6-1-sol"
+      "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign"
     }
   ],
   "items": [
@@ -115,6 +115,25 @@
         "開発",
         "重要",
         "制作",
+        "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "HydraFusion in VS Code and the GitHub Copilot app",
+      "summary": "The HydraFusion research preview is now available in Visual Studio Code and the GitHub Copilot app, expanding beyond Copilot CLI. HydraFusion appears in the model picker, but rather than being… The post HydraFusion in VS",
+      "url": "https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app",
+      "published": "2026-09-30T14:31:19+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
         "研究"
       ]
     },
@@ -173,6 +192,80 @@
         "開発",
         "重要",
         "制作"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "GitHub Advanced Security trials for GitHub Team",
+      "summary": "GitHub Team customers can now start self-serve trials of GitHub Advanced Security to evaluate GitHub Code Security and GitHub Secret Protection. Start a trial from your organization’s Overview page, Billing… The post Git",
+      "url": "https://github.blog/changelog/2026-09-30-github-advanced-security-trials-for-github-team",
+      "published": "2026-09-30T16:48:24+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "X25519-only TLS ends for GHE.com on October 7",
+      "summary": "Beginning October 7, 2026, GitHub Enterprise Cloud with data residency will no longer accept TLS connections from clients that offer only X25519 for key agreement. Most customers don’t need to… The post X25519-only TLS e",
+      "url": "https://github.blog/changelog/2026-09-30-x25519-only-tls-ends-for-ghe-com-on-september-15",
+      "published": "2026-09-30T13:30:24+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Disrupting a coordinated model-distillation campaign",
+      "summary": "Learn how OpenAI disrupted a campaign to extract protected model reasoning and is strengthening defenses against adversarial distillation.",
+      "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
+      "published": "2026-09-30T10:30:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Helping small businesses put AI to work",
+      "summary": "OpenAI is partnering with America’s SBDC to expand hands-on AI training and local support for small businesses, alongside a new report on how small teams are using AI.",
+      "url": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
+      "published": "2026-09-30T10:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
       ]
     },
     {
@@ -344,42 +437,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Enterprise managed settings in-product validator",
-      "summary": "You can now use an in-product validator for enterprise managed settings for GitHub Copilot. The validator detects malformed JSON, unsupported configurations, invalid team mappings, and other errors that can prevent… The ",
-      "url": "https://github.blog/changelog/2026-09-25-enterprise-managed-settings-in-product-validator",
-      "published": "2026-09-25T23:24:57+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Usage metrics API adds pull request review stages",
-      "summary": "The enterprise and organization repository-level Copilot usage metrics reports now break down how long pull requests spend in each stage of review. A new pull_request_review_times array on each repos-1-day row… The post ",
-      "url": "https://github.blog/changelog/2026-09-25-usage-metrics-api-adds-pull-request-review-stages",
-      "published": "2026-09-25T21:09:40+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -453,56 +510,20 @@
       ]
     },
     {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "Neurosymbolic Routing for Reliable Reasoning on Resource-Constrained Edge Devices",
-      "summary": "arXiv:2609.35833v1 Announce Type: new Abstract: Running a language model on edge hardware provides private and low-latency reasoning without a network connection, and yet the small models that fit on such devices are unr",
-      "url": "https://arxiv.org/abs/2609.35833",
-      "published": "2026-09-30T04:00:00+00:00",
+      "title": "Gemini 4 Argon: our next era of frontier intelligence",
+      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work and cyber defense, rolling out soon.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "published": "2026-09-30T20:00:00+00:00",
       "score": 2,
       "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Is Human-Readable Text Necessary for Effective LLM Fine-Tuning?",
-      "summary": "arXiv:2609.35868v1 Announce Type: new Abstract: Is human readability necessary for effective fine-tuning of large language models? We investigate whether model-conditioned training representations can preserve or improve",
-      "url": "https://arxiv.org/abs/2609.35868",
-      "published": "2026-09-30T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "The Price of Token Boundaries: Compression Certificates and Prediction",
-      "summary": "arXiv:2609.35869v1 Announce Type: new Abstract: Pre-tokenisation restricts which text fragments can become prediction units, but its compression cost is obscured when tokenisers are compared only under the same boundarie",
-      "url": "https://arxiv.org/abs/2609.35869",
-      "published": "2026-09-30T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
+        "AI",
         "研究"
       ]
     },
@@ -514,27 +535,9 @@
       "provider": null,
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "More Programs or More Rolls? Separating Coverage from Specialization in LLM Harnesses",
-      "summary": "arXiv:2609.35873v1 Announce Type: new Abstract: Automated generation of LLM harnesses promises to improve inference through task specialization. Yet additional answer coverage can arise from repeated execution of the sam",
-      "url": "https://arxiv.org/abs/2609.35873",
-      "published": "2026-09-30T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Risk-Averse Online POMDP Planning via CVaR of the Immediate Cost with Performance Guarantees",
-      "summary": "arXiv:2609.35874v1 Announce Type: new Abstract: Online POMDP planners optimize the expected cumulative cost, which can mask dangerous states when the belief places significant mass on high-cost states. Existing risk-aver",
-      "url": "https://arxiv.org/abs/2609.35874",
+      "title": "Neurosymbolic Routing for Reliable Reasoning on Resource-Constrained Edge Devices",
+      "summary": "arXiv:2609.35833v1 Announce Type: new Abstract: Running a language model on edge hardware provides private and low-latency reasoning without a network connection, and yet the small models that fit on such devices are unr",
+      "url": "https://arxiv.org/abs/2609.35833",
       "published": "2026-09-30T04:00:00+00:00",
       "score": 2,
       "tags": [
@@ -588,6 +591,18 @@
         ],
         "latest": [
           {
+            "title": "Disrupting a coordinated model-distillation campaign",
+            "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
+            "published": "2026-09-30T10:30:00+00:00",
+            "source": "ChatGPT / OpenAI公式"
+          },
+          {
+            "title": "Helping small businesses put AI to work",
+            "url": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
+            "published": "2026-09-30T10:00:00+00:00",
+            "source": "ChatGPT / OpenAI公式"
+          },
+          {
             "title": "Introducing GPT-6.1 Sol",
             "url": "https://openai.com/index/introducing-gpt-6-1-sol",
             "published": "2026-09-29T10:00:00+00:00",
@@ -597,18 +612,6 @@
             "title": "DevDay 2026 Recap",
             "url": "https://openai.com/index/devday-2026-recap",
             "published": "2026-09-29T10:00:00+00:00",
-            "source": "ChatGPT / OpenAI公式"
-          },
-          {
-            "title": "Towards safety cases for frontier AI training",
-            "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
-            "published": "2026-09-28T19:00:00+00:00",
-            "source": "ChatGPT / OpenAI公式"
-          },
-          {
-            "title": "Introducing dots",
-            "url": "https://openai.com/index/introducing-dots",
-            "published": "2026-09-29T00:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           }
         ]
@@ -648,6 +651,12 @@
             "title": "Gemini 3.8 text-to-speech says hello",
             "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
             "published": "2026-09-23T15:15:00+00:00",
+            "source": "Gemini公式"
+          },
+          {
+            "title": "Gemini 4 Argon: our next era of frontier intelligence",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+            "published": "2026-09-30T20:00:00+00:00",
             "source": "Gemini公式"
           }
         ]
@@ -709,5 +718,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-30T09:58:00.876659+00:00"
+  "lastSuccessAt": "2026-09-30T20:26:25.644316+00:00"
 }

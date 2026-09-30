@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-30T15:08:01.243584+00:00",
-  "lastSuccessAt": "2026-09-30T09:58:00.876659+00:00",
+  "updatedAt": "2026-09-30T20:26:25.644316+00:00",
+  "lastSuccessAt": "2026-09-30T20:26:25.644316+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -126,18 +126,18 @@
   "contexts": [
     {
       "genre": "開発",
-      "count": 14,
-      "signal": "Claude Sonnet 5.5 in GitHub Copilot / GPT-6.1 Sol in GitHub Copilot / GitHub Copilot app for Beginners: How to build custom workflows with canvases",
+      "count": 13,
+      "signal": "Claude Sonnet 5.5 in GitHub Copilot / HydraFusion in VS Code and the GitHub Copilot app / GPT-6.1 Sol in GitHub Copilot",
       "decision": "CG開発・GitHub運用へ反映候補",
       "topUrl": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot",
       "score": 5
     },
     {
       "genre": "AI",
-      "count": 8,
-      "signal": "Introducing GPT-6.1 Sol / DevDay 2026 Recap / Towards safety cases for frontier AI training",
+      "count": 9,
+      "signal": "Disrupting a coordinated model-distillation campaign / Helping small businesses put AI to work / Introducing GPT-6.1 Sol",
       "decision": "AI/Codex運用の変化を確認",
-      "topUrl": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "topUrl": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
       "score": 3
     },
     {
@@ -151,17 +151,17 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "OpenBSD's ports tree keeps GPL coreutils and rejects uutils (Rust rewrite)",
+      "signal": "Hanami, Why?: Introductions",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://www.mail-archive.com/ports%40openbsd.org/msg143892.html",
+      "topUrl": "https://aaronmallen.me/writing/hanami-why-introductions",
       "score": 1
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 0.7 - 9 km WNW of Cobb, CA",
+      "signal": "M 1.5 - 8 km W of Holtville, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75441851",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41341143",
       "score": 1
     }
   ],
@@ -206,6 +206,25 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Disrupting a coordinated model-distillation campaign",
+      "summary": "Learn how OpenAI disrupted a campaign to extract protected model reasoning and is strengthening defenses against adversarial distillation.",
+      "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
+      "published": "2026-09-30T10:30:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -222,25 +241,6 @@
         "論文",
         "重要",
         "研究"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Introducing GPT-6.1 Sol",
-      "summary": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.",
-      "url": "https://openai.com/index/introducing-gpt-6-1-sol",
-      "published": "2026-09-29T10:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "開発"
       ]
     },
     {
@@ -284,10 +284,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.7 - 9 km WNW of Cobb, CA",
-      "summary": "9 km WNW of Cobb, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75441851",
-      "published": "2026-09-30T09:50:40.280000+00:00",
+      "title": "M 1.5 - 8 km W of Holtville, CA",
+      "summary": "8 km W of Holtville, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41341143",
+      "published": "2026-09-30T20:09:06.750000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -299,15 +299,34 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "技術",
+      "topic": "その他",
       "sourceWeight": 1,
-      "title": "OpenBSD's ports tree keeps GPL coreutils and rejects uutils (Rust rewrite)",
-      "summary": "A contributor proposed a new OpenBSD port for uutils, the Rust reimplementations of GNU coreutils. The proposal met firm resistance: Stuart Henderson called it unusable, explaining that GNU coreutils exists mainly to sta",
-      "url": "https://www.mail-archive.com/ports%40openbsd.org/msg143892.html",
-      "published": "2026-09-30T07:47:04+00:00",
+      "title": "Hanami, Why?: Introductions",
+      "summary": "Comments",
+      "url": "https://aaronmallen.me/writing/hanami-why-introductions",
+      "published": "2026-09-30T15:55:21+00:00",
       "score": 1,
       "tags": [
         "技術"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "HydraFusion in VS Code and the GitHub Copilot app",
+      "summary": "The HydraFusion research preview is now available in Visual Studio Code and the GitHub Copilot app, expanding beyond Copilot CLI. HydraFusion appears in the model picker, but rather than being… The post HydraFusion in VS",
+      "url": "https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app",
+      "published": "2026-09-30T14:31:19+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
       ]
     },
     {
@@ -349,6 +368,61 @@
       ]
     },
     {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "GitHub Advanced Security trials for GitHub Team",
+      "summary": "GitHub Team customers can now start self-serve trials of GitHub Advanced Security to evaluate GitHub Code Security and GitHub Secret Protection. Start a trial from your organization’s Overview page, Billing… The post Git",
+      "url": "https://github.blog/changelog/2026-09-30-github-advanced-security-trials-for-github-team",
+      "published": "2026-09-30T16:48:24+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "X25519-only TLS ends for GHE.com on October 7",
+      "summary": "Beginning October 7, 2026, GitHub Enterprise Cloud with data residency will no longer accept TLS connections from clients that offer only X25519 for key agreement. Most customers don’t need to… The post X25519-only TLS e",
+      "url": "https://github.blog/changelog/2026-09-30-x25519-only-tls-ends-for-ghe-com-on-september-15",
+      "published": "2026-09-30T13:30:24+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Helping small businesses put AI to work",
+      "summary": "OpenAI is partnering with America’s SBDC to expand hands-on AI training and local support for small businesses, alongside a new report on how small teams are using AI.",
+      "url": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
+      "published": "2026-09-30T10:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -383,6 +457,25 @@
       "tags": [
         "開発",
         "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Introducing GPT-6.1 Sol",
+      "summary": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.",
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "published": "2026-09-29T10:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "開発"
       ]
     },
     {
@@ -460,42 +553,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Enterprise managed settings in-product validator",
-      "summary": "You can now use an in-product validator for enterprise managed settings for GitHub Copilot. The validator detects malformed JSON, unsupported configurations, invalid team mappings, and other errors that can prevent… The ",
-      "url": "https://github.blog/changelog/2026-09-25-enterprise-managed-settings-in-product-validator",
-      "published": "2026-09-25T23:24:57+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Usage metrics API adds pull request review stages",
-      "summary": "The enterprise and organization repository-level Copilot usage metrics reports now break down how long pull requests spend in each stage of review. A new pull_request_review_times array on each repos-1-day row… The post ",
-      "url": "https://github.blog/changelog/2026-09-25-usage-metrics-api-adds-pull-request-review-stages",
-      "published": "2026-09-25T21:09:40+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -565,6 +622,24 @@
       "tags": [
         "AI",
         "制作",
+        "研究"
+      ]
+    },
+    {
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Gemini 4 Argon: our next era of frontier intelligence",
+      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work and cyber defense, rolling out soon.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "published": "2026-09-30T20:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
         "研究"
       ]
     },
@@ -675,125 +750,54 @@
         "論文",
         "研究"
       ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Repository custom runner settings for Dependabot",
-      "summary": "As a repository administrator, you can now configure the runner type, optional custom label, and optional runner group for Dependabot version and security updates. This extends the runner configuration already… The post ",
-      "url": "https://github.blog/changelog/2026-09-29-repository-custom-runner-settings-for-dependabot",
-      "published": "2026-09-29T19:10:00+00:00",
-      "score": 2,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Bring business context with external custom properties",
-      "summary": "You can now seamlessly bring business context about your repositories from an external system of record (e.g., a configuration management database (CMDB), an internal developer portal, or an in-house system)… The post Br",
-      "url": "https://github.blog/changelog/2026-09-29-bring-business-context-with-external-custom-properties",
-      "published": "2026-09-29T18:40:27+00:00",
-      "score": 2,
-      "tags": [
-        "開発"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Introducing dots",
-      "summary": "Dots by OpenAI are proactive assistants that can keep working across complex projects and everyday tasks. Learn how dots help you stay in control while work moves forward.",
-      "url": "https://openai.com/index/introducing-dots",
-      "published": "2026-09-29T00:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "How we will do better for Australia",
-      "summary": "OpenAI apologises for incidents involving Australian government websites and outlines stronger safeguards and support to strengthen Australia’s cyber defences.",
-      "url": "https://openai.com/index/how-we-will-do-better-for-australia",
-      "published": "2026-09-28T19:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-30T09:58:00.876659+00:00",
-      "lastAttemptAt": "2026-09-30T09:58:00.876659+00:00",
+      "lastSuccessAt": "2026-09-30T20:26:25.644316+00:00",
+      "lastAttemptAt": "2026-09-30T20:26:25.644316+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-30T09:58:00.876659+00:00",
-      "lastAttemptAt": "2026-09-30T09:58:00.876659+00:00",
+      "lastSuccessAt": "2026-09-30T20:26:25.644316+00:00",
+      "lastAttemptAt": "2026-09-30T20:26:25.644316+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-30T09:58:00.876659+00:00",
-      "lastAttemptAt": "2026-09-30T09:58:00.876659+00:00",
+      "lastSuccessAt": "2026-09-30T20:26:25.644316+00:00",
+      "lastAttemptAt": "2026-09-30T20:26:25.644316+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-30T09:58:00.876659+00:00",
-      "lastAttemptAt": "2026-09-30T09:58:00.876659+00:00",
+      "lastSuccessAt": "2026-09-30T20:26:25.644316+00:00",
+      "lastAttemptAt": "2026-09-30T20:26:25.644316+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-30T09:58:00.876659+00:00",
-      "lastAttemptAt": "2026-09-30T09:58:00.876659+00:00",
+      "lastSuccessAt": "2026-09-30T20:26:25.644316+00:00",
+      "lastAttemptAt": "2026-09-30T20:26:25.644316+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-30T09:58:00.876659+00:00",
-      "lastAttemptAt": "2026-09-30T09:58:00.876659+00:00",
+      "lastSuccessAt": "2026-09-30T20:26:25.644316+00:00",
+      "lastAttemptAt": "2026-09-30T20:26:25.644316+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -808,8 +812,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-30T09:58:00.876659+00:00",
-      "lastAttemptAt": "2026-09-30T09:58:00.876659+00:00",
+      "lastSuccessAt": "2026-09-30T20:26:25.644316+00:00",
+      "lastAttemptAt": "2026-09-30T20:26:25.644316+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
