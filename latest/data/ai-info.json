@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T14:28:01.011782+00:00",
+  "updatedAt": "2026-10-01T14:38:01.128731+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -10,13 +10,13 @@
       "genre": "開発",
       "count": 13,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "HydraFusion in VS Code and the GitHub Copilot app / GPT-6.1 Sol in GitHub Copilot / GitHub Copilot app for Beginners: How to build custom workflows with canvases",
+      "signal": "HydraFusion in VS Code and the GitHub Copilot app / GitHub Copilot app for Beginners: How to build custom workflows with canvases / When chat is the wrong UI",
       "topUrl": "https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app",
       "score": 4
     },
     {
       "genre": "AI",
-      "count": 8,
+      "count": 9,
       "decision": "AI/Codex運用の変化を確認",
       "signal": "Disrupting a coordinated model-distillation campaign / Helping small businesses put AI to work / Introducing GPT-6.1 Sol",
       "topUrl": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
@@ -32,10 +32,10 @@
     },
     {
       "genre": "技術",
-      "count": 2,
+      "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "Rust to WGSL transpiler `wgsl-rs` released / EDG C/C++ Compiler Project",
-      "topUrl": "https://renderling.xyz/articles/wgsl-rs-beta-release.html",
+      "signal": "Is sandboxing sufficient to contain rogue agents?",
+      "topUrl": "https://blog.cryptographyengineering.com/2026/09/30/is-sandboxing-sufficient-to-contain-rogue-agents/",
       "score": 2
     }
   ],
@@ -46,13 +46,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app"
-    },
-    {
-      "label": "開発",
-      "title": "GPT-6.1 Sol in GitHub Copilot",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-29-gpt-6-1-sol-in-github-copilot"
     },
     {
       "label": "開発",
@@ -67,6 +60,20 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
       "url": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/"
+    },
+    {
+      "label": "開発",
+      "title": "GitHub async merge API generally available",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-01-github-async-merge-api-generally-available"
+    },
+    {
+      "label": "開発",
+      "title": "Actions Runner Controller release 0.15.0",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-01-actions-runner-controller-release-0-15-0"
     },
     {
       "label": "論文",
@@ -88,13 +95,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2609.38294"
-    },
-    {
-      "label": "論文",
-      "title": "AI Agents are Vulnerable to Radicalization",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.38296"
     }
   ],
   "items": [
@@ -110,25 +110,6 @@
       "summary": "The HydraFusion research preview is now available in Visual Studio Code and the GitHub Copilot app, expanding beyond Copilot CLI. HydraFusion appears in the model picker, but rather than being… The post HydraFusion in VS",
       "url": "https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app",
       "published": "2026-09-30T14:31:19+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "GPT-6.1 Sol in GitHub Copilot",
-      "summary": "GPT-6.1 Sol, the latest model from OpenAI, is now generally available and rolling out in GitHub Copilot. You can use it for agentic coding and terminal workflows with strong multistep… The post GPT-6.1 Sol in GitHub Copi",
-      "url": "https://github.blog/changelog/2026-09-29-gpt-6-1-sol-in-github-copilot",
-      "published": "2026-09-29T17:02:27+00:00",
       "score": 4,
       "tags": [
         "開発",
@@ -172,6 +153,42 @@
         "開発",
         "重要",
         "制作"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "GitHub async merge API generally available",
+      "summary": "You can now use the generally available GitHub async merge API to merge individual or stacked pull requests, add pull requests to a merge queue, or merge pull requests directly.… The post GitHub async merge API generally",
+      "url": "https://github.blog/changelog/2026-10-01-github-async-merge-api-generally-available",
+      "published": "2026-10-01T14:00:51+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "ニュース",
+      "sourceWeight": 1,
+      "title": "Actions Runner Controller release 0.15.0",
+      "summary": "GitHub Actions Runner Controller 0.15.0 includes reliability, scalability, and observability improvements for runner scale sets. These updates help you operate larger runner fleets with fewer disruptions during upgrades ",
+      "url": "https://github.blog/changelog/2026-10-01-actions-runner-controller-release-0-15-0",
+      "published": "2026-10-01T13:01:31+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -397,24 +414,6 @@
         "AI",
         "重要",
         "開発"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Self-hosted runner version enforcement date has moved",
-      "summary": "The enforcement date for GitHub Actions minimum version requirements for self-hosted runners on GitHub Enterprise Cloud has changed. The change ships Monday, September 28, 2026, and full enforcement now begins… The post ",
-      "url": "https://github.blog/changelog/2026-09-28-self-hosted-runner-version-enforcement-date-has-moved",
-      "published": "2026-09-28T19:22:46+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
       ]
     },
     {
@@ -653,6 +652,12 @@
             "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
             "published": "2026-09-23T15:15:00+00:00",
             "source": "Gemini公式"
+          },
+          {
+            "title": "Gemini 4 Argon: our next era of frontier intelligence",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+            "published": "2026-09-30T20:00:00+00:00",
+            "source": "Gemini公式"
           }
         ]
       },
@@ -684,7 +689,7 @@
           {
             "title": "Barclays Scales Claude",
             "url": "https://www.anthropic.com/news/barclays-scales-claude",
-            "published": "2026-10-01T08:00:59.000Z",
+            "published": "2026-10-01T09:16:50.000Z",
             "source": "Claude / Anthropic公式"
           }
         ]
@@ -713,5 +718,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-01T08:38:00.770663+00:00"
+  "lastSuccessAt": "2026-10-01T14:38:01.128731+00:00"
 }

@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-01T14:28:01.011782+00:00",
-  "lastSuccessAt": "2026-10-01T08:38:00.770663+00:00",
+  "updatedAt": "2026-10-01T14:38:01.128731+00:00",
+  "lastSuccessAt": "2026-10-01T14:38:01.128731+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -127,14 +127,14 @@
     {
       "genre": "開発",
       "count": 13,
-      "signal": "HydraFusion in VS Code and the GitHub Copilot app / GPT-6.1 Sol in GitHub Copilot / GitHub Copilot app for Beginners: How to build custom workflows with canvases",
+      "signal": "HydraFusion in VS Code and the GitHub Copilot app / GitHub Copilot app for Beginners: How to build custom workflows with canvases / When chat is the wrong UI",
       "decision": "CG開発・GitHub運用へ反映候補",
       "topUrl": "https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app",
       "score": 4
     },
     {
       "genre": "AI",
-      "count": 8,
+      "count": 9,
       "signal": "Disrupting a coordinated model-distillation campaign / Helping small businesses put AI to work / Introducing GPT-6.1 Sol",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
@@ -150,18 +150,18 @@
     },
     {
       "genre": "技術",
-      "count": 2,
-      "signal": "Rust to WGSL transpiler `wgsl-rs` released / EDG C/C++ Compiler Project",
+      "count": 1,
+      "signal": "Is sandboxing sufficient to contain rogue agents?",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://renderling.xyz/articles/wgsl-rs-beta-release.html",
+      "topUrl": "https://blog.cryptographyengineering.com/2026/09/30/is-sandboxing-sufficient-to-contain-rogue-agents/",
       "score": 2
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 2.4 - 7 km SE of Pinnacles, CA",
+      "signal": "M 1.1 - 12 km N of Cabazon, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442251",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41341631",
       "score": 1
     }
   ],
@@ -267,12 +267,12 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "ニュース",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Rust to WGSL transpiler `wgsl-rs` released",
+      "title": "Is sandboxing sufficient to contain rogue agents?",
       "summary": "Comments",
-      "url": "https://renderling.xyz/articles/wgsl-rs-beta-release.html",
-      "published": "2026-10-01T00:13:12+00:00",
+      "url": "https://blog.cryptographyengineering.com/2026/09/30/is-sandboxing-sufficient-to-contain-rogue-agents/",
+      "published": "2026-10-01T12:16:51+00:00",
       "score": 2,
       "tags": [
         "技術",
@@ -283,10 +283,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.4 - 7 km SE of Pinnacles, CA",
-      "summary": "7 km SE of Pinnacles, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442251",
-      "published": "2026-10-01T08:36:03.040000+00:00",
+      "title": "M 1.1 - 12 km N of Cabazon, CA",
+      "summary": "12 km N of Cabazon, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41341631",
+      "published": "2026-10-01T14:34:40.160000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -303,29 +303,10 @@
       "title": "Barclays Scales Claude",
       "summary": "公式サイトマップで更新を検知。内容は公式ページで確認。",
       "url": "https://www.anthropic.com/news/barclays-scales-claude",
-      "published": "2026-10-01T08:00:59.000Z",
+      "published": "2026-10-01T09:16:50.000Z",
       "score": 1,
       "tags": [
         "AI"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "GPT-6.1 Sol in GitHub Copilot",
-      "summary": "GPT-6.1 Sol, the latest model from OpenAI, is now generally available and rolling out in GitHub Copilot. You can use it for agentic coding and terminal workflows with strong multistep… The post GPT-6.1 Sol in GitHub Copi",
-      "url": "https://github.blog/changelog/2026-09-29-gpt-6-1-sol-in-github-copilot",
-      "published": "2026-09-29T17:02:27+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
-        "研究"
       ]
     },
     {
@@ -345,6 +326,42 @@
         "開発",
         "重要",
         "制作"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "GitHub async merge API generally available",
+      "summary": "You can now use the generally available GitHub async merge API to merge individual or stacked pull requests, add pull requests to a merge queue, or merge pull requests directly.… The post GitHub async merge API generally",
+      "url": "https://github.blog/changelog/2026-10-01-github-async-merge-api-generally-available",
+      "published": "2026-10-01T14:00:51+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "ニュース",
+      "sourceWeight": 1,
+      "title": "Actions Runner Controller release 0.15.0",
+      "summary": "GitHub Actions Runner Controller 0.15.0 includes reliability, scalability, and observability improvements for runner scale sets. These updates help you operate larger runner fleets with fewer disruptions during upgrades ",
+      "url": "https://github.blog/changelog/2026-10-01-actions-runner-controller-release-0-15-0",
+      "published": "2026-10-01T13:01:31+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -535,24 +552,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Self-hosted runner version enforcement date has moved",
-      "summary": "The enforcement date for GitHub Actions minimum version requirements for self-hosted runners on GitHub Enterprise Cloud has changed. The change ships Monday, September 28, 2026, and full enforcement now begins… The post ",
-      "url": "https://github.blog/changelog/2026-09-28-self-hosted-runner-version-enforcement-date-has-moved",
-      "published": "2026-09-28T19:22:46+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -717,24 +716,6 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "EDG C/C++ Compiler Project",
-      "summary": "During the 2025 November C++ ISO meeting Edison Design Group announced that they would be winding down and that they will open-source their front end . This is the repo containing said front end along with some other com",
-      "url": "https://github.com/edgcpp/compiler",
-      "published": "2026-09-30T22:06:21+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "制作"
-      ]
-    },
-    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -750,54 +731,72 @@
       "tags": [
         "開発"
       ]
+    },
+    {
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Gemini 4 Argon: our next era of frontier intelligence",
+      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "published": "2026-09-30T20:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "研究"
+      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-01T08:38:00.770663+00:00",
-      "lastAttemptAt": "2026-10-01T08:38:00.770663+00:00",
+      "lastSuccessAt": "2026-10-01T14:38:01.128731+00:00",
+      "lastAttemptAt": "2026-10-01T14:38:01.128731+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-01T08:38:00.770663+00:00",
-      "lastAttemptAt": "2026-10-01T08:38:00.770663+00:00",
+      "lastSuccessAt": "2026-10-01T14:38:01.128731+00:00",
+      "lastAttemptAt": "2026-10-01T14:38:01.128731+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-01T08:38:00.770663+00:00",
-      "lastAttemptAt": "2026-10-01T08:38:00.770663+00:00",
+      "lastSuccessAt": "2026-10-01T14:38:01.128731+00:00",
+      "lastAttemptAt": "2026-10-01T14:38:01.128731+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-01T08:38:00.770663+00:00",
-      "lastAttemptAt": "2026-10-01T08:38:00.770663+00:00",
+      "lastSuccessAt": "2026-10-01T14:38:01.128731+00:00",
+      "lastAttemptAt": "2026-10-01T14:38:01.128731+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-01T08:38:00.770663+00:00",
-      "lastAttemptAt": "2026-10-01T08:38:00.770663+00:00",
+      "lastSuccessAt": "2026-10-01T14:38:01.128731+00:00",
+      "lastAttemptAt": "2026-10-01T14:38:01.128731+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-01T08:38:00.770663+00:00",
-      "lastAttemptAt": "2026-10-01T08:38:00.770663+00:00",
+      "lastSuccessAt": "2026-10-01T14:38:01.128731+00:00",
+      "lastAttemptAt": "2026-10-01T14:38:01.128731+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -812,8 +811,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-01T08:38:00.770663+00:00",
-      "lastAttemptAt": "2026-10-01T08:38:00.770663+00:00",
+      "lastSuccessAt": "2026-10-01T14:38:01.128731+00:00",
+      "lastAttemptAt": "2026-10-01T14:38:01.128731+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
