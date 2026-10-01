@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T05:38:01.900324+00:00",
+  "updatedAt": "2026-10-01T05:48:01.866174+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -26,8 +26,8 @@
       "genre": "論文",
       "count": 8,
       "decision": "必要時だけ確認",
-      "signal": "OpenAI-HuggingFace: A Reproduction & Lessons for Alignment Testing / Beyond Symmetric Agents: Cognitive Diversity and Multi-Agent Debate in Small Language Models / Neurosymbolic Routing for Reliable Reasoning on Resource",
-      "topUrl": "https://arxiv.org/abs/2609.35799",
+      "signal": "Improving OCR Faithfulness via Gated and Attenuated On-Policy Distillation / AREX-2: Advancing Self-Improving Agents through Long-Horizon Reflective Tasks / MoFlow: Multi-Objective Agentic Workflow Generation",
+      "topUrl": "https://arxiv.org/abs/2609.38282",
       "score": 3
     },
     {
@@ -69,32 +69,32 @@
       "url": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/"
     },
     {
-      "label": "開発",
-      "title": "GitHub Advanced Security trials for GitHub Team",
+      "label": "論文",
+      "title": "Improving OCR Faithfulness via Gated and Attenuated On-Policy Distillation",
       "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-30-github-advanced-security-trials-for-github-team"
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2609.38282"
     },
     {
-      "label": "開発",
-      "title": "X25519-only TLS ends for GHE.com on October 7",
+      "label": "論文",
+      "title": "AREX-2: Advancing Self-Improving Agents through Long-Horizon Reflective Tasks",
       "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-30-x25519-only-tls-ends-for-ghe-com-on-september-15"
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2609.38288"
     },
     {
-      "label": "AI",
-      "title": "Disrupting a coordinated model-distillation campaign",
+      "label": "論文",
+      "title": "MoFlow: Multi-Objective Agentic Workflow Generation",
       "why": "Codex/AI開発判断に関係",
-      "source": "ChatGPT / OpenAI公式",
-      "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign"
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2609.38294"
     },
     {
-      "label": "AI",
-      "title": "Helping small businesses put AI to work",
+      "label": "論文",
+      "title": "AI Agents are Vulnerable to Radicalization",
       "why": "Codex/AI開発判断に関係",
-      "source": "ChatGPT / OpenAI公式",
-      "url": "https://openai.com/index/helping-small-businesses-put-ai-to-work"
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2609.38296"
     }
   ],
   "items": [
@@ -175,6 +175,101 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Improving OCR Faithfulness via Gated and Attenuated On-Policy Distillation",
+      "summary": "arXiv:2609.38282v1 Announce Type: new Abstract: Vision-language models may rewrite anomalous text in images into linguistically plausible expressions, compromising OCR transcription faithfulness. Sequence-level task rewa",
+      "url": "https://arxiv.org/abs/2609.38282",
+      "published": "2026-10-01T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "制作",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "AREX-2: Advancing Self-Improving Agents through Long-Horizon Reflective Tasks",
+      "summary": "arXiv:2609.38288v1 Announce Type: new Abstract: We present AREX-2, an effort to advance the self-improving capability of LLM agents, which we define as the ability to iteratively refine a solution at test time. This abil",
+      "url": "https://arxiv.org/abs/2609.38288",
+      "published": "2026-10-01T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "MoFlow: Multi-Objective Agentic Workflow Generation",
+      "summary": "arXiv:2609.38294v1 Announce Type: new Abstract: We study the generation of agentic workflows that jointly optimize multiple objectives, such as accuracy, cost, latency, robustness, and consistency. Existing methods for w",
+      "url": "https://arxiv.org/abs/2609.38294",
+      "published": "2026-10-01T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "AI Agents are Vulnerable to Radicalization",
+      "summary": "arXiv:2609.38296v1 Announce Type: new Abstract: Large language models (LLMs) can influence people's beliefs, yet little is known about whether and how they can manipulate each other. To investigate this, we simulate conv",
+      "url": "https://arxiv.org/abs/2609.38296",
+      "published": "2026-10-01T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Can an AI Agent Rediscover a Blaschke-Curve Invariant?",
+      "summary": "arXiv:2609.38369v1 Announce Type: new Abstract: We study generalized Blaschke curves as a controlled environment for AI-assisted mathematical rediscovery. For one fixed degree-four Blaschke product, an agent receives num",
+      "url": "https://arxiv.org/abs/2609.38369",
+      "published": "2026-10-01T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -244,44 +339,6 @@
       "score": 3,
       "tags": [
         "AI",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "OpenAI-HuggingFace: A Reproduction & Lessons for Alignment Testing",
-      "summary": "arXiv:2609.35799v1 Announce Type: new Abstract: In July 2026, OpenAI's agents coordinated over channels outside their intended environment to breach Hugging Face's secured infrastructure. Could existing alignment testing",
-      "url": "https://arxiv.org/abs/2609.35799",
-      "published": "2026-09-30T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Beyond Symmetric Agents: Cognitive Diversity and Multi-Agent Debate in Small Language Models",
-      "summary": "arXiv:2609.35875v1 Announce Type: new Abstract: Multi-agent debate (MAD) reportedly improves reasoning and factuality over single-model inference, but prior work treats agents as symmetric peers, leaving open what drives",
-      "url": "https://arxiv.org/abs/2609.35875",
-      "published": "2026-09-30T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
         "重要",
         "研究"
       ]
@@ -488,59 +545,6 @@
         "制作",
         "研究"
       ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "EDG C/C++ Compiler Project",
-      "summary": "During the 2025 November C++ ISO meeting Edison Design Group announced that they would be winding down and that they will open-source their front end . This is the repo containing said front end along with some other com",
-      "url": "https://github.com/edgcpp/compiler",
-      "published": "2026-09-30T22:06:21+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "制作"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Opt-in dist-tag permissions for npm trusted publishing",
-      "summary": "Trusted publishing configurations for npm can now be granted permission to manage dist-tags (e.g., promoting a version to latest, updating next and beta pointers) using short-lived OIDC credentials instead of… The post O",
-      "url": "https://github.blog/changelog/2026-09-30-opt-in-dist-tag-permissions-for-npm-trusted-publishing",
-      "published": "2026-09-30T21:03:09+00:00",
-      "score": 2,
-      "tags": [
-        "開発"
-      ]
-    },
-    {
-      "source": "google-gemini",
-      "platform": "AI",
-      "label": "Gemini公式",
-      "genre": "AI",
-      "provider": "gemini",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Gemini 4 Argon: our next era of frontier intelligence",
-      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
-      "published": "2026-09-30T20:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "研究"
-      ]
     }
   ],
   "providerWatch": {
@@ -715,5 +719,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-01T02:28:01.849197+00:00"
+  "lastSuccessAt": "2026-10-01T05:48:01.866174+00:00"
 }
