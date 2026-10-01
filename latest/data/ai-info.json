@@ -1,30 +1,30 @@
 {
-  "updatedAt": "2026-10-01T15:28:01.106954+00:00",
+  "updatedAt": "2026-10-01T21:08:01.709469+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "HydraFusion in VS Code and the GitHub Copilot app",
+  "topLine": "GitHub Copilot app for Beginners: How to build custom workflows with canvases",
   "cards": [
     {
       "genre": "開発",
       "count": 13,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "HydraFusion in VS Code and the GitHub Copilot app / GitHub Copilot app for Beginners: How to build custom workflows with canvases / When chat is the wrong UI",
-      "topUrl": "https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app",
+      "signal": "GitHub Copilot app for Beginners: How to build custom workflows with canvases / When chat is the wrong UI / GitHub Copilot can now interact with desktop apps with computer use",
+      "topUrl": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/",
       "score": 4
     },
     {
       "genre": "AI",
       "count": 9,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "Disrupting a coordinated model-distillation campaign / Helping small businesses put AI to work / Introducing GPT-6.1 Sol",
-      "topUrl": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
+      "signal": "How Albertsons Companies is reimagining retail from the inside out / Disrupting a coordinated model-distillation campaign / Helping small businesses put AI to work",
+      "topUrl": "https://openai.com/index/albertsons-reimagining-retail",
       "score": 3
     },
     {
       "genre": "論文",
-      "count": 8,
+      "count": 7,
       "decision": "必要時だけ確認",
       "signal": "Improving OCR Faithfulness via Gated and Attenuated On-Policy Distillation / AREX-2: Advancing Self-Improving Agents through Long-Horizon Reflective Tasks / MoFlow: Multi-Objective Agentic Workflow Generation",
       "topUrl": "https://arxiv.org/abs/2609.38282",
@@ -32,21 +32,14 @@
     },
     {
       "genre": "技術",
-      "count": 1,
+      "count": 2,
       "decision": "必要時だけ確認",
-      "signal": "Is sandboxing sufficient to contain rogue agents?",
-      "topUrl": "https://blog.cryptographyengineering.com/2026/09/30/is-sandboxing-sufficient-to-contain-rogue-agents/",
+      "signal": "Pidgin 3.0 Alpha 3 2.97.0 has been released / Is sandboxing sufficient to contain rogue agents?",
+      "topUrl": "https://discourse.imfreedom.org/t/pidgin-3-0-alpha-3-2-97-0-has-been-released/436",
       "score": 2
     }
   ],
   "focus": [
-    {
-      "label": "開発",
-      "title": "HydraFusion in VS Code and the GitHub Copilot app",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app"
-    },
     {
       "label": "開発",
       "title": "GitHub Copilot app for Beginners: How to build custom workflows with canvases",
@@ -63,60 +56,48 @@
     },
     {
       "label": "開発",
-      "title": "GitHub async merge API generally available",
+      "title": "GitHub Copilot can now interact with desktop apps with computer use",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-01-github-async-merge-api-generally-available"
+      "url": "https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps"
     },
     {
       "label": "開発",
-      "title": "Actions Runner Controller release 0.15.0",
+      "title": "GitHub Copilot in VS Code, September 2026 releases",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-01-actions-runner-controller-release-0-15-0"
+      "url": "https://github.blog/changelog/2026-10-01-github-copilot-in-vs-code-september-2026-releases"
     },
     {
-      "label": "論文",
-      "title": "Improving OCR Faithfulness via Gated and Attenuated On-Policy Distillation",
+      "label": "開発",
+      "title": "Accessibility statements highlighted on repository overview",
       "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.38282"
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-01-accessibility-statements-highlighted-on-repository-overview"
     },
     {
-      "label": "論文",
-      "title": "AREX-2: Advancing Self-Improving Agents through Long-Horizon Reflective Tasks",
+      "label": "開発",
+      "title": "Actions retention now covers checks, runs, and statuses",
       "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.38288"
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-01-actions-retention-now-covers-checks-runs-and-statuses"
     },
     {
-      "label": "論文",
-      "title": "MoFlow: Multi-Objective Agentic Workflow Generation",
+      "label": "開発",
+      "title": "Scheduled code scanning skips inactive repositories",
       "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2609.38294"
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-01-scheduled-code-scanning-skips-inactive-repositories"
+    },
+    {
+      "label": "開発",
+      "title": "Code coverage uploads no longer fail CI for new branches",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-01-code-coverage-uploads-no-longer-fail-ci-for-new-branches"
     }
   ],
   "items": [
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "HydraFusion in VS Code and the GitHub Copilot app",
-      "summary": "The HydraFusion research preview is now available in Visual Studio Code and the GitHub Copilot app, expanding beyond Copilot CLI. HydraFusion appears in the model picker, but rather than being… The post HydraFusion in VS",
-      "url": "https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app",
-      "published": "2026-09-30T14:31:19+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
-        "研究"
-      ]
-    },
     {
       "source": "github-blog",
       "platform": "開発",
@@ -161,12 +142,12 @@
       "label": "GitHub更新",
       "genre": "開発",
       "provider": null,
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "GitHub async merge API generally available",
-      "summary": "You can now use the generally available GitHub async merge API to merge individual or stacked pull requests, add pull requests to a merge queue, or merge pull requests directly.… The post GitHub async merge API generally",
-      "url": "https://github.blog/changelog/2026-10-01-github-async-merge-api-generally-available",
-      "published": "2026-10-01T14:00:51+00:00",
+      "title": "GitHub Copilot can now interact with desktop apps with computer use",
+      "summary": "Computer use is now available in public preview in GitHub Copilot CLI and the GitHub Copilot app on macOS and Windows. Copilot can interact with desktop applications on your behalf… The post GitHub Copilot can now intera",
+      "url": "https://github.blog/changelog/2026-10-01-github-copilot-can-now-interact-with-desktop-apps",
+      "published": "2026-10-01T19:11:26+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -179,12 +160,121 @@
       "label": "GitHub更新",
       "genre": "開発",
       "provider": null,
-      "topic": "ニュース",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Actions Runner Controller release 0.15.0",
-      "summary": "GitHub Actions Runner Controller 0.15.0 includes reliability, scalability, and observability improvements for runner scale sets. These updates help you operate larger runner fleets with fewer disruptions during upgrades ",
-      "url": "https://github.blog/changelog/2026-10-01-actions-runner-controller-release-0-15-0",
-      "published": "2026-10-01T13:01:31+00:00",
+      "title": "GitHub Copilot in VS Code, September 2026 releases",
+      "summary": "This changelog covers VS Code v1.136 through v1.140, shipped throughout September 2026. September’s releases streamline agent-driven development from implementation through pull request merge. Automations handle repeatab",
+      "url": "https://github.blog/changelog/2026-10-01-github-copilot-in-vs-code-september-2026-releases",
+      "published": "2026-10-01T19:09:10+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Accessibility statements highlighted on repository overview",
+      "summary": "You can now find an ACCESSIBILITY.md file in your repository’s root, the .github/ directory, or the docs/ directory highlighted on the repository overview. You can also add or propose an… The post Accessibility statement",
+      "url": "https://github.blog/changelog/2026-10-01-accessibility-statements-highlighted-on-repository-overview",
+      "published": "2026-10-01T19:04:32+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Actions retention now covers checks, runs, and statuses",
+      "summary": "As previously announced, checks, workflow runs, and statuses are now governed by the same GitHub Actions retention setting that controls how long artifacts and logs are kept. These records are… The post Actions retention",
+      "url": "https://github.blog/changelog/2026-10-01-actions-retention-now-covers-checks-runs-and-statuses",
+      "published": "2026-10-01T17:59:54+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Scheduled code scanning skips inactive repositories",
+      "summary": "Weekly scheduled scans for code scanning default setup and GitHub Code Quality now start only after a push or pull request triggers an analysis, rather than counting every kind of… The post Scheduled code scanning skips ",
+      "url": "https://github.blog/changelog/2026-10-01-scheduled-code-scanning-skips-inactive-repositories",
+      "published": "2026-10-01T16:49:15+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Code coverage uploads no longer fail CI for new branches",
+      "summary": "Code coverage uploads from the GitHub Code Quality upload-code-coverage action no longer fail CI when you push a branch that doesn’t yet have an open pull request. Previously, the coverage… The post Code coverage uploads",
+      "url": "https://github.blog/changelog/2026-10-01-code-coverage-uploads-no-longer-fail-ci-for-new-branches",
+      "published": "2026-10-01T16:49:05+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "How Albertsons Companies is reimagining retail from the inside out",
+      "summary": "Albertsons Cos. is using ChatGPT Enterprise and the OpenAI API to help teams work faster and make grocery shopping easier for millions of customers.",
+      "url": "https://openai.com/index/albertsons-reimagining-retail",
+      "published": "2026-10-01T16:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "開発"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "10 technical talks I’m excited about at GitHub Universe 2026",
+      "summary": "From verifying AI-written code to securing npm dependencies, these are the sessions I’m building my Universe agenda around. The post 10 technical talks I’m excited about at GitHub Universe 2026 appeared first on The GitH",
+      "url": "https://github.blog/news-insights/company-news/10-technical-talks-im-excited-about-at-github-universe-2026/",
+      "published": "2026-10-01T15:07:16+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -287,42 +377,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "GitHub Advanced Security trials for GitHub Team",
-      "summary": "GitHub Team customers can now start self-serve trials of GitHub Advanced Security to evaluate GitHub Code Security and GitHub Secret Protection. Start a trial from your organization’s Overview page, Billing… The post Git",
-      "url": "https://github.blog/changelog/2026-09-30-github-advanced-security-trials-for-github-team",
-      "published": "2026-09-30T16:48:24+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "X25519-only TLS ends for GHE.com on October 7",
-      "summary": "Beginning October 7, 2026, GitHub Enterprise Cloud with data residency will no longer accept TLS connections from clients that offer only X25519 for key agreement. Most customers don’t need to… The post X25519-only TLS e",
-      "url": "https://github.blog/changelog/2026-09-30-x25519-only-tls-ends-for-ghe-com-on-september-15",
-      "published": "2026-09-30T13:30:24+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -384,11 +438,11 @@
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
-      "topic": "AI",
+      "topic": "その他",
       "sourceWeight": 1,
-      "title": "Introducing GPT-6.1 Sol",
-      "summary": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.",
-      "url": "https://openai.com/index/introducing-gpt-6-1-sol",
+      "title": "DevDay 2026 Recap",
+      "summary": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
+      "url": "https://openai.com/index/devday-2026-recap",
       "published": "2026-09-29T10:00:00+00:00",
       "score": 3,
       "tags": [
@@ -403,11 +457,11 @@
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
-      "topic": "その他",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "DevDay 2026 Recap",
-      "summary": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
-      "url": "https://openai.com/index/devday-2026-recap",
+      "title": "Introducing GPT-6.1 Sol",
+      "summary": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.",
+      "url": "https://openai.com/index/introducing-gpt-6-1-sol",
       "published": "2026-09-29T10:00:00+00:00",
       "score": 3,
       "tags": [
@@ -489,61 +543,6 @@
         "開発",
         "重要"
       ]
-    },
-    {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "AI-powered fuzzing with the GitHub Security Lab Taskflow Agent",
-      "summary": "In this blog post, I explain how to use the new fuzzing taskflow based on the GitHub Security Lab Taskflow Agent AI framework. The post AI-powered fuzzing with the GitHub Security Lab Taskflow Agent appeared first on The",
-      "url": "https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/",
-      "published": "2026-09-24T18:26:12+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Rendering huge pull requests in the GitHub Copilot app",
-      "summary": "How we rebuilt the diff surface in the GitHub Copilot app to open a million-line pull request with hundreds of inline review comments. The post Rendering huge pull requests in the GitHub Copilot app appeared first on The",
-      "url": "https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app/",
-      "published": "2026-09-23T18:29:49+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "google-gemini",
-      "platform": "AI",
-      "label": "Gemini公式",
-      "genre": "AI",
-      "provider": "gemini",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Gemini 3.8 text-to-speech says hello",
-      "summary": "Gemini 3.8 Flash-Lite TTS and Gemini 3.8 Flash TTS are our most expressive audio models yet.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
-      "published": "2026-09-23T15:15:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "制作",
-        "研究"
-      ]
     }
   ],
   "providerWatch": {
@@ -591,6 +590,12 @@
         ],
         "latest": [
           {
+            "title": "How Albertsons Companies is reimagining retail from the inside out",
+            "url": "https://openai.com/index/albertsons-reimagining-retail",
+            "published": "2026-10-01T16:00:00+00:00",
+            "source": "ChatGPT / OpenAI公式"
+          },
+          {
             "title": "Disrupting a coordinated model-distillation campaign",
             "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
             "published": "2026-09-30T10:30:00+00:00",
@@ -600,12 +605,6 @@
             "title": "Helping small businesses put AI to work",
             "url": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
             "published": "2026-09-30T10:00:00+00:00",
-            "source": "ChatGPT / OpenAI公式"
-          },
-          {
-            "title": "Introducing GPT-6.1 Sol",
-            "url": "https://openai.com/index/introducing-gpt-6-1-sol",
-            "published": "2026-09-29T10:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           },
           {
@@ -651,12 +650,6 @@
             "title": "Gemini 3.8 text-to-speech says hello",
             "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
             "published": "2026-09-23T15:15:00+00:00",
-            "source": "Gemini公式"
-          },
-          {
-            "title": "Gemini 4 Argon: our next era of frontier intelligence",
-            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
-            "published": "2026-09-30T20:00:00+00:00",
             "source": "Gemini公式"
           }
         ]
@@ -718,5 +711,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-01T14:38:01.128731+00:00"
+  "lastSuccessAt": "2026-10-01T21:08:01.709469+00:00"
 }
