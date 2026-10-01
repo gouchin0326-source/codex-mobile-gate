@@ -1,18 +1,18 @@
 {
-  "updatedAt": "2026-10-01T02:18:01.728899+00:00",
+  "updatedAt": "2026-10-01T02:28:01.849197+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "Claude Sonnet 5.5 in GitHub Copilot",
+  "topLine": "HydraFusion in VS Code and the GitHub Copilot app",
   "cards": [
     {
       "genre": "開発",
       "count": 13,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "Claude Sonnet 5.5 in GitHub Copilot / HydraFusion in VS Code and the GitHub Copilot app / GPT-6.1 Sol in GitHub Copilot",
-      "topUrl": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot",
-      "score": 5
+      "signal": "HydraFusion in VS Code and the GitHub Copilot app / GPT-6.1 Sol in GitHub Copilot / GitHub Copilot app for Beginners: How to build custom workflows with canvases",
+      "topUrl": "https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app",
+      "score": 4
     },
     {
       "genre": "AI",
@@ -34,19 +34,12 @@
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "Hanami, Why?: Introductions",
-      "topUrl": "https://aaronmallen.me/writing/hanami-why-introductions",
-      "score": 1
+      "signal": "EDG C/C++ Compiler Project",
+      "topUrl": "https://github.com/edgcpp/compiler",
+      "score": 2
     }
   ],
   "focus": [
-    {
-      "label": "開発",
-      "title": "Claude Sonnet 5.5 in GitHub Copilot",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot"
-    },
     {
       "label": "開発",
       "title": "HydraFusion in VS Code and the GitHub Copilot app",
@@ -95,29 +88,16 @@
       "why": "Codex/AI開発判断に関係",
       "source": "ChatGPT / OpenAI公式",
       "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign"
+    },
+    {
+      "label": "AI",
+      "title": "Helping small businesses put AI to work",
+      "why": "Codex/AI開発判断に関係",
+      "source": "ChatGPT / OpenAI公式",
+      "url": "https://openai.com/index/helping-small-businesses-put-ai-to-work"
     }
   ],
   "items": [
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Claude Sonnet 5.5 in GitHub Copilot",
-      "summary": "Claude Sonnet 5.5, Anthropic’s newest Sonnet model, is now generally available in GitHub Copilot. It is designed for well-scoped everyday work like building features and fixing bugs. In our early… The post Claude Sonnet ",
-      "url": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot",
-      "published": "2026-09-28T18:03:57+00:00",
-      "score": 5,
-      "tags": [
-        "開発",
-        "重要",
-        "制作",
-        "研究"
-      ]
-    },
     {
       "source": "github-changelog",
       "platform": "開発",
@@ -510,6 +490,41 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "EDG C/C++ Compiler Project",
+      "summary": "During the 2025 November C++ ISO meeting Edison Design Group announced that they would be winding down and that they will open-source their front end . This is the repo containing said front end along with some other com",
+      "url": "https://github.com/edgcpp/compiler",
+      "published": "2026-09-30T22:06:21+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "制作"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "Opt-in dist-tag permissions for npm trusted publishing",
+      "summary": "Trusted publishing configurations for npm can now be granted permission to manage dist-tags (e.g., promoting a version to latest, updating next and beta pointers) using short-lived OIDC credentials instead of… The post O",
+      "url": "https://github.blog/changelog/2026-09-30-opt-in-dist-tag-permissions-for-npm-trusted-publishing",
+      "published": "2026-09-30T21:03:09+00:00",
+      "score": 2,
+      "tags": [
+        "開発"
+      ]
+    },
+    {
       "source": "google-gemini",
       "platform": "AI",
       "label": "Gemini公式",
@@ -518,30 +533,12 @@
       "topic": "AI",
       "sourceWeight": 1,
       "title": "Gemini 4 Argon: our next era of frontier intelligence",
-      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work and cyber defense, rolling out soon.",
+      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
       "published": "2026-09-30T20:00:00+00:00",
       "score": 2,
       "tags": [
         "AI",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Neurosymbolic Routing for Reliable Reasoning on Resource-Constrained Edge Devices",
-      "summary": "arXiv:2609.35833v1 Announce Type: new Abstract: Running a language model on edge hardware provides private and low-latency reasoning without a network connection, and yet the small models that fit on such devices are unr",
-      "url": "https://arxiv.org/abs/2609.35833",
-      "published": "2026-09-30T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
         "研究"
       ]
     }
@@ -718,5 +715,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-09-30T20:26:25.644316+00:00"
+  "lastSuccessAt": "2026-10-01T02:28:01.849197+00:00"
 }

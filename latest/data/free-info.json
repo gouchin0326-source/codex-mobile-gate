@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-01T02:18:01.728899+00:00",
-  "lastSuccessAt": "2026-09-30T20:26:25.644316+00:00",
+  "updatedAt": "2026-10-01T02:28:01.849197+00:00",
+  "lastSuccessAt": "2026-10-01T02:28:01.849197+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -127,10 +127,10 @@
     {
       "genre": "開発",
       "count": 13,
-      "signal": "Claude Sonnet 5.5 in GitHub Copilot / HydraFusion in VS Code and the GitHub Copilot app / GPT-6.1 Sol in GitHub Copilot",
+      "signal": "HydraFusion in VS Code and the GitHub Copilot app / GPT-6.1 Sol in GitHub Copilot / GitHub Copilot app for Beginners: How to build custom workflows with canvases",
       "decision": "CG開発・GitHub運用へ反映候補",
-      "topUrl": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot",
-      "score": 5
+      "topUrl": "https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app",
+      "score": 4
     },
     {
       "genre": "AI",
@@ -151,17 +151,17 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "Hanami, Why?: Introductions",
+      "signal": "EDG C/C++ Compiler Project",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://aaronmallen.me/writing/hanami-why-introductions",
-      "score": 1
+      "topUrl": "https://github.com/edgcpp/compiler",
+      "score": 2
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.5 - 8 km W of Holtville, CA",
+      "signal": "M 1.3 - 56 km WNW of Ninilchik, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41341143",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tkktsl",
       "score": 1
     }
   ],
@@ -172,17 +172,16 @@
       "label": "GitHub更新",
       "genre": "開発",
       "provider": null,
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Claude Sonnet 5.5 in GitHub Copilot",
-      "summary": "Claude Sonnet 5.5, Anthropic’s newest Sonnet model, is now generally available in GitHub Copilot. It is designed for well-scoped everyday work like building features and fixing bugs. In our early… The post Claude Sonnet ",
-      "url": "https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot",
-      "published": "2026-09-28T18:03:57+00:00",
-      "score": 5,
+      "title": "HydraFusion in VS Code and the GitHub Copilot app",
+      "summary": "The HydraFusion research preview is now available in Visual Studio Code and the GitHub Copilot app, expanding beyond Copilot CLI. HydraFusion appears in the model picker, but rather than being… The post HydraFusion in VS",
+      "url": "https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app",
+      "published": "2026-09-30T14:31:19+00:00",
+      "score": 4,
       "tags": [
         "開発",
         "重要",
-        "制作",
         "研究"
       ]
     },
@@ -263,6 +262,24 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "EDG C/C++ Compiler Project",
+      "summary": "During the 2025 November C++ ISO meeting Edison Design Group announced that they would be winding down and that they will open-source their front end . This is the repo containing said front end along with some other com",
+      "url": "https://github.com/edgcpp/compiler",
+      "published": "2026-09-30T22:06:21+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "制作"
+      ]
+    },
+    {
       "source": "anthropic-claude",
       "platform": "AI",
       "label": "Claude / Anthropic公式",
@@ -284,49 +301,13 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.5 - 8 km W of Holtville, CA",
-      "summary": "8 km W of Holtville, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41341143",
-      "published": "2026-09-30T20:09:06.750000+00:00",
+      "title": "M 1.3 - 56 km WNW of Ninilchik, Alaska",
+      "summary": "56 km WNW of Ninilchik, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tkktsl",
+      "published": "2026-10-01T02:23:40.567000+00:00",
       "score": 1,
       "tags": [
         "災害"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Hanami, Why?: Introductions",
-      "summary": "Comments",
-      "url": "https://aaronmallen.me/writing/hanami-why-introductions",
-      "published": "2026-09-30T15:55:21+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "HydraFusion in VS Code and the GitHub Copilot app",
-      "summary": "The HydraFusion research preview is now available in Visual Studio Code and the GitHub Copilot app, expanding beyond Copilot CLI. HydraFusion appears in the model picker, but rather than being… The post HydraFusion in VS",
-      "url": "https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app",
-      "published": "2026-09-30T14:31:19+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
-        "研究"
       ]
     },
     {
@@ -626,6 +607,23 @@
       ]
     },
     {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "Opt-in dist-tag permissions for npm trusted publishing",
+      "summary": "Trusted publishing configurations for npm can now be granted permission to manage dist-tags (e.g., promoting a version to latest, updating next and beta pointers) using short-lived OIDC credentials instead of… The post O",
+      "url": "https://github.blog/changelog/2026-09-30-opt-in-dist-tag-permissions-for-npm-trusted-publishing",
+      "published": "2026-09-30T21:03:09+00:00",
+      "score": 2,
+      "tags": [
+        "開発"
+      ]
+    },
+    {
       "source": "google-gemini",
       "platform": "AI",
       "label": "Gemini公式",
@@ -634,7 +632,7 @@
       "topic": "AI",
       "sourceWeight": 1,
       "title": "Gemini 4 Argon: our next era of frontier intelligence",
-      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work and cyber defense, rolling out soon.",
+      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
       "published": "2026-09-30T20:00:00+00:00",
       "score": 2,
@@ -756,48 +754,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-30T20:26:25.644316+00:00",
-      "lastAttemptAt": "2026-09-30T20:26:25.644316+00:00",
+      "lastSuccessAt": "2026-10-01T02:28:01.849197+00:00",
+      "lastAttemptAt": "2026-10-01T02:28:01.849197+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-30T20:26:25.644316+00:00",
-      "lastAttemptAt": "2026-09-30T20:26:25.644316+00:00",
+      "lastSuccessAt": "2026-10-01T02:28:01.849197+00:00",
+      "lastAttemptAt": "2026-10-01T02:28:01.849197+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-30T20:26:25.644316+00:00",
-      "lastAttemptAt": "2026-09-30T20:26:25.644316+00:00",
+      "lastSuccessAt": "2026-10-01T02:28:01.849197+00:00",
+      "lastAttemptAt": "2026-10-01T02:28:01.849197+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-30T20:26:25.644316+00:00",
-      "lastAttemptAt": "2026-09-30T20:26:25.644316+00:00",
+      "lastSuccessAt": "2026-10-01T02:28:01.849197+00:00",
+      "lastAttemptAt": "2026-10-01T02:28:01.849197+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-30T20:26:25.644316+00:00",
-      "lastAttemptAt": "2026-09-30T20:26:25.644316+00:00",
+      "lastSuccessAt": "2026-10-01T02:28:01.849197+00:00",
+      "lastAttemptAt": "2026-10-01T02:28:01.849197+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-30T20:26:25.644316+00:00",
-      "lastAttemptAt": "2026-09-30T20:26:25.644316+00:00",
+      "lastSuccessAt": "2026-10-01T02:28:01.849197+00:00",
+      "lastAttemptAt": "2026-10-01T02:28:01.849197+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -812,8 +810,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-09-30T20:26:25.644316+00:00",
-      "lastAttemptAt": "2026-09-30T20:26:25.644316+00:00",
+      "lastSuccessAt": "2026-10-01T02:28:01.849197+00:00",
+      "lastAttemptAt": "2026-10-01T02:28:01.849197+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
