@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-02T14:58:00.965276+00:00",
-  "lastSuccessAt": "2026-10-02T09:18:01.682763+00:00",
+  "updatedAt": "2026-10-02T21:40:37.995925+00:00",
+  "lastSuccessAt": "2026-10-02T21:40:37.995925+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -127,18 +127,18 @@
     {
       "genre": "開発",
       "count": 13,
-      "signal": "GitHub Actions: macOS 14 runner image retirement / GitHub Copilot app for Beginners: How to build custom workflows with canvases / When chat is the wrong UI",
+      "signal": "Selected models in GitHub Copilot deprecated / GitHub Actions: macOS 14 runner image retirement / GitHub Copilot app for Beginners: How to build custom workflows with canvases",
       "decision": "CG開発・GitHub運用へ反映候補",
-      "topUrl": "https://github.blog/changelog/2026-10-01-github-actions-macos-14-runner-image-retirement",
+      "topUrl": "https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated",
       "score": 4
     },
     {
       "genre": "AI",
-      "count": 9,
-      "signal": "How Albertsons Companies is reimagining retail from the inside out / Disrupting a coordinated model-distillation campaign / Helping small businesses put AI to work",
+      "count": 8,
+      "signal": "Chatham scales its capital markets expertise with OpenAI / How Albertsons Companies is reimagining retail from the inside out / Disrupting a coordinated model-distillation campaign",
       "decision": "AI/Codex運用の変化を確認",
-      "topUrl": "https://openai.com/index/albertsons-reimagining-retail",
-      "score": 3
+      "topUrl": "https://openai.com/index/chatham-financial",
+      "score": 4
     },
     {
       "genre": "論文",
@@ -150,18 +150,18 @@
     },
     {
       "genre": "技術",
-      "count": 1,
-      "signal": "Pidgin 3.0 Alpha 3 2.97.0 has been released",
+      "count": 2,
+      "signal": "Zig 0.17.0 Release Notes / The Four Horsemen of Agentic Coding",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://discourse.imfreedom.org/t/pidgin-3-0-alpha-3-2-97-0-has-been-released/436",
+      "topUrl": "https://ziglang.org/download/0.17.0/release-notes.html",
       "score": 2
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.1 - 11 km E of Yucaipa, CA",
+      "signal": "M 1.9 - 71 km W of Petersville, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41342007",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tnthlg",
       "score": 1
     }
   ],
@@ -172,17 +172,37 @@
       "label": "GitHub更新",
       "genre": "開発",
       "provider": null,
-      "topic": "技術",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "GitHub Actions: macOS 14 runner image retirement",
-      "summary": "The macOS 14 runner image will be retired on November 2, 2026. To raise awareness of the upcoming removal, jobs using macOS 14 will temporarily fail during the following scheduled… The post GitHub Actions: macOS 14 runne",
-      "url": "https://github.blog/changelog/2026-10-01-github-actions-macos-14-runner-image-retirement",
-      "published": "2026-10-01T19:11:23+00:00",
+      "title": "Selected models in GitHub Copilot deprecated",
+      "summary": "As of today, October 2, 2026, we have deprecated the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions). Model… The post Selected mode",
+      "url": "https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated",
+      "published": "2026-10-02T18:24:19+00:00",
       "score": 4,
       "tags": [
         "開発",
         "重要",
-        "制作"
+        "研究"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Chatham scales its capital markets expertise with OpenAI",
+      "summary": "Chatham Financial uses Codex and GPT-5.6 to build technology and redesign workflows, cutting trade validation from 30 minutes to under 4.",
+      "url": "https://openai.com/index/chatham-financial",
+      "published": "2026-10-02T00:00:00+00:00",
+      "score": 4,
+      "tags": [
+        "AI",
+        "重要",
+        "制作",
+        "開発"
       ]
     },
     {
@@ -224,25 +244,6 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "How Albertsons Companies is reimagining retail from the inside out",
-      "summary": "Albertsons Cos. is using ChatGPT Enterprise and the OpenAI API to help teams work faster and make grocery shopping easier for millions of customers.",
-      "url": "https://openai.com/index/albertsons-reimagining-retail",
-      "published": "2026-10-01T16:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "開発"
-      ]
-    },
-    {
       "source": "google-gemini",
       "platform": "AI",
       "label": "Gemini公式",
@@ -269,10 +270,10 @@
       "provider": null,
       "topic": "ニュース",
       "sourceWeight": 1,
-      "title": "Pidgin 3.0 Alpha 3 2.97.0 has been released",
+      "title": "Zig 0.17.0 Release Notes",
       "summary": "Comments",
-      "url": "https://discourse.imfreedom.org/t/pidgin-3-0-alpha-3-2-97-0-has-been-released/436",
-      "published": "2026-10-01T16:47:42+00:00",
+      "url": "https://ziglang.org/download/0.17.0/release-notes.html",
+      "published": "2026-10-02T21:10:41+00:00",
       "score": 2,
       "tags": [
         "技術",
@@ -283,10 +284,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.1 - 11 km E of Yucaipa, CA",
-      "summary": "11 km E of Yucaipa, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41342007",
-      "published": "2026-10-02T09:05:27.780000+00:00",
+      "title": "M 1.9 - 71 km W of Petersville, Alaska",
+      "summary": "71 km W of Petersville, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tnthlg",
+      "published": "2026-10-02T21:38:18.280000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -300,13 +301,32 @@
       "provider": "claude",
       "topic": "AI",
       "sourceWeight": 2,
-      "title": "Barclays Scales Claude",
+      "title": "Claude Frontier Academy",
       "summary": "公式サイトマップで更新を検知。内容は公式ページで確認。",
-      "url": "https://www.anthropic.com/news/barclays-scales-claude",
-      "published": "2026-10-01T09:16:50.000Z",
+      "url": "https://www.anthropic.com/news/claude-frontier-academy",
+      "published": "2026-10-02T17:12:50.000Z",
       "score": 1,
       "tags": [
         "AI"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "GitHub Actions: macOS 14 runner image retirement",
+      "summary": "The macOS 14 runner image will be retired on November 2, 2026. To raise awareness of the upcoming removal, jobs using macOS 14 will temporarily fail during the following scheduled… The post GitHub Actions: macOS 14 runne",
+      "url": "https://github.blog/changelog/2026-10-01-github-actions-macos-14-runner-image-retirement",
+      "published": "2026-10-01T19:11:23+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "制作"
       ]
     },
     {
@@ -326,6 +346,60 @@
         "開発",
         "重要",
         "制作"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "AI is changing developer work. Here are three skills to strengthen.",
+      "summary": "Learn to direct AI agents, critically review their output, and keep technical judgment at the center of your workflow. The post AI is changing developer work. Here are three skills to strengthen. appeared first on The Gi",
+      "url": "https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/",
+      "published": "2026-10-02T15:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "New fields for SecurityAdvisory GraphQL API",
+      "summary": "You can now read more of the GitHub Advisory Database directly from the GraphQL API without falling back to the REST API. The SecurityAdvisory object gained five new fields: cveId:… The post New fields for SecurityAdviso",
+      "url": "https://github.blog/changelog/2026-10-02-new-fields-for-securityadvisory-graphql-api",
+      "published": "2026-10-02T13:18:00+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Repository security advisory comments API in public preview",
+      "summary": "You can now read, add, and edit comments on repository security advisories using the REST API, including advisories created from private vulnerability reports. Until now, the discussion on an advisory… The post Repositor",
+      "url": "https://github.blog/changelog/2026-10-02-repository-security-advisory-comments-api-in-public-preview",
+      "published": "2026-10-02T13:15:25+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -423,75 +497,22 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "GitHub Copilot in VS Code, September 2026 releases",
-      "summary": "This changelog covers VS Code v1.136 through v1.140, shipped throughout September 2026. September’s releases streamline agent-driven development from implementation through pull request merge. Automations handle repeatab",
-      "url": "https://github.blog/changelog/2026-10-01-github-copilot-in-vs-code-september-2026-releases",
-      "published": "2026-10-01T19:09:10+00:00",
+      "title": "How Albertsons Companies is reimagining retail from the inside out",
+      "summary": "Albertsons Cos. is using ChatGPT Enterprise and the OpenAI API to help teams work faster and make grocery shopping easier for millions of customers.",
+      "url": "https://openai.com/index/albertsons-reimagining-retail",
+      "published": "2026-10-01T16:00:00+00:00",
       "score": 3,
       "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Accessibility statements highlighted on repository overview",
-      "summary": "You can now find an ACCESSIBILITY.md file in your repository’s root, the .github/ directory, or the docs/ directory highlighted on the repository overview. You can also add or propose an… The post Accessibility statement",
-      "url": "https://github.blog/changelog/2026-10-01-accessibility-statements-highlighted-on-repository-overview",
-      "published": "2026-10-01T19:04:32+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Actions retention now covers checks, runs, and statuses",
-      "summary": "As previously announced, checks, workflow runs, and statuses are now governed by the same GitHub Actions retention setting that controls how long artifacts and logs are kept. These records are… The post Actions retention",
-      "url": "https://github.blog/changelog/2026-10-01-actions-retention-now-covers-checks-runs-and-statuses",
-      "published": "2026-10-01T17:59:54+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Scheduled code scanning skips inactive repositories",
-      "summary": "Weekly scheduled scans for code scanning default setup and GitHub Code Quality now start only after a push or pull request triggers an analysis, rather than counting every kind of… The post Scheduled code scanning skips ",
-      "url": "https://github.blog/changelog/2026-10-01-scheduled-code-scanning-skips-inactive-repositories",
-      "published": "2026-10-01T16:49:15+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
+        "AI",
+        "重要",
+        "開発"
       ]
     },
     {
@@ -574,25 +595,6 @@
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Introducing GPT-6.1 Sol",
-      "summary": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.",
-      "url": "https://openai.com/index/introducing-gpt-6-1-sol",
-      "published": "2026-09-29T10:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "開発"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
       "topic": "その他",
       "sourceWeight": 1,
       "title": "DevDay 2026 Recap",
@@ -643,40 +645,57 @@
       ]
     },
     {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
       "provider": null,
-      "topic": "AI",
+      "topic": "その他",
       "sourceWeight": 1,
-      "title": "AI-powered fuzzing with the GitHub Security Lab Taskflow Agent",
-      "summary": "In this blog post, I explain how to use the new fuzzing taskflow based on the GitHub Security Lab Taskflow Agent AI framework. The post AI-powered fuzzing with the GitHub Security Lab Taskflow Agent appeared first on The",
-      "url": "https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/",
-      "published": "2026-09-24T18:26:12+00:00",
-      "score": 3,
+      "title": "The Four Horsemen of Agentic Coding",
+      "summary": "Comments",
+      "url": "https://distantprovince.substack.com/p/the-four-horsemen-of-agentic-coding",
+      "published": "2026-10-02T16:48:36+00:00",
+      "score": 2,
       "tags": [
-        "開発",
+        "技術",
         "重要"
       ]
     },
     {
-      "source": "google-gemini",
+      "source": "openai",
       "platform": "AI",
-      "label": "Gemini公式",
+      "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
-      "provider": "gemini",
+      "provider": "chatgpt",
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "Gemini 3.8 text-to-speech says hello",
-      "summary": "Gemini 3.8 Flash-Lite TTS and Gemini 3.8 Flash TTS are our most expressive audio models yet.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
-      "published": "2026-09-23T15:15:00+00:00",
-      "score": 3,
+      "title": "A model guide for the GPT-6 family",
+      "summary": "Learn how startups can choose GPT-6 models, tune reasoning effort, improve prompts and skills, coordinate tools, and prepare workflows for production.",
+      "url": "https://openai.com/index/practical-guide-building-gpt-6",
+      "published": "2026-10-02T16:15:00+00:00",
+      "score": 2,
       "tags": [
         "AI",
-        "制作",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Confidential comments on repository security advisories",
+      "summary": "You can now post confidential comments on repository security advisories. Confidential comments are visible only to people with write access to the repository, so you can discuss a report with… The post Confidential comm",
+      "url": "https://github.blog/changelog/2026-10-02-confidential-comments-on-repository-security-advisories",
+      "published": "2026-10-02T13:15:40+00:00",
+      "score": 2,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -732,72 +751,54 @@
         "論文",
         "研究"
       ]
-    },
-    {
-      "source": "google-gemini",
-      "platform": "AI",
-      "label": "Gemini公式",
-      "genre": "AI",
-      "provider": "gemini",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Gemini 4 Argon: our next era of frontier intelligence",
-      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
-      "published": "2026-09-30T20:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "研究"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-02T09:18:01.682763+00:00",
-      "lastAttemptAt": "2026-10-02T09:18:01.682763+00:00",
+      "lastSuccessAt": "2026-10-02T21:40:37.995925+00:00",
+      "lastAttemptAt": "2026-10-02T21:40:37.995925+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-02T09:18:01.682763+00:00",
-      "lastAttemptAt": "2026-10-02T09:18:01.682763+00:00",
+      "lastSuccessAt": "2026-10-02T21:40:37.995925+00:00",
+      "lastAttemptAt": "2026-10-02T21:40:37.995925+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-02T09:18:01.682763+00:00",
-      "lastAttemptAt": "2026-10-02T09:18:01.682763+00:00",
+      "lastSuccessAt": "2026-10-02T21:40:37.995925+00:00",
+      "lastAttemptAt": "2026-10-02T21:40:37.995925+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-02T09:18:01.682763+00:00",
-      "lastAttemptAt": "2026-10-02T09:18:01.682763+00:00",
+      "lastSuccessAt": "2026-10-02T21:40:37.995925+00:00",
+      "lastAttemptAt": "2026-10-02T21:40:37.995925+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-02T09:18:01.682763+00:00",
-      "lastAttemptAt": "2026-10-02T09:18:01.682763+00:00",
+      "lastSuccessAt": "2026-10-02T21:40:37.995925+00:00",
+      "lastAttemptAt": "2026-10-02T21:40:37.995925+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-02T09:18:01.682763+00:00",
-      "lastAttemptAt": "2026-10-02T09:18:01.682763+00:00",
+      "lastSuccessAt": "2026-10-02T21:40:37.995925+00:00",
+      "lastAttemptAt": "2026-10-02T21:40:37.995925+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -812,8 +813,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-02T09:18:01.682763+00:00",
-      "lastAttemptAt": "2026-10-02T09:18:01.682763+00:00",
+      "lastSuccessAt": "2026-10-02T21:40:37.995925+00:00",
+      "lastAttemptAt": "2026-10-02T21:40:37.995925+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
