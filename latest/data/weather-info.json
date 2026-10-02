@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-02T06:38:01.670619+00:00",
-  "lastSuccessAt": "2026-10-02T06:38:01.670619+00:00",
+  "updatedAt": "2026-10-02T06:48:01.532049+00:00",
+  "lastSuccessAt": "2026-10-02T06:48:01.532049+00:00",
   "status": "fresh",
   "mode": "primary-api-weather-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -13,9 +13,9 @@
       "警戒情報なし"
     ],
     "maxRainProbability": 35,
-    "maxHourlyRain": 0,
+    "maxHourlyRain": 0.2,
     "maxDailyRain": 5.3,
-    "maxWind": 13.4,
+    "maxWind": 13.6,
     "jmaWarnings": [],
     "officialWarningStatus": "fresh"
   },
@@ -185,71 +185,71 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "location": "富山県",
-      "updatedAt": "2026-10-02T06:18:01.527981+00:00",
+      "updatedAt": "2026-10-02T06:48:01.532049+00:00",
       "current": {
-        "time": "2026-10-02T15:15",
+        "time": "2026-10-02T15:45",
         "interval": 900,
-        "temperature_2m": 23.4,
-        "relative_humidity_2m": 46,
-        "apparent_temperature": 22.4,
+        "temperature_2m": 23.0,
+        "relative_humidity_2m": 47,
+        "apparent_temperature": 22.0,
         "precipitation": 0.0,
-        "weather_code": 1,
-        "wind_speed_10m": 9.2
+        "weather_code": 0,
+        "wind_speed_10m": 9.0
       },
       "hourly": [
         {
           "time": "2026-10-02T16:00",
-          "temp": 23.2,
-          "humidity": 46,
-          "feelsLike": 22.2,
+          "temp": 22.9,
+          "humidity": 47,
+          "feelsLike": 21.9,
           "rainProb": 1,
           "rain": 0.0,
-          "wind": 8.2
+          "wind": 8.7
         },
         {
           "time": "2026-10-02T17:00",
-          "temp": 22.4,
-          "humidity": 48,
-          "feelsLike": 21.8,
+          "temp": 22.1,
+          "humidity": 52,
+          "feelsLike": 21.7,
           "rainProb": 4,
           "rain": 0.0,
-          "wind": 5.8
+          "wind": 6.1
         },
         {
           "time": "2026-10-02T18:00",
-          "temp": 21.0,
-          "humidity": 54,
-          "feelsLike": 20.7,
+          "temp": 21.1,
+          "humidity": 60,
+          "feelsLike": 21.3,
           "rainProb": 8,
           "rain": 0.0,
-          "wind": 4.8
+          "wind": 4.9
         },
         {
           "time": "2026-10-02T19:00",
-          "temp": 20.5,
-          "humidity": 67,
-          "feelsLike": 20.1,
+          "temp": 20.7,
+          "humidity": 65,
+          "feelsLike": 20.5,
           "rainProb": 18,
           "rain": 0.0,
-          "wind": 11.5
+          "wind": 10.0
         },
         {
           "time": "2026-10-02T20:00",
-          "temp": 20.1,
-          "humidity": 67,
-          "feelsLike": 19.8,
+          "temp": 19.8,
+          "humidity": 69,
+          "feelsLike": 19.7,
           "rainProb": 29,
-          "rain": 0.0,
-          "wind": 10.2
+          "rain": 0.1,
+          "wind": 9.7
         },
         {
           "time": "2026-10-02T21:00",
-          "temp": 19.8,
-          "humidity": 67,
-          "feelsLike": 19.6,
+          "temp": 19.1,
+          "humidity": 72,
+          "feelsLike": 19.3,
           "rainProb": 35,
-          "rain": 0.0,
-          "wind": 8.8
+          "rain": 0.2,
+          "wind": 7.6
         },
         {
           "time": "2026-10-02T22:00",
@@ -258,102 +258,102 @@
           "feelsLike": 19.5,
           "rainProb": 29,
           "rain": 0.0,
-          "wind": 8.1
+          "wind": 7.8
         },
         {
           "time": "2026-10-02T23:00",
           "temp": 19.4,
           "humidity": 66,
-          "feelsLike": 19.1,
+          "feelsLike": 19.2,
           "rainProb": 17,
           "rain": 0.0,
-          "wind": 8.0
+          "wind": 7.5
         },
         {
           "time": "2026-10-03T00:00",
           "temp": 19.2,
-          "humidity": 64,
+          "humidity": 65,
           "feelsLike": 18.7,
           "rainProb": 8,
           "rain": 0.0,
-          "wind": 8.0
+          "wind": 8.1
         },
         {
           "time": "2026-10-03T01:00",
           "temp": 19.0,
-          "humidity": 62,
-          "feelsLike": 18.3,
+          "humidity": 63,
+          "feelsLike": 18.4,
           "rainProb": 4,
           "rain": 0.0,
-          "wind": 7.6
+          "wind": 7.8
         },
         {
           "time": "2026-10-03T02:00",
-          "temp": 18.8,
+          "temp": 18.9,
           "humidity": 62,
-          "feelsLike": 18.1,
+          "feelsLike": 18.3,
           "rainProb": 3,
           "rain": 0.0,
-          "wind": 7.3
+          "wind": 7.1
         },
         {
           "time": "2026-10-03T03:00",
-          "temp": 18.6,
+          "temp": 18.7,
           "humidity": 62,
-          "feelsLike": 18.2,
+          "feelsLike": 18.1,
           "rainProb": 2,
           "rain": 0.0,
-          "wind": 4.8
+          "wind": 6.7
         },
         {
           "time": "2026-10-03T04:00",
-          "temp": 18.2,
-          "humidity": 63,
+          "temp": 18.6,
+          "humidity": 62,
           "feelsLike": 18.2,
           "rainProb": 1,
           "rain": 0.0,
-          "wind": 1.9
+          "wind": 4.5
         },
         {
           "time": "2026-10-03T05:00",
-          "temp": 17.4,
-          "humidity": 68,
-          "feelsLike": 17.6,
+          "temp": 17.9,
+          "humidity": 66,
+          "feelsLike": 18.1,
           "rainProb": 0,
           "rain": 0.0,
           "wind": 1.5
         },
         {
           "time": "2026-10-03T06:00",
-          "temp": 16.4,
-          "humidity": 72,
-          "feelsLike": 16.2,
+          "temp": 17.1,
+          "humidity": 71,
+          "feelsLike": 17.2,
+          "rainProb": 0,
+          "rain": 0.0,
+          "wind": 2.9
+        },
+        {
+          "time": "2026-10-03T07:00",
+          "temp": 16.7,
+          "humidity": 73,
+          "feelsLike": 16.7,
+          "rainProb": 0,
+          "rain": 0.0,
+          "wind": 4.1
+        },
+        {
+          "time": "2026-10-03T08:00",
+          "temp": 17.6,
+          "humidity": 70,
+          "feelsLike": 17.7,
           "rainProb": 0,
           "rain": 0.0,
           "wind": 4.0
         },
         {
-          "time": "2026-10-03T07:00",
-          "temp": 16.4,
-          "humidity": 72,
-          "feelsLike": 16.2,
-          "rainProb": 0,
-          "rain": 0.0,
-          "wind": 4.2
-        },
-        {
-          "time": "2026-10-03T08:00",
-          "temp": 17.6,
-          "humidity": 68,
-          "feelsLike": 17.5,
-          "rainProb": 0,
-          "rain": 0.0,
-          "wind": 3.6
-        },
-        {
           "time": "2026-10-03T09:00",
-          "temp": 19.2,
-          "humidity": 62,
+          "temp": 19.1,
+          "humidity": 63,
           "feelsLike": 19.4,
           "rainProb": 0,
           "rain": 0.0,
@@ -366,13 +366,13 @@
           "feelsLike": 19.9,
           "rainProb": 0,
           "rain": 0.0,
-          "wind": 9.8
+          "wind": 9.7
         },
         {
           "time": "2026-10-03T11:00",
-          "temp": 21.6,
+          "temp": 21.5,
           "humidity": 53,
-          "feelsLike": 20.9,
+          "feelsLike": 20.7,
           "rainProb": 0,
           "rain": 0.0,
           "wind": 11.9
@@ -380,7 +380,7 @@
         {
           "time": "2026-10-03T12:00",
           "temp": 21.8,
-          "humidity": 52,
+          "humidity": 53,
           "feelsLike": 21.4,
           "rainProb": 0,
           "rain": 0.0,
@@ -390,25 +390,25 @@
           "time": "2026-10-03T13:00",
           "temp": 21.8,
           "humidity": 52,
-          "feelsLike": 21.2,
+          "feelsLike": 21.1,
           "rainProb": 0,
           "rain": 0.0,
-          "wind": 13.4
+          "wind": 13.6
         },
         {
           "time": "2026-10-03T14:00",
           "temp": 21.8,
-          "humidity": 52,
-          "feelsLike": 20.8,
+          "humidity": 50,
+          "feelsLike": 20.5,
           "rainProb": 0,
           "rain": 0.0,
-          "wind": 13.0
+          "wind": 12.7
         },
         {
           "time": "2026-10-03T15:00",
           "temp": 21.6,
-          "humidity": 53,
-          "feelsLike": 20.2,
+          "humidity": 50,
+          "feelsLike": 20.0,
           "rainProb": 0,
           "rain": 0.0,
           "wind": 12.2
@@ -417,24 +417,24 @@
       "daily": [
         {
           "date": "2026-10-02",
-          "max": 23.9,
+          "max": 23.5,
           "min": 17.9,
-          "rain": 0.1,
+          "rain": 0.4,
           "code": 51
         },
         {
           "date": "2026-10-03",
           "max": 21.8,
-          "min": 16.3,
+          "min": 15.7,
           "rain": 0.0,
-          "code": 2
+          "code": 3
         },
         {
           "date": "2026-10-04",
           "max": 22.8,
           "min": 14.5,
           "rain": 0.0,
-          "code": 3
+          "code": 2
         },
         {
           "date": "2026-10-05",
@@ -489,8 +489,8 @@
     {
       "id": "open-meteo-toyama",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-02T06:18:01.527981+00:00",
-      "lastAttemptAt": "2026-10-02T06:18:01.527981+00:00",
+      "lastSuccessAt": "2026-10-02T06:48:01.532049+00:00",
+      "lastAttemptAt": "2026-10-02T06:48:01.532049+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
