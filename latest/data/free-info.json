@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-02T05:48:01.656570+00:00",
-  "lastSuccessAt": "2026-10-02T03:18:01.376287+00:00",
+  "updatedAt": "2026-10-02T05:58:01.505626+00:00",
+  "lastSuccessAt": "2026-10-02T05:58:01.505626+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -134,7 +134,7 @@
     },
     {
       "genre": "AI",
-      "count": 9,
+      "count": 8,
       "signal": "How Albertsons Companies is reimagining retail from the inside out / Disrupting a coordinated model-distillation campaign / Helping small businesses put AI to work",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/albertsons-reimagining-retail",
@@ -142,10 +142,10 @@
     },
     {
       "genre": "論文",
-      "count": 7,
-      "signal": "Improving OCR Faithfulness via Gated and Attenuated On-Policy Distillation / AREX-2: Advancing Self-Improving Agents through Long-Horizon Reflective Tasks / MoFlow: Multi-Objective",
+      "count": 8,
+      "signal": "Heavy-Tailed Memory Traces in Long-Horizon Language Agents / When Do Causal World Models Help Modular LLM Agents / From Proposal to Verified Effect: Praxa, an Evidence-Bound Harnes",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://arxiv.org/abs/2609.38282",
+      "topUrl": "https://arxiv.org/abs/2610.00010",
       "score": 3
     },
     {
@@ -205,6 +205,25 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Heavy-Tailed Memory Traces in Long-Horizon Language Agents",
+      "summary": "arXiv:2610.00010v1 Announce Type: new Abstract: Long-horizon language agents increasingly rely on external memory as a frozen world model, yet current memory systems are usually judged only by task success or token cost.",
+      "url": "https://arxiv.org/abs/2610.00010",
+      "published": "2026-10-02T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -221,25 +240,6 @@
         "AI",
         "重要",
         "開発"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Improving OCR Faithfulness via Gated and Attenuated On-Policy Distillation",
-      "summary": "arXiv:2609.38282v1 Announce Type: new Abstract: Vision-language models may rewrite anomalous text in images into linguistically plausible expressions, compromising OCR transcription faithfulness. Sequence-level task rewa",
-      "url": "https://arxiv.org/abs/2609.38282",
-      "published": "2026-10-01T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "制作",
-        "研究"
       ]
     },
     {
@@ -326,6 +326,82 @@
         "開発",
         "重要",
         "制作"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "When Do Causal World Models Help Modular LLM Agents",
+      "summary": "arXiv:2610.00012v1 Announce Type: new Abstract: LLM agents increasingly act through modular systems, such as order, payment, inventory, and shipment services, where actions in one module change which transitions are vali",
+      "url": "https://arxiv.org/abs/2610.00012",
+      "published": "2026-10-02T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "From Proposal to Verified Effect: Praxa, an Evidence-Bound Harness for Governed AI Agent Execution",
+      "summary": "arXiv:2610.00015v1 Announce Type: new Abstract: Large-language-model agents can propose and execute actions, but proposal, authority, dispatch, verified external effect, and serving promotion are different claims. We pre",
+      "url": "https://arxiv.org/abs/2610.00015",
+      "published": "2026-10-02T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Measuring the Microtask Eligibility Gap: When Is an Off-the-Shelf SLM Enough for an Agent Harness?",
+      "summary": "arXiv:2610.00025v1 Announce Type: new Abstract: Agent harnesses increasingly want to run small language models (SLMs) on the microtasks around a frontier large language model (LLM) planner: auto-approving shell commands,",
+      "url": "https://arxiv.org/abs/2610.00025",
+      "published": "2026-10-02T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Characterizing a Configuration Where Inference-Time PRM-Pruned Fragment Grafting Is Inert: Evidence from Three Reasoning LMs",
+      "summary": "arXiv:2610.00047v1 Announce Type: new Abstract: Diversity collapse in parallel chain-of-thought has motivated inference-time interventions built on a natural design: when a process reward model (PRM) prunes a chain, its ",
+      "url": "https://arxiv.org/abs/2610.00047",
+      "published": "2026-10-02T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "制作",
+        "研究"
       ]
     },
     {
@@ -434,82 +510,6 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "AREX-2: Advancing Self-Improving Agents through Long-Horizon Reflective Tasks",
-      "summary": "arXiv:2609.38288v1 Announce Type: new Abstract: We present AREX-2, an effort to advance the self-improving capability of LLM agents, which we define as the ability to iteratively refine a solution at test time. This abil",
-      "url": "https://arxiv.org/abs/2609.38288",
-      "published": "2026-10-01T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "MoFlow: Multi-Objective Agentic Workflow Generation",
-      "summary": "arXiv:2609.38294v1 Announce Type: new Abstract: We study the generation of agentic workflows that jointly optimize multiple objectives, such as accuracy, cost, latency, robustness, and consistency. Existing methods for w",
-      "url": "https://arxiv.org/abs/2609.38294",
-      "published": "2026-10-01T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "AI Agents are Vulnerable to Radicalization",
-      "summary": "arXiv:2609.38296v1 Announce Type: new Abstract: Large language models (LLMs) can influence people's beliefs, yet little is known about whether and how they can manipulate each other. To investigate this, we simulate conv",
-      "url": "https://arxiv.org/abs/2609.38296",
-      "published": "2026-10-01T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Can an AI Agent Rediscover a Blaschke-Curve Invariant?",
-      "summary": "arXiv:2609.38369v1 Announce Type: new Abstract: We study generalized Blaschke curves as a controlled environment for AI-assisted mathematical rediscovery. For one fixed degree-four Blaschke product, an agent receives num",
-      "url": "https://arxiv.org/abs/2609.38369",
-      "published": "2026-10-01T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
       ]
     },
     {
@@ -680,6 +680,60 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "What Do Rationales Communicate? A Message-Intervention Study in Role-Specialized QA",
+      "summary": "arXiv:2610.00018v1 Announce Type: new Abstract: Role-specialized QA pipelines increasingly pass rationales from a reasoner to a verifier, but it is unclear what this message actually buys: better answers, stronger suppor",
+      "url": "https://arxiv.org/abs/2610.00018",
+      "published": "2026-10-02T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Gradient-Aligned Pair Selection for Personalized Preference Optimization",
+      "summary": "arXiv:2610.00061v1 Announce Type: new Abstract: Personalizing large language models (LLMs) requires aligning generation behavior with user-specific preferences rather than aggregate quality. While Direct Preference Optim",
+      "url": "https://arxiv.org/abs/2610.00061",
+      "published": "2026-10-02T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "K-Dense BYOK: An Open-Source AI Research Assistant That Runs Locally and Keeps a Hash-Chained Lab Notebook",
+      "summary": "arXiv:2610.00074v1 Announce Type: new Abstract: K-Dense BYOK (bring your own keys) is a free, open-source AI research assistant for scientists in any field that runs on the researcher's own computer. The researcher suppl",
+      "url": "https://arxiv.org/abs/2610.00074",
+      "published": "2026-10-02T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
@@ -695,60 +749,6 @@
       "tags": [
         "技術",
         "重要"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "CARAT: Do Materials LLMs Reason or Recite?",
-      "summary": "arXiv:2609.38340v1 Announce Type: new Abstract: When a materials LLM answers a question about crystal structure, does it reason from the structure or copy an answer already printed in its input? Accuracy cannot tell: a s",
-      "url": "https://arxiv.org/abs/2609.38340",
-      "published": "2026-10-01T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Examining Variation in How Guided AI Tutors Resolve Student Impasses",
-      "summary": "arXiv:2609.38346v1 Announce Type: new Abstract: When a student is stuck, a tutor faces the assistance dilemma: help given too early can hinder productive struggle, while help withheld too long leaves the student in a fru",
-      "url": "https://arxiv.org/abs/2609.38346",
-      "published": "2026-10-01T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "google-gemini",
-      "platform": "AI",
-      "label": "Gemini公式",
-      "genre": "AI",
-      "provider": "gemini",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Gemini 4 Argon: our next era of frontier intelligence",
-      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
-      "published": "2026-09-30T20:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "研究"
       ]
     }
   ],
@@ -804,8 +804,8 @@
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-01T05:48:01.866174+00:00",
-      "lastAttemptAt": "2026-10-01T05:48:01.866174+00:00",
+      "lastSuccessAt": "2026-10-02T05:58:01.505626+00:00",
+      "lastAttemptAt": "2026-10-02T05:58:01.505626+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
