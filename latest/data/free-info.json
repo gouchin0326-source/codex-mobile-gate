@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-02T09:08:01.684175+00:00",
-  "lastSuccessAt": "2026-10-02T05:58:01.505626+00:00",
+  "updatedAt": "2026-10-02T09:18:01.682763+00:00",
+  "lastSuccessAt": "2026-10-02T09:18:01.682763+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -134,7 +134,7 @@
     },
     {
       "genre": "AI",
-      "count": 8,
+      "count": 9,
       "signal": "How Albertsons Companies is reimagining retail from the inside out / Disrupting a coordinated model-distillation campaign / Helping small businesses put AI to work",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/albertsons-reimagining-retail",
@@ -150,8 +150,8 @@
     },
     {
       "genre": "技術",
-      "count": 2,
-      "signal": "Pidgin 3.0 Alpha 3 2.97.0 has been released / Is sandboxing sufficient to contain rogue agents?",
+      "count": 1,
+      "signal": "Pidgin 3.0 Alpha 3 2.97.0 has been released",
       "decision": "更新あり。必要時だけ確認",
       "topUrl": "https://discourse.imfreedom.org/t/pidgin-3-0-alpha-3-2-97-0-has-been-released/436",
       "score": 2
@@ -159,9 +159,9 @@
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.5 - 9 km WNW of Cobb, CA",
+      "signal": "M 1.1 - 11 km E of Yucaipa, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442676",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41342007",
       "score": 1
     }
   ],
@@ -283,10 +283,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.5 - 9 km WNW of Cobb, CA",
-      "summary": "9 km WNW of Cobb, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75442676",
-      "published": "2026-10-02T03:11:18+00:00",
+      "title": "M 1.1 - 11 km E of Yucaipa, CA",
+      "summary": "11 km E of Yucaipa, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41342007",
+      "published": "2026-10-02T09:05:27.780000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -734,21 +734,21 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "Is sandboxing sufficient to contain rogue agents?",
-      "summary": "Comments",
-      "url": "https://blog.cryptographyengineering.com/2026/09/30/is-sandboxing-sufficient-to-contain-rogue-agents/",
-      "published": "2026-10-01T12:16:51+00:00",
+      "title": "Gemini 4 Argon: our next era of frontier intelligence",
+      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "published": "2026-09-30T20:00:00+00:00",
       "score": 2,
       "tags": [
-        "技術",
-        "重要"
+        "AI",
+        "研究"
       ]
     }
   ],
@@ -756,48 +756,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-02T03:18:01.376287+00:00",
-      "lastAttemptAt": "2026-10-02T03:18:01.376287+00:00",
+      "lastSuccessAt": "2026-10-02T09:18:01.682763+00:00",
+      "lastAttemptAt": "2026-10-02T09:18:01.682763+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-02T03:18:01.376287+00:00",
-      "lastAttemptAt": "2026-10-02T03:18:01.376287+00:00",
+      "lastSuccessAt": "2026-10-02T09:18:01.682763+00:00",
+      "lastAttemptAt": "2026-10-02T09:18:01.682763+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-02T03:18:01.376287+00:00",
-      "lastAttemptAt": "2026-10-02T03:18:01.376287+00:00",
+      "lastSuccessAt": "2026-10-02T09:18:01.682763+00:00",
+      "lastAttemptAt": "2026-10-02T09:18:01.682763+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-02T03:18:01.376287+00:00",
-      "lastAttemptAt": "2026-10-02T03:18:01.376287+00:00",
+      "lastSuccessAt": "2026-10-02T09:18:01.682763+00:00",
+      "lastAttemptAt": "2026-10-02T09:18:01.682763+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-02T03:18:01.376287+00:00",
-      "lastAttemptAt": "2026-10-02T03:18:01.376287+00:00",
+      "lastSuccessAt": "2026-10-02T09:18:01.682763+00:00",
+      "lastAttemptAt": "2026-10-02T09:18:01.682763+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-02T03:18:01.376287+00:00",
-      "lastAttemptAt": "2026-10-02T03:18:01.376287+00:00",
+      "lastSuccessAt": "2026-10-02T09:18:01.682763+00:00",
+      "lastAttemptAt": "2026-10-02T09:18:01.682763+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -812,8 +812,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-02T03:18:01.376287+00:00",
-      "lastAttemptAt": "2026-10-02T03:18:01.376287+00:00",
+      "lastSuccessAt": "2026-10-02T09:18:01.682763+00:00",
+      "lastAttemptAt": "2026-10-02T09:18:01.682763+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
