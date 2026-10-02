@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-10-02T03:08:01.366745+00:00",
+  "updatedAt": "2026-10-02T03:18:01.376287+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "GitHub Copilot app for Beginners: How to build custom workflows with canvases",
+  "topLine": "GitHub Actions: macOS 14 runner image retirement",
   "cards": [
     {
       "genre": "開発",
       "count": 13,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "GitHub Copilot app for Beginners: How to build custom workflows with canvases / When chat is the wrong UI / GitHub Copilot can now interact with desktop apps with computer use",
-      "topUrl": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/",
+      "signal": "GitHub Actions: macOS 14 runner image retirement / GitHub Copilot app for Beginners: How to build custom workflows with canvases / When chat is the wrong UI",
+      "topUrl": "https://github.blog/changelog/2026-10-01-github-actions-macos-14-runner-image-retirement",
       "score": 4
     },
     {
@@ -40,6 +40,13 @@
     }
   ],
   "focus": [
+    {
+      "label": "開発",
+      "title": "GitHub Actions: macOS 14 runner image retirement",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-01-github-actions-macos-14-runner-image-retirement"
+    },
     {
       "label": "開発",
       "title": "GitHub Copilot app for Beginners: How to build custom workflows with canvases",
@@ -88,16 +95,28 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-10-01-scheduled-code-scanning-skips-inactive-repositories"
-    },
-    {
-      "label": "開発",
-      "title": "Code coverage uploads no longer fail CI for new branches",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-01-code-coverage-uploads-no-longer-fail-ci-for-new-branches"
     }
   ],
   "items": [
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "GitHub Actions: macOS 14 runner image retirement",
+      "summary": "The macOS 14 runner image will be retired on November 2, 2026. To raise awareness of the upcoming removal, jobs using macOS 14 will temporarily fail during the following scheduled… The post GitHub Actions: macOS 14 runne",
+      "url": "https://github.blog/changelog/2026-10-01-github-actions-macos-14-runner-image-retirement",
+      "published": "2026-10-01T19:11:23+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "制作"
+      ]
+    },
     {
       "source": "github-blog",
       "platform": "開発",
@@ -220,24 +239,6 @@
       "summary": "Weekly scheduled scans for code scanning default setup and GitHub Code Quality now start only after a push or pull request triggers an analysis, rather than counting every kind of… The post Scheduled code scanning skips ",
       "url": "https://github.blog/changelog/2026-10-01-scheduled-code-scanning-skips-inactive-repositories",
       "published": "2026-10-01T16:49:15+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Code coverage uploads no longer fail CI for new branches",
-      "summary": "Code coverage uploads from the GitHub Code Quality upload-code-coverage action no longer fail CI when you push a branch that doesn’t yet have an open pull request. Previously, the coverage… The post Code coverage uploads",
-      "url": "https://github.blog/changelog/2026-10-01-code-coverage-uploads-no-longer-fail-ci-for-new-branches",
-      "published": "2026-10-01T16:49:05+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -438,25 +439,6 @@
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "DevDay 2026 Recap",
-      "summary": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
-      "url": "https://openai.com/index/devday-2026-recap",
-      "published": "2026-09-29T10:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "開発"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
       "topic": "AI",
       "sourceWeight": 1,
       "title": "Introducing GPT-6.1 Sol",
@@ -476,17 +458,17 @@
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
-      "topic": "AI",
+      "topic": "その他",
       "sourceWeight": 1,
-      "title": "Towards safety cases for frontier AI training",
-      "summary": "Our early guidelines for safety cases in frontier AI training cover technical safeguards, operational practices, and investigating misalignment incidents",
-      "url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
-      "published": "2026-09-28T19:00:00+00:00",
+      "title": "DevDay 2026 Recap",
+      "summary": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
+      "url": "https://openai.com/index/devday-2026-recap",
+      "published": "2026-09-29T10:00:00+00:00",
       "score": 3,
       "tags": [
         "AI",
         "重要",
-        "研究"
+        "開発"
       ]
     },
     {
@@ -538,6 +520,24 @@
       "summary": "How we fully migrated github.com away from CSS-in-JS. The post Improving site performance by shipping more CSS appeared first on The GitHub Blog .",
       "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/",
       "published": "2026-09-25T15:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "AI-powered fuzzing with the GitHub Security Lab Taskflow Agent",
+      "summary": "In this blog post, I explain how to use the new fuzzing taskflow based on the GitHub Security Lab Taskflow Agent AI framework. The post AI-powered fuzzing with the GitHub Security Lab Taskflow Agent appeared first on The",
+      "url": "https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/",
+      "published": "2026-09-24T18:26:12+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -608,8 +608,8 @@
             "source": "ChatGPT / OpenAI公式"
           },
           {
-            "title": "DevDay 2026 Recap",
-            "url": "https://openai.com/index/devday-2026-recap",
+            "title": "Introducing GPT-6.1 Sol",
+            "url": "https://openai.com/index/introducing-gpt-6-1-sol",
             "published": "2026-09-29T10:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           }
@@ -650,6 +650,12 @@
             "title": "Gemini 3.8 text-to-speech says hello",
             "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
             "published": "2026-09-23T15:15:00+00:00",
+            "source": "Gemini公式"
+          },
+          {
+            "title": "Gemini 4 Argon: our next era of frontier intelligence",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+            "published": "2026-09-30T20:00:00+00:00",
             "source": "Gemini公式"
           }
         ]
@@ -711,5 +717,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-01T21:08:01.709469+00:00"
+  "lastSuccessAt": "2026-10-02T03:18:01.376287+00:00"
 }
