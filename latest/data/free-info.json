@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-03T05:48:01.521304+00:00",
-  "lastSuccessAt": "2026-10-03T03:48:01.496752+00:00",
+  "updatedAt": "2026-10-03T05:58:02.431188+00:00",
+  "lastSuccessAt": "2026-10-03T05:58:02.431188+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -141,14 +141,6 @@
       "score": 4
     },
     {
-      "genre": "論文",
-      "count": 7,
-      "signal": "Heavy-Tailed Memory Traces in Long-Horizon Language Agents / When Do Causal World Models Help Modular LLM Agents / From Proposal to Verified Effect: Praxa, an Evidence-Bound Harnes",
-      "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://arxiv.org/abs/2610.00010",
-      "score": 3
-    },
-    {
       "genre": "技術",
       "count": 3,
       "signal": "Lobsters Interview with Sjamaan / Zig 0.17.0 Release Notes / The Four Horsemen of Agentic Coding",
@@ -241,25 +233,6 @@
         "技術",
         "重要",
         "開発"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Heavy-Tailed Memory Traces in Long-Horizon Language Agents",
-      "summary": "arXiv:2610.00010v1 Announce Type: new Abstract: Long-horizon language agents increasingly rely on external memory as a frozen world model, yet current memory systems are usually judged only by task success or token cost.",
-      "url": "https://arxiv.org/abs/2610.00010",
-      "published": "2026-10-02T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
       ]
     },
     {
@@ -418,82 +391,6 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "When Do Causal World Models Help Modular LLM Agents",
-      "summary": "arXiv:2610.00012v1 Announce Type: new Abstract: LLM agents increasingly act through modular systems, such as order, payment, inventory, and shipment services, where actions in one module change which transitions are vali",
-      "url": "https://arxiv.org/abs/2610.00012",
-      "published": "2026-10-02T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "From Proposal to Verified Effect: Praxa, an Evidence-Bound Harness for Governed AI Agent Execution",
-      "summary": "arXiv:2610.00015v1 Announce Type: new Abstract: Large-language-model agents can propose and execute actions, but proposal, authority, dispatch, verified external effect, and serving promotion are different claims. We pre",
-      "url": "https://arxiv.org/abs/2610.00015",
-      "published": "2026-10-02T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Measuring the Microtask Eligibility Gap: When Is an Off-the-Shelf SLM Enough for an Agent Harness?",
-      "summary": "arXiv:2610.00025v1 Announce Type: new Abstract: Agent harnesses increasingly want to run small language models (SLMs) on the microtasks around a frontier large language model (LLM) planner: auto-approving shell commands,",
-      "url": "https://arxiv.org/abs/2610.00025",
-      "published": "2026-10-02T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Characterizing a Configuration Where Inference-Time PRM-Pruned Fragment Grafting Is Inert: Evidence from Three Reasoning LMs",
-      "summary": "arXiv:2610.00047v1 Announce Type: new Abstract: Diversity collapse in parallel chain-of-thought has motivated inference-time interventions built on a natural design: when a process reward model (PRM) prunes a chain, its ",
-      "url": "https://arxiv.org/abs/2610.00047",
-      "published": "2026-10-02T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "制作",
-        "研究"
       ]
     },
     {
@@ -715,42 +612,6 @@
         "開発",
         "重要"
       ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "What Do Rationales Communicate? A Message-Intervention Study in Role-Specialized QA",
-      "summary": "arXiv:2610.00018v1 Announce Type: new Abstract: Role-specialized QA pipelines increasingly pass rationales from a reasoner to a verifier, but it is unclear what this message actually buys: better answers, stronger suppor",
-      "url": "https://arxiv.org/abs/2610.00018",
-      "published": "2026-10-02T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Gradient-Aligned Pair Selection for Personalized Preference Optimization",
-      "summary": "arXiv:2610.00061v1 Announce Type: new Abstract: Personalizing large language models (LLMs) requires aligning generation behavior with user-specific preferences rather than aggregate quality. While Direct Preference Optim",
-      "url": "https://arxiv.org/abs/2610.00061",
-      "published": "2026-10-02T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
     }
   ],
   "sourceStates": [
@@ -805,8 +666,8 @@
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-02T05:58:01.505626+00:00",
-      "lastAttemptAt": "2026-10-02T05:58:01.505626+00:00",
+      "lastSuccessAt": "2026-10-03T05:58:02.431188+00:00",
+      "lastAttemptAt": "2026-10-03T05:58:02.431188+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
