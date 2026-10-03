@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-03T21:28:02.007476+00:00",
-  "lastSuccessAt": "2026-10-03T21:28:02.007476+00:00",
+  "updatedAt": "2026-10-03T21:38:01.447177+00:00",
+  "lastSuccessAt": "2026-10-03T21:38:01.447177+00:00",
   "status": "fresh",
   "mode": "primary-api-weather-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -185,27 +185,18 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "location": "富山県",
-      "updatedAt": "2026-10-03T20:59:11.529327+00:00",
+      "updatedAt": "2026-10-03T21:38:01.447177+00:00",
       "current": {
-        "time": "2026-10-04T05:45",
+        "time": "2026-10-04T06:30",
         "interval": 900,
-        "temperature_2m": 14.9,
-        "relative_humidity_2m": 88,
-        "apparent_temperature": 15.4,
+        "temperature_2m": 15.2,
+        "relative_humidity_2m": 86,
+        "apparent_temperature": 15.7,
         "precipitation": 0.0,
-        "weather_code": 2,
-        "wind_speed_10m": 2.9
+        "weather_code": 1,
+        "wind_speed_10m": 2.3
       },
       "hourly": [
-        {
-          "time": "2026-10-04T06:00",
-          "temp": 14.9,
-          "humidity": 89,
-          "feelsLike": 15.5,
-          "rainProb": 0,
-          "rain": 0.0,
-          "wind": 2.8
-        },
         {
           "time": "2026-10-04T07:00",
           "temp": 15.6,
@@ -412,6 +403,15 @@
           "rainProb": 17,
           "rain": 0.0,
           "wind": 3.3
+        },
+        {
+          "time": "2026-10-05T06:00",
+          "temp": 16.3,
+          "humidity": 82,
+          "feelsLike": 16.8,
+          "rainProb": 22,
+          "rain": 0.0,
+          "wind": 3.5
         }
       ],
       "daily": [
@@ -489,8 +489,8 @@
     {
       "id": "open-meteo-toyama",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-03T20:59:11.529327+00:00",
-      "lastAttemptAt": "2026-10-03T20:59:11.529327+00:00",
+      "lastSuccessAt": "2026-10-03T21:38:01.447177+00:00",
+      "lastAttemptAt": "2026-10-03T21:38:01.447177+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
