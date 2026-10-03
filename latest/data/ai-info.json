@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T14:08:00.809004+00:00",
+  "updatedAt": "2026-10-03T20:59:11.529327+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -24,9 +24,9 @@
     },
     {
       "genre": "技術",
-      "count": 3,
+      "count": 2,
       "decision": "必要時だけ確認",
-      "signal": "Lobsters Interview with Sjamaan / Zig 0.17.0 Release Notes / The Four Horsemen of Agentic Coding",
+      "signal": "Lobsters Interview with Sjamaan / Zig 0.17.0 Release Notes",
       "topUrl": "https://alexalejandre.com/interviews/peter-bex/",
       "score": 3
     }
@@ -462,24 +462,6 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "The Four Horsemen of Agentic Coding",
-      "summary": "Comments",
-      "url": "https://distantprovince.substack.com/p/the-four-horsemen-of-agentic-coding",
-      "published": "2026-10-02T16:48:36+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "重要"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -531,6 +513,23 @@
       "tags": [
         "AI",
         "研究"
+      ]
+    },
+    {
+      "source": "anthropic-claude",
+      "platform": "AI",
+      "label": "Claude / Anthropic公式",
+      "genre": "AI",
+      "provider": "claude",
+      "topic": "AI",
+      "sourceWeight": 2,
+      "title": "Claude Frontier Academy",
+      "summary": "公式サイトマップで更新を検知。内容は公式ページで確認。",
+      "url": "https://www.anthropic.com/news/claude-frontier-academy",
+      "published": "2026-10-02T17:12:50.000Z",
+      "score": 1,
+      "tags": [
+        "AI"
       ]
     }
   ],
@@ -700,5 +699,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-03T09:48:01.648470+00:00"
+  "lastSuccessAt": "2026-10-03T20:59:11.529327+00:00"
 }
