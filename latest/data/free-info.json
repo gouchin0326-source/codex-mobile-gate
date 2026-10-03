@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-03T09:38:01.721760+00:00",
-  "lastSuccessAt": "2026-10-03T05:58:02.431188+00:00",
+  "updatedAt": "2026-10-03T09:48:01.648470+00:00",
+  "lastSuccessAt": "2026-10-03T09:48:01.648470+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -134,11 +134,19 @@
     },
     {
       "genre": "AI",
-      "count": 8,
+      "count": 9,
       "signal": "Chatham scales its capital markets expertise with OpenAI / How Albertsons Companies is reimagining retail from the inside out / Disrupting a coordinated model-distillation campaign",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/chatham-financial",
       "score": 4
+    },
+    {
+      "genre": "災害",
+      "count": 7,
+      "signal": "M 1.4 - 71 km WNW of Karluk, Alaska / M 0.4 - 14 km NE of Anza, CA / M 0.8 - 57 km W of Happy Valley, Alaska",
+      "decision": "更新あり。必要時だけ確認",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026toqoaq",
+      "score": 1
     },
     {
       "genre": "技術",
@@ -147,14 +155,6 @@
       "decision": "更新あり。必要時だけ確認",
       "topUrl": "https://alexalejandre.com/interviews/peter-bex/",
       "score": 3
-    },
-    {
-      "genre": "災害",
-      "count": 1,
-      "signal": "M 0.7 - 64 km ENE of Pedro Bay, Alaska",
-      "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026toeyfb",
-      "score": 1
     }
   ],
   "items": [
@@ -258,10 +258,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.7 - 64 km ENE of Pedro Bay, Alaska",
-      "summary": "64 km ENE of Pedro Bay, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026toeyfb",
-      "published": "2026-10-03T03:27:29.696000+00:00",
+      "title": "M 1.4 - 71 km WNW of Karluk, Alaska",
+      "summary": "71 km WNW of Karluk, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026toqoaq",
+      "published": "2026-10-03T09:15:35.739000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -612,54 +612,150 @@
         "開発",
         "重要"
       ]
+    },
+    {
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Gemini 4 Argon: our next era of frontier intelligence",
+      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "published": "2026-09-30T20:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "研究"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.4 - 14 km NE of Anza, CA",
+      "summary": "14 km NE of Anza, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41342439",
+      "published": "2026-10-03T08:57:38.820000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.8 - 57 km W of Happy Valley, Alaska",
+      "summary": "57 km W of Happy Valley, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026topkkf",
+      "published": "2026-10-03T08:41:26.445000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.7 - 5 km WNW of Cobb, CA",
+      "summary": "5 km WNW of Cobb, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75443336",
+      "published": "2026-10-03T08:33:13.830000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.6 - 44 km WNW of Valdez, Alaska",
+      "summary": "44 km WNW of Valdez, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026toovxo",
+      "published": "2026-10-03T08:24:43.935000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.5 - 9 km WNW of Anza, CA",
+      "summary": "9 km WNW of Anza, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41342431",
+      "published": "2026-10-03T08:14:04.990000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.8 - 7 km NW of The Geysers, CA",
+      "summary": "7 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75443331",
+      "published": "2026-10-03T07:47:07.080000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-03T03:48:01.496752+00:00",
-      "lastAttemptAt": "2026-10-03T03:48:01.496752+00:00",
+      "lastSuccessAt": "2026-10-03T09:48:01.648470+00:00",
+      "lastAttemptAt": "2026-10-03T09:48:01.648470+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-03T03:48:01.496752+00:00",
-      "lastAttemptAt": "2026-10-03T03:48:01.496752+00:00",
+      "lastSuccessAt": "2026-10-03T09:48:01.648470+00:00",
+      "lastAttemptAt": "2026-10-03T09:48:01.648470+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-03T03:48:01.496752+00:00",
-      "lastAttemptAt": "2026-10-03T03:48:01.496752+00:00",
+      "lastSuccessAt": "2026-10-03T09:48:01.648470+00:00",
+      "lastAttemptAt": "2026-10-03T09:48:01.648470+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-03T03:48:01.496752+00:00",
-      "lastAttemptAt": "2026-10-03T03:48:01.496752+00:00",
+      "lastSuccessAt": "2026-10-03T09:48:01.648470+00:00",
+      "lastAttemptAt": "2026-10-03T09:48:01.648470+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-03T03:48:01.496752+00:00",
-      "lastAttemptAt": "2026-10-03T03:48:01.496752+00:00",
+      "lastSuccessAt": "2026-10-03T09:48:01.648470+00:00",
+      "lastAttemptAt": "2026-10-03T09:48:01.648470+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-03T03:48:01.496752+00:00",
-      "lastAttemptAt": "2026-10-03T03:48:01.496752+00:00",
+      "lastSuccessAt": "2026-10-03T09:48:01.648470+00:00",
+      "lastAttemptAt": "2026-10-03T09:48:01.648470+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -674,8 +770,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-03T03:48:01.496752+00:00",
-      "lastAttemptAt": "2026-10-03T03:48:01.496752+00:00",
+      "lastSuccessAt": "2026-10-03T09:48:01.648470+00:00",
+      "lastAttemptAt": "2026-10-03T09:48:01.648470+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

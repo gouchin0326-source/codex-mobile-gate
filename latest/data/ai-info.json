@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T09:38:01.721760+00:00",
+  "updatedAt": "2026-10-03T09:48:01.648470+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -16,7 +16,7 @@
     },
     {
       "genre": "AI",
-      "count": 8,
+      "count": 9,
       "decision": "AI/Codex運用の変化を確認",
       "signal": "Chatham scales its capital markets expertise with OpenAI / How Albertsons Companies is reimagining retail from the inside out / Disrupting a coordinated model-distillation campaign",
       "topUrl": "https://openai.com/index/chatham-financial",
@@ -516,20 +516,21 @@
       ]
     },
     {
-      "source": "anthropic-claude",
+      "source": "google-gemini",
       "platform": "AI",
-      "label": "Claude / Anthropic公式",
+      "label": "Gemini公式",
       "genre": "AI",
-      "provider": "claude",
+      "provider": "gemini",
       "topic": "AI",
-      "sourceWeight": 2,
-      "title": "Claude Frontier Academy",
-      "summary": "公式サイトマップで更新を検知。内容は公式ページで確認。",
-      "url": "https://www.anthropic.com/news/claude-frontier-academy",
-      "published": "2026-10-02T17:12:50.000Z",
-      "score": 1,
+      "sourceWeight": 1,
+      "title": "Gemini 4 Argon: our next era of frontier intelligence",
+      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "published": "2026-09-30T20:00:00+00:00",
+      "score": 2,
       "tags": [
-        "AI"
+        "AI",
+        "研究"
       ]
     }
   ],
@@ -633,6 +634,12 @@
             "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers/",
             "published": "2026-09-28T16:00:00+00:00",
             "source": "Gemini公式"
+          },
+          {
+            "title": "Gemini 4 Argon: our next era of frontier intelligence",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+            "published": "2026-09-30T20:00:00+00:00",
+            "source": "Gemini公式"
           }
         ]
       },
@@ -693,5 +700,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-03T05:58:02.431188+00:00"
+  "lastSuccessAt": "2026-10-03T09:48:01.648470+00:00"
 }
