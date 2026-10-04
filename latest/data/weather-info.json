@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-04T09:28:02.989208+00:00",
-  "lastSuccessAt": "2026-10-04T09:28:02.989208+00:00",
+  "updatedAt": "2026-10-04T09:38:02.631095+00:00",
+  "lastSuccessAt": "2026-10-04T09:38:02.631095+00:00",
   "status": "fresh",
   "mode": "primary-api-weather-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -12,7 +12,7 @@
       "富山: 通常",
       "警戒情報なし"
     ],
-    "maxRainProbability": 47,
+    "maxRainProbability": 37,
     "maxHourlyRain": 0.1,
     "maxDailyRain": 8.1,
     "maxWind": 14.1,
@@ -185,27 +185,18 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "location": "富山県",
-      "updatedAt": "2026-10-04T09:08:02.274859+00:00",
+      "updatedAt": "2026-10-04T09:38:02.631095+00:00",
       "current": {
-        "time": "2026-10-04T18:00",
+        "time": "2026-10-04T18:30",
         "interval": 900,
         "temperature_2m": 17.7,
         "relative_humidity_2m": 94,
-        "apparent_temperature": 19.3,
+        "apparent_temperature": 19.2,
         "precipitation": 0.0,
         "weather_code": 2,
         "wind_speed_10m": 5.4
       },
       "hourly": [
-        {
-          "time": "2026-10-04T18:00",
-          "temp": 17.7,
-          "humidity": 94,
-          "feelsLike": 19.3,
-          "rainProb": 47,
-          "rain": 0.1,
-          "wind": 5.4
-        },
         {
           "time": "2026-10-04T19:00",
           "temp": 17.7,
@@ -412,6 +403,15 @@
           "rainProb": 11,
           "rain": 0.0,
           "wind": 6.9
+        },
+        {
+          "time": "2026-10-05T18:00",
+          "temp": 23.0,
+          "humidity": 66,
+          "feelsLike": 24.9,
+          "rainProb": 8,
+          "rain": 0.0,
+          "wind": 1.8
         }
       ],
       "daily": [
@@ -489,8 +489,8 @@
     {
       "id": "open-meteo-toyama",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-04T09:08:02.274859+00:00",
-      "lastAttemptAt": "2026-10-04T09:08:02.274859+00:00",
+      "lastSuccessAt": "2026-10-04T09:38:02.631095+00:00",
+      "lastAttemptAt": "2026-10-04T09:38:02.631095+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
