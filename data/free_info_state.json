@@ -2,8 +2,8 @@
   "version": 1,
   "daily": {
     "date": "2026-10-04",
-    "httpRequests": 14,
-    "responseBytes": 611664
+    "httpRequests": 21,
+    "responseBytes": 1119122
   },
   "sources": {
     "openai": {
@@ -103,10 +103,10 @@
       "lastHttpStatus": 200
     },
     "open-meteo-toyama": {
-      "lastAttemptAt": "2026-10-03T23:48:01.439517+00:00",
+      "lastAttemptAt": "2026-10-04T00:28:01.295465+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-03T23:48:01.439517+00:00",
-      "contentUpdatedAt": "2026-10-03T23:48:01.439517+00:00",
+      "lastSuccessAt": "2026-10-04T00:28:01.295465+00:00",
+      "contentUpdatedAt": "2026-10-04T00:28:01.295465+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -115,22 +115,22 @@
       "lastHttpStatus": 200
     },
     "github-actions": {
-      "lastAttemptAt": "2026-10-03T23:48:01.439517+00:00",
+      "lastAttemptAt": "2026-10-04T00:28:01.295465+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-03T23:48:01.439517+00:00",
-      "contentUpdatedAt": "2026-10-03T23:48:01.439517+00:00",
+      "lastSuccessAt": "2026-10-04T00:28:01.295465+00:00",
+      "contentUpdatedAt": "2026-10-04T00:28:01.295465+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
-      "etag": "W/\"cbdca7f43d8e465cce50f23fd802a35fac34dd48d225994575dfb8f73de93865\"",
+      "etag": "W/\"5c172444a53d897830542eb2d493b4c6fadecd85ec65861999ddb8d2a3e6d1b7\"",
       "lastModified": null,
       "lastHttpStatus": 200
     },
     "news-ai-jp": {
-      "lastAttemptAt": "2026-10-03T23:18:01.389604+00:00",
+      "lastAttemptAt": "2026-10-04T00:28:01.295465+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-03T23:18:01.389604+00:00",
-      "contentUpdatedAt": "2026-10-03T23:18:01.389604+00:00",
+      "lastSuccessAt": "2026-10-04T00:28:01.295465+00:00",
+      "contentUpdatedAt": "2026-10-04T00:28:01.295465+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -151,10 +151,10 @@
       "lastHttpStatus": 200
     },
     "news-disaster-jp": {
-      "lastAttemptAt": "2026-10-03T23:18:01.389604+00:00",
+      "lastAttemptAt": "2026-10-04T00:28:01.295465+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-03T23:18:01.389604+00:00",
-      "contentUpdatedAt": "2026-10-03T23:18:01.389604+00:00",
+      "lastSuccessAt": "2026-10-04T00:28:01.295465+00:00",
+      "contentUpdatedAt": "2026-10-04T00:28:01.295465+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -235,10 +235,10 @@
       "lastHttpStatus": 200
     },
     "news-toyama-jp": {
-      "lastAttemptAt": "2026-10-03T23:18:01.389604+00:00",
+      "lastAttemptAt": "2026-10-04T00:28:01.295465+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-03T23:18:01.389604+00:00",
-      "contentUpdatedAt": "2026-10-03T23:18:01.389604+00:00",
+      "lastSuccessAt": "2026-10-04T00:28:01.295465+00:00",
+      "contentUpdatedAt": "2026-10-04T00:28:01.295465+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -247,26 +247,26 @@
       "lastHttpStatus": 200
     },
     "mastodon-ai": {
-      "lastAttemptAt": "2026-10-03T23:18:01.389604+00:00",
+      "lastAttemptAt": "2026-10-04T00:28:01.295465+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-03T23:18:01.389604+00:00",
-      "contentUpdatedAt": "2026-10-03T23:18:01.389604+00:00",
+      "lastSuccessAt": "2026-10-04T00:28:01.295465+00:00",
+      "contentUpdatedAt": "2026-10-04T00:28:01.295465+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
-      "etag": "W/\"b70ae6fa24fcc1af38cc77515f5f6fdd\"",
+      "etag": "W/\"578d523a0377d966752aa3d4d512768d\"",
       "lastModified": null,
       "lastHttpStatus": 200
     },
     "mastodon-codex": {
-      "lastAttemptAt": "2026-10-03T23:18:01.389604+00:00",
+      "lastAttemptAt": "2026-10-04T00:28:01.295465+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-03T23:18:01.389604+00:00",
-      "contentUpdatedAt": "2026-10-03T23:18:01.389604+00:00",
+      "lastSuccessAt": "2026-10-04T00:28:01.295465+00:00",
+      "contentUpdatedAt": "2026-10-04T00:28:01.295465+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
-      "etag": "W/\"53dc586dcc73d1aadc2e7be4e72502a2\"",
+      "etag": "W/\"2426021fb18a1b0bd19e459d9731c898\"",
       "lastModified": null,
       "lastHttpStatus": 200
     },
@@ -356,10 +356,10 @@
     },
     "cabinet-office-holidays": {}
   },
-  "updatedAt": "2026-10-04T00:18:01.341382+00:00",
+  "updatedAt": "2026-10-04T00:28:01.295465+00:00",
   "lastRun": {
-    "httpRequests": 2,
-    "responseBytes": 1192,
+    "httpRequests": 7,
+    "responseBytes": 507458,
     "aiRequests": 0
   }
 }
