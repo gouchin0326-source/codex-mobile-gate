@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-04T08:58:01.722070+00:00",
-  "lastSuccessAt": "2026-10-04T06:08:01.872134+00:00",
+  "updatedAt": "2026-10-04T09:08:02.274859+00:00",
+  "lastSuccessAt": "2026-10-04T09:08:02.274859+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,17 +143,17 @@
     {
       "genre": "災害",
       "count": 8,
-      "signal": "M 1.0 - 3 km NW of The Geysers, CA / M 1.1 - 7 km W of Cobb, CA / M 2.0 - 49 km WNW of Nanwalek, Alaska",
+      "signal": "M 1.8 - 28 km W of Karluk, Alaska / M 0.6 - 9 km WNW of Anza, CA / M 1.8 - 55 km E of Denali Park, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75443961",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tqmdoc",
       "score": 1
     },
     {
       "genre": "技術",
       "count": 2,
-      "signal": "Why don’t more developers \"use the platform\"? / Zig 0.17.0 Release Notes",
+      "signal": "Kolibri: A Sovereign Open-Weight Model / Why don’t more developers \"use the platform\"?",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://nolanlawson.com/2026/10/03/why-dont-more-developers-use-the-platform/",
+      "topUrl": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
       "score": 2
     }
   ],
@@ -241,26 +241,26 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "開発",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Why don’t more developers \"use the platform\"?",
+      "title": "Kolibri: A Sovereign Open-Weight Model",
       "summary": "Comments",
-      "url": "https://nolanlawson.com/2026/10/03/why-dont-more-developers-use-the-platform/",
-      "published": "2026-10-03T21:35:28+00:00",
+      "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
+      "published": "2026-10-04T07:57:55+00:00",
       "score": 2,
       "tags": [
         "技術",
-        "開発"
+        "研究"
       ]
     },
     {
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.0 - 3 km NW of The Geysers, CA",
-      "summary": "3 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75443961",
-      "published": "2026-10-04T02:49:33.350000+00:00",
+      "title": "M 1.8 - 28 km W of Karluk, Alaska",
+      "summary": "28 km W of Karluk, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tqmdoc",
+      "published": "2026-10-04T09:02:51.650000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -546,16 +546,16 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "ニュース",
+      "topic": "開発",
       "sourceWeight": 1,
-      "title": "Zig 0.17.0 Release Notes",
+      "title": "Why don’t more developers \"use the platform\"?",
       "summary": "Comments",
-      "url": "https://ziglang.org/download/0.17.0/release-notes.html",
-      "published": "2026-10-02T21:10:41+00:00",
+      "url": "https://nolanlawson.com/2026/10/03/why-dont-more-developers-use-the-platform/",
+      "published": "2026-10-03T21:35:28+00:00",
       "score": 2,
       "tags": [
         "技術",
-        "重要"
+        "開発"
       ]
     },
     {
@@ -616,88 +616,88 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.1 - 7 km W of Cobb, CA",
-      "summary": "7 km W of Cobb, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75443956",
-      "published": "2026-10-04T02:46:00.390000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.0 - 49 km WNW of Nanwalek, Alaska",
-      "summary": "49 km WNW of Nanwalek, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tpzhqj",
-      "published": "2026-10-04T02:37:42.089000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.0 - 6 km W of Volcano, Hawaii",
-      "summary": "6 km W of Volcano, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75049362",
-      "published": "2026-10-04T02:14:41.080000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.4 - 71 km NE of Aleneva, Alaska",
-      "summary": "71 km NE of Aleneva, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tpyicf",
-      "published": "2026-10-04T02:08:17.387000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.9 - 14 km WSW of Almanor, CA",
-      "summary": "14 km WSW of Almanor, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75443921",
-      "published": "2026-10-04T02:01:08.400000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 3.5 - 31 km N of Fishhook, Alaska",
-      "summary": "31 km N of Fishhook, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tpxzfg",
-      "published": "2026-10-04T01:58:07.210000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.3 - 9 km WNW of Anza, CA",
+      "title": "M 0.6 - 9 km WNW of Anza, CA",
       "summary": "9 km WNW of Anza, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41342743",
-      "published": "2026-10-04T01:57:42.080000+00:00",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41342919",
+      "published": "2026-10-04T08:59:31.620000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.8 - 55 km E of Denali Park, Alaska",
+      "summary": "55 km E of Denali Park, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tqlyjl",
+      "published": "2026-10-04T08:56:52.956000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.5 - 12 km W of Salcha, Alaska",
+      "summary": "12 km W of Salcha, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tqluma",
+      "published": "2026-10-04T08:52:22.991000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.4 - 9 km WNW of Anza, CA",
+      "summary": "9 km WNW of Anza, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41342911",
+      "published": "2026-10-04T08:52:15.330000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 2.3 - 4 km SE of Coalinga, CA",
+      "summary": "4 km SE of Coalinga, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75444081",
+      "published": "2026-10-04T08:44:08.470000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.6 - 16 km WSW of Johannesburg, CA",
+      "summary": "16 km WSW of Johannesburg, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41342895",
+      "published": "2026-10-04T08:39:03.690000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.0 - 16 km WSW of Johannesburg, CA",
+      "summary": "16 km WSW of Johannesburg, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41342887",
+      "published": "2026-10-04T08:29:08+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -708,48 +708,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-04T03:08:01.709044+00:00",
-      "lastAttemptAt": "2026-10-04T03:08:01.709044+00:00",
+      "lastSuccessAt": "2026-10-04T09:08:02.274859+00:00",
+      "lastAttemptAt": "2026-10-04T09:08:02.274859+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-04T03:08:01.709044+00:00",
-      "lastAttemptAt": "2026-10-04T03:08:01.709044+00:00",
+      "lastSuccessAt": "2026-10-04T09:08:02.274859+00:00",
+      "lastAttemptAt": "2026-10-04T09:08:02.274859+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-04T03:08:01.709044+00:00",
-      "lastAttemptAt": "2026-10-04T03:08:01.709044+00:00",
+      "lastSuccessAt": "2026-10-04T09:08:02.274859+00:00",
+      "lastAttemptAt": "2026-10-04T09:08:02.274859+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-04T03:08:01.709044+00:00",
-      "lastAttemptAt": "2026-10-04T03:08:01.709044+00:00",
+      "lastSuccessAt": "2026-10-04T09:08:02.274859+00:00",
+      "lastAttemptAt": "2026-10-04T09:08:02.274859+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-04T03:08:01.709044+00:00",
-      "lastAttemptAt": "2026-10-04T03:08:01.709044+00:00",
+      "lastSuccessAt": "2026-10-04T09:08:02.274859+00:00",
+      "lastAttemptAt": "2026-10-04T09:08:02.274859+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-04T03:08:01.709044+00:00",
-      "lastAttemptAt": "2026-10-04T03:08:01.709044+00:00",
+      "lastSuccessAt": "2026-10-04T09:08:02.274859+00:00",
+      "lastAttemptAt": "2026-10-04T09:08:02.274859+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -764,8 +764,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-04T03:08:01.709044+00:00",
-      "lastAttemptAt": "2026-10-04T03:08:01.709044+00:00",
+      "lastSuccessAt": "2026-10-04T09:08:02.274859+00:00",
+      "lastAttemptAt": "2026-10-04T09:08:02.274859+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

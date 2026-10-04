@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T08:58:01.722070+00:00",
+  "updatedAt": "2026-10-04T09:08:02.274859+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -26,8 +26,8 @@
       "genre": "技術",
       "count": 2,
       "decision": "必要時だけ確認",
-      "signal": "Why don’t more developers \"use the platform\"? / Zig 0.17.0 Release Notes",
-      "topUrl": "https://nolanlawson.com/2026/10/03/why-dont-more-developers-use-the-platform/",
+      "signal": "Kolibri: A Sovereign Open-Weight Model / Why don’t more developers \"use the platform\"?",
+      "topUrl": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
       "score": 2
     }
   ],
@@ -430,6 +430,24 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Kolibri: A Sovereign Open-Weight Model",
+      "summary": "Comments",
+      "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
+      "published": "2026-10-04T07:57:55+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "研究"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
       "topic": "開発",
       "sourceWeight": 1,
       "title": "Why don’t more developers \"use the platform\"?",
@@ -440,24 +458,6 @@
       "tags": [
         "技術",
         "開発"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "ニュース",
-      "sourceWeight": 1,
-      "title": "Zig 0.17.0 Release Notes",
-      "summary": "Comments",
-      "url": "https://ziglang.org/download/0.17.0/release-notes.html",
-      "published": "2026-10-02T21:10:41+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "重要"
       ]
     },
     {
@@ -698,5 +698,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-04T06:08:01.872134+00:00"
+  "lastSuccessAt": "2026-10-04T09:08:02.274859+00:00"
 }
