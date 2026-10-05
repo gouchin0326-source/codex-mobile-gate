@@ -1,22 +1,22 @@
 {
-  "updatedAt": "2026-10-05T14:38:01.183589+00:00",
+  "updatedAt": "2026-10-05T20:38:46.527665+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "Keep It CALM: Analyzing the Limits of Global Unsafety in Text-to-Image Generation",
+  "topLine": "ReviewBench: An open benchmark for AI code review",
   "cards": [
     {
       "genre": "開発",
-      "count": 13,
+      "count": 14,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "Selected models in GitHub Copilot deprecated / GitHub Copilot app for Beginners: How to build custom workflows with canvases / When chat is the wrong UI",
-      "topUrl": "https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated",
+      "signal": "ReviewBench: An open benchmark for AI code review / Selected models in GitHub Copilot deprecated / GitHub Copilot app for Beginners: How to build custom workflows with canvases",
+      "topUrl": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/",
       "score": 4
     },
     {
       "genre": "AI",
-      "count": 9,
+      "count": 8,
       "decision": "AI/Codex運用の変化を確認",
       "signal": "Chatham scales its capital markets expertise with OpenAI / How Albertsons Companies is reimagining retail from the inside out / Disrupting a coordinated model-distillation campaign",
       "topUrl": "https://openai.com/index/chatham-financial",
@@ -34,12 +34,19 @@
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "Why don’t more developers \"use the platform\"?",
-      "topUrl": "https://nolanlawson.com/2026/10/03/why-dont-more-developers-use-the-platform/",
+      "signal": "Mold 3.0.0 Released",
+      "topUrl": "https://github.com/rui314/mold/releases/tag/v3.0.0",
       "score": 2
     }
   ],
   "focus": [
+    {
+      "label": "開発",
+      "title": "ReviewBench: An open benchmark for AI code review",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub",
+      "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/"
+    },
     {
       "label": "論文",
       "title": "Keep It CALM: Analyzing the Limits of Global Unsafety in Text-to-Image Generation",
@@ -69,13 +76,6 @@
       "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/"
     },
     {
-      "label": "開発",
-      "title": "When chat is the wrong UI",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub",
-      "url": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/"
-    },
-    {
       "label": "論文",
       "title": "Fast Models, Slow Evidence: A Paired and Self-Audited Evaluation of System-1 Decision Models for LLM Agent Harnesses",
       "why": "Codex/AI開発判断に関係",
@@ -98,6 +98,25 @@
     }
   ],
   "items": [
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "ReviewBench: An open benchmark for AI code review",
+      "summary": "We’re launching ReviewBench, a benchmark for code review agents built on representative GitHub pull requests, multi-source ground truth, calibrated evaluation, and production-aligned metrics. The post ReviewBench: An ope",
+      "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/",
+      "published": "2026-10-05T15:59:40+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
+      ]
+    },
     {
       "source": "arxiv-ai",
       "platform": "論文",
@@ -169,25 +188,6 @@
       "summary": "Describe the interface you need in plain English, then let the agent build a live surface you can both use and update—so you spend less time adapting to tools and more time getting work done. The post GitHub Copilot app ",
       "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/",
       "published": "2026-09-25T18:00:00+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
-        "制作"
-      ]
-    },
-    {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "When chat is the wrong UI",
-      "summary": "What is a developer to do when they need something more tangible than a chat box? Enter canvases. The post When chat is the wrong UI appeared first on The GitHub Blog .",
-      "url": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
-      "published": "2026-09-24T20:00:00+00:00",
       "score": 4,
       "tags": [
         "開発",
@@ -399,25 +399,6 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Helping small businesses put AI to work",
-      "summary": "OpenAI is partnering with America’s SBDC to expand hands-on AI training and local support for small businesses, alongside a new report on how small teams are using AI.",
-      "url": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
-      "published": "2026-09-30T10:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "研究"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -433,25 +414,6 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "DevDay 2026 Recap",
-      "summary": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
-      "url": "https://openai.com/index/devday-2026-recap",
-      "published": "2026-09-29T10:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "開発"
       ]
     },
     {
@@ -510,21 +472,57 @@
       ]
     },
     {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "その他",
       "sourceWeight": 1,
-      "title": "MintFlow: Minimal Trajectory Intervention for Constrained Flow Matching",
-      "summary": "arXiv:2610.02260v1 Announce Type: new Abstract: Flow matching models excel at generative modeling, and many downstream applications require their samples to satisfy prescribed constraints, such as observed measurements a",
-      "url": "https://arxiv.org/abs/2610.02260",
-      "published": "2026-10-05T04:00:00+00:00",
+      "title": "Our approach to EU text provenance rules",
+      "summary": "How OpenAI is approaching text watermarking under EU rules. Learn where watermarks apply, how detection works, and why access starts with researchers.",
+      "url": "https://openai.com/index/eu-text-provenance",
+      "published": "2026-10-05T15:00:00+00:00",
       "score": 2,
       "tags": [
-        "論文",
-        "研究"
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "ニュース",
+      "sourceWeight": 1,
+      "title": "Mold 3.0.0 Released",
+      "summary": "Comments",
+      "url": "https://github.com/rui314/mold/releases/tag/v3.0.0",
+      "published": "2026-10-05T14:24:26+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Building advertising for the way people use AI",
+      "summary": "OpenAI introduces a new visual ad format in ChatGPT and expands measurement tools, attribution partnerships, and brand suitability for advertisers.",
+      "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
+      "published": "2026-10-05T10:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
       ]
     },
     {
@@ -535,9 +533,9 @@
       "provider": null,
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "The AI Risk Observatory: What Can We Learn from AI Disclosures in Annual Reports About Societal Resilience?",
-      "summary": "arXiv:2610.02281v1 Announce Type: new Abstract: Societal resilience research relies on access to useful and actionable data, which motivates our main research question: Can annual reports, processed at scale with LLMs, p",
-      "url": "https://arxiv.org/abs/2610.02281",
+      "title": "MintFlow: Minimal Trajectory Intervention for Constrained Flow Matching",
+      "summary": "arXiv:2610.02260v1 Announce Type: new Abstract: Flow matching models excel at generative modeling, and many downstream applications require their samples to satisfy prescribed constraints, such as observed measurements a",
+      "url": "https://arxiv.org/abs/2610.02260",
       "published": "2026-10-05T04:00:00+00:00",
       "score": 2,
       "tags": [
@@ -609,9 +607,9 @@
             "source": "ChatGPT / OpenAI公式"
           },
           {
-            "title": "Helping small businesses put AI to work",
-            "url": "https://openai.com/index/helping-small-businesses-put-ai-to-work",
-            "published": "2026-09-30T10:00:00+00:00",
+            "title": "Our approach to EU text provenance rules",
+            "url": "https://openai.com/index/eu-text-provenance",
+            "published": "2026-10-05T15:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           }
         ]
@@ -645,12 +643,6 @@
             "title": "See what 4 builders are making with Gemini 3.8 Flash",
             "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers/",
             "published": "2026-09-28T16:00:00+00:00",
-            "source": "Gemini公式"
-          },
-          {
-            "title": "Gemini 4 Argon: our next era of frontier intelligence",
-            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
-            "published": "2026-09-30T20:00:00+00:00",
             "source": "Gemini公式"
           }
         ]
@@ -712,5 +704,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-05T09:28:00.887085+00:00"
+  "lastSuccessAt": "2026-10-05T20:38:46.527665+00:00"
 }
