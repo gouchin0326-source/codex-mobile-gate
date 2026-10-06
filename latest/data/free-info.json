@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-06T02:38:01.545731+00:00",
-  "lastSuccessAt": "2026-10-05T20:38:46.527665+00:00",
+  "updatedAt": "2026-10-06T02:48:01.625245+00:00",
+  "lastSuccessAt": "2026-10-06T02:48:01.625245+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -159,9 +159,9 @@
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 2.8 - 32 km SW of Dana Point, CA",
+      "signal": "M 0.8 - 87 km NW of Karluk, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41343775",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ttrqys",
       "score": 1
     }
   ],
@@ -285,10 +285,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.8 - 32 km SW of Dana Point, CA",
-      "summary": "32 km SW of Dana Point, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41343775",
-      "published": "2026-10-05T20:23:41.610000+00:00",
+      "title": "M 0.8 - 87 km NW of Karluk, Alaska",
+      "summary": "87 km NW of Karluk, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ttrqys",
+      "published": "2026-10-06T02:47:11.207000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -453,24 +453,6 @@
       "summary": "You can now read more of the GitHub Advisory Database directly from the GraphQL API without falling back to the REST API. The SecurityAdvisory object gained five new fields: cveId:… The post New fields for SecurityAdviso",
       "url": "https://github.blog/changelog/2026-10-02-new-fields-for-securityadvisory-graphql-api",
       "published": "2026-10-02T13:18:00+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Repository security advisory comments API in public preview",
-      "summary": "You can now read, add, and edit comments on repository security advisories using the REST API, including advisories created from private vulnerability reports. Until now, the discussion on an advisory… The post Repositor",
-      "url": "https://github.blog/changelog/2026-10-02-repository-security-advisory-comments-api-in-public-preview",
-      "published": "2026-10-02T13:15:25+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -746,54 +728,72 @@
         "AI",
         "研究"
       ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Confidential comments on repository security advisories",
+      "summary": "You can now post confidential comments on repository security advisories. Confidential comments are visible only to people with write access to the repository, so you can discuss a report with… The post Confidential comm",
+      "url": "https://github.blog/changelog/2026-10-02-confidential-comments-on-repository-security-advisories",
+      "published": "2026-10-02T13:15:40+00:00",
+      "score": 2,
+      "tags": [
+        "開発",
+        "重要"
+      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-05T20:38:46.527665+00:00",
-      "lastAttemptAt": "2026-10-05T20:38:46.527665+00:00",
+      "lastSuccessAt": "2026-10-06T02:48:01.625245+00:00",
+      "lastAttemptAt": "2026-10-06T02:48:01.625245+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-05T20:38:46.527665+00:00",
-      "lastAttemptAt": "2026-10-05T20:38:46.527665+00:00",
+      "lastSuccessAt": "2026-10-06T02:48:01.625245+00:00",
+      "lastAttemptAt": "2026-10-06T02:48:01.625245+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-05T20:38:46.527665+00:00",
-      "lastAttemptAt": "2026-10-05T20:38:46.527665+00:00",
+      "lastSuccessAt": "2026-10-06T02:48:01.625245+00:00",
+      "lastAttemptAt": "2026-10-06T02:48:01.625245+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-05T20:38:46.527665+00:00",
-      "lastAttemptAt": "2026-10-05T20:38:46.527665+00:00",
+      "lastSuccessAt": "2026-10-06T02:48:01.625245+00:00",
+      "lastAttemptAt": "2026-10-06T02:48:01.625245+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-05T20:38:46.527665+00:00",
-      "lastAttemptAt": "2026-10-05T20:38:46.527665+00:00",
+      "lastSuccessAt": "2026-10-06T02:48:01.625245+00:00",
+      "lastAttemptAt": "2026-10-06T02:48:01.625245+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-05T20:38:46.527665+00:00",
-      "lastAttemptAt": "2026-10-05T20:38:46.527665+00:00",
+      "lastSuccessAt": "2026-10-06T02:48:01.625245+00:00",
+      "lastAttemptAt": "2026-10-06T02:48:01.625245+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -808,8 +808,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-05T20:38:46.527665+00:00",
-      "lastAttemptAt": "2026-10-05T20:38:46.527665+00:00",
+      "lastSuccessAt": "2026-10-06T02:48:01.625245+00:00",
+      "lastAttemptAt": "2026-10-06T02:48:01.625245+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
