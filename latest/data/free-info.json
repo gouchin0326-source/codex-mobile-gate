@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-06T08:48:01.292430+00:00",
-  "lastSuccessAt": "2026-10-06T06:28:01.850546+00:00",
+  "updatedAt": "2026-10-06T08:58:00.962327+00:00",
+  "lastSuccessAt": "2026-10-06T08:58:00.962327+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -134,27 +134,27 @@
     },
     {
       "genre": "AI",
-      "count": 8,
+      "count": 9,
       "signal": "Chatham scales its capital markets expertise with OpenAI / How Albertsons Companies is reimagining retail from the inside out / Disrupting a coordinated model-distillation campaign",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/chatham-financial",
       "score": 4
     },
     {
+      "genre": "災害",
+      "count": 7,
+      "signal": "M 0.5 - 5 km N of Big Bear City, CA / M 2.4 - 4 km NNW of Big Bear City, CA / M 2.1 - 2 km E of Tracyton, Washington",
+      "decision": "更新あり。必要時だけ確認",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41343983",
+      "score": 1
+    },
+    {
       "genre": "技術",
-      "count": 1,
-      "signal": "Mold 3.0.0 Released",
+      "count": 2,
+      "signal": "Mold 3.0.0 Released / Email Self Hosters - what are you using?",
       "decision": "更新あり。必要時だけ確認",
       "topUrl": "https://github.com/rui314/mold/releases/tag/v3.0.0",
       "score": 2
-    },
-    {
-      "genre": "災害",
-      "count": 1,
-      "signal": "M 0.8 - 87 km NW of Karluk, Alaska",
-      "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ttrqys",
-      "score": 1
     }
   ],
   "items": [
@@ -257,10 +257,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.8 - 87 km NW of Karluk, Alaska",
-      "summary": "87 km NW of Karluk, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ttrqys",
-      "published": "2026-10-06T02:47:11.207000+00:00",
+      "title": "M 0.5 - 5 km N of Big Bear City, CA",
+      "summary": "5 km N of Big Bear City, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41343983",
+      "published": "2026-10-06T08:49:45.480000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -589,54 +589,167 @@
         "開発",
         "重要"
       ]
+    },
+    {
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Gemini 4 Argon: our next era of frontier intelligence",
+      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "published": "2026-09-30T20:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "研究"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 2.4 - 4 km NNW of Big Bear City, CA",
+      "summary": "4 km NNW of Big Bear City, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41343975",
+      "published": "2026-10-06T08:40:14.510000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 2.1 - 2 km E of Tracyton, Washington",
+      "summary": "2 km E of Tracyton, Washington",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714116711",
+      "published": "2026-10-06T08:36:29.950000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.1 - 49 km NE of Kenny Lake, Alaska",
+      "summary": "49 km NE of Kenny Lake, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tucued",
+      "published": "2026-10-06T08:20:44.238000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.9 - 12 km NW of Coso Junction, CA",
+      "summary": "12 km NW of Coso Junction, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41343967",
+      "published": "2026-10-06T08:17:08.500000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Email Self Hosters - what are you using?",
+      "summary": "At the moment I self host using maddy for a bunch of domains that need a mailbox or catch all. There are some minor issues with it - some are me, some are who knows. The biggest bug bear is that the native email client o",
+      "url": "https://lobste.rs/s/rwloew/email_self_hosters_what_are_you_using",
+      "published": "2026-10-06T08:09:53+00:00",
+      "score": 1,
+      "tags": [
+        "技術"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.0 - 2 km N of The Geysers, CA",
+      "summary": "2 km N of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75445361",
+      "published": "2026-10-06T08:05:35.560000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.9 - 7 km NNE of Mecca, CA",
+      "summary": "7 km NNE of Mecca, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41343959",
+      "published": "2026-10-06T07:56:10.640000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T02:48:01.625245+00:00",
-      "lastAttemptAt": "2026-10-06T02:48:01.625245+00:00",
+      "lastSuccessAt": "2026-10-06T08:58:00.962327+00:00",
+      "lastAttemptAt": "2026-10-06T08:58:00.962327+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T02:48:01.625245+00:00",
-      "lastAttemptAt": "2026-10-06T02:48:01.625245+00:00",
+      "lastSuccessAt": "2026-10-06T08:58:00.962327+00:00",
+      "lastAttemptAt": "2026-10-06T08:58:00.962327+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T02:48:01.625245+00:00",
-      "lastAttemptAt": "2026-10-06T02:48:01.625245+00:00",
+      "lastSuccessAt": "2026-10-06T08:58:00.962327+00:00",
+      "lastAttemptAt": "2026-10-06T08:58:00.962327+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T02:48:01.625245+00:00",
-      "lastAttemptAt": "2026-10-06T02:48:01.625245+00:00",
+      "lastSuccessAt": "2026-10-06T08:58:00.962327+00:00",
+      "lastAttemptAt": "2026-10-06T08:58:00.962327+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T02:48:01.625245+00:00",
-      "lastAttemptAt": "2026-10-06T02:48:01.625245+00:00",
+      "lastSuccessAt": "2026-10-06T08:58:00.962327+00:00",
+      "lastAttemptAt": "2026-10-06T08:58:00.962327+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T02:48:01.625245+00:00",
-      "lastAttemptAt": "2026-10-06T02:48:01.625245+00:00",
+      "lastSuccessAt": "2026-10-06T08:58:00.962327+00:00",
+      "lastAttemptAt": "2026-10-06T08:58:00.962327+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -651,8 +764,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T02:48:01.625245+00:00",
-      "lastAttemptAt": "2026-10-06T02:48:01.625245+00:00",
+      "lastSuccessAt": "2026-10-06T08:58:00.962327+00:00",
+      "lastAttemptAt": "2026-10-06T08:58:00.962327+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
