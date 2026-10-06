@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-06T14:48:00.976542+00:00",
-  "lastSuccessAt": "2026-10-06T08:58:00.962327+00:00",
+  "updatedAt": "2026-10-06T14:58:01.656347+00:00",
+  "lastSuccessAt": "2026-10-06T14:58:01.656347+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -126,7 +126,7 @@
   "contexts": [
     {
       "genre": "開発",
-      "count": 14,
+      "count": 15,
       "signal": "ReviewBench: An open benchmark for AI code review / Selected models in GitHub Copilot deprecated / GitHub Copilot app for Beginners: How to build custom workflows with canvases",
       "decision": "CG開発・GitHub運用へ反映候補",
       "topUrl": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/",
@@ -143,18 +143,18 @@
     {
       "genre": "災害",
       "count": 7,
-      "signal": "M 0.5 - 5 km N of Big Bear City, CA / M 2.4 - 4 km NNW of Big Bear City, CA / M 2.1 - 2 km E of Tracyton, Washington",
+      "signal": "M 2.3 - 6 km SSW of Salcha, Alaska / M 1.4 - 15 km SE of Anza, CA / M 1.7 - 74 km ESE of Lime Village, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41343983",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tupuyx",
       "score": 1
     },
     {
       "genre": "技術",
-      "count": 2,
-      "signal": "Mold 3.0.0 Released / Email Self Hosters - what are you using?",
+      "count": 1,
+      "signal": "Montray - a tray icon for systemd service health",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://github.com/rui314/mold/releases/tag/v3.0.0",
-      "score": 2
+      "topUrl": "https://github.com/dimonomid/montray/",
+      "score": 1
     }
   ],
   "items": [
@@ -236,34 +236,33 @@
       ]
     },
     {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 2.3 - 6 km SSW of Salcha, Alaska",
+      "summary": "6 km SSW of Salcha, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tupuyx",
+      "published": "2026-10-06T14:51:28.863000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "ニュース",
+      "topic": "その他",
       "sourceWeight": 1,
-      "title": "Mold 3.0.0 Released",
+      "title": "Montray - a tray icon for systemd service health",
       "summary": "Comments",
-      "url": "https://github.com/rui314/mold/releases/tag/v3.0.0",
-      "published": "2026-10-05T14:24:26+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "重要"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.5 - 5 km N of Big Bear City, CA",
-      "summary": "5 km N of Big Bear City, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41343983",
-      "published": "2026-10-06T08:49:45.480000+00:00",
+      "url": "https://github.com/dimonomid/montray/",
+      "published": "2026-10-06T09:07:39+00:00",
       "score": 1,
       "tags": [
-        "災害"
+        "技術"
       ]
     },
     {
@@ -485,6 +484,24 @@
       ]
     },
     {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Code scanning AI Scan enablement status in security overview",
+      "summary": "Organization and enterprise administrators can now see AI Scan for pull requests enablement status in the security overview coverage view. The code scanning summary shows enabled and not enabled repository… The post Code",
+      "url": "https://github.blog/changelog/2026-10-06-code-scanning-ai-scan-enablement-status-in-security-overview",
+      "published": "2026-10-06T10:23:38+00:00",
+      "score": 2,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -573,24 +590,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Confidential comments on repository security advisories",
-      "summary": "You can now post confidential comments on repository security advisories. Confidential comments are visible only to people with write access to the repository, so you can discuss a report with… The post Confidential comm",
-      "url": "https://github.blog/changelog/2026-10-02-confidential-comments-on-repository-security-advisories",
-      "published": "2026-10-02T13:15:40+00:00",
-      "score": 2,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "google-gemini",
       "platform": "AI",
       "label": "Gemini公式",
@@ -609,82 +608,31 @@
       ]
     },
     {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.4 - 4 km NNW of Big Bear City, CA",
-      "summary": "4 km NNW of Big Bear City, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41343975",
-      "published": "2026-10-06T08:40:14.510000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.1 - 2 km E of Tracyton, Washington",
-      "summary": "2 km E of Tracyton, Washington",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714116711",
-      "published": "2026-10-06T08:36:29.950000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.1 - 49 km NE of Kenny Lake, Alaska",
-      "summary": "49 km NE of Kenny Lake, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tucued",
-      "published": "2026-10-06T08:20:44.238000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.9 - 12 km NW of Coso Junction, CA",
-      "summary": "12 km NW of Coso Junction, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41343967",
-      "published": "2026-10-06T08:17:08.500000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
       "provider": null,
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "Email Self Hosters - what are you using?",
-      "summary": "At the moment I self host using maddy for a bunch of domains that need a mailbox or catch all. There are some minor issues with it - some are me, some are who knows. The biggest bug bear is that the native email client o",
-      "url": "https://lobste.rs/s/rwloew/email_self_hosters_what_are_you_using",
-      "published": "2026-10-06T08:09:53+00:00",
-      "score": 1,
+      "title": "How we found 24 Android vulnerabilities using our open source AI security agent",
+      "summary": "A look at the targeted AI taskflows behind these findings, the critical Android bugs they uncovered, and how to run the same open-source agent on your own app. The post How we found 24 Android vulnerabilities using our o",
+      "url": "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/",
+      "published": "2026-09-28T19:00:00+00:00",
+      "score": 2,
       "tags": [
-        "技術"
+        "開発",
+        "重要"
       ]
     },
     {
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.0 - 2 km N of The Geysers, CA",
-      "summary": "2 km N of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75445361",
-      "published": "2026-10-06T08:05:35.560000+00:00",
+      "title": "M 1.4 - 15 km SE of Anza, CA",
+      "summary": "15 km SE of Anza, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41344095",
+      "published": "2026-10-06T14:43:35.290000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -694,10 +642,62 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.9 - 7 km NNE of Mecca, CA",
-      "summary": "7 km NNE of Mecca, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41343959",
-      "published": "2026-10-06T07:56:10.640000+00:00",
+      "title": "M 1.7 - 74 km ESE of Lime Village, Alaska",
+      "summary": "74 km ESE of Lime Village, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tupkzu",
+      "published": "2026-10-06T14:40:01.763000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.9 - 23 km SSE of Twentynine Palms, CA",
+      "summary": "23 km SSE of Twentynine Palms, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41344087",
+      "published": "2026-10-06T14:22:50.190000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 2.2 - 2 km E of Tracyton, Washington",
+      "summary": "2 km E of Tracyton, Washington",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714116761",
+      "published": "2026-10-06T14:19:40.430000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 2.2 - 8 km W of Willow, Alaska",
+      "summary": "8 km W of Willow, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tuotiz",
+      "published": "2026-10-06T14:19:38.953000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.9 - 9 km NW of Parkfield, CA",
+      "summary": "9 km NW of Parkfield, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75445431",
+      "published": "2026-10-06T14:14:02.170000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -708,48 +708,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T08:58:00.962327+00:00",
-      "lastAttemptAt": "2026-10-06T08:58:00.962327+00:00",
+      "lastSuccessAt": "2026-10-06T14:58:01.656347+00:00",
+      "lastAttemptAt": "2026-10-06T14:58:01.656347+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T08:58:00.962327+00:00",
-      "lastAttemptAt": "2026-10-06T08:58:00.962327+00:00",
+      "lastSuccessAt": "2026-10-06T14:58:01.656347+00:00",
+      "lastAttemptAt": "2026-10-06T14:58:01.656347+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T08:58:00.962327+00:00",
-      "lastAttemptAt": "2026-10-06T08:58:00.962327+00:00",
+      "lastSuccessAt": "2026-10-06T14:58:01.656347+00:00",
+      "lastAttemptAt": "2026-10-06T14:58:01.656347+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T08:58:00.962327+00:00",
-      "lastAttemptAt": "2026-10-06T08:58:00.962327+00:00",
+      "lastSuccessAt": "2026-10-06T14:58:01.656347+00:00",
+      "lastAttemptAt": "2026-10-06T14:58:01.656347+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T08:58:00.962327+00:00",
-      "lastAttemptAt": "2026-10-06T08:58:00.962327+00:00",
+      "lastSuccessAt": "2026-10-06T14:58:01.656347+00:00",
+      "lastAttemptAt": "2026-10-06T14:58:01.656347+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T08:58:00.962327+00:00",
-      "lastAttemptAt": "2026-10-06T08:58:00.962327+00:00",
+      "lastSuccessAt": "2026-10-06T14:58:01.656347+00:00",
+      "lastAttemptAt": "2026-10-06T14:58:01.656347+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -764,8 +764,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T08:58:00.962327+00:00",
-      "lastAttemptAt": "2026-10-06T08:58:00.962327+00:00",
+      "lastSuccessAt": "2026-10-06T14:58:01.656347+00:00",
+      "lastAttemptAt": "2026-10-06T14:58:01.656347+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

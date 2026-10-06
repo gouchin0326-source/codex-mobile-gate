@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T14:48:00.976542+00:00",
+  "updatedAt": "2026-10-06T14:58:01.656347+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -8,7 +8,7 @@
   "cards": [
     {
       "genre": "開発",
-      "count": 14,
+      "count": 15,
       "decision": "CG開発・GitHub運用へ反映候補",
       "signal": "ReviewBench: An open benchmark for AI code review / Selected models in GitHub Copilot deprecated / GitHub Copilot app for Beginners: How to build custom workflows with canvases",
       "topUrl": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/",
@@ -24,11 +24,11 @@
     },
     {
       "genre": "技術",
-      "count": 2,
+      "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "Mold 3.0.0 Released / Email Self Hosters - what are you using?",
-      "topUrl": "https://github.com/rui314/mold/releases/tag/v3.0.0",
-      "score": 2
+      "signal": "Montray - a tray icon for systemd service health",
+      "topUrl": "https://github.com/dimonomid/montray/",
+      "score": 1
     }
   ],
   "focus": [
@@ -369,6 +369,24 @@
       ]
     },
     {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Code scanning AI Scan enablement status in security overview",
+      "summary": "Organization and enterprise administrators can now see AI Scan for pull requests enablement status in the security overview coverage view. The code scanning summary shows enabled and not enabled repository… The post Code",
+      "url": "https://github.blog/changelog/2026-10-06-code-scanning-ai-scan-enablement-status-in-security-overview",
+      "published": "2026-10-06T10:23:38+00:00",
+      "score": 2,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -383,24 +401,6 @@
       "score": 2,
       "tags": [
         "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "ニュース",
-      "sourceWeight": 1,
-      "title": "Mold 3.0.0 Released",
-      "summary": "Comments",
-      "url": "https://github.com/rui314/mold/releases/tag/v3.0.0",
-      "published": "2026-10-05T14:24:26+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
         "重要"
       ]
     },
@@ -475,24 +475,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Confidential comments on repository security advisories",
-      "summary": "You can now post confidential comments on repository security advisories. Confidential comments are visible only to people with write access to the repository, so you can discuss a report with… The post Confidential comm",
-      "url": "https://github.blog/changelog/2026-10-02-confidential-comments-on-repository-security-advisories",
-      "published": "2026-10-02T13:15:40+00:00",
-      "score": 2,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "google-gemini",
       "platform": "AI",
       "label": "Gemini公式",
@@ -511,17 +493,35 @@
       ]
     },
     {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "How we found 24 Android vulnerabilities using our open source AI security agent",
+      "summary": "A look at the targeted AI taskflows behind these findings, the critical Android bugs they uncovered, and how to run the same open-source agent on your own app. The post How we found 24 Android vulnerabilities using our o",
+      "url": "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/",
+      "published": "2026-09-28T19:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "AI",
+      "topic": "その他",
       "sourceWeight": 1,
-      "title": "Email Self Hosters - what are you using?",
-      "summary": "At the moment I self host using maddy for a bunch of domains that need a mailbox or catch all. There are some minor issues with it - some are me, some are who knows. The biggest bug bear is that the native email client o",
-      "url": "https://lobste.rs/s/rwloew/email_self_hosters_what_are_you_using",
-      "published": "2026-10-06T08:09:53+00:00",
+      "title": "Montray - a tray icon for systemd service health",
+      "summary": "Comments",
+      "url": "https://github.com/dimonomid/montray/",
+      "published": "2026-10-06T09:07:39+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -694,5 +694,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-06T08:58:00.962327+00:00"
+  "lastSuccessAt": "2026-10-06T14:58:01.656347+00:00"
 }
