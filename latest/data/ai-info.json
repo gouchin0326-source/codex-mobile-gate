@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T06:18:01.664352+00:00",
+  "updatedAt": "2026-10-06T06:28:01.850546+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -23,14 +23,6 @@
       "score": 4
     },
     {
-      "genre": "論文",
-      "count": 8,
-      "decision": "必要時だけ確認",
-      "signal": "Keep It CALM: Analyzing the Limits of Global Unsafety in Text-to-Image Generation / Fast Models, Slow Evidence: A Paired and Self-Audited Evaluation of System-1 Decision Models for LLM Agent Harnesses / Choosing Before A",
-      "topUrl": "https://arxiv.org/abs/2610.02300",
-      "score": 4
-    },
-    {
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
@@ -46,13 +38,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
       "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/"
-    },
-    {
-      "label": "論文",
-      "title": "Keep It CALM: Analyzing the Limits of Global Unsafety in Text-to-Image Generation",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.02300"
     },
     {
       "label": "開発",
@@ -76,25 +61,32 @@
       "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/"
     },
     {
-      "label": "論文",
-      "title": "Fast Models, Slow Evidence: A Paired and Self-Audited Evaluation of System-1 Decision Models for LLM Agent Harnesses",
+      "label": "開発",
+      "title": "Stateless GitHub App installation tokens rolled out",
       "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.02267"
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-02-stateless-github-app-installation-tokens-rolled-out"
     },
     {
-      "label": "論文",
-      "title": "Choosing Before Acting: Comparative Value Estimation for Long-Horizon Tool-Use Agents",
+      "label": "開発",
+      "title": "Copilot code review: API support and new default effort level",
       "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.02330"
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-02-copilot-code-review-api-support-and-new-default-effort-level"
     },
     {
-      "label": "論文",
-      "title": "DeReAct: Decomposed Reasoning and Acting for Reliable AI Agents",
+      "label": "開発",
+      "title": "AI is changing developer work. Here are three skills to strengthen.",
       "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.02351"
+      "source": "GitHub",
+      "url": "https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/"
+    },
+    {
+      "label": "開発",
+      "title": "New fields for SecurityAdvisory GraphQL API",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-02-new-fields-for-securityadvisory-graphql-api"
     }
   ],
   "items": [
@@ -114,26 +106,6 @@
       "tags": [
         "開発",
         "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Keep It CALM: Analyzing the Limits of Global Unsafety in Text-to-Image Generation",
-      "summary": "arXiv:2610.02300v1 Announce Type: new Abstract: Training-free safeguards for text-to-image generation often rely on a reusable safety signal, such as an unsafe direction or global toxic subspace, applied broadly across p",
-      "url": "https://arxiv.org/abs/2610.02300",
-      "published": "2026-10-05T04:00:00+00:00",
-      "score": 4,
-      "tags": [
-        "論文",
-        "重要",
-        "制作",
         "研究"
       ]
     },
@@ -193,63 +165,6 @@
         "開発",
         "重要",
         "制作"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Fast Models, Slow Evidence: A Paired and Self-Audited Evaluation of System-1 Decision Models for LLM Agent Harnesses",
-      "summary": "arXiv:2610.02267v1 Announce Type: new Abstract: Agent harnesses make many small, typed decisions per task: which model to call, which tool to use, whether retrieved text is relevant, whether an input carries an injection",
-      "url": "https://arxiv.org/abs/2610.02267",
-      "published": "2026-10-05T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Choosing Before Acting: Comparative Value Estimation for Long-Horizon Tool-Use Agents",
-      "summary": "arXiv:2610.02330v1 Announce Type: new Abstract: Large language models (LLMs) rely on long-horizon tool invocation sequences for complex tasks, where each invocation can alter the task state and condition subsequent decis",
-      "url": "https://arxiv.org/abs/2610.02330",
-      "published": "2026-10-05T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "DeReAct: Decomposed Reasoning and Acting for Reliable AI Agents",
-      "summary": "arXiv:2610.02351v1 Announce Type: new Abstract: ReAct-based agents typically rely on a single LLM policy to propose actions, interact with the environment, and decide when a task is complete. This coupling makes action a",
-      "url": "https://arxiv.org/abs/2610.02351",
-      "published": "2026-10-05T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
       ]
     },
     {
@@ -508,39 +423,90 @@
       ]
     },
     {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
       "provider": null,
-      "topic": "AI",
+      "topic": "開発",
       "sourceWeight": 1,
-      "title": "MintFlow: Minimal Trajectory Intervention for Constrained Flow Matching",
-      "summary": "arXiv:2610.02260v1 Announce Type: new Abstract: Flow matching models excel at generative modeling, and many downstream applications require their samples to satisfy prescribed constraints, such as observed measurements a",
-      "url": "https://arxiv.org/abs/2610.02260",
-      "published": "2026-10-05T04:00:00+00:00",
+      "title": "Unvalidated npm trusted publishing configurations now expire",
+      "summary": "Unvalidated npm trusted publishing configurations now expire 48 hours after creation and can no longer authorize publishing. This limits the risk of trusting a repository or project name that changes… The post Unvalidate",
+      "url": "https://github.blog/changelog/2026-10-02-unvalidated-npm-trusted-publishing-configurations-now-expire",
+      "published": "2026-10-02T19:07:04+00:00",
       "score": 2,
       "tags": [
-        "論文",
+        "開発"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "npm staged publishing now supports creating new packages",
+      "summary": "You can now create a new npm package with npm stage publish, using a local session or a granular access token, including a stage-only token. This lets you create packages… The post npm staged publishing now supports crea",
+      "url": "https://github.blog/changelog/2026-10-02-npm-staged-publishing-now-supports-creating-new-packages",
+      "published": "2026-10-02T19:05:17+00:00",
+      "score": 2,
+      "tags": [
+        "開発"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "A model guide for the GPT-6 family",
+      "summary": "Learn how startups can choose GPT-6 models, tune reasoning effort, improve prompts and skills, coordinate tools, and prepare workflows for production.",
+      "url": "https://openai.com/index/practical-guide-building-gpt-6",
+      "published": "2026-10-02T16:15:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
         "研究"
       ]
     },
     {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
       "provider": null,
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "The AI Risk Observatory: What Can We Learn from AI Disclosures in Annual Reports About Societal Resilience?",
-      "summary": "arXiv:2610.02281v1 Announce Type: new Abstract: Societal resilience research relies on access to useful and actionable data, which motivates our main research question: Can annual reports, processed at scale with LLMs, p",
-      "url": "https://arxiv.org/abs/2610.02281",
-      "published": "2026-10-05T04:00:00+00:00",
+      "title": "Confidential comments on repository security advisories",
+      "summary": "You can now post confidential comments on repository security advisories. Confidential comments are visible only to people with write access to the repository, so you can discuss a report with… The post Confidential comm",
+      "url": "https://github.blog/changelog/2026-10-02-confidential-comments-on-repository-security-advisories",
+      "published": "2026-10-02T13:15:40+00:00",
       "score": 2,
       "tags": [
-        "論文",
-        "研究"
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "anthropic-claude",
+      "platform": "AI",
+      "label": "Claude / Anthropic公式",
+      "genre": "AI",
+      "provider": "claude",
+      "topic": "AI",
+      "sourceWeight": 2,
+      "title": "Claude Frontier Academy",
+      "summary": "公式サイトマップで更新を検知。内容は公式ページで確認。",
+      "url": "https://www.anthropic.com/news/claude-frontier-academy",
+      "published": "2026-10-02T17:12:50.000Z",
+      "score": 1,
+      "tags": [
+        "AI"
       ]
     }
   ],
@@ -704,5 +670,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-06T02:48:01.625245+00:00"
+  "lastSuccessAt": "2026-10-06T06:28:01.850546+00:00"
 }
