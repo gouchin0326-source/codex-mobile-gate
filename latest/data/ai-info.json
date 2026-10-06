@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T15:08:00.962422+00:00",
+  "updatedAt": "2026-10-06T22:20:05.043508+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -16,9 +16,9 @@
     },
     {
       "genre": "AI",
-      "count": 9,
+      "count": 10,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "Chatham scales its capital markets expertise with OpenAI / How Albertsons Companies is reimagining retail from the inside out / Disrupting a coordinated model-distillation campaign",
+      "signal": "Chatham scales its capital markets expertise with OpenAI / Atlassian and OpenAI expand partnership to turn enterprise knowledge into action / Advancing computer use with Ironclad",
       "topUrl": "https://openai.com/index/chatham-financial",
       "score": 4
     },
@@ -26,8 +26,8 @@
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "Montray - a tray icon for systemd service health",
-      "topUrl": "https://github.com/dimonomid/montray/",
+      "signal": "That Time I Worked With a Laptop Thief",
+      "topUrl": "https://blog.pipetogrep.org/2025/07/27/that-time-i-worked-with-a-laptop-thief/",
       "score": 1
     }
   ],
@@ -62,31 +62,31 @@
     },
     {
       "label": "開発",
-      "title": "Stateless GitHub App installation tokens rolled out",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-02-stateless-github-app-installation-tokens-rolled-out"
-    },
-    {
-      "label": "開発",
-      "title": "Copilot code review: API support and new default effort level",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-02-copilot-code-review-api-support-and-new-default-effort-level"
-    },
-    {
-      "label": "開発",
-      "title": "AI is changing developer work. Here are three skills to strengthen.",
+      "title": "Building Git infrastructure for agent-scale development",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
-      "url": "https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/"
+      "url": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/"
     },
     {
       "label": "開発",
-      "title": "New fields for SecurityAdvisory GraphQL API",
+      "title": "Stacked pull requests generally available",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-02-new-fields-for-securityadvisory-graphql-api"
+      "url": "https://github.blog/changelog/2026-10-06-stacked-pull-requests-generally-available"
+    },
+    {
+      "label": "AI",
+      "title": "Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
+      "why": "Codex/AI開発判断に関係",
+      "source": "ChatGPT / OpenAI公式",
+      "url": "https://openai.com/index/atlassian-partnership"
+    },
+    {
+      "label": "AI",
+      "title": "Advancing computer use with Ironclad",
+      "why": "Codex/AI開発判断に関係",
+      "source": "ChatGPT / OpenAI公式",
+      "url": "https://openai.com/index/advancing-computer-use-with-ironclad"
     }
   ],
   "items": [
@@ -168,6 +168,80 @@
       ]
     },
     {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Building Git infrastructure for agent-scale development",
+      "summary": "We're rebuilding GitHub's Git infrastructure while GitHub keeps running, creating a foundation for agent-scale software development. The post Building Git infrastructure for agent-scale development appeared first on The ",
+      "url": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/",
+      "published": "2026-10-06T20:57:56+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Stacked pull requests generally available",
+      "summary": "GitHub stacked pull requests are now generally available. Break large changes into smaller, focused pull requests that you can review independently and merge together. Since the feature went into public… The post Stacked",
+      "url": "https://github.blog/changelog/2026-10-06-stacked-pull-requests-generally-available",
+      "published": "2026-10-06T20:16:41+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
+      "summary": "Atlassian and OpenAI are expanding their partnership to connect frontier models with enterprise knowledge and help teams plan, build, and deliver work.",
+      "url": "https://openai.com/index/atlassian-partnership",
+      "published": "2026-10-06T16:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Advancing computer use with Ironclad",
+      "summary": "Learn how OpenAI and Ironclad are training and evaluating AI agents on complex contracting workflows to advance computer use for professional work.",
+      "url": "https://openai.com/index/advancing-computer-use-with-ironclad",
+      "published": "2026-10-06T10:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -222,24 +296,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "New fields for SecurityAdvisory GraphQL API",
-      "summary": "You can now read more of the GitHub Advisory Database directly from the GraphQL API without falling back to the REST API. The SecurityAdvisory object gained five new fields: cveId:… The post New fields for SecurityAdviso",
-      "url": "https://github.blog/changelog/2026-10-02-new-fields-for-securityadvisory-graphql-api",
-      "published": "2026-10-02T13:18:00+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -274,25 +330,6 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Disrupting a coordinated model-distillation campaign",
-      "summary": "Learn how OpenAI disrupted a campaign to extract protected model reasoning and is strengthening defenses against adversarial distillation.",
-      "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
-      "published": "2026-09-30T10:30:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "研究"
       ]
     },
     {
@@ -348,24 +385,6 @@
         "AI",
         "開発",
         "研究"
-      ]
-    },
-    {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Improving site performance by shipping more CSS",
-      "summary": "How we fully migrated github.com away from CSS-in-JS. The post Improving site performance by shipping more CSS appeared first on The GitHub Blog .",
-      "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/",
-      "published": "2026-09-25T15:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
       ]
     },
     {
@@ -509,23 +528,6 @@
         "開発",
         "重要"
       ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Montray - a tray icon for systemd service health",
-      "summary": "Comments",
-      "url": "https://github.com/dimonomid/montray/",
-      "published": "2026-10-06T09:07:39+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
-      ]
     }
   ],
   "providerWatch": {
@@ -579,21 +581,21 @@
             "source": "ChatGPT / OpenAI公式"
           },
           {
+            "title": "Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
+            "url": "https://openai.com/index/atlassian-partnership",
+            "published": "2026-10-06T16:00:00+00:00",
+            "source": "ChatGPT / OpenAI公式"
+          },
+          {
+            "title": "Advancing computer use with Ironclad",
+            "url": "https://openai.com/index/advancing-computer-use-with-ironclad",
+            "published": "2026-10-06T10:00:00+00:00",
+            "source": "ChatGPT / OpenAI公式"
+          },
+          {
             "title": "How Albertsons Companies is reimagining retail from the inside out",
             "url": "https://openai.com/index/albertsons-reimagining-retail",
             "published": "2026-10-01T16:00:00+00:00",
-            "source": "ChatGPT / OpenAI公式"
-          },
-          {
-            "title": "Disrupting a coordinated model-distillation campaign",
-            "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
-            "published": "2026-09-30T10:30:00+00:00",
-            "source": "ChatGPT / OpenAI公式"
-          },
-          {
-            "title": "Our approach to EU text provenance rules",
-            "url": "https://openai.com/index/eu-text-provenance",
-            "published": "2026-10-05T15:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           }
         ]
@@ -663,9 +665,9 @@
         ],
         "latest": [
           {
-            "title": "Claude Frontier Academy",
-            "url": "https://www.anthropic.com/news/claude-frontier-academy",
-            "published": "2026-10-02T17:12:50.000Z",
+            "title": "Cyber Verification Program",
+            "url": "https://www.anthropic.com/news/cyber-verification-program",
+            "published": "2026-10-06T19:39:32.000Z",
             "source": "Claude / Anthropic公式"
           }
         ]
@@ -694,5 +696,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-06T14:58:01.656347+00:00"
+  "lastSuccessAt": "2026-10-06T22:20:05.043508+00:00"
 }

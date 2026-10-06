@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-06T15:08:00.962422+00:00",
-  "lastSuccessAt": "2026-10-06T14:58:01.656347+00:00",
+  "updatedAt": "2026-10-06T22:20:05.043508+00:00",
+  "lastSuccessAt": "2026-10-06T22:20:05.043508+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -134,26 +134,26 @@
     },
     {
       "genre": "AI",
-      "count": 9,
-      "signal": "Chatham scales its capital markets expertise with OpenAI / How Albertsons Companies is reimagining retail from the inside out / Disrupting a coordinated model-distillation campaign",
+      "count": 10,
+      "signal": "Chatham scales its capital markets expertise with OpenAI / Atlassian and OpenAI expand partnership to turn enterprise knowledge into action / Advancing computer use with Ironclad",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/chatham-financial",
       "score": 4
     },
     {
       "genre": "災害",
-      "count": 7,
-      "signal": "M 2.3 - 6 km SSW of Salcha, Alaska / M 1.4 - 15 km SE of Anza, CA / M 1.7 - 74 km ESE of Lime Village, Alaska",
+      "count": 6,
+      "signal": "M 1.7 - 37 km ENE of Lucerne Valley, CA / M 1.4 - 92 km SE of Kokhanok, Alaska / M 1.0 - 5 km SE of Lytle Creek, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tupuyx",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41344239",
       "score": 1
     },
     {
       "genre": "技術",
       "count": 1,
-      "signal": "Montray - a tray icon for systemd service health",
+      "signal": "That Time I Worked With a Laptop Thief",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://github.com/dimonomid/montray/",
+      "topUrl": "https://blog.pipetogrep.org/2025/07/27/that-time-i-worked-with-a-laptop-thief/",
       "score": 1
     }
   ],
@@ -239,10 +239,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.3 - 6 km SSW of Salcha, Alaska",
-      "summary": "6 km SSW of Salcha, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tupuyx",
-      "published": "2026-10-06T14:51:28.863000+00:00",
+      "title": "M 1.7 - 37 km ENE of Lucerne Valley, CA",
+      "summary": "37 km ENE of Lucerne Valley, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41344239",
+      "published": "2026-10-06T22:13:07.170000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -254,12 +254,12 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "その他",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Montray - a tray icon for systemd service health",
+      "title": "That Time I Worked With a Laptop Thief",
       "summary": "Comments",
-      "url": "https://github.com/dimonomid/montray/",
-      "published": "2026-10-06T09:07:39+00:00",
+      "url": "https://blog.pipetogrep.org/2025/07/27/that-time-i-worked-with-a-laptop-thief/",
+      "published": "2026-10-06T20:16:33+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -271,12 +271,12 @@
       "label": "Claude / Anthropic公式",
       "genre": "AI",
       "provider": "claude",
-      "topic": "AI",
+      "topic": "ガジェット",
       "sourceWeight": 2,
-      "title": "Claude Frontier Academy",
+      "title": "Cyber Verification Program",
       "summary": "公式サイトマップで更新を検知。内容は公式ページで確認。",
-      "url": "https://www.anthropic.com/news/claude-frontier-academy",
-      "published": "2026-10-02T17:12:50.000Z",
+      "url": "https://www.anthropic.com/news/cyber-verification-program",
+      "published": "2026-10-06T19:39:32.000Z",
       "score": 1,
       "tags": [
         "AI"
@@ -299,6 +299,80 @@
         "開発",
         "重要",
         "制作"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Building Git infrastructure for agent-scale development",
+      "summary": "We're rebuilding GitHub's Git infrastructure while GitHub keeps running, creating a foundation for agent-scale software development. The post Building Git infrastructure for agent-scale development appeared first on The ",
+      "url": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/",
+      "published": "2026-10-06T20:57:56+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Stacked pull requests generally available",
+      "summary": "GitHub stacked pull requests are now generally available. Break large changes into smaller, focused pull requests that you can review independently and merge together. Since the feature went into public… The post Stacked",
+      "url": "https://github.blog/changelog/2026-10-06-stacked-pull-requests-generally-available",
+      "published": "2026-10-06T20:16:41+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
+      "summary": "Atlassian and OpenAI are expanding their partnership to connect frontier models with enterprise knowledge and help teams plan, build, and deliver work.",
+      "url": "https://openai.com/index/atlassian-partnership",
+      "published": "2026-10-06T16:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Advancing computer use with Ironclad",
+      "summary": "Learn how OpenAI and Ironclad are training and evaluating AI agents on complex contracting workflows to advance computer use for professional work.",
+      "url": "https://openai.com/index/advancing-computer-use-with-ironclad",
+      "published": "2026-10-06T10:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
       ]
     },
     {
@@ -356,24 +430,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "New fields for SecurityAdvisory GraphQL API",
-      "summary": "You can now read more of the GitHub Advisory Database directly from the GraphQL API without falling back to the REST API. The SecurityAdvisory object gained five new fields: cveId:… The post New fields for SecurityAdviso",
-      "url": "https://github.blog/changelog/2026-10-02-new-fields-for-securityadvisory-graphql-api",
-      "published": "2026-10-02T13:18:00+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -411,25 +467,6 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Disrupting a coordinated model-distillation campaign",
-      "summary": "Learn how OpenAI disrupted a campaign to extract protected model reasoning and is strengthening defenses against adversarial distillation.",
-      "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign",
-      "published": "2026-09-30T10:30:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "研究"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -459,24 +496,6 @@
       "summary": "The open source Git project just released Git 2.56. Here is GitHub's look at some of the most interesting features and changes introduced since last time. The post Highlights from Git 2.56 appeared first on The GitHub Bl",
       "url": "https://github.blog/open-source/git/highlights-from-git-2-56/",
       "published": "2026-09-28T17:23:33+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Improving site performance by shipping more CSS",
-      "summary": "How we fully migrated github.com away from CSS-in-JS. The post Improving site performance by shipping more CSS appeared first on The GitHub Blog .",
-      "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/",
-      "published": "2026-09-25T15:00:00+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -629,10 +648,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.4 - 15 km SE of Anza, CA",
-      "summary": "15 km SE of Anza, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41344095",
-      "published": "2026-10-06T14:43:35.290000+00:00",
+      "title": "M 1.4 - 92 km SE of Kokhanok, Alaska",
+      "summary": "92 km SE of Kokhanok, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tvekzj",
+      "published": "2026-10-06T22:10:39.753000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -642,10 +661,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.7 - 74 km ESE of Lime Village, Alaska",
-      "summary": "74 km ESE of Lime Village, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tupkzu",
-      "published": "2026-10-06T14:40:01.763000+00:00",
+      "title": "M 1.0 - 5 km SE of Lytle Creek, CA",
+      "summary": "5 km SE of Lytle Creek, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41344223",
+      "published": "2026-10-06T22:10:28.380000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -655,10 +674,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.9 - 23 km SSE of Twentynine Palms, CA",
-      "summary": "23 km SSE of Twentynine Palms, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41344087",
-      "published": "2026-10-06T14:22:50.190000+00:00",
+      "title": "M 1.9 - 7 km NNW of Raymond, Washington",
+      "summary": "7 km NNW of Raymond, Washington",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714117111",
+      "published": "2026-10-06T21:59:31.430000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -668,10 +687,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.2 - 2 km E of Tracyton, Washington",
-      "summary": "2 km E of Tracyton, Washington",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714116761",
-      "published": "2026-10-06T14:19:40.430000+00:00",
+      "title": "M 4.8 - 190 km SW of Abepura, Indonesia",
+      "summary": "190 km SW of Abepura, Indonesia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0le",
+      "published": "2026-10-06T21:56:42.540000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -681,23 +700,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.2 - 8 km W of Willow, Alaska",
-      "summary": "8 km W of Willow, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tuotiz",
-      "published": "2026-10-06T14:19:38.953000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.9 - 9 km NW of Parkfield, CA",
-      "summary": "9 km NW of Parkfield, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75445431",
-      "published": "2026-10-06T14:14:02.170000+00:00",
+      "title": "M 2.3 - 27 km WSW of Susitna, Alaska",
+      "summary": "27 km WSW of Susitna, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tvdybl",
+      "published": "2026-10-06T21:54:50.772000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -708,48 +714,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T14:58:01.656347+00:00",
-      "lastAttemptAt": "2026-10-06T14:58:01.656347+00:00",
+      "lastSuccessAt": "2026-10-06T22:20:05.043508+00:00",
+      "lastAttemptAt": "2026-10-06T22:20:05.043508+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T14:58:01.656347+00:00",
-      "lastAttemptAt": "2026-10-06T14:58:01.656347+00:00",
+      "lastSuccessAt": "2026-10-06T22:20:05.043508+00:00",
+      "lastAttemptAt": "2026-10-06T22:20:05.043508+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T14:58:01.656347+00:00",
-      "lastAttemptAt": "2026-10-06T14:58:01.656347+00:00",
+      "lastSuccessAt": "2026-10-06T22:20:05.043508+00:00",
+      "lastAttemptAt": "2026-10-06T22:20:05.043508+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T14:58:01.656347+00:00",
-      "lastAttemptAt": "2026-10-06T14:58:01.656347+00:00",
+      "lastSuccessAt": "2026-10-06T22:20:05.043508+00:00",
+      "lastAttemptAt": "2026-10-06T22:20:05.043508+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T14:58:01.656347+00:00",
-      "lastAttemptAt": "2026-10-06T14:58:01.656347+00:00",
+      "lastSuccessAt": "2026-10-06T22:20:05.043508+00:00",
+      "lastAttemptAt": "2026-10-06T22:20:05.043508+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T14:58:01.656347+00:00",
-      "lastAttemptAt": "2026-10-06T14:58:01.656347+00:00",
+      "lastSuccessAt": "2026-10-06T22:20:05.043508+00:00",
+      "lastAttemptAt": "2026-10-06T22:20:05.043508+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -764,8 +770,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T14:58:01.656347+00:00",
-      "lastAttemptAt": "2026-10-06T14:58:01.656347+00:00",
+      "lastSuccessAt": "2026-10-06T22:20:05.043508+00:00",
+      "lastAttemptAt": "2026-10-06T22:20:05.043508+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
