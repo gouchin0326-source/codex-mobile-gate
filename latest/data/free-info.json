@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-07T04:18:01.418634+00:00",
-  "lastSuccessAt": "2026-10-06T22:20:05.043508+00:00",
+  "updatedAt": "2026-10-07T04:28:01.508923+00:00",
+  "lastSuccessAt": "2026-10-07T04:28:01.508923+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -127,37 +127,57 @@
     {
       "genre": "開発",
       "count": 15,
-      "signal": "ReviewBench: An open benchmark for AI code review / Selected models in GitHub Copilot deprecated / GitHub Copilot app for Beginners: How to build custom workflows with canvases",
+      "signal": "ReviewBench: An open benchmark for AI code review / GitHub Copilot app for Beginners: How to build custom workflows with canvases / Building Git infrastructure for agent-scale deve",
       "decision": "CG開発・GitHub運用へ反映候補",
       "topUrl": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/",
       "score": 4
     },
     {
       "genre": "AI",
-      "count": 10,
-      "signal": "Chatham scales its capital markets expertise with OpenAI / Atlassian and OpenAI expand partnership to turn enterprise knowledge into action / Advancing computer use with Ironclad",
+      "count": 11,
+      "signal": "Sharing AI progress in mathematics / Chatham scales its capital markets expertise with OpenAI / Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
       "decision": "AI/Codex運用の変化を確認",
-      "topUrl": "https://openai.com/index/chatham-financial",
+      "topUrl": "https://openai.com/index/sharing-ai-progress-in-mathematics",
       "score": 4
     },
     {
       "genre": "災害",
-      "count": 6,
-      "signal": "M 1.7 - 37 km ENE of Lucerne Valley, CA / M 1.4 - 92 km SE of Kokhanok, Alaska / M 1.0 - 5 km SE of Lytle Creek, CA",
+      "count": 5,
+      "signal": "M 1.2 - 13 km ESE of Talkeetna, Alaska / M 1.7 - 30 km NW of Covelo, CA / M 1.7 - 24 km ENE of Pine Valley, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41344239",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tvqxnx",
       "score": 1
     },
     {
       "genre": "技術",
       "count": 1,
-      "signal": "That Time I Worked With a Laptop Thief",
+      "signal": "Janet on x32: 32-bit Pointers, 64-bit Speed, 25% Less RAM",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://blog.pipetogrep.org/2025/07/27/that-time-i-worked-with-a-laptop-thief/",
+      "topUrl": "https://alexalejandre.com/programming/lisp/janet-for-the-x32-abi/",
       "score": 1
     }
   ],
   "items": [
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Sharing AI progress in mathematics",
+      "summary": "OpenAI publishes new results on open problems in mathematics from an internal frontier model and shares Lean proof formalizations and research details on GitHub.",
+      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+      "published": "2026-10-06T12:00:00+00:00",
+      "score": 4,
+      "tags": [
+        "AI",
+        "重要",
+        "開発",
+        "研究"
+      ]
+    },
     {
       "source": "github-blog",
       "platform": "開発",
@@ -185,35 +205,14 @@
       "provider": null,
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "Selected models in GitHub Copilot deprecated",
-      "summary": "As of today, October 2, 2026, we have deprecated the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions). Model… The post Selected mode",
-      "url": "https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated",
-      "published": "2026-10-02T18:24:19+00:00",
-      "score": 4,
+      "title": "Stacked pull requests generally available",
+      "summary": "GitHub stacked pull requests are now generally available. Break large changes into smaller, focused pull requests that you can review independently and merge together. Since the feature went into public… The post Stacked",
+      "url": "https://github.blog/changelog/2026-10-06-stacked-pull-requests-generally-available",
+      "published": "2026-10-06T20:16:41+00:00",
+      "score": 3,
       "tags": [
         "開発",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Chatham scales its capital markets expertise with OpenAI",
-      "summary": "Chatham Financial uses Codex and GPT-5.6 to build technology and redesign workflows, cutting trade validation from 30 minutes to under 4.",
-      "url": "https://openai.com/index/chatham-financial",
-      "published": "2026-10-02T00:00:00+00:00",
-      "score": 4,
-      "tags": [
-        "AI",
-        "重要",
-        "制作",
-        "開発"
+        "重要"
       ]
     },
     {
@@ -239,10 +238,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.7 - 37 km ENE of Lucerne Valley, CA",
-      "summary": "37 km ENE of Lucerne Valley, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41344239",
-      "published": "2026-10-06T22:13:07.170000+00:00",
+      "title": "M 1.2 - 13 km ESE of Talkeetna, Alaska",
+      "summary": "13 km ESE of Talkeetna, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tvqxnx",
+      "published": "2026-10-07T04:24:04.959000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -256,10 +255,10 @@
       "provider": null,
       "topic": "技術",
       "sourceWeight": 1,
-      "title": "That Time I Worked With a Laptop Thief",
+      "title": "Janet on x32: 32-bit Pointers, 64-bit Speed, 25% Less RAM",
       "summary": "Comments",
-      "url": "https://blog.pipetogrep.org/2025/07/27/that-time-i-worked-with-a-laptop-thief/",
-      "published": "2026-10-06T20:16:33+00:00",
+      "url": "https://alexalejandre.com/programming/lisp/janet-for-the-x32-abi/",
+      "published": "2026-10-06T22:26:46+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -280,6 +279,26 @@
       "score": 1,
       "tags": [
         "AI"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Chatham scales its capital markets expertise with OpenAI",
+      "summary": "Chatham Financial uses Codex and GPT-5.6 to build technology and redesign workflows, cutting trade validation from 30 minutes to under 4.",
+      "url": "https://openai.com/index/chatham-financial",
+      "published": "2026-10-02T00:00:00+00:00",
+      "score": 4,
+      "tags": [
+        "AI",
+        "重要",
+        "制作",
+        "開発"
       ]
     },
     {
@@ -313,24 +332,6 @@
       "summary": "We're rebuilding GitHub's Git infrastructure while GitHub keeps running, creating a foundation for agent-scale software development. The post Building Git infrastructure for agent-scale development appeared first on The ",
       "url": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/",
       "published": "2026-10-06T20:57:56+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Stacked pull requests generally available",
-      "summary": "GitHub stacked pull requests are now generally available. Break large changes into smaller, focused pull requests that you can review independently and merge together. Since the feature went into public… The post Stacked",
-      "url": "https://github.blog/changelog/2026-10-06-stacked-pull-requests-generally-available",
-      "published": "2026-10-06T20:16:41+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -430,25 +431,6 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "How Albertsons Companies is reimagining retail from the inside out",
-      "summary": "Albertsons Cos. is using ChatGPT Enterprise and the OpenAI API to help teams work faster and make grocery shopping easier for millions of customers.",
-      "url": "https://openai.com/index/albertsons-reimagining-retail",
-      "published": "2026-10-01T16:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "開発"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -499,6 +481,42 @@
       "score": 3,
       "tags": [
         "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Update your IDE to restore agent activity in Copilot usage metrics",
+      "summary": "If your Copilot usage metrics have shown agent activity or agent lines of code falling while Copilot usage kept growing, we’ve found the cause, and a fix is rolling out… The post Update your IDE to restore agent activity",
+      "url": "https://github.blog/changelog/2026-10-06-update-your-ide-to-restore-agent-activity-in-copilot-usage-metrics",
+      "published": "2026-10-06T23:43:00+00:00",
+      "score": 2,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "How Jump Trading is scaling quant research with ChatGPT",
+      "summary": "Jump Trading uses OpenAI to expand quantitative research. See how longer-running AI workflows combine multiple data sources with human review.",
+      "url": "https://openai.com/index/jump-trading",
+      "published": "2026-10-06T12:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
         "重要"
       ]
     },
@@ -648,10 +666,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.4 - 92 km SE of Kokhanok, Alaska",
-      "summary": "92 km SE of Kokhanok, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tvekzj",
-      "published": "2026-10-06T22:10:39.753000+00:00",
+      "title": "M 1.7 - 30 km NW of Covelo, CA",
+      "summary": "30 km NW of Covelo, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75445776",
+      "published": "2026-10-07T04:10:07.250000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -661,10 +679,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.0 - 5 km SE of Lytle Creek, CA",
-      "summary": "5 km SE of Lytle Creek, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41344223",
-      "published": "2026-10-06T22:10:28.380000+00:00",
+      "title": "M 1.7 - 24 km ENE of Pine Valley, CA",
+      "summary": "24 km ENE of Pine Valley, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41344359",
+      "published": "2026-10-07T04:09:53.690000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -674,10 +692,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.9 - 7 km NNW of Raymond, Washington",
-      "summary": "7 km NNW of Raymond, Washington",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714117111",
-      "published": "2026-10-06T21:59:31.430000+00:00",
+      "title": "M 1.6 - 10 km WSW of Trapper Creek, Alaska",
+      "summary": "10 km WSW of Trapper Creek, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tvpujf",
+      "published": "2026-10-07T03:50:26.630000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -687,23 +705,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 4.8 - 190 km SW of Abepura, Indonesia",
-      "summary": "190 km SW of Abepura, Indonesia",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0le",
-      "published": "2026-10-06T21:56:42.540000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.3 - 27 km WSW of Susitna, Alaska",
-      "summary": "27 km WSW of Susitna, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tvdybl",
-      "published": "2026-10-06T21:54:50.772000+00:00",
+      "title": "M 1.4 - 24 km S of Twentynine Palms, CA",
+      "summary": "24 km S of Twentynine Palms, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41344351",
+      "published": "2026-10-07T03:40:11.130000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -714,48 +719,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T22:20:05.043508+00:00",
-      "lastAttemptAt": "2026-10-06T22:20:05.043508+00:00",
+      "lastSuccessAt": "2026-10-07T04:28:01.508923+00:00",
+      "lastAttemptAt": "2026-10-07T04:28:01.508923+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T22:20:05.043508+00:00",
-      "lastAttemptAt": "2026-10-06T22:20:05.043508+00:00",
+      "lastSuccessAt": "2026-10-07T04:28:01.508923+00:00",
+      "lastAttemptAt": "2026-10-07T04:28:01.508923+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T22:20:05.043508+00:00",
-      "lastAttemptAt": "2026-10-06T22:20:05.043508+00:00",
+      "lastSuccessAt": "2026-10-07T04:28:01.508923+00:00",
+      "lastAttemptAt": "2026-10-07T04:28:01.508923+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T22:20:05.043508+00:00",
-      "lastAttemptAt": "2026-10-06T22:20:05.043508+00:00",
+      "lastSuccessAt": "2026-10-07T04:28:01.508923+00:00",
+      "lastAttemptAt": "2026-10-07T04:28:01.508923+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T22:20:05.043508+00:00",
-      "lastAttemptAt": "2026-10-06T22:20:05.043508+00:00",
+      "lastSuccessAt": "2026-10-07T04:28:01.508923+00:00",
+      "lastAttemptAt": "2026-10-07T04:28:01.508923+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T22:20:05.043508+00:00",
-      "lastAttemptAt": "2026-10-06T22:20:05.043508+00:00",
+      "lastSuccessAt": "2026-10-07T04:28:01.508923+00:00",
+      "lastAttemptAt": "2026-10-07T04:28:01.508923+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -770,8 +775,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-06T22:20:05.043508+00:00",
-      "lastAttemptAt": "2026-10-06T22:20:05.043508+00:00",
+      "lastSuccessAt": "2026-10-07T04:28:01.508923+00:00",
+      "lastAttemptAt": "2026-10-07T04:28:01.508923+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

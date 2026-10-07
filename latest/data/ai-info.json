@@ -1,50 +1,50 @@
 {
-  "updatedAt": "2026-10-07T04:18:01.418634+00:00",
+  "updatedAt": "2026-10-07T04:28:01.508923+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "ReviewBench: An open benchmark for AI code review",
+  "topLine": "Sharing AI progress in mathematics",
   "cards": [
     {
       "genre": "開発",
       "count": 15,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "ReviewBench: An open benchmark for AI code review / Selected models in GitHub Copilot deprecated / GitHub Copilot app for Beginners: How to build custom workflows with canvases",
+      "signal": "ReviewBench: An open benchmark for AI code review / GitHub Copilot app for Beginners: How to build custom workflows with canvases / Building Git infrastructure for agent-scale development",
       "topUrl": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/",
       "score": 4
     },
     {
       "genre": "AI",
-      "count": 10,
+      "count": 11,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "Chatham scales its capital markets expertise with OpenAI / Atlassian and OpenAI expand partnership to turn enterprise knowledge into action / Advancing computer use with Ironclad",
-      "topUrl": "https://openai.com/index/chatham-financial",
+      "signal": "Sharing AI progress in mathematics / Chatham scales its capital markets expertise with OpenAI / Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
+      "topUrl": "https://openai.com/index/sharing-ai-progress-in-mathematics",
       "score": 4
     },
     {
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "That Time I Worked With a Laptop Thief",
-      "topUrl": "https://blog.pipetogrep.org/2025/07/27/that-time-i-worked-with-a-laptop-thief/",
+      "signal": "Janet on x32: 32-bit Pointers, 64-bit Speed, 25% Less RAM",
+      "topUrl": "https://alexalejandre.com/programming/lisp/janet-for-the-x32-abi/",
       "score": 1
     }
   ],
   "focus": [
+    {
+      "label": "AI",
+      "title": "Sharing AI progress in mathematics",
+      "why": "Codex/AI開発判断に関係",
+      "source": "ChatGPT / OpenAI公式",
+      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics"
+    },
     {
       "label": "開発",
       "title": "ReviewBench: An open benchmark for AI code review",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
       "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/"
-    },
-    {
-      "label": "開発",
-      "title": "Selected models in GitHub Copilot deprecated",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated"
     },
     {
       "label": "AI",
@@ -91,6 +91,26 @@
   ],
   "items": [
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Sharing AI progress in mathematics",
+      "summary": "OpenAI publishes new results on open problems in mathematics from an internal frontier model and shares Lean proof formalizations and research details on GitHub.",
+      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+      "published": "2026-10-06T12:00:00+00:00",
+      "score": 4,
+      "tags": [
+        "AI",
+        "重要",
+        "開発",
+        "研究"
+      ]
+    },
+    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -102,25 +122,6 @@
       "summary": "We’re launching ReviewBench, a benchmark for code review agents built on representative GitHub pull requests, multi-source ground truth, calibrated evaluation, and production-aligned metrics. The post ReviewBench: An ope",
       "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/",
       "published": "2026-10-05T15:59:40+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Selected models in GitHub Copilot deprecated",
-      "summary": "As of today, October 2, 2026, we have deprecated the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions). Model… The post Selected mode",
-      "url": "https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated",
-      "published": "2026-10-02T18:24:19+00:00",
       "score": 4,
       "tags": [
         "開発",
@@ -296,25 +297,6 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "How Albertsons Companies is reimagining retail from the inside out",
-      "summary": "Albertsons Cos. is using ChatGPT Enterprise and the OpenAI API to help teams work faster and make grocery shopping easier for millions of customers.",
-      "url": "https://openai.com/index/albertsons-reimagining-retail",
-      "published": "2026-10-01T16:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "開発"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -385,6 +367,42 @@
         "AI",
         "開発",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Update your IDE to restore agent activity in Copilot usage metrics",
+      "summary": "If your Copilot usage metrics have shown agent activity or agent lines of code falling while Copilot usage kept growing, we’ve found the cause, and a fix is rolling out… The post Update your IDE to restore agent activity",
+      "url": "https://github.blog/changelog/2026-10-06-update-your-ide-to-restore-agent-activity-in-copilot-usage-metrics",
+      "published": "2026-10-06T23:43:00+00:00",
+      "score": 2,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "How Jump Trading is scaling quant research with ChatGPT",
+      "summary": "Jump Trading uses OpenAI to expand quantitative research. See how longer-running AI workflows combine multiple data sources with human review.",
+      "url": "https://openai.com/index/jump-trading",
+      "published": "2026-10-06T12:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
       ]
     },
     {
@@ -510,24 +528,6 @@
         "AI",
         "研究"
       ]
-    },
-    {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "How we found 24 Android vulnerabilities using our open source AI security agent",
-      "summary": "A look at the targeted AI taskflows behind these findings, the critical Android bugs they uncovered, and how to run the same open-source agent on your own app. The post How we found 24 Android vulnerabilities using our o",
-      "url": "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/",
-      "published": "2026-09-28T19:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "開発",
-        "重要"
-      ]
     }
   ],
   "providerWatch": {
@@ -575,6 +575,12 @@
         ],
         "latest": [
           {
+            "title": "Sharing AI progress in mathematics",
+            "url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+            "published": "2026-10-06T12:00:00+00:00",
+            "source": "ChatGPT / OpenAI公式"
+          },
+          {
             "title": "Chatham scales its capital markets expertise with OpenAI",
             "url": "https://openai.com/index/chatham-financial",
             "published": "2026-10-02T00:00:00+00:00",
@@ -590,12 +596,6 @@
             "title": "Advancing computer use with Ironclad",
             "url": "https://openai.com/index/advancing-computer-use-with-ironclad",
             "published": "2026-10-06T10:00:00+00:00",
-            "source": "ChatGPT / OpenAI公式"
-          },
-          {
-            "title": "How Albertsons Companies is reimagining retail from the inside out",
-            "url": "https://openai.com/index/albertsons-reimagining-retail",
-            "published": "2026-10-01T16:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           }
         ]
@@ -696,5 +696,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-06T22:20:05.043508+00:00"
+  "lastSuccessAt": "2026-10-07T04:28:01.508923+00:00"
 }
