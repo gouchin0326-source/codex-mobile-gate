@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-07T06:28:01.673358+00:00",
+  "updatedAt": "2026-10-07T06:38:02.216978+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "Sharing AI progress in mathematics",
+  "topLine": "GAMEGO: Training Game-Dev Agents with Synthetic Trajectories Anchored in Real-World Assets",
   "cards": [
     {
       "genre": "開発",
-      "count": 15,
+      "count": 13,
       "decision": "CG開発・GitHub運用へ反映候補",
       "signal": "ReviewBench: An open benchmark for AI code review / GitHub Copilot app for Beginners: How to build custom workflows with canvases / Building Git infrastructure for agent-scale development",
       "topUrl": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/",
@@ -16,10 +16,18 @@
     },
     {
       "genre": "AI",
-      "count": 11,
+      "count": 9,
       "decision": "AI/Codex運用の変化を確認",
       "signal": "Sharing AI progress in mathematics / Chatham scales its capital markets expertise with OpenAI / Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
       "topUrl": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+      "score": 4
+    },
+    {
+      "genre": "論文",
+      "count": 8,
+      "decision": "必要時だけ確認",
+      "signal": "GAMEGO: Training Game-Dev Agents with Synthetic Trajectories Anchored in Real-World Assets / AegisFlow: A Multi-Agent Agentic AI Framework for Autonomous Remediation and Self-Healing in Fragile Data Ecosystems / Text2Das",
+      "topUrl": "https://arxiv.org/abs/2610.06910",
       "score": 4
     },
     {
@@ -32,6 +40,20 @@
     }
   ],
   "focus": [
+    {
+      "label": "論文",
+      "title": "GAMEGO: Training Game-Dev Agents with Synthetic Trajectories Anchored in Real-World Assets",
+      "why": "Codex/AI開発判断に関係",
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2610.06910"
+    },
+    {
+      "label": "論文",
+      "title": "AegisFlow: A Multi-Agent Agentic AI Framework for Autonomous Remediation and Self-Healing in Fragile Data Ecosystems",
+      "why": "Codex/AI開発判断に関係",
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2610.06971"
+    },
     {
       "label": "AI",
       "title": "Sharing AI progress in mathematics",
@@ -61,35 +83,61 @@
       "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/"
     },
     {
-      "label": "開発",
-      "title": "Building Git infrastructure for agent-scale development",
+      "label": "論文",
+      "title": "Text2Dashboard: A Governed Agent Architecture for Natural-Language Dashboard Generation over Enterprise DataBrain",
       "why": "Codex/AI開発判断に関係",
-      "source": "GitHub",
-      "url": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/"
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2610.06914"
     },
     {
-      "label": "開発",
-      "title": "Stacked pull requests generally available",
+      "label": "論文",
+      "title": "RadOnc-Agent: An LLM-Orchestrated Framework for AI Workflows Across the Radiotherapy Care Pathway",
       "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-06-stacked-pull-requests-generally-available"
-    },
-    {
-      "label": "AI",
-      "title": "Atlassian and OpenAI expand partnership to turn enterprise knowledge into action",
-      "why": "Codex/AI開発判断に関係",
-      "source": "ChatGPT / OpenAI公式",
-      "url": "https://openai.com/index/atlassian-partnership"
-    },
-    {
-      "label": "AI",
-      "title": "Advancing computer use with Ironclad",
-      "why": "Codex/AI開発判断に関係",
-      "source": "ChatGPT / OpenAI公式",
-      "url": "https://openai.com/index/advancing-computer-use-with-ironclad"
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2610.06923"
     }
   ],
   "items": [
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "GAMEGO: Training Game-Dev Agents with Synthetic Trajectories Anchored in Real-World Assets",
+      "summary": "arXiv:2610.06910v1 Announce Type: new Abstract: Recent advances in Large Language Models (LLMs) have demonstrated remarkable capabilities in web front-end execution, with browser-based game generation emerging as a parti",
+      "url": "https://arxiv.org/abs/2610.06910",
+      "published": "2026-10-07T04:00:00+00:00",
+      "score": 4,
+      "tags": [
+        "論文",
+        "重要",
+        "制作",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "AegisFlow: A Multi-Agent Agentic AI Framework for Autonomous Remediation and Self-Healing in Fragile Data Ecosystems",
+      "summary": "arXiv:2610.06971v1 Announce Type: new Abstract: Traditional data pipelines are notoriously brittle, often failing due to upstream schema drift, API contract changes, or website DOM modifications. Present observability to",
+      "url": "https://arxiv.org/abs/2610.06971",
+      "published": "2026-10-07T04:00:00+00:00",
+      "score": 4,
+      "tags": [
+        "論文",
+        "重要",
+        "開発",
+        "研究"
+      ]
+    },
     {
       "source": "openai",
       "platform": "AI",
@@ -166,6 +214,63 @@
         "開発",
         "重要",
         "制作"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Text2Dashboard: A Governed Agent Architecture for Natural-Language Dashboard Generation over Enterprise DataBrain",
+      "summary": "arXiv:2610.06914v1 Announce Type: new Abstract: Text2Dashboard is a DataBrain-specific prototype that turns natural-language analytic requests into inspectable dashboards. An installable Codex plugin and standalone Agent",
+      "url": "https://arxiv.org/abs/2610.06914",
+      "published": "2026-10-07T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "RadOnc-Agent: An LLM-Orchestrated Framework for AI Workflows Across the Radiotherapy Care Pathway",
+      "summary": "arXiv:2610.06923v1 Announce Type: new Abstract: Artificial intelligence has advanced individual radiotherapy tasks, yet these capabilities remain separated across clinical stages, software environments and data modalitie",
+      "url": "https://arxiv.org/abs/2610.06923",
+      "published": "2026-10-07T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Principles that Guide, Actions that Inform: Agent Evolution via Knowledge Abstraction",
+      "summary": "arXiv:2610.06964v1 Announce Type: new Abstract: Large language model (LLM) agents have demonstrated strong capabilities in interactive environments, yet their ability to continually evolve from experience remains limited",
+      "url": "https://arxiv.org/abs/2610.06964",
+      "published": "2026-10-07T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
       ]
     },
     {
@@ -370,6 +475,60 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "FluidPD: In-Place Elasticity for SLO-Aware Prefill-Decode Disaggregated LLM Serving",
+      "summary": "arXiv:2610.06917v1 Announce Type: new Abstract: Prefill-decode disaggregation is becoming a common architecture for LLM serving because it separates two phases with distinct execution patterns and SLO objectives. Existin",
+      "url": "https://arxiv.org/abs/2610.06917",
+      "published": "2026-10-07T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Anchor Divergence for Semantic Geometry in Contrastive Learning",
+      "summary": "arXiv:2610.06919v1 Announce Type: new Abstract: This paper concerns how semantic context determines geometry in learned vector representations. Similarity is typically measured using cosine similarity, which provides a s",
+      "url": "https://arxiv.org/abs/2610.06919",
+      "published": "2026-10-07T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Metonymic Circuits for Abstract Concept Grounding in Vision Transformers",
+      "summary": "arXiv:2610.06928v1 Announce Type: new Abstract: We study how Vision Transformers ground abstract concepts (e.g., angry) when training data provide limited direct referential evidence. We hypothesize a metonymic grounding",
+      "url": "https://arxiv.org/abs/2610.06928",
+      "published": "2026-10-07T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -385,148 +544,6 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "How Jump Trading is scaling quant research with ChatGPT",
-      "summary": "Jump Trading uses OpenAI to expand quantitative research. See how longer-running AI workflows combine multiple data sources with human review.",
-      "url": "https://openai.com/index/jump-trading",
-      "published": "2026-10-06T12:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Code scanning AI Scan enablement status in security overview",
-      "summary": "Organization and enterprise administrators can now see AI Scan for pull requests enablement status in the security overview coverage view. The code scanning summary shows enabled and not enabled repository… The post Code",
-      "url": "https://github.blog/changelog/2026-10-06-code-scanning-ai-scan-enablement-status-in-security-overview",
-      "published": "2026-10-06T10:23:38+00:00",
-      "score": 2,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Our approach to EU text provenance rules",
-      "summary": "How OpenAI is approaching text watermarking under EU rules. Learn where watermarks apply, how detection works, and why access starts with researchers.",
-      "url": "https://openai.com/index/eu-text-provenance",
-      "published": "2026-10-05T15:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Building advertising for the way people use AI",
-      "summary": "OpenAI introduces a new visual ad format in ChatGPT and expands measurement tools, attribution partnerships, and brand suitability for advertisers.",
-      "url": "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
-      "published": "2026-10-05T10:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Unvalidated npm trusted publishing configurations now expire",
-      "summary": "Unvalidated npm trusted publishing configurations now expire 48 hours after creation and can no longer authorize publishing. This limits the risk of trusting a repository or project name that changes… The post Unvalidate",
-      "url": "https://github.blog/changelog/2026-10-02-unvalidated-npm-trusted-publishing-configurations-now-expire",
-      "published": "2026-10-02T19:07:04+00:00",
-      "score": 2,
-      "tags": [
-        "開発"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "npm staged publishing now supports creating new packages",
-      "summary": "You can now create a new npm package with npm stage publish, using a local session or a granular access token, including a stage-only token. This lets you create packages… The post npm staged publishing now supports crea",
-      "url": "https://github.blog/changelog/2026-10-02-npm-staged-publishing-now-supports-creating-new-packages",
-      "published": "2026-10-02T19:05:17+00:00",
-      "score": 2,
-      "tags": [
-        "開発"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "A model guide for the GPT-6 family",
-      "summary": "Learn how startups can choose GPT-6 models, tune reasoning effort, improve prompts and skills, coordinate tools, and prepare workflows for production.",
-      "url": "https://openai.com/index/practical-guide-building-gpt-6",
-      "published": "2026-10-02T16:15:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "研究"
-      ]
-    },
-    {
-      "source": "google-gemini",
-      "platform": "AI",
-      "label": "Gemini公式",
-      "genre": "AI",
-      "provider": "gemini",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Gemini 4 Argon: our next era of frontier intelligence",
-      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
-      "published": "2026-09-30T20:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "研究"
       ]
     }
   ],
@@ -630,12 +647,6 @@
             "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers/",
             "published": "2026-09-28T16:00:00+00:00",
             "source": "Gemini公式"
-          },
-          {
-            "title": "Gemini 4 Argon: our next era of frontier intelligence",
-            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
-            "published": "2026-09-30T20:00:00+00:00",
-            "source": "Gemini公式"
           }
         ]
       },
@@ -696,5 +707,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-07T04:28:01.508923+00:00"
+  "lastSuccessAt": "2026-10-07T06:38:02.216978+00:00"
 }
