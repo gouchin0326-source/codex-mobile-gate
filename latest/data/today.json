@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-07T15:28:01.023031+00:00",
-  "sourceUpdatedAt": "2026-10-07T10:38:00.877459+00:00",
+  "updatedAt": "2026-10-07T21:17:10.956345+00:00",
+  "sourceUpdatedAt": "2026-10-07T21:16:50.941927+00:00",
   "status": "fresh",
   "mode": "today-rule-based",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -12,12 +12,38 @@
   },
   "items": [
     {
-      "id": "arxiv-ai:0",
+      "id": "github-changelog:0",
+      "genre": "開発",
+      "title": "Claude Haiku 5.5 in GitHub Copilot",
+      "reason": "開発の新着で、設定した重要語と一致",
+      "publishedAt": "2026-10-07T20:12:18+00:00",
+      "observedAt": "2026-10-07T21:16:50.941927+00:00",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot",
+      "score": 5,
+      "stale": false,
+      "processing": "rule-based"
+    },
+    {
+      "id": "github-changelog:8",
+      "genre": "開発",
+      "title": "Discover local models in GitHub Copilot CLI",
+      "reason": "開発の新着で、設定した重要語と一致",
+      "publishedAt": "2026-10-07T15:46:13+00:00",
+      "observedAt": "2026-10-07T21:16:50.941927+00:00",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-07-discover-local-models-in-github-copilot-cli",
+      "score": 4,
+      "stale": false,
+      "processing": "rule-based"
+    },
+    {
+      "id": "arxiv-ai:1",
       "genre": "論文",
       "title": "GAMEGO: Training Game-Dev Agents with Synthetic Trajectories Anchored in Real-World Assets",
       "reason": "論文の新着で、設定した重要語と一致",
       "publishedAt": "2026-10-07T04:00:00+00:00",
-      "observedAt": "2026-10-07T10:38:00.877459+00:00",
+      "observedAt": "2026-10-07T21:16:50.941927+00:00",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2610.06910",
       "score": 4,
@@ -25,12 +51,12 @@
       "processing": "rule-based"
     },
     {
-      "id": "arxiv-ai:8",
+      "id": "arxiv-ai:9",
       "genre": "論文",
       "title": "AegisFlow: A Multi-Agent Agentic AI Framework for Autonomous Remediation and Self-Healing in Fragile Data Ecosystems",
       "reason": "論文の新着で、設定した重要語と一致",
       "publishedAt": "2026-10-07T04:00:00+00:00",
-      "observedAt": "2026-10-07T10:38:00.877459+00:00",
+      "observedAt": "2026-10-07T21:16:50.941927+00:00",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2610.06971",
       "score": 4,
@@ -38,41 +64,15 @@
       "processing": "rule-based"
     },
     {
-      "id": "openai:1",
+      "id": "openai:2",
       "genre": "AI",
       "title": "Sharing AI progress in mathematics",
       "reason": "AIの新着で、設定した重要語と一致",
       "publishedAt": "2026-10-06T12:00:00+00:00",
-      "observedAt": "2026-10-07T10:38:00.877459+00:00",
+      "observedAt": "2026-10-07T21:16:50.941927+00:00",
       "source": "ChatGPT / OpenAI公式",
       "url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
       "score": 4,
-      "stale": false,
-      "processing": "rule-based"
-    },
-    {
-      "id": "github-blog:14",
-      "genre": "開発",
-      "title": "Building Git infrastructure for agent-scale development",
-      "reason": "開発の新着で、設定した重要語と一致",
-      "publishedAt": "2026-10-06T20:57:56+00:00",
-      "observedAt": "2026-10-07T10:38:00.877459+00:00",
-      "source": "GitHub",
-      "url": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/",
-      "score": 3,
-      "stale": false,
-      "processing": "rule-based"
-    },
-    {
-      "id": "github-changelog:3",
-      "genre": "開発",
-      "title": "Stacked pull requests generally available",
-      "reason": "開発の新着で、設定した重要語と一致",
-      "publishedAt": "2026-10-06T20:16:41+00:00",
-      "observedAt": "2026-10-07T10:38:00.877459+00:00",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-06-stacked-pull-requests-generally-available",
-      "score": 3,
       "stale": false,
       "processing": "rule-based"
     }
