@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-07T10:28:00.794604+00:00",
-  "lastSuccessAt": "2026-10-07T06:38:02.216978+00:00",
+  "updatedAt": "2026-10-07T10:38:00.877459+00:00",
+  "lastSuccessAt": "2026-10-07T10:38:00.877459+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -151,17 +151,17 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "Janet on x32: 32-bit Pointers, 64-bit Speed, 25% Less RAM",
+      "signal": "Reasons to dislike AI coding",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://alexalejandre.com/programming/lisp/janet-for-the-x32-abi/",
+      "topUrl": "https://www.sicpers.info/2026/10/reasons-to-dislike-ai-coding/",
       "score": 1
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.2 - 13 km ESE of Talkeetna, Alaska",
+      "signal": "M 1.9 - 92 km NNW of Aleneva, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tvqxnx",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026twdhzd",
       "score": 1
     }
   ],
@@ -266,30 +266,13 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.2 - 13 km ESE of Talkeetna, Alaska",
-      "summary": "13 km ESE of Talkeetna, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tvqxnx",
-      "published": "2026-10-07T04:24:04.959000+00:00",
+      "title": "M 1.9 - 92 km NNW of Aleneva, Alaska",
+      "summary": "92 km NNW of Aleneva, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026twdhzd",
+      "published": "2026-10-07T10:35:57.642000+00:00",
       "score": 1,
       "tags": [
         "災害"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Janet on x32: 32-bit Pointers, 64-bit Speed, 25% Less RAM",
-      "summary": "Comments",
-      "url": "https://alexalejandre.com/programming/lisp/janet-for-the-x32-abi/",
-      "published": "2026-10-06T22:26:46+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
       ]
     },
     {
@@ -298,15 +281,32 @@
       "label": "Claude / Anthropic公式",
       "genre": "AI",
       "provider": "claude",
-      "topic": "ガジェット",
+      "topic": "AI",
       "sourceWeight": 2,
-      "title": "Cyber Verification Program",
+      "title": "Claude Discovers Novel Enzyme System",
       "summary": "公式サイトマップで更新を検知。内容は公式ページで確認。",
-      "url": "https://www.anthropic.com/news/cyber-verification-program",
-      "published": "2026-10-06T19:39:32.000Z",
+      "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+      "published": "2026-10-07T08:55:22.000Z",
       "score": 1,
       "tags": [
         "AI"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Reasons to dislike AI coding",
+      "summary": "Comments",
+      "url": "https://www.sicpers.info/2026/10/reasons-to-dislike-ai-coding/",
+      "published": "2026-10-07T05:34:50+00:00",
+      "score": 1,
+      "tags": [
+        "技術"
       ]
     },
     {
@@ -755,48 +755,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-07T04:28:01.508923+00:00",
-      "lastAttemptAt": "2026-10-07T04:28:01.508923+00:00",
+      "lastSuccessAt": "2026-10-07T10:38:00.877459+00:00",
+      "lastAttemptAt": "2026-10-07T10:38:00.877459+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-07T04:28:01.508923+00:00",
-      "lastAttemptAt": "2026-10-07T04:28:01.508923+00:00",
+      "lastSuccessAt": "2026-10-07T10:38:00.877459+00:00",
+      "lastAttemptAt": "2026-10-07T10:38:00.877459+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-07T04:28:01.508923+00:00",
-      "lastAttemptAt": "2026-10-07T04:28:01.508923+00:00",
+      "lastSuccessAt": "2026-10-07T10:38:00.877459+00:00",
+      "lastAttemptAt": "2026-10-07T10:38:00.877459+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-07T04:28:01.508923+00:00",
-      "lastAttemptAt": "2026-10-07T04:28:01.508923+00:00",
+      "lastSuccessAt": "2026-10-07T10:38:00.877459+00:00",
+      "lastAttemptAt": "2026-10-07T10:38:00.877459+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-07T04:28:01.508923+00:00",
-      "lastAttemptAt": "2026-10-07T04:28:01.508923+00:00",
+      "lastSuccessAt": "2026-10-07T10:38:00.877459+00:00",
+      "lastAttemptAt": "2026-10-07T10:38:00.877459+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-07T04:28:01.508923+00:00",
-      "lastAttemptAt": "2026-10-07T04:28:01.508923+00:00",
+      "lastSuccessAt": "2026-10-07T10:38:00.877459+00:00",
+      "lastAttemptAt": "2026-10-07T10:38:00.877459+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -811,8 +811,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-07T04:28:01.508923+00:00",
-      "lastAttemptAt": "2026-10-07T04:28:01.508923+00:00",
+      "lastSuccessAt": "2026-10-07T10:38:00.877459+00:00",
+      "lastAttemptAt": "2026-10-07T10:38:00.877459+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
