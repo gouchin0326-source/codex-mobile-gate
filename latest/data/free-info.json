@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-08T09:18:00.829919+00:00",
-  "lastSuccessAt": "2026-10-08T06:48:01.818104+00:00",
+  "updatedAt": "2026-10-08T09:28:00.892735+00:00",
+  "lastSuccessAt": "2026-10-08T09:28:00.892735+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -133,14 +133,6 @@
       "score": 5
     },
     {
-      "genre": "AI",
-      "count": 8,
-      "signal": "Sharing AI progress in mathematics / Atlassian and OpenAI expand partnership to turn enterprise knowledge into action / Advancing computer use with Ironclad",
-      "decision": "AI/Codex運用の変化を確認",
-      "topUrl": "https://openai.com/index/sharing-ai-progress-in-mathematics",
-      "score": 4
-    },
-    {
       "genre": "論文",
       "count": 8,
       "signal": "GAMEGO: Training Game-Dev Agents with Synthetic Trajectories Anchored in Real-World Assets / AegisFlow: A Multi-Agent Agentic AI Framework for Autonomous Remediation and Self-Heali",
@@ -149,19 +141,27 @@
       "score": 4
     },
     {
+      "genre": "AI",
+      "count": 7,
+      "signal": "Sharing AI progress in mathematics / Atlassian and OpenAI expand partnership to turn enterprise knowledge into action / Advancing computer use with Ironclad",
+      "decision": "AI/Codex運用の変化を確認",
+      "topUrl": "https://openai.com/index/sharing-ai-progress-in-mathematics",
+      "score": 4
+    },
+    {
       "genre": "技術",
-      "count": 1,
-      "signal": "Software developers are not okay",
+      "count": 2,
+      "signal": "A rant about APIs / Software developers are not okay",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://www.baldurbjarnason.com/2026/05-software-developers-are-not-okay/",
-      "score": 2
+      "topUrl": "https://dev.clintonblackburn.com/2026/10/08/a-rant-about-apis.html",
+      "score": 3
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 2.0 - 12 km NW of Chenega, Alaska",
+      "signal": "M 2.2 - 6 km NE of Hawaiian Ocean View, Hawaii",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026txkpor",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75052127",
       "score": 1
     }
   ],
@@ -246,6 +246,25 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "A rant about APIs",
+      "summary": "Comments",
+      "url": "https://dev.clintonblackburn.com/2026/10/08/a-rant-about-apis.html",
+      "published": "2026-10-08T06:07:14+00:00",
+      "score": 3,
+      "tags": [
+        "技術",
+        "重要",
+        "開発"
+      ]
+    },
+    {
       "source": "google-gemini",
       "platform": "AI",
       "label": "Gemini公式",
@@ -265,31 +284,13 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Software developers are not okay",
-      "summary": "Comments",
-      "url": "https://www.baldurbjarnason.com/2026/05-software-developers-are-not-okay/",
-      "published": "2026-10-07T19:35:08+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "開発"
-      ]
-    },
-    {
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.0 - 12 km NW of Chenega, Alaska",
-      "summary": "12 km NW of Chenega, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026txkpor",
-      "published": "2026-10-08T03:14:14.600000+00:00",
+      "title": "M 2.2 - 6 km NE of Hawaiian Ocean View, Hawaii",
+      "summary": "6 km NE of Hawaiian Ocean View, Hawaii",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75052127",
+      "published": "2026-10-08T09:08:55.180000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -646,6 +647,24 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "Software developers are not okay",
+      "summary": "Comments",
+      "url": "https://www.baldurbjarnason.com/2026/05-software-developers-are-not-okay/",
+      "published": "2026-10-07T19:35:08+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "開発"
+      ]
+    },
+    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -733,72 +752,54 @@
         "開発",
         "重要"
       ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Our approach to EU text provenance rules",
-      "summary": "How OpenAI is approaching text watermarking under EU rules. Learn where watermarks apply, how detection works, and why access starts with researchers.",
-      "url": "https://openai.com/index/eu-text-provenance",
-      "published": "2026-10-05T15:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-08T03:18:01.538688+00:00",
-      "lastAttemptAt": "2026-10-08T03:18:01.538688+00:00",
+      "lastSuccessAt": "2026-10-08T09:28:00.892735+00:00",
+      "lastAttemptAt": "2026-10-08T09:28:00.892735+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-08T03:18:01.538688+00:00",
-      "lastAttemptAt": "2026-10-08T03:18:01.538688+00:00",
+      "lastSuccessAt": "2026-10-08T09:28:00.892735+00:00",
+      "lastAttemptAt": "2026-10-08T09:28:00.892735+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-08T03:18:01.538688+00:00",
-      "lastAttemptAt": "2026-10-08T03:18:01.538688+00:00",
+      "lastSuccessAt": "2026-10-08T09:28:00.892735+00:00",
+      "lastAttemptAt": "2026-10-08T09:28:00.892735+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-08T03:18:01.538688+00:00",
-      "lastAttemptAt": "2026-10-08T03:18:01.538688+00:00",
+      "lastSuccessAt": "2026-10-08T09:28:00.892735+00:00",
+      "lastAttemptAt": "2026-10-08T09:28:00.892735+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-08T03:18:01.538688+00:00",
-      "lastAttemptAt": "2026-10-08T03:18:01.538688+00:00",
+      "lastSuccessAt": "2026-10-08T09:28:00.892735+00:00",
+      "lastAttemptAt": "2026-10-08T09:28:00.892735+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-08T03:18:01.538688+00:00",
-      "lastAttemptAt": "2026-10-08T03:18:01.538688+00:00",
+      "lastSuccessAt": "2026-10-08T09:28:00.892735+00:00",
+      "lastAttemptAt": "2026-10-08T09:28:00.892735+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -813,8 +814,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-08T03:18:01.538688+00:00",
-      "lastAttemptAt": "2026-10-08T03:18:01.538688+00:00",
+      "lastSuccessAt": "2026-10-08T09:28:00.892735+00:00",
+      "lastAttemptAt": "2026-10-08T09:28:00.892735+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
