@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T06:38:01.665854+00:00",
+  "updatedAt": "2026-10-08T06:48:01.818104+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -48,13 +48,6 @@
       "url": "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot"
     },
     {
-      "label": "開発",
-      "title": "Discover local models in GitHub Copilot CLI",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-07-discover-local-models-in-github-copilot-cli"
-    },
-    {
       "label": "論文",
       "title": "GAMEGO: Training Game-Dev Agents with Synthetic Trajectories Anchored in Real-World Assets",
       "why": "Codex/AI開発判断に関係",
@@ -67,6 +60,13 @@
       "why": "Codex/AI開発判断に関係",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2610.06971"
+    },
+    {
+      "label": "開発",
+      "title": "Discover local models in GitHub Copilot CLI",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-07-discover-local-models-in-github-copilot-cli"
     },
     {
       "label": "AI",
@@ -83,18 +83,18 @@
       "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/"
     },
     {
-      "label": "開発",
-      "title": "Purpose-built model for leaked secret detection",
+      "label": "論文",
+      "title": "Text2Dashboard: A Governed Agent Architecture for Natural-Language Dashboard Generation over Enterprise DataBrain",
       "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection"
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2610.06914"
     },
     {
-      "label": "開発",
-      "title": "Local sandboxing for GitHub Copilot now generally available",
+      "label": "論文",
+      "title": "RadOnc-Agent: An LLM-Orchestrated Framework for AI Workflows Across the Radiotherapy Care Pathway",
       "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available"
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2610.06923"
     }
   ],
   "items": [
@@ -119,25 +119,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Discover local models in GitHub Copilot CLI",
-      "summary": "GitHub Copilot CLI makes it easier to choose a local model without leaving your existing workflow. Starting in CLI version 1.0.94-0, use /model to discover supported models from a running… The post Discover local models ",
-      "url": "https://github.blog/changelog/2026-10-07-discover-local-models-in-github-copilot-cli",
-      "published": "2026-10-07T15:46:13+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
-        "研究"
-      ]
-    },
-    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -148,7 +129,7 @@
       "title": "GAMEGO: Training Game-Dev Agents with Synthetic Trajectories Anchored in Real-World Assets",
       "summary": "arXiv:2610.06910v1 Announce Type: new Abstract: Recent advances in Large Language Models (LLMs) have demonstrated remarkable capabilities in web front-end execution, with browser-based game generation emerging as a parti",
       "url": "https://arxiv.org/abs/2610.06910",
-      "published": "2026-10-07T04:00:00+00:00",
+      "published": "2026-10-08T04:00:00+00:00",
       "score": 4,
       "tags": [
         "論文",
@@ -168,12 +149,31 @@
       "title": "AegisFlow: A Multi-Agent Agentic AI Framework for Autonomous Remediation and Self-Healing in Fragile Data Ecosystems",
       "summary": "arXiv:2610.06971v1 Announce Type: new Abstract: Traditional data pipelines are notoriously brittle, often failing due to upstream schema drift, API contract changes, or website DOM modifications. Present observability to",
       "url": "https://arxiv.org/abs/2610.06971",
-      "published": "2026-10-07T04:00:00+00:00",
+      "published": "2026-10-08T04:00:00+00:00",
       "score": 4,
       "tags": [
         "論文",
         "重要",
         "開発",
+        "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Discover local models in GitHub Copilot CLI",
+      "summary": "GitHub Copilot CLI makes it easier to choose a local model without leaving your existing workflow. Starting in CLI version 1.0.94-0, use /model to discover supported models from a running… The post Discover local models ",
+      "url": "https://github.blog/changelog/2026-10-07-discover-local-models-in-github-copilot-cli",
+      "published": "2026-10-07T15:46:13+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
         "研究"
       ]
     },
@@ -217,6 +217,63 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Text2Dashboard: A Governed Agent Architecture for Natural-Language Dashboard Generation over Enterprise DataBrain",
+      "summary": "arXiv:2610.06914v1 Announce Type: new Abstract: Text2Dashboard is a DataBrain-specific prototype that turns natural-language analytic requests into inspectable dashboards. An installable Codex plugin and standalone Agent",
+      "url": "https://arxiv.org/abs/2610.06914",
+      "published": "2026-10-08T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "RadOnc-Agent: An LLM-Orchestrated Framework for AI Workflows Across the Radiotherapy Care Pathway",
+      "summary": "arXiv:2610.06923v1 Announce Type: new Abstract: Artificial intelligence has advanced individual radiotherapy tasks, yet these capabilities remain separated across clinical stages, software environments and data modalitie",
+      "url": "https://arxiv.org/abs/2610.06923",
+      "published": "2026-10-08T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Principles that Guide, Actions that Inform: Agent Evolution via Knowledge Abstraction",
+      "summary": "arXiv:2610.06964v1 Announce Type: new Abstract: Large language model (LLM) agents have demonstrated strong capabilities in interactive environments, yet their ability to continually evolve from experience remains limited",
+      "url": "https://arxiv.org/abs/2610.06964",
+      "published": "2026-10-08T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -251,63 +308,6 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Text2Dashboard: A Governed Agent Architecture for Natural-Language Dashboard Generation over Enterprise DataBrain",
-      "summary": "arXiv:2610.06914v1 Announce Type: new Abstract: Text2Dashboard is a DataBrain-specific prototype that turns natural-language analytic requests into inspectable dashboards. An installable Codex plugin and standalone Agent",
-      "url": "https://arxiv.org/abs/2610.06914",
-      "published": "2026-10-07T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "RadOnc-Agent: An LLM-Orchestrated Framework for AI Workflows Across the Radiotherapy Care Pathway",
-      "summary": "arXiv:2610.06923v1 Announce Type: new Abstract: Artificial intelligence has advanced individual radiotherapy tasks, yet these capabilities remain separated across clinical stages, software environments and data modalitie",
-      "url": "https://arxiv.org/abs/2610.06923",
-      "published": "2026-10-07T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Principles that Guide, Actions that Inform: Agent Evolution via Knowledge Abstraction",
-      "summary": "arXiv:2610.06964v1 Announce Type: new Abstract: Large language model (LLM) agents have demonstrated strong capabilities in interactive environments, yet their ability to continually evolve from experience remains limited",
-      "url": "https://arxiv.org/abs/2610.06964",
-      "published": "2026-10-07T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
       ]
     },
     {
@@ -476,6 +476,60 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "FluidPD: In-Place Elasticity for SLO-Aware Prefill-Decode Disaggregated LLM Serving",
+      "summary": "arXiv:2610.06917v1 Announce Type: new Abstract: Prefill-decode disaggregation is becoming a common architecture for LLM serving because it separates two phases with distinct execution patterns and SLO objectives. Existin",
+      "url": "https://arxiv.org/abs/2610.06917",
+      "published": "2026-10-08T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Anchor Divergence for Semantic Geometry in Contrastive Learning",
+      "summary": "arXiv:2610.06919v1 Announce Type: new Abstract: This paper concerns how semantic context determines geometry in learned vector representations. Similarity is typically measured using cosine similarity, which provides a s",
+      "url": "https://arxiv.org/abs/2610.06919",
+      "published": "2026-10-08T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Metonymic Circuits for Abstract Concept Grounding in Vision Transformers",
+      "summary": "arXiv:2610.06928v1 Announce Type: new Abstract: We study how Vision Transformers ground abstract concepts (e.g., angry) when training data provide limited direct referential evidence. We hypothesize a metonymic grounding",
+      "url": "https://arxiv.org/abs/2610.06928",
+      "published": "2026-10-08T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
@@ -491,59 +545,6 @@
       "tags": [
         "技術",
         "開発"
-      ]
-    },
-    {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Secret protection must scale with software",
-      "summary": "Developers aren’t becoming more careless; they’re being outpaced. The tools that let developers create more software should also take on more of the work of protecting it. The post Secret protection must scale with softw",
-      "url": "https://github.blog/ai-and-ml/github-copilot/secret-protection-must-scale-with-software/",
-      "published": "2026-10-07T17:45:34+00:00",
-      "score": 2,
-      "tags": [
-        "開発"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Radisson Hotel Group brings hotel discovery into ChatGPT",
-      "summary": "Radisson partnered with Accenture to build a ChatGPT plugin using OpenAI technology, helping travelers find, compare, and book hotels while planning their trips.",
-      "url": "https://openai.com/index/radisson",
-      "published": "2026-10-07T07:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "FluidPD: In-Place Elasticity for SLO-Aware Prefill-Decode Disaggregated LLM Serving",
-      "summary": "arXiv:2610.06917v1 Announce Type: new Abstract: Prefill-decode disaggregation is becoming a common architecture for LLM serving because it separates two phases with distinct execution patterns and SLO objectives. Existin",
-      "url": "https://arxiv.org/abs/2610.06917",
-      "published": "2026-10-07T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
       ]
     }
   ],
@@ -707,5 +708,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-08T03:18:01.538688+00:00"
+  "lastSuccessAt": "2026-10-08T06:48:01.818104+00:00"
 }
