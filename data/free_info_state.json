@@ -2,8 +2,8 @@
   "version": 1,
   "daily": {
     "date": "2026-10-08",
-    "httpRequests": 125,
-    "responseBytes": 7355270
+    "httpRequests": 129,
+    "responseBytes": 7476857
   },
   "sources": {
     "openai": {
@@ -79,9 +79,9 @@
       "lastHttpStatus": 200
     },
     "jma-toyama-warning": {
-      "lastAttemptAt": "2026-10-08T05:48:01.673385+00:00",
+      "lastAttemptAt": "2026-10-08T05:58:01.899546+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-08T05:48:01.673385+00:00",
+      "lastSuccessAt": "2026-10-08T05:58:01.899546+00:00",
       "contentUpdatedAt": "2026-09-05T03:44:09.088385+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
@@ -91,22 +91,22 @@
       "lastHttpStatus": 304
     },
     "jma-nowcast": {
-      "lastAttemptAt": "2026-10-08T05:48:01.673385+00:00",
+      "lastAttemptAt": "2026-10-08T05:58:01.899546+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-08T05:48:01.673385+00:00",
-      "contentUpdatedAt": "2026-10-08T05:48:01.673385+00:00",
+      "lastSuccessAt": "2026-10-08T05:58:01.899546+00:00",
+      "contentUpdatedAt": "2026-10-08T05:58:01.899546+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
-      "etag": "\"263737aae1118e80f94e3158e3aecc18\"",
-      "lastModified": "Thu, 08 Oct 2026 05:46:01 GMT",
+      "etag": "\"e10e827a510bc4ca1ed95c7b59da8167\"",
+      "lastModified": "Thu, 08 Oct 2026 05:56:04 GMT",
       "lastHttpStatus": 200
     },
     "open-meteo-toyama": {
-      "lastAttemptAt": "2026-10-08T05:28:01.680656+00:00",
+      "lastAttemptAt": "2026-10-08T05:58:01.899546+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-08T05:28:01.680656+00:00",
-      "contentUpdatedAt": "2026-10-08T05:28:01.680656+00:00",
+      "lastSuccessAt": "2026-10-08T05:58:01.899546+00:00",
+      "contentUpdatedAt": "2026-10-08T05:58:01.899546+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -115,14 +115,14 @@
       "lastHttpStatus": 200
     },
     "github-actions": {
-      "lastAttemptAt": "2026-10-08T05:28:01.680656+00:00",
+      "lastAttemptAt": "2026-10-08T05:58:01.899546+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-08T05:28:01.680656+00:00",
-      "contentUpdatedAt": "2026-10-08T05:28:01.680656+00:00",
+      "lastSuccessAt": "2026-10-08T05:58:01.899546+00:00",
+      "contentUpdatedAt": "2026-10-08T05:58:01.899546+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
-      "etag": "W/\"0834fdb873d6e4867dc0300fcffb618f45ec5489c08222963a02573c10e643fc\"",
+      "etag": "W/\"4c8902ff33db1faa55d79994071d18daf837b1556f06f46ede5830163f0fa693\"",
       "lastModified": null,
       "lastHttpStatus": 200
     },
@@ -356,10 +356,10 @@
     },
     "cabinet-office-holidays": {}
   },
-  "updatedAt": "2026-10-08T05:48:01.673385+00:00",
+  "updatedAt": "2026-10-08T05:58:01.899546+00:00",
   "lastRun": {
-    "httpRequests": 2,
-    "responseBytes": 1192,
+    "httpRequests": 4,
+    "responseBytes": 121587,
     "aiRequests": 0
   }
 }
