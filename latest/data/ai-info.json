@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T10:18:00.908639+00:00",
+  "updatedAt": "2026-10-09T10:28:00.889588+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -18,7 +18,7 @@
       "genre": "AI",
       "count": 9,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "Pollo AI turns creative ideas into campaigns with OpenAI / See what 4 builders are making with Gemini 3.8 Flash / How Oracle turns days of work into minutes with ChatGPT and Codex",
+      "signal": "Pollo AI turns creative ideas into campaigns with OpenAI / See what 4 builders are making with Gemini 3.8 Flash / Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
       "topUrl": "https://openai.com/index/pollo-ai",
       "score": 3
     },
@@ -436,6 +436,24 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+      "summary": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases while preserving human oversight.",
+      "url": "https://openai.com/index/sophos",
+      "published": "2026-10-09T07:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -524,24 +542,6 @@
         "AI",
         "重要"
       ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Disrupting AI-enabled “false front” operations",
-      "summary": "OpenAI disrupted two AI-enabled influence operations that used false-front journalists and a think tank to spread geopolitical messaging.",
-      "url": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
-      "published": "2026-10-08T00:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
     }
   ],
   "providerWatch": {
@@ -595,6 +595,12 @@
             "source": "ChatGPT / OpenAI公式"
           },
           {
+            "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+            "url": "https://openai.com/index/sophos",
+            "published": "2026-10-09T07:00:00+00:00",
+            "source": "ChatGPT / OpenAI公式"
+          },
+          {
             "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
             "url": "https://openai.com/index/oracle",
             "published": "2026-10-08T16:00:00+00:00",
@@ -604,12 +610,6 @@
             "title": "LegalOn halves Codex costs while maintaining development speed",
             "url": "https://openai.com/index/legalon-halves-codex-costs",
             "published": "2026-10-08T12:00:00+00:00",
-            "source": "ChatGPT / OpenAI公式"
-          },
-          {
-            "title": "Disrupting AI-enabled “false front” operations",
-            "url": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
-            "published": "2026-10-08T00:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           }
         ]
@@ -710,5 +710,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-09T06:58:01.605073+00:00"
+  "lastSuccessAt": "2026-10-09T10:28:00.889588+00:00"
 }

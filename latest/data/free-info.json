@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-09T10:18:00.908639+00:00",
-  "lastSuccessAt": "2026-10-09T06:58:01.605073+00:00",
+  "updatedAt": "2026-10-09T10:28:00.889588+00:00",
+  "lastSuccessAt": "2026-10-09T10:28:00.889588+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -135,7 +135,7 @@
     {
       "genre": "AI",
       "count": 9,
-      "signal": "Pollo AI turns creative ideas into campaigns with OpenAI / See what 4 builders are making with Gemini 3.8 Flash / How Oracle turns days of work into minutes with ChatGPT and Codex",
+      "signal": "Pollo AI turns creative ideas into campaigns with OpenAI / See what 4 builders are making with Gemini 3.8 Flash / Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/pollo-ai",
       "score": 3
@@ -151,9 +151,9 @@
     {
       "genre": "災害",
       "count": 2,
-      "signal": "M 1.7 - 8 km S of Lone Oak, Georgia / M 1.9 - 27 km E of Skwentna, Alaska",
+      "signal": "M 0.8 - 3 km W of Fontana, CA / M 1.8 - 23 km W of Anchor Point, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u13l",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41345567",
       "score": 1
     },
     {
@@ -284,10 +284,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.7 - 8 km S of Lone Oak, Georgia",
-      "summary": "8 km S of Lone Oak, Georgia",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u13l",
-      "published": "2026-10-09T03:47:32.121000+00:00",
+      "title": "M 0.8 - 3 km W of Fontana, CA",
+      "summary": "3 km W of Fontana, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41345567",
+      "published": "2026-10-09T10:21:48.380000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -552,6 +552,24 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+      "summary": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases while preserving human oversight.",
+      "url": "https://openai.com/index/sophos",
+      "published": "2026-10-09T07:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -695,24 +713,6 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "How Jump Trading is scaling quant research with ChatGPT",
-      "summary": "Jump Trading uses OpenAI to expand quantitative research. See how longer-running AI workflows combine multiple data sources with human review.",
-      "url": "https://openai.com/index/jump-trading",
-      "published": "2026-10-06T12:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
       "source": "google-gemini",
       "platform": "AI",
       "label": "Gemini公式",
@@ -734,10 +734,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.9 - 27 km E of Skwentna, Alaska",
-      "summary": "27 km E of Skwentna, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tzhrbk",
-      "published": "2026-10-09T03:45:19.020000+00:00",
+      "title": "M 1.8 - 23 km W of Anchor Point, Alaska",
+      "summary": "23 km W of Anchor Point, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tzulub",
+      "published": "2026-10-09T10:09:01.733000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -748,48 +748,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-09T04:18:01.584352+00:00",
-      "lastAttemptAt": "2026-10-09T04:18:01.584352+00:00",
+      "lastSuccessAt": "2026-10-09T10:28:00.889588+00:00",
+      "lastAttemptAt": "2026-10-09T10:28:00.889588+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-09T04:18:01.584352+00:00",
-      "lastAttemptAt": "2026-10-09T04:18:01.584352+00:00",
+      "lastSuccessAt": "2026-10-09T10:28:00.889588+00:00",
+      "lastAttemptAt": "2026-10-09T10:28:00.889588+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-09T04:18:01.584352+00:00",
-      "lastAttemptAt": "2026-10-09T04:18:01.584352+00:00",
+      "lastSuccessAt": "2026-10-09T10:28:00.889588+00:00",
+      "lastAttemptAt": "2026-10-09T10:28:00.889588+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-09T04:18:01.584352+00:00",
-      "lastAttemptAt": "2026-10-09T04:18:01.584352+00:00",
+      "lastSuccessAt": "2026-10-09T10:28:00.889588+00:00",
+      "lastAttemptAt": "2026-10-09T10:28:00.889588+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-09T04:18:01.584352+00:00",
-      "lastAttemptAt": "2026-10-09T04:18:01.584352+00:00",
+      "lastSuccessAt": "2026-10-09T10:28:00.889588+00:00",
+      "lastAttemptAt": "2026-10-09T10:28:00.889588+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-09T04:18:01.584352+00:00",
-      "lastAttemptAt": "2026-10-09T04:18:01.584352+00:00",
+      "lastSuccessAt": "2026-10-09T10:28:00.889588+00:00",
+      "lastAttemptAt": "2026-10-09T10:28:00.889588+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -804,8 +804,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-09T04:18:01.584352+00:00",
-      "lastAttemptAt": "2026-10-09T04:18:01.584352+00:00",
+      "lastSuccessAt": "2026-10-09T10:28:00.889588+00:00",
+      "lastAttemptAt": "2026-10-09T10:28:00.889588+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
