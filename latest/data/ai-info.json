@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T06:48:01.712488+00:00",
+  "updatedAt": "2026-10-09T06:58:01.605073+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -26,9 +26,9 @@
       "genre": "論文",
       "count": 8,
       "decision": "必要時だけ確認",
-      "signal": "GAMEGO: Training Game-Dev Agents with Synthetic Trajectories Anchored in Real-World Assets / AegisFlow: A Multi-Agent Agentic AI Framework for Autonomous Remediation and Self-Healing in Fragile Data Ecosystems / Text2Das",
-      "topUrl": "https://arxiv.org/abs/2610.06910",
-      "score": 4
+      "signal": "Synthesis Through Simulation: Generating Coherent Enterprise Data via Scalable Agent-System Interaction / Agent-Controlled Forgetting for Tool-Using Agents: Reversible Context Curation in Practice / Verification and Self",
+      "topUrl": "https://arxiv.org/abs/2610.10549",
+      "score": 3
     },
     {
       "genre": "技術",
@@ -48,20 +48,6 @@
       "url": "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot"
     },
     {
-      "label": "論文",
-      "title": "GAMEGO: Training Game-Dev Agents with Synthetic Trajectories Anchored in Real-World Assets",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.06910"
-    },
-    {
-      "label": "論文",
-      "title": "AegisFlow: A Multi-Agent Agentic AI Framework for Autonomous Remediation and Self-Healing in Fragile Data Ecosystems",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.06971"
-    },
-    {
       "label": "開発",
       "title": "Discover local models in GitHub Copilot CLI",
       "why": "Codex/AI開発判断に関係",
@@ -76,25 +62,39 @@
       "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/"
     },
     {
-      "label": "開発",
-      "title": "How one bug bounty researcher chooses the features they investigate",
+      "label": "論文",
+      "title": "Synthesis Through Simulation: Generating Coherent Enterprise Data via Scalable Agent-System Interaction",
       "why": "Codex/AI開発判断に関係",
-      "source": "GitHub",
-      "url": "https://github.blog/security/how-one-bug-bounty-researcher-chooses-the-features-they-investigate/"
-    },
-    {
-      "label": "AI",
-      "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
-      "why": "Codex/AI開発判断に関係",
-      "source": "ChatGPT / OpenAI公式",
-      "url": "https://openai.com/index/pollo-ai"
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2610.10549"
     },
     {
       "label": "論文",
-      "title": "Text2Dashboard: A Governed Agent Architecture for Natural-Language Dashboard Generation over Enterprise DataBrain",
+      "title": "Agent-Controlled Forgetting for Tool-Using Agents: Reversible Context Curation in Practice",
       "why": "Codex/AI開発判断に関係",
       "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.06914"
+      "url": "https://arxiv.org/abs/2610.10590"
+    },
+    {
+      "label": "論文",
+      "title": "Verification and Self-Improvement in Agentic AI: Foundations and Limits",
+      "why": "Codex/AI開発判断に関係",
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2610.10611"
+    },
+    {
+      "label": "論文",
+      "title": "The Harness as the Only Mutable Surface: Compliance-Bounded Self-Evolution of LLM Agents in Credit Pipelines, with a Measured Admission Gate",
+      "why": "Codex/AI開発判断に関係",
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2610.10629"
+    },
+    {
+      "label": "論文",
+      "title": "Speaking the Navigator's Language: Trajectory-Grounded Instruction Translation for Frozen Aerial VLN Agents",
+      "why": "Codex/AI開発判断に関係",
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2610.10635"
     }
   ],
   "items": [
@@ -115,46 +115,6 @@
         "開発",
         "重要",
         "制作",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "GAMEGO: Training Game-Dev Agents with Synthetic Trajectories Anchored in Real-World Assets",
-      "summary": "arXiv:2610.06910v1 Announce Type: new Abstract: Recent advances in Large Language Models (LLMs) have demonstrated remarkable capabilities in web front-end execution, with browser-based game generation emerging as a parti",
-      "url": "https://arxiv.org/abs/2610.06910",
-      "published": "2026-10-08T04:00:00+00:00",
-      "score": 4,
-      "tags": [
-        "論文",
-        "重要",
-        "制作",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "AegisFlow: A Multi-Agent Agentic AI Framework for Autonomous Remediation and Self-Healing in Fragile Data Ecosystems",
-      "summary": "arXiv:2610.06971v1 Announce Type: new Abstract: Traditional data pipelines are notoriously brittle, often failing due to upstream schema drift, API contract changes, or website DOM modifications. Present observability to",
-      "url": "https://arxiv.org/abs/2610.06971",
-      "published": "2026-10-08T04:00:00+00:00",
-      "score": 4,
-      "tags": [
-        "論文",
-        "重要",
-        "開発",
         "研究"
       ]
     },
@@ -197,6 +157,120 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Synthesis Through Simulation: Generating Coherent Enterprise Data via Scalable Agent-System Interaction",
+      "summary": "arXiv:2610.10549v1 Announce Type: new Abstract: Tool-calling agents have become central to enterprise AI, yet training and evaluating them at scale remains severely constrained due to business and legal restrictions on e",
+      "url": "https://arxiv.org/abs/2610.10549",
+      "published": "2026-10-09T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Agent-Controlled Forgetting for Tool-Using Agents: Reversible Context Curation in Practice",
+      "summary": "arXiv:2610.10590v1 Announce Type: new Abstract: Tool-using agents repeatedly carry observations whose useful content can be much smaller than their original payload. We study agent-controlled forgetting: the acting model",
+      "url": "https://arxiv.org/abs/2610.10590",
+      "published": "2026-10-09T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Verification and Self-Improvement in Agentic AI: Foundations and Limits",
+      "summary": "arXiv:2610.10611v1 Announce Type: new Abstract: Agentic AI systems can improve by searching longer, receiving additional support, or modifying how they propose and verify outputs. A performance score does not distinguish",
+      "url": "https://arxiv.org/abs/2610.10611",
+      "published": "2026-10-09T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "The Harness as the Only Mutable Surface: Compliance-Bounded Self-Evolution of LLM Agents in Credit Pipelines, with a Measured Admission Gate",
+      "summary": "arXiv:2610.10629v1 Announce Type: new Abstract: Self-improving LLM agents can adapt a credit pipeline to a changed rule, but an agent that rewrites itself destroys the artefact a supervisor reviews: a named change, a rec",
+      "url": "https://arxiv.org/abs/2610.10629",
+      "published": "2026-10-09T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Speaking the Navigator's Language: Trajectory-Grounded Instruction Translation for Frozen Aerial VLN Agents",
+      "summary": "arXiv:2610.10635v1 Announce Type: new Abstract: Aerial vision-and-language navigation (VLN) agents are typically trained on detail-rich, trajectory-aligned commands, whereas users issue short, intent-driven instructions;",
+      "url": "https://arxiv.org/abs/2610.10635",
+      "published": "2026-10-09T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Plan-and-Patch: Diffusion Language Models for Agentic Planning",
+      "summary": "arXiv:2610.10786v1 Announce Type: new Abstract: Planning is increasingly important for long-horizon agents, where successful execution requires coordinating subgoals, tool use, and intermediate outcomes over many steps. ",
+      "url": "https://arxiv.org/abs/2610.10786",
+      "published": "2026-10-09T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -231,63 +305,6 @@
         "AI",
         "重要",
         "制作"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Text2Dashboard: A Governed Agent Architecture for Natural-Language Dashboard Generation over Enterprise DataBrain",
-      "summary": "arXiv:2610.06914v1 Announce Type: new Abstract: Text2Dashboard is a DataBrain-specific prototype that turns natural-language analytic requests into inspectable dashboards. An installable Codex plugin and standalone Agent",
-      "url": "https://arxiv.org/abs/2610.06914",
-      "published": "2026-10-08T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "RadOnc-Agent: An LLM-Orchestrated Framework for AI Workflows Across the Radiotherapy Care Pathway",
-      "summary": "arXiv:2610.06923v1 Announce Type: new Abstract: Artificial intelligence has advanced individual radiotherapy tasks, yet these capabilities remain separated across clinical stages, software environments and data modalitie",
-      "url": "https://arxiv.org/abs/2610.06923",
-      "published": "2026-10-08T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Principles that Guide, Actions that Inform: Agent Evolution via Knowledge Abstraction",
-      "summary": "arXiv:2610.06964v1 Announce Type: new Abstract: Large language model (LLM) agents have demonstrated strong capabilities in interactive environments, yet their ability to continually evolve from experience remains limited",
-      "url": "https://arxiv.org/abs/2610.06964",
-      "published": "2026-10-08T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
       ]
     },
     {
@@ -419,6 +436,42 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "An Explainable Header-Centric Framework for Large-Scale Semantic Table Interpretation and Data Quality Assessment",
+      "summary": "arXiv:2610.10541v1 Announce Type: new Abstract: Knowledge Graph (KG) quality depends not only on downstream graph validation, but also on the quality of tabular metadata used before integration. In metadata-only Semantic",
+      "url": "https://arxiv.org/abs/2610.10541",
+      "published": "2026-10-09T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Whose Ground Truth? Embracing Ambiguity in Human-Centered AI",
+      "summary": "arXiv:2610.10805v1 Announce Type: new Abstract: As AI systems increasingly interact with people and make decisions about them, understanding human interpretations becomes an important part of developing human-centered AI",
+      "url": "https://arxiv.org/abs/2610.10805",
+      "published": "2026-10-09T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
@@ -470,60 +523,6 @@
       "tags": [
         "AI",
         "重要"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "FluidPD: In-Place Elasticity for SLO-Aware Prefill-Decode Disaggregated LLM Serving",
-      "summary": "arXiv:2610.06917v1 Announce Type: new Abstract: Prefill-decode disaggregation is becoming a common architecture for LLM serving because it separates two phases with distinct execution patterns and SLO objectives. Existin",
-      "url": "https://arxiv.org/abs/2610.06917",
-      "published": "2026-10-08T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Anchor Divergence for Semantic Geometry in Contrastive Learning",
-      "summary": "arXiv:2610.06919v1 Announce Type: new Abstract: This paper concerns how semantic context determines geometry in learned vector representations. Similarity is typically measured using cosine similarity, which provides a s",
-      "url": "https://arxiv.org/abs/2610.06919",
-      "published": "2026-10-08T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Metonymic Circuits for Abstract Concept Grounding in Vision Transformers",
-      "summary": "arXiv:2610.06928v1 Announce Type: new Abstract: We study how Vision Transformers ground abstract concepts (e.g., angry) when training data provide limited direct referential evidence. We hypothesize a metonymic grounding",
-      "url": "https://arxiv.org/abs/2610.06928",
-      "published": "2026-10-08T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
       ]
     },
     {
@@ -711,5 +710,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-09T04:18:01.584352+00:00"
+  "lastSuccessAt": "2026-10-09T06:58:01.605073+00:00"
 }
