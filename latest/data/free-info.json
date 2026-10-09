@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-09T04:08:01.624879+00:00",
-  "lastSuccessAt": "2026-10-08T22:11:52.554839+00:00",
+  "updatedAt": "2026-10-09T04:18:01.584352+00:00",
+  "lastSuccessAt": "2026-10-09T04:18:01.584352+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -135,10 +135,10 @@
     {
       "genre": "AI",
       "count": 9,
-      "signal": "Sharing AI progress in mathematics / Pollo AI turns creative ideas into campaigns with OpenAI / See what 4 builders are making with Gemini 3.8 Flash",
+      "signal": "Pollo AI turns creative ideas into campaigns with OpenAI / See what 4 builders are making with Gemini 3.8 Flash / How Oracle turns days of work into minutes with ChatGPT and Codex",
       "decision": "AI/Codex運用の変化を確認",
-      "topUrl": "https://openai.com/index/sharing-ai-progress-in-mathematics",
-      "score": 4
+      "topUrl": "https://openai.com/index/pollo-ai",
+      "score": 3
     },
     {
       "genre": "論文",
@@ -149,20 +149,20 @@
       "score": 4
     },
     {
-      "genre": "技術",
+      "genre": "災害",
       "count": 2,
-      "signal": "Navier-Stokes lost in translation: Why Lean verification of AI autoformalisation does not guarantee correct natural language proofs / Software developers are not okay",
+      "signal": "M 1.7 - 8 km S of Lone Oak, Georgia / M 1.9 - 27 km E of Skwentna, Alaska",
+      "decision": "更新あり。必要時だけ確認",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u13l",
+      "score": 1
+    },
+    {
+      "genre": "技術",
+      "count": 1,
+      "signal": "Navier-Stokes lost in translation: Why Lean verification of AI autoformalisation does not guarantee correct natural language proofs",
       "decision": "更新あり。必要時だけ確認",
       "topUrl": "https://arxiv.org/abs/2610.08144",
       "score": 2
-    },
-    {
-      "genre": "災害",
-      "count": 1,
-      "signal": "M 1.4 - 25 km SSE of Skwentna, Alaska",
-      "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tywize",
-      "score": 1
     }
   ],
   "items": [
@@ -207,26 +207,6 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Sharing AI progress in mathematics",
-      "summary": "OpenAI publishes new results on open problems in mathematics from an internal frontier model and shares Lean proof formalizations and research details on GitHub.",
-      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
-      "published": "2026-10-06T12:00:00+00:00",
-      "score": 4,
-      "tags": [
-        "AI",
-        "重要",
-        "開発",
-        "研究"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -243,6 +223,25 @@
         "開発",
         "重要",
         "研究"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
+      "summary": "With GPT-5.6, GPT-6 Astra, and GPT‑Image‑2.5, Pollo AI helps creators turn bold ideas into detailed images and cinematic video ads.",
+      "url": "https://openai.com/index/pollo-ai",
+      "published": "2026-10-08T12:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "制作"
       ]
     },
     {
@@ -286,10 +285,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.4 - 25 km SSE of Skwentna, Alaska",
-      "summary": "25 km SSE of Skwentna, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tywize",
-      "published": "2026-10-08T22:06:08.198000+00:00",
+      "title": "M 1.7 - 8 km S of Lone Oak, Georgia",
+      "summary": "8 km S of Lone Oak, Georgia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u13l",
+      "published": "2026-10-09T03:47:32.121000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -367,25 +366,6 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
-      "summary": "With GPT-5.6, GPT-6 Astra, and GPT‑Image‑2.5, Pollo AI helps creators turn bold ideas into detailed images and cinematic video ads.",
-      "url": "https://openai.com/index/pollo-ai",
-      "published": "2026-10-08T12:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "制作"
       ]
     },
     {
@@ -573,6 +553,24 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "LegalOn halves Codex costs while maintaining development speed",
+      "summary": "LegalOn cut estimated daily Codex costs by 65% while maintaining development speed. It matched Astra, Sol, and Luna to tasks and managed budgets strategically.",
+      "url": "https://openai.com/index/legalon-halves-codex-costs",
+      "published": "2026-10-08T12:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -642,24 +640,6 @@
       "tags": [
         "AI",
         "重要"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Software developers are not okay",
-      "summary": "Comments",
-      "url": "https://www.baldurbjarnason.com/2026/05-software-developers-are-not-okay/",
-      "published": "2026-10-07T19:35:08+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "開発"
       ]
     },
     {
@@ -750,54 +730,67 @@
         "AI",
         "研究"
       ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.9 - 27 km E of Skwentna, Alaska",
+      "summary": "27 km E of Skwentna, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tzhrbk",
+      "published": "2026-10-09T03:45:19.020000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-08T22:11:52.554839+00:00",
-      "lastAttemptAt": "2026-10-08T22:11:52.554839+00:00",
+      "lastSuccessAt": "2026-10-09T04:18:01.584352+00:00",
+      "lastAttemptAt": "2026-10-09T04:18:01.584352+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-08T22:11:52.554839+00:00",
-      "lastAttemptAt": "2026-10-08T22:11:52.554839+00:00",
+      "lastSuccessAt": "2026-10-09T04:18:01.584352+00:00",
+      "lastAttemptAt": "2026-10-09T04:18:01.584352+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-08T22:11:52.554839+00:00",
-      "lastAttemptAt": "2026-10-08T22:11:52.554839+00:00",
+      "lastSuccessAt": "2026-10-09T04:18:01.584352+00:00",
+      "lastAttemptAt": "2026-10-09T04:18:01.584352+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-08T22:11:52.554839+00:00",
-      "lastAttemptAt": "2026-10-08T22:11:52.554839+00:00",
+      "lastSuccessAt": "2026-10-09T04:18:01.584352+00:00",
+      "lastAttemptAt": "2026-10-09T04:18:01.584352+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-08T22:11:52.554839+00:00",
-      "lastAttemptAt": "2026-10-08T22:11:52.554839+00:00",
+      "lastSuccessAt": "2026-10-09T04:18:01.584352+00:00",
+      "lastAttemptAt": "2026-10-09T04:18:01.584352+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-08T22:11:52.554839+00:00",
-      "lastAttemptAt": "2026-10-08T22:11:52.554839+00:00",
+      "lastSuccessAt": "2026-10-09T04:18:01.584352+00:00",
+      "lastAttemptAt": "2026-10-09T04:18:01.584352+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -812,8 +805,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-08T22:11:52.554839+00:00",
-      "lastAttemptAt": "2026-10-08T22:11:52.554839+00:00",
+      "lastSuccessAt": "2026-10-09T04:18:01.584352+00:00",
+      "lastAttemptAt": "2026-10-09T04:18:01.584352+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

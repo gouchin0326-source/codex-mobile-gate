@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T04:08:01.624879+00:00",
+  "updatedAt": "2026-10-09T04:18:01.584352+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -18,9 +18,9 @@
       "genre": "AI",
       "count": 9,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "Sharing AI progress in mathematics / Pollo AI turns creative ideas into campaigns with OpenAI / See what 4 builders are making with Gemini 3.8 Flash",
-      "topUrl": "https://openai.com/index/sharing-ai-progress-in-mathematics",
-      "score": 4
+      "signal": "Pollo AI turns creative ideas into campaigns with OpenAI / See what 4 builders are making with Gemini 3.8 Flash / How Oracle turns days of work into minutes with ChatGPT and Codex",
+      "topUrl": "https://openai.com/index/pollo-ai",
+      "score": 3
     },
     {
       "genre": "論文",
@@ -32,9 +32,9 @@
     },
     {
       "genre": "技術",
-      "count": 2,
+      "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "Navier-Stokes lost in translation: Why Lean verification of AI autoformalisation does not guarantee correct natural language proofs / Software developers are not okay",
+      "signal": "Navier-Stokes lost in translation: Why Lean verification of AI autoformalisation does not guarantee correct natural language proofs",
       "topUrl": "https://arxiv.org/abs/2610.08144",
       "score": 2
     }
@@ -69,13 +69,6 @@
       "url": "https://github.blog/changelog/2026-10-07-discover-local-models-in-github-copilot-cli"
     },
     {
-      "label": "AI",
-      "title": "Sharing AI progress in mathematics",
-      "why": "Codex/AI開発判断に関係",
-      "source": "ChatGPT / OpenAI公式",
-      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics"
-    },
-    {
       "label": "開発",
       "title": "ReviewBench: An open benchmark for AI code review",
       "why": "Codex/AI開発判断に関係",
@@ -95,6 +88,13 @@
       "why": "Codex/AI開発判断に関係",
       "source": "ChatGPT / OpenAI公式",
       "url": "https://openai.com/index/pollo-ai"
+    },
+    {
+      "label": "論文",
+      "title": "Text2Dashboard: A Governed Agent Architecture for Natural-Language Dashboard Generation over Enterprise DataBrain",
+      "why": "Codex/AI開発判断に関係",
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2610.06914"
     }
   ],
   "items": [
@@ -174,26 +174,6 @@
       "tags": [
         "開発",
         "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Sharing AI progress in mathematics",
-      "summary": "OpenAI publishes new results on open problems in mathematics from an internal frontier model and shares Lean proof formalizations and research details on GitHub.",
-      "url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
-      "published": "2026-10-06T12:00:00+00:00",
-      "score": 4,
-      "tags": [
-        "AI",
-        "重要",
-        "開発",
         "研究"
       ]
     },
@@ -475,6 +455,24 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "LegalOn halves Codex costs while maintaining development speed",
+      "summary": "LegalOn cut estimated daily Codex costs by 65% while maintaining development speed. It matched Astra, Sol, and Luna to tasks and managed budgets strategically.",
+      "url": "https://openai.com/index/legalon-halves-codex-costs",
+      "published": "2026-10-08T12:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -592,12 +590,6 @@
         ],
         "latest": [
           {
-            "title": "Sharing AI progress in mathematics",
-            "url": "https://openai.com/index/sharing-ai-progress-in-mathematics",
-            "published": "2026-10-06T12:00:00+00:00",
-            "source": "ChatGPT / OpenAI公式"
-          },
-          {
             "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
             "url": "https://openai.com/index/pollo-ai",
             "published": "2026-10-08T12:00:00+00:00",
@@ -607,6 +599,12 @@
             "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
             "url": "https://openai.com/index/oracle",
             "published": "2026-10-08T16:00:00+00:00",
+            "source": "ChatGPT / OpenAI公式"
+          },
+          {
+            "title": "LegalOn halves Codex costs while maintaining development speed",
+            "url": "https://openai.com/index/legalon-halves-codex-costs",
+            "published": "2026-10-08T12:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           },
           {
@@ -713,5 +711,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-08T22:11:52.554839+00:00"
+  "lastSuccessAt": "2026-10-09T04:18:01.584352+00:00"
 }
