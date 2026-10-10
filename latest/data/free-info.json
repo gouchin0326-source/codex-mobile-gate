@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-10T03:38:01.420398+00:00",
-  "lastSuccessAt": "2026-10-09T21:46:21.633520+00:00",
+  "updatedAt": "2026-10-10T03:48:01.497546+00:00",
+  "lastSuccessAt": "2026-10-10T03:48:01.497546+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -127,14 +127,14 @@
     {
       "genre": "開発",
       "count": 12,
-      "signal": "Claude Haiku 5.5 in GitHub Copilot / Discover local models in GitHub Copilot CLI / ReviewBench: An open benchmark for AI code review",
+      "signal": "Claude Haiku 5.5 in GitHub Copilot / ReviewBench: An open benchmark for AI code review / GitHub Copilot weekly releases — October 5",
       "decision": "CG開発・GitHub運用へ反映候補",
       "topUrl": "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot",
       "score": 5
     },
     {
       "genre": "AI",
-      "count": 9,
+      "count": 8,
       "signal": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol / Pollo AI turns creative ideas into campaigns with OpenAI / See what 4 builders are making with Gemini 3.8 Flash",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/asana-browser-agent",
@@ -150,18 +150,18 @@
     },
     {
       "genre": "技術",
-      "count": 2,
-      "signal": "Python 3.15.0 / Why Are Coding Agents So Dumb?",
+      "count": 3,
+      "signal": "Lifeguard: A static analyzer for Python lazy imports compatibility / Python 3.15.0 / Why Are Coding Agents So Dumb?",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://www.python.org/downloads/release/python-3150/",
+      "topUrl": "https://github.com/Facebook/lifeguard",
       "score": 2
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.0 - 8 km WNW of Cobb, CA",
+      "signal": "M 2.0 - 29 km SSW of Alamo, Nevada",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75447041",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00925565",
       "score": 1
     }
   ],
@@ -268,12 +268,12 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "開発",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Python 3.15.0",
+      "title": "Lifeguard: A static analyzer for Python lazy imports compatibility",
       "summary": "Comments",
-      "url": "https://www.python.org/downloads/release/python-3150/",
-      "published": "2026-10-09T17:07:02+00:00",
+      "url": "https://github.com/Facebook/lifeguard",
+      "published": "2026-10-09T21:44:50+00:00",
       "score": 2,
       "tags": [
         "技術",
@@ -284,10 +284,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.0 - 8 km WNW of Cobb, CA",
-      "summary": "8 km WNW of Cobb, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75447041",
-      "published": "2026-10-09T21:38:05.460000+00:00",
+      "title": "M 2.0 - 29 km SSW of Alamo, Nevada",
+      "summary": "29 km SSW of Alamo, Nevada",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00925565",
+      "published": "2026-10-10T03:36:49.412000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -316,17 +316,34 @@
       "label": "GitHub更新",
       "genre": "開発",
       "provider": null,
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Discover local models in GitHub Copilot CLI",
-      "summary": "GitHub Copilot CLI makes it easier to choose a local model without leaving your existing workflow. Starting in CLI version 1.0.94-0, use /model to discover supported models from a running… The post Discover local models ",
-      "url": "https://github.blog/changelog/2026-10-07-discover-local-models-in-github-copilot-cli",
-      "published": "2026-10-07T15:46:13+00:00",
-      "score": 4,
+      "title": "GitHub Copilot weekly releases — October 5",
+      "summary": "This week’s updates make Copilot easier to use across accounts and environments, with more control over what agents can access and how you manage their work. GitHub Copilot Claude Haiku… The post GitHub Copilot weekly re",
+      "url": "https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5",
+      "published": "2026-10-09T22:58:23+00:00",
+      "score": 3,
       "tags": [
         "開発",
-        "重要",
-        "研究"
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "CodeQL 2.27.2 improves C++, Go, Rust, and JavaScript analysis",
+      "summary": "CodeQL 2.27.2 is now available, adding a C++ regular-expression parser and analysis improvements across several languages. CodeQL is the static analysis engine behind GitHub code scanning, which helps you find… The post ",
+      "url": "https://github.blog/changelog/2026-10-09-codeql-2-27-2-improves-c-go-rust-and-javascript-analysis",
+      "published": "2026-10-09T21:32:54+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -481,24 +498,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Local sandboxing for GitHub Copilot now generally available",
-      "summary": "Local sandboxing for GitHub Copilot is now generally available in GitHub Copilot CLI, the GitHub Copilot app, and VS Code sessions using Agent Host. Local sandboxes give developers a secure… The post Local sandboxing for",
-      "url": "https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available",
-      "published": "2026-10-07T15:46:17+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -568,6 +567,24 @@
       "tags": [
         "開発",
         "重要"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "Python 3.15.0",
+      "summary": "Comments",
+      "url": "https://www.python.org/downloads/release/python-3150/",
+      "published": "2026-10-09T17:07:02+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "開発"
       ]
     },
     {
@@ -730,72 +747,54 @@
       "tags": [
         "開発"
       ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Radisson Hotel Group brings hotel discovery into ChatGPT",
-      "summary": "Radisson partnered with Accenture to build a ChatGPT plugin using OpenAI technology, helping travelers find, compare, and book hotels while planning their trips.",
-      "url": "https://openai.com/index/radisson",
-      "published": "2026-10-07T07:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-09T21:46:21.633520+00:00",
-      "lastAttemptAt": "2026-10-09T21:46:21.633520+00:00",
+      "lastSuccessAt": "2026-10-10T03:48:01.497546+00:00",
+      "lastAttemptAt": "2026-10-10T03:48:01.497546+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-09T21:46:21.633520+00:00",
-      "lastAttemptAt": "2026-10-09T21:46:21.633520+00:00",
+      "lastSuccessAt": "2026-10-10T03:48:01.497546+00:00",
+      "lastAttemptAt": "2026-10-10T03:48:01.497546+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-09T21:46:21.633520+00:00",
-      "lastAttemptAt": "2026-10-09T21:46:21.633520+00:00",
+      "lastSuccessAt": "2026-10-10T03:48:01.497546+00:00",
+      "lastAttemptAt": "2026-10-10T03:48:01.497546+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-09T21:46:21.633520+00:00",
-      "lastAttemptAt": "2026-10-09T21:46:21.633520+00:00",
+      "lastSuccessAt": "2026-10-10T03:48:01.497546+00:00",
+      "lastAttemptAt": "2026-10-10T03:48:01.497546+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-09T21:46:21.633520+00:00",
-      "lastAttemptAt": "2026-10-09T21:46:21.633520+00:00",
+      "lastSuccessAt": "2026-10-10T03:48:01.497546+00:00",
+      "lastAttemptAt": "2026-10-10T03:48:01.497546+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-09T21:46:21.633520+00:00",
-      "lastAttemptAt": "2026-10-09T21:46:21.633520+00:00",
+      "lastSuccessAt": "2026-10-10T03:48:01.497546+00:00",
+      "lastAttemptAt": "2026-10-10T03:48:01.497546+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -810,8 +809,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-09T21:46:21.633520+00:00",
-      "lastAttemptAt": "2026-10-09T21:46:21.633520+00:00",
+      "lastSuccessAt": "2026-10-10T03:48:01.497546+00:00",
+      "lastAttemptAt": "2026-10-10T03:48:01.497546+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
