@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-10T09:38:01.686311+00:00",
-  "lastSuccessAt": "2026-10-10T06:58:01.655291+00:00",
+  "updatedAt": "2026-10-10T09:48:01.817076+00:00",
+  "lastSuccessAt": "2026-10-10T09:48:01.817076+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -134,27 +134,27 @@
     },
     {
       "genre": "AI",
-      "count": 8,
+      "count": 10,
       "signal": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol / Pollo AI turns creative ideas into campaigns with OpenAI / See what 4 builders are making with Gemini 3.8 Flash",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/asana-browser-agent",
       "score": 3
     },
     {
-      "genre": "技術",
-      "count": 3,
-      "signal": "Lifeguard: A static analyzer for Python lazy imports compatibility / Python 3.15.0 / Why Are Coding Agents So Dumb?",
+      "genre": "災害",
+      "count": 8,
+      "signal": "M 2.3 - 66 km NNW of Tanana, Alaska / M 2.0 - 29 km WNW of Petersville, Alaska / M 0.5 - 5 km NW of The Geysers, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://github.com/Facebook/lifeguard",
-      "score": 2
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uborpp",
+      "score": 1
     },
     {
-      "genre": "災害",
-      "count": 1,
-      "signal": "M 2.0 - 29 km SSW of Alamo, Nevada",
+      "genre": "技術",
+      "count": 2,
+      "signal": "Python 3.15.0 / Why Are Coding Agents So Dumb?",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00925565",
-      "score": 1
+      "topUrl": "https://www.python.org/downloads/release/python-3150/",
+      "score": 2
     }
   ],
   "items": [
@@ -241,12 +241,12 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "技術",
+      "topic": "開発",
       "sourceWeight": 1,
-      "title": "Lifeguard: A static analyzer for Python lazy imports compatibility",
+      "title": "Python 3.15.0",
       "summary": "Comments",
-      "url": "https://github.com/Facebook/lifeguard",
-      "published": "2026-10-09T21:44:50+00:00",
+      "url": "https://www.python.org/downloads/release/python-3150/",
+      "published": "2026-10-09T17:07:02+00:00",
       "score": 2,
       "tags": [
         "技術",
@@ -257,10 +257,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.0 - 29 km SSW of Alamo, Nevada",
-      "summary": "29 km SSW of Alamo, Nevada",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00925565",
-      "published": "2026-10-10T03:36:49.412000+00:00",
+      "title": "M 2.3 - 66 km NNW of Tanana, Alaska",
+      "summary": "66 km NNW of Tanana, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uborpp",
+      "published": "2026-10-10T09:15:07.857000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -453,24 +453,6 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Python 3.15.0",
-      "summary": "Comments",
-      "url": "https://www.python.org/downloads/release/python-3150/",
-      "published": "2026-10-09T17:07:02+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "開発"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
       "topic": "その他",
       "sourceWeight": 1,
       "title": "Why Are Coding Agents So Dumb?",
@@ -589,54 +571,181 @@
       "tags": [
         "開発"
       ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Radisson Hotel Group brings hotel discovery into ChatGPT",
+      "summary": "Radisson partnered with Accenture to build a ChatGPT plugin using OpenAI technology, helping travelers find, compare, and book hotels while planning their trips.",
+      "url": "https://openai.com/index/radisson",
+      "published": "2026-10-07T07:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Gemini 4 Argon: our next era of frontier intelligence",
+      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "published": "2026-09-30T20:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "研究"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 2.0 - 29 km WNW of Petersville, Alaska",
+      "summary": "29 km WNW of Petersville, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uboihn",
+      "published": "2026-10-10T09:04:23.446000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.5 - 5 km NW of The Geysers, CA",
+      "summary": "5 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75447286",
+      "published": "2026-10-10T08:58:12.050000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 4.5 - 61 km N of Hihifo, Tonga",
+      "summary": "61 km N of Hihifo, Tonga",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1dm",
+      "published": "2026-10-10T08:38:50.674000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.7 - 8 km W of Palomar Observatory, CA",
+      "summary": "8 km W of Palomar Observatory, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41345999",
+      "published": "2026-10-10T08:32:18.350000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 2.2 - 6 km SE of Houston, Alaska",
+      "summary": "6 km SE of Houston, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ubngcd",
+      "published": "2026-10-10T08:31:52.119000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 2.0 - 9 km NNE of Pāhala, Hawaii",
+      "summary": "9 km NNE of Pāhala, Hawaii",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75053347",
+      "published": "2026-10-10T08:30:02.870000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 4.2 - 4 km W of Aquiles Serdán 1ra. Sección, Mexico",
+      "summary": "4 km W of Aquiles Serdán 1ra. Sección, Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1dh",
+      "published": "2026-10-10T07:47:00.391000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-10T03:48:01.497546+00:00",
-      "lastAttemptAt": "2026-10-10T03:48:01.497546+00:00",
+      "lastSuccessAt": "2026-10-10T09:48:01.817076+00:00",
+      "lastAttemptAt": "2026-10-10T09:48:01.817076+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-10T03:48:01.497546+00:00",
-      "lastAttemptAt": "2026-10-10T03:48:01.497546+00:00",
+      "lastSuccessAt": "2026-10-10T09:48:01.817076+00:00",
+      "lastAttemptAt": "2026-10-10T09:48:01.817076+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-10T03:48:01.497546+00:00",
-      "lastAttemptAt": "2026-10-10T03:48:01.497546+00:00",
+      "lastSuccessAt": "2026-10-10T09:48:01.817076+00:00",
+      "lastAttemptAt": "2026-10-10T09:48:01.817076+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-10T03:48:01.497546+00:00",
-      "lastAttemptAt": "2026-10-10T03:48:01.497546+00:00",
+      "lastSuccessAt": "2026-10-10T09:48:01.817076+00:00",
+      "lastAttemptAt": "2026-10-10T09:48:01.817076+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-10T03:48:01.497546+00:00",
-      "lastAttemptAt": "2026-10-10T03:48:01.497546+00:00",
+      "lastSuccessAt": "2026-10-10T09:48:01.817076+00:00",
+      "lastAttemptAt": "2026-10-10T09:48:01.817076+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-10T03:48:01.497546+00:00",
-      "lastAttemptAt": "2026-10-10T03:48:01.497546+00:00",
+      "lastSuccessAt": "2026-10-10T09:48:01.817076+00:00",
+      "lastAttemptAt": "2026-10-10T09:48:01.817076+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -651,8 +760,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-10T03:48:01.497546+00:00",
-      "lastAttemptAt": "2026-10-10T03:48:01.497546+00:00",
+      "lastSuccessAt": "2026-10-10T09:48:01.817076+00:00",
+      "lastAttemptAt": "2026-10-10T09:48:01.817076+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

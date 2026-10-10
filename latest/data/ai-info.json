@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T09:38:01.686311+00:00",
+  "updatedAt": "2026-10-10T09:48:01.817076+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -16,7 +16,7 @@
     },
     {
       "genre": "AI",
-      "count": 8,
+      "count": 10,
       "decision": "AI/Codex運用の変化を確認",
       "signal": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol / Pollo AI turns creative ideas into campaigns with OpenAI / See what 4 builders are making with Gemini 3.8 Flash",
       "topUrl": "https://openai.com/index/asana-browser-agent",
@@ -24,10 +24,10 @@
     },
     {
       "genre": "技術",
-      "count": 3,
+      "count": 2,
       "decision": "必要時だけ確認",
-      "signal": "Lifeguard: A static analyzer for Python lazy imports compatibility / Python 3.15.0 / Why Are Coding Agents So Dumb?",
-      "topUrl": "https://github.com/Facebook/lifeguard",
+      "signal": "Python 3.15.0 / Why Are Coding Agents So Dumb?",
+      "topUrl": "https://www.python.org/downloads/release/python-3150/",
       "score": 2
     }
   ],
@@ -337,24 +337,6 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Lifeguard: A static analyzer for Python lazy imports compatibility",
-      "summary": "Comments",
-      "url": "https://github.com/Facebook/lifeguard",
-      "published": "2026-10-09T21:44:50+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "開発"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
       "topic": "開発",
       "sourceWeight": 1,
       "title": "Python 3.15.0",
@@ -493,6 +475,42 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Radisson Hotel Group brings hotel discovery into ChatGPT",
+      "summary": "Radisson partnered with Accenture to build a ChatGPT plugin using OpenAI technology, helping travelers find, compare, and book hotels while planning their trips.",
+      "url": "https://openai.com/index/radisson",
+      "published": "2026-10-07T07:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Gemini 4 Argon: our next era of frontier intelligence",
+      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "published": "2026-09-30T20:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "研究"
+      ]
+    },
+    {
       "source": "anthropic-claude",
       "platform": "AI",
       "label": "Claude / Anthropic公式",
@@ -610,6 +628,12 @@
             "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers/",
             "published": "2026-09-28T16:00:00+00:00",
             "source": "Gemini公式"
+          },
+          {
+            "title": "Gemini 4 Argon: our next era of frontier intelligence",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+            "published": "2026-09-30T20:00:00+00:00",
+            "source": "Gemini公式"
           }
         ]
       },
@@ -670,5 +694,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-10T06:58:01.655291+00:00"
+  "lastSuccessAt": "2026-10-10T09:48:01.817076+00:00"
 }
