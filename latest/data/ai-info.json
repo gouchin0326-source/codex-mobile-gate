@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T14:58:00.925527+00:00",
+  "updatedAt": "2026-10-10T21:50:46.444932+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -10,7 +10,7 @@
       "genre": "開発",
       "count": 12,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "Claude Haiku 5.5 in GitHub Copilot / ReviewBench: An open benchmark for AI code review / GitHub Copilot weekly releases — October 5",
+      "signal": "Claude Haiku 5.5 in GitHub Copilot / New controls and chat improvements in Copilot for JetBrains / ReviewBench: An open benchmark for AI code review",
       "topUrl": "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot",
       "score": 5
     },
@@ -26,8 +26,8 @@
       "genre": "技術",
       "count": 2,
       "decision": "必要時だけ確認",
-      "signal": "Python 3.15.0 / Why Are Coding Agents So Dumb?",
-      "topUrl": "https://www.python.org/downloads/release/python-3150/",
+      "signal": "SNTPings, draw on a canvas using ICMPv6 / Iframes that finally fit their content",
+      "topUrl": "https://pings.utwente.io/",
       "score": 2
     }
   ],
@@ -38,6 +38,13 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot"
+    },
+    {
+      "label": "開発",
+      "title": "New controls and chat improvements in Copilot for JetBrains",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains"
     },
     {
       "label": "開発",
@@ -80,13 +87,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "ChatGPT / OpenAI公式",
       "url": "https://openai.com/index/pollo-ai"
-    },
-    {
-      "label": "開発",
-      "title": "Purpose-built model for leaked secret detection",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection"
     }
   ],
   "items": [
@@ -107,6 +107,25 @@
         "開発",
         "重要",
         "制作",
+        "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "New controls and chat improvements in Copilot for JetBrains",
+      "summary": "This update brings more control over default models and MCP server in GitHub Copilot for JetBrains. It also makes diagnostics easier to address, improves chat navigation and account controls, and… The post New controls a",
+      "url": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains",
+      "published": "2026-10-10T18:53:39+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
         "研究"
       ]
     },
@@ -222,25 +241,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Purpose-built model for leaked secret detection",
-      "summary": "Secret protection should keep pace with the way you build software, whether you write code yourself or work with an AI agent. With our new purpose-built model, we’re bringing context-aware… The post Purpose-built model f",
-      "url": "https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection",
-      "published": "2026-10-07T16:13:56+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要",
-        "研究"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -337,34 +337,16 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Python 3.15.0",
-      "summary": "Comments",
-      "url": "https://www.python.org/downloads/release/python-3150/",
-      "published": "2026-10-09T17:07:02+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "開発"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
       "topic": "その他",
       "sourceWeight": 1,
-      "title": "Why Are Coding Agents So Dumb?",
+      "title": "SNTPings, draw on a canvas using ICMPv6",
       "summary": "Comments",
-      "url": "https://mtlynch.io/why-are-coding-agents-so-dumb/",
-      "published": "2026-10-09T14:22:04+00:00",
+      "url": "https://pings.utwente.io/",
+      "published": "2026-10-10T17:05:41+00:00",
       "score": 2,
       "tags": [
         "技術",
-        "重要"
+        "制作"
       ]
     },
     {
@@ -508,6 +490,23 @@
       "tags": [
         "AI",
         "研究"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Iframes that finally fit their content",
+      "summary": "Comments",
+      "url": "https://alfy.blog/2026/10/09/iframe-that-finally-fit-their-content.html",
+      "published": "2026-10-10T12:54:56+00:00",
+      "score": 1,
+      "tags": [
+        "技術"
       ]
     },
     {
@@ -694,5 +693,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-10T09:48:01.817076+00:00"
+  "lastSuccessAt": "2026-10-10T21:50:46.444932+00:00"
 }
