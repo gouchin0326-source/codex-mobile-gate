@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-10T05:08:01.661453+00:00",
-  "lastSuccessAt": "2026-10-10T04:08:01.736545+00:00",
+  "updatedAt": "2026-10-10T05:18:01.792437+00:00",
+  "lastSuccessAt": "2026-10-10T05:18:01.792437+00:00",
   "status": "fresh",
   "mode": "zero-token-social-trends",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -337,7 +337,11 @@
     },
     {
       "word": "anthropic",
-      "count": 8
+      "count": 6
+    },
+    {
+      "word": "claude",
+      "count": 6
     },
     {
       "word": "gemini",
@@ -352,14 +356,6 @@
       "count": 6
     },
     {
-      "word": "biggo",
-      "count": 4
-    },
-    {
-      "word": "claude",
-      "count": 4
-    },
-    {
       "word": "dig",
       "count": 4
     },
@@ -368,7 +364,11 @@
       "count": 4
     },
     {
-      "word": "nagoyatv",
+      "word": "gpt-6",
+      "count": 4
+    },
+    {
+      "word": "hack",
       "count": 4
     }
   ],
@@ -752,6 +752,25 @@
       "summary": "天皇皇后両陛下 国民スポーツ大会開会式出席へ 青森到着 – Quebee キュエビー QAB 琉球朝日放送",
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1zMnNmU2VMRTJ4MXdLY3ZrbnNycnB1NWRtbGY0U3lNWlRCamdUS05PUWtVTEJJelRhbzdzWkNKR0RBMWJmc0pENld4ZVUxdXFna2pMUXJTdXM?oc=5",
       "published": "2026-10-10T03:22:29+00:00",
+      "score": 1,
+      "tags": [
+        "SNS"
+      ],
+      "regionScore": 2,
+      "region": "日本語優先"
+    },
+    {
+      "source": "news-ai-jp",
+      "platform": "Google News",
+      "label": "日本ニュース AI",
+      "genre": "SNS",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 3,
+      "title": "AI Hack提供のAIO分析ツール「AI Hack」が最新AIモデル「GPT-6 Sol」「GPT-6 Luna」「Claude Opus 5.5」に対応 - Infoseek",
+      "summary": "AI Hack提供のAIO分析ツール「AI Hack」が最新AIモデル「GPT-6 Sol」「GPT-6 Luna」「Claude Opus 5.5」に対応 Infoseek",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBqUjQwdXdMTFpMQTF5NW9uR0h5TldDQndWSnMxVUJjMFRRZGl1YWF5SjNYa2t0SUJjQUV5RW51dkgtUlY1S25aLUlHczFEMXY2MW9FbVFJaEZMNDVrM1pEMXV6M0duRU1EYWpsUEMyQ0NLUQ?oc=5",
+      "published": "2026-10-10T03:10:00+00:00",
       "score": 1,
       "tags": [
         "SNS"
@@ -1499,25 +1518,6 @@
       ],
       "regionScore": 2,
       "region": "日本語優先"
-    },
-    {
-      "source": "news-ai-jp",
-      "platform": "Google News",
-      "label": "日本ニュース AI",
-      "genre": "SNS",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 3,
-      "title": "Anthropic、AIモデルへの虐待禁止を利用ポリシーに明文化…来月施行 - BigGo ファイナンス",
-      "summary": "Anthropic、AIモデルへの虐待禁止を利用ポリシーに明文化…来月施行 BigGo ファイナンス",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9FaVJJclFSZWpDbF9XLUh3d2hmRzI1LS1aV1NnY21mLW1GSlNSNEE0Y2VTR1F1d3lZVWoxbmRoSGdpWlpYcXNEN3FfSnYwcVNkRmxUREpSMHFDR2hqbVNNZG5KaXY1dHRJS2YtdllzbUQwU0I0?oc=5",
-      "published": "2026-10-09T18:26:00+00:00",
-      "score": 1,
-      "tags": [
-        "SNS"
-      ],
-      "regionScore": 2,
-      "region": "日本語優先"
     }
   ],
   "sources": [
@@ -1677,8 +1677,8 @@
     {
       "id": "news-ai-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-10T04:08:01.736545+00:00",
-      "lastAttemptAt": "2026-10-10T04:08:01.736545+00:00",
+      "lastSuccessAt": "2026-10-10T05:18:01.792437+00:00",
+      "lastAttemptAt": "2026-10-10T05:18:01.792437+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -1693,8 +1693,8 @@
     {
       "id": "news-disaster-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-10T04:08:01.736545+00:00",
-      "lastAttemptAt": "2026-10-10T04:08:01.736545+00:00",
+      "lastSuccessAt": "2026-10-10T05:18:01.792437+00:00",
+      "lastAttemptAt": "2026-10-10T05:18:01.792437+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -1749,8 +1749,8 @@
     {
       "id": "news-toyama-jp",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-10T04:08:01.736545+00:00",
-      "lastAttemptAt": "2026-10-10T04:08:01.736545+00:00",
+      "lastSuccessAt": "2026-10-10T05:18:01.792437+00:00",
+      "lastAttemptAt": "2026-10-10T05:18:01.792437+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -1797,16 +1797,16 @@
     {
       "id": "mastodon-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-10T04:08:01.736545+00:00",
-      "lastAttemptAt": "2026-10-10T04:08:01.736545+00:00",
+      "lastSuccessAt": "2026-10-10T05:18:01.792437+00:00",
+      "lastAttemptAt": "2026-10-10T05:18:01.792437+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "mastodon-codex",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-10T04:08:01.736545+00:00",
-      "lastAttemptAt": "2026-10-10T04:08:01.736545+00:00",
+      "lastSuccessAt": "2026-10-10T05:18:01.792437+00:00",
+      "lastAttemptAt": "2026-10-10T05:18:01.792437+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
