@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T15:18:02.801118+00:00",
+  "updatedAt": "2026-10-11T21:46:51.214745+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -24,11 +24,11 @@
     },
     {
       "genre": "技術",
-      "count": 2,
+      "count": 3,
       "decision": "必要時だけ確認",
-      "signal": "LineageOS 24.0 released / How big is a Git commit? - ratfactor",
-      "topUrl": "https://lineageos.org/Changelog-32/",
-      "score": 2
+      "signal": "What's Wrong with GitHub / Valen's Memory Safety: A New Kind of Borrow Checking / LineageOS 24.0 released",
+      "topUrl": "https://www.gnu.org/philosophy/whats-wrong-with-github.html",
+      "score": 3
     }
   ],
   "focus": [
@@ -52,6 +52,13 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
       "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/"
+    },
+    {
+      "label": "技術",
+      "title": "What's Wrong with GitHub",
+      "why": "Codex/AI開発判断に関係",
+      "source": "技術RSS",
+      "url": "https://www.gnu.org/philosophy/whats-wrong-with-github.html"
     },
     {
       "label": "開発",
@@ -80,13 +87,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
       "url": "https://github.blog/security/how-one-bug-bounty-researcher-chooses-the-features-they-investigate/"
-    },
-    {
-      "label": "AI",
-      "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
-      "why": "Codex/AI開発判断に関係",
-      "source": "ChatGPT / OpenAI公式",
-      "url": "https://openai.com/index/pollo-ai"
     }
   ],
   "items": [
@@ -146,6 +146,25 @@
         "開発",
         "重要",
         "研究"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "What's Wrong with GitHub",
+      "summary": "Comments",
+      "url": "https://www.gnu.org/philosophy/whats-wrong-with-github.html",
+      "published": "2026-10-11T09:37:56+00:00",
+      "score": 3,
+      "tags": [
+        "技術",
+        "重要",
+        "開発"
       ]
     },
     {
@@ -337,6 +356,24 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Valen's Memory Safety: A New Kind of Borrow Checking",
+      "summary": "Comments",
+      "url": "https://verdagon.dev/blog/valen-group-borrowing",
+      "published": "2026-10-11T12:23:01+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "重要"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
       "topic": "ニュース",
       "sourceWeight": 1,
       "title": "LineageOS 24.0 released",
@@ -490,40 +527,6 @@
       "tags": [
         "AI",
         "研究"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "How big is a Git commit? - ratfactor",
-      "summary": "Comments",
-      "url": "https://ratfactor.com/cards/git-commit-size",
-      "published": "2026-10-11T09:25:42+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
-      ]
-    },
-    {
-      "source": "anthropic-claude",
-      "platform": "AI",
-      "label": "Claude / Anthropic公式",
-      "genre": "AI",
-      "provider": "claude",
-      "topic": "AI",
-      "sourceWeight": 2,
-      "title": "Claude Corps",
-      "summary": "公式サイトマップで更新を検知。内容は公式ページで確認。",
-      "url": "https://www.anthropic.com/news/claude-corps",
-      "published": "2026-10-09T17:48:00.000Z",
-      "score": 1,
-      "tags": [
-        "AI"
       ]
     }
   ],
@@ -693,5 +696,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-11T10:08:01.196118+00:00"
+  "lastSuccessAt": "2026-10-11T21:46:51.214745+00:00"
 }

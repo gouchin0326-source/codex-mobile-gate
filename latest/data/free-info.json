@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-11T15:18:02.801118+00:00",
-  "lastSuccessAt": "2026-10-11T10:08:01.196118+00:00",
+  "updatedAt": "2026-10-11T21:46:51.214745+00:00",
+  "lastSuccessAt": "2026-10-11T21:46:51.214745+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -142,19 +142,19 @@
     },
     {
       "genre": "災害",
-      "count": 8,
-      "signal": "M 0.4 - 3 km WSW of Anza, CA / M 1.8 - 64 km E of Ugashik, Alaska / M 2.1 - 44 km N of Chase, Alaska",
+      "count": 7,
+      "signal": "M 0.8 - 10 km WNW of The Geysers, CA / M 0.7 - 6 km WNW of Cobb, CA / M 0.9 - 54 km E of Port Alsworth, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41346399",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75447976",
       "score": 1
     },
     {
       "genre": "技術",
-      "count": 2,
-      "signal": "LineageOS 24.0 released / How big is a Git commit? - ratfactor",
+      "count": 3,
+      "signal": "What's Wrong with GitHub / Valen's Memory Safety: A New Kind of Borrow Checking / LineageOS 24.0 released",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://lineageos.org/Changelog-32/",
-      "score": 2
+      "topUrl": "https://www.gnu.org/philosophy/whats-wrong-with-github.html",
+      "score": 3
     }
   ],
   "items": [
@@ -198,6 +198,25 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "What's Wrong with GitHub",
+      "summary": "Comments",
+      "url": "https://www.gnu.org/philosophy/whats-wrong-with-github.html",
+      "published": "2026-10-11T09:37:56+00:00",
+      "score": 3,
+      "tags": [
+        "技術",
+        "重要",
+        "開発"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -236,31 +255,13 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "ニュース",
-      "sourceWeight": 1,
-      "title": "LineageOS 24.0 released",
-      "summary": "Comments",
-      "url": "https://lineageos.org/Changelog-32/",
-      "published": "2026-10-11T06:21:25+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "重要"
-      ]
-    },
-    {
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.4 - 3 km WSW of Anza, CA",
-      "summary": "3 km WSW of Anza, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41346399",
-      "published": "2026-10-11T10:02:17.630000+00:00",
+      "title": "M 0.8 - 10 km WNW of The Geysers, CA",
+      "summary": "10 km WNW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75447976",
+      "published": "2026-10-11T21:40:37.010000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -448,6 +449,42 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Valen's Memory Safety: A New Kind of Borrow Checking",
+      "summary": "Comments",
+      "url": "https://verdagon.dev/blog/valen-group-borrowing",
+      "published": "2026-10-11T12:23:01+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "重要"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "ニュース",
+      "sourceWeight": 1,
+      "title": "LineageOS 24.0 released",
+      "summary": "Comments",
+      "url": "https://lineageos.org/Changelog-32/",
+      "published": "2026-10-11T06:21:25+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "重要"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -594,40 +631,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.8 - 64 km E of Ugashik, Alaska",
-      "summary": "64 km E of Ugashik, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026udlptb",
-      "published": "2026-10-11T09:42:17.198000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "How big is a Git commit? - ratfactor",
-      "summary": "Comments",
-      "url": "https://ratfactor.com/cards/git-commit-size",
-      "published": "2026-10-11T09:25:42+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.1 - 44 km N of Chase, Alaska",
-      "summary": "44 km N of Chase, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026udkmyy",
-      "published": "2026-10-11T09:09:09.948000+00:00",
+      "title": "M 0.7 - 6 km WNW of Cobb, CA",
+      "summary": "6 km WNW of Cobb, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75447966",
+      "published": "2026-10-11T21:33:35.290000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -637,10 +644,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.7 - 17 km WSW of Olancha, CA",
-      "summary": "17 km WSW of Olancha, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41346391",
-      "published": "2026-10-11T09:00:20.180000+00:00",
+      "title": "M 0.9 - 54 km E of Port Alsworth, Alaska",
+      "summary": "54 km E of Port Alsworth, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uejfoy",
+      "published": "2026-10-11T21:30:16.306000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -650,10 +657,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.0 - 66 km E of Cantwell, Alaska",
-      "summary": "66 km E of Cantwell, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026udjjwj",
-      "published": "2026-10-11T08:35:34.226000+00:00",
+      "title": "M 1.9 - 6 km S of Pāhala, Hawaii",
+      "summary": "6 km S of Pāhala, Hawaii",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75054167",
+      "published": "2026-10-11T21:28:18.770000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -663,10 +670,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.6 - 60 km S of Whites City, New Mexico",
-      "summary": "60 km S of Whites City, New Mexico",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1jd",
-      "published": "2026-10-11T08:27:13.940000+00:00",
+      "title": "M 2.5 - 34 km WNW of Desert Center, CA",
+      "summary": "34 km WNW of Desert Center, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41346535",
+      "published": "2026-10-11T21:28:13.930000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -676,10 +683,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 3.4 - 61 km ESE of King Salmon, Alaska",
-      "summary": "61 km ESE of King Salmon, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026udjcmd",
-      "published": "2026-10-11T08:27:06.559000+00:00",
+      "title": "M 1.8 - 31 km NNE of Paxson, Alaska",
+      "summary": "31 km NNE of Paxson, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uejdmo",
+      "published": "2026-10-11T21:27:52.332000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -689,10 +696,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.4 - 11 km WSW of Manley Hot Springs, Alaska",
-      "summary": "11 km WSW of Manley Hot Springs, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026udiytz",
-      "published": "2026-10-11T08:22:46.772000+00:00",
+      "title": "M 2.0 - 93 km NNW of Aleneva, Alaska",
+      "summary": "93 km NNW of Aleneva, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ueipfd",
+      "published": "2026-10-11T21:13:46.945000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -703,48 +710,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-11T10:08:01.196118+00:00",
-      "lastAttemptAt": "2026-10-11T10:08:01.196118+00:00",
+      "lastSuccessAt": "2026-10-11T21:46:51.214745+00:00",
+      "lastAttemptAt": "2026-10-11T21:46:51.214745+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-11T10:08:01.196118+00:00",
-      "lastAttemptAt": "2026-10-11T10:08:01.196118+00:00",
+      "lastSuccessAt": "2026-10-11T21:46:51.214745+00:00",
+      "lastAttemptAt": "2026-10-11T21:46:51.214745+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-11T10:08:01.196118+00:00",
-      "lastAttemptAt": "2026-10-11T10:08:01.196118+00:00",
+      "lastSuccessAt": "2026-10-11T21:46:51.214745+00:00",
+      "lastAttemptAt": "2026-10-11T21:46:51.214745+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-11T10:08:01.196118+00:00",
-      "lastAttemptAt": "2026-10-11T10:08:01.196118+00:00",
+      "lastSuccessAt": "2026-10-11T21:46:51.214745+00:00",
+      "lastAttemptAt": "2026-10-11T21:46:51.214745+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-11T10:08:01.196118+00:00",
-      "lastAttemptAt": "2026-10-11T10:08:01.196118+00:00",
+      "lastSuccessAt": "2026-10-11T21:46:51.214745+00:00",
+      "lastAttemptAt": "2026-10-11T21:46:51.214745+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-11T10:08:01.196118+00:00",
-      "lastAttemptAt": "2026-10-11T10:08:01.196118+00:00",
+      "lastSuccessAt": "2026-10-11T21:46:51.214745+00:00",
+      "lastAttemptAt": "2026-10-11T21:46:51.214745+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -759,8 +766,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-11T10:08:01.196118+00:00",
-      "lastAttemptAt": "2026-10-11T10:08:01.196118+00:00",
+      "lastSuccessAt": "2026-10-11T21:46:51.214745+00:00",
+      "lastAttemptAt": "2026-10-11T21:46:51.214745+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
