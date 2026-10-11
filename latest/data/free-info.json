@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-11T09:58:01.552280+00:00",
-  "lastSuccessAt": "2026-10-11T07:38:03.515415+00:00",
+  "updatedAt": "2026-10-11T10:08:01.196118+00:00",
+  "lastSuccessAt": "2026-10-11T10:08:01.196118+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,17 +143,17 @@
     {
       "genre": "災害",
       "count": 8,
-      "signal": "M 1.8 - 72 km W of Karluk, Alaska / M 5.2 - 180 km S of Pelabuhanratu, Indonesia / M 1.0 - 2 km NNE of Loma Linda, CA",
+      "signal": "M 0.4 - 3 km WSW of Anza, CA / M 1.8 - 64 km E of Ugashik, Alaska / M 2.1 - 44 km N of Chase, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uczknc",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41346399",
       "score": 1
     },
     {
       "genre": "技術",
       "count": 2,
-      "signal": "Kiesel Devlog #15: Release 0.4.0 / SNTPings, draw on a canvas using ICMPv6",
+      "signal": "LineageOS 24.0 released / How big is a Git commit? - ratfactor",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://linus.dev/posts/kiesel-devlog-15/",
+      "topUrl": "https://lineageos.org/Changelog-32/",
       "score": 2
     }
   ],
@@ -243,10 +243,10 @@
       "provider": null,
       "topic": "ニュース",
       "sourceWeight": 1,
-      "title": "Kiesel Devlog #15: Release 0.4.0",
+      "title": "LineageOS 24.0 released",
       "summary": "Comments",
-      "url": "https://linus.dev/posts/kiesel-devlog-15/",
-      "published": "2026-10-10T17:55:46+00:00",
+      "url": "https://lineageos.org/Changelog-32/",
+      "published": "2026-10-11T06:21:25+00:00",
       "score": 2,
       "tags": [
         "技術",
@@ -257,10 +257,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.8 - 72 km W of Karluk, Alaska",
-      "summary": "72 km W of Karluk, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uczknc",
-      "published": "2026-10-11T03:36:27.776000+00:00",
+      "title": "M 0.4 - 3 km WSW of Anza, CA",
+      "summary": "3 km WSW of Anza, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41346399",
+      "published": "2026-10-11T10:02:17.630000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -448,24 +448,6 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "SNTPings, draw on a canvas using ICMPv6",
-      "summary": "Comments",
-      "url": "https://pings.utwente.io/",
-      "published": "2026-10-10T17:05:41+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "制作"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -612,10 +594,40 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 5.2 - 180 km S of Pelabuhanratu, Indonesia",
-      "summary": "180 km S of Pelabuhanratu, Indonesia",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1i6",
-      "published": "2026-10-11T03:30:17.430000+00:00",
+      "title": "M 1.8 - 64 km E of Ugashik, Alaska",
+      "summary": "64 km E of Ugashik, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026udlptb",
+      "published": "2026-10-11T09:42:17.198000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "How big is a Git commit? - ratfactor",
+      "summary": "Comments",
+      "url": "https://ratfactor.com/cards/git-commit-size",
+      "published": "2026-10-11T09:25:42+00:00",
+      "score": 1,
+      "tags": [
+        "技術"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 2.1 - 44 km N of Chase, Alaska",
+      "summary": "44 km N of Chase, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026udkmyy",
+      "published": "2026-10-11T09:09:09.948000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -625,10 +637,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.0 - 2 km NNE of Loma Linda, CA",
-      "summary": "2 km NNE of Loma Linda, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41346327",
-      "published": "2026-10-11T03:25:10.970000+00:00",
+      "title": "M 1.7 - 17 km WSW of Olancha, CA",
+      "summary": "17 km WSW of Olancha, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41346391",
+      "published": "2026-10-11T09:00:20.180000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -638,10 +650,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 4.4 - 3 km NW of Pitaloza Arriba, Panama",
-      "summary": "3 km NW of Pitaloza Arriba, Panama",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1i9",
-      "published": "2026-10-11T03:18:14.689000+00:00",
+      "title": "M 2.0 - 66 km E of Cantwell, Alaska",
+      "summary": "66 km E of Cantwell, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026udjjwj",
+      "published": "2026-10-11T08:35:34.226000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -651,10 +663,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.7 - 10 km ENE of Coso Junction, CA",
-      "summary": "10 km ENE of Coso Junction, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41346319",
-      "published": "2026-10-11T03:16:20.190000+00:00",
+      "title": "M 2.6 - 60 km S of Whites City, New Mexico",
+      "summary": "60 km S of Whites City, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1jd",
+      "published": "2026-10-11T08:27:13.940000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -664,10 +676,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.6 - 1 km NW of Eureka Roadhouse, Alaska",
-      "summary": "1 km NW of Eureka Roadhouse, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ucymfl",
-      "published": "2026-10-11T03:08:30.793000+00:00",
+      "title": "M 3.4 - 61 km ESE of King Salmon, Alaska",
+      "summary": "61 km ESE of King Salmon, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026udjcmd",
+      "published": "2026-10-11T08:27:06.559000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -677,23 +689,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.6 - 2 km NW of The Geysers, CA",
-      "summary": "2 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75447586",
-      "published": "2026-10-11T03:07:17.140000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.7 - 2 km NNE of Fern Forest, Hawaii",
-      "summary": "2 km NNE of Fern Forest, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75053772",
-      "published": "2026-10-11T03:02:40.350000+00:00",
+      "title": "M 1.4 - 11 km WSW of Manley Hot Springs, Alaska",
+      "summary": "11 km WSW of Manley Hot Springs, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026udiytz",
+      "published": "2026-10-11T08:22:46.772000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -704,48 +703,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-11T03:58:01.638144+00:00",
-      "lastAttemptAt": "2026-10-11T03:58:01.638144+00:00",
+      "lastSuccessAt": "2026-10-11T10:08:01.196118+00:00",
+      "lastAttemptAt": "2026-10-11T10:08:01.196118+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-11T03:58:01.638144+00:00",
-      "lastAttemptAt": "2026-10-11T03:58:01.638144+00:00",
+      "lastSuccessAt": "2026-10-11T10:08:01.196118+00:00",
+      "lastAttemptAt": "2026-10-11T10:08:01.196118+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-11T03:58:01.638144+00:00",
-      "lastAttemptAt": "2026-10-11T03:58:01.638144+00:00",
+      "lastSuccessAt": "2026-10-11T10:08:01.196118+00:00",
+      "lastAttemptAt": "2026-10-11T10:08:01.196118+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-11T03:58:01.638144+00:00",
-      "lastAttemptAt": "2026-10-11T03:58:01.638144+00:00",
+      "lastSuccessAt": "2026-10-11T10:08:01.196118+00:00",
+      "lastAttemptAt": "2026-10-11T10:08:01.196118+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-11T03:58:01.638144+00:00",
-      "lastAttemptAt": "2026-10-11T03:58:01.638144+00:00",
+      "lastSuccessAt": "2026-10-11T10:08:01.196118+00:00",
+      "lastAttemptAt": "2026-10-11T10:08:01.196118+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-11T03:58:01.638144+00:00",
-      "lastAttemptAt": "2026-10-11T03:58:01.638144+00:00",
+      "lastSuccessAt": "2026-10-11T10:08:01.196118+00:00",
+      "lastAttemptAt": "2026-10-11T10:08:01.196118+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -760,8 +759,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-11T03:58:01.638144+00:00",
-      "lastAttemptAt": "2026-10-11T03:58:01.638144+00:00",
+      "lastSuccessAt": "2026-10-11T10:08:01.196118+00:00",
+      "lastAttemptAt": "2026-10-11T10:08:01.196118+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
