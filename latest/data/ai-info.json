@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T03:48:01.465999+00:00",
+  "updatedAt": "2026-10-11T03:58:01.638144+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -26,8 +26,8 @@
       "genre": "技術",
       "count": 2,
       "decision": "必要時だけ確認",
-      "signal": "SNTPings, draw on a canvas using ICMPv6 / Iframes that finally fit their content",
-      "topUrl": "https://pings.utwente.io/",
+      "signal": "Kiesel Devlog #15: Release 0.4.0 / SNTPings, draw on a canvas using ICMPv6",
+      "topUrl": "https://linus.dev/posts/kiesel-devlog-15/",
       "score": 2
     }
   ],
@@ -337,6 +337,24 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
+      "topic": "ニュース",
+      "sourceWeight": 1,
+      "title": "Kiesel Devlog #15: Release 0.4.0",
+      "summary": "Comments",
+      "url": "https://linus.dev/posts/kiesel-devlog-15/",
+      "published": "2026-10-10T17:55:46+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "重要"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
       "topic": "その他",
       "sourceWeight": 1,
       "title": "SNTPings, draw on a canvas using ICMPv6",
@@ -490,23 +508,6 @@
       "tags": [
         "AI",
         "研究"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Iframes that finally fit their content",
-      "summary": "Comments",
-      "url": "https://alfy.blog/2026/10/09/iframe-that-finally-fit-their-content.html",
-      "published": "2026-10-10T12:54:56+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
       ]
     },
     {
@@ -693,5 +694,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-10T21:50:46.444932+00:00"
+  "lastSuccessAt": "2026-10-11T03:58:01.638144+00:00"
 }
