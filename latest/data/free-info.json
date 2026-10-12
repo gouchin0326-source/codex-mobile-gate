@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-12T14:48:01.460542+00:00",
-  "lastSuccessAt": "2026-10-12T09:58:01.491090+00:00",
+  "updatedAt": "2026-10-12T21:19:54.711155+00:00",
+  "lastSuccessAt": "2026-10-12T21:19:54.711155+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -127,14 +127,14 @@
     {
       "genre": "開発",
       "count": 12,
-      "signal": "Claude Haiku 5.5 in GitHub Copilot / New controls and chat improvements in Copilot for JetBrains / ReviewBench: An open benchmark for AI code review",
+      "signal": "New controls and chat improvements in Copilot for JetBrains / ReviewBench: An open benchmark for AI code review / GitHub Copilot app for Beginners: How to teach Copilot about your ",
       "decision": "CG開発・GitHub運用へ反映候補",
-      "topUrl": "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot",
-      "score": 5
+      "topUrl": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains",
+      "score": 4
     },
     {
       "genre": "AI",
-      "count": 9,
+      "count": 10,
       "signal": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol / Pollo AI turns creative ideas into campaigns with OpenAI / See what 4 builders are making with Gemini 3.8 Flash",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/asana-browser-agent",
@@ -150,42 +150,22 @@
     },
     {
       "genre": "技術",
-      "count": 2,
-      "signal": "What's Wrong with GitHub / Valen's Memory Safety: A New Kind of Borrow Checking",
+      "count": 1,
+      "signal": "Finding a $90,000 Remote Code Execution Vulnerability in Google",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://www.gnu.org/philosophy/whats-wrong-with-github.html",
-      "score": 3
+      "topUrl": "https://simonkoeck.com/writeups/google-devsite-flask-session-pickle-rce",
+      "score": 1
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 0.9 - 87 km NW of Karluk, Alaska",
+      "signal": "M 2.3 - 3 km SSW of Pāhala, Hawaii",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uficmq",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75054847",
       "score": 1
     }
   ],
   "items": [
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Claude Haiku 5.5 in GitHub Copilot",
-      "summary": "Claude Haiku 5.5, Anthropic’s newest lightweight model, is now generally available in GitHub Copilot. It is designed for fast, high-volume work like subagents, quick edits, and terminal tasks. In early… The post Claude H",
-      "url": "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot",
-      "published": "2026-10-07T20:12:18+00:00",
-      "score": 5,
-      "tags": [
-        "開発",
-        "重要",
-        "制作",
-        "研究"
-      ]
-    },
     {
       "source": "arxiv-ai",
       "platform": "論文",
@@ -207,6 +187,25 @@
       ]
     },
     {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "New controls and chat improvements in Copilot for JetBrains",
+      "summary": "This update brings more control over default models and MCP server in GitHub Copilot for JetBrains. It also makes diagnostics easier to address, improves chat navigation and account controls, and… The post New controls a",
+      "url": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains",
+      "published": "2026-10-10T18:53:39+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -223,25 +222,6 @@
         "開発",
         "重要",
         "研究"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "What's Wrong with GitHub",
-      "summary": "Comments",
-      "url": "https://www.gnu.org/philosophy/whats-wrong-with-github.html",
-      "published": "2026-10-11T09:37:56+00:00",
-      "score": 3,
-      "tags": [
-        "技術",
-        "重要",
-        "開発"
       ]
     },
     {
@@ -286,13 +266,30 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.9 - 87 km NW of Karluk, Alaska",
-      "summary": "87 km NW of Karluk, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uficmq",
-      "published": "2026-10-12T09:56:21.994000+00:00",
+      "title": "M 2.3 - 3 km SSW of Pāhala, Hawaii",
+      "summary": "3 km SSW of Pāhala, Hawaii",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75054847",
+      "published": "2026-10-12T20:56:11.250000+00:00",
       "score": 1,
       "tags": [
         "災害"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Finding a $90,000 Remote Code Execution Vulnerability in Google",
+      "summary": "Comments",
+      "url": "https://simonkoeck.com/writeups/google-devsite-flask-session-pickle-rce",
+      "published": "2026-10-12T14:40:35+00:00",
+      "score": 1,
+      "tags": [
+        "技術"
       ]
     },
     {
@@ -313,22 +310,39 @@
       ]
     },
     {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "GitHub Copilot app for Beginners: How to teach Copilot about your codebase",
+      "summary": "Learn how to add custom instructions and skills to your repository, use custom agents, and connect MCP servers like Playwright. The post GitHub Copilot app for Beginners: How to teach Copilot about your codebase appeared",
+      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/",
+      "published": "2026-10-12T17:43:59+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
       "genre": "開発",
       "provider": null,
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "New controls and chat improvements in Copilot for JetBrains",
-      "summary": "This update brings more control over default models and MCP server in GitHub Copilot for JetBrains. It also makes diagnostics easier to address, improves chat navigation and account controls, and… The post New controls a",
-      "url": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains",
-      "published": "2026-10-10T18:53:39+00:00",
-      "score": 4,
+      "title": "Push attribution for commits in limited public preview",
+      "summary": "GitHub now durably records the authenticated user who pushed each commit and surfaces that pusher identity in the UI and API alongside the existing author and committer fields. Commit author… The post Push attribution fo",
+      "url": "https://github.blog/changelog/2026-10-12-push-attribution-public-preview",
+      "published": "2026-10-12T16:30:11+00:00",
+      "score": 3,
       "tags": [
         "開発",
-        "重要",
-        "研究"
+        "重要"
       ]
     },
     {
@@ -535,24 +549,6 @@
       ]
     },
     {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "provider": null,
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Developer policy update: Transparency, state policy, and what’s ahead",
-      "summary": "Explore GitHub’s latest transparency data and learn more about policy updates affecting developers and open source. The post Developer policy update: Transparency, state policy, and what’s ahead appeared first on The Git",
-      "url": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-transparency-state-policy-and-whats-ahead/",
-      "published": "2026-09-29T15:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -604,24 +600,6 @@
       "tags": [
         "論文",
         "研究"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Valen's Memory Safety: A New Kind of Borrow Checking",
-      "summary": "Comments",
-      "url": "https://verdagon.dev/blog/valen-group-borrowing",
-      "published": "2026-10-11T12:23:01+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "重要"
       ]
     },
     {
@@ -748,54 +726,72 @@
         "AI",
         "重要"
       ]
+    },
+    {
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Gemini 4 Argon: our next era of frontier intelligence",
+      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "published": "2026-09-30T20:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "研究"
+      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-12T09:58:01.491090+00:00",
-      "lastAttemptAt": "2026-10-12T09:58:01.491090+00:00",
+      "lastSuccessAt": "2026-10-12T21:19:54.711155+00:00",
+      "lastAttemptAt": "2026-10-12T21:19:54.711155+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-12T09:58:01.491090+00:00",
-      "lastAttemptAt": "2026-10-12T09:58:01.491090+00:00",
+      "lastSuccessAt": "2026-10-12T21:19:54.711155+00:00",
+      "lastAttemptAt": "2026-10-12T21:19:54.711155+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-12T09:58:01.491090+00:00",
-      "lastAttemptAt": "2026-10-12T09:58:01.491090+00:00",
+      "lastSuccessAt": "2026-10-12T21:19:54.711155+00:00",
+      "lastAttemptAt": "2026-10-12T21:19:54.711155+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-12T09:58:01.491090+00:00",
-      "lastAttemptAt": "2026-10-12T09:58:01.491090+00:00",
+      "lastSuccessAt": "2026-10-12T21:19:54.711155+00:00",
+      "lastAttemptAt": "2026-10-12T21:19:54.711155+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-12T09:58:01.491090+00:00",
-      "lastAttemptAt": "2026-10-12T09:58:01.491090+00:00",
+      "lastSuccessAt": "2026-10-12T21:19:54.711155+00:00",
+      "lastAttemptAt": "2026-10-12T21:19:54.711155+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-12T09:58:01.491090+00:00",
-      "lastAttemptAt": "2026-10-12T09:58:01.491090+00:00",
+      "lastSuccessAt": "2026-10-12T21:19:54.711155+00:00",
+      "lastAttemptAt": "2026-10-12T21:19:54.711155+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -810,8 +806,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-12T09:58:01.491090+00:00",
-      "lastAttemptAt": "2026-10-12T09:58:01.491090+00:00",
+      "lastSuccessAt": "2026-10-12T21:19:54.711155+00:00",
+      "lastAttemptAt": "2026-10-12T21:19:54.711155+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
