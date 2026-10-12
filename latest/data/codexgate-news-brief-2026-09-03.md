@@ -1,6 +1,6 @@
 # CODEXGATE News Brief
 
-- 更新: 2026-10-12T09:48:00.893294+00:00
+- 更新: 2026-10-12T09:58:01.491090+00:00
 - 取得: GitHub Actions/Python
 - Codex: 0%想定（自動実行時）
 - 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。
@@ -9,4 +9,4 @@
 - [AI] AI/Codex運用の変化を確認 / Asana cuts model costs 76x in browser tests with GPT-6.1 Sol / Pollo A
 - [論文] 更新あり。必要時だけ確認 / MagicBeanStalk: Escaping the RLVR Zero Advantage Trap with Recursive D
 - [技術] 更新あり。必要時だけ確認 / What's Wrong with GitHub / Valen's Memory Safety: A New Kind of Borrow
-- [災害] 更新あり。必要時だけ確認 / M 1.7 - 44 km WSW of Karluk, Alaska
+- [災害] 更新あり。必要時だけ確認 / M 0.9 - 87 km NW of Karluk, Alaska
