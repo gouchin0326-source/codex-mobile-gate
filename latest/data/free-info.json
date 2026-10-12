@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-12T07:38:00.908701+00:00",
-  "lastSuccessAt": "2026-10-12T03:48:01.814586+00:00",
+  "updatedAt": "2026-10-12T07:48:00.762896+00:00",
+  "lastSuccessAt": "2026-10-12T07:48:00.762896+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -134,19 +134,19 @@
     },
     {
       "genre": "AI",
-      "count": 10,
+      "count": 9,
       "signal": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol / Pollo AI turns creative ideas into campaigns with OpenAI / See what 4 builders are making with Gemini 3.8 Flash",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/asana-browser-agent",
       "score": 3
     },
     {
-      "genre": "災害",
+      "genre": "論文",
       "count": 8,
-      "signal": "M 1.7 - 44 km WSW of Karluk, Alaska / M 1.0 - 9 km WNW of Cobb, CA / M 1.8 - 6 km SW of Upper Lake, CA",
+      "signal": "MagicBeanStalk: Escaping the RLVR Zero Advantage Trap with Recursive Data Synthesis / Know What You Don't Know: Agentic Data Synthesis by Evolving Generation Space for Closed-Loop ",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uevtgi",
-      "score": 1
+      "topUrl": "https://arxiv.org/abs/2610.12659",
+      "score": 4
     },
     {
       "genre": "技術",
@@ -155,6 +155,14 @@
       "decision": "更新あり。必要時だけ確認",
       "topUrl": "https://www.gnu.org/philosophy/whats-wrong-with-github.html",
       "score": 3
+    },
+    {
+      "genre": "災害",
+      "count": 1,
+      "signal": "M 1.7 - 44 km WSW of Karluk, Alaska",
+      "decision": "更新あり。必要時だけ確認",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uevtgi",
+      "score": 1
     }
   ],
   "items": [
@@ -175,6 +183,26 @@
         "開発",
         "重要",
         "制作",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "MagicBeanStalk: Escaping the RLVR Zero Advantage Trap with Recursive Data Synthesis",
+      "summary": "arXiv:2610.12659v1 Announce Type: new Abstract: Data-centric scaling of RLVR has focused on collecting or generating verifiable training problems. However, corpus size alone does not determine whether the dataset provide",
+      "url": "https://arxiv.org/abs/2610.12659",
+      "published": "2026-10-12T04:00:00+00:00",
+      "score": 4,
+      "tags": [
+        "論文",
+        "重要",
+        "開発",
         "研究"
       ]
     },
@@ -299,6 +327,82 @@
       "score": 4,
       "tags": [
         "開発",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Know What You Don't Know: Agentic Data Synthesis by Evolving Generation Space for Closed-Loop Learning",
+      "summary": "arXiv:2610.12593v1 Announce Type: new Abstract: The continued improvement of large language models increasingly depends on synthetic experience, yet effective data synthesis for interactive agents requires not only execu",
+      "url": "https://arxiv.org/abs/2610.12593",
+      "published": "2026-10-12T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire",
+      "summary": "arXiv:2610.12596v1 Announce Type: new Abstract: Agentic large language models now tackle complex tasks, yet strategic reasoning over long horizons is under-studied: most agentic benchmarks are short and episodic, and per",
+      "url": "https://arxiv.org/abs/2610.12596",
+      "published": "2026-10-12T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Beyond Binary Verifiable Rewards: Behavioral Self-Rewarding for SWE Agents",
+      "summary": "arXiv:2610.12598v1 Announce Type: new Abstract: Reinforcement learning with verifiable rewards (RLVR) provides reliable supervision for software engineering agents through executable tests, but binary rewards fail to dis",
+      "url": "https://arxiv.org/abs/2610.12598",
+      "published": "2026-10-12T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "CLEAT: Learning Value-Guided Clarification for Interactive Agents",
+      "summary": "arXiv:2610.12655v1 Announce Type: new Abstract: LLM agents can execute increasingly complex tasks, but effective assistance also requires aligning their actions with goals and constraints that users may leave unstated. W",
+      "url": "https://arxiv.org/abs/2610.12655",
+      "published": "2026-10-12T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
         "重要",
         "研究"
       ]
@@ -449,6 +553,60 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Faithfulness Without Anchors: A Position Paper on the Structural Misalignments of Explainable AI Faithfulness Metrics for Feature Importance",
+      "summary": "arXiv:2610.12493v1 Announce Type: new Abstract: Explainable Artificial Intelligence (XAI) tools have often been presented as methods to increase trust in machine learning models by making aspects of their algorithms more",
+      "url": "https://arxiv.org/abs/2610.12493",
+      "published": "2026-10-12T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "EliteTable: Self-Improving Program Search for Executable Control Policies",
+      "summary": "arXiv:2610.12536v1 Announce Type: new Abstract: EliteTable is a self-improving program-search algorithm guided by large language models (LLMs) that uses a fixed-capacity table of high-scoring solutions to guide new propo",
+      "url": "https://arxiv.org/abs/2610.12536",
+      "published": "2026-10-12T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Equal-Budget Monte Carlo Tree Search versus Randomized-Restart List Scheduling for DAG Workflows: A Controlled Equal-Budget Computational Study",
+      "summary": "arXiv:2610.12542v1 Announce Type: new Abstract: Monte Carlo Tree Search (MCTS) is often proposed for scheduling directed-acyclic-graph (DAG) workflows, yet most studies never run the comparison that could refute it - giv",
+      "url": "https://arxiv.org/abs/2610.12542",
+      "published": "2026-10-12T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
@@ -590,115 +748,6 @@
         "AI",
         "重要"
       ]
-    },
-    {
-      "source": "google-gemini",
-      "platform": "AI",
-      "label": "Gemini公式",
-      "genre": "AI",
-      "provider": "gemini",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Gemini 4 Argon: our next era of frontier intelligence",
-      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
-      "published": "2026-09-30T20:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "研究"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.0 - 9 km WNW of Cobb, CA",
-      "summary": "9 km WNW of Cobb, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75448176",
-      "published": "2026-10-12T03:33:34.370000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.8 - 6 km SW of Upper Lake, CA",
-      "summary": "6 km SW of Upper Lake, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75448171",
-      "published": "2026-10-12T03:26:02.370000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.0 - 5 km W of Cobb, CA",
-      "summary": "5 km W of Cobb, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75448156",
-      "published": "2026-10-12T03:12:52.940000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.2 - 3 km S of Fontana, CA",
-      "summary": "3 km S of Fontana, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41346583",
-      "published": "2026-10-12T03:06:23.700000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.0 - 4 km S of Volcano, Hawaii",
-      "summary": "4 km S of Volcano, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75054327",
-      "published": "2026-10-12T03:04:09.520000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.2 - 11 km SSW of Susitna, Alaska",
-      "summary": "11 km SSW of Susitna, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ueufpm",
-      "published": "2026-10-12T03:00:08.040000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.8 - 19 km N of Glacier View, Alaska",
-      "summary": "19 km N of Glacier View, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ueuacx",
-      "published": "2026-10-12T02:53:48.400000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
@@ -753,8 +802,8 @@
     {
       "id": "arxiv-ai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-11T07:38:03.515415+00:00",
-      "lastAttemptAt": "2026-10-11T07:38:03.515415+00:00",
+      "lastSuccessAt": "2026-10-12T07:48:00.762896+00:00",
+      "lastAttemptAt": "2026-10-12T07:48:00.762896+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
