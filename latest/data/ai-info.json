@@ -1,25 +1,25 @@
 {
-  "updatedAt": "2026-10-13T14:58:01.165079+00:00",
+  "updatedAt": "2026-10-13T21:20:20.028432+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "MagicBeanStalk: Escaping the RLVR Zero Advantage Trap with Recursive Data Synthesis",
+  "topLine": "Gemini 4 Argon in GitHub Copilot",
   "cards": [
     {
       "genre": "開発",
-      "count": 13,
+      "count": 12,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "New controls and chat improvements in Copilot for JetBrains / ReviewBench: An open benchmark for AI code review / Client telemetry user attribution and configurable capture",
-      "topUrl": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains",
-      "score": 4
+      "signal": "Gemini 4 Argon in GitHub Copilot / GitHub’s model for secret detection: Finding more secrets with less noise / ReviewBench: An open benchmark for AI code review",
+      "topUrl": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
+      "score": 5
     },
     {
       "genre": "AI",
-      "count": 9,
+      "count": 10,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol / Pollo AI turns creative ideas into campaigns with OpenAI / See what 4 builders are making with Gemini 3.8 Flash",
-      "topUrl": "https://openai.com/index/asana-browser-agent",
+      "signal": "Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems / Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+      "topUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/",
       "score": 3
     },
     {
@@ -34,12 +34,26 @@
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "A slightly faster slimmer curl",
-      "topUrl": "https://daniel.haxx.se/blog/2026/10/13/a-slightly-faster-slimmer-curl/",
-      "score": 1
+      "signal": "Creusot 0.14.0 release - Contracts for Rust, formally proved",
+      "topUrl": "https://devlog.creusot.rs/v0-14-0/",
+      "score": 2
     }
   ],
   "focus": [
+    {
+      "label": "開発",
+      "title": "Gemini 4 Argon in GitHub Copilot",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot"
+    },
+    {
+      "label": "開発",
+      "title": "GitHub’s model for secret detection: Finding more secrets with less noise",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub",
+      "url": "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/"
+    },
     {
       "label": "論文",
       "title": "MagicBeanStalk: Escaping the RLVR Zero Advantage Trap with Recursive Data Synthesis",
@@ -49,55 +63,80 @@
     },
     {
       "label": "開発",
-      "title": "New controls and chat improvements in Copilot for JetBrains",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains"
-    },
-    {
-      "label": "開発",
       "title": "ReviewBench: An open benchmark for AI code review",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
       "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/"
     },
     {
-      "label": "論文",
-      "title": "Know What You Don't Know: Agentic Data Synthesis by Evolving Generation Space for Closed-Loop Learning",
+      "label": "開発",
+      "title": "Audit GitHub Code Quality finding dismissals and reopenings",
       "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.12593"
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-13-audit-github-code-quality-finding-dismissals-and-reopenings"
     },
     {
-      "label": "論文",
-      "title": "SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire",
+      "label": "AI",
+      "title": "Gemini 4 Argon is now available for developers.",
       "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.12596"
+      "source": "Gemini公式",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/"
     },
     {
-      "label": "論文",
-      "title": "Beyond Binary Verifiable Rewards: Behavioral Self-Rewarding for SWE Agents",
+      "label": "AI",
+      "title": "Gemini 4 Argon: Built to solve your hardest problems",
       "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.12598"
-    },
-    {
-      "label": "論文",
-      "title": "CLEAT: Learning Value-Guided Clarification for Interactive Agents",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.12655"
+      "source": "Gemini公式",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"
     },
     {
       "label": "開発",
-      "title": "Client telemetry user attribution and configurable capture",
+      "title": "Enterprise managed settings enforcement updates",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-12-client-telemetry-user-attribution-and-configurable-capture"
+      "url": "https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates"
     }
   ],
   "items": [
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Gemini 4 Argon in GitHub Copilot",
+      "summary": "Gemini 4 Argon, Google’s newest frontier model, is now generally available in GitHub Copilot. It is designed for complex coding, agentic, and reasoning tasks. In early testing, Gemini 4 Argon… The post Gemini 4 Argon in ",
+      "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
+      "published": "2026-10-13T18:39:56+00:00",
+      "score": 5,
+      "tags": [
+        "開発",
+        "重要",
+        "制作",
+        "研究"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "GitHub’s model for secret detection: Finding more secrets with less noise",
+      "summary": "GitHub’s context-aware secret classifier improves detection quality, raises weighted acceptance by 11.5%, and reduces median scan execution time by 86%. The post GitHub’s model for secret detection: Finding more secrets ",
+      "url": "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/",
+      "published": "2026-10-13T17:56:33+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
+      ]
+    },
     {
       "source": "arxiv-ai",
       "platform": "論文",
@@ -119,25 +158,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "New controls and chat improvements in Copilot for JetBrains",
-      "summary": "This update brings more control over default models and MCP server in GitHub Copilot for JetBrains. It also makes diagnostics easier to address, improves chat navigation and account controls, and… The post New controls a",
-      "url": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains",
-      "published": "2026-10-10T18:53:39+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
-        "研究"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -154,6 +174,98 @@
         "開発",
         "重要",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Audit GitHub Code Quality finding dismissals and reopenings",
+      "summary": "You can now review manual dismissals and reopenings of GitHub Code Quality findings in your organization or enterprise audit log. Findings may appear in either your repository’s default-branch backlog or… The post Audit ",
+      "url": "https://github.blog/changelog/2026-10-13-audit-github-code-quality-finding-dismissals-and-reopenings",
+      "published": "2026-10-13T17:58:36+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Gemini 4 Argon is now available for developers.",
+      "summary": "Build complex software and cybersecurity workflows with Google Gemini 4 Argon. Check out the Gemini API Developer Guide and read the Google Antigravity and Android Studi…",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/",
+      "published": "2026-10-13T16:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "開発"
+      ]
+    },
+    {
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Gemini 4 Argon: Built to solve your hardest problems",
+      "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+      "published": "2026-10-13T16:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "開発",
+        "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Enterprise managed settings enforcement updates",
+      "summary": "Enterprise administrators can now require supported GitHub Copilot clients to retrieve current server-managed settings at startup instead of relying on a cached policy. We are also adding minimum client version… The post",
+      "url": "https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates",
+      "published": "2026-10-13T15:20:10+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Search and filter for budgets now available",
+      "summary": "The “Budgets and alerts” page in your GitHub billing settings now shows all of your budgets in one list that you can search and filter. Whether you manage budgets for… The post Search and filter for budgets now available",
+      "url": "https://github.blog/changelog/2026-10-13-search-and-filter-for-budgets-now-available",
+      "published": "2026-10-13T12:06:09+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -269,60 +381,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Push attribution for commits in limited public preview",
-      "summary": "GitHub now durably records the authenticated user who pushed each commit and surfaces that pusher identity in the UI and API alongside the existing author and committer fields. Commit author… The post Push attribution fo",
-      "url": "https://github.blog/changelog/2026-10-12-push-attribution-public-preview",
-      "published": "2026-10-12T16:30:11+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "GitHub Copilot weekly releases — October 5",
-      "summary": "This week’s updates make Copilot easier to use across accounts and environments, with more control over what agents can access and how you manage their work. GitHub Copilot Claude Haiku… The post GitHub Copilot weekly re",
-      "url": "https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5",
-      "published": "2026-10-09T22:58:23+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "CodeQL 2.27.2 improves C++, Go, Rust, and JavaScript analysis",
-      "summary": "CodeQL 2.27.2 is now available, adding a C++ regular-expression parser and analysis improvements across several languages. CodeQL is the static analysis engine behind GitHub code scanning, which helps you find… The post ",
-      "url": "https://github.blog/changelog/2026-10-09-codeql-2-27-2-improves-c-go-rust-and-javascript-analysis",
-      "published": "2026-10-09T21:32:54+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -415,20 +473,20 @@
       ]
     },
     {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "10 technical talks I’m excited about at GitHub Universe 2026",
-      "summary": "From verifying AI-written code to securing npm dependencies, these are the sessions I’m building my Universe agenda around. The post 10 technical talks I’m excited about at GitHub Universe 2026 appeared first on The GitH",
-      "url": "https://github.blog/news-insights/company-news/10-technical-talks-im-excited-about-at-github-universe-2026/",
-      "published": "2026-10-01T15:07:16+00:00",
-      "score": 3,
+      "title": "Developing Gemini 4 Argon responsibly and safely",
+      "summary": "Learn more about our approach to safety and security for Gemini 4 Argon.",
+      "url": "https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/",
+      "published": "2026-10-13T18:00:00+00:00",
+      "score": 2,
       "tags": [
-        "開発",
+        "AI",
         "重要"
       ]
     },
@@ -440,83 +498,10 @@
       "provider": "gemini",
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "See what 4 builders are making with Gemini 3.8 Flash",
-      "summary": "See what developers have built with Gemini 3.8 Flash, our most intelligent workhorse model, launched in early September.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers/",
-      "published": "2026-09-28T16:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "開発",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Faithfulness Without Anchors: A Position Paper on the Structural Misalignments of Explainable AI Faithfulness Metrics for Feature Importance",
-      "summary": "arXiv:2610.12493v1 Announce Type: new Abstract: Explainable Artificial Intelligence (XAI) tools have often been presented as methods to increase trust in machine learning models by making aspects of their algorithms more",
-      "url": "https://arxiv.org/abs/2610.12493",
-      "published": "2026-10-13T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "EliteTable: Self-Improving Program Search for Executable Control Policies",
-      "summary": "arXiv:2610.12536v1 Announce Type: new Abstract: EliteTable is a self-improving program-search algorithm guided by large language models (LLMs) that uses a fixed-capacity table of high-scoring solutions to guide new propo",
-      "url": "https://arxiv.org/abs/2610.12536",
-      "published": "2026-10-13T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Equal-Budget Monte Carlo Tree Search versus Randomized-Restart List Scheduling for DAG Workflows: A Controlled Equal-Budget Computational Study",
-      "summary": "arXiv:2610.12542v1 Announce Type: new Abstract: Monte Carlo Tree Search (MCTS) is often proposed for scheduling directed-acyclic-graph (DAG) workflows, yet most studies never run the comparison that could refute it - giv",
-      "url": "https://arxiv.org/abs/2610.12542",
-      "published": "2026-10-13T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
-      "summary": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases while preserving human oversight.",
-      "url": "https://openai.com/index/sophos",
-      "published": "2026-10-09T07:00:00+00:00",
+      "title": "Gemini 4 Argon comes to the Gemini app.",
+      "summary": "Gemini 4 Argon brings frontier reasoning and agentic coding to the Google Gemini app. Google AI Pro and Ultra subscribers can now access Gemini 4 Argon.",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/",
+      "published": "2026-10-13T16:00:00+00:00",
       "score": 2,
       "tags": [
         "AI",
@@ -529,16 +514,34 @@
       "label": "GitHub更新",
       "genre": "開発",
       "provider": null,
-      "topic": "開発",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Copilot code review: New organization billing options and controls",
-      "summary": "This release adds new billing and license controls for Copilot code review admins: Billing: Organization owners can bill Copilot code reviews from members with a Copilot license to the organization’s… The post Copilot co",
-      "url": "https://github.blog/changelog/2026-10-08-copilot-code-review-new-organization-billing-options-and-controls",
-      "published": "2026-10-08T19:43:05+00:00",
+      "title": "Code scanning AI Scan metrics in security overview",
+      "summary": "Organization and enterprise administrators can now observe the impact of AI Scan for pull requests in security overview. New metrics show how many AI Scan findings were generated, resolved, the… The post Code scanning AI",
+      "url": "https://github.blog/changelog/2026-10-13-code-scanning-ai-scan-metrics-in-security-overview",
+      "published": "2026-10-13T12:03:17+00:00",
       "score": 2,
       "tags": [
         "開発",
         "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Higgsfield takes AI video from 1 minute to over 10",
+      "summary": "Higgsfield brings creators longer videos with GPT-6 Astra, precise visuals with GPT-Image-2.5, and a path to voice filmmaking with GPT-Live.",
+      "url": "https://openai.com/index/higgsfield-longer-videos-voice",
+      "published": "2026-10-13T12:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "制作"
       ]
     }
   ],
@@ -599,15 +602,15 @@
             "source": "ChatGPT / OpenAI公式"
           },
           {
-            "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
-            "url": "https://openai.com/index/sophos",
-            "published": "2026-10-09T07:00:00+00:00",
+            "title": "Higgsfield takes AI video from 1 minute to over 10",
+            "url": "https://openai.com/index/higgsfield-longer-videos-voice",
+            "published": "2026-10-13T12:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           },
           {
-            "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
-            "url": "https://openai.com/index/oracle",
-            "published": "2026-10-08T16:00:00+00:00",
+            "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+            "url": "https://openai.com/index/sophos",
+            "published": "2026-10-09T07:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           }
         ]
@@ -638,9 +641,27 @@
         ],
         "latest": [
           {
-            "title": "See what 4 builders are making with Gemini 3.8 Flash",
-            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers/",
-            "published": "2026-09-28T16:00:00+00:00",
+            "title": "Gemini 4 Argon is now available for developers.",
+            "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/",
+            "published": "2026-10-13T16:00:00+00:00",
+            "source": "Gemini公式"
+          },
+          {
+            "title": "Gemini 4 Argon: Built to solve your hardest problems",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+            "published": "2026-10-13T16:00:00+00:00",
+            "source": "Gemini公式"
+          },
+          {
+            "title": "Developing Gemini 4 Argon responsibly and safely",
+            "url": "https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/",
+            "published": "2026-10-13T18:00:00+00:00",
+            "source": "Gemini公式"
+          },
+          {
+            "title": "Gemini 4 Argon comes to the Gemini app.",
+            "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/",
+            "published": "2026-10-13T16:00:00+00:00",
             "source": "Gemini公式"
           }
         ]
@@ -702,5 +723,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-13T09:38:00.877507+00:00"
+  "lastSuccessAt": "2026-10-13T21:20:20.028432+00:00"
 }
