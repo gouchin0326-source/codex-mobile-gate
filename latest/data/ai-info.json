@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T03:18:01.399054+00:00",
+  "updatedAt": "2026-10-13T03:28:01.469216+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -8,15 +8,15 @@
   "cards": [
     {
       "genre": "開発",
-      "count": 12,
+      "count": 13,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "New controls and chat improvements in Copilot for JetBrains / ReviewBench: An open benchmark for AI code review / GitHub Copilot app for Beginners: How to teach Copilot about your codebase",
+      "signal": "New controls and chat improvements in Copilot for JetBrains / ReviewBench: An open benchmark for AI code review / Client telemetry user attribution and configurable capture",
       "topUrl": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains",
       "score": 4
     },
     {
       "genre": "AI",
-      "count": 10,
+      "count": 9,
       "decision": "AI/Codex運用の変化を確認",
       "signal": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol / Pollo AI turns creative ideas into campaigns with OpenAI / See what 4 builders are making with Gemini 3.8 Flash",
       "topUrl": "https://openai.com/index/asana-browser-agent",
@@ -34,8 +34,8 @@
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "Finding a $90,000 Remote Code Execution Vulnerability in Google",
-      "topUrl": "https://simonkoeck.com/writeups/google-devsite-flask-session-pickle-rce",
+      "signal": "What are you doing this week?",
+      "topUrl": "https://lobste.rs/s/7vzgsl/what_are_you_doing_this_week",
       "score": 1
     }
   ],
@@ -60,6 +60,13 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
       "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/"
+    },
+    {
+      "label": "開発",
+      "title": "Client telemetry user attribution and configurable capture",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-12-client-telemetry-user-attribution-and-configurable-capture"
     },
     {
       "label": "開発",
@@ -88,13 +95,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2610.12596"
-    },
-    {
-      "label": "論文",
-      "title": "Beyond Binary Verifiable Rewards: Behavioral Self-Rewarding for SWE Agents",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.12598"
     }
   ],
   "items": [
@@ -154,6 +154,24 @@
         "開発",
         "重要",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Client telemetry user attribution and configurable capture",
+      "summary": "Enterprise administrators can now use telemetry in managed settings to attribute GitHub Copilot activity to a user without collecting their prompts, responses, or tool content. The telemetry.capture.identity setting adds",
+      "url": "https://github.blog/changelog/2026-10-12-client-telemetry-user-attribution-and-configurable-capture",
+      "published": "2026-10-12T22:38:00+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -522,24 +540,6 @@
         "開発",
         "重要"
       ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
-      "summary": "Across recruiting, engineering, and operations, Oracle turns specialist knowledge into fast, repeatable workflows with ChatGPT Work and Codex.",
-      "url": "https://openai.com/index/oracle",
-      "published": "2026-10-08T16:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
     }
   ],
   "providerWatch": {
@@ -642,12 +642,6 @@
             "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-flash-developers/",
             "published": "2026-09-28T16:00:00+00:00",
             "source": "Gemini公式"
-          },
-          {
-            "title": "Gemini 4 Argon: our next era of frontier intelligence",
-            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
-            "published": "2026-09-30T20:00:00+00:00",
-            "source": "Gemini公式"
           }
         ]
       },
@@ -677,9 +671,9 @@
         ],
         "latest": [
           {
-            "title": "Claude Corps",
-            "url": "https://www.anthropic.com/news/claude-corps",
-            "published": "2026-10-09T17:48:00.000Z",
+            "title": "Claude Discovers Novel Enzyme System",
+            "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+            "published": "2026-10-13T00:18:23.000Z",
             "source": "Claude / Anthropic公式"
           }
         ]
@@ -708,5 +702,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-12T21:19:54.711155+00:00"
+  "lastSuccessAt": "2026-10-13T03:28:01.469216+00:00"
 }
