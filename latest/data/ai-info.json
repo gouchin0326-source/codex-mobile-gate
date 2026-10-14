@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T14:58:00.910190+00:00",
+  "updatedAt": "2026-10-14T20:40:16.461682+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -10,24 +10,24 @@
       "genre": "AI",
       "count": 14,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems / Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
-      "topUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/",
+      "signal": "Amp puts AI agents to work beyond code with OpenAI models / Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems",
+      "topUrl": "https://openai.com/index/amp-beyond-coding",
       "score": 3
     },
     {
       "genre": "開発",
       "count": 12,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "Gemini 4 Argon in GitHub Copilot / GitHub’s model for secret detection: Finding more secrets with less noise / ReviewBench: An open benchmark for AI code review",
+      "signal": "Gemini 4 Argon in GitHub Copilot / HydraFusion updates and new Max option / GitHub’s model for secret detection: Finding more secrets with less noise",
       "topUrl": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
       "score": 5
     },
     {
       "genre": "技術",
-      "count": 1,
+      "count": 2,
       "decision": "必要時だけ確認",
-      "signal": "Redesigning source control at Anthropic",
-      "topUrl": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "signal": "Plasma 6.8 released (KDE's 30th birthday) / Ledger confirms spy chip implant behind wallet crypto thefts",
+      "topUrl": "https://kde.org/announcements/plasma/6/6.8.0/",
       "score": 2
     }
   ],
@@ -38,6 +38,13 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot"
+    },
+    {
+      "label": "開発",
+      "title": "HydraFusion updates and new Max option",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option"
     },
     {
       "label": "開発",
@@ -55,6 +62,20 @@
     },
     {
       "label": "開発",
+      "title": "GitHub Actions workflow lockfiles in public preview",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview"
+    },
+    {
+      "label": "AI",
+      "title": "Amp puts AI agents to work beyond code with OpenAI models",
+      "why": "Codex/AI開発判断に関係",
+      "source": "ChatGPT / OpenAI公式",
+      "url": "https://openai.com/index/amp-beyond-coding"
+    },
+    {
+      "label": "開発",
       "title": "GitHub App improvements for least privilege and management",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
@@ -66,27 +87,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-10-13-audit-github-code-quality-finding-dismissals-and-reopenings"
-    },
-    {
-      "label": "AI",
-      "title": "Gemini 4 Argon is now available for developers.",
-      "why": "Codex/AI開発判断に関係",
-      "source": "Gemini公式",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/"
-    },
-    {
-      "label": "AI",
-      "title": "Gemini 4 Argon: Built to solve your hardest problems",
-      "why": "Codex/AI開発判断に関係",
-      "source": "Gemini公式",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"
-    },
-    {
-      "label": "開発",
-      "title": "Enterprise managed settings enforcement updates",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates"
     }
   ],
   "items": [
@@ -111,6 +111,25 @@
       ]
     },
     {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "HydraFusion updates and new Max option",
+      "summary": "HydraFusion has an updated model pool, improved orchestration workflows, and introduces HydraFusion Max. Both HydraFusion and HydraFusion Max are available across VS Code, the GitHub Copilot app, and GitHub Copilot… The ",
+      "url": "https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option",
+      "published": "2026-10-14T20:01:35+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -127,7 +146,8 @@
         "開発",
         "重要",
         "研究"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "github-blog",
@@ -144,6 +164,44 @@
       "score": 4,
       "tags": [
         "開発",
+        "重要",
+        "研究"
+      ],
+      "stale": true
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "GitHub Actions workflow lockfiles in public preview",
+      "summary": "GitHub Actions workflow dependency lockfiles are now in public preview for GitHub Enterprise Cloud, GitHub Enterprise Cloud with data residency, Team, and Free plans. Tags and branches can move after… The post GitHub Act",
+      "url": "https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview",
+      "published": "2026-10-14T13:49:15+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Amp puts AI agents to work beyond code with OpenAI models",
+      "summary": "See how Amp pushes the frontier of what agents can do with GPT-6 Astra, Ultrafast, GPT-Live-1, and Sign in with ChatGPT.",
+      "url": "https://openai.com/index/amp-beyond-coding",
+      "published": "2026-10-14T12:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
         "重要",
         "研究"
       ]
@@ -241,24 +299,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Search and filter for budgets now available",
-      "summary": "The “Budgets and alerts” page in your GitHub billing settings now shows all of your budgets in one list that you can search and filter. Whether you manage budgets for… The post Search and filter for budgets now available",
-      "url": "https://github.blog/changelog/2026-10-13-search-and-filter-for-budgets-now-available",
-      "published": "2026-10-13T12:06:09+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -274,7 +314,8 @@
       "tags": [
         "開発",
         "重要"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "openai",
@@ -311,26 +352,8 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
-      "summary": "With GPT-5.6, GPT-6 Astra, and GPT‑Image‑2.5, Pollo AI helps creators turn bold ideas into detailed images and cinematic video ads.",
-      "url": "https://openai.com/index/pollo-ai",
-      "published": "2026-10-08T12:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "制作"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "github-blog",
@@ -348,7 +371,8 @@
       "tags": [
         "開発",
         "重要"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "github-blog",
@@ -365,6 +389,79 @@
       "score": 3,
       "tags": [
         "開発",
+        "重要"
+      ],
+      "stale": true
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "SentinelOne cuts malware analysis from weeks to hours",
+      "summary": "With OpenAI Daybreak, SentinelOne cuts weeks of malware analysis to hours, creating capacity to investigate more threats.",
+      "url": "https://openai.com/index/sentinelone",
+      "published": "2026-10-14T12:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "ニュース",
+      "sourceWeight": 1,
+      "title": "Plasma 6.8 released (KDE's 30th birthday)",
+      "summary": "Comments",
+      "url": "https://kde.org/announcements/plasma/6/6.8.0/",
+      "published": "2026-10-14T11:29:51+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "重要"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "ガジェット",
+      "sourceWeight": 1,
+      "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
+      "summary": "Video showing an implanted device: https://www.youtube.com/watch?v=Nf4FEFlgv3Q Comments",
+      "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
+      "published": "2026-10-14T07:54:56+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "制作"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "How Third Moment Research runs 10,000 agents for 36+ hours",
+      "summary": "With GPT-6 Astra and GPT-6.1 Sol, Codex, and Daybreak for cybersecurity, this AI lab builds agents that focus for days and improve with use.",
+      "url": "https://openai.com/index/third-moment-research",
+      "published": "2026-10-14T07:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
         "重要"
       ]
     },
@@ -384,24 +481,6 @@
       "tags": [
         "AI",
         "重要"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "制作",
-      "sourceWeight": 1,
-      "title": "Redesigning source control at Anthropic",
-      "summary": "Comments",
-      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
-      "published": "2026-10-13T20:37:52+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "制作"
       ]
     },
     {
@@ -441,24 +520,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Code scanning AI Scan metrics in security overview",
-      "summary": "Organization and enterprise administrators can now observe the impact of AI Scan for pull requests in security overview. New metrics show how many AI Scan findings were generated, resolved, the… The post Code scanning AI",
-      "url": "https://github.blog/changelog/2026-10-13-code-scanning-ai-scan-metrics-in-security-overview",
-      "published": "2026-10-13T12:03:17+00:00",
-      "score": 2,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -474,60 +535,6 @@
       "tags": [
         "AI",
         "制作"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
-      "summary": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases while preserving human oversight.",
-      "url": "https://openai.com/index/sophos",
-      "published": "2026-10-09T07:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
-      "summary": "Across recruiting, engineering, and operations, Oracle turns specialist knowledge into fast, repeatable workflows with ChatGPT Work and Codex.",
-      "url": "https://openai.com/index/oracle",
-      "published": "2026-10-08T16:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "LegalOn halves Codex costs while maintaining development speed",
-      "summary": "LegalOn cut estimated daily Codex costs by 65% while maintaining development speed. It matched Astra, Sol, and Luna to tasks and managed budgets strategically.",
-      "url": "https://openai.com/index/legalon-halves-codex-costs",
-      "published": "2026-10-08T12:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
       ]
     }
   ],
@@ -576,27 +583,27 @@
         ],
         "latest": [
           {
+            "title": "Amp puts AI agents to work beyond code with OpenAI models",
+            "url": "https://openai.com/index/amp-beyond-coding",
+            "published": "2026-10-14T12:00:00+00:00",
+            "source": "ChatGPT / OpenAI公式"
+          },
+          {
             "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
             "url": "https://openai.com/index/asana-browser-agent",
             "published": "2026-10-09T07:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           },
           {
-            "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
-            "url": "https://openai.com/index/pollo-ai",
-            "published": "2026-10-08T12:00:00+00:00",
+            "title": "SentinelOne cuts malware analysis from weeks to hours",
+            "url": "https://openai.com/index/sentinelone",
+            "published": "2026-10-14T12:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           },
           {
-            "title": "The EU’s next chapter in AI is agentic",
-            "url": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
-            "published": "2026-10-14T00:00:00+00:00",
-            "source": "ChatGPT / OpenAI公式"
-          },
-          {
-            "title": "Higgsfield takes AI video from 1 minute to over 10",
-            "url": "https://openai.com/index/higgsfield-longer-videos-voice",
-            "published": "2026-10-13T12:00:00+00:00",
+            "title": "How Third Moment Research runs 10,000 agents for 36+ hours",
+            "url": "https://openai.com/index/third-moment-research",
+            "published": "2026-10-14T07:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           }
         ]
@@ -678,9 +685,9 @@
         ],
         "latest": [
           {
-            "title": "Singapore Office Opening",
-            "url": "https://www.anthropic.com/news/singapore-office-opening",
-            "published": "2026-10-14T08:31:43.000Z",
+            "title": "2026 Us Midterms",
+            "url": "https://www.anthropic.com/news/2026-us-midterms",
+            "published": "2026-10-14T19:32:27.000Z",
             "source": "Claude / Anthropic公式"
           }
         ]
@@ -708,6 +715,6 @@
       "assessment": "6回はサービス上限ではなく、配管確認用の厳しい初期値。両方利用は2回消費するため最大3案件となる。まず12回で数日計測し、429と残量を見て段階調整する。"
     }
   },
-  "status": "fresh",
-  "lastSuccessAt": "2026-10-14T10:58:03.479691+00:00"
+  "status": "stale",
+  "lastSuccessAt": "2026-10-14T20:40:16.461682+00:00"
 }

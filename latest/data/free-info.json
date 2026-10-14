@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-14T14:58:00.910190+00:00",
-  "lastSuccessAt": "2026-10-14T10:58:03.479691+00:00",
-  "status": "fresh",
+  "updatedAt": "2026-10-14T20:40:16.461682+00:00",
+  "lastSuccessAt": "2026-10-14T20:40:16.461682+00:00",
+  "status": "stale",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "freeMeaning": "Public RSS/API data is fetched by program, categorized, scored, and summarized into local static JSON. It is not a bookmark list and does not scrape ordinary web pages.",
@@ -127,33 +127,33 @@
     {
       "genre": "AI",
       "count": 14,
-      "signal": "Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems / Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+      "signal": "Amp puts AI agents to work beyond code with OpenAI models / Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems",
       "decision": "AI/Codex運用の変化を確認",
-      "topUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/",
+      "topUrl": "https://openai.com/index/amp-beyond-coding",
       "score": 3
     },
     {
       "genre": "開発",
       "count": 12,
-      "signal": "Gemini 4 Argon in GitHub Copilot / GitHub’s model for secret detection: Finding more secrets with less noise / ReviewBench: An open benchmark for AI code review",
+      "signal": "Gemini 4 Argon in GitHub Copilot / HydraFusion updates and new Max option / GitHub’s model for secret detection: Finding more secrets with less noise",
       "decision": "CG開発・GitHub運用へ反映候補",
       "topUrl": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
       "score": 5
     },
     {
       "genre": "災害",
-      "count": 5,
-      "signal": "M 2.2 - 3 km WSW of Volcano, Hawaii / M 1.8 - 100 km E of Cordova, Alaska / M 2.1 - 4 km S of Volcano, Hawaii",
+      "count": 4,
+      "signal": "M 0.8 - 10 km WNW of The Geysers, CA / M 1.1 - 1 km NNW of The Geysers, CA / M 1.8 - 5 km SSE of Home Gardens, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75056012",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75449441",
       "score": 1
     },
     {
       "genre": "技術",
-      "count": 1,
-      "signal": "Redesigning source control at Anthropic",
+      "count": 2,
+      "signal": "Plasma 6.8 released (KDE's 30th birthday) / Ledger confirms spy chip implant behind wallet crypto thefts",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "topUrl": "https://kde.org/announcements/plasma/6/6.8.0/",
       "score": 2
     }
   ],
@@ -195,6 +195,26 @@
         "開発",
         "重要",
         "研究"
+      ],
+      "stale": true
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Amp puts AI agents to work beyond code with OpenAI models",
+      "summary": "See how Amp pushes the frontier of what agents can do with GPT-6 Astra, Ultrafast, GPT-Live-1, and Sign in with ChatGPT.",
+      "url": "https://openai.com/index/amp-beyond-coding",
+      "published": "2026-10-14T12:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
       ]
     },
     {
@@ -217,50 +237,31 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
-      "summary": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
-      "url": "https://openai.com/index/asana-browser-agent",
-      "published": "2026-10-09T07:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "研究"
-      ]
-    },
-    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "制作",
+      "topic": "ニュース",
       "sourceWeight": 1,
-      "title": "Redesigning source control at Anthropic",
+      "title": "Plasma 6.8 released (KDE's 30th birthday)",
       "summary": "Comments",
-      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
-      "published": "2026-10-13T20:37:52+00:00",
+      "url": "https://kde.org/announcements/plasma/6/6.8.0/",
+      "published": "2026-10-14T11:29:51+00:00",
       "score": 2,
       "tags": [
         "技術",
-        "制作"
+        "重要"
       ]
     },
     {
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.2 - 3 km WSW of Volcano, Hawaii",
-      "summary": "3 km WSW of Volcano, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75056012",
-      "published": "2026-10-14T10:50:48.910000+00:00",
+      "title": "M 0.8 - 10 km WNW of The Geysers, CA",
+      "summary": "10 km WNW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75449441",
+      "published": "2026-10-14T20:26:33.820000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -274,13 +275,32 @@
       "provider": "claude",
       "topic": "その他",
       "sourceWeight": 2,
-      "title": "Singapore Office Opening",
+      "title": "2026 Us Midterms",
       "summary": "公式サイトマップで更新を検知。内容は公式ページで確認。",
-      "url": "https://www.anthropic.com/news/singapore-office-opening",
-      "published": "2026-10-14T08:31:43.000Z",
+      "url": "https://www.anthropic.com/news/2026-us-midterms",
+      "published": "2026-10-14T19:32:27.000Z",
       "score": 1,
       "tags": [
         "AI"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "HydraFusion updates and new Max option",
+      "summary": "HydraFusion has an updated model pool, improved orchestration workflows, and introduces HydraFusion Max. Both HydraFusion and HydraFusion Max are available across VS Code, the GitHub Copilot app, and GitHub Copilot… The ",
+      "url": "https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option",
+      "published": "2026-10-14T20:01:35+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
       ]
     },
     {
@@ -300,6 +320,25 @@
         "開発",
         "重要",
         "研究"
+      ],
+      "stale": true
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "GitHub Actions workflow lockfiles in public preview",
+      "summary": "GitHub Actions workflow dependency lockfiles are now in public preview for GitHub Enterprise Cloud, GitHub Enterprise Cloud with data residency, Team, and Free plans. Tags and branches can move after… The post GitHub Act",
+      "url": "https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview",
+      "published": "2026-10-14T13:49:15+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -376,24 +415,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Search and filter for budgets now available",
-      "summary": "The “Budgets and alerts” page in your GitHub billing settings now shows all of your budgets in one list that you can search and filter. Whether you manage budgets for… The post Search and filter for budgets now available",
-      "url": "https://github.blog/changelog/2026-10-13-search-and-filter-for-budgets-now-available",
-      "published": "2026-10-13T12:06:09+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -409,6 +430,26 @@
       "tags": [
         "開発",
         "重要"
+      ],
+      "stale": true
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+      "summary": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
+      "url": "https://openai.com/index/asana-browser-agent",
+      "published": "2026-10-09T07:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
       ]
     },
     {
@@ -427,26 +468,8 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Pollo AI turns creative ideas into campaigns with OpenAI",
-      "summary": "With GPT-5.6, GPT-6 Astra, and GPT‑Image‑2.5, Pollo AI helps creators turn bold ideas into detailed images and cinematic video ads.",
-      "url": "https://openai.com/index/pollo-ai",
-      "published": "2026-10-08T12:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "制作"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "github-blog",
@@ -464,7 +487,8 @@
       "tags": [
         "開発",
         "重要"
-      ]
+      ],
+      "stale": true
     },
     {
       "source": "github-blog",
@@ -481,6 +505,61 @@
       "score": 3,
       "tags": [
         "開発",
+        "重要"
+      ],
+      "stale": true
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "SentinelOne cuts malware analysis from weeks to hours",
+      "summary": "With OpenAI Daybreak, SentinelOne cuts weeks of malware analysis to hours, creating capacity to investigate more threats.",
+      "url": "https://openai.com/index/sentinelone",
+      "published": "2026-10-14T12:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "ガジェット",
+      "sourceWeight": 1,
+      "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
+      "summary": "Video showing an implanted device: https://www.youtube.com/watch?v=Nf4FEFlgv3Q Comments",
+      "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
+      "published": "2026-10-14T07:54:56+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "制作"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "How Third Moment Research runs 10,000 agents for 36+ hours",
+      "summary": "With GPT-6 Astra and GPT-6.1 Sol, Codex, and Daybreak for cybersecurity, this AI lab builds agents that focus for days and improve with use.",
+      "url": "https://openai.com/index/third-moment-research",
+      "published": "2026-10-14T07:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
         "重要"
       ]
     },
@@ -539,24 +618,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Code scanning AI Scan metrics in security overview",
-      "summary": "Organization and enterprise administrators can now observe the impact of AI Scan for pull requests in security overview. New metrics show how many AI Scan findings were generated, resolved, the… The post Code scanning AI",
-      "url": "https://github.blog/changelog/2026-10-13-code-scanning-ai-scan-metrics-in-security-overview",
-      "published": "2026-10-13T12:03:17+00:00",
-      "score": 2,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -611,42 +672,6 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "LegalOn halves Codex costs while maintaining development speed",
-      "summary": "LegalOn cut estimated daily Codex costs by 65% while maintaining development speed. It matched Astra, Sol, and Luna to tasks and managed budgets strategically.",
-      "url": "https://openai.com/index/legalon-halves-codex-costs",
-      "published": "2026-10-08T12:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Disrupting AI-enabled “false front” operations",
-      "summary": "OpenAI disrupted two AI-enabled influence operations that used false-front journalists and a think tank to spread geopolitical messaging.",
-      "url": "https://openai.com/index/disrupting-ai-enabled-false-front-operations",
-      "published": "2026-10-08T00:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
       "source": "google-gemini",
       "platform": "AI",
       "label": "Gemini公式",
@@ -668,10 +693,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.8 - 100 km E of Cordova, Alaska",
-      "summary": "100 km E of Cordova, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ujbyqi",
-      "published": "2026-10-14T10:50:35.568000+00:00",
+      "title": "M 1.1 - 1 km NNW of The Geysers, CA",
+      "summary": "1 km NNW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75449431",
+      "published": "2026-10-14T20:20:14.550000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -681,10 +706,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.1 - 4 km S of Volcano, Hawaii",
-      "summary": "4 km S of Volcano, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75056007",
-      "published": "2026-10-14T10:47:14.260000+00:00",
+      "title": "M 1.8 - 5 km SSE of Home Gardens, CA",
+      "summary": "5 km SSE of Home Gardens, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41347607",
+      "published": "2026-10-14T20:10:21.460000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -694,23 +719,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.5 - 41 km W of Susitna, Alaska",
-      "summary": "41 km W of Susitna, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ujbcgz",
-      "published": "2026-10-14T10:24:47.726000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.1 - 59 km S of Whites City, New Mexico",
-      "summary": "59 km S of Whites City, New Mexico",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026ufufaw",
-      "published": "2026-10-14T10:22:36.987000+00:00",
+      "title": "M 3.1 - 57 km NW of San Antonio, Puerto Rico",
+      "summary": "57 km NW of San Antonio, Puerto Rico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71536713",
+      "published": "2026-10-14T20:10:09.470000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -721,48 +733,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-14T10:58:03.479691+00:00",
-      "lastAttemptAt": "2026-10-14T10:58:03.479691+00:00",
+      "lastSuccessAt": "2026-10-14T20:40:16.461682+00:00",
+      "lastAttemptAt": "2026-10-14T20:40:16.461682+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-14T10:58:03.479691+00:00",
-      "lastAttemptAt": "2026-10-14T10:58:03.479691+00:00",
+      "lastSuccessAt": "2026-10-14T20:40:16.461682+00:00",
+      "lastAttemptAt": "2026-10-14T20:40:16.461682+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-14T10:58:03.479691+00:00",
-      "lastAttemptAt": "2026-10-14T10:58:03.479691+00:00",
+      "lastSuccessAt": "2026-10-14T20:40:16.461682+00:00",
+      "lastAttemptAt": "2026-10-14T20:40:16.461682+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
-      "status": "fresh",
+      "status": "stale",
       "lastSuccessAt": "2026-10-14T10:58:03.479691+00:00",
-      "lastAttemptAt": "2026-10-14T10:58:03.479691+00:00",
+      "lastAttemptAt": "2026-10-14T20:40:16.461682+00:00",
       "retryAfterAt": null,
-      "errorCode": null
+      "errorCode": "FetchPolicyError"
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-14T10:58:03.479691+00:00",
-      "lastAttemptAt": "2026-10-14T10:58:03.479691+00:00",
+      "lastSuccessAt": "2026-10-14T20:40:16.461682+00:00",
+      "lastAttemptAt": "2026-10-14T20:40:16.461682+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-14T10:58:03.479691+00:00",
-      "lastAttemptAt": "2026-10-14T10:58:03.479691+00:00",
+      "lastSuccessAt": "2026-10-14T20:40:16.461682+00:00",
+      "lastAttemptAt": "2026-10-14T20:40:16.461682+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -777,11 +789,17 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-14T10:58:03.479691+00:00",
-      "lastAttemptAt": "2026-10-14T10:58:03.479691+00:00",
+      "lastSuccessAt": "2026-10-14T20:40:16.461682+00:00",
+      "lastAttemptAt": "2026-10-14T20:40:16.461682+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "github-blog",
+      "error": "response exceeds 2097152 byte limit",
+      "fallbackItems": 6
+    }
+  ]
 }
