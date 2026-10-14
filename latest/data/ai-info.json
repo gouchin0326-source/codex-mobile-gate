@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T03:18:01.945388+00:00",
+  "updatedAt": "2026-10-14T03:28:01.827855+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -34,8 +34,8 @@
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "Creusot 0.14.0 release - Contracts for Rust, formally proved",
-      "topUrl": "https://devlog.creusot.rs/v0-14-0/",
+      "signal": "Redesigning source control at Anthropic",
+      "topUrl": "https://www.anthropic.com/engineering/redesigning-source-control",
       "score": 2
     }
   ],
@@ -70,6 +70,13 @@
     },
     {
       "label": "開発",
+      "title": "GitHub App improvements for least privilege and management",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-13-github-app-improvements-for-least-privilege-and-management"
+    },
+    {
+      "label": "開発",
       "title": "Audit GitHub Code Quality finding dismissals and reopenings",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
@@ -88,13 +95,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "Gemini公式",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"
-    },
-    {
-      "label": "開発",
-      "title": "Enterprise managed settings enforcement updates",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates"
     }
   ],
   "items": [
@@ -174,6 +174,24 @@
         "開発",
         "重要",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "GitHub App improvements for least privilege and management",
+      "summary": "We’re releasing several GitHub Apps improvements today that help developers move off of classic PATs, improve GitHub App management, and request fewer sensitive permissions. We’ve also made it easier for… The post GitHub",
+      "url": "https://github.blog/changelog/2026-10-13-github-app-improvements-for-least-privilege-and-management",
+      "published": "2026-10-13T23:17:55+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -345,24 +363,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Client telemetry user attribution and configurable capture",
-      "summary": "Enterprise administrators can now use telemetry in managed settings to attribute GitHub Copilot activity to a user without collecting their prompts, responses, or tool content. The telemetry.capture.identity setting adds",
-      "url": "https://github.blog/changelog/2026-10-12-client-telemetry-user-attribution-and-configurable-capture",
-      "published": "2026-10-12T22:38:00+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -473,6 +473,24 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "制作",
+      "sourceWeight": 1,
+      "title": "Redesigning source control at Anthropic",
+      "summary": "Comments",
+      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "published": "2026-10-13T20:37:52+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "制作"
+      ]
+    },
+    {
       "source": "google-gemini",
       "platform": "AI",
       "label": "Gemini公式",
@@ -524,24 +542,6 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Higgsfield takes AI video from 1 minute to over 10",
-      "summary": "Higgsfield brings creators longer videos with GPT-6 Astra, precise visuals with GPT-Image-2.5, and a path to voice filmmaking with GPT-Live.",
-      "url": "https://openai.com/index/higgsfield-longer-videos-voice",
-      "published": "2026-10-13T12:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "制作"
       ]
     }
   ],
@@ -723,5 +723,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-13T21:20:20.028432+00:00"
+  "lastSuccessAt": "2026-10-14T03:28:01.827855+00:00"
 }

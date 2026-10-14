@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-14T03:18:01.945388+00:00",
-  "lastSuccessAt": "2026-10-13T21:20:20.028432+00:00",
+  "updatedAt": "2026-10-14T03:28:01.827855+00:00",
+  "lastSuccessAt": "2026-10-14T03:28:01.827855+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -151,17 +151,17 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "Creusot 0.14.0 release - Contracts for Rust, formally proved",
+      "signal": "Redesigning source control at Anthropic",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://devlog.creusot.rs/v0-14-0/",
+      "topUrl": "https://www.anthropic.com/engineering/redesigning-source-control",
       "score": 2
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 0.7 - 90 km N of Karluk, Alaska",
+      "signal": "M 0.9 - 13 km ENE of Cloverdale, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uiaszb",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75449166",
       "score": 1
     }
   ],
@@ -269,26 +269,26 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "ニュース",
+      "topic": "制作",
       "sourceWeight": 1,
-      "title": "Creusot 0.14.0 release - Contracts for Rust, formally proved",
+      "title": "Redesigning source control at Anthropic",
       "summary": "Comments",
-      "url": "https://devlog.creusot.rs/v0-14-0/",
-      "published": "2026-10-13T07:57:16+00:00",
+      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "published": "2026-10-13T20:37:52+00:00",
       "score": 2,
       "tags": [
         "技術",
-        "重要"
+        "制作"
       ]
     },
     {
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.7 - 90 km N of Karluk, Alaska",
-      "summary": "90 km N of Karluk, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uiaszb",
-      "published": "2026-10-13T21:14:24.960000+00:00",
+      "title": "M 0.9 - 13 km ENE of Cloverdale, CA",
+      "summary": "13 km ENE of Cloverdale, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75449166",
+      "published": "2026-10-14T03:24:18.110000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -328,6 +328,24 @@
         "開発",
         "重要",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "GitHub App improvements for least privilege and management",
+      "summary": "We’re releasing several GitHub Apps improvements today that help developers move off of classic PATs, improve GitHub App management, and request fewer sensitive permissions. We’ve also made it easier for… The post GitHub",
+      "url": "https://github.blog/changelog/2026-10-13-github-app-improvements-for-least-privilege-and-management",
+      "published": "2026-10-13T23:17:55+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -477,24 +495,6 @@
         "論文",
         "重要",
         "研究"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Client telemetry user attribution and configurable capture",
-      "summary": "Enterprise administrators can now use telemetry in managed settings to attribute GitHub Copilot activity to a user without collecting their prompts, responses, or tool content. The telemetry.capture.identity setting adds",
-      "url": "https://github.blog/changelog/2026-10-12-client-telemetry-user-attribution-and-configurable-capture",
-      "published": "2026-10-12T22:38:00+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
       ]
     },
     {
@@ -755,48 +755,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-13T21:20:20.028432+00:00",
-      "lastAttemptAt": "2026-10-13T21:20:20.028432+00:00",
+      "lastSuccessAt": "2026-10-14T03:28:01.827855+00:00",
+      "lastAttemptAt": "2026-10-14T03:28:01.827855+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-13T21:20:20.028432+00:00",
-      "lastAttemptAt": "2026-10-13T21:20:20.028432+00:00",
+      "lastSuccessAt": "2026-10-14T03:28:01.827855+00:00",
+      "lastAttemptAt": "2026-10-14T03:28:01.827855+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-13T21:20:20.028432+00:00",
-      "lastAttemptAt": "2026-10-13T21:20:20.028432+00:00",
+      "lastSuccessAt": "2026-10-14T03:28:01.827855+00:00",
+      "lastAttemptAt": "2026-10-14T03:28:01.827855+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-13T21:20:20.028432+00:00",
-      "lastAttemptAt": "2026-10-13T21:20:20.028432+00:00",
+      "lastSuccessAt": "2026-10-14T03:28:01.827855+00:00",
+      "lastAttemptAt": "2026-10-14T03:28:01.827855+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-13T21:20:20.028432+00:00",
-      "lastAttemptAt": "2026-10-13T21:20:20.028432+00:00",
+      "lastSuccessAt": "2026-10-14T03:28:01.827855+00:00",
+      "lastAttemptAt": "2026-10-14T03:28:01.827855+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-13T21:20:20.028432+00:00",
-      "lastAttemptAt": "2026-10-13T21:20:20.028432+00:00",
+      "lastSuccessAt": "2026-10-14T03:28:01.827855+00:00",
+      "lastAttemptAt": "2026-10-14T03:28:01.827855+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -811,8 +811,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-13T21:20:20.028432+00:00",
-      "lastAttemptAt": "2026-10-13T21:20:20.028432+00:00",
+      "lastSuccessAt": "2026-10-14T03:28:01.827855+00:00",
+      "lastAttemptAt": "2026-10-14T03:28:01.827855+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
