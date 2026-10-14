@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T03:38:02.024633+00:00",
+  "updatedAt": "2026-10-14T10:58:03.479691+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -7,28 +7,20 @@
   "topLine": "Gemini 4 Argon in GitHub Copilot",
   "cards": [
     {
-      "genre": "開発",
-      "count": 12,
-      "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "Gemini 4 Argon in GitHub Copilot / GitHub’s model for secret detection: Finding more secrets with less noise / ReviewBench: An open benchmark for AI code review",
-      "topUrl": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
-      "score": 5
-    },
-    {
       "genre": "AI",
-      "count": 10,
+      "count": 14,
       "decision": "AI/Codex運用の変化を確認",
       "signal": "Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems / Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
       "topUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/",
       "score": 3
     },
     {
-      "genre": "論文",
-      "count": 8,
-      "decision": "必要時だけ確認",
-      "signal": "MagicBeanStalk: Escaping the RLVR Zero Advantage Trap with Recursive Data Synthesis / Know What You Don't Know: Agentic Data Synthesis by Evolving Generation Space for Closed-Loop Learning / SpireBench: Evaluating Long-H",
-      "topUrl": "https://arxiv.org/abs/2610.12659",
-      "score": 4
+      "genre": "開発",
+      "count": 12,
+      "decision": "CG開発・GitHub運用へ反映候補",
+      "signal": "Gemini 4 Argon in GitHub Copilot / GitHub’s model for secret detection: Finding more secrets with less noise / ReviewBench: An open benchmark for AI code review",
+      "topUrl": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
+      "score": 5
     },
     {
       "genre": "技術",
@@ -53,13 +45,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
       "url": "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/"
-    },
-    {
-      "label": "論文",
-      "title": "MagicBeanStalk: Escaping the RLVR Zero Advantage Trap with Recursive Data Synthesis",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.12659"
     },
     {
       "label": "開発",
@@ -95,6 +80,13 @@
       "why": "Codex/AI開発判断に関係",
       "source": "Gemini公式",
       "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"
+    },
+    {
+      "label": "開発",
+      "title": "Enterprise managed settings enforcement updates",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates"
     }
   ],
   "items": [
@@ -134,26 +126,6 @@
       "tags": [
         "開発",
         "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "MagicBeanStalk: Escaping the RLVR Zero Advantage Trap with Recursive Data Synthesis",
-      "summary": "arXiv:2610.12659v1 Announce Type: new Abstract: Data-centric scaling of RLVR has focused on collecting or generating verifiable training problems. However, corpus size alone does not determine whether the dataset provide",
-      "url": "https://arxiv.org/abs/2610.12659",
-      "published": "2026-10-13T04:00:00+00:00",
-      "score": 4,
-      "tags": [
-        "論文",
-        "重要",
-        "開発",
         "研究"
       ]
     },
@@ -287,82 +259,6 @@
       ]
     },
     {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Know What You Don't Know: Agentic Data Synthesis by Evolving Generation Space for Closed-Loop Learning",
-      "summary": "arXiv:2610.12593v1 Announce Type: new Abstract: The continued improvement of large language models increasingly depends on synthetic experience, yet effective data synthesis for interactive agents requires not only execu",
-      "url": "https://arxiv.org/abs/2610.12593",
-      "published": "2026-10-13T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "SpireBench: Evaluating Long-Horizon Strategic Play of Agentic Models with Slay the Spire",
-      "summary": "arXiv:2610.12596v1 Announce Type: new Abstract: Agentic large language models now tackle complex tasks, yet strategic reasoning over long horizons is under-studied: most agentic benchmarks are short and episodic, and per",
-      "url": "https://arxiv.org/abs/2610.12596",
-      "published": "2026-10-13T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Beyond Binary Verifiable Rewards: Behavioral Self-Rewarding for SWE Agents",
-      "summary": "arXiv:2610.12598v1 Announce Type: new Abstract: Reinforcement learning with verifiable rewards (RLVR) provides reliable supervision for software engineering agents through executable tests, but binary rewards fail to dis",
-      "url": "https://arxiv.org/abs/2610.12598",
-      "published": "2026-10-13T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "CLEAT: Learning Value-Guided Clarification for Interactive Agents",
-      "summary": "arXiv:2610.12655v1 Announce Type: new Abstract: LLM agents can execute increasingly complex tasks, but effective assistance also requires aligning their actions with goals and constraints that users may leave unstated. W",
-      "url": "https://arxiv.org/abs/2610.12655",
-      "published": "2026-10-13T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -473,6 +369,24 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "The EU’s next chapter in AI is agentic",
+      "summary": "New analysis shows how agentic AI adoption is growing across EU enterprises and small businesses—and where deeper use could unlock more value.",
+      "url": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
+      "published": "2026-10-14T00:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
@@ -543,6 +457,78 @@
         "開発",
         "重要"
       ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Higgsfield takes AI video from 1 minute to over 10",
+      "summary": "Higgsfield brings creators longer videos with GPT-6 Astra, precise visuals with GPT-Image-2.5, and a path to voice filmmaking with GPT-Live.",
+      "url": "https://openai.com/index/higgsfield-longer-videos-voice",
+      "published": "2026-10-13T12:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "制作"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+      "summary": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases while preserving human oversight.",
+      "url": "https://openai.com/index/sophos",
+      "published": "2026-10-09T07:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
+      "summary": "Across recruiting, engineering, and operations, Oracle turns specialist knowledge into fast, repeatable workflows with ChatGPT Work and Codex.",
+      "url": "https://openai.com/index/oracle",
+      "published": "2026-10-08T16:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "LegalOn halves Codex costs while maintaining development speed",
+      "summary": "LegalOn cut estimated daily Codex costs by 65% while maintaining development speed. It matched Astra, Sol, and Luna to tasks and managed budgets strategically.",
+      "url": "https://openai.com/index/legalon-halves-codex-costs",
+      "published": "2026-10-08T12:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
     }
   ],
   "providerWatch": {
@@ -602,15 +588,15 @@
             "source": "ChatGPT / OpenAI公式"
           },
           {
-            "title": "Higgsfield takes AI video from 1 minute to over 10",
-            "url": "https://openai.com/index/higgsfield-longer-videos-voice",
-            "published": "2026-10-13T12:00:00+00:00",
+            "title": "The EU’s next chapter in AI is agentic",
+            "url": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
+            "published": "2026-10-14T00:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           },
           {
-            "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
-            "url": "https://openai.com/index/sophos",
-            "published": "2026-10-09T07:00:00+00:00",
+            "title": "Higgsfield takes AI video from 1 minute to over 10",
+            "url": "https://openai.com/index/higgsfield-longer-videos-voice",
+            "published": "2026-10-13T12:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           }
         ]
@@ -692,9 +678,9 @@
         ],
         "latest": [
           {
-            "title": "Claude Discovers Novel Enzyme System",
-            "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-            "published": "2026-10-13T00:18:23.000Z",
+            "title": "Singapore Office Opening",
+            "url": "https://www.anthropic.com/news/singapore-office-opening",
+            "published": "2026-10-14T08:31:43.000Z",
             "source": "Claude / Anthropic公式"
           }
         ]
@@ -723,5 +709,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-14T03:28:01.827855+00:00"
+  "lastSuccessAt": "2026-10-14T10:58:03.479691+00:00"
 }
