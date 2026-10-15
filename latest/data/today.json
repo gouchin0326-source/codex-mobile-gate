@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T10:58:01.716207+00:00",
+  "updatedAt": "2026-10-15T11:08:05.338855+00:00",
   "sourceUpdatedAt": "2026-10-15T08:58:00.729641+00:00",
   "status": "stale",
   "mode": "today-rule-based",
@@ -77,5 +77,11 @@
       "processing": "rule-based"
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "arxiv-ai",
+      "error": "response exceeds 2097152 byte limit",
+      "fallbackItems": 0
+    }
+  ]
 }

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T10:58:01.080038+00:00",
+  "updatedAt": "2026-10-15T11:08:01.031548+00:00",
   "lastSuccessAt": "2026-10-15T08:58:00.729641+00:00",
   "status": "stale",
   "mode": "free-fetch-context",
@@ -775,11 +775,11 @@
     },
     {
       "id": "arxiv-ai",
-      "status": "fresh",
+      "status": "unavailable",
       "lastSuccessAt": "2026-10-14T10:58:03.479691+00:00",
-      "lastAttemptAt": "2026-10-14T10:58:03.479691+00:00",
+      "lastAttemptAt": "2026-10-15T11:08:01.031548+00:00",
       "retryAfterAt": null,
-      "errorCode": null
+      "errorCode": "FetchPolicyError"
     },
     {
       "id": "usgs",
@@ -790,5 +790,11 @@
       "errorCode": null
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "arxiv-ai",
+      "error": "response exceeds 2097152 byte limit",
+      "fallbackItems": 0
+    }
+  ]
 }

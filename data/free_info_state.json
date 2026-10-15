@@ -2,8 +2,8 @@
   "version": 1,
   "daily": {
     "date": "2026-10-15",
-    "httpRequests": 222,
-    "responseBytes": 14842542
+    "httpRequests": 225,
+    "responseBytes": 17060207
   },
   "sources": {
     "openai": {
@@ -55,12 +55,12 @@
       "lastHttpStatus": 200
     },
     "arxiv-ai": {
-      "lastAttemptAt": "2026-10-14T10:58:03.479691+00:00",
-      "status": "fresh",
+      "lastAttemptAt": "2026-10-15T11:08:01.031548+00:00",
+      "status": "unavailable",
       "lastSuccessAt": "2026-10-14T10:58:03.479691+00:00",
       "contentUpdatedAt": "2026-10-14T10:58:03.479691+00:00",
-      "consecutiveFailures": 0,
-      "errorCode": null,
+      "consecutiveFailures": 1,
+      "errorCode": "FetchPolicyError",
       "retryAfterAt": null,
       "etag": "0f77ff0e5c035d144cfb4ae2168448b0acb40929f00670686c28cb76bf2cfb49",
       "lastModified": null,
@@ -103,10 +103,10 @@
       "lastHttpStatus": 200
     },
     "open-meteo-toyama": {
-      "lastAttemptAt": "2026-10-15T10:38:00.755108+00:00",
+      "lastAttemptAt": "2026-10-15T11:08:01.031548+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-15T10:38:00.755108+00:00",
-      "contentUpdatedAt": "2026-10-15T10:38:00.755108+00:00",
+      "lastSuccessAt": "2026-10-15T11:08:01.031548+00:00",
+      "contentUpdatedAt": "2026-10-15T11:08:01.031548+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
@@ -115,14 +115,14 @@
       "lastHttpStatus": 200
     },
     "github-actions": {
-      "lastAttemptAt": "2026-10-15T10:38:00.755108+00:00",
+      "lastAttemptAt": "2026-10-15T11:08:01.031548+00:00",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-15T10:38:00.755108+00:00",
-      "contentUpdatedAt": "2026-10-15T10:38:00.755108+00:00",
+      "lastSuccessAt": "2026-10-15T11:08:01.031548+00:00",
+      "contentUpdatedAt": "2026-10-15T11:08:01.031548+00:00",
       "consecutiveFailures": 0,
       "errorCode": null,
       "retryAfterAt": null,
-      "etag": "W/\"3fa88e8c04bb92a4e4928f8a03ecc97ce3ed2b202c604963b5b1a314d95aaec0\"",
+      "etag": "W/\"56e7a448985ba33f3d79a6d516d22a4bd1e21624af58f67b512e1ac1ef47eafe\"",
       "lastModified": null,
       "lastHttpStatus": 200
     },
@@ -356,10 +356,10 @@
     },
     "cabinet-office-holidays": {}
   },
-  "updatedAt": "2026-10-15T10:58:01.080038+00:00",
+  "updatedAt": "2026-10-15T11:08:01.031548+00:00",
   "lastRun": {
-    "httpRequests": 2,
-    "responseBytes": 1192,
+    "httpRequests": 3,
+    "responseBytes": 2217665,
     "aiRequests": 0
   }
 }
