@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-15T02:38:07.932671+00:00",
-  "lastSuccessAt": "2026-10-14T20:40:16.461682+00:00",
+  "updatedAt": "2026-10-15T02:48:03.653291+00:00",
+  "lastSuccessAt": "2026-10-15T02:48:03.653291+00:00",
   "status": "stale",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -142,16 +142,16 @@
     },
     {
       "genre": "災害",
-      "count": 4,
-      "signal": "M 0.8 - 10 km WNW of The Geysers, CA / M 1.1 - 1 km NNW of The Geysers, CA / M 1.8 - 5 km SSE of Home Gardens, CA",
+      "count": 5,
+      "signal": "M 2.0 - 27 km SSW of Alamo, Nevada / M 0.8 - 6 km SSE of Pearblossom, CA / M 1.4 - 7 km ESE of Cloverdale, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75449441",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00925779",
       "score": 1
     },
     {
       "genre": "技術",
-      "count": 2,
-      "signal": "Plasma 6.8 released (KDE's 30th birthday) / Ledger confirms spy chip implant behind wallet crypto thefts",
+      "count": 1,
+      "signal": "Plasma 6.8 released (KDE's 30th birthday)",
       "decision": "更新あり。必要時だけ確認",
       "topUrl": "https://kde.org/announcements/plasma/6/6.8.0/",
       "score": 2
@@ -258,10 +258,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.8 - 10 km WNW of The Geysers, CA",
-      "summary": "10 km WNW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75449441",
-      "published": "2026-10-14T20:26:33.820000+00:00",
+      "title": "M 2.0 - 27 km SSW of Alamo, Nevada",
+      "summary": "27 km SSW of Alamo, Nevada",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00925779",
+      "published": "2026-10-15T02:40:16.065000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -278,7 +278,7 @@
       "title": "2026 Us Midterms",
       "summary": "公式サイトマップで更新を検知。内容は公式ページで確認。",
       "url": "https://www.anthropic.com/news/2026-us-midterms",
-      "published": "2026-10-14T19:32:27.000Z",
+      "published": "2026-10-14T21:01:13.000Z",
       "score": 1,
       "tags": [
         "AI"
@@ -528,24 +528,6 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "ガジェット",
-      "sourceWeight": 1,
-      "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
-      "summary": "Video showing an implanted device: https://www.youtube.com/watch?v=Nf4FEFlgv3Q Comments",
-      "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
-      "published": "2026-10-14T07:54:56+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "制作"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -556,6 +538,24 @@
       "title": "How Third Moment Research runs 10,000 agents for 36+ hours",
       "summary": "With GPT-6 Astra and GPT-6.1 Sol, Codex, and Daybreak for cybersecurity, this AI lab builds agents that focus for days and improve with use.",
       "url": "https://openai.com/index/third-moment-research",
+      "published": "2026-10-14T07:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "How Block is building AI-powered security with OpenAI technology",
+      "summary": "Block is building AI-powered security with OpenAI. Its security team investigates threats faster and proposes patches in minutes.",
+      "url": "https://openai.com/index/block-ai-powered-security",
       "published": "2026-10-14T07:00:00+00:00",
       "score": 2,
       "tags": [
@@ -654,24 +654,6 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
-      "summary": "Across recruiting, engineering, and operations, Oracle turns specialist knowledge into fast, repeatable workflows with ChatGPT Work and Codex.",
-      "url": "https://openai.com/index/oracle",
-      "published": "2026-10-08T16:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
       "source": "google-gemini",
       "platform": "AI",
       "label": "Gemini公式",
@@ -693,10 +675,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.1 - 1 km NNW of The Geysers, CA",
-      "summary": "1 km NNW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75449431",
-      "published": "2026-10-14T20:20:14.550000+00:00",
+      "title": "M 0.8 - 6 km SSE of Pearblossom, CA",
+      "summary": "6 km SSE of Pearblossom, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41347727",
+      "published": "2026-10-15T02:35:11.440000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -706,10 +688,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.8 - 5 km SSE of Home Gardens, CA",
-      "summary": "5 km SSE of Home Gardens, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41347607",
-      "published": "2026-10-14T20:10:21.460000+00:00",
+      "title": "M 1.4 - 7 km ESE of Cloverdale, CA",
+      "summary": "7 km ESE of Cloverdale, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75449596",
+      "published": "2026-10-15T02:35:10.800000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -719,10 +701,23 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 3.1 - 57 km NW of San Antonio, Puerto Rico",
-      "summary": "57 km NW of San Antonio, Puerto Rico",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71536713",
-      "published": "2026-10-14T20:10:09.470000+00:00",
+      "title": "M 1.2 - 1 km ESE of The Geysers, CA",
+      "summary": "1 km ESE of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75449591",
+      "published": "2026-10-15T02:32:54.640000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 2.0 - 1 km SE of The Geysers, CA",
+      "summary": "1 km SE of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75449586",
+      "published": "2026-10-15T02:30:21.640000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -733,24 +728,24 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-14T20:40:16.461682+00:00",
-      "lastAttemptAt": "2026-10-14T20:40:16.461682+00:00",
+      "lastSuccessAt": "2026-10-15T02:48:03.653291+00:00",
+      "lastAttemptAt": "2026-10-15T02:48:03.653291+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-14T20:40:16.461682+00:00",
-      "lastAttemptAt": "2026-10-14T20:40:16.461682+00:00",
+      "lastSuccessAt": "2026-10-15T02:48:03.653291+00:00",
+      "lastAttemptAt": "2026-10-15T02:48:03.653291+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-14T20:40:16.461682+00:00",
-      "lastAttemptAt": "2026-10-14T20:40:16.461682+00:00",
+      "lastSuccessAt": "2026-10-15T02:48:03.653291+00:00",
+      "lastAttemptAt": "2026-10-15T02:48:03.653291+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -758,23 +753,23 @@
       "id": "github-blog",
       "status": "stale",
       "lastSuccessAt": "2026-10-14T10:58:03.479691+00:00",
-      "lastAttemptAt": "2026-10-14T20:40:16.461682+00:00",
+      "lastAttemptAt": "2026-10-15T02:48:03.653291+00:00",
       "retryAfterAt": null,
       "errorCode": "FetchPolicyError"
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-14T20:40:16.461682+00:00",
-      "lastAttemptAt": "2026-10-14T20:40:16.461682+00:00",
+      "lastSuccessAt": "2026-10-15T02:48:03.653291+00:00",
+      "lastAttemptAt": "2026-10-15T02:48:03.653291+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-14T20:40:16.461682+00:00",
-      "lastAttemptAt": "2026-10-14T20:40:16.461682+00:00",
+      "lastSuccessAt": "2026-10-15T02:48:03.653291+00:00",
+      "lastAttemptAt": "2026-10-15T02:48:03.653291+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -789,11 +784,17 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-14T20:40:16.461682+00:00",
-      "lastAttemptAt": "2026-10-14T20:40:16.461682+00:00",
+      "lastSuccessAt": "2026-10-15T02:48:03.653291+00:00",
+      "lastAttemptAt": "2026-10-15T02:48:03.653291+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "github-blog",
+      "error": "response exceeds 2097152 byte limit",
+      "fallbackItems": 6
+    }
+  ]
 }

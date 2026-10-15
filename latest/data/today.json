@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-15T02:38:08.942905+00:00",
-  "sourceUpdatedAt": "2026-10-14T20:40:16.461682+00:00",
+  "updatedAt": "2026-10-15T02:48:23.477317+00:00",
+  "sourceUpdatedAt": "2026-10-15T02:48:03.653291+00:00",
   "status": "stale",
   "mode": "today-rule-based",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -17,7 +17,7 @@
       "title": "Gemini 4 Argon in GitHub Copilot",
       "reason": "開発の新着で、設定した重要語と一致",
       "publishedAt": "2026-10-13T18:39:56+00:00",
-      "observedAt": "2026-10-14T20:40:16.461682+00:00",
+      "observedAt": "2026-10-15T02:48:03.653291+00:00",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
       "score": 5,
@@ -30,7 +30,7 @@
       "title": "HydraFusion updates and new Max option",
       "reason": "開発の新着で、設定した重要語と一致",
       "publishedAt": "2026-10-14T20:01:35+00:00",
-      "observedAt": "2026-10-14T20:40:16.461682+00:00",
+      "observedAt": "2026-10-15T02:48:03.653291+00:00",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option",
       "score": 4,
@@ -43,7 +43,7 @@
       "title": "Amp puts AI agents to work beyond code with OpenAI models",
       "reason": "AIの新着で、設定した重要語と一致",
       "publishedAt": "2026-10-14T12:00:00+00:00",
-      "observedAt": "2026-10-14T20:40:16.461682+00:00",
+      "observedAt": "2026-10-15T02:48:03.653291+00:00",
       "source": "ChatGPT / OpenAI公式",
       "url": "https://openai.com/index/amp-beyond-coding",
       "score": 3,
@@ -56,7 +56,7 @@
       "title": "Gemini 4 Argon is now available for developers.",
       "reason": "AIの新着で、設定した重要語と一致",
       "publishedAt": "2026-10-13T16:00:00+00:00",
-      "observedAt": "2026-10-14T20:40:16.461682+00:00",
+      "observedAt": "2026-10-15T02:48:03.653291+00:00",
       "source": "Gemini公式",
       "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/",
       "score": 3,
@@ -69,7 +69,7 @@
       "title": "Plasma 6.8 released (KDE's 30th birthday)",
       "reason": "技術の新着を確認",
       "publishedAt": "2026-10-14T11:29:51+00:00",
-      "observedAt": "2026-10-14T20:40:16.461682+00:00",
+      "observedAt": "2026-10-15T02:48:03.653291+00:00",
       "source": "技術RSS",
       "url": "https://kde.org/announcements/plasma/6/6.8.0/",
       "score": 2,
@@ -77,5 +77,11 @@
       "processing": "rule-based"
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "github-blog",
+      "error": "response exceeds 2097152 byte limit",
+      "fallbackItems": 6
+    }
+  ]
 }
