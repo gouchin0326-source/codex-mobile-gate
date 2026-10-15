@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-15T14:48:01.972746+00:00",
-  "lastSuccessAt": "2026-10-15T08:58:00.729641+00:00",
+  "updatedAt": "2026-10-15T21:45:00.538643+00:00",
+  "lastSuccessAt": "2026-10-15T21:45:00.538643+00:00",
   "status": "stale",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -126,7 +126,7 @@
   "contexts": [
     {
       "genre": "AI",
-      "count": 14,
+      "count": 13,
       "signal": "Amp puts AI agents to work beyond code with OpenAI models / Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/amp-beyond-coding",
@@ -135,26 +135,26 @@
     {
       "genre": "開発",
       "count": 12,
-      "signal": "Gemini 4 Argon in GitHub Copilot / HydraFusion updates and new Max option / GitHub’s model for secret detection: Finding more secrets with less noise",
+      "signal": "Upcoming deprecation of selected GitHub Copilot models in mid-November / HydraFusion updates and new Max option / GitHub’s model for secret detection: Finding more secrets with les",
       "decision": "CG開発・GitHub運用へ反映候補",
-      "topUrl": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
-      "score": 5
+      "topUrl": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
+      "score": 4
     },
     {
       "genre": "災害",
-      "count": 5,
-      "signal": "M 2.8 - 57 km E of Pedro Bay, Alaska / M 1.2 - 21 km SSW of Badger, Alaska / M 1.8 - 32 km SSW of Alamo, Nevada",
+      "count": 6,
+      "signal": "M 0.9 - 9 km WNW of Anza, CA / M 1.7 - 20 km SE of Pāhala, Hawaii / M 3.4 - 65 km NE of Punta Cana, Dominican Republic",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ukttxq",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348079",
       "score": 1
     },
     {
       "genre": "技術",
       "count": 1,
-      "signal": "Plasma 6.8 released (KDE's 30th birthday)",
+      "signal": "My C23 Conventions",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://kde.org/announcements/plasma/6/6.8.0/",
-      "score": 2
+      "topUrl": "https://abner.page/post/c23-conventions-1/",
+      "score": 1
     }
   ],
   "items": [
@@ -166,15 +166,14 @@
       "provider": null,
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "Gemini 4 Argon in GitHub Copilot",
-      "summary": "Gemini 4 Argon, Google’s newest frontier model, is now generally available in GitHub Copilot. It is designed for complex coding, agentic, and reasoning tasks. In early testing, Gemini 4 Argon… The post Gemini 4 Argon in ",
-      "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
-      "published": "2026-10-13T18:39:56+00:00",
-      "score": 5,
+      "title": "Upcoming deprecation of selected GitHub Copilot models in mid-November",
+      "summary": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on November 16th, 2026: Model Deprecation date… The post Upco",
+      "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
+      "published": "2026-10-15T19:35:13+00:00",
+      "score": 4,
       "tags": [
         "開発",
         "重要",
-        "制作",
         "研究"
       ]
     },
@@ -237,31 +236,13 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "ニュース",
-      "sourceWeight": 1,
-      "title": "Plasma 6.8 released (KDE's 30th birthday)",
-      "summary": "Comments",
-      "url": "https://kde.org/announcements/plasma/6/6.8.0/",
-      "published": "2026-10-14T11:29:51+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "重要"
-      ]
-    },
-    {
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.8 - 57 km E of Pedro Bay, Alaska",
-      "summary": "57 km E of Pedro Bay, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ukttxq",
-      "published": "2026-10-15T08:44:32.859000+00:00",
+      "title": "M 0.9 - 9 km WNW of Anza, CA",
+      "summary": "9 km WNW of Anza, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348079",
+      "published": "2026-10-15T21:33:49.580000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -275,13 +256,30 @@
       "provider": "claude",
       "topic": "その他",
       "sourceWeight": 2,
-      "title": "2026 Us Midterms",
+      "title": "An Update On Independent Evaluators",
       "summary": "公式サイトマップで更新を検知。内容は公式ページで確認。",
-      "url": "https://www.anthropic.com/news/2026-us-midterms",
-      "published": "2026-10-14T21:01:13.000Z",
+      "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+      "published": "2026-10-15T18:25:08.000Z",
       "score": 1,
       "tags": [
         "AI"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "My C23 Conventions",
+      "summary": "Comments",
+      "url": "https://abner.page/post/c23-conventions-1/",
+      "published": "2026-10-15T15:32:15+00:00",
+      "score": 1,
+      "tags": [
+        "技術"
       ]
     },
     {
@@ -331,6 +329,42 @@
       "provider": null,
       "topic": "技術",
       "sourceWeight": 1,
+      "title": "Download GitHub Code Quality license usage as a CSV",
+      "summary": "You can now download a CSV report of your GitHub Code Quality license usage to reconcile your license count with your own records. The report includes: Each active committer who… The post Download GitHub Code Quality lic",
+      "url": "https://github.blog/changelog/2026-10-15-download-github-code-quality-license-usage-as-a-csv",
+      "published": "2026-10-15T20:11:26+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Agentic autofix for code scanning alerts general availability",
+      "summary": "Agentic autofix for code scanning alerts is now generally available. It remediates alerts by working across your codebase the way a developer would: it explores relevant files, proposes a fix,… The post Agentic autofix f",
+      "url": "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability",
+      "published": "2026-10-15T13:49:20+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
       "title": "GitHub Actions workflow lockfiles in public preview",
       "summary": "GitHub Actions workflow dependency lockfiles are now in public preview for GitHub Enterprise Cloud, GitHub Enterprise Cloud with data residency, Team, and Free plans. Tags and branches can move after… The post GitHub Act",
       "url": "https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview",
@@ -360,24 +394,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Audit GitHub Code Quality finding dismissals and reopenings",
-      "summary": "You can now review manual dismissals and reopenings of GitHub Code Quality findings in your organization or enterprise audit log. Findings may appear in either your repository’s default-branch backlog or… The post Audit ",
-      "url": "https://github.blog/changelog/2026-10-13-audit-github-code-quality-finding-dismissals-and-reopenings",
-      "published": "2026-10-13T17:58:36+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "google-gemini",
       "platform": "AI",
       "label": "Gemini公式",
@@ -394,24 +410,6 @@
         "AI",
         "開発",
         "研究"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Enterprise managed settings enforcement updates",
-      "summary": "Enterprise administrators can now require supported GitHub Copilot clients to retrieve current server-managed settings at startup instead of relying on a cached policy. We are also adding minimum client version… The post",
-      "url": "https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates",
-      "published": "2026-10-13T15:20:10+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
       ]
     },
     {
@@ -636,24 +634,6 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
-      "summary": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases while preserving human oversight.",
-      "url": "https://openai.com/index/sophos",
-      "published": "2026-10-09T07:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
       "source": "google-gemini",
       "platform": "AI",
       "label": "Gemini公式",
@@ -675,10 +655,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.2 - 21 km SSW of Badger, Alaska",
-      "summary": "21 km SSW of Badger, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uktslq",
-      "published": "2026-10-15T08:43:00.409000+00:00",
+      "title": "M 1.7 - 20 km SE of Pāhala, Hawaii",
+      "summary": "20 km SE of Pāhala, Hawaii",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75057162",
+      "published": "2026-10-15T21:31:42.250000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -688,10 +668,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.8 - 32 km SSW of Alamo, Nevada",
-      "summary": "32 km SSW of Alamo, Nevada",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00925796",
-      "published": "2026-10-15T08:38:10.586000+00:00",
+      "title": "M 3.4 - 65 km NE of Punta Cana, Dominican Republic",
+      "summary": "65 km NE of Punta Cana, Dominican Republic",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71536828",
+      "published": "2026-10-15T21:12:28.970000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -701,10 +681,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.5 - 17 km WSW of Johannesburg, CA",
-      "summary": "17 km WSW of Johannesburg, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41347823",
-      "published": "2026-10-15T08:30:10.100000+00:00",
+      "title": "M 4.5 - 44 km SSE of Champerico, Guatemala",
+      "summary": "44 km SSE of Champerico, Guatemala",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2kz",
+      "published": "2026-10-15T20:39:25.755000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -714,10 +694,23 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.1 - 16 km NW of Parkfield, CA",
-      "summary": "16 km NW of Parkfield, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75449781",
-      "published": "2026-10-15T08:03:10.510000+00:00",
+      "title": "M 1.8 - 12 km S of Honaunau-Napoopoo, Hawaii",
+      "summary": "12 km S of Honaunau-Napoopoo, Hawaii",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75057112",
+      "published": "2026-10-15T20:29:39.640000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 4.3 - 11 km SE of Huara, Chile",
+      "summary": "11 km SE of Huara, Chile",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2kw",
+      "published": "2026-10-15T20:25:20.509000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -728,24 +721,24 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-15T08:58:00.729641+00:00",
-      "lastAttemptAt": "2026-10-15T08:58:00.729641+00:00",
+      "lastSuccessAt": "2026-10-15T21:45:00.538643+00:00",
+      "lastAttemptAt": "2026-10-15T21:45:00.538643+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-15T08:58:00.729641+00:00",
-      "lastAttemptAt": "2026-10-15T08:58:00.729641+00:00",
+      "lastSuccessAt": "2026-10-15T21:45:00.538643+00:00",
+      "lastAttemptAt": "2026-10-15T21:45:00.538643+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-15T08:58:00.729641+00:00",
-      "lastAttemptAt": "2026-10-15T08:58:00.729641+00:00",
+      "lastSuccessAt": "2026-10-15T21:45:00.538643+00:00",
+      "lastAttemptAt": "2026-10-15T21:45:00.538643+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -753,23 +746,23 @@
       "id": "github-blog",
       "status": "stale",
       "lastSuccessAt": "2026-10-14T10:58:03.479691+00:00",
-      "lastAttemptAt": "2026-10-15T08:58:00.729641+00:00",
+      "lastAttemptAt": "2026-10-15T21:45:00.538643+00:00",
       "retryAfterAt": null,
       "errorCode": "FetchPolicyError"
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-15T08:58:00.729641+00:00",
-      "lastAttemptAt": "2026-10-15T08:58:00.729641+00:00",
+      "lastSuccessAt": "2026-10-15T21:45:00.538643+00:00",
+      "lastAttemptAt": "2026-10-15T21:45:00.538643+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-15T08:58:00.729641+00:00",
-      "lastAttemptAt": "2026-10-15T08:58:00.729641+00:00",
+      "lastSuccessAt": "2026-10-15T21:45:00.538643+00:00",
+      "lastAttemptAt": "2026-10-15T21:45:00.538643+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -784,11 +777,17 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-15T08:58:00.729641+00:00",
-      "lastAttemptAt": "2026-10-15T08:58:00.729641+00:00",
+      "lastSuccessAt": "2026-10-15T21:45:00.538643+00:00",
+      "lastAttemptAt": "2026-10-15T21:45:00.538643+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "github-blog",
+      "error": "response exceeds 2097152 byte limit",
+      "fallbackItems": 6
+    }
+  ]
 }

@@ -1,14 +1,14 @@
 {
-  "updatedAt": "2026-10-15T14:48:01.972746+00:00",
+  "updatedAt": "2026-10-15T21:45:00.538643+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "Gemini 4 Argon in GitHub Copilot",
+  "topLine": "Upcoming deprecation of selected GitHub Copilot models in mid-November",
   "cards": [
     {
       "genre": "AI",
-      "count": 14,
+      "count": 13,
       "decision": "AI/Codex運用の変化を確認",
       "signal": "Amp puts AI agents to work beyond code with OpenAI models / Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems",
       "topUrl": "https://openai.com/index/amp-beyond-coding",
@@ -18,26 +18,26 @@
       "genre": "開発",
       "count": 12,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "Gemini 4 Argon in GitHub Copilot / HydraFusion updates and new Max option / GitHub’s model for secret detection: Finding more secrets with less noise",
-      "topUrl": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
-      "score": 5
+      "signal": "Upcoming deprecation of selected GitHub Copilot models in mid-November / HydraFusion updates and new Max option / GitHub’s model for secret detection: Finding more secrets with less noise",
+      "topUrl": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
+      "score": 4
     },
     {
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "Plasma 6.8 released (KDE's 30th birthday)",
-      "topUrl": "https://kde.org/announcements/plasma/6/6.8.0/",
-      "score": 2
+      "signal": "My C23 Conventions",
+      "topUrl": "https://abner.page/post/c23-conventions-1/",
+      "score": 1
     }
   ],
   "focus": [
     {
       "label": "開発",
-      "title": "Gemini 4 Argon in GitHub Copilot",
+      "title": "Upcoming deprecation of selected GitHub Copilot models in mid-November",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot"
+      "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november"
     },
     {
       "label": "開発",
@@ -62,6 +62,20 @@
     },
     {
       "label": "開発",
+      "title": "Download GitHub Code Quality license usage as a CSV",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-15-download-github-code-quality-license-usage-as-a-csv"
+    },
+    {
+      "label": "開発",
+      "title": "Agentic autofix for code scanning alerts general availability",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability"
+    },
+    {
+      "label": "開発",
       "title": "GitHub Actions workflow lockfiles in public preview",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
@@ -73,20 +87,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "ChatGPT / OpenAI公式",
       "url": "https://openai.com/index/amp-beyond-coding"
-    },
-    {
-      "label": "開発",
-      "title": "GitHub App improvements for least privilege and management",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-13-github-app-improvements-for-least-privilege-and-management"
-    },
-    {
-      "label": "開発",
-      "title": "Audit GitHub Code Quality finding dismissals and reopenings",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-13-audit-github-code-quality-finding-dismissals-and-reopenings"
     }
   ],
   "items": [
@@ -98,15 +98,14 @@
       "provider": null,
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "Gemini 4 Argon in GitHub Copilot",
-      "summary": "Gemini 4 Argon, Google’s newest frontier model, is now generally available in GitHub Copilot. It is designed for complex coding, agentic, and reasoning tasks. In early testing, Gemini 4 Argon… The post Gemini 4 Argon in ",
-      "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
-      "published": "2026-10-13T18:39:56+00:00",
-      "score": 5,
+      "title": "Upcoming deprecation of selected GitHub Copilot models in mid-November",
+      "summary": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on November 16th, 2026: Model Deprecation date… The post Upco",
+      "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
+      "published": "2026-10-15T19:35:13+00:00",
+      "score": 4,
       "tags": [
         "開発",
         "重要",
-        "制作",
         "研究"
       ]
     },
@@ -177,6 +176,42 @@
       "provider": null,
       "topic": "技術",
       "sourceWeight": 1,
+      "title": "Download GitHub Code Quality license usage as a CSV",
+      "summary": "You can now download a CSV report of your GitHub Code Quality license usage to reconcile your license count with your own records. The report includes: Each active committer who… The post Download GitHub Code Quality lic",
+      "url": "https://github.blog/changelog/2026-10-15-download-github-code-quality-license-usage-as-a-csv",
+      "published": "2026-10-15T20:11:26+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Agentic autofix for code scanning alerts general availability",
+      "summary": "Agentic autofix for code scanning alerts is now generally available. It remediates alerts by working across your codebase the way a developer would: it explores relevant files, proposes a fix,… The post Agentic autofix f",
+      "url": "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability",
+      "published": "2026-10-15T13:49:20+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
       "title": "GitHub Actions workflow lockfiles in public preview",
       "summary": "GitHub Actions workflow dependency lockfiles are now in public preview for GitHub Enterprise Cloud, GitHub Enterprise Cloud with data residency, Team, and Free plans. Tags and branches can move after… The post GitHub Act",
       "url": "https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview",
@@ -225,24 +260,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Audit GitHub Code Quality finding dismissals and reopenings",
-      "summary": "You can now review manual dismissals and reopenings of GitHub Code Quality findings in your organization or enterprise audit log. Findings may appear in either your repository’s default-branch backlog or… The post Audit ",
-      "url": "https://github.blog/changelog/2026-10-13-audit-github-code-quality-finding-dismissals-and-reopenings",
-      "published": "2026-10-13T17:58:36+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "google-gemini",
       "platform": "AI",
       "label": "Gemini公式",
@@ -278,24 +295,6 @@
         "AI",
         "開発",
         "研究"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Enterprise managed settings enforcement updates",
-      "summary": "Enterprise administrators can now require supported GitHub Copilot clients to retrieve current server-managed settings at startup instead of relying on a cached policy. We are also adding minimum client version… The post",
-      "url": "https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates",
-      "published": "2026-10-13T15:20:10+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
       ]
     },
     {
@@ -412,24 +411,6 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "ニュース",
-      "sourceWeight": 1,
-      "title": "Plasma 6.8 released (KDE's 30th birthday)",
-      "summary": "Comments",
-      "url": "https://kde.org/announcements/plasma/6/6.8.0/",
-      "published": "2026-10-14T11:29:51+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "重要"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -535,6 +516,24 @@
       "tags": [
         "AI",
         "制作"
+      ]
+    },
+    {
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Gemini 4 Argon: our next era of frontier intelligence",
+      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "published": "2026-09-30T20:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "研究"
       ]
     }
   ],
@@ -685,9 +684,9 @@
         ],
         "latest": [
           {
-            "title": "2026 Us Midterms",
-            "url": "https://www.anthropic.com/news/2026-us-midterms",
-            "published": "2026-10-14T21:01:13.000Z",
+            "title": "An Update On Independent Evaluators",
+            "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+            "published": "2026-10-15T18:25:08.000Z",
             "source": "Claude / Anthropic公式"
           }
         ]
@@ -716,5 +715,5 @@
     }
   },
   "status": "stale",
-  "lastSuccessAt": "2026-10-15T08:58:00.729641+00:00"
+  "lastSuccessAt": "2026-10-15T21:45:00.538643+00:00"
 }

@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-15T14:48:07.396993+00:00",
-  "sourceUpdatedAt": "2026-10-15T08:58:00.729641+00:00",
+  "updatedAt": "2026-10-15T21:45:21.314528+00:00",
+  "sourceUpdatedAt": "2026-10-15T21:45:00.538643+00:00",
   "status": "stale",
   "mode": "today-rule-based",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -12,28 +12,28 @@
   },
   "items": [
     {
-      "id": "github-changelog:7",
+      "id": "github-changelog:0",
       "genre": "開発",
-      "title": "HydraFusion updates and new Max option",
+      "title": "Upcoming deprecation of selected GitHub Copilot models in mid-November",
       "reason": "開発の新着で、設定した重要語と一致",
-      "publishedAt": "2026-10-14T20:01:35+00:00",
-      "observedAt": "2026-10-15T08:58:00.729641+00:00",
+      "publishedAt": "2026-10-15T19:35:13+00:00",
+      "observedAt": "2026-10-15T21:45:00.538643+00:00",
       "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option",
+      "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
       "score": 4,
       "stale": true,
       "processing": "rule-based"
     },
     {
-      "id": "github-changelog:9",
+      "id": "github-changelog:7",
       "genre": "開発",
-      "title": "GitHub Actions workflow lockfiles in public preview",
+      "title": "HydraFusion updates and new Max option",
       "reason": "開発の新着で、設定した重要語と一致",
-      "publishedAt": "2026-10-14T13:49:15+00:00",
-      "observedAt": "2026-10-15T08:58:00.729641+00:00",
+      "publishedAt": "2026-10-14T20:01:35+00:00",
+      "observedAt": "2026-10-15T21:45:00.538643+00:00",
       "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview",
-      "score": 3,
+      "url": "https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option",
+      "score": 4,
       "stale": true,
       "processing": "rule-based"
     },
@@ -43,7 +43,7 @@
       "title": "Amp puts AI agents to work beyond code with OpenAI models",
       "reason": "AIの新着で、設定した重要語と一致",
       "publishedAt": "2026-10-14T12:00:00+00:00",
-      "observedAt": "2026-10-15T08:58:00.729641+00:00",
+      "observedAt": "2026-10-15T21:45:00.538643+00:00",
       "source": "ChatGPT / OpenAI公式",
       "url": "https://openai.com/index/amp-beyond-coding",
       "score": 3,
@@ -56,7 +56,7 @@
       "title": "SentinelOne cuts malware analysis from weeks to hours",
       "reason": "AIの新着を確認",
       "publishedAt": "2026-10-14T12:00:00+00:00",
-      "observedAt": "2026-10-15T08:58:00.729641+00:00",
+      "observedAt": "2026-10-15T21:45:00.538643+00:00",
       "source": "ChatGPT / OpenAI公式",
       "url": "https://openai.com/index/sentinelone",
       "score": 2,
@@ -64,18 +64,24 @@
       "processing": "rule-based"
     },
     {
-      "id": "lobsters:4",
+      "id": "lobsters:6",
       "genre": "技術",
-      "title": "Plasma 6.8 released (KDE's 30th birthday)",
+      "title": "My C23 Conventions",
       "reason": "技術の新着を確認",
-      "publishedAt": "2026-10-14T11:29:51+00:00",
-      "observedAt": "2026-10-15T08:58:00.729641+00:00",
+      "publishedAt": "2026-10-15T15:32:15+00:00",
+      "observedAt": "2026-10-15T21:45:00.538643+00:00",
       "source": "技術RSS",
-      "url": "https://kde.org/announcements/plasma/6/6.8.0/",
-      "score": 2,
+      "url": "https://abner.page/post/c23-conventions-1/",
+      "score": 1,
       "stale": true,
       "processing": "rule-based"
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "github-blog",
+      "error": "response exceeds 2097152 byte limit",
+      "fallbackItems": 6
+    }
+  ]
 }
