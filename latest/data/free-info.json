@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-16T13:58:01.259423+00:00",
-  "lastSuccessAt": "2026-10-16T11:08:01.344456+00:00",
+  "updatedAt": "2026-10-16T21:06:35.837773+00:00",
+  "lastSuccessAt": "2026-10-16T21:06:35.837773+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -127,9 +127,9 @@
     {
       "genre": "開発",
       "count": 13,
-      "signal": "Upcoming deprecation of selected GitHub Copilot models in mid-November / HydraFusion updates and new Max option / GitHub’s model for secret detection: Finding more secrets with les",
+      "signal": "Xcode 27 runner image generally available / Upcoming deprecation of selected GitHub Copilot models in mid-November / GitHub’s model for secret detection: Finding more secrets with ",
       "decision": "CG開発・GitHub運用へ反映候補",
-      "topUrl": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
+      "topUrl": "https://github.blog/changelog/2026-10-15-xcode-27-runner-image-generally-available",
       "score": 4
     },
     {
@@ -151,21 +151,40 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "Linus Torvalds on AI-assisted kernel contributions",
+      "signal": "Making a 88x31 button book using ImageMagick",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://lore.kernel.org/lkml/CAHk-=whTs09_ozN+e09GU68N1wPP56MUzDjrg9rnKxQUa0A_4Q@mail.gmail.com/",
-      "score": 1
+      "topUrl": "https://k.sosnierz.me/08-11-24/",
+      "score": 2
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 0.2 - 15 km N of Warner Springs, CA",
+      "signal": "M 1.5 - 9 km NNE of Indio, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348231",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348399",
       "score": 1
     }
   ],
   "items": [
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Xcode 27 runner image generally available",
+      "summary": "You can now use the generally available Xcode 27 runner image to build and test your Apple applications in GitHub Actions. Previously in public preview, this GitHub-hosted image runs on… The post Xcode 27 runner image ge",
+      "url": "https://github.blog/changelog/2026-10-15-xcode-27-runner-image-generally-available",
+      "published": "2026-10-16T04:36:30+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "制作"
+      ]
+    },
     {
       "source": "arxiv-ai",
       "platform": "論文",
@@ -183,25 +202,6 @@
         "論文",
         "重要",
         "開発",
-        "研究"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Upcoming deprecation of selected GitHub Copilot models in mid-November",
-      "summary": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on November 16th, 2026: Model Deprecation date… The post Upco",
-      "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
-      "published": "2026-10-15T19:35:13+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
         "研究"
       ]
     },
@@ -263,33 +263,34 @@
       ]
     },
     {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.2 - 15 km N of Warner Springs, CA",
-      "summary": "15 km N of Warner Springs, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348231",
-      "published": "2026-10-16T09:51:38.710000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "AI",
+      "topic": "制作",
       "sourceWeight": 1,
-      "title": "Linus Torvalds on AI-assisted kernel contributions",
+      "title": "Making a 88x31 button book using ImageMagick",
       "summary": "Comments",
-      "url": "https://lore.kernel.org/lkml/CAHk-=whTs09_ozN+e09GU68N1wPP56MUzDjrg9rnKxQUa0A_4Q@mail.gmail.com/",
-      "published": "2026-10-16T02:50:33+00:00",
+      "url": "https://k.sosnierz.me/08-11-24/",
+      "published": "2026-10-16T11:21:12+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "制作"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.5 - 9 km NNE of Indio, CA",
+      "summary": "9 km NNE of Indio, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348399",
+      "published": "2026-10-16T21:00:05.960000+00:00",
       "score": 1,
       "tags": [
-        "技術"
+        "災害"
       ]
     },
     {
@@ -303,7 +304,7 @@
       "title": "An Update On Independent Evaluators",
       "summary": "公式サイトマップで更新を検知。内容は公式ページで確認。",
       "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
-      "published": "2026-10-15T23:35:48.000Z",
+      "published": "2026-10-16T20:30:25.000Z",
       "score": 1,
       "tags": [
         "AI"
@@ -315,17 +316,35 @@
       "label": "GitHub更新",
       "genre": "開発",
       "provider": null,
-      "topic": "その他",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "HydraFusion updates and new Max option",
-      "summary": "HydraFusion has an updated model pool, improved orchestration workflows, and introduces HydraFusion Max. Both HydraFusion and HydraFusion Max are available across VS Code, the GitHub Copilot app, and GitHub Copilot… The ",
-      "url": "https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option",
-      "published": "2026-10-14T20:01:35+00:00",
+      "title": "Upcoming deprecation of selected GitHub Copilot models in mid-November",
+      "summary": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on November 16th, 2026: Model Deprecation date… The post Upco",
+      "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
+      "published": "2026-10-15T19:35:13+00:00",
       "score": 4,
       "tags": [
         "開発",
         "重要",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Open source license compliance generally available",
+      "summary": "Enterprises can now manage their dependencies’ licenses at scale with sophisticated, ruleset-based checks that enforce a centralized policy. Open source license compliance is now generally available for GitHub Enterprise",
+      "url": "https://github.blog/changelog/2026-10-16-open-source-license-compliance-generally-available",
+      "published": "2026-10-16T14:00:32+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -431,8 +450,8 @@
       "provider": null,
       "topic": "技術",
       "sourceWeight": 1,
-      "title": "Multi-repo support and other improvements for GitHub Copilot in Slack and Microsoft Teams",
-      "summary": "Multi-repo support in Slack and Microsoft Teams GitHub Copilot in Slack and Microsoft Teams now supports working across multiple repositories in a single conversation. Whether you’re tracking pull requests, investigating",
+      "title": "Multi-repo support and other improvements for GitHub in Slack and Teams",
+      "summary": "GitHub Copilot in Slack and Teams now supports working across multiple repositories in a single conversation. Whether you’re tracking pull requests, investigating issues, or catching up on project activity, you… The post",
       "url": "https://github.blog/changelog/2026-10-15-copilot-in-slack-and-teams-adds-model-and-repository-updates",
       "published": "2026-10-16T02:16:35+00:00",
       "score": 3,
@@ -550,24 +569,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "GitHub Actions workflow lockfiles in public preview",
-      "summary": "GitHub Actions workflow dependency lockfiles are now in public preview for GitHub Enterprise Cloud, GitHub Enterprise Cloud with data residency, Team, and Free plans. Tags and branches can move after… The post GitHub Act",
-      "url": "https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview",
-      "published": "2026-10-14T13:49:15+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "google-gemini",
       "platform": "AI",
       "label": "Gemini公式",
@@ -664,6 +665,24 @@
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+      "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
+      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+      "published": "2026-10-16T00:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
       "topic": "その他",
       "sourceWeight": 1,
       "title": "Sullivan & Cromwell brings legal expertise into agreement review",
@@ -729,72 +748,54 @@
         "AI",
         "重要"
       ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "The EU’s next chapter in AI is agentic",
-      "summary": "New analysis shows how agentic AI adoption is growing across EU enterprises and small businesses—and where deeper use could unlock more value.",
-      "url": "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
-      "published": "2026-10-14T00:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-16T09:58:01.399086+00:00",
-      "lastAttemptAt": "2026-10-16T09:58:01.399086+00:00",
+      "lastSuccessAt": "2026-10-16T21:06:35.837773+00:00",
+      "lastAttemptAt": "2026-10-16T21:06:35.837773+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-16T09:58:01.399086+00:00",
-      "lastAttemptAt": "2026-10-16T09:58:01.399086+00:00",
+      "lastSuccessAt": "2026-10-16T21:06:35.837773+00:00",
+      "lastAttemptAt": "2026-10-16T21:06:35.837773+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-16T09:58:01.399086+00:00",
-      "lastAttemptAt": "2026-10-16T09:58:01.399086+00:00",
+      "lastSuccessAt": "2026-10-16T21:06:35.837773+00:00",
+      "lastAttemptAt": "2026-10-16T21:06:35.837773+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-16T09:58:01.399086+00:00",
-      "lastAttemptAt": "2026-10-16T09:58:01.399086+00:00",
+      "lastSuccessAt": "2026-10-16T21:06:35.837773+00:00",
+      "lastAttemptAt": "2026-10-16T21:06:35.837773+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-16T09:58:01.399086+00:00",
-      "lastAttemptAt": "2026-10-16T09:58:01.399086+00:00",
+      "lastSuccessAt": "2026-10-16T21:06:35.837773+00:00",
+      "lastAttemptAt": "2026-10-16T21:06:35.837773+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-16T09:58:01.399086+00:00",
-      "lastAttemptAt": "2026-10-16T09:58:01.399086+00:00",
+      "lastSuccessAt": "2026-10-16T21:06:35.837773+00:00",
+      "lastAttemptAt": "2026-10-16T21:06:35.837773+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -809,8 +810,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-16T09:58:01.399086+00:00",
-      "lastAttemptAt": "2026-10-16T09:58:01.399086+00:00",
+      "lastSuccessAt": "2026-10-16T21:06:35.837773+00:00",
+      "lastAttemptAt": "2026-10-16T21:06:35.837773+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

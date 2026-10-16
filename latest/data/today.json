@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-16T13:58:01.340987+00:00",
-  "sourceUpdatedAt": "2026-10-16T11:08:01.344456+00:00",
+  "updatedAt": "2026-10-16T21:07:14.971995+00:00",
+  "sourceUpdatedAt": "2026-10-16T21:06:35.837773+00:00",
   "status": "fresh",
   "mode": "today-rule-based",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -12,12 +12,25 @@
   },
   "items": [
     {
-      "id": "arxiv-ai:0",
+      "id": "github-changelog:0",
+      "genre": "開発",
+      "title": "Xcode 27 runner image generally available",
+      "reason": "開発の新着で、設定した重要語と一致",
+      "publishedAt": "2026-10-16T04:36:30+00:00",
+      "observedAt": "2026-10-16T21:06:35.837773+00:00",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-15-xcode-27-runner-image-generally-available",
+      "score": 4,
+      "stale": false,
+      "processing": "rule-based"
+    },
+    {
+      "id": "arxiv-ai:1",
       "genre": "論文",
       "title": "Evaluating Model Capabilities After Benchmark Saturation",
       "reason": "論文の新着で、設定した重要語と一致",
       "publishedAt": "2026-10-16T04:00:00+00:00",
-      "observedAt": "2026-10-16T11:08:01.344456+00:00",
+      "observedAt": "2026-10-16T21:06:35.837773+00:00",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2610.20667",
       "score": 4,
@@ -25,12 +38,12 @@
       "processing": "rule-based"
     },
     {
-      "id": "github-changelog:1",
+      "id": "github-changelog:8",
       "genre": "開発",
       "title": "Upcoming deprecation of selected GitHub Copilot models in mid-November",
       "reason": "開発の新着で、設定した重要語と一致",
       "publishedAt": "2026-10-15T19:35:13+00:00",
-      "observedAt": "2026-10-16T11:08:01.344456+00:00",
+      "observedAt": "2026-10-16T21:06:35.837773+00:00",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
       "score": 4,
@@ -38,12 +51,12 @@
       "processing": "rule-based"
     },
     {
-      "id": "arxiv-ai:9",
+      "id": "arxiv-ai:10",
       "genre": "論文",
       "title": "The World Won't Wait: Evaluating and Teaching Agents Under a Live Clock",
       "reason": "論文の新着で、設定した重要語と一致",
       "publishedAt": "2026-10-16T04:00:00+00:00",
-      "observedAt": "2026-10-16T11:08:01.344456+00:00",
+      "observedAt": "2026-10-16T21:06:35.837773+00:00",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2610.20665",
       "score": 3,
@@ -51,28 +64,15 @@
       "processing": "rule-based"
     },
     {
-      "id": "github-changelog:14",
-      "genre": "開発",
-      "title": "Multi-repo support and other improvements for GitHub Copilot in Slack and Microsoft Teams",
-      "reason": "開発の新着で、設定した重要語と一致",
-      "publishedAt": "2026-10-16T02:16:35+00:00",
-      "observedAt": "2026-10-16T11:08:01.344456+00:00",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-15-copilot-in-slack-and-teams-adds-model-and-repository-updates",
-      "score": 3,
-      "stale": false,
-      "processing": "rule-based"
-    },
-    {
-      "id": "lobsters:6",
+      "id": "lobsters:5",
       "genre": "技術",
-      "title": "Linus Torvalds on AI-assisted kernel contributions",
+      "title": "Making a 88x31 button book using ImageMagick",
       "reason": "技術の新着を確認",
-      "publishedAt": "2026-10-16T02:50:33+00:00",
-      "observedAt": "2026-10-16T11:08:01.344456+00:00",
+      "publishedAt": "2026-10-16T11:21:12+00:00",
+      "observedAt": "2026-10-16T21:06:35.837773+00:00",
       "source": "技術RSS",
-      "url": "https://lore.kernel.org/lkml/CAHk-=whTs09_ozN+e09GU68N1wPP56MUzDjrg9rnKxQUa0A_4Q@mail.gmail.com/",
-      "score": 1,
+      "url": "https://k.sosnierz.me/08-11-24/",
+      "score": 2,
       "stale": false,
       "processing": "rule-based"
     }
