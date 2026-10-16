@@ -1,11 +1,11 @@
 # CODEXGATE News Brief
 
-- 更新: 2026-10-16T03:38:03.882147+00:00
+- 更新: 2026-10-16T03:48:02.634377+00:00
 - 取得: GitHub Actions/Python
 - Codex: 0%想定（自動実行時）
 - 方針: RSS/API取得→分類→採決メモ化。ブックマーク集ではない。
 
-- [AI] AI/Codex運用の変化を確認 / Amp puts AI agents to work beyond code with OpenAI models / Gemini 4 A
 - [開発] CG開発・GitHub運用へ反映候補 / Upcoming deprecation of selected GitHub Copilot models in mid-November
-- [災害] 更新あり。必要時だけ確認 / M 0.9 - 9 km WNW of Anza, CA / M 1.7 - 20 km SE of Pāhala, Hawaii / M 
-- [技術] 更新あり。必要時だけ確認 / My C23 Conventions
+- [AI] AI/Codex運用の変化を確認 / Amp puts AI agents to work beyond code with OpenAI models / Gemini 4 A
+- [災害] 更新あり。必要時だけ確認 / M 1.6 - 17 km WSW of Johannesburg, CA / M 3.3 - 8 km NE of Gazelle, CA
+- [技術] 更新あり。必要時だけ確認 / Announcing Rust 1.99.1

@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-16T03:38:03.882147+00:00",
-  "lastSuccessAt": "2026-10-15T21:45:00.538643+00:00",
+  "updatedAt": "2026-10-16T03:48:02.634377+00:00",
+  "lastSuccessAt": "2026-10-16T03:48:02.634377+00:00",
   "status": "stale",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -125,35 +125,35 @@
   },
   "contexts": [
     {
-      "genre": "AI",
-      "count": 13,
-      "signal": "Amp puts AI agents to work beyond code with OpenAI models / Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems",
-      "decision": "AI/Codex運用の変化を確認",
-      "topUrl": "https://openai.com/index/amp-beyond-coding",
-      "score": 3
-    },
-    {
       "genre": "開発",
-      "count": 12,
+      "count": 13,
       "signal": "Upcoming deprecation of selected GitHub Copilot models in mid-November / HydraFusion updates and new Max option / GitHub’s model for secret detection: Finding more secrets with les",
       "decision": "CG開発・GitHub運用へ反映候補",
       "topUrl": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
       "score": 4
     },
     {
+      "genre": "AI",
+      "count": 12,
+      "signal": "Amp puts AI agents to work beyond code with OpenAI models / Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems",
+      "decision": "AI/Codex運用の変化を確認",
+      "topUrl": "https://openai.com/index/amp-beyond-coding",
+      "score": 3
+    },
+    {
       "genre": "災害",
       "count": 6,
-      "signal": "M 0.9 - 9 km WNW of Anza, CA / M 1.7 - 20 km SE of Pāhala, Hawaii / M 3.4 - 65 km NE of Punta Cana, Dominican Republic",
+      "signal": "M 1.6 - 17 km WSW of Johannesburg, CA / M 3.3 - 8 km NE of Gazelle, CA / M 1.2 - 15 km W of Johannesburg, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348079",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348199",
       "score": 1
     },
     {
       "genre": "技術",
       "count": 1,
-      "signal": "My C23 Conventions",
+      "signal": "Announcing Rust 1.99.1",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://abner.page/post/c23-conventions-1/",
+      "topUrl": "https://blog.rust-lang.org/2026/10/15/Rust-1.99.1/",
       "score": 1
     }
   ],
@@ -194,8 +194,7 @@
         "開発",
         "重要",
         "研究"
-      ],
-      "stale": true
+      ]
     },
     {
       "source": "openai",
@@ -239,10 +238,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.9 - 9 km WNW of Anza, CA",
-      "summary": "9 km WNW of Anza, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348079",
-      "published": "2026-10-15T21:33:49.580000+00:00",
+      "title": "M 1.6 - 17 km WSW of Johannesburg, CA",
+      "summary": "17 km WSW of Johannesburg, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348199",
+      "published": "2026-10-16T03:45:03.630000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -259,7 +258,7 @@
       "title": "An Update On Independent Evaluators",
       "summary": "公式サイトマップで更新を検知。内容は公式ページで確認。",
       "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
-      "published": "2026-10-15T18:25:08.000Z",
+      "published": "2026-10-15T23:35:48.000Z",
       "score": 1,
       "tags": [
         "AI"
@@ -273,10 +272,10 @@
       "provider": null,
       "topic": "その他",
       "sourceWeight": 1,
-      "title": "My C23 Conventions",
+      "title": "Announcing Rust 1.99.1",
       "summary": "Comments",
-      "url": "https://abner.page/post/c23-conventions-1/",
-      "published": "2026-10-15T15:32:15+00:00",
+      "url": "https://blog.rust-lang.org/2026/10/15/Rust-1.99.1/",
+      "published": "2026-10-15T23:03:00+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -302,24 +301,22 @@
       ]
     },
     {
-      "source": "github-blog",
+      "source": "github-changelog",
       "platform": "開発",
-      "label": "GitHub",
+      "label": "GitHub更新",
       "genre": "開発",
       "provider": null,
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "ReviewBench: An open benchmark for AI code review",
-      "summary": "We’re launching ReviewBench, a benchmark for code review agents built on representative GitHub pull requests, multi-source ground truth, calibrated evaluation, and production-aligned metrics. The post ReviewBench: An ope",
-      "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/",
-      "published": "2026-10-05T15:59:40+00:00",
-      "score": 4,
+      "title": "Multi-repo support and other improvements for GitHub Copilot in Slack and Microsoft Teams",
+      "summary": "Multi-repo support in Slack and Microsoft Teams GitHub Copilot in Slack and Microsoft Teams now supports working across multiple repositories in a single conversation. Whether you’re tracking pull requests, investigating",
+      "url": "https://github.blog/changelog/2026-10-15-copilot-in-slack-and-teams-adds-model-and-repository-updates",
+      "published": "2026-10-16T02:16:35+00:00",
+      "score": 3,
       "tags": [
         "開発",
-        "重要",
-        "研究"
-      ],
-      "stale": true
+        "重要"
+      ]
     },
     {
       "source": "github-changelog",
@@ -333,6 +330,42 @@
       "summary": "You can now download a CSV report of your GitHub Code Quality license usage to reconcile your license count with your own records. The report includes: Each active committer who… The post Download GitHub Code Quality lic",
       "url": "https://github.blog/changelog/2026-10-15-download-github-code-quality-license-usage-as-a-csv",
       "published": "2026-10-15T20:11:26+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "The next developer interface is ambient intelligence",
+      "summary": "AI, agents, voice, and physical controls are shifting software development from operating tools to expressing intent—and helping developers stay focused on building. The post The next developer interface is ambient intel",
+      "url": "https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/",
+      "published": "2026-10-15T19:39:27+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Staying Evergreen: How we automated secure access and repo hygiene in a shared org",
+      "summary": "Put native GitHub features to work to review outside collaborator access and archive stale repositories. The post Staying Evergreen: How we automated secure access and repo hygiene in a shared org appeared first on The G",
+      "url": "https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org/",
+      "published": "2026-10-15T18:00:00+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -358,17 +391,35 @@
       ]
     },
     {
-      "source": "github-changelog",
+      "source": "github-blog",
       "platform": "開発",
-      "label": "GitHub更新",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "GitHub availability report: September 2026",
+      "summary": "In September, we experienced two incidents that resulted in degraded performance across GitHub services. The post GitHub availability report: September 2026 appeared first on The GitHub Blog .",
+      "url": "https://github.blog/news-insights/company-news/github-availability-report-september-2026/",
+      "published": "2026-10-14T20:01:35+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
       "genre": "開発",
       "provider": null,
       "topic": "技術",
       "sourceWeight": 1,
-      "title": "GitHub Actions workflow lockfiles in public preview",
-      "summary": "GitHub Actions workflow dependency lockfiles are now in public preview for GitHub Enterprise Cloud, GitHub Enterprise Cloud with data residency, Team, and Free plans. Tags and branches can move after… The post GitHub Act",
-      "url": "https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview",
-      "published": "2026-10-14T13:49:15+00:00",
+      "title": "From 2,500 requests to 24: Rebuilding star history without the stargazers",
+      "summary": "Our new repo star history API now provides trends without returning individual identities or requiring unbounded database work. These are the engineering tradeoffs we made. The post From 2,500 requests to 24: Rebuilding ",
+      "url": "https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/",
+      "published": "2026-10-14T19:11:33+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -383,10 +434,10 @@
       "provider": null,
       "topic": "技術",
       "sourceWeight": 1,
-      "title": "GitHub App improvements for least privilege and management",
-      "summary": "We’re releasing several GitHub Apps improvements today that help developers move off of classic PATs, improve GitHub App management, and request fewer sensitive permissions. We’ve also made it easier for… The post GitHub",
-      "url": "https://github.blog/changelog/2026-10-13-github-app-improvements-for-least-privilege-and-management",
-      "published": "2026-10-13T23:17:55+00:00",
+      "title": "GitHub Actions workflow lockfiles in public preview",
+      "summary": "GitHub Actions workflow dependency lockfiles are now in public preview for GitHub Enterprise Cloud, GitHub Enterprise Cloud with data residency, Team, and Free plans. Tags and branches can move after… The post GitHub Act",
+      "url": "https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview",
+      "published": "2026-10-14T13:49:15+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -428,26 +479,6 @@
       "tags": [
         "開発",
         "重要"
-      ],
-      "stale": true
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
-      "summary": "Using GPT-6 Astra in Codex, Asana made its browser agent 76x cheaper and 5x faster in tests to offer customers more capable models.",
-      "url": "https://openai.com/index/asana-browser-agent",
-      "published": "2026-10-09T07:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "研究"
       ]
     },
     {
@@ -466,46 +497,25 @@
       "tags": [
         "開発",
         "重要"
-      ],
-      "stale": true
+      ]
     },
     {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "その他",
       "sourceWeight": 1,
-      "title": "Building Git infrastructure for agent-scale development",
-      "summary": "We're rebuilding GitHub's Git infrastructure while GitHub keeps running, creating a foundation for agent-scale software development. The post Building Git infrastructure for agent-scale development appeared first on The ",
-      "url": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/",
-      "published": "2026-10-06T20:57:56+00:00",
-      "score": 3,
+      "title": "Sullivan & Cromwell brings legal expertise into agreement review",
+      "summary": "In collaboration with OpenAI, Sullivan & Cromwell developed Agreement Analyzer, an AI tool for identifying issues in a draft agreement.",
+      "url": "https://openai.com/index/sullivan-cromwell",
+      "published": "2026-10-15T00:00:00+00:00",
+      "score": 2,
       "tags": [
-        "開発",
+        "AI",
         "重要"
-      ],
-      "stale": true
-    },
-    {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "AI is changing developer work. Here are three skills to strengthen.",
-      "summary": "Learn to direct AI agents, critically review their output, and keep technical judgment at the center of your workflow. The post AI is changing developer work. Here are three skills to strengthen. appeared first on The Gi",
-      "url": "https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/",
-      "published": "2026-10-02T15:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ],
-      "stale": true
+      ]
     },
     {
       "source": "openai",
@@ -616,24 +626,6 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Higgsfield takes AI video from 1 minute to over 10",
-      "summary": "Higgsfield brings creators longer videos with GPT-6 Astra, precise visuals with GPT-Image-2.5, and a path to voice filmmaking with GPT-Live.",
-      "url": "https://openai.com/index/higgsfield-longer-videos-voice",
-      "published": "2026-10-13T12:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "制作"
-      ]
-    },
-    {
       "source": "google-gemini",
       "platform": "AI",
       "label": "Gemini公式",
@@ -655,10 +647,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.7 - 20 km SE of Pāhala, Hawaii",
-      "summary": "20 km SE of Pāhala, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75057162",
-      "published": "2026-10-15T21:31:42.250000+00:00",
+      "title": "M 3.3 - 8 km NE of Gazelle, CA",
+      "summary": "8 km NE of Gazelle, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75450351",
+      "published": "2026-10-16T03:44:27.190000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -668,10 +660,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 3.4 - 65 km NE of Punta Cana, Dominican Republic",
-      "summary": "65 km NE of Punta Cana, Dominican Republic",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71536828",
-      "published": "2026-10-15T21:12:28.970000+00:00",
+      "title": "M 1.2 - 15 km W of Johannesburg, CA",
+      "summary": "15 km W of Johannesburg, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348191",
+      "published": "2026-10-16T03:43:58.350000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -681,10 +673,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 4.5 - 44 km SSE of Champerico, Guatemala",
-      "summary": "44 km SSE of Champerico, Guatemala",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2kz",
-      "published": "2026-10-15T20:39:25.755000+00:00",
+      "title": "M 6.9 - 76 km NE of Ozernovskiy, Russia",
+      "summary": "76 km NE of Ozernovskiy, Russia",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2mq",
+      "published": "2026-10-16T03:35:32.661000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -694,10 +686,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.8 - 12 km S of Honaunau-Napoopoo, Hawaii",
-      "summary": "12 km S of Honaunau-Napoopoo, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75057112",
-      "published": "2026-10-15T20:29:39.640000+00:00",
+      "title": "M 1.7 - 20 km SW of New Idria, CA",
+      "summary": "20 km SW of New Idria, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75450336",
+      "published": "2026-10-16T03:08:50.960000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -707,10 +699,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 4.3 - 11 km SE of Huara, Chile",
-      "summary": "11 km SE of Huara, Chile",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2kw",
-      "published": "2026-10-15T20:25:20.509000+00:00",
+      "title": "M 0.9 - 10 km NW of The Geysers, CA",
+      "summary": "10 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75450331",
+      "published": "2026-10-16T03:03:17.880000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -721,48 +713,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-15T21:45:00.538643+00:00",
-      "lastAttemptAt": "2026-10-15T21:45:00.538643+00:00",
+      "lastSuccessAt": "2026-10-16T03:48:02.634377+00:00",
+      "lastAttemptAt": "2026-10-16T03:48:02.634377+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-15T21:45:00.538643+00:00",
-      "lastAttemptAt": "2026-10-15T21:45:00.538643+00:00",
+      "lastSuccessAt": "2026-10-16T03:48:02.634377+00:00",
+      "lastAttemptAt": "2026-10-16T03:48:02.634377+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-15T21:45:00.538643+00:00",
-      "lastAttemptAt": "2026-10-15T21:45:00.538643+00:00",
+      "lastSuccessAt": "2026-10-16T03:48:02.634377+00:00",
+      "lastAttemptAt": "2026-10-16T03:48:02.634377+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
-      "status": "stale",
-      "lastSuccessAt": "2026-10-14T10:58:03.479691+00:00",
-      "lastAttemptAt": "2026-10-15T21:45:00.538643+00:00",
+      "status": "fresh",
+      "lastSuccessAt": "2026-10-16T03:48:02.634377+00:00",
+      "lastAttemptAt": "2026-10-16T03:48:02.634377+00:00",
       "retryAfterAt": null,
-      "errorCode": "FetchPolicyError"
+      "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-15T21:45:00.538643+00:00",
-      "lastAttemptAt": "2026-10-15T21:45:00.538643+00:00",
+      "lastSuccessAt": "2026-10-16T03:48:02.634377+00:00",
+      "lastAttemptAt": "2026-10-16T03:48:02.634377+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-15T21:45:00.538643+00:00",
-      "lastAttemptAt": "2026-10-15T21:45:00.538643+00:00",
+      "lastSuccessAt": "2026-10-16T03:48:02.634377+00:00",
+      "lastAttemptAt": "2026-10-16T03:48:02.634377+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -777,8 +769,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-15T21:45:00.538643+00:00",
-      "lastAttemptAt": "2026-10-15T21:45:00.538643+00:00",
+      "lastSuccessAt": "2026-10-16T03:48:02.634377+00:00",
+      "lastAttemptAt": "2026-10-16T03:48:02.634377+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
