@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-10-15T23:58:07.300245+00:00",
+  "updatedAt": "2026-10-16T00:08:10.131350+00:00",
   "sourceUpdatedAt": "2026-10-15T21:45:00.538643+00:00",
   "status": "stale",
   "mode": "today-rule-based",
   "codexTokenUse": "0 when run by GitHub Actions",
-  "count": 5,
+  "count": 4,
   "message": "最大5件をルールで選択",
   "limits": {
     "maxItems": 5,
@@ -38,28 +38,15 @@
       "processing": "rule-based"
     },
     {
-      "id": "openai:2",
+      "id": "anthropic-claude:5",
       "genre": "AI",
-      "title": "Amp puts AI agents to work beyond code with OpenAI models",
-      "reason": "AIの新着で、設定した重要語と一致",
-      "publishedAt": "2026-10-14T12:00:00+00:00",
-      "observedAt": "2026-10-15T21:45:00.538643+00:00",
-      "source": "ChatGPT / OpenAI公式",
-      "url": "https://openai.com/index/amp-beyond-coding",
-      "score": 3,
-      "stale": true,
-      "processing": "rule-based"
-    },
-    {
-      "id": "openai:19",
-      "genre": "AI",
-      "title": "SentinelOne cuts malware analysis from weeks to hours",
+      "title": "An Update On Independent Evaluators",
       "reason": "AIの新着を確認",
-      "publishedAt": "2026-10-14T12:00:00+00:00",
+      "publishedAt": "2026-10-15T18:25:08.000Z",
       "observedAt": "2026-10-15T21:45:00.538643+00:00",
-      "source": "ChatGPT / OpenAI公式",
-      "url": "https://openai.com/index/sentinelone",
-      "score": 2,
+      "source": "Claude / Anthropic公式",
+      "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+      "score": 1,
       "stale": true,
       "processing": "rule-based"
     },
