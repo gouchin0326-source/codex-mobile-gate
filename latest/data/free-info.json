@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-16T10:58:07.373114+00:00",
-  "lastSuccessAt": "2026-10-16T09:58:01.399086+00:00",
-  "status": "stale",
+  "updatedAt": "2026-10-16T11:08:01.344456+00:00",
+  "lastSuccessAt": "2026-10-16T11:08:01.344456+00:00",
+  "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "freeMeaning": "Public RSS/API data is fetched by program, categorized, scored, and summarized into local static JSON. It is not a bookmark list and does not scrape ordinary web pages.",
@@ -134,19 +134,19 @@
     },
     {
       "genre": "AI",
-      "count": 12,
+      "count": 9,
       "signal": "Amp puts AI agents to work beyond code with OpenAI models / Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/amp-beyond-coding",
       "score": 3
     },
     {
-      "genre": "災害",
-      "count": 6,
-      "signal": "M 0.2 - 15 km N of Warner Springs, CA / M 1.9 - 39 km WNW of Petersville, Alaska / M 4.9 - 31 km ENE of Kinablangan, Philippines",
+      "genre": "論文",
+      "count": 8,
+      "signal": "Evaluating Model Capabilities After Benchmark Saturation / The World Won't Wait: Evaluating and Teaching Agents Under a Live Clock / AlphaDiana: A Measurement System for Agents in ",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348231",
-      "score": 1
+      "topUrl": "https://arxiv.org/abs/2610.20667",
+      "score": 4
     },
     {
       "genre": "技術",
@@ -155,9 +155,37 @@
       "decision": "更新あり。必要時だけ確認",
       "topUrl": "https://lore.kernel.org/lkml/CAHk-=whTs09_ozN+e09GU68N1wPP56MUzDjrg9rnKxQUa0A_4Q@mail.gmail.com/",
       "score": 1
+    },
+    {
+      "genre": "災害",
+      "count": 1,
+      "signal": "M 0.2 - 15 km N of Warner Springs, CA",
+      "decision": "更新あり。必要時だけ確認",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348231",
+      "score": 1
     }
   ],
   "items": [
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Evaluating Model Capabilities After Benchmark Saturation",
+      "summary": "arXiv:2610.20667v1 Announce Type: new Abstract: Rapid advances in AI capabilities are causing benchmarks to saturate. Once several models approach perfect scores, a benchmark loses its power to differentiate between them",
+      "url": "https://arxiv.org/abs/2610.20667",
+      "published": "2026-10-16T04:00:00+00:00",
+      "score": 4,
+      "tags": [
+        "論文",
+        "重要",
+        "開発",
+        "研究"
+      ]
+    },
     {
       "source": "github-changelog",
       "platform": "開発",
@@ -296,6 +324,101 @@
       "score": 4,
       "tags": [
         "開発",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "The World Won't Wait: Evaluating and Teaching Agents Under a Live Clock",
+      "summary": "arXiv:2610.20665v1 Announce Type: new Abstract: Large language model (LLM) agents can solve complex interactive tasks, yet reasoning and tool calls take time. In continuously changing environments, an otherwise correct a",
+      "url": "https://arxiv.org/abs/2610.20665",
+      "published": "2026-10-16T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "AlphaDiana: A Measurement System for Agents in Verifiable Reasoning Tasks",
+      "summary": "arXiv:2610.20675v1 Announce Type: new Abstract: Agents pair reasoning models with harnesses that organize model calls, execute tools, load skill instructions, and retain history in memory. Understanding agent performance",
+      "url": "https://arxiv.org/abs/2610.20675",
+      "published": "2026-10-16T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "When Correctness Feedback Erases Evidence: Phase-Separated Completeness Auditing in Verus",
+      "summary": "arXiv:2610.20676v1 Announce Type: new Abstract: Correctness feedback suppresses the very evidence that specification-completeness auditing is designed to uncover: programs that satisfy a written contract but violate inte",
+      "url": "https://arxiv.org/abs/2610.20676",
+      "published": "2026-10-16T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "制作",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Counterfactual Neighborhood Risk Fields: Evidence-Grounded Selective Safety for Vision-Language Models",
+      "summary": "arXiv:2610.20679v1 Announce Type: new Abstract: Representation-based safety defenses for vision-language models (VLMs) often learn to separate harmful from benign inputs, but separation alone does not establish what a ri",
+      "url": "https://arxiv.org/abs/2610.20679",
+      "published": "2026-10-16T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "IneqAgent: Agentic Inequality Proving in Lean with Symbolic Computation",
+      "summary": "arXiv:2610.20681v1 Announce Type: new Abstract: Formal inequality proving requires mathematical reasoning and exact computation, often connected through intermediate lemmas and goal reformulations. We introduce IneqAgent",
+      "url": "https://arxiv.org/abs/2610.20681",
+      "published": "2026-10-16T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
         "重要",
         "研究"
       ]
@@ -500,6 +623,42 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Value-Informed Schedule Trimming for Accelerated Sequential Monte Carlo Guidance in Discrete Diffusion",
+      "summary": "arXiv:2610.20669v1 Announce Type: new Abstract: Reward-guided discrete diffusion enables test-time alignment with downstream objectives, but applying Sequential Monte Carlo (SMC) guidance at every denoising step is compu",
+      "url": "https://arxiv.org/abs/2610.20669",
+      "published": "2026-10-16T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "L2G-SR: Learning to Guide LLM-based Symbolic Regression",
+      "summary": "arXiv:2610.20685v1 Announce Type: new Abstract: Symbolic regression searches for an equation that explains observed data. Numerical error is commonly used to guide the search, but it alone can favor an accurate surrogate",
+      "url": "https://arxiv.org/abs/2610.20685",
+      "published": "2026-10-16T04:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "論文",
+        "研究"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -588,125 +747,6 @@
         "AI",
         "重要"
       ]
-    },
-    {
-      "source": "google-gemini",
-      "platform": "AI",
-      "label": "Gemini公式",
-      "genre": "AI",
-      "provider": "gemini",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Developing Gemini 4 Argon responsibly and safely",
-      "summary": "Learn more about our approach to safety and security for Gemini 4 Argon.",
-      "url": "https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/",
-      "published": "2026-10-13T18:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "google-gemini",
-      "platform": "AI",
-      "label": "Gemini公式",
-      "genre": "AI",
-      "provider": "gemini",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Gemini 4 Argon comes to the Gemini app.",
-      "summary": "Gemini 4 Argon brings frontier reasoning and agentic coding to the Google Gemini app. Google AI Pro and Ultra subscribers can now access Gemini 4 Argon.",
-      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/",
-      "published": "2026-10-13T16:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "google-gemini",
-      "platform": "AI",
-      "label": "Gemini公式",
-      "genre": "AI",
-      "provider": "gemini",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Gemini 4 Argon: our next era of frontier intelligence",
-      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
-      "published": "2026-09-30T20:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "研究"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.9 - 39 km WNW of Petersville, Alaska",
-      "summary": "39 km WNW of Petersville, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026umryva",
-      "published": "2026-10-16T09:49:30.945000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 4.9 - 31 km ENE of Kinablangan, Philippines",
-      "summary": "31 km ENE of Kinablangan, Philippines",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2p2",
-      "published": "2026-10-16T09:13:44.909000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.1 - 19 km NE of Perryville, Alaska",
-      "summary": "19 km NE of Perryville, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026umqpvm",
-      "published": "2026-10-16T09:09:36.832000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.8 - 33 km SE of Bodie, CA",
-      "summary": "33 km SE of Bodie, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75450396",
-      "published": "2026-10-16T09:01:00.630000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 2.4 - 4 km WSW of Yucaipa, CA",
-      "summary": "4 km WSW of Yucaipa, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348223",
-      "published": "2026-10-16T08:53:52.500000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
     }
   ],
   "sourceStates": [
@@ -760,11 +800,11 @@
     },
     {
       "id": "arxiv-ai",
-      "status": "unavailable",
-      "lastSuccessAt": "2026-10-14T10:58:03.479691+00:00",
-      "lastAttemptAt": "2026-10-15T11:08:01.031548+00:00",
+      "status": "fresh",
+      "lastSuccessAt": "2026-10-16T11:08:01.344456+00:00",
+      "lastAttemptAt": "2026-10-16T11:08:01.344456+00:00",
       "retryAfterAt": null,
-      "errorCode": "FetchPolicyError"
+      "errorCode": null
     },
     {
       "id": "usgs",
