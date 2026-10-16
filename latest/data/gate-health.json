@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-10-16T05:28:01.557382+00:00",
+  "updatedAt": "2026-10-16T05:38:01.571454+00:00",
   "mode": "operation-zero-gate-health",
   "codexTokenUse": "0 when run by GitHub Actions",
   "level": "warning",
   "lines": [
-    "CG: Actions失敗 1件",
-    "詳細はCG監視を確認"
+    "CG: データ更新に注意",
+    "JSON鮮度/errorを確認"
   ],
   "refresh": {
     "targetMinutes": 15,
-    "lastUpdateAt": "2026-10-16T05:28:01.557382+00:00",
+    "lastUpdateAt": "2026-10-16T05:38:01.571454+00:00",
     "ageMinutes": 0.0,
     "onTime": true,
     "tokenUse": 0
@@ -18,7 +18,7 @@
     {
       "id": "free-info",
       "label": "全体",
-      "updatedAt": "2026-10-16T05:28:01.557382+00:00",
+      "updatedAt": "2026-10-16T05:38:01.571454+00:00",
       "contentUpdatedAt": "2026-10-16T03:48:02.634377+00:00",
       "status": "stale",
       "errors": 0,
@@ -32,27 +32,18 @@
       "status": "stale",
       "errors": 0,
       "count": 24,
-      "ageHours": 1.7
+      "ageHours": 1.8
     },
     {
       "id": "weather-info",
       "label": "天気",
-      "updatedAt": "2026-10-16T05:28:01.557382+00:00",
+      "updatedAt": "2026-10-16T05:38:01.571454+00:00",
       "status": "fresh",
       "errors": 0,
       "count": 1,
       "ageHours": 0.0
     }
   ],
-  "runs": [
-    {
-      "name": "free-info",
-      "status": "completed",
-      "conclusion": "failure",
-      "createdAt": "2026-10-16T04:21:14Z",
-      "updatedAt": "2026-10-16T04:21:27Z",
-      "url": "https://github.com/gouchin0326-source/codex-mobile-gate/actions/runs/38850177897"
-    }
-  ],
+  "runs": [],
   "errors": []
 }
