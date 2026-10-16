@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-16T04:08:01.864258+00:00",
-  "lastSuccessAt": "2026-10-16T04:08:01.864258+00:00",
+  "updatedAt": "2026-10-16T04:18:01.711518+00:00",
+  "lastSuccessAt": "2026-10-16T04:18:01.711518+00:00",
   "status": "fresh",
   "mode": "primary-api-weather-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -185,27 +185,18 @@
       "source": "open-meteo-toyama",
       "label": "富山天気",
       "location": "富山県",
-      "updatedAt": "2026-10-16T03:38:03.882147+00:00",
+      "updatedAt": "2026-10-16T04:18:01.711518+00:00",
       "current": {
-        "time": "2026-10-16T12:30",
+        "time": "2026-10-16T13:15",
         "interval": 900,
-        "temperature_2m": 23.5,
+        "temperature_2m": 23.7,
         "relative_humidity_2m": 56,
-        "apparent_temperature": 23.4,
+        "apparent_temperature": 23.7,
         "precipitation": 0.0,
         "weather_code": 1,
-        "wind_speed_10m": 10.0
+        "wind_speed_10m": 9.5
       },
       "hourly": [
-        {
-          "time": "2026-10-16T13:00",
-          "temp": 23.6,
-          "humidity": 56,
-          "feelsLike": 23.6,
-          "rainProb": 0,
-          "rain": 0.0,
-          "wind": 9.5
-        },
         {
           "time": "2026-10-16T14:00",
           "temp": 23.8,
@@ -412,6 +403,15 @@
           "rainProb": 0,
           "rain": 0.0,
           "wind": 12.3
+        },
+        {
+          "time": "2026-10-17T13:00",
+          "temp": 20.3,
+          "humidity": 57,
+          "feelsLike": 19.7,
+          "rainProb": 0,
+          "rain": 0.0,
+          "wind": 12.3
         }
       ],
       "daily": [
@@ -489,8 +489,8 @@
     {
       "id": "open-meteo-toyama",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-16T03:38:03.882147+00:00",
-      "lastAttemptAt": "2026-10-16T03:38:03.882147+00:00",
+      "lastSuccessAt": "2026-10-16T04:18:01.711518+00:00",
+      "lastAttemptAt": "2026-10-16T04:18:01.711518+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
