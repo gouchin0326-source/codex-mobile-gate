@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-17T02:58:01.431682+00:00",
-  "lastSuccessAt": "2026-10-16T21:06:35.837773+00:00",
+  "updatedAt": "2026-10-17T03:08:01.477081+00:00",
+  "lastSuccessAt": "2026-10-17T03:08:01.477081+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -159,9 +159,9 @@
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.5 - 9 km NNE of Indio, CA",
+      "signal": "M 0.9 - 18 km ESE of Livengood, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348399",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uoamhb",
       "score": 1
     }
   ],
@@ -284,10 +284,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.5 - 9 km NNE of Indio, CA",
-      "summary": "9 km NNE of Indio, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348399",
-      "published": "2026-10-16T21:00:05.960000+00:00",
+      "title": "M 0.9 - 18 km ESE of Livengood, Alaska",
+      "summary": "18 km ESE of Livengood, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uoamhb",
+      "published": "2026-10-17T03:04:34.037000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -450,8 +450,8 @@
       "provider": null,
       "topic": "技術",
       "sourceWeight": 1,
-      "title": "Multi-repo support and other improvements for GitHub in Slack and Teams",
-      "summary": "GitHub Copilot in Slack and Teams now supports working across multiple repositories in a single conversation. Whether you’re tracking pull requests, investigating issues, or catching up on project activity, you… The post",
+      "title": "Multi-repository support and other improvements for GitHub in Slack and Teams",
+      "summary": "@GitHub in Slack and Teams now supports working across multiple repositories in a single conversation. Whether you’re creating issues, opening pull requests, or investigating bugs, you can work across repositories… The p",
       "url": "https://github.blog/changelog/2026-10-15-copilot-in-slack-and-teams-adds-model-and-repository-updates",
       "published": "2026-10-16T02:16:35+00:00",
       "score": 3,
@@ -732,17 +732,17 @@
       ]
     },
     {
-      "source": "openai",
+      "source": "google-gemini",
       "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
+      "label": "Gemini公式",
       "genre": "AI",
-      "provider": "chatgpt",
+      "provider": "gemini",
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "How Block is building AI-powered security with OpenAI technology",
-      "summary": "Block is building AI-powered security with OpenAI. Its security team investigates threats faster and proposes patches in minutes.",
-      "url": "https://openai.com/index/block-ai-powered-security",
-      "published": "2026-10-14T07:00:00+00:00",
+      "title": "Developing Gemini 4 Argon responsibly and safely",
+      "summary": "Learn more about our approach to safety and security for Gemini 4 Argon.",
+      "url": "https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/",
+      "published": "2026-10-13T18:00:00+00:00",
       "score": 2,
       "tags": [
         "AI",
@@ -754,48 +754,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-16T21:06:35.837773+00:00",
-      "lastAttemptAt": "2026-10-16T21:06:35.837773+00:00",
+      "lastSuccessAt": "2026-10-17T03:08:01.477081+00:00",
+      "lastAttemptAt": "2026-10-17T03:08:01.477081+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-16T21:06:35.837773+00:00",
-      "lastAttemptAt": "2026-10-16T21:06:35.837773+00:00",
+      "lastSuccessAt": "2026-10-17T03:08:01.477081+00:00",
+      "lastAttemptAt": "2026-10-17T03:08:01.477081+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-16T21:06:35.837773+00:00",
-      "lastAttemptAt": "2026-10-16T21:06:35.837773+00:00",
+      "lastSuccessAt": "2026-10-17T03:08:01.477081+00:00",
+      "lastAttemptAt": "2026-10-17T03:08:01.477081+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-16T21:06:35.837773+00:00",
-      "lastAttemptAt": "2026-10-16T21:06:35.837773+00:00",
+      "lastSuccessAt": "2026-10-17T03:08:01.477081+00:00",
+      "lastAttemptAt": "2026-10-17T03:08:01.477081+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-16T21:06:35.837773+00:00",
-      "lastAttemptAt": "2026-10-16T21:06:35.837773+00:00",
+      "lastSuccessAt": "2026-10-17T03:08:01.477081+00:00",
+      "lastAttemptAt": "2026-10-17T03:08:01.477081+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-16T21:06:35.837773+00:00",
-      "lastAttemptAt": "2026-10-16T21:06:35.837773+00:00",
+      "lastSuccessAt": "2026-10-17T03:08:01.477081+00:00",
+      "lastAttemptAt": "2026-10-17T03:08:01.477081+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -810,8 +810,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-16T21:06:35.837773+00:00",
-      "lastAttemptAt": "2026-10-16T21:06:35.837773+00:00",
+      "lastSuccessAt": "2026-10-17T03:08:01.477081+00:00",
+      "lastAttemptAt": "2026-10-17T03:08:01.477081+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
