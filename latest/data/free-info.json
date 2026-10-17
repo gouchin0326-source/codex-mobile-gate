@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-17T09:08:01.170529+00:00",
-  "lastSuccessAt": "2026-10-17T03:08:01.477081+00:00",
+  "updatedAt": "2026-10-17T09:18:00.702121+00:00",
+  "lastSuccessAt": "2026-10-17T09:18:00.702121+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -159,9 +159,9 @@
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 0.9 - 18 km ESE of Livengood, Alaska",
+      "signal": "M 0.7 - 20 km ESE of Little Lake, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uoamhb",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348495",
       "score": 1
     }
   ],
@@ -284,10 +284,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.9 - 18 km ESE of Livengood, Alaska",
-      "summary": "18 km ESE of Livengood, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uoamhb",
-      "published": "2026-10-17T03:04:34.037000+00:00",
+      "title": "M 0.7 - 20 km ESE of Little Lake, CA",
+      "summary": "20 km ESE of Little Lake, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348495",
+      "published": "2026-10-17T09:03:14.810000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -683,6 +683,24 @@
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Benefit Street Partners answers questions faster with Codex",
+      "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
+      "url": "https://openai.com/index/benefit-street-partners",
+      "published": "2026-10-16T00:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
       "topic": "その他",
       "sourceWeight": 1,
       "title": "Sullivan & Cromwell brings legal expertise into agreement review",
@@ -714,24 +732,6 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "How Third Moment Research runs 10,000 agents for 36+ hours",
-      "summary": "With GPT-6 Astra and GPT-6.1 Sol, Codex, and Daybreak for cybersecurity, this AI lab builds agents that focus for days and improve with use.",
-      "url": "https://openai.com/index/third-moment-research",
-      "published": "2026-10-14T07:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
       "source": "google-gemini",
       "platform": "AI",
       "label": "Gemini公式",
@@ -754,48 +754,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-17T03:08:01.477081+00:00",
-      "lastAttemptAt": "2026-10-17T03:08:01.477081+00:00",
+      "lastSuccessAt": "2026-10-17T09:18:00.702121+00:00",
+      "lastAttemptAt": "2026-10-17T09:18:00.702121+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-17T03:08:01.477081+00:00",
-      "lastAttemptAt": "2026-10-17T03:08:01.477081+00:00",
+      "lastSuccessAt": "2026-10-17T09:18:00.702121+00:00",
+      "lastAttemptAt": "2026-10-17T09:18:00.702121+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-17T03:08:01.477081+00:00",
-      "lastAttemptAt": "2026-10-17T03:08:01.477081+00:00",
+      "lastSuccessAt": "2026-10-17T09:18:00.702121+00:00",
+      "lastAttemptAt": "2026-10-17T09:18:00.702121+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-17T03:08:01.477081+00:00",
-      "lastAttemptAt": "2026-10-17T03:08:01.477081+00:00",
+      "lastSuccessAt": "2026-10-17T09:18:00.702121+00:00",
+      "lastAttemptAt": "2026-10-17T09:18:00.702121+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-17T03:08:01.477081+00:00",
-      "lastAttemptAt": "2026-10-17T03:08:01.477081+00:00",
+      "lastSuccessAt": "2026-10-17T09:18:00.702121+00:00",
+      "lastAttemptAt": "2026-10-17T09:18:00.702121+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-17T03:08:01.477081+00:00",
-      "lastAttemptAt": "2026-10-17T03:08:01.477081+00:00",
+      "lastSuccessAt": "2026-10-17T09:18:00.702121+00:00",
+      "lastAttemptAt": "2026-10-17T09:18:00.702121+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -810,8 +810,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-17T03:08:01.477081+00:00",
-      "lastAttemptAt": "2026-10-17T03:08:01.477081+00:00",
+      "lastSuccessAt": "2026-10-17T09:18:00.702121+00:00",
+      "lastAttemptAt": "2026-10-17T09:18:00.702121+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
