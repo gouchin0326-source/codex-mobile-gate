@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-10-17T11:58:05.877397+00:00",
+  "updatedAt": "2026-10-17T12:08:00.962358+00:00",
   "sourceUpdatedAt": "2026-10-17T11:18:00.973784+00:00",
   "status": "fresh",
   "mode": "today-rule-based",
   "codexTokenUse": "0 when run by GitHub Actions",
-  "count": 5,
+  "count": 4,
   "message": "最大5件をルールで選択",
   "limits": {
     "maxItems": 5,
@@ -51,28 +51,15 @@
       "processing": "rule-based"
     },
     {
-      "id": "openai:19",
+      "id": "anthropic-claude:6",
       "genre": "AI",
-      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+      "title": "An Update On Independent Evaluators",
       "reason": "AIの新着を確認",
-      "publishedAt": "2026-10-16T00:00:00+00:00",
+      "publishedAt": "2026-10-16T20:30:25.000Z",
       "observedAt": "2026-10-17T11:18:00.973784+00:00",
-      "source": "ChatGPT / OpenAI公式",
-      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
-      "score": 2,
-      "stale": false,
-      "processing": "rule-based"
-    },
-    {
-      "id": "openai:20",
-      "genre": "AI",
-      "title": "Benefit Street Partners answers questions faster with Codex",
-      "reason": "AIの新着を確認",
-      "publishedAt": "2026-10-16T00:00:00+00:00",
-      "observedAt": "2026-10-17T11:18:00.973784+00:00",
-      "source": "ChatGPT / OpenAI公式",
-      "url": "https://openai.com/index/benefit-street-partners",
-      "score": 2,
+      "source": "Claude / Anthropic公式",
+      "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+      "score": 1,
       "stale": false,
       "processing": "rule-based"
     }
