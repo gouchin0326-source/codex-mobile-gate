@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-17T12:58:00.976086+00:00",
-  "lastSuccessAt": "2026-10-17T11:18:00.973784+00:00",
+  "updatedAt": "2026-10-17T21:57:05.474406+00:00",
+  "lastSuccessAt": "2026-10-17T21:57:05.474406+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -134,26 +134,26 @@
     },
     {
       "genre": "AI",
-      "count": 9,
+      "count": 11,
       "signal": "Amp puts AI agents to work beyond code with OpenAI models / Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/amp-beyond-coding",
       "score": 3
     },
     {
-      "genre": "技術",
-      "count": 1,
-      "signal": "Making a 88x31 button book using ImageMagick",
+      "genre": "災害",
+      "count": 7,
+      "signal": "M 1.9 - 8 km N of Lake Pillsbury, CA / M 2.6 - 18 km WSW of Petrolia, CA / M 0.3 - 2 km NW of The Geysers, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://k.sosnierz.me/08-11-24/",
-      "score": 2
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451216",
+      "score": 1
     },
     {
-      "genre": "災害",
+      "genre": "技術",
       "count": 1,
-      "signal": "M 0.7 - 20 km ESE of Little Lake, CA",
+      "signal": "It took me nine years to hack my Xbox 360",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348495",
+      "topUrl": "https://kennedn.com/blog/posts/glitching/",
       "score": 1
     }
   ],
@@ -235,34 +235,33 @@
       ]
     },
     {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.9 - 8 km N of Lake Pillsbury, CA",
+      "summary": "8 km N of Lake Pillsbury, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451216",
+      "published": "2026-10-17T21:50:00.030000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
       "source": "lobsters",
       "platform": "技術",
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "制作",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Making a 88x31 button book using ImageMagick",
+      "title": "It took me nine years to hack my Xbox 360",
       "summary": "Comments",
-      "url": "https://k.sosnierz.me/08-11-24/",
-      "published": "2026-10-16T11:21:12+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "制作"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.7 - 20 km ESE of Little Lake, CA",
-      "summary": "20 km ESE of Little Lake, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348495",
-      "published": "2026-10-17T09:03:14.810000+00:00",
+      "url": "https://kennedn.com/blog/posts/glitching/",
+      "published": "2026-10-17T16:13:32+00:00",
       "score": 1,
       "tags": [
-        "災害"
+        "技術"
       ]
     },
     {
@@ -506,11 +505,11 @@
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
-      "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
-      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+      "title": "Benefit Street Partners answers questions faster with Codex",
+      "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
+      "url": "https://openai.com/index/benefit-street-partners",
       "published": "2026-10-16T00:00:00+00:00",
       "score": 2,
       "tags": [
@@ -524,11 +523,11 @@
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
-      "topic": "技術",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Benefit Street Partners answers questions faster with Codex",
-      "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
-      "url": "https://openai.com/index/benefit-street-partners",
+      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+      "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
+      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
       "published": "2026-10-16T00:00:00+00:00",
       "score": 2,
       "tags": [
@@ -589,54 +588,168 @@
         "AI",
         "重要"
       ]
+    },
+    {
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Gemini 4 Argon comes to the Gemini app.",
+      "summary": "Gemini 4 Argon brings frontier reasoning and agentic coding to the Google Gemini app. Google AI Pro and Ultra subscribers can now access Gemini 4 Argon.",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/",
+      "published": "2026-10-13T16:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Gemini 4 Argon: our next era of frontier intelligence",
+      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "published": "2026-09-30T20:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "研究"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 2.6 - 18 km WSW of Petrolia, CA",
+      "summary": "18 km WSW of Petrolia, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451211",
+      "published": "2026-10-17T21:43:02.290000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.3 - 2 km NW of The Geysers, CA",
+      "summary": "2 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451196",
+      "published": "2026-10-17T21:34:24.600000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.7 - 85 km NNW of Karluk, Alaska",
+      "summary": "85 km NNW of Karluk, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplgqp",
+      "published": "2026-10-17T21:27:33.901000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.9 - 111 km S of McCarthy, Alaska",
+      "summary": "111 km S of McCarthy, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplcme",
+      "published": "2026-10-17T21:22:45.352000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 0.5 - 11 km S of Anza, CA",
+      "summary": "11 km S of Anza, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41348639",
+      "published": "2026-10-17T21:22:37.320000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.7 - 60 km SSW of Central, Alaska",
+      "summary": "60 km SSW of Central, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uplbtx",
+      "published": "2026-10-17T21:21:56.748000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-17T09:18:00.702121+00:00",
-      "lastAttemptAt": "2026-10-17T09:18:00.702121+00:00",
+      "lastSuccessAt": "2026-10-17T21:57:05.474406+00:00",
+      "lastAttemptAt": "2026-10-17T21:57:05.474406+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-17T09:18:00.702121+00:00",
-      "lastAttemptAt": "2026-10-17T09:18:00.702121+00:00",
+      "lastSuccessAt": "2026-10-17T21:57:05.474406+00:00",
+      "lastAttemptAt": "2026-10-17T21:57:05.474406+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-17T09:18:00.702121+00:00",
-      "lastAttemptAt": "2026-10-17T09:18:00.702121+00:00",
+      "lastSuccessAt": "2026-10-17T21:57:05.474406+00:00",
+      "lastAttemptAt": "2026-10-17T21:57:05.474406+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-17T09:18:00.702121+00:00",
-      "lastAttemptAt": "2026-10-17T09:18:00.702121+00:00",
+      "lastSuccessAt": "2026-10-17T21:57:05.474406+00:00",
+      "lastAttemptAt": "2026-10-17T21:57:05.474406+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-17T09:18:00.702121+00:00",
-      "lastAttemptAt": "2026-10-17T09:18:00.702121+00:00",
+      "lastSuccessAt": "2026-10-17T21:57:05.474406+00:00",
+      "lastAttemptAt": "2026-10-17T21:57:05.474406+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-17T09:18:00.702121+00:00",
-      "lastAttemptAt": "2026-10-17T09:18:00.702121+00:00",
+      "lastSuccessAt": "2026-10-17T21:57:05.474406+00:00",
+      "lastAttemptAt": "2026-10-17T21:57:05.474406+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -651,8 +764,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-17T09:18:00.702121+00:00",
-      "lastAttemptAt": "2026-10-17T09:18:00.702121+00:00",
+      "lastSuccessAt": "2026-10-17T21:57:05.474406+00:00",
+      "lastAttemptAt": "2026-10-17T21:57:05.474406+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

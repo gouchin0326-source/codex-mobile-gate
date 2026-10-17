@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T12:58:00.976086+00:00",
+  "updatedAt": "2026-10-17T21:57:05.474406+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -16,7 +16,7 @@
     },
     {
       "genre": "AI",
-      "count": 9,
+      "count": 11,
       "decision": "AI/Codex運用の変化を確認",
       "signal": "Amp puts AI agents to work beyond code with OpenAI models / Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems",
       "topUrl": "https://openai.com/index/amp-beyond-coding",
@@ -26,9 +26,9 @@
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "Making a 88x31 button book using ImageMagick",
-      "topUrl": "https://k.sosnierz.me/08-11-24/",
-      "score": 2
+      "signal": "It took me nine years to hack my Xbox 360",
+      "topUrl": "https://kennedn.com/blog/posts/glitching/",
+      "score": 1
     }
   ],
   "focus": [
@@ -385,34 +385,16 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "制作",
-      "sourceWeight": 1,
-      "title": "Making a 88x31 button book using ImageMagick",
-      "summary": "Comments",
-      "url": "https://k.sosnierz.me/08-11-24/",
-      "published": "2026-10-16T11:21:12+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "制作"
-      ]
-    },
-    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
-      "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
-      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+      "title": "Benefit Street Partners answers questions faster with Codex",
+      "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
+      "url": "https://openai.com/index/benefit-street-partners",
       "published": "2026-10-16T00:00:00+00:00",
       "score": 2,
       "tags": [
@@ -426,11 +408,11 @@
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
-      "topic": "技術",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Benefit Street Partners answers questions faster with Codex",
-      "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
-      "url": "https://openai.com/index/benefit-street-partners",
+      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+      "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
+      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
       "published": "2026-10-16T00:00:00+00:00",
       "score": 2,
       "tags": [
@@ -493,20 +475,56 @@
       ]
     },
     {
-      "source": "anthropic-claude",
+      "source": "google-gemini",
       "platform": "AI",
-      "label": "Claude / Anthropic公式",
+      "label": "Gemini公式",
       "genre": "AI",
-      "provider": "claude",
-      "topic": "その他",
-      "sourceWeight": 2,
-      "title": "An Update On Independent Evaluators",
-      "summary": "公式サイトマップで更新を検知。内容は公式ページで確認。",
-      "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
-      "published": "2026-10-16T20:30:25.000Z",
+      "provider": "gemini",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Gemini 4 Argon comes to the Gemini app.",
+      "summary": "Gemini 4 Argon brings frontier reasoning and agentic coding to the Google Gemini app. Google AI Pro and Ultra subscribers can now access Gemini 4 Argon.",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/",
+      "published": "2026-10-13T16:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "google-gemini",
+      "platform": "AI",
+      "label": "Gemini公式",
+      "genre": "AI",
+      "provider": "gemini",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Gemini 4 Argon: our next era of frontier intelligence",
+      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "published": "2026-09-30T20:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "研究"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "It took me nine years to hack my Xbox 360",
+      "summary": "Comments",
+      "url": "https://kennedn.com/blog/posts/glitching/",
+      "published": "2026-10-17T16:13:32+00:00",
       "score": 1,
       "tags": [
-        "AI"
+        "技術"
       ]
     }
   ],
@@ -561,14 +579,14 @@
             "source": "ChatGPT / OpenAI公式"
           },
           {
-            "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
-            "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+            "title": "Benefit Street Partners answers questions faster with Codex",
+            "url": "https://openai.com/index/benefit-street-partners",
             "published": "2026-10-16T00:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           },
           {
-            "title": "Benefit Street Partners answers questions faster with Codex",
-            "url": "https://openai.com/index/benefit-street-partners",
+            "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+            "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
             "published": "2026-10-16T00:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           },
@@ -621,6 +639,12 @@
             "title": "Developing Gemini 4 Argon responsibly and safely",
             "url": "https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/",
             "published": "2026-10-13T18:00:00+00:00",
+            "source": "Gemini公式"
+          },
+          {
+            "title": "Gemini 4 Argon comes to the Gemini app.",
+            "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/",
+            "published": "2026-10-13T16:00:00+00:00",
             "source": "Gemini公式"
           }
         ]
@@ -682,5 +706,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-17T11:18:00.973784+00:00"
+  "lastSuccessAt": "2026-10-17T21:57:05.474406+00:00"
 }
