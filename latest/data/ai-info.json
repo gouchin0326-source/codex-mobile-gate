@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-18T13:58:00.865021+00:00",
+  "updatedAt": "2026-10-18T20:27:52.472756+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -26,8 +26,8 @@
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "It took me nine years to hack my Xbox 360",
-      "topUrl": "https://kennedn.com/blog/posts/glitching/",
+      "signal": "QML for C & Zig",
+      "topUrl": "https://gist.github.com/rcalixte/d2de5c816fc1de3970cc501b5ae9706e",
       "score": 1
     }
   ],
@@ -516,17 +516,16 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "技術",
+      "topic": "その他",
       "sourceWeight": 1,
-      "title": "It took me nine years to hack my Xbox 360",
+      "title": "QML for C & Zig",
       "summary": "Comments",
-      "url": "https://kennedn.com/blog/posts/glitching/",
-      "published": "2026-10-17T16:13:32+00:00",
+      "url": "https://gist.github.com/rcalixte/d2de5c816fc1de3970cc501b5ae9706e",
+      "published": "2026-10-18T19:10:04+00:00",
       "score": 1,
       "tags": [
         "技術"
-      ],
-      "stale": true
+      ]
     }
   ],
   "providerWatch": {
@@ -676,9 +675,9 @@
         ],
         "latest": [
           {
-            "title": "An Update On Independent Evaluators",
-            "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
-            "published": "2026-10-16T20:30:25.000Z",
+            "title": "Public Benefit Fund",
+            "url": "https://www.anthropic.com/news/public-benefit-fund",
+            "published": "2026-10-18T18:05:05.000Z",
             "source": "Claude / Anthropic公式"
           }
         ]
@@ -706,6 +705,6 @@
       "assessment": "6回はサービス上限ではなく、配管確認用の厳しい初期値。両方利用は2回消費するため最大3案件となる。まず12回で数日計測し、429と残量を見て段階調整する。"
     }
   },
-  "status": "stale",
-  "lastSuccessAt": "2026-10-18T11:18:01.013499+00:00"
+  "status": "fresh",
+  "lastSuccessAt": "2026-10-18T20:27:52.472756+00:00"
 }

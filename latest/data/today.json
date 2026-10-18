@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-10-18T13:58:00.939589+00:00",
-  "sourceUpdatedAt": "2026-10-18T11:18:01.013499+00:00",
-  "status": "stale",
+  "updatedAt": "2026-10-18T20:28:10.067727+00:00",
+  "sourceUpdatedAt": "2026-10-18T20:27:52.472756+00:00",
+  "status": "fresh",
   "mode": "today-rule-based",
   "codexTokenUse": "0 when run by GitHub Actions",
-  "count": 1,
+  "count": 2,
   "message": "最大5件をルールで選択",
   "limits": {
     "maxItems": 5,
@@ -14,14 +14,27 @@
     {
       "id": "lobsters:5",
       "genre": "技術",
-      "title": "It took me nine years to hack my Xbox 360",
-      "reason": "技術の前回取得値です。更新停止の可能性を確認",
-      "publishedAt": "2026-10-17T16:13:32+00:00",
-      "observedAt": "2026-10-18T11:18:01.013499+00:00",
+      "title": "QML for C & Zig",
+      "reason": "技術の新着を確認",
+      "publishedAt": "2026-10-18T19:10:04+00:00",
+      "observedAt": "2026-10-18T20:27:52.472756+00:00",
       "source": "技術RSS",
-      "url": "https://kennedn.com/blog/posts/glitching/",
+      "url": "https://gist.github.com/rcalixte/d2de5c816fc1de3970cc501b5ae9706e",
       "score": 1,
-      "stale": true,
+      "stale": false,
+      "processing": "rule-based"
+    },
+    {
+      "id": "anthropic-claude:6",
+      "genre": "AI",
+      "title": "Public Benefit Fund",
+      "reason": "AIの新着を確認",
+      "publishedAt": "2026-10-18T18:05:05.000Z",
+      "observedAt": "2026-10-18T20:27:52.472756+00:00",
+      "source": "Claude / Anthropic公式",
+      "url": "https://www.anthropic.com/news/public-benefit-fund",
+      "score": 1,
+      "stale": false,
       "processing": "rule-based"
     }
   ],
