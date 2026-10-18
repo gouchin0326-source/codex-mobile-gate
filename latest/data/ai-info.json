@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-18T03:48:01.631387+00:00",
+  "updatedAt": "2026-10-18T03:58:01.421922+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -525,7 +525,8 @@
       "score": 1,
       "tags": [
         "技術"
-      ]
+      ],
+      "stale": true
     }
   ],
   "providerWatch": {
@@ -705,6 +706,6 @@
       "assessment": "6回はサービス上限ではなく、配管確認用の厳しい初期値。両方利用は2回消費するため最大3案件となる。まず12回で数日計測し、429と残量を見て段階調整する。"
     }
   },
-  "status": "fresh",
-  "lastSuccessAt": "2026-10-17T21:57:05.474406+00:00"
+  "status": "stale",
+  "lastSuccessAt": "2026-10-18T03:58:01.421922+00:00"
 }

@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-18T03:48:04.781900+00:00",
-  "sourceUpdatedAt": "2026-10-17T21:57:05.474406+00:00",
-  "status": "fresh",
+  "updatedAt": "2026-10-18T03:58:15.239305+00:00",
+  "sourceUpdatedAt": "2026-10-18T03:58:01.421922+00:00",
+  "status": "stale",
   "mode": "today-rule-based",
   "codexTokenUse": "0 when run by GitHub Actions",
   "count": 2,
@@ -15,13 +15,13 @@
       "id": "lobsters:5",
       "genre": "技術",
       "title": "It took me nine years to hack my Xbox 360",
-      "reason": "技術の新着を確認",
+      "reason": "技術の前回取得値です。更新停止の可能性を確認",
       "publishedAt": "2026-10-17T16:13:32+00:00",
-      "observedAt": "2026-10-17T21:57:05.474406+00:00",
+      "observedAt": "2026-10-18T03:58:01.421922+00:00",
       "source": "技術RSS",
       "url": "https://kennedn.com/blog/posts/glitching/",
       "score": 1,
-      "stale": false,
+      "stale": true,
       "processing": "rule-based"
     },
     {
@@ -30,13 +30,19 @@
       "title": "An Update On Independent Evaluators",
       "reason": "AIの新着を確認",
       "publishedAt": "2026-10-16T20:30:25.000Z",
-      "observedAt": "2026-10-17T21:57:05.474406+00:00",
+      "observedAt": "2026-10-18T03:58:01.421922+00:00",
       "source": "Claude / Anthropic公式",
       "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
       "score": 1,
-      "stale": false,
+      "stale": true,
       "processing": "rule-based"
     }
   ],
-  "errors": []
+  "errors": [
+    {
+      "source": "lobsters",
+      "error": "HTTP Error 500: Internal Server Error",
+      "fallbackItems": 1
+    }
+  ]
 }
