@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-19T13:08:04.599543+00:00",
-  "lastSuccessAt": "2026-10-19T11:18:01.710335+00:00",
+  "updatedAt": "2026-10-19T21:25:32.542526+00:00",
+  "lastSuccessAt": "2026-10-19T21:25:32.542526+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -151,17 +151,17 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "Updates to site guidelines and AI/LLM tags",
+      "signal": "In Context",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://lobste.rs/s/h0eate/updates_site_guidelines_ai_llm_tags",
+      "topUrl": "https://www.youtube.com/watch?v=P5eO7BNyJao",
       "score": 1
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.0 - 6 km NNW of The Geysers, CA",
+      "signal": "M 2.0 - 28 km NNE of Chickaloon, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75452061",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026utdaiz",
       "score": 1
     }
   ],
@@ -266,10 +266,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.0 - 6 km NNW of The Geysers, CA",
-      "summary": "6 km NNW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75452061",
-      "published": "2026-10-19T08:05:42.200000+00:00",
+      "title": "M 2.0 - 28 km NNE of Chickaloon, Alaska",
+      "summary": "28 km NNE of Chickaloon, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026utdaiz",
+      "published": "2026-10-19T21:19:00.999000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -281,12 +281,12 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "AI",
+      "topic": "その他",
       "sourceWeight": 1,
-      "title": "Updates to site guidelines and AI/LLM tags",
-      "summary": "Hey folks, I've been having to perform an increasing number of moderation actions surrounding the vibecoding tag and AI/LLM related content. I started reading Lobsters because it had the most interesting viewpoints relat",
-      "url": "https://lobste.rs/s/h0eate/updates_site_guidelines_ai_llm_tags",
-      "published": "2026-10-19T01:28:53+00:00",
+      "title": "In Context",
+      "summary": "Comments",
+      "url": "https://www.youtube.com/watch?v=P5eO7BNyJao",
+      "published": "2026-10-19T18:25:48+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -298,12 +298,12 @@
       "label": "Claude / Anthropic公式",
       "genre": "AI",
       "provider": "claude",
-      "topic": "技術",
+      "topic": "その他",
       "sourceWeight": 2,
-      "title": "Public Benefit Fund",
+      "title": "An Update On Independent Evaluators",
       "summary": "公式サイトマップで更新を検知。内容は公式ページで確認。",
-      "url": "https://www.anthropic.com/news/public-benefit-fund",
-      "published": "2026-10-18T18:05:05.000Z",
+      "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+      "published": "2026-10-19T13:19:29.000Z",
       "score": 1,
       "tags": [
         "AI"
@@ -326,6 +326,42 @@
         "開発",
         "重要",
         "研究"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "How to continue a GitHub Copilot app session in VS Code",
+      "summary": "Learn how to move an agent session from the GitHub Copilot app into VS Code without losing the conversation, code changes, or working context. The post How to continue a GitHub Copilot app session in VS Code appeared fir",
+      "url": "https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code/",
+      "published": "2026-10-19T18:47:22+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Some Git over HTTPS may temporarily require authentication",
+      "summary": "During periods of unusual traffic, GitHub may temporarily require authentication for some clones and fetches of public repositories over HTTPS to help protect github.com’s availability. If an operation is affected,… The ",
+      "url": "https://github.blog/changelog/2026-10-19-some-git-over-https-may-temporarily-require-authentication",
+      "published": "2026-10-19T10:37:30+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -476,24 +512,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Agentic autofix for code scanning alerts general availability",
-      "summary": "Agentic autofix for code scanning alerts is now generally available. It remediates alerts by working across your codebase the way a developer would: it explores relevant files, proposes a fix,… The post Agentic autofix f",
-      "url": "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability",
-      "published": "2026-10-15T13:49:20+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -560,24 +578,6 @@
       "summary": "Learn how to add custom instructions and skills to your repository, use custom agents, and connect MCP servers like Playwright. The post GitHub Copilot app for Beginners: How to teach Copilot about your codebase appeared",
       "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/",
       "published": "2026-10-12T17:43:59+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "How one bug bounty researcher chooses the features they investigate",
-      "summary": "As we kick off Cybersecurity Awareness Month, the GitHub Bug Bounty team spotlights @vaib25vicky, exploring their methodology, techniques, and experiences hacking on GitHub. The post How one bug bounty researcher chooses",
-      "url": "https://github.blog/security/how-one-bug-bounty-researcher-chooses-the-features-they-investigate/",
-      "published": "2026-10-08T17:02:52+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -751,48 +751,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-19T08:28:02.456866+00:00",
-      "lastAttemptAt": "2026-10-19T08:28:02.456866+00:00",
+      "lastSuccessAt": "2026-10-19T21:25:32.542526+00:00",
+      "lastAttemptAt": "2026-10-19T21:25:32.542526+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-19T08:28:02.456866+00:00",
-      "lastAttemptAt": "2026-10-19T08:28:02.456866+00:00",
+      "lastSuccessAt": "2026-10-19T21:25:32.542526+00:00",
+      "lastAttemptAt": "2026-10-19T21:25:32.542526+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-19T08:28:02.456866+00:00",
-      "lastAttemptAt": "2026-10-19T08:28:02.456866+00:00",
+      "lastSuccessAt": "2026-10-19T21:25:32.542526+00:00",
+      "lastAttemptAt": "2026-10-19T21:25:32.542526+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-19T08:28:02.456866+00:00",
-      "lastAttemptAt": "2026-10-19T08:28:02.456866+00:00",
+      "lastSuccessAt": "2026-10-19T21:25:32.542526+00:00",
+      "lastAttemptAt": "2026-10-19T21:25:32.542526+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-19T08:28:02.456866+00:00",
-      "lastAttemptAt": "2026-10-19T08:28:02.456866+00:00",
+      "lastSuccessAt": "2026-10-19T21:25:32.542526+00:00",
+      "lastAttemptAt": "2026-10-19T21:25:32.542526+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-19T08:28:02.456866+00:00",
-      "lastAttemptAt": "2026-10-19T08:28:02.456866+00:00",
+      "lastSuccessAt": "2026-10-19T21:25:32.542526+00:00",
+      "lastAttemptAt": "2026-10-19T21:25:32.542526+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -807,8 +807,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-19T08:28:02.456866+00:00",
-      "lastAttemptAt": "2026-10-19T08:28:02.456866+00:00",
+      "lastSuccessAt": "2026-10-19T21:25:32.542526+00:00",
+      "lastAttemptAt": "2026-10-19T21:25:32.542526+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

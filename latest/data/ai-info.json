@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T13:08:04.599543+00:00",
+  "updatedAt": "2026-10-19T21:25:32.542526+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -34,8 +34,8 @@
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "Updates to site guidelines and AI/LLM tags",
-      "topUrl": "https://lobste.rs/s/h0eate/updates_site_guidelines_ai_llm_tags",
+      "signal": "In Context",
+      "topUrl": "https://www.youtube.com/watch?v=P5eO7BNyJao",
       "score": 1
     }
   ],
@@ -69,6 +69,20 @@
       "url": "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/"
     },
     {
+      "label": "開発",
+      "title": "How to continue a GitHub Copilot app session in VS Code",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub",
+      "url": "https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code/"
+    },
+    {
+      "label": "開発",
+      "title": "Some Git over HTTPS may temporarily require authentication",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-19-some-git-over-https-may-temporarily-require-authentication"
+    },
+    {
       "label": "論文",
       "title": "Structured Authority Injection: Persistent Human Control for LLM Agents via Typed MCP Overrides",
       "why": "Codex/AI開発判断に関係",
@@ -81,20 +95,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2610.22420"
-    },
-    {
-      "label": "論文",
-      "title": "PRIME: Towards Verifiable Evidence-Grounded Reasoning in LLM Agents",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.22426"
-    },
-    {
-      "label": "開発",
-      "title": "Open source license compliance generally available",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-16-open-source-license-compliance-generally-available"
     }
   ],
   "items": [
@@ -173,6 +173,42 @@
         "開発",
         "重要",
         "研究"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "How to continue a GitHub Copilot app session in VS Code",
+      "summary": "Learn how to move an agent session from the GitHub Copilot app into VS Code without losing the conversation, code changes, or working context. The post How to continue a GitHub Copilot app session in VS Code appeared fir",
+      "url": "https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code/",
+      "published": "2026-10-19T18:47:22+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Some Git over HTTPS may temporarily require authentication",
+      "summary": "During periods of unusual traffic, GitHub may temporarily require authentication for some clones and fetches of public repositories over HTTPS to help protect github.com’s availability. If an operation is affected,… The ",
+      "url": "https://github.blog/changelog/2026-10-19-some-git-over-https-may-temporarily-require-authentication",
+      "published": "2026-10-19T10:37:30+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -323,24 +359,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Agentic autofix for code scanning alerts general availability",
-      "summary": "Agentic autofix for code scanning alerts is now generally available. It remediates alerts by working across your codebase the way a developer would: it explores relevant files, proposes a fix,… The post Agentic autofix f",
-      "url": "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability",
-      "published": "2026-10-15T13:49:20+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -445,24 +463,6 @@
       "summary": "Learn how to add custom instructions and skills to your repository, use custom agents, and connect MCP servers like Playwright. The post GitHub Copilot app for Beginners: How to teach Copilot about your codebase appeared",
       "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/",
       "published": "2026-10-12T17:43:59+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "How one bug bounty researcher chooses the features they investigate",
-      "summary": "As we kick off Cybersecurity Awareness Month, the GitHub Bug Bounty team spotlights @vaib25vicky, exploring their methodology, techniques, and experiences hacking on GitHub. The post How one bug bounty researcher chooses",
-      "url": "https://github.blog/security/how-one-bug-bounty-researcher-chooses-the-features-they-investigate/",
-      "published": "2026-10-08T17:02:52+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -683,9 +683,9 @@
         ],
         "latest": [
           {
-            "title": "Public Benefit Fund",
-            "url": "https://www.anthropic.com/news/public-benefit-fund",
-            "published": "2026-10-18T18:05:05.000Z",
+            "title": "An Update On Independent Evaluators",
+            "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+            "published": "2026-10-19T13:19:29.000Z",
             "source": "Claude / Anthropic公式"
           }
         ]
@@ -714,5 +714,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-19T11:18:01.710335+00:00"
+  "lastSuccessAt": "2026-10-19T21:25:32.542526+00:00"
 }
