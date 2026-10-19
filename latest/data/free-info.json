@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-19T02:18:01.928607+00:00",
-  "lastSuccessAt": "2026-10-18T20:27:52.472756+00:00",
+  "updatedAt": "2026-10-19T02:28:01.541674+00:00",
+  "lastSuccessAt": "2026-10-19T02:28:01.541674+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -143,17 +143,17 @@
     {
       "genre": "災害",
       "count": 7,
-      "signal": "M 0.7 - 80 km NW of Ninilchik, Alaska / M 1.1 - 8 km NW of The Geysers, CA / M 0.5 - 25 km NW of Searles Valley, CA",
+      "signal": "M 2.4 - 2 km SSW of San Ramon, CA / M 1.6 - 1 km WSW of San Ramon, CA / M 1.0 - 8 km NW of The Geysers, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026urfezh",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451976",
       "score": 1
     },
     {
       "genre": "技術",
       "count": 1,
-      "signal": "QML for C & Zig",
+      "signal": "Updates to site guidelines and AI/LLM tags",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://gist.github.com/rcalixte/d2de5c816fc1de3970cc501b5ae9706e",
+      "topUrl": "https://lobste.rs/s/h0eate/updates_site_guidelines_ai_llm_tags",
       "score": 1
     }
   ],
@@ -238,10 +238,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.7 - 80 km NW of Ninilchik, Alaska",
-      "summary": "80 km NW of Ninilchik, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026urfezh",
-      "published": "2026-10-18T20:25:26.696000+00:00",
+      "title": "M 2.4 - 2 km SSW of San Ramon, CA",
+      "summary": "2 km SSW of San Ramon, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451976",
+      "published": "2026-10-19T02:15:14.060000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -253,12 +253,12 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "その他",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "QML for C & Zig",
-      "summary": "Comments",
-      "url": "https://gist.github.com/rcalixte/d2de5c816fc1de3970cc501b5ae9706e",
-      "published": "2026-10-18T19:10:04+00:00",
+      "title": "Updates to site guidelines and AI/LLM tags",
+      "summary": "Hey folks, I've been having to perform an increasing number of moderation actions surrounding the vibecoding tag and AI/LLM related content. I started reading Lobsters because it had the most interesting viewpoints relat",
+      "url": "https://lobste.rs/s/h0eate/updates_site_guidelines_ai_llm_tags",
+      "published": "2026-10-19T01:28:53+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -629,10 +629,23 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.1 - 8 km NW of The Geysers, CA",
+      "title": "M 1.6 - 1 km WSW of San Ramon, CA",
+      "summary": "1 km WSW of San Ramon, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451971",
+      "published": "2026-10-19T02:08:36.700000+00:00",
+      "score": 1,
+      "tags": [
+        "災害"
+      ]
+    },
+    {
+      "source": "usgs",
+      "label": "地震",
+      "genre": "災害",
+      "title": "M 1.0 - 8 km NW of The Geysers, CA",
       "summary": "8 km NW of The Geysers, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451726",
-      "published": "2026-10-18T20:24:26.050000+00:00",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451946",
+      "published": "2026-10-19T01:54:05.720000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -642,10 +655,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.5 - 25 km NW of Searles Valley, CA",
-      "summary": "25 km NW of Searles Valley, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41349087",
-      "published": "2026-10-18T20:20:27.770000+00:00",
+      "title": "M 1.4 - 2 km W of San Ramon, CA",
+      "summary": "2 km W of San Ramon, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451941",
+      "published": "2026-10-19T01:46:37.410000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -655,10 +668,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 0.5 - 65 km WNW of Beluga, Alaska",
-      "summary": "65 km WNW of Beluga, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026urfaup",
-      "published": "2026-10-18T20:20:11.691000+00:00",
+      "title": "M 1.8 - 14 km NNE of Brooktrails, CA",
+      "summary": "14 km NNE of Brooktrails, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451936",
+      "published": "2026-10-19T01:45:57.070000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -668,10 +681,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.9 - 14 km NNE of Hawaiian Ocean View, Hawaii",
-      "summary": "14 km NNE of Hawaiian Ocean View, Hawaii",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/hv75060536",
-      "published": "2026-10-18T20:19:51.090000+00:00",
+      "title": "M 1.0 - 2 km NW of The Geysers, CA",
+      "summary": "2 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451931",
+      "published": "2026-10-19T01:41:24.460000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -681,23 +694,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.7 - 33 km NW of Karluk, Alaska",
-      "summary": "33 km NW of Karluk, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uremez",
-      "published": "2026-10-18T20:03:21.342000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 0.5 - 74 km NW of Ninilchik, Alaska",
-      "summary": "74 km NW of Ninilchik, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026urefkm",
-      "published": "2026-10-18T19:55:31.562000+00:00",
+      "title": "M 1.0 - 22 km SW of New Idria, CA",
+      "summary": "22 km SW of New Idria, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75451921",
+      "published": "2026-10-19T01:29:42.140000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -708,48 +708,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-18T20:27:52.472756+00:00",
-      "lastAttemptAt": "2026-10-18T20:27:52.472756+00:00",
+      "lastSuccessAt": "2026-10-19T02:28:01.541674+00:00",
+      "lastAttemptAt": "2026-10-19T02:28:01.541674+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-18T20:27:52.472756+00:00",
-      "lastAttemptAt": "2026-10-18T20:27:52.472756+00:00",
+      "lastSuccessAt": "2026-10-19T02:28:01.541674+00:00",
+      "lastAttemptAt": "2026-10-19T02:28:01.541674+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-18T20:27:52.472756+00:00",
-      "lastAttemptAt": "2026-10-18T20:27:52.472756+00:00",
+      "lastSuccessAt": "2026-10-19T02:28:01.541674+00:00",
+      "lastAttemptAt": "2026-10-19T02:28:01.541674+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-18T20:27:52.472756+00:00",
-      "lastAttemptAt": "2026-10-18T20:27:52.472756+00:00",
+      "lastSuccessAt": "2026-10-19T02:28:01.541674+00:00",
+      "lastAttemptAt": "2026-10-19T02:28:01.541674+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-18T20:27:52.472756+00:00",
-      "lastAttemptAt": "2026-10-18T20:27:52.472756+00:00",
+      "lastSuccessAt": "2026-10-19T02:28:01.541674+00:00",
+      "lastAttemptAt": "2026-10-19T02:28:01.541674+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-18T20:27:52.472756+00:00",
-      "lastAttemptAt": "2026-10-18T20:27:52.472756+00:00",
+      "lastSuccessAt": "2026-10-19T02:28:01.541674+00:00",
+      "lastAttemptAt": "2026-10-19T02:28:01.541674+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -764,8 +764,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-18T20:27:52.472756+00:00",
-      "lastAttemptAt": "2026-10-18T20:27:52.472756+00:00",
+      "lastSuccessAt": "2026-10-19T02:28:01.541674+00:00",
+      "lastAttemptAt": "2026-10-19T02:28:01.541674+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
