@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T11:18:01.023307+00:00",
+  "updatedAt": "2026-10-20T11:28:01.525350+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -21,14 +21,6 @@
       "signal": "Amp puts AI agents to work beyond code with OpenAI models / Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems",
       "topUrl": "https://openai.com/index/amp-beyond-coding",
       "score": 3
-    },
-    {
-      "genre": "論文",
-      "count": 8,
-      "decision": "必要時だけ確認",
-      "signal": "ECHOES: Seeing Beyond the Current Image via Recursive History Compression and Privileged On-Policy Distillation / Structured Authority Injection: Persistent Human Control for LLM Agents via Typed MCP Overrides / Sensitiv",
-      "topUrl": "https://arxiv.org/abs/2610.22408",
-      "score": 4
     },
     {
       "genre": "技術",
@@ -53,13 +45,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026"
-    },
-    {
-      "label": "論文",
-      "title": "ECHOES: Seeing Beyond the Current Image via Recursive History Compression and Privileged On-Policy Distillation",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.22408"
     },
     {
       "label": "開発",
@@ -95,6 +80,13 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-10-19-some-git-over-https-may-temporarily-require-authentication"
+    },
+    {
+      "label": "開発",
+      "title": "Open source license compliance generally available",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-16-open-source-license-compliance-generally-available"
     }
   ],
   "items": [
@@ -133,26 +125,6 @@
       "tags": [
         "開発",
         "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "制作",
-      "sourceWeight": 1,
-      "title": "ECHOES: Seeing Beyond the Current Image via Recursive History Compression and Privileged On-Policy Distillation",
-      "summary": "arXiv:2610.22408v1 Announce Type: new Abstract: Long-horizon GUI agents rely on visual history to maintain task states, but retaining historical screenshots increases visual-token usage and inference costs, while textual",
-      "url": "https://arxiv.org/abs/2610.22408",
-      "published": "2026-10-19T04:00:00+00:00",
-      "score": 4,
-      "tags": [
-        "論文",
-        "重要",
-        "制作",
         "研究"
       ]
     },
@@ -247,63 +219,6 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Structured Authority Injection: Persistent Human Control for LLM Agents via Typed MCP Overrides",
-      "summary": "arXiv:2610.22373v1 Announce Type: new Abstract: LLM-based agents are increasingly used as autonomous orchestrators in distributed and multi-agent systems, yet a control gap remains: no protocol-level mechanism allows hum",
-      "url": "https://arxiv.org/abs/2610.22373",
-      "published": "2026-10-19T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Sensitivity Analysis of Decision Rules in an Agent-Based Agro-Ecological Model",
-      "summary": "arXiv:2610.22420v1 Announce Type: new Abstract: Agent-based models are well-suited for modelling agro-ecological systems for decision-making, yet turning their simulations into actionable insight requires identifying whi",
-      "url": "https://arxiv.org/abs/2610.22420",
-      "published": "2026-10-19T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "PRIME: Towards Verifiable Evidence-Grounded Reasoning in LLM Agents",
-      "summary": "arXiv:2610.22426v1 Announce Type: new Abstract: LLM agents are used to check records against an organization's requirements, for example whether a vulnerability report is ready for investigation. Requirements often allow",
-      "url": "https://arxiv.org/abs/2610.22426",
-      "published": "2026-10-19T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
       ]
     },
     {
@@ -526,21 +441,74 @@
       ]
     },
     {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "開発",
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Rethinking User Encoders: Routing Diffusion States for Scenario-Adaptive User Representation",
-      "summary": "arXiv:2610.22400v1 Announce Type: new Abstract: Existing large language model (LLM)-based user encoders serialize heterogeneous behavioral logs and compress them into static representations through autoregressive (AR) pr",
-      "url": "https://arxiv.org/abs/2610.22400",
-      "published": "2026-10-19T04:00:00+00:00",
+      "title": "Benefit Street Partners answers questions faster with Codex",
+      "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
+      "url": "https://openai.com/index/benefit-street-partners",
+      "published": "2026-10-16T00:00:00+00:00",
       "score": 2,
       "tags": [
-        "論文",
-        "研究"
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+      "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
+      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+      "published": "2026-10-16T00:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Sullivan & Cromwell brings legal expertise into agreement review",
+      "summary": "In collaboration with OpenAI, Sullivan & Cromwell developed Agreement Analyzer, an AI tool for identifying issues in a draft agreement.",
+      "url": "https://openai.com/index/sullivan-cromwell",
+      "published": "2026-10-15T00:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "anthropic-claude",
+      "platform": "AI",
+      "label": "Claude / Anthropic公式",
+      "genre": "AI",
+      "provider": "claude",
+      "topic": "その他",
+      "sourceWeight": 2,
+      "title": "An Update On Independent Evaluators",
+      "summary": "公式サイトマップで更新を検知。内容は公式ページで確認。",
+      "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+      "published": "2026-10-19T13:19:29.000Z",
+      "score": 1,
+      "tags": [
+        "AI"
       ]
     }
   ],
@@ -710,5 +678,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-20T09:38:01.957479+00:00"
+  "lastSuccessAt": "2026-10-20T11:28:01.525350+00:00"
 }
