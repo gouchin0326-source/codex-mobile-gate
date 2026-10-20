@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-20T09:28:00.808701+00:00",
-  "lastSuccessAt": "2026-10-20T03:28:01.547604+00:00",
+  "updatedAt": "2026-10-20T09:38:01.957479+00:00",
+  "lastSuccessAt": "2026-10-20T09:38:01.957479+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -151,17 +151,17 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "OpenBSD 8.0",
+      "signal": "Go will reject certificate chains containing eight distrusted SPKIs",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://www.openbsd.org/80.html",
-      "score": 1
+      "topUrl": "https://github.com/golang/go/commit/90617fb7ceb59cf08bee7826bb51b8c8fb8c11de",
+      "score": 3
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 2.9 - 45 km NNE of Cruz Bay, U.S. Virgin Islands",
+      "signal": "M 2.7 - 32 km SE of Bodie, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71537308",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75452441",
       "score": 1
     }
   ],
@@ -225,6 +225,25 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Go will reject certificate chains containing eight distrusted SPKIs",
+      "summary": "I downloaded the CA cert data from https://www.ccadb.org/resources and it seems to be affecting 16 certs, all from eMudhra. I complied the list here https://gist.github.com/mendymm/ff7a9fd00339260b4d2dbdcb0f489b57 Commen",
+      "url": "https://github.com/golang/go/commit/90617fb7ceb59cf08bee7826bb51b8c8fb8c11de",
+      "published": "2026-10-20T03:10:23+00:00",
+      "score": 3,
+      "tags": [
+        "技術",
+        "重要",
+        "開発"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -266,30 +285,13 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.9 - 45 km NNE of Cruz Bay, U.S. Virgin Islands",
-      "summary": "45 km NNE of Cruz Bay, U.S. Virgin Islands",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71537308",
-      "published": "2026-10-20T03:05:22.900000+00:00",
+      "title": "M 2.7 - 32 km SE of Bodie, CA",
+      "summary": "32 km SE of Bodie, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75452441",
+      "published": "2026-10-20T09:33:04.680000+00:00",
       "score": 1,
       "tags": [
         "災害"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "OpenBSD 8.0",
-      "summary": "Comments",
-      "url": "https://www.openbsd.org/80.html",
-      "published": "2026-10-20T01:46:00+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
       ]
     },
     {
@@ -699,11 +701,11 @@
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
-      "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
-      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+      "title": "Benefit Street Partners answers questions faster with Codex",
+      "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
+      "url": "https://openai.com/index/benefit-street-partners",
       "published": "2026-10-16T00:00:00+00:00",
       "score": 2,
       "tags": [
@@ -717,11 +719,11 @@
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
-      "topic": "技術",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Benefit Street Partners answers questions faster with Codex",
-      "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
-      "url": "https://openai.com/index/benefit-street-partners",
+      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+      "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
+      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
       "published": "2026-10-16T00:00:00+00:00",
       "score": 2,
       "tags": [
@@ -752,48 +754,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-20T03:28:01.547604+00:00",
-      "lastAttemptAt": "2026-10-20T03:28:01.547604+00:00",
+      "lastSuccessAt": "2026-10-20T09:38:01.957479+00:00",
+      "lastAttemptAt": "2026-10-20T09:38:01.957479+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-20T03:28:01.547604+00:00",
-      "lastAttemptAt": "2026-10-20T03:28:01.547604+00:00",
+      "lastSuccessAt": "2026-10-20T09:38:01.957479+00:00",
+      "lastAttemptAt": "2026-10-20T09:38:01.957479+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-20T03:28:01.547604+00:00",
-      "lastAttemptAt": "2026-10-20T03:28:01.547604+00:00",
+      "lastSuccessAt": "2026-10-20T09:38:01.957479+00:00",
+      "lastAttemptAt": "2026-10-20T09:38:01.957479+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-20T03:28:01.547604+00:00",
-      "lastAttemptAt": "2026-10-20T03:28:01.547604+00:00",
+      "lastSuccessAt": "2026-10-20T09:38:01.957479+00:00",
+      "lastAttemptAt": "2026-10-20T09:38:01.957479+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-20T03:28:01.547604+00:00",
-      "lastAttemptAt": "2026-10-20T03:28:01.547604+00:00",
+      "lastSuccessAt": "2026-10-20T09:38:01.957479+00:00",
+      "lastAttemptAt": "2026-10-20T09:38:01.957479+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-20T03:28:01.547604+00:00",
-      "lastAttemptAt": "2026-10-20T03:28:01.547604+00:00",
+      "lastSuccessAt": "2026-10-20T09:38:01.957479+00:00",
+      "lastAttemptAt": "2026-10-20T09:38:01.957479+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -808,8 +810,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-20T03:28:01.547604+00:00",
-      "lastAttemptAt": "2026-10-20T03:28:01.547604+00:00",
+      "lastSuccessAt": "2026-10-20T09:38:01.957479+00:00",
+      "lastAttemptAt": "2026-10-20T09:38:01.957479+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
