@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T13:58:01.529970+00:00",
+  "updatedAt": "2026-10-20T21:31:52.938391+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -8,27 +8,27 @@
   "cards": [
     {
       "genre": "開発",
-      "count": 14,
+      "count": 15,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "Copilot model policy API for enterprise, orgs, and teams / GitHub Copilot models deprecated on October 19, 2026 / Xcode 27 runner image generally available",
+      "signal": "Copilot model policy API for enterprise, orgs, and teams / GitHub Copilot models deprecated on October 19, 2026 / GitHub’s model for secret detection: Finding more secrets with less noise",
       "topUrl": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams",
       "score": 4
     },
     {
       "genre": "AI",
-      "count": 8,
+      "count": 9,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "Amp puts AI agents to work beyond code with OpenAI models / Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems",
-      "topUrl": "https://openai.com/index/amp-beyond-coding",
+      "signal": "Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems / OpenAI acquires Orchestra Bio",
+      "topUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/",
       "score": 3
     },
     {
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "Go will reject certificate chains containing eight distrusted SPKIs",
-      "topUrl": "https://github.com/golang/go/commit/90617fb7ceb59cf08bee7826bb51b8c8fb8c11de",
-      "score": 3
+      "signal": "How I got over 300 Tor exit nodes removed",
+      "topUrl": "https://kaba.cx/posts/20261020_Tor/",
+      "score": 1
     }
   ],
   "focus": [
@@ -48,24 +48,38 @@
     },
     {
       "label": "開発",
-      "title": "Xcode 27 runner image generally available",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-15-xcode-27-runner-image-generally-available"
-    },
-    {
-      "label": "開発",
       "title": "GitHub’s model for secret detection: Finding more secrets with less noise",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
       "url": "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/"
     },
     {
-      "label": "技術",
-      "title": "Go will reject certificate chains containing eight distrusted SPKIs",
+      "label": "開発",
+      "title": "Updates to GitHub secret scanning",
       "why": "Codex/AI開発判断に関係",
-      "source": "技術RSS",
-      "url": "https://github.com/golang/go/commit/90617fb7ceb59cf08bee7826bb51b8c8fb8c11de"
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-20-updates-to-github-secret-scanning"
+    },
+    {
+      "label": "開発",
+      "title": "Dependabot alerts REST API now includes dependency versions",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-20-dependabot-alerts-rest-api-now-includes-dependency-versions"
+    },
+    {
+      "label": "開発",
+      "title": "GitHub package firewall in public preview",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-20-github-package-firewall-in-public-preview"
+    },
+    {
+      "label": "開発",
+      "title": "How 3 Java Champions are using GitHub Copilot for increased productivity",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub",
+      "url": "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/"
     },
     {
       "label": "開発",
@@ -73,20 +87,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
       "url": "https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code/"
-    },
-    {
-      "label": "開発",
-      "title": "Some Git over HTTPS may temporarily require authentication",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-19-some-git-over-https-may-temporarily-require-authentication"
-    },
-    {
-      "label": "開発",
-      "title": "Open source license compliance generally available",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-16-open-source-license-compliance-generally-available"
     }
   ],
   "items": [
@@ -99,7 +99,7 @@
       "topic": "AI",
       "sourceWeight": 1,
       "title": "Copilot model policy API for enterprise, orgs, and teams",
-      "summary": "You can now use the REST API to retrieve and update Copilot model policies for enterprises, enterprise teams, enterprise apps, and organizations. What’s new GET and PATCH endpoints are now… The post Copilot model policy ",
+      "summary": "You can now use the REST API to retrieve and update Copilot model policies for enterprises, enterprise teams, agent apps, and organizations. What’s new GET and PATCH endpoints are now… The post Copilot model policy API f",
       "url": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams",
       "published": "2026-10-19T21:32:18+00:00",
       "score": 4,
@@ -129,25 +129,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Xcode 27 runner image generally available",
-      "summary": "You can now use the generally available Xcode 27 runner image to build and test your Apple applications in GitHub Actions. Previously in public preview, this GitHub-hosted image runs on… The post Xcode 27 runner image ge",
-      "url": "https://github.blog/changelog/2026-10-15-xcode-27-runner-image-generally-available",
-      "published": "2026-10-16T04:36:30+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
-        "制作"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -167,22 +148,75 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
       "provider": null,
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Go will reject certificate chains containing eight distrusted SPKIs",
-      "summary": "I downloaded the CA cert data from https://www.ccadb.org/resources and it seems to be affecting 16 certs, all from eMudhra. I complied the list here https://gist.github.com/mendymm/ff7a9fd00339260b4d2dbdcb0f489b57 Commen",
-      "url": "https://github.com/golang/go/commit/90617fb7ceb59cf08bee7826bb51b8c8fb8c11de",
-      "published": "2026-10-20T03:10:23+00:00",
+      "title": "Updates to GitHub secret scanning",
+      "summary": "This update covers improvements and bug fixes for GitHub secret scanning. Update to audit log events On November 12, 2026, the business field in affected secret_scanning_alert.* and secret_scanning_push_protection.bypass",
+      "url": "https://github.blog/changelog/2026-10-20-updates-to-github-secret-scanning",
+      "published": "2026-10-20T18:03:55+00:00",
       "score": 3,
       "tags": [
-        "技術",
-        "重要",
-        "開発"
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "Dependabot alerts REST API now includes dependency versions",
+      "summary": "You can now get the version of a vulnerable dependency directly from Dependabot alert responses in the REST API. Each alert’s dependency object includes a new version_requirement field with the… The post Dependabot alert",
+      "url": "https://github.blog/changelog/2026-10-20-dependabot-alerts-rest-api-now-includes-dependency-versions",
+      "published": "2026-10-20T17:13:40+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "GitHub package firewall in public preview",
+      "summary": "An increasing number of malware attacks exploit systems at package installation time, harvesting credentials on CI/CD hosts or developer workstations without even running the package’s code. To stem this tide… The post G",
+      "url": "https://github.blog/changelog/2026-10-20-github-package-firewall-in-public-preview",
+      "published": "2026-10-20T16:11:53+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "How 3 Java Champions are using GitHub Copilot for increased productivity",
+      "summary": "Three Java Champions share how they use GitHub Copilot to solve problems, accelerate development, and keep humans responsible for the results. The post How 3 Java Champions are using GitHub Copilot for increased producti",
+      "url": "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/",
+      "published": "2026-10-20T16:05:03+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -215,60 +249,6 @@
       "summary": "During periods of unusual traffic, GitHub may temporarily require authentication for some clones and fetches of public repositories over HTTPS to help protect github.com’s availability. If an operation is affected,… The ",
       "url": "https://github.blog/changelog/2026-10-19-some-git-over-https-may-temporarily-require-authentication",
       "published": "2026-10-19T10:37:30+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Open source license compliance generally available",
-      "summary": "Enterprises can now manage their dependencies’ licenses at scale with sophisticated, ruleset-based checks that enforce a centralized policy. Open source license compliance is now generally available for GitHub Enterprise",
-      "url": "https://github.blog/changelog/2026-10-16-open-source-license-compliance-generally-available",
-      "published": "2026-10-16T14:00:32+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Multi-repository support and other improvements for GitHub in Slack and Teams",
-      "summary": "@GitHub in Slack and Teams now supports working across multiple repositories in a single conversation. Whether you’re creating issues, opening pull requests, or investigating bugs, you can work across repositories… The p",
-      "url": "https://github.blog/changelog/2026-10-15-copilot-in-slack-and-teams-adds-model-and-repository-updates",
-      "published": "2026-10-16T02:16:35+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Download GitHub Code Quality license usage as a CSV",
-      "summary": "You can now download a CSV report of your GitHub Code Quality license usage to reconcile your license count with your own records. The report includes: Each active committer who… The post Download GitHub Code Quality lic",
-      "url": "https://github.blog/changelog/2026-10-15-download-github-code-quality-license-usage-as-a-csv",
-      "published": "2026-10-15T20:11:26+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -348,25 +328,6 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Amp puts AI agents to work beyond code with OpenAI models",
-      "summary": "See how Amp pushes the frontier of what agents can do with GPT-6 Astra, Ultrafast, GPT-Live-1, and Sign in with ChatGPT.",
-      "url": "https://openai.com/index/amp-beyond-coding",
-      "published": "2026-10-14T12:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "研究"
-      ]
-    },
-    {
       "source": "google-gemini",
       "platform": "AI",
       "label": "Gemini公式",
@@ -419,6 +380,41 @@
       "score": 3,
       "tags": [
         "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "Dependabot now supports npm 12, pnpm 11 and 12, and Bun 1.4",
+      "summary": "You can now upgrade your projects to npm 12, pnpm 11 or 12, or Bun 1.4 and keep receiving Dependabot updates. Support for these package manager versions is available to… The post Dependabot now supports npm 12, pnpm 11 a",
+      "url": "https://github.blog/changelog/2026-10-20-dependabot-now-supports-npm-12-pnpm-11-and-12-and-bun-1-4",
+      "published": "2026-10-20T13:52:38+00:00",
+      "score": 2,
+      "tags": [
+        "開発"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "OpenAI acquires Orchestra Bio",
+      "summary": "OpenAI is acquiring Orchestra Bio to bring AI-powered operations to life sciences R&D, helping biopharma teams accelerate drug development and advance new treatments.",
+      "url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
+      "published": "2026-10-20T00:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
         "重要"
       ]
     },
@@ -477,17 +473,17 @@
       ]
     },
     {
-      "source": "openai",
+      "source": "google-gemini",
       "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
+      "label": "Gemini公式",
       "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "その他",
+      "provider": "gemini",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Sullivan & Cromwell brings legal expertise into agreement review",
-      "summary": "In collaboration with OpenAI, Sullivan & Cromwell developed Agreement Analyzer, an AI tool for identifying issues in a draft agreement.",
-      "url": "https://openai.com/index/sullivan-cromwell",
-      "published": "2026-10-15T00:00:00+00:00",
+      "title": "Developing Gemini 4 Argon responsibly and safely",
+      "summary": "Learn more about our approach to safety and security for Gemini 4 Argon.",
+      "url": "https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/",
+      "published": "2026-10-13T18:00:00+00:00",
       "score": 2,
       "tags": [
         "AI",
@@ -495,20 +491,38 @@
       ]
     },
     {
-      "source": "anthropic-claude",
+      "source": "google-gemini",
       "platform": "AI",
-      "label": "Claude / Anthropic公式",
+      "label": "Gemini公式",
       "genre": "AI",
-      "provider": "claude",
-      "topic": "その他",
-      "sourceWeight": 2,
-      "title": "An Update On Independent Evaluators",
-      "summary": "公式サイトマップで更新を検知。内容は公式ページで確認。",
-      "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
-      "published": "2026-10-19T13:19:29.000Z",
+      "provider": "gemini",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Gemini 4 Argon comes to the Gemini app.",
+      "summary": "Gemini 4 Argon brings frontier reasoning and agentic coding to the Google Gemini app. Google AI Pro and Ultra subscribers can now access Gemini 4 Argon.",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/",
+      "published": "2026-10-13T16:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "How I got over 300 Tor exit nodes removed",
+      "summary": "Comments",
+      "url": "https://kaba.cx/posts/20261020_Tor/",
+      "published": "2026-10-20T18:44:42+00:00",
       "score": 1,
       "tags": [
-        "AI"
+        "技術"
       ]
     }
   ],
@@ -557,9 +571,9 @@
         ],
         "latest": [
           {
-            "title": "Amp puts AI agents to work beyond code with OpenAI models",
-            "url": "https://openai.com/index/amp-beyond-coding",
-            "published": "2026-10-14T12:00:00+00:00",
+            "title": "OpenAI acquires Orchestra Bio",
+            "url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
+            "published": "2026-10-20T00:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           },
           {
@@ -618,6 +632,18 @@
             "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
             "published": "2026-10-13T16:00:00+00:00",
             "source": "Gemini公式"
+          },
+          {
+            "title": "Developing Gemini 4 Argon responsibly and safely",
+            "url": "https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/",
+            "published": "2026-10-13T18:00:00+00:00",
+            "source": "Gemini公式"
+          },
+          {
+            "title": "Gemini 4 Argon comes to the Gemini app.",
+            "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/",
+            "published": "2026-10-13T16:00:00+00:00",
+            "source": "Gemini公式"
           }
         ]
       },
@@ -649,7 +675,7 @@
           {
             "title": "An Update On Independent Evaluators",
             "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
-            "published": "2026-10-19T13:19:29.000Z",
+            "published": "2026-10-20T03:29:34.000Z",
             "source": "Claude / Anthropic公式"
           }
         ]
@@ -678,5 +704,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-20T11:28:01.525350+00:00"
+  "lastSuccessAt": "2026-10-20T21:31:52.938391+00:00"
 }
