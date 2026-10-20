@@ -1,22 +1,22 @@
 {
-  "updatedAt": "2026-10-20T03:18:01.736518+00:00",
+  "updatedAt": "2026-10-20T03:28:01.547604+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "ECHOES: Seeing Beyond the Current Image via Recursive History Compression and Privileged On-Policy Distillation",
+  "topLine": "Copilot model policy API for enterprise, orgs, and teams",
   "cards": [
     {
       "genre": "開発",
-      "count": 13,
+      "count": 14,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "Xcode 27 runner image generally available / Upcoming deprecation of selected GitHub Copilot models in mid-November / GitHub’s model for secret detection: Finding more secrets with less noise",
-      "topUrl": "https://github.blog/changelog/2026-10-15-xcode-27-runner-image-generally-available",
+      "signal": "Copilot model policy API for enterprise, orgs, and teams / GitHub Copilot models deprecated on October 19, 2026 / Xcode 27 runner image generally available",
+      "topUrl": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams",
       "score": 4
     },
     {
       "genre": "AI",
-      "count": 9,
+      "count": 8,
       "decision": "AI/Codex運用の変化を確認",
       "signal": "Amp puts AI agents to work beyond code with OpenAI models / Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems",
       "topUrl": "https://openai.com/index/amp-beyond-coding",
@@ -34,12 +34,26 @@
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "In Context",
-      "topUrl": "https://www.youtube.com/watch?v=P5eO7BNyJao",
+      "signal": "OpenBSD 8.0",
+      "topUrl": "https://www.openbsd.org/80.html",
       "score": 1
     }
   ],
   "focus": [
+    {
+      "label": "開発",
+      "title": "Copilot model policy API for enterprise, orgs, and teams",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams"
+    },
+    {
+      "label": "開発",
+      "title": "GitHub Copilot models deprecated on October 19, 2026",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026"
+    },
     {
       "label": "論文",
       "title": "ECHOES: Seeing Beyond the Current Image via Recursive History Compression and Privileged On-Policy Distillation",
@@ -53,13 +67,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
       "url": "https://github.blog/changelog/2026-10-15-xcode-27-runner-image-generally-available"
-    },
-    {
-      "label": "開発",
-      "title": "Upcoming deprecation of selected GitHub Copilot models in mid-November",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november"
     },
     {
       "label": "開発",
@@ -88,16 +95,47 @@
       "why": "Codex/AI開発判断に関係",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2610.22373"
-    },
-    {
-      "label": "論文",
-      "title": "Sensitivity Analysis of Decision Rules in an Agent-Based Agro-Ecological Model",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.22420"
     }
   ],
   "items": [
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Copilot model policy API for enterprise, orgs, and teams",
+      "summary": "You can now use the REST API to retrieve and update Copilot model policies for enterprises, enterprise teams, enterprise apps, and organizations. What’s new GET and PATCH endpoints are now… The post Copilot model policy ",
+      "url": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams",
+      "published": "2026-10-19T21:32:18+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "GitHub Copilot models deprecated on October 19, 2026",
+      "summary": "As of today, October 19, 2026, we have deprecated the following models across most GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions). These… The post GitHub Copi",
+      "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
+      "published": "2026-10-19T21:27:10+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
+      ]
+    },
     {
       "source": "arxiv-ai",
       "platform": "論文",
@@ -135,25 +173,6 @@
         "開発",
         "重要",
         "制作"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Upcoming deprecation of selected GitHub Copilot models in mid-November",
-      "summary": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on November 16th, 2026: Model Deprecation date… The post Upco",
-      "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
-      "published": "2026-10-15T19:35:13+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
-        "研究"
       ]
     },
     {
@@ -470,6 +489,24 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "ガジェット",
+      "sourceWeight": 1,
+      "title": "Advancing coding in low‑resource programming languages",
+      "summary": "Learn how OpenAI is improving ChatGPT across low-resource programming languages, with new evaluations for software engineering, SQLite, and COBOL migration.",
+      "url": "https://openai.com/index/low-resource-programming-languages",
+      "published": "2026-10-19T12:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -498,42 +535,6 @@
       "title": "From Events to Reasoning: Hierarchical Rule Composition over Explicit States",
       "summary": "arXiv:2610.22403v1 Announce Type: new Abstract: What a reasoning system emits is a conclusion; what it owes is a justification. Producing one requires every operation to be admissible on the facts actually available, the",
       "url": "https://arxiv.org/abs/2610.22403",
-      "published": "2026-10-19T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "From Natural Language Intent to Executable Control: Hierarchical Feedback-Guided LLM Planning for Multi-component Cyber-Physical Systems",
-      "summary": "arXiv:2610.22441v1 Announce Type: new Abstract: Large language models (LLMs) provide a convenient interface for translating natural language commands into task plans for cyber-physical systems (CPSs). However, two gaps h",
-      "url": "https://arxiv.org/abs/2610.22441",
-      "published": "2026-10-19T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Null Controls Are Necessary but Not Sufficient: Evaluating Acceptance Guards for Scientific Discovery and Interpretability",
-      "summary": "arXiv:2610.22445v1 Announce Type: new Abstract: Automated discovery systems propose scientific explanations and test which to accept. Does passing a test establish the intended claim? We develop four executable operation",
-      "url": "https://arxiv.org/abs/2610.22445",
       "published": "2026-10-19T04:00:00+00:00",
       "score": 2,
       "tags": [
@@ -593,9 +594,9 @@
             "source": "ChatGPT / OpenAI公式"
           },
           {
-            "title": "Benefit Street Partners answers questions faster with Codex",
-            "url": "https://openai.com/index/benefit-street-partners",
-            "published": "2026-10-16T00:00:00+00:00",
+            "title": "Advancing coding in low‑resource programming languages",
+            "url": "https://openai.com/index/low-resource-programming-languages",
+            "published": "2026-10-19T12:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           },
           {
@@ -605,9 +606,9 @@
             "source": "ChatGPT / OpenAI公式"
           },
           {
-            "title": "Sullivan & Cromwell brings legal expertise into agreement review",
-            "url": "https://openai.com/index/sullivan-cromwell",
-            "published": "2026-10-15T00:00:00+00:00",
+            "title": "Benefit Street Partners answers questions faster with Codex",
+            "url": "https://openai.com/index/benefit-street-partners",
+            "published": "2026-10-16T00:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           }
         ]
@@ -647,12 +648,6 @@
             "title": "Gemini 4 Argon: Built to solve your hardest problems",
             "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
             "published": "2026-10-13T16:00:00+00:00",
-            "source": "Gemini公式"
-          },
-          {
-            "title": "Developing Gemini 4 Argon responsibly and safely",
-            "url": "https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/",
-            "published": "2026-10-13T18:00:00+00:00",
             "source": "Gemini公式"
           }
         ]
@@ -714,5 +709,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-19T21:25:32.542526+00:00"
+  "lastSuccessAt": "2026-10-20T03:28:01.547604+00:00"
 }

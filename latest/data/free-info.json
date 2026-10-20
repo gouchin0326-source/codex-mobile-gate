@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-20T03:18:01.736518+00:00",
-  "lastSuccessAt": "2026-10-19T21:25:32.542526+00:00",
+  "updatedAt": "2026-10-20T03:28:01.547604+00:00",
+  "lastSuccessAt": "2026-10-20T03:28:01.547604+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -126,15 +126,15 @@
   "contexts": [
     {
       "genre": "開発",
-      "count": 13,
-      "signal": "Xcode 27 runner image generally available / Upcoming deprecation of selected GitHub Copilot models in mid-November / GitHub’s model for secret detection: Finding more secrets with ",
+      "count": 14,
+      "signal": "Copilot model policy API for enterprise, orgs, and teams / GitHub Copilot models deprecated on October 19, 2026 / Xcode 27 runner image generally available",
       "decision": "CG開発・GitHub運用へ反映候補",
-      "topUrl": "https://github.blog/changelog/2026-10-15-xcode-27-runner-image-generally-available",
+      "topUrl": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams",
       "score": 4
     },
     {
       "genre": "AI",
-      "count": 9,
+      "count": 8,
       "signal": "Amp puts AI agents to work beyond code with OpenAI models / Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://openai.com/index/amp-beyond-coding",
@@ -151,21 +151,40 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "In Context",
+      "signal": "OpenBSD 8.0",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://www.youtube.com/watch?v=P5eO7BNyJao",
+      "topUrl": "https://www.openbsd.org/80.html",
       "score": 1
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 2.0 - 28 km NNE of Chickaloon, Alaska",
+      "signal": "M 2.9 - 45 km NNE of Cruz Bay, U.S. Virgin Islands",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026utdaiz",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71537308",
       "score": 1
     }
   ],
   "items": [
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Copilot model policy API for enterprise, orgs, and teams",
+      "summary": "You can now use the REST API to retrieve and update Copilot model policies for enterprises, enterprise teams, enterprise apps, and organizations. What’s new GET and PATCH endpoints are now… The post Copilot model policy ",
+      "url": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams",
+      "published": "2026-10-19T21:32:18+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
+      ]
+    },
     {
       "source": "arxiv-ai",
       "platform": "論文",
@@ -184,25 +203,6 @@
         "重要",
         "制作",
         "研究"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Xcode 27 runner image generally available",
-      "summary": "You can now use the generally available Xcode 27 runner image to build and test your Apple applications in GitHub Actions. Previously in public preview, this GitHub-hosted image runs on… The post Xcode 27 runner image ge",
-      "url": "https://github.blog/changelog/2026-10-15-xcode-27-runner-image-generally-available",
-      "published": "2026-10-16T04:36:30+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
-        "制作"
       ]
     },
     {
@@ -266,10 +266,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.0 - 28 km NNE of Chickaloon, Alaska",
-      "summary": "28 km NNE of Chickaloon, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026utdaiz",
-      "published": "2026-10-19T21:19:00.999000+00:00",
+      "title": "M 2.9 - 45 km NNE of Cruz Bay, U.S. Virgin Islands",
+      "summary": "45 km NNE of Cruz Bay, U.S. Virgin Islands",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71537308",
+      "published": "2026-10-20T03:05:22.900000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -283,10 +283,10 @@
       "provider": null,
       "topic": "その他",
       "sourceWeight": 1,
-      "title": "In Context",
+      "title": "OpenBSD 8.0",
       "summary": "Comments",
-      "url": "https://www.youtube.com/watch?v=P5eO7BNyJao",
-      "published": "2026-10-19T18:25:48+00:00",
+      "url": "https://www.openbsd.org/80.html",
+      "published": "2026-10-20T01:46:00+00:00",
       "score": 1,
       "tags": [
         "技術"
@@ -317,15 +317,34 @@
       "provider": null,
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "Upcoming deprecation of selected GitHub Copilot models in mid-November",
-      "summary": "We will deprecate the following models across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on November 16th, 2026: Model Deprecation date… The post Upco",
-      "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november",
-      "published": "2026-10-15T19:35:13+00:00",
+      "title": "GitHub Copilot models deprecated on October 19, 2026",
+      "summary": "As of today, October 19, 2026, we have deprecated the following models across most GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions). These… The post GitHub Copi",
+      "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
+      "published": "2026-10-19T21:27:10+00:00",
       "score": 4,
       "tags": [
         "開発",
         "重要",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Xcode 27 runner image generally available",
+      "summary": "You can now use the generally available Xcode 27 runner image to build and test your Apple applications in GitHub Actions. Previously in public preview, this GitHub-hosted image runs on… The post Xcode 27 runner image ge",
+      "url": "https://github.blog/changelog/2026-10-15-xcode-27-runner-image-generally-available",
+      "published": "2026-10-16T04:36:30+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "制作"
       ]
     },
     {
@@ -585,6 +604,24 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "ガジェット",
+      "sourceWeight": 1,
+      "title": "Advancing coding in low‑resource programming languages",
+      "summary": "Learn how OpenAI is improving ChatGPT across low-resource programming languages, with new evaluations for software engineering, SQLite, and COBOL migration.",
+      "url": "https://openai.com/index/low-resource-programming-languages",
+      "published": "2026-10-19T12:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -662,11 +699,11 @@
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
-      "topic": "技術",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Benefit Street Partners answers questions faster with Codex",
-      "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
-      "url": "https://openai.com/index/benefit-street-partners",
+      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+      "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
+      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
       "published": "2026-10-16T00:00:00+00:00",
       "score": 2,
       "tags": [
@@ -680,11 +717,11 @@
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
-      "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
-      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+      "title": "Benefit Street Partners answers questions faster with Codex",
+      "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
+      "url": "https://openai.com/index/benefit-street-partners",
       "published": "2026-10-16T00:00:00+00:00",
       "score": 2,
       "tags": [
@@ -709,90 +746,54 @@
         "AI",
         "重要"
       ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "SentinelOne cuts malware analysis from weeks to hours",
-      "summary": "With OpenAI Daybreak, SentinelOne cuts weeks of malware analysis to hours, creating capacity to investigate more threats.",
-      "url": "https://openai.com/index/sentinelone",
-      "published": "2026-10-14T12:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "google-gemini",
-      "platform": "AI",
-      "label": "Gemini公式",
-      "genre": "AI",
-      "provider": "gemini",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Developing Gemini 4 Argon responsibly and safely",
-      "summary": "Learn more about our approach to safety and security for Gemini 4 Argon.",
-      "url": "https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/",
-      "published": "2026-10-13T18:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-19T21:25:32.542526+00:00",
-      "lastAttemptAt": "2026-10-19T21:25:32.542526+00:00",
+      "lastSuccessAt": "2026-10-20T03:28:01.547604+00:00",
+      "lastAttemptAt": "2026-10-20T03:28:01.547604+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-19T21:25:32.542526+00:00",
-      "lastAttemptAt": "2026-10-19T21:25:32.542526+00:00",
+      "lastSuccessAt": "2026-10-20T03:28:01.547604+00:00",
+      "lastAttemptAt": "2026-10-20T03:28:01.547604+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-19T21:25:32.542526+00:00",
-      "lastAttemptAt": "2026-10-19T21:25:32.542526+00:00",
+      "lastSuccessAt": "2026-10-20T03:28:01.547604+00:00",
+      "lastAttemptAt": "2026-10-20T03:28:01.547604+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-19T21:25:32.542526+00:00",
-      "lastAttemptAt": "2026-10-19T21:25:32.542526+00:00",
+      "lastSuccessAt": "2026-10-20T03:28:01.547604+00:00",
+      "lastAttemptAt": "2026-10-20T03:28:01.547604+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-19T21:25:32.542526+00:00",
-      "lastAttemptAt": "2026-10-19T21:25:32.542526+00:00",
+      "lastSuccessAt": "2026-10-20T03:28:01.547604+00:00",
+      "lastAttemptAt": "2026-10-20T03:28:01.547604+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-19T21:25:32.542526+00:00",
-      "lastAttemptAt": "2026-10-19T21:25:32.542526+00:00",
+      "lastSuccessAt": "2026-10-20T03:28:01.547604+00:00",
+      "lastAttemptAt": "2026-10-20T03:28:01.547604+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -807,8 +808,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-19T21:25:32.542526+00:00",
-      "lastAttemptAt": "2026-10-19T21:25:32.542526+00:00",
+      "lastSuccessAt": "2026-10-20T03:28:01.547604+00:00",
+      "lastAttemptAt": "2026-10-20T03:28:01.547604+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
