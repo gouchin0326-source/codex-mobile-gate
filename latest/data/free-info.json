@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-21T03:28:01.917037+00:00",
-  "lastSuccessAt": "2026-10-20T21:31:52.938391+00:00",
+  "updatedAt": "2026-10-21T03:38:02.023247+00:00",
+  "lastSuccessAt": "2026-10-21T03:38:02.023247+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -134,27 +134,27 @@
     },
     {
       "genre": "AI",
-      "count": 9,
-      "signal": "Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems / OpenAI acquires Orchestra Bio",
+      "count": 10,
+      "signal": "Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems / Terminal X matches senior investor judgment 88.6% with GPT-6.1",
       "decision": "AI/Codex運用の変化を確認",
       "topUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/",
       "score": 3
     },
     {
       "genre": "災害",
-      "count": 7,
-      "signal": "M 2.6 - 11 km E of Pearsall, Texas / M 2.4 - 27 km NE of Valdez, Alaska / M 1.8 Explosion - 4 km SE of Eagle Point, Oregon",
+      "count": 6,
+      "signal": "M 2.8 - 28 km WNW of Nanwalek, Alaska / M 0.5 - 8 km NW of The Geysers, CA / M 1.8 - 110 km NW of Yakutat, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3pz",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uvldgm",
       "score": 1
     },
     {
       "genre": "技術",
       "count": 1,
-      "signal": "How I got over 300 Tor exit nodes removed",
+      "signal": "Upcoming Critical PHP Security Release",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://kaba.cx/posts/20261020_Tor/",
-      "score": 1
+      "topUrl": "https://www.php.net/archive/2026.php#2026-10-20-1",
+      "score": 2
     }
   ],
   "items": [
@@ -216,6 +216,24 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Upcoming Critical PHP Security Release",
+      "summary": "Comments",
+      "url": "https://www.php.net/archive/2026.php#2026-10-20-1",
+      "published": "2026-10-20T22:23:54+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "重要"
+      ]
+    },
+    {
       "source": "openai",
       "platform": "AI",
       "label": "ChatGPT / OpenAI公式",
@@ -223,10 +241,10 @@
       "provider": "chatgpt",
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "OpenAI acquires Orchestra Bio",
-      "summary": "OpenAI is acquiring Orchestra Bio to bring AI-powered operations to life sciences R&D, helping biopharma teams accelerate drug development and advance new treatments.",
-      "url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
-      "published": "2026-10-20T00:00:00+00:00",
+      "title": "Terminal X matches senior investor judgment 88.6% with GPT-6.1",
+      "summary": "Terminal X’s Eval Agent grades outputs against a 54-criterion rubric, catching 25% more deviances from a fund’s mandate with GPT-6.1 Sol.",
+      "url": "https://openai.com/index/terminal-x",
+      "published": "2026-10-20T07:00:00+00:00",
       "score": 2,
       "tags": [
         "AI",
@@ -237,30 +255,13 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.6 - 11 km E of Pearsall, Texas",
-      "summary": "11 km E of Pearsall, Texas",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3pz",
-      "published": "2026-10-20T20:46:54.391000+00:00",
+      "title": "M 2.8 - 28 km WNW of Nanwalek, Alaska",
+      "summary": "28 km WNW of Nanwalek, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uvldgm",
+      "published": "2026-10-21T03:21:49.949000+00:00",
       "score": 1,
       "tags": [
         "災害"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "How I got over 300 Tor exit nodes removed",
-      "summary": "Comments",
-      "url": "https://kaba.cx/posts/20261020_Tor/",
-      "published": "2026-10-20T18:44:42+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
       ]
     },
     {
@@ -539,6 +540,24 @@
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "OpenAI acquires Orchestra Bio",
+      "summary": "OpenAI is acquiring Orchestra Bio to bring AI-powered operations to life sciences R&D, helping biopharma teams accelerate drug development and advance new treatments.",
+      "url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
+      "published": "2026-10-20T00:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
       "topic": "ガジェット",
       "sourceWeight": 1,
       "title": "Advancing coding in low‑resource programming languages",
@@ -557,11 +576,11 @@
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
-      "topic": "技術",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Benefit Street Partners answers questions faster with Codex",
-      "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
-      "url": "https://openai.com/index/benefit-street-partners",
+      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
+      "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
+      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
       "published": "2026-10-16T00:00:00+00:00",
       "score": 2,
       "tags": [
@@ -575,11 +594,11 @@
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
-      "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
-      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
+      "title": "Benefit Street Partners answers questions faster with Codex",
+      "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
+      "url": "https://openai.com/index/benefit-street-partners",
       "published": "2026-10-16T00:00:00+00:00",
       "score": 2,
       "tags": [
@@ -627,10 +646,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.4 - 27 km NE of Valdez, Alaska",
-      "summary": "27 km NE of Valdez, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uuxnfc",
-      "published": "2026-10-20T20:33:12.106000+00:00",
+      "title": "M 0.5 - 8 km NW of The Geysers, CA",
+      "summary": "8 km NW of The Geysers, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75452766",
+      "published": "2026-10-21T03:16:19.770000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -640,10 +659,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.8 Explosion - 4 km SE of Eagle Point, Oregon",
-      "summary": "4 km SE of Eagle Point, Oregon",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714122592",
-      "published": "2026-10-20T20:04:46.210000+00:00",
+      "title": "M 1.8 - 110 km NW of Yakutat, Alaska",
+      "summary": "110 km NW of Yakutat, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uvkrgf",
+      "published": "2026-10-21T03:07:40.419000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -653,10 +672,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 4.9 - 187 km NW of Port-Olry, Vanuatu",
-      "summary": "187 km NW of Port-Olry, Vanuatu",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3pq",
-      "published": "2026-10-20T20:03:26.613000+00:00",
+      "title": "M 1.1 - 7 km SSE of Bombay Beach, CA",
+      "summary": "7 km SSE of Bombay Beach, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41349951",
+      "published": "2026-10-21T03:06:58.840000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -666,10 +685,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 4.7 - Kuril Islands",
-      "summary": "Kuril Islands",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3pm",
-      "published": "2026-10-20T19:53:59.721000+00:00",
+      "title": "M 2.6 - 57 km S of Whites City, New Mexico",
+      "summary": "57 km S of Whites City, New Mexico",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/tx2026usbxno",
+      "published": "2026-10-21T03:05:15.733000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -679,23 +698,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.6 - 3 km SE of Home Gardens, CA",
-      "summary": "3 km SE of Home Gardens, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41349839",
-      "published": "2026-10-20T19:36:33.130000+00:00",
-      "score": 1,
-      "tags": [
-        "災害"
-      ]
-    },
-    {
-      "source": "usgs",
-      "label": "地震",
-      "genre": "災害",
-      "title": "M 1.0 - 7 km NNE of Fontana, CA",
-      "summary": "7 km NNE of Fontana, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41349831",
-      "published": "2026-10-20T19:23:17.800000+00:00",
+      "title": "M 1.7 - 34 km SSE of Lovelock, Nevada",
+      "summary": "34 km SSE of Lovelock, Nevada",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00926032",
+      "published": "2026-10-21T03:05:07.596000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -706,48 +712,48 @@
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-20T21:31:52.938391+00:00",
-      "lastAttemptAt": "2026-10-20T21:31:52.938391+00:00",
+      "lastSuccessAt": "2026-10-21T03:38:02.023247+00:00",
+      "lastAttemptAt": "2026-10-21T03:38:02.023247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-20T21:31:52.938391+00:00",
-      "lastAttemptAt": "2026-10-20T21:31:52.938391+00:00",
+      "lastSuccessAt": "2026-10-21T03:38:02.023247+00:00",
+      "lastAttemptAt": "2026-10-21T03:38:02.023247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-20T21:31:52.938391+00:00",
-      "lastAttemptAt": "2026-10-20T21:31:52.938391+00:00",
+      "lastSuccessAt": "2026-10-21T03:38:02.023247+00:00",
+      "lastAttemptAt": "2026-10-21T03:38:02.023247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-20T21:31:52.938391+00:00",
-      "lastAttemptAt": "2026-10-20T21:31:52.938391+00:00",
+      "lastSuccessAt": "2026-10-21T03:38:02.023247+00:00",
+      "lastAttemptAt": "2026-10-21T03:38:02.023247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-20T21:31:52.938391+00:00",
-      "lastAttemptAt": "2026-10-20T21:31:52.938391+00:00",
+      "lastSuccessAt": "2026-10-21T03:38:02.023247+00:00",
+      "lastAttemptAt": "2026-10-21T03:38:02.023247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-20T21:31:52.938391+00:00",
-      "lastAttemptAt": "2026-10-20T21:31:52.938391+00:00",
+      "lastSuccessAt": "2026-10-21T03:38:02.023247+00:00",
+      "lastAttemptAt": "2026-10-21T03:38:02.023247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -762,8 +768,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-20T21:31:52.938391+00:00",
-      "lastAttemptAt": "2026-10-20T21:31:52.938391+00:00",
+      "lastSuccessAt": "2026-10-21T03:38:02.023247+00:00",
+      "lastAttemptAt": "2026-10-21T03:38:02.023247+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
