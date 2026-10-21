@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-20T23:58:04.779615+00:00",
+  "updatedAt": "2026-10-21T00:08:01.627469+00:00",
   "sourceUpdatedAt": "2026-10-20T21:31:52.938391+00:00",
   "status": "fresh",
   "mode": "today-rule-based",
@@ -51,19 +51,6 @@
       "processing": "rule-based"
     },
     {
-      "id": "openai:21",
-      "genre": "AI",
-      "title": "Advancing coding in low‑resource programming languages",
-      "reason": "AIの新着を確認",
-      "publishedAt": "2026-10-19T12:00:00+00:00",
-      "observedAt": "2026-10-20T21:31:52.938391+00:00",
-      "source": "ChatGPT / OpenAI公式",
-      "url": "https://openai.com/index/low-resource-programming-languages",
-      "score": 2,
-      "stale": false,
-      "processing": "rule-based"
-    },
-    {
       "id": "lobsters:5",
       "genre": "技術",
       "title": "How I got over 300 Tor exit nodes removed",
@@ -72,6 +59,19 @@
       "observedAt": "2026-10-20T21:31:52.938391+00:00",
       "source": "技術RSS",
       "url": "https://kaba.cx/posts/20261020_Tor/",
+      "score": 1,
+      "stale": false,
+      "processing": "rule-based"
+    },
+    {
+      "id": "anthropic-claude:6",
+      "genre": "AI",
+      "title": "An Update On Independent Evaluators",
+      "reason": "AIの新着を確認",
+      "publishedAt": "2026-10-20T03:29:34.000Z",
+      "observedAt": "2026-10-20T21:31:52.938391+00:00",
+      "source": "Claude / Anthropic公式",
+      "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
       "score": 1,
       "stale": false,
       "processing": "rule-based"
