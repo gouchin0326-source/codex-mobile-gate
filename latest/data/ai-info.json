@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-10-21T11:28:01.377403+00:00",
+  "updatedAt": "2026-10-21T11:38:00.993420+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "Copilot model policy API for enterprise, orgs, and teams",
+  "topLine": "Large language model and reinforcement learning based autonomous construction and progress updates",
   "cards": [
     {
       "genre": "開発",
@@ -15,8 +15,16 @@
       "score": 4
     },
     {
+      "genre": "論文",
+      "count": 8,
+      "decision": "必要時だけ確認",
+      "signal": "Large language model and reinforcement learning based autonomous construction and progress updates / Navalia: Advancing Cowork Agents through Verifiable Task Synthesis and Long-Horizon Post-Training / MedPAO-Assist: Edge",
+      "topUrl": "https://arxiv.org/abs/2610.26899",
+      "score": 4
+    },
+    {
       "genre": "AI",
-      "count": 10,
+      "count": 7,
       "decision": "AI/Codex運用の変化を確認",
       "signal": "Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems / Terminal X matches senior investor judgment 88.6% with GPT-6.1",
       "topUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/",
@@ -32,6 +40,13 @@
     }
   ],
   "focus": [
+    {
+      "label": "論文",
+      "title": "Large language model and reinforcement learning based autonomous construction and progress updates",
+      "why": "Codex/AI開発判断に関係",
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2610.26899"
+    },
     {
       "label": "開発",
       "title": "Copilot model policy API for enterprise, orgs, and teams",
@@ -54,42 +69,55 @@
       "url": "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/"
     },
     {
-      "label": "開発",
-      "title": "Updates to GitHub secret scanning",
+      "label": "論文",
+      "title": "Navalia: Advancing Cowork Agents through Verifiable Task Synthesis and Long-Horizon Post-Training",
       "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-20-updates-to-github-secret-scanning"
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2610.26887"
     },
     {
-      "label": "開発",
-      "title": "Dependabot alerts REST API now includes dependency versions",
+      "label": "論文",
+      "title": "MedPAO-Assist: Edge-Deployable, Modality-Aware Agentic AI for Radiology Report Structuring",
       "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-20-dependabot-alerts-rest-api-now-includes-dependency-versions"
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2610.26913"
     },
     {
-      "label": "開発",
-      "title": "GitHub package firewall in public preview",
+      "label": "論文",
+      "title": "DataPraxis: Scaling Analytics Tasks via Verified Workspace Evolution",
       "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-20-github-package-firewall-in-public-preview"
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2610.26924"
     },
     {
-      "label": "開発",
-      "title": "How 3 Java Champions are using GitHub Copilot for increased productivity",
+      "label": "論文",
+      "title": "Industrial Agentic AI: LLM-Driven New-Generation Agents for Smart Manufacturing",
       "why": "Codex/AI開発判断に関係",
-      "source": "GitHub",
-      "url": "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/"
-    },
-    {
-      "label": "開発",
-      "title": "How to continue a GitHub Copilot app session in VS Code",
-      "why": "Codex/AI開発判断に関係",
-      "source": "GitHub",
-      "url": "https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code/"
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2610.26941"
     }
   ],
   "items": [
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Large language model and reinforcement learning based autonomous construction and progress updates",
+      "summary": "arXiv:2610.26899v1 Announce Type: new Abstract: Due to the rapid growth of the global population, traditional construction methods are gradually unable to meet the current housing demand. The advancement of machine learn",
+      "url": "https://arxiv.org/abs/2610.26899",
+      "published": "2026-10-21T04:00:00+00:00",
+      "score": 4,
+      "tags": [
+        "論文",
+        "重要",
+        "開発",
+        "研究"
+      ]
+    },
     {
       "source": "github-changelog",
       "platform": "開発",
@@ -143,6 +171,101 @@
       "score": 4,
       "tags": [
         "開発",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Navalia: Advancing Cowork Agents through Verifiable Task Synthesis and Long-Horizon Post-Training",
+      "summary": "arXiv:2610.26887v1 Announce Type: new Abstract: Large language model (LLM) agents are evolving from conversational assistants into Cowork Agents capable of autonomous planning, tool use, and complex task execution. Finan",
+      "url": "https://arxiv.org/abs/2610.26887",
+      "published": "2026-10-21T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "MedPAO-Assist: Edge-Deployable, Modality-Aware Agentic AI for Radiology Report Structuring",
+      "summary": "arXiv:2610.26913v1 Announce Type: new Abstract: The adoption of Large Language Models for radiology report structuring has been largely dominated by either proprietary cloud-based models or large open models requiring hi",
+      "url": "https://arxiv.org/abs/2610.26913",
+      "published": "2026-10-21T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "DataPraxis: Scaling Analytics Tasks via Verified Workspace Evolution",
+      "summary": "arXiv:2610.26924v1 Announce Type: new Abstract: General-purpose agents are increasingly expected to perform professional analytics work, which requires sustained reasoning, iterative investigation, and reliable evidence.",
+      "url": "https://arxiv.org/abs/2610.26924",
+      "published": "2026-10-21T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Industrial Agentic AI: LLM-Driven New-Generation Agents for Smart Manufacturing",
+      "summary": "arXiv:2610.26941v1 Announce Type: new Abstract: Large language models (LLMs) are enabling agents to move beyond predefined workflows toward autonomous planning and execution, creating new opportunities for smart manufact",
+      "url": "https://arxiv.org/abs/2610.26941",
+      "published": "2026-10-21T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "MAMath-Bench: Process-Aware and Robust Evaluation of Multimodal Multi-Agent Mathematical Reasoning",
+      "summary": "arXiv:2610.26943v1 Announce Type: new Abstract: Mathematical reasoning is a fundamental capability for educational applications of Large Language Models (LLMs), where reliable problem solving requires not only correct an",
+      "url": "https://arxiv.org/abs/2610.26943",
+      "published": "2026-10-21T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
         "重要",
         "研究"
       ]
@@ -384,146 +507,39 @@
       ]
     },
     {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
       "provider": null,
-      "topic": "技術",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Upcoming Critical PHP Security Release",
-      "summary": "Comments",
-      "url": "https://www.php.net/archive/2026.php#2026-10-20-1",
-      "published": "2026-10-20T22:23:54+00:00",
+      "title": "Pareto-Optimal RTL Code Generation via Multi-Objective Reinforcement Learning with Large Language Models",
+      "summary": "arXiv:2610.26904v1 Announce Type: new Abstract: Recent studies have proposed reinforcement learning with verifiable rewards (RLVR) methods that enable LLMs to generate high-quality RTL circuits from natural-language spec",
+      "url": "https://arxiv.org/abs/2610.26904",
+      "published": "2026-10-21T04:00:00+00:00",
       "score": 2,
       "tags": [
-        "技術",
-        "重要"
+        "論文",
+        "研究"
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
       "provider": null,
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Dependabot now supports npm 12, pnpm 11 and 12, and Bun 1.4",
-      "summary": "You can now upgrade your projects to npm 12, pnpm 11 or 12, or Bun 1.4 and keep receiving Dependabot updates. Support for these package manager versions is available to… The post Dependabot now supports npm 12, pnpm 11 a",
-      "url": "https://github.blog/changelog/2026-10-20-dependabot-now-supports-npm-12-pnpm-11-and-12-and-bun-1-4",
-      "published": "2026-10-20T13:52:38+00:00",
-      "score": 2,
-      "tags": [
-        "開発"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "Terminal X matches senior investor judgment 88.6% with GPT-6.1",
-      "summary": "Terminal X’s Eval Agent grades outputs against a 54-criterion rubric, catching 25% more deviances from a fund’s mandate with GPT-6.1 Sol.",
-      "url": "https://openai.com/index/terminal-x",
-      "published": "2026-10-20T07:00:00+00:00",
+      "title": "Fix, Not Just Resample: Bounded Compiler-Guided Repair in Lean 4",
+      "summary": "arXiv:2610.26942v1 Announce Type: new Abstract: Automated theorem provers often rely on sampling language models, but proof assistants like Lean reject each failed step with a precise error message --- information that p",
+      "url": "https://arxiv.org/abs/2610.26942",
+      "published": "2026-10-21T04:00:00+00:00",
       "score": 2,
       "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "OpenAI acquires Orchestra Bio",
-      "summary": "OpenAI is acquiring Orchestra Bio to bring AI-powered operations to life sciences R&D, helping biopharma teams accelerate drug development and advance new treatments.",
-      "url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
-      "published": "2026-10-20T00:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "ガジェット",
-      "sourceWeight": 1,
-      "title": "Advancing coding in low‑resource programming languages",
-      "summary": "Learn how OpenAI is improving ChatGPT across low-resource programming languages, with new evaluations for software engineering, SQLite, and COBOL migration.",
-      "url": "https://openai.com/index/low-resource-programming-languages",
-      "published": "2026-10-19T12:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
-      "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
-      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
-      "published": "2026-10-16T00:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Benefit Street Partners answers questions faster with Codex",
-      "summary": "Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review and faster follow-ups.",
-      "url": "https://openai.com/index/benefit-street-partners",
-      "published": "2026-10-16T00:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "google-gemini",
-      "platform": "AI",
-      "label": "Gemini公式",
-      "genre": "AI",
-      "provider": "gemini",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Developing Gemini 4 Argon responsibly and safely",
-      "summary": "Learn more about our approach to safety and security for Gemini 4 Argon.",
-      "url": "https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/",
-      "published": "2026-10-13T18:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
+        "論文",
+        "研究"
       ]
     }
   ],
@@ -633,18 +649,6 @@
             "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
             "published": "2026-10-13T16:00:00+00:00",
             "source": "Gemini公式"
-          },
-          {
-            "title": "Developing Gemini 4 Argon responsibly and safely",
-            "url": "https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/",
-            "published": "2026-10-13T18:00:00+00:00",
-            "source": "Gemini公式"
-          },
-          {
-            "title": "Gemini 4 Argon comes to the Gemini app.",
-            "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-4-argon-availability/",
-            "published": "2026-10-13T16:00:00+00:00",
-            "source": "Gemini公式"
           }
         ]
       },
@@ -705,5 +709,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-21T09:48:01.064210+00:00"
+  "lastSuccessAt": "2026-10-21T11:38:00.993420+00:00"
 }
