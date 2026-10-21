@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-21T13:38:01.018300+00:00",
-  "lastSuccessAt": "2026-10-21T11:38:00.993420+00:00",
+  "updatedAt": "2026-10-21T22:26:28.767780+00:00",
+  "lastSuccessAt": "2026-10-21T22:26:28.767780+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -126,27 +126,27 @@
   "contexts": [
     {
       "genre": "開発",
-      "count": 15,
+      "count": 14,
       "signal": "Copilot model policy API for enterprise, orgs, and teams / GitHub Copilot models deprecated on October 19, 2026 / GitHub’s model for secret detection: Finding more secrets with les",
       "decision": "CG開発・GitHub運用へ反映候補",
       "topUrl": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams",
       "score": 4
     },
     {
+      "genre": "AI",
+      "count": 9,
+      "signal": "OpenAI models are coming to Google Cloud / Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems",
+      "decision": "AI/Codex運用の変化を確認",
+      "topUrl": "https://openai.com/index/openai-models-google-cloud",
+      "score": 3
+    },
+    {
       "genre": "論文",
-      "count": 8,
+      "count": 7,
       "signal": "Large language model and reinforcement learning based autonomous construction and progress updates / Navalia: Advancing Cowork Agents through Verifiable Task Synthesis and Long-Hor",
       "decision": "更新あり。必要時だけ確認",
       "topUrl": "https://arxiv.org/abs/2610.26899",
       "score": 4
-    },
-    {
-      "genre": "AI",
-      "count": 7,
-      "signal": "Gemini 4 Argon is now available for developers. / Gemini 4 Argon: Built to solve your hardest problems / Terminal X matches senior investor judgment 88.6% with GPT-6.1",
-      "decision": "AI/Codex運用の変化を確認",
-      "topUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/",
-      "score": 3
     },
     {
       "genre": "技術",
@@ -159,9 +159,9 @@
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 2.7 - 20 km SW of Lovington, New Mexico",
+      "signal": "M 0.7 - 6 km WNW of Cobb, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3tb",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75453076",
       "score": 1
     }
   ],
@@ -225,6 +225,25 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "OpenAI models are coming to Google Cloud",
+      "summary": "OpenAI and Google Cloud are bringing frontier models and Codex workflows to Gemini’s Model Garden, available through Google Cloud Marketplace.",
+      "url": "https://openai.com/index/openai-models-google-cloud",
+      "published": "2026-10-21T12:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "google-gemini",
       "platform": "AI",
       "label": "Gemini公式",
@@ -262,31 +281,13 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Terminal X matches senior investor judgment 88.6% with GPT-6.1",
-      "summary": "Terminal X’s Eval Agent grades outputs against a 54-criterion rubric, catching 25% more deviances from a fund’s mandate with GPT-6.1 Sol.",
-      "url": "https://openai.com/index/terminal-x",
-      "published": "2026-10-20T07:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.7 - 20 km SW of Lovington, New Mexico",
-      "summary": "20 km SW of Lovington, New Mexico",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3tb",
-      "published": "2026-10-21T09:34:27.737000+00:00",
+      "title": "M 0.7 - 6 km WNW of Cobb, CA",
+      "summary": "6 km WNW of Cobb, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75453076",
+      "published": "2026-10-21T22:19:19.200000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -298,12 +299,12 @@
       "label": "Claude / Anthropic公式",
       "genre": "AI",
       "provider": "claude",
-      "topic": "技術",
+      "topic": "その他",
       "sourceWeight": 2,
-      "title": "Public Benefit Fund",
+      "title": "Enterprise Frontier Safeguards",
       "summary": "公式サイトマップで更新を検知。内容は公式ページで確認。",
-      "url": "https://www.anthropic.com/news/public-benefit-fund",
-      "published": "2026-10-21T04:27:07.000Z",
+      "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
+      "published": "2026-10-21T19:53:59.000Z",
       "score": 1,
       "tags": [
         "AI"
@@ -326,6 +327,42 @@
         "開発",
         "重要",
         "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "GitHub CLI: Opt in to expiring, auto-refreshing OAuth tokens",
+      "summary": "You can now use expiring, automatically refreshing OAuth credentials in GitHub CLI as part of a public preview. When you opt in, gh stores an expiring access token alongside a… The post GitHub CLI: Opt in to expiring, au",
+      "url": "https://github.blog/changelog/2026-10-21-github-cli-opt-in-to-expiring-auto-refreshing-oauth-tokens",
+      "published": "2026-10-21T16:43:23+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-blog",
+      "platform": "開発",
+      "label": "GitHub",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "The bridge to agent-scale Git infrastructure",
+      "summary": "We moved a copy of 99.99999% of GitHub's repositories to Azure. Here's how per-reference quorums will bring over the rest, and how object storage lets reads scale independently. The post The bridge to agent-scale Git inf",
+      "url": "https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/",
+      "published": "2026-10-21T16:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -514,24 +551,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Some Git over HTTPS may temporarily require authentication",
-      "summary": "During periods of unusual traffic, GitHub may temporarily require authentication for some clones and fetches of public repositories over HTTPS to help protect github.com’s availability. If an operation is affected,… The ",
-      "url": "https://github.blog/changelog/2026-10-19-some-git-over-https-may-temporarily-require-authentication",
-      "published": "2026-10-19T10:37:30+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -623,20 +642,92 @@
       ]
     },
     {
-      "source": "github-blog",
-      "platform": "開発",
-      "label": "GitHub",
-      "genre": "開発",
-      "provider": null,
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Broad access through consistent standards",
+      "summary": "How OpenAI works with distribution partners to uphold consistent safeguards, support responsible access, and clarify expectations in our Usage Policies.",
+      "url": "https://openai.com/index/broad-access-through-consistent-standards",
+      "published": "2026-10-21T21:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "How AT&T is rethinking in-house legal work with OpenAI",
+      "summary": "AT&T is working with OpenAI to make legal knowledge easier to access. Learn how its LegalEdge team is rethinking intake and scaling legal judgment.",
+      "url": "https://openai.com/index/att-legal",
+      "published": "2026-10-21T17:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
       "topic": "技術",
       "sourceWeight": 1,
-      "title": "GitHub Copilot app for Beginners: How to teach Copilot about your codebase",
-      "summary": "Learn how to add custom instructions and skills to your repository, use custom agents, and connect MCP servers like Playwright. The post GitHub Copilot app for Beginners: How to teach Copilot about your codebase appeared",
-      "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/",
-      "published": "2026-10-12T17:43:59+00:00",
-      "score": 3,
+      "title": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
+      "summary": "Patch the Planet connects security researchers, maintainers, and incident responders to help address critical vulnerabilities across open source.",
+      "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+      "published": "2026-10-21T07:00:00+00:00",
+      "score": 2,
       "tags": [
-        "開発",
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "How we built ChatGPT’s novel ad stack for user trust and relevance",
+      "summary": "Learn how OpenAI built ChatGPT’s LLM-powered ad stack to understand conversational intent, keep ads separate from answers, and deliver relevant ads at scale.",
+      "url": "https://openai.com/index/building-chatgpt-ad-stack",
+      "published": "2026-10-21T07:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Using thousands of AI agents to uncover new leads in biological data",
+      "summary": "See how OpenAI, PerturbAI, and Scripps Research used distributed AI agents to uncover promising research leads in data from millions of brain cells.",
+      "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data",
+      "published": "2026-10-21T04:50:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
         "重要"
       ]
     },
@@ -657,143 +748,54 @@
         "論文",
         "研究"
       ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Fix, Not Just Resample: Bounded Compiler-Guided Repair in Lean 4",
-      "summary": "arXiv:2610.26942v1 Announce Type: new Abstract: Automated theorem provers often rely on sampling language models, but proof assistants like Lean reject each failed step with a precise error message --- information that p",
-      "url": "https://arxiv.org/abs/2610.26942",
-      "published": "2026-10-21T04:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "論文",
-        "研究"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Dependabot now supports npm 12, pnpm 11 and 12, and Bun 1.4",
-      "summary": "You can now upgrade your projects to npm 12, pnpm 11 or 12, or Bun 1.4 and keep receiving Dependabot updates. Support for these package manager versions is available to… The post Dependabot now supports npm 12, pnpm 11 a",
-      "url": "https://github.blog/changelog/2026-10-20-dependabot-now-supports-npm-12-pnpm-11-and-12-and-bun-1-4",
-      "published": "2026-10-20T13:52:38+00:00",
-      "score": 2,
-      "tags": [
-        "開発"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "OpenAI acquires Orchestra Bio",
-      "summary": "OpenAI is acquiring Orchestra Bio to bring AI-powered operations to life sciences R&D, helping biopharma teams accelerate drug development and advance new treatments.",
-      "url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
-      "published": "2026-10-20T00:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "ガジェット",
-      "sourceWeight": 1,
-      "title": "Advancing coding in low‑resource programming languages",
-      "summary": "Learn how OpenAI is improving ChatGPT across low-resource programming languages, with new evaluations for software engineering, SQLite, and COBOL migration.",
-      "url": "https://openai.com/index/low-resource-programming-languages",
-      "published": "2026-10-19T12:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Stack Overflow for Agents triples signups with ChatGPT plugin",
-      "summary": "Two engineers shipped Stack Overflow for Agents in a few weeks with Codex, and its ChatGPT plugin helped drive up to 10× growth in agent creation.",
-      "url": "https://openai.com/index/stack-overflow-chatgpt-plugin",
-      "published": "2026-10-16T00:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-21T09:48:01.064210+00:00",
-      "lastAttemptAt": "2026-10-21T09:48:01.064210+00:00",
+      "lastSuccessAt": "2026-10-21T22:26:28.767780+00:00",
+      "lastAttemptAt": "2026-10-21T22:26:28.767780+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-21T09:48:01.064210+00:00",
-      "lastAttemptAt": "2026-10-21T09:48:01.064210+00:00",
+      "lastSuccessAt": "2026-10-21T22:26:28.767780+00:00",
+      "lastAttemptAt": "2026-10-21T22:26:28.767780+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-21T09:48:01.064210+00:00",
-      "lastAttemptAt": "2026-10-21T09:48:01.064210+00:00",
+      "lastSuccessAt": "2026-10-21T22:26:28.767780+00:00",
+      "lastAttemptAt": "2026-10-21T22:26:28.767780+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-21T09:48:01.064210+00:00",
-      "lastAttemptAt": "2026-10-21T09:48:01.064210+00:00",
+      "lastSuccessAt": "2026-10-21T22:26:28.767780+00:00",
+      "lastAttemptAt": "2026-10-21T22:26:28.767780+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-21T09:48:01.064210+00:00",
-      "lastAttemptAt": "2026-10-21T09:48:01.064210+00:00",
+      "lastSuccessAt": "2026-10-21T22:26:28.767780+00:00",
+      "lastAttemptAt": "2026-10-21T22:26:28.767780+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-21T09:48:01.064210+00:00",
-      "lastAttemptAt": "2026-10-21T09:48:01.064210+00:00",
+      "lastSuccessAt": "2026-10-21T22:26:28.767780+00:00",
+      "lastAttemptAt": "2026-10-21T22:26:28.767780+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -808,8 +810,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-21T09:48:01.064210+00:00",
-      "lastAttemptAt": "2026-10-21T09:48:01.064210+00:00",
+      "lastSuccessAt": "2026-10-21T22:26:28.767780+00:00",
+      "lastAttemptAt": "2026-10-21T22:26:28.767780+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
