@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T13:28:01.629145+00:00",
+  "updatedAt": "2026-10-22T21:53:32.603595+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -10,16 +10,16 @@
       "genre": "開発",
       "count": 14,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "GitHub package firewall in public preview / Copilot model policy API for enterprise, orgs, and teams / GitHub Copilot models deprecated on October 19, 2026",
-      "topUrl": "https://github.blog/changelog/2026-10-20-github-package-firewall-in-public-preview",
-      "score": 4
+      "signal": "Global default for Copilot features generally available / Meta API endpoints updated for Actions blob storage / Public monitoring now available with data residency",
+      "topUrl": "https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available",
+      "score": 3
     },
     {
       "genre": "AI",
       "count": 8,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "OpenAI models are coming to Google Cloud / Cloudflare links vulnerability discovery to defense with OpenAI / Gemini 4 Argon is now available for developers.",
-      "topUrl": "https://openai.com/index/openai-models-google-cloud",
+      "signal": "Build more responsive apps with the Decisions API / OpenAI models are coming to Google Cloud / Gemini 4 Argon is now available for developers.",
+      "topUrl": "https://openai.com/index/decisions-api",
       "score": 3
     },
     {
@@ -34,9 +34,9 @@
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "Upcoming Critical PHP Security Release",
-      "topUrl": "https://www.php.net/archive/2026.php#2026-10-20-1",
-      "score": 2
+      "signal": "Docker is weird",
+      "topUrl": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
+      "score": 1
     }
   ],
   "focus": [
@@ -49,31 +49,38 @@
     },
     {
       "label": "開発",
-      "title": "GitHub package firewall in public preview",
+      "title": "Global default for Copilot features generally available",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-20-github-package-firewall-in-public-preview"
+      "url": "https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available"
+    },
+    {
+      "label": "AI",
+      "title": "Build more responsive apps with the Decisions API",
+      "why": "Codex/AI開発判断に関係",
+      "source": "ChatGPT / OpenAI公式",
+      "url": "https://openai.com/index/decisions-api"
     },
     {
       "label": "開発",
-      "title": "Copilot model policy API for enterprise, orgs, and teams",
+      "title": "Meta API endpoints updated for Actions blob storage",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams"
+      "url": "https://github.blog/changelog/2026-10-22-meta-api-endpoints-updated-for-actions-blob-storage"
     },
     {
       "label": "開発",
-      "title": "GitHub Copilot models deprecated on October 19, 2026",
+      "title": "Public monitoring now available with data residency",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026"
+      "url": "https://github.blog/changelog/2026-10-22-public-monitoring-now-available-with-data-residency"
     },
     {
       "label": "開発",
-      "title": "GitHub’s model for secret detection: Finding more secrets with less noise",
+      "title": "How bug bounty sharpens one researcher’s security skills",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
-      "url": "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/"
+      "url": "https://github.blog/security/how-bug-bounty-sharpens-one-researchers-security-skills/"
     },
     {
       "label": "論文",
@@ -88,13 +95,6 @@
       "why": "Codex/AI開発判断に関係",
       "source": "arXiv AI",
       "url": "https://arxiv.org/abs/2610.26913"
-    },
-    {
-      "label": "論文",
-      "title": "DataPraxis: Scaling Analytics Tasks via Verified Workspace Evolution",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.26924"
     }
   ],
   "items": [
@@ -124,17 +124,53 @@
       "label": "GitHub更新",
       "genre": "開発",
       "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Global default for Copilot features generally available",
+      "summary": "In September, we announced a global default policy for generally available GitHub Copilot features and supported client capabilities on Copilot Business and Copilot Enterprise plans. Starting today, we’re gradually rolli",
+      "url": "https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available",
+      "published": "2026-10-22T20:44:28+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
       "topic": "技術",
       "sourceWeight": 1,
-      "title": "GitHub package firewall in public preview",
-      "summary": "Editor’s note (October 21, 2026): Rewrote the changelog for clarity and added imagery. There’s been a recent flood of malware attacks that exploit systems at package installation time. Agents and… The post GitHub package",
-      "url": "https://github.blog/changelog/2026-10-20-github-package-firewall-in-public-preview",
-      "published": "2026-10-20T16:11:53+00:00",
-      "score": 4,
+      "title": "Build more responsive apps with the Decisions API",
+      "summary": "Fast, focused, low-cost decisions for any application.",
+      "url": "https://openai.com/index/decisions-api",
+      "published": "2026-10-22T19:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "開発"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "Meta API endpoints updated for Actions blob storage",
+      "summary": "We’re adding blob storage endpoints for GitHub Actions on github.com as part of our ongoing work to improve capacity and reliability. The meta API now includes these new endpoints. If… The post Meta API endpoints updated",
+      "url": "https://github.blog/changelog/2026-10-22-meta-api-endpoints-updated-for-actions-blob-storage",
+      "published": "2026-10-22T18:14:16+00:00",
+      "score": 3,
       "tags": [
         "開発",
-        "重要",
-        "制作"
+        "重要"
       ]
     },
     {
@@ -145,34 +181,14 @@
       "provider": null,
       "topic": "AI",
       "sourceWeight": 1,
-      "title": "Copilot model policy API for enterprise, orgs, and teams",
-      "summary": "You can now use the REST API to retrieve and update Copilot model policies for enterprises, enterprise teams, agent apps, and organizations. What’s new GET and PATCH endpoints are now… The post Copilot model policy API f",
-      "url": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams",
-      "published": "2026-10-19T21:32:18+00:00",
-      "score": 4,
+      "title": "Public monitoring now available with data residency",
+      "summary": "Public monitoring is now available in public preview for GitHub Enterprise Cloud with data residency (GHEC DR). Public monitoring with data residency Public monitoring extends secret scanning beyond internal repositories",
+      "url": "https://github.blog/changelog/2026-10-22-public-monitoring-now-available-with-data-residency",
+      "published": "2026-10-22T18:12:58+00:00",
+      "score": 3,
       "tags": [
         "開発",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "GitHub Copilot models deprecated on October 19, 2026",
-      "summary": "As of today, October 19, 2026, we have deprecated the following models across most GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions). These… The post GitHub Copi",
-      "url": "https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026",
-      "published": "2026-10-19T21:27:10+00:00",
-      "score": 4,
-      "tags": [
-        "開発",
-        "重要",
-        "研究"
+        "重要"
       ]
     },
     {
@@ -181,17 +197,16 @@
       "label": "GitHub",
       "genre": "開発",
       "provider": null,
-      "topic": "AI",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "GitHub’s model for secret detection: Finding more secrets with less noise",
-      "summary": "GitHub’s context-aware secret classifier improves detection quality, raises weighted acceptance by 11.5%, and reduces median scan execution time by 86%. The post GitHub’s model for secret detection: Finding more secrets ",
-      "url": "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/",
-      "published": "2026-10-13T17:56:33+00:00",
-      "score": 4,
+      "title": "How bug bounty sharpens one researcher’s security skills",
+      "summary": "As Cybersecurity Awareness Month continues, the GitHub Bug Bounty team spotlights @r31n, diving into their research approach, favorite bug classes, and advice for aspiring hackers. The post How bug bounty sharpens one re",
+      "url": "https://github.blog/security/how-bug-bounty-sharpens-one-researchers-security-skills/",
+      "published": "2026-10-22T17:21:30+00:00",
+      "score": 3,
       "tags": [
         "開発",
-        "重要",
-        "研究"
+        "重要"
       ]
     },
     {
@@ -345,25 +360,6 @@
       ]
     },
     {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Cloudflare links vulnerability discovery to defense with OpenAI",
-      "summary": "Cloudflare uses OpenAI Daybreak to investigate vulnerabilities and propose fixes for review. Its developers use Codex to build faster and improve code quality.",
-      "url": "https://openai.com/index/cloudflare-cyber",
-      "published": "2026-10-21T00:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "開発"
-      ]
-    },
-    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -375,24 +371,6 @@
       "summary": "This update covers improvements and bug fixes for GitHub secret scanning. Update to audit log events On November 12, 2026, the business field in affected secret_scanning_alert.* and secret_scanning_push_protection.bypass",
       "url": "https://github.blog/changelog/2026-10-20-updates-to-github-secret-scanning",
       "published": "2026-10-20T18:03:55+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "開発",
-      "sourceWeight": 1,
-      "title": "Dependabot alerts REST API now includes dependency versions",
-      "summary": "You can now get the version of a vulnerable dependency directly from Dependabot alert responses in the REST API. Each alert’s dependency object includes a new version_requirement field with the… The post Dependabot alert",
-      "url": "https://github.blog/changelog/2026-10-20-dependabot-alerts-rest-api-now-includes-dependency-versions",
-      "published": "2026-10-20T17:13:40+00:00",
       "score": 3,
       "tags": [
         "開発",
@@ -544,6 +522,24 @@
         "開発",
         "研究"
       ]
+    },
+    {
+      "source": "anthropic-claude",
+      "platform": "AI",
+      "label": "Claude / Anthropic公式",
+      "genre": "AI",
+      "provider": "claude",
+      "topic": "AI",
+      "sourceWeight": 2,
+      "title": "Donating Agent Skills To The Agentic Ai Foundation",
+      "summary": "公式サイトマップで更新を検知。内容は公式ページで確認。",
+      "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+      "published": "2026-10-22T17:48:51.000Z",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
     }
   ],
   "providerWatch": {
@@ -591,27 +587,27 @@
         ],
         "latest": [
           {
+            "title": "Build more responsive apps with the Decisions API",
+            "url": "https://openai.com/index/decisions-api",
+            "published": "2026-10-22T19:00:00+00:00",
+            "source": "ChatGPT / OpenAI公式"
+          },
+          {
             "title": "OpenAI models are coming to Google Cloud",
             "url": "https://openai.com/index/openai-models-google-cloud",
             "published": "2026-10-21T12:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           },
           {
-            "title": "Cloudflare links vulnerability discovery to defense with OpenAI",
-            "url": "https://openai.com/index/cloudflare-cyber",
-            "published": "2026-10-21T00:00:00+00:00",
+            "title": "What FDE means at OpenAI",
+            "url": "https://openai.com/index/forward-deployed-engineering-means",
+            "published": "2026-10-22T06:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           },
           {
-            "title": "Broad access through consistent standards",
-            "url": "https://openai.com/index/broad-access-through-consistent-standards",
-            "published": "2026-10-21T21:00:00+00:00",
-            "source": "ChatGPT / OpenAI公式"
-          },
-          {
-            "title": "How AT&T is rethinking in-house legal work with OpenAI",
-            "url": "https://openai.com/index/att-legal",
-            "published": "2026-10-21T17:00:00+00:00",
+            "title": "Uber brings ChatGPT Work to all employees with OpenAI",
+            "url": "https://openai.com/index/uber-chatgpt-work-rollout",
+            "published": "2026-10-22T00:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           }
         ]
@@ -681,9 +677,9 @@
         ],
         "latest": [
           {
-            "title": "Enterprise Frontier Safeguards",
-            "url": "https://www.anthropic.com/news/enterprise-frontier-safeguards",
-            "published": "2026-10-21T19:53:59.000Z",
+            "title": "Donating Agent Skills To The Agentic Ai Foundation",
+            "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
+            "published": "2026-10-22T17:48:51.000Z",
             "source": "Claude / Anthropic公式"
           }
         ]
@@ -712,5 +708,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-22T11:38:04.368993+00:00"
+  "lastSuccessAt": "2026-10-22T21:53:32.603595+00:00"
 }
