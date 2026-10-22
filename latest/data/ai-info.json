@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-22T11:28:09.311438+00:00",
+  "updatedAt": "2026-10-22T11:38:04.368993+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -16,7 +16,7 @@
     },
     {
       "genre": "AI",
-      "count": 10,
+      "count": 8,
       "decision": "AI/Codex運用の変化を確認",
       "signal": "OpenAI models are coming to Google Cloud / Cloudflare links vulnerability discovery to defense with OpenAI / Gemini 4 Argon is now available for developers.",
       "topUrl": "https://openai.com/index/openai-models-google-cloud",
@@ -24,7 +24,7 @@
     },
     {
       "genre": "論文",
-      "count": 6,
+      "count": 8,
       "decision": "必要時だけ確認",
       "signal": "Large language model and reinforcement learning based autonomous construction and progress updates / Navalia: Advancing Cowork Agents through Verifiable Task Synthesis and Long-Horizon Post-Training / MedPAO-Assist: Edge",
       "topUrl": "https://arxiv.org/abs/2610.26899",
@@ -76,25 +76,25 @@
       "url": "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/"
     },
     {
-      "label": "開発",
-      "title": "GitHub CLI: Opt in to expiring, auto-refreshing OAuth tokens",
+      "label": "論文",
+      "title": "Navalia: Advancing Cowork Agents through Verifiable Task Synthesis and Long-Horizon Post-Training",
       "why": "Codex/AI開発判断に関係",
-      "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-21-github-cli-opt-in-to-expiring-auto-refreshing-oauth-tokens"
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2610.26887"
     },
     {
-      "label": "開発",
-      "title": "The bridge to agent-scale Git infrastructure",
+      "label": "論文",
+      "title": "MedPAO-Assist: Edge-Deployable, Modality-Aware Agentic AI for Radiology Report Structuring",
       "why": "Codex/AI開発判断に関係",
-      "source": "GitHub",
-      "url": "https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/"
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2610.26913"
     },
     {
-      "label": "AI",
-      "title": "OpenAI models are coming to Google Cloud",
+      "label": "論文",
+      "title": "DataPraxis: Scaling Analytics Tasks via Verified Workspace Evolution",
       "why": "Codex/AI開発判断に関係",
-      "source": "ChatGPT / OpenAI公式",
-      "url": "https://openai.com/index/openai-models-google-cloud"
+      "source": "arXiv AI",
+      "url": "https://arxiv.org/abs/2610.26924"
     }
   ],
   "items": [
@@ -109,7 +109,7 @@
       "title": "Large language model and reinforcement learning based autonomous construction and progress updates",
       "summary": "arXiv:2610.26899v1 Announce Type: new Abstract: Due to the rapid growth of the global population, traditional construction methods are gradually unable to meet the current housing demand. The advancement of machine learn",
       "url": "https://arxiv.org/abs/2610.26899",
-      "published": "2026-10-21T04:00:00+00:00",
+      "published": "2026-10-22T04:00:00+00:00",
       "score": 4,
       "tags": [
         "論文",
@@ -195,6 +195,101 @@
       ]
     },
     {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Navalia: Advancing Cowork Agents through Verifiable Task Synthesis and Long-Horizon Post-Training",
+      "summary": "arXiv:2610.26887v1 Announce Type: new Abstract: Large language model (LLM) agents are evolving from conversational assistants into Cowork Agents capable of autonomous planning, tool use, and complex task execution. Finan",
+      "url": "https://arxiv.org/abs/2610.26887",
+      "published": "2026-10-22T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "MedPAO-Assist: Edge-Deployable, Modality-Aware Agentic AI for Radiology Report Structuring",
+      "summary": "arXiv:2610.26913v1 Announce Type: new Abstract: The adoption of Large Language Models for radiology report structuring has been largely dominated by either proprietary cloud-based models or large open models requiring hi",
+      "url": "https://arxiv.org/abs/2610.26913",
+      "published": "2026-10-22T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "DataPraxis: Scaling Analytics Tasks via Verified Workspace Evolution",
+      "summary": "arXiv:2610.26924v1 Announce Type: new Abstract: General-purpose agents are increasingly expected to perform professional analytics work, which requires sustained reasoning, iterative investigation, and reliable evidence.",
+      "url": "https://arxiv.org/abs/2610.26924",
+      "published": "2026-10-22T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Industrial Agentic AI: LLM-Driven New-Generation Agents for Smart Manufacturing",
+      "summary": "arXiv:2610.26941v1 Announce Type: new Abstract: Large language models (LLMs) are enabling agents to move beyond predefined workflows toward autonomous planning and execution, creating new opportunities for smart manufact",
+      "url": "https://arxiv.org/abs/2610.26941",
+      "published": "2026-10-22T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "arxiv-ai",
+      "platform": "論文",
+      "label": "arXiv AI",
+      "genre": "論文",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "MAMath-Bench: Process-Aware and Robust Evaluation of Multimodal Multi-Agent Mathematical Reasoning",
+      "summary": "arXiv:2610.26943v1 Announce Type: new Abstract: Mathematical reasoning is a fundamental capability for educational applications of Large Language Models (LLMs), where reliable problem solving requires not only correct an",
+      "url": "https://arxiv.org/abs/2610.26943",
+      "published": "2026-10-22T04:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "論文",
+        "重要",
+        "研究"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -245,101 +340,6 @@
       "score": 3,
       "tags": [
         "AI",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Navalia: Advancing Cowork Agents through Verifiable Task Synthesis and Long-Horizon Post-Training",
-      "summary": "arXiv:2610.26887v1 Announce Type: new Abstract: Large language model (LLM) agents are evolving from conversational assistants into Cowork Agents capable of autonomous planning, tool use, and complex task execution. Finan",
-      "url": "https://arxiv.org/abs/2610.26887",
-      "published": "2026-10-21T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "MedPAO-Assist: Edge-Deployable, Modality-Aware Agentic AI for Radiology Report Structuring",
-      "summary": "arXiv:2610.26913v1 Announce Type: new Abstract: The adoption of Large Language Models for radiology report structuring has been largely dominated by either proprietary cloud-based models or large open models requiring hi",
-      "url": "https://arxiv.org/abs/2610.26913",
-      "published": "2026-10-21T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "DataPraxis: Scaling Analytics Tasks via Verified Workspace Evolution",
-      "summary": "arXiv:2610.26924v1 Announce Type: new Abstract: General-purpose agents are increasingly expected to perform professional analytics work, which requires sustained reasoning, iterative investigation, and reliable evidence.",
-      "url": "https://arxiv.org/abs/2610.26924",
-      "published": "2026-10-21T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Industrial Agentic AI: LLM-Driven New-Generation Agents for Smart Manufacturing",
-      "summary": "arXiv:2610.26941v1 Announce Type: new Abstract: Large language models (LLMs) are enabling agents to move beyond predefined workflows toward autonomous planning and execution, creating new opportunities for smart manufact",
-      "url": "https://arxiv.org/abs/2610.26941",
-      "published": "2026-10-21T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
-        "重要",
-        "研究"
-      ]
-    },
-    {
-      "source": "arxiv-ai",
-      "platform": "論文",
-      "label": "arXiv AI",
-      "genre": "論文",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "MAMath-Bench: Process-Aware and Robust Evaluation of Multimodal Multi-Agent Mathematical Reasoning",
-      "summary": "arXiv:2610.26943v1 Announce Type: new Abstract: Mathematical reasoning is a fundamental capability for educational applications of Large Language Models (LLMs), where reliable problem solving requires not only correct an",
-      "url": "https://arxiv.org/abs/2610.26943",
-      "published": "2026-10-21T04:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "論文",
         "重要",
         "研究"
       ]
@@ -712,5 +712,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-22T10:28:06.499316+00:00"
+  "lastSuccessAt": "2026-10-22T11:38:04.368993+00:00"
 }
