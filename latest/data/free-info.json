@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-23T09:48:00.930048+00:00",
-  "lastSuccessAt": "2026-10-23T03:58:01.479480+00:00",
+  "updatedAt": "2026-10-23T09:58:01.908062+00:00",
+  "lastSuccessAt": "2026-10-23T09:58:01.908062+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -151,17 +151,17 @@
     {
       "genre": "技術",
       "count": 1,
-      "signal": "UUIDv7 doesn't have the properties you think it does",
+      "signal": "Debunking \"Faster than Rust\": Malicious Benchmarks in Tov",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://alexsci.com/blog/uuidv7-is-weird/",
-      "score": 1
+      "topUrl": "https://blog.fyralabs.com/debunking-faster-than-rust-malicious-benchmarks-in-tov/",
+      "score": 2
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.7 - 72 km SSE of Perryville, Alaska",
+      "signal": "M 2.0 - 9 km NW of Santa Paula, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uzeduo",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41350975",
       "score": 1
     }
   ],
@@ -262,6 +262,24 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Debunking \"Faster than Rust\": Malicious Benchmarks in Tov",
+      "summary": "Comments",
+      "url": "https://blog.fyralabs.com/debunking-faster-than-rust-malicious-benchmarks-in-tov/",
+      "published": "2026-10-23T07:44:09+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "研究"
+      ]
+    },
+    {
       "source": "anthropic-claude",
       "platform": "AI",
       "label": "Claude / Anthropic公式",
@@ -283,30 +301,13 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.7 - 72 km SSE of Perryville, Alaska",
-      "summary": "72 km SSE of Perryville, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uzeduo",
-      "published": "2026-10-23T03:50:49.616000+00:00",
+      "title": "M 2.0 - 9 km NW of Santa Paula, CA",
+      "summary": "9 km NW of Santa Paula, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41350975",
+      "published": "2026-10-23T09:39:03.750000+00:00",
       "score": 1,
       "tags": [
         "災害"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "UUIDv7 doesn't have the properties you think it does",
-      "summary": "Comments",
-      "url": "https://alexsci.com/blog/uuidv7-is-weird/",
-      "published": "2026-10-23T01:22:17+00:00",
-      "score": 1,
-      "tags": [
-        "技術"
       ]
     },
     {
@@ -660,6 +661,24 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
+      "summary": "OpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguards and support a more resilient digital ecosystem.",
+      "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
+      "published": "2026-10-23T00:00:00+00:00",
+      "score": 2,
+      "tags": [
+        "AI",
+        "重要"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -730,72 +749,54 @@
         "論文",
         "研究"
       ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Uber brings ChatGPT Work to all employees with OpenAI",
-      "summary": "Uber is rolling out ChatGPT Work to more than 30,000 employees, helping teams research, analyze data, create presentations, and complete complex workflows.",
-      "url": "https://openai.com/index/uber-chatgpt-work-rollout",
-      "published": "2026-10-22T00:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-23T03:58:01.479480+00:00",
-      "lastAttemptAt": "2026-10-23T03:58:01.479480+00:00",
+      "lastSuccessAt": "2026-10-23T09:58:01.908062+00:00",
+      "lastAttemptAt": "2026-10-23T09:58:01.908062+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-23T03:58:01.479480+00:00",
-      "lastAttemptAt": "2026-10-23T03:58:01.479480+00:00",
+      "lastSuccessAt": "2026-10-23T09:58:01.908062+00:00",
+      "lastAttemptAt": "2026-10-23T09:58:01.908062+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-23T03:58:01.479480+00:00",
-      "lastAttemptAt": "2026-10-23T03:58:01.479480+00:00",
+      "lastSuccessAt": "2026-10-23T09:58:01.908062+00:00",
+      "lastAttemptAt": "2026-10-23T09:58:01.908062+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-23T03:58:01.479480+00:00",
-      "lastAttemptAt": "2026-10-23T03:58:01.479480+00:00",
+      "lastSuccessAt": "2026-10-23T09:58:01.908062+00:00",
+      "lastAttemptAt": "2026-10-23T09:58:01.908062+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-23T03:58:01.479480+00:00",
-      "lastAttemptAt": "2026-10-23T03:58:01.479480+00:00",
+      "lastSuccessAt": "2026-10-23T09:58:01.908062+00:00",
+      "lastAttemptAt": "2026-10-23T09:58:01.908062+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-23T03:58:01.479480+00:00",
-      "lastAttemptAt": "2026-10-23T03:58:01.479480+00:00",
+      "lastSuccessAt": "2026-10-23T09:58:01.908062+00:00",
+      "lastAttemptAt": "2026-10-23T09:58:01.908062+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -810,8 +811,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-23T03:58:01.479480+00:00",
-      "lastAttemptAt": "2026-10-23T03:58:01.479480+00:00",
+      "lastSuccessAt": "2026-10-23T09:58:01.908062+00:00",
+      "lastAttemptAt": "2026-10-23T09:58:01.908062+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
