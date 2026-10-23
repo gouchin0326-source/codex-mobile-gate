@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-23T15:18:01.060256+00:00",
-  "lastSuccessAt": "2026-10-23T11:48:01.008807+00:00",
+  "updatedAt": "2026-10-23T22:12:54.974191+00:00",
+  "lastSuccessAt": "2026-10-23T22:12:54.974191+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -127,7 +127,7 @@
     {
       "genre": "開発",
       "count": 15,
-      "signal": "GitHub Copilot in Visual Studio — September update / Custom skills, agents, and MCP servers in usage metrics API / Global default for Copilot features generally available",
+      "signal": "GitHub Copilot in Visual Studio — September update / Custom skills, agents, and MCP servers in usage metrics API / Turn notifications into code with the GitHub app in Teams",
       "decision": "CG開発・GitHub運用へ反映候補",
       "topUrl": "https://github.blog/changelog/2026-10-22-github-copilot-in-visual-studio-september-update-2",
       "score": 4
@@ -142,26 +142,26 @@
     },
     {
       "genre": "AI",
-      "count": 7,
-      "signal": "Build more responsive apps with the Decisions API / OpenAI models are coming to Google Cloud / Gemini 4 Argon is now available for developers.",
+      "count": 6,
+      "signal": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II) / Securing our frontier model training environment / Build more responsive apps with the Decisions AP",
       "decision": "AI/Codex運用の変化を確認",
-      "topUrl": "https://openai.com/index/decisions-api",
+      "topUrl": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
       "score": 3
     },
     {
       "genre": "技術",
-      "count": 1,
-      "signal": "Debunking \"Faster than Rust\": Malicious Benchmarks in Tov",
+      "count": 2,
+      "signal": "Software is slow because of bad design, not slow languages / Debunking \"Faster than Rust\": Malicious Benchmarks in Tov",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://blog.fyralabs.com/debunking-faster-than-rust-malicious-benchmarks-in-tov/",
+      "topUrl": "https://www.seangoedecke.com/software-is-slow-because-of-bad-design-not-slow-languages/",
       "score": 2
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 2.0 - 9 km NW of Santa Paula, CA",
+      "signal": "M 0.8 - 7 km NW of San Jacinto, CA",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41350975",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41351383",
       "score": 1
     }
   ],
@@ -211,12 +211,12 @@
       "label": "ChatGPT / OpenAI公式",
       "genre": "AI",
       "provider": "chatgpt",
-      "topic": "技術",
+      "topic": "AI",
       "sourceWeight": 1,
-      "title": "Build more responsive apps with the Decisions API",
-      "summary": "Fast, focused, low-cost decisions for any application.",
-      "url": "https://openai.com/index/decisions-api",
-      "published": "2026-10-22T19:00:00+00:00",
+      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+      "summary": "Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster reads for ChatGPT.",
+      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+      "published": "2026-10-23T17:00:00+00:00",
       "score": 3,
       "tags": [
         "AI",
@@ -267,16 +267,16 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "その他",
+      "topic": "制作",
       "sourceWeight": 1,
-      "title": "Debunking \"Faster than Rust\": Malicious Benchmarks in Tov",
+      "title": "Software is slow because of bad design, not slow languages",
       "summary": "Comments",
-      "url": "https://blog.fyralabs.com/debunking-faster-than-rust-malicious-benchmarks-in-tov/",
-      "published": "2026-10-23T07:44:09+00:00",
+      "url": "https://www.seangoedecke.com/software-is-slow-because-of-bad-design-not-slow-languages/",
+      "published": "2026-10-23T12:58:10+00:00",
       "score": 2,
       "tags": [
         "技術",
-        "研究"
+        "制作"
       ]
     },
     {
@@ -301,10 +301,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 2.0 - 9 km NW of Santa Paula, CA",
-      "summary": "9 km NW of Santa Paula, CA",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41350975",
-      "published": "2026-10-23T09:39:03.750000+00:00",
+      "title": "M 0.8 - 7 km NW of San Jacinto, CA",
+      "summary": "7 km NW of San Jacinto, CA",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41351383",
+      "published": "2026-10-23T22:08:22.950000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -345,6 +345,61 @@
       "score": 4,
       "tags": [
         "開発",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Turn notifications into code with the GitHub app in Teams",
+      "summary": "The new GitHub app in Teams brings notifications and copilot together, helping teams turn issues into fixes and ship code faster without leaving the conversation. Get notified in channels, group… The post Turn notificati",
+      "url": "https://github.blog/changelog/2026-10-23-turn-notifications-into-code-with-github-copilot-in-teams",
+      "published": "2026-10-23T21:29:58+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Enterprise installations for GitHub Apps generally available",
+      "summary": "Installing GitHub Apps on your enterprise is now generally available. You can replace classic PATs with GitHub Apps in more of your enterprise and organization automation with the expanded API… The post Enterprise instal",
+      "url": "https://github.blog/changelog/2026-10-23-enterprise-installations-for-github-apps-generally-available",
+      "published": "2026-10-23T15:03:30+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Securing our frontier model training environment",
+      "summary": "OpenAI explains how we strengthened containment for frontier model training and evaluation, including offline environments and high-compute red-teaming.",
+      "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+      "published": "2026-10-23T10:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
         "重要",
         "研究"
       ]
@@ -425,6 +480,25 @@
       ]
     },
     {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Build more responsive apps with the Decisions API",
+      "summary": "Fast, focused, low-cost decisions for any application.",
+      "url": "https://openai.com/index/decisions-api",
+      "published": "2026-10-22T19:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "開発"
+      ]
+    },
+    {
       "source": "github-changelog",
       "platform": "開発",
       "label": "GitHub更新",
@@ -461,24 +535,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "GitHub CLI: Opt in to expiring, auto-refreshing OAuth tokens",
-      "summary": "You can now use expiring, automatically refreshing OAuth credentials in GitHub CLI as part of a public preview. When you opt in, gh stores an expiring access token alongside a… The post GitHub CLI: Opt in to expiring, au",
-      "url": "https://github.blog/changelog/2026-10-21-github-cli-opt-in-to-expiring-auto-refreshing-oauth-tokens",
-      "published": "2026-10-21T16:43:23+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -494,25 +550,6 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "OpenAI models are coming to Google Cloud",
-      "summary": "OpenAI and Google Cloud are bringing frontier models and Codex workflows to Gemini’s Model Garden, available through Google Cloud Marketplace.",
-      "url": "https://openai.com/index/openai-models-google-cloud",
-      "published": "2026-10-21T12:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "研究"
       ]
     },
     {
@@ -643,6 +680,24 @@
       ]
     },
     {
+      "source": "lobsters",
+      "platform": "技術",
+      "label": "技術RSS",
+      "genre": "技術",
+      "provider": null,
+      "topic": "その他",
+      "sourceWeight": 1,
+      "title": "Debunking \"Faster than Rust\": Malicious Benchmarks in Tov",
+      "summary": "Comments",
+      "url": "https://blog.fyralabs.com/debunking-faster-than-rust-malicious-benchmarks-in-tov/",
+      "published": "2026-10-23T07:44:09+00:00",
+      "score": 2,
+      "tags": [
+        "技術",
+        "研究"
+      ]
+    },
+    {
       "source": "arxiv-ai",
       "platform": "論文",
       "label": "arXiv AI",
@@ -695,108 +750,54 @@
         "論文",
         "研究"
       ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
-      "summary": "OpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguards and support a more resilient digital ecosystem.",
-      "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
-      "published": "2026-10-23T00:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Industry comparisons in the Copilot impact dashboard",
-      "summary": "The Copilot impact dashboard now includes an “Industry comparison” section. Enterprises, and organizations that aren’t owned by an enterprise, can compare their Copilot agentic adoption and leverage with aggregated bench",
-      "url": "https://github.blog/changelog/2026-10-22-industry-comparisons-in-the-copilot-impact-dashboard",
-      "published": "2026-10-22T16:28:24+00:00",
-      "score": 2,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "What FDE means at OpenAI",
-      "summary": "What forward deployed engineering means at OpenAI",
-      "url": "https://openai.com/index/forward-deployed-engineering-means",
-      "published": "2026-10-22T06:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-23T09:58:01.908062+00:00",
-      "lastAttemptAt": "2026-10-23T09:58:01.908062+00:00",
+      "lastSuccessAt": "2026-10-23T22:12:54.974191+00:00",
+      "lastAttemptAt": "2026-10-23T22:12:54.974191+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-23T09:58:01.908062+00:00",
-      "lastAttemptAt": "2026-10-23T09:58:01.908062+00:00",
+      "lastSuccessAt": "2026-10-23T22:12:54.974191+00:00",
+      "lastAttemptAt": "2026-10-23T22:12:54.974191+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-23T09:58:01.908062+00:00",
-      "lastAttemptAt": "2026-10-23T09:58:01.908062+00:00",
+      "lastSuccessAt": "2026-10-23T22:12:54.974191+00:00",
+      "lastAttemptAt": "2026-10-23T22:12:54.974191+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-23T09:58:01.908062+00:00",
-      "lastAttemptAt": "2026-10-23T09:58:01.908062+00:00",
+      "lastSuccessAt": "2026-10-23T22:12:54.974191+00:00",
+      "lastAttemptAt": "2026-10-23T22:12:54.974191+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-23T09:58:01.908062+00:00",
-      "lastAttemptAt": "2026-10-23T09:58:01.908062+00:00",
+      "lastSuccessAt": "2026-10-23T22:12:54.974191+00:00",
+      "lastAttemptAt": "2026-10-23T22:12:54.974191+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-23T09:58:01.908062+00:00",
-      "lastAttemptAt": "2026-10-23T09:58:01.908062+00:00",
+      "lastSuccessAt": "2026-10-23T22:12:54.974191+00:00",
+      "lastAttemptAt": "2026-10-23T22:12:54.974191+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -811,8 +812,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-23T09:58:01.908062+00:00",
-      "lastAttemptAt": "2026-10-23T09:58:01.908062+00:00",
+      "lastSuccessAt": "2026-10-23T22:12:54.974191+00:00",
+      "lastAttemptAt": "2026-10-23T22:12:54.974191+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }

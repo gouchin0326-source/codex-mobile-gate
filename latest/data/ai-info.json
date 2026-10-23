@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T15:18:01.060256+00:00",
+  "updatedAt": "2026-10-23T22:12:54.974191+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
@@ -10,7 +10,7 @@
       "genre": "開発",
       "count": 15,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "GitHub Copilot in Visual Studio — September update / Custom skills, agents, and MCP servers in usage metrics API / Global default for Copilot features generally available",
+      "signal": "GitHub Copilot in Visual Studio — September update / Custom skills, agents, and MCP servers in usage metrics API / Turn notifications into code with the GitHub app in Teams",
       "topUrl": "https://github.blog/changelog/2026-10-22-github-copilot-in-visual-studio-september-update-2",
       "score": 4
     },
@@ -24,18 +24,18 @@
     },
     {
       "genre": "AI",
-      "count": 7,
+      "count": 6,
       "decision": "AI/Codex運用の変化を確認",
-      "signal": "Build more responsive apps with the Decisions API / OpenAI models are coming to Google Cloud / Gemini 4 Argon is now available for developers.",
-      "topUrl": "https://openai.com/index/decisions-api",
+      "signal": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II) / Securing our frontier model training environment / Build more responsive apps with the Decisions API",
+      "topUrl": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
       "score": 3
     },
     {
       "genre": "技術",
-      "count": 1,
+      "count": 2,
       "decision": "必要時だけ確認",
-      "signal": "Debunking \"Faster than Rust\": Malicious Benchmarks in Tov",
-      "topUrl": "https://blog.fyralabs.com/debunking-faster-than-rust-malicious-benchmarks-in-tov/",
+      "signal": "Software is slow because of bad design, not slow languages / Debunking \"Faster than Rust\": Malicious Benchmarks in Tov",
+      "topUrl": "https://www.seangoedecke.com/software-is-slow-because-of-bad-design-not-slow-languages/",
       "score": 2
     }
   ],
@@ -69,32 +69,32 @@
       "url": "https://github.blog/changelog/2026-10-22-custom-skills-agents-and-mcp-servers-in-usage-metrics-api"
     },
     {
-      "label": "論文",
-      "title": "Automating ML for Science: Can Frontier Agents Climb Scientific Hills in the Wild?",
+      "label": "開発",
+      "title": "Turn notifications into code with the GitHub app in Teams",
       "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.28763"
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-23-turn-notifications-into-code-with-github-copilot-in-teams"
     },
     {
-      "label": "論文",
-      "title": "Forging More Tasks into Better Harnesses: Agentic Harness Evolution via Successive Scale Racing",
+      "label": "AI",
+      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
       "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.28815"
-    },
-    {
-      "label": "論文",
-      "title": "Sketch2Sim: an end-to-end modular framework for hand-drawn circuit analysis",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.28836"
+      "source": "ChatGPT / OpenAI公式",
+      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two"
     },
     {
       "label": "開発",
-      "title": "Global default for Copilot features generally available",
+      "title": "Enterprise installations for GitHub Apps generally available",
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub更新",
-      "url": "https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available"
+      "url": "https://github.blog/changelog/2026-10-23-enterprise-installations-for-github-apps-generally-available"
+    },
+    {
+      "label": "AI",
+      "title": "Securing our frontier model training environment",
+      "why": "Codex/AI開発判断に関係",
+      "source": "ChatGPT / OpenAI公式",
+      "url": "https://openai.com/index/securing-our-frontier-model-training-environment"
     }
   ],
   "items": [
@@ -172,6 +172,80 @@
       "score": 4,
       "tags": [
         "開発",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "Turn notifications into code with the GitHub app in Teams",
+      "summary": "The new GitHub app in Teams brings notifications and copilot together, helping teams turn issues into fixes and ship code faster without leaving the conversation. Get notified in channels, group… The post Turn notificati",
+      "url": "https://github.blog/changelog/2026-10-23-turn-notifications-into-code-with-github-copilot-in-teams",
+      "published": "2026-10-23T21:29:58+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+      "summary": "Learn how OpenAI scaled Habitat with reliable multi-tenancy, global caching, and Azure Cosmos DB to deliver 12× faster reads for ChatGPT.",
+      "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+      "published": "2026-10-23T17:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
+        "重要",
+        "開発"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Enterprise installations for GitHub Apps generally available",
+      "summary": "Installing GitHub Apps on your enterprise is now generally available. You can replace classic PATs with GitHub Apps in more of your enterprise and organization automation with the expanded API… The post Enterprise instal",
+      "url": "https://github.blog/changelog/2026-10-23-enterprise-installations-for-github-apps-generally-available",
+      "published": "2026-10-23T15:03:30+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
+      ]
+    },
+    {
+      "source": "openai",
+      "platform": "AI",
+      "label": "ChatGPT / OpenAI公式",
+      "genre": "AI",
+      "provider": "chatgpt",
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Securing our frontier model training environment",
+      "summary": "OpenAI explains how we strengthened containment for frontier model training and evaluation, including offline environments and high-compute red-teaming.",
+      "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+      "published": "2026-10-23T10:00:00+00:00",
+      "score": 3,
+      "tags": [
+        "AI",
         "重要",
         "研究"
       ]
@@ -325,24 +399,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "GitHub CLI: Opt in to expiring, auto-refreshing OAuth tokens",
-      "summary": "You can now use expiring, automatically refreshing OAuth credentials in GitHub CLI as part of a public preview. When you opt in, gh stores an expiring access token alongside a… The post GitHub CLI: Opt in to expiring, au",
-      "url": "https://github.blog/changelog/2026-10-21-github-cli-opt-in-to-expiring-auto-refreshing-oauth-tokens",
-      "published": "2026-10-21T16:43:23+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -358,25 +414,6 @@
       "tags": [
         "開発",
         "重要"
-      ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "OpenAI models are coming to Google Cloud",
-      "summary": "OpenAI and Google Cloud are bringing frontier models and Codex workflows to Gemini’s Model Garden, available through Google Cloud Marketplace.",
-      "url": "https://openai.com/index/openai-models-google-cloud",
-      "published": "2026-10-21T12:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "重要",
-        "研究"
       ]
     },
     {
@@ -505,43 +542,6 @@
         "重要",
         "開発"
       ]
-    },
-    {
-      "source": "google-gemini",
-      "platform": "AI",
-      "label": "Gemini公式",
-      "genre": "AI",
-      "provider": "gemini",
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Gemini 4 Argon: Built to solve your hardest problems",
-      "summary": "We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier model.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
-      "published": "2026-10-13T16:00:00+00:00",
-      "score": 3,
-      "tags": [
-        "AI",
-        "開発",
-        "研究"
-      ]
-    },
-    {
-      "source": "lobsters",
-      "platform": "技術",
-      "label": "技術RSS",
-      "genre": "技術",
-      "provider": null,
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Debunking \"Faster than Rust\": Malicious Benchmarks in Tov",
-      "summary": "Comments",
-      "url": "https://blog.fyralabs.com/debunking-faster-than-rust-malicious-benchmarks-in-tov/",
-      "published": "2026-10-23T07:44:09+00:00",
-      "score": 2,
-      "tags": [
-        "技術",
-        "研究"
-      ]
     }
   ],
   "providerWatch": {
@@ -589,27 +589,21 @@
         ],
         "latest": [
           {
+            "title": "Rapidly scaling online storage to serve over 1 billion ChatGPT users (Part II)",
+            "url": "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+            "published": "2026-10-23T17:00:00+00:00",
+            "source": "ChatGPT / OpenAI公式"
+          },
+          {
+            "title": "Securing our frontier model training environment",
+            "url": "https://openai.com/index/securing-our-frontier-model-training-environment",
+            "published": "2026-10-23T10:00:00+00:00",
+            "source": "ChatGPT / OpenAI公式"
+          },
+          {
             "title": "Build more responsive apps with the Decisions API",
             "url": "https://openai.com/index/decisions-api",
             "published": "2026-10-22T19:00:00+00:00",
-            "source": "ChatGPT / OpenAI公式"
-          },
-          {
-            "title": "OpenAI models are coming to Google Cloud",
-            "url": "https://openai.com/index/openai-models-google-cloud",
-            "published": "2026-10-21T12:00:00+00:00",
-            "source": "ChatGPT / OpenAI公式"
-          },
-          {
-            "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
-            "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
-            "published": "2026-10-23T00:00:00+00:00",
-            "source": "ChatGPT / OpenAI公式"
-          },
-          {
-            "title": "What FDE means at OpenAI",
-            "url": "https://openai.com/index/forward-deployed-engineering-means",
-            "published": "2026-10-22T06:00:00+00:00",
             "source": "ChatGPT / OpenAI公式"
           }
         ]
@@ -710,5 +704,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-23T11:48:01.008807+00:00"
+  "lastSuccessAt": "2026-10-23T22:12:54.974191+00:00"
 }
