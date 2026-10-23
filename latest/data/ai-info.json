@@ -1,26 +1,18 @@
 {
-  "updatedAt": "2026-10-23T03:48:01.493272+00:00",
+  "updatedAt": "2026-10-23T03:58:01.479480+00:00",
   "mode": "primary-rss-ai-context",
   "codexTokenUse": "0 when run by GitHub Actions",
   "policy": "official/public RSS only; no unauthorized scraping",
   "decision": "高scoreと開発影響だけ確認。本文読み込みは必要時のみ。",
-  "topLine": "Large language model and reinforcement learning based autonomous construction and progress updates",
+  "topLine": "GitHub Copilot in Visual Studio — September update",
   "cards": [
     {
       "genre": "開発",
-      "count": 14,
+      "count": 15,
       "decision": "CG開発・GitHub運用へ反映候補",
-      "signal": "Global default for Copilot features generally available / Meta API endpoints updated for Actions blob storage / Public monitoring now available with data residency",
-      "topUrl": "https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available",
-      "score": 3
-    },
-    {
-      "genre": "AI",
-      "count": 8,
-      "decision": "AI/Codex運用の変化を確認",
-      "signal": "Build more responsive apps with the Decisions API / OpenAI models are coming to Google Cloud / Gemini 4 Argon is now available for developers.",
-      "topUrl": "https://openai.com/index/decisions-api",
-      "score": 3
+      "signal": "GitHub Copilot in Visual Studio — September update / Custom skills, agents, and MCP servers in usage metrics API / Global default for Copilot features generally available",
+      "topUrl": "https://github.blog/changelog/2026-10-22-github-copilot-in-visual-studio-september-update-2",
+      "score": 4
     },
     {
       "genre": "論文",
@@ -31,15 +23,37 @@
       "score": 4
     },
     {
+      "genre": "AI",
+      "count": 7,
+      "decision": "AI/Codex運用の変化を確認",
+      "signal": "Build more responsive apps with the Decisions API / OpenAI models are coming to Google Cloud / Gemini 4 Argon is now available for developers.",
+      "topUrl": "https://openai.com/index/decisions-api",
+      "score": 3
+    },
+    {
       "genre": "技術",
       "count": 1,
       "decision": "必要時だけ確認",
-      "signal": "Docker is weird",
-      "topUrl": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
+      "signal": "UUIDv7 doesn't have the properties you think it does",
+      "topUrl": "https://alexsci.com/blog/uuidv7-is-weird/",
       "score": 1
     }
   ],
   "focus": [
+    {
+      "label": "開発",
+      "title": "GitHub Copilot in Visual Studio — September update",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-22-github-copilot-in-visual-studio-september-update-2"
+    },
+    {
+      "label": "開発",
+      "title": "Custom skills, agents, and MCP servers in usage metrics API",
+      "why": "Codex/AI開発判断に関係",
+      "source": "GitHub更新",
+      "url": "https://github.blog/changelog/2026-10-22-custom-skills-agents-and-mcp-servers-in-usage-metrics-api"
+    },
     {
       "label": "論文",
       "title": "Large language model and reinforcement learning based autonomous construction and progress updates",
@@ -81,23 +95,47 @@
       "why": "Codex/AI開発判断に関係",
       "source": "GitHub",
       "url": "https://github.blog/security/how-bug-bounty-sharpens-one-researchers-security-skills/"
-    },
-    {
-      "label": "論文",
-      "title": "Navalia: Advancing Cowork Agents through Verifiable Task Synthesis and Long-Horizon Post-Training",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.26887"
-    },
-    {
-      "label": "論文",
-      "title": "MedPAO-Assist: Edge-Deployable, Modality-Aware Agentic AI for Radiology Report Structuring",
-      "why": "Codex/AI開発判断に関係",
-      "source": "arXiv AI",
-      "url": "https://arxiv.org/abs/2610.26913"
     }
   ],
   "items": [
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "GitHub Copilot in Visual Studio — September update",
+      "summary": "September 2026 brought deeper visibility into your work: explore pull requests without leaving chat, bring the AI model your team trusts, and fix vulnerable packages the moment Visual Studio flags… The post GitHub Copilo",
+      "url": "https://github.blog/changelog/2026-10-22-github-copilot-in-visual-studio-september-update-2",
+      "published": "2026-10-23T00:17:51+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "Custom skills, agents, and MCP servers in usage metrics API",
+      "summary": "Copilot usage metrics now show the names of the skills, custom agents, Model Context Protocol (MCP) servers, slash commands, and plugins that your organization creates, instead of grouping them under… The post Custom ski",
+      "url": "https://github.blog/changelog/2026-10-22-custom-skills-agents-and-mcp-servers-in-usage-metrics-api",
+      "published": "2026-10-22T22:19:17+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
+      ]
+    },
     {
       "source": "arxiv-ai",
       "platform": "論文",
@@ -360,24 +398,6 @@
       ]
     },
     {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Updates to GitHub secret scanning",
-      "summary": "This update covers improvements and bug fixes for GitHub secret scanning. Update to audit log events On November 12, 2026, the business field in affected secret_scanning_alert.* and secret_scanning_push_protection.bypass",
-      "url": "https://github.blog/changelog/2026-10-20-updates-to-github-secret-scanning",
-      "published": "2026-10-20T18:03:55+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
-      ]
-    },
-    {
       "source": "github-blog",
       "platform": "開発",
       "label": "GitHub",
@@ -521,24 +541,6 @@
         "AI",
         "開発",
         "研究"
-      ]
-    },
-    {
-      "source": "anthropic-claude",
-      "platform": "AI",
-      "label": "Claude / Anthropic公式",
-      "genre": "AI",
-      "provider": "claude",
-      "topic": "AI",
-      "sourceWeight": 2,
-      "title": "Donating Agent Skills To The Agentic Ai Foundation",
-      "summary": "公式サイトマップで更新を検知。内容は公式ページで確認。",
-      "url": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation",
-      "published": "2026-10-22T17:48:51.000Z",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
       ]
     }
   ],
@@ -708,5 +710,5 @@
     }
   },
   "status": "fresh",
-  "lastSuccessAt": "2026-10-22T21:53:32.603595+00:00"
+  "lastSuccessAt": "2026-10-23T03:58:01.479480+00:00"
 }

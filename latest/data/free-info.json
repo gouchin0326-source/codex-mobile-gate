@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-23T03:48:01.493272+00:00",
-  "lastSuccessAt": "2026-10-22T21:53:32.603595+00:00",
+  "updatedAt": "2026-10-23T03:58:01.479480+00:00",
+  "lastSuccessAt": "2026-10-23T03:58:01.479480+00:00",
   "status": "fresh",
   "mode": "free-fetch-context",
   "codexTokenUse": "0 when run by GitHub Actions",
@@ -126,19 +126,11 @@
   "contexts": [
     {
       "genre": "開発",
-      "count": 14,
-      "signal": "Global default for Copilot features generally available / Meta API endpoints updated for Actions blob storage / Public monitoring now available with data residency",
+      "count": 15,
+      "signal": "GitHub Copilot in Visual Studio — September update / Custom skills, agents, and MCP servers in usage metrics API / Global default for Copilot features generally available",
       "decision": "CG開発・GitHub運用へ反映候補",
-      "topUrl": "https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available",
-      "score": 3
-    },
-    {
-      "genre": "AI",
-      "count": 8,
-      "signal": "Build more responsive apps with the Decisions API / OpenAI models are coming to Google Cloud / Gemini 4 Argon is now available for developers.",
-      "decision": "AI/Codex運用の変化を確認",
-      "topUrl": "https://openai.com/index/decisions-api",
-      "score": 3
+      "topUrl": "https://github.blog/changelog/2026-10-22-github-copilot-in-visual-studio-september-update-2",
+      "score": 4
     },
     {
       "genre": "論文",
@@ -149,23 +141,50 @@
       "score": 4
     },
     {
+      "genre": "AI",
+      "count": 7,
+      "signal": "Build more responsive apps with the Decisions API / OpenAI models are coming to Google Cloud / Gemini 4 Argon is now available for developers.",
+      "decision": "AI/Codex運用の変化を確認",
+      "topUrl": "https://openai.com/index/decisions-api",
+      "score": 3
+    },
+    {
       "genre": "技術",
       "count": 1,
-      "signal": "Docker is weird",
+      "signal": "UUIDv7 doesn't have the properties you think it does",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
+      "topUrl": "https://alexsci.com/blog/uuidv7-is-weird/",
       "score": 1
     },
     {
       "genre": "災害",
       "count": 1,
-      "signal": "M 1.9 - 66 km WNW of Ninilchik, Alaska",
+      "signal": "M 1.7 - 72 km SSE of Perryville, Alaska",
       "decision": "更新あり。必要時だけ確認",
-      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uyrzgx",
+      "topUrl": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uzeduo",
       "score": 1
     }
   ],
   "items": [
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "技術",
+      "sourceWeight": 1,
+      "title": "GitHub Copilot in Visual Studio — September update",
+      "summary": "September 2026 brought deeper visibility into your work: explore pull requests without leaving chat, bring the AI model your team trusts, and fix vulnerable packages the moment Visual Studio flags… The post GitHub Copilo",
+      "url": "https://github.blog/changelog/2026-10-22-github-copilot-in-visual-studio-september-update-2",
+      "published": "2026-10-23T00:17:51+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
+      ]
+    },
     {
       "source": "arxiv-ai",
       "platform": "論文",
@@ -184,24 +203,6 @@
         "重要",
         "開発",
         "研究"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "AI",
-      "sourceWeight": 1,
-      "title": "Global default for Copilot features generally available",
-      "summary": "In September, we announced a global default policy for generally available GitHub Copilot features and supported client capabilities on Copilot Business and Copilot Enterprise plans. Starting today, we’re gradually rolli",
-      "url": "https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available",
-      "published": "2026-10-22T20:44:28+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
       ]
     },
     {
@@ -282,10 +283,10 @@
       "source": "usgs",
       "label": "地震",
       "genre": "災害",
-      "title": "M 1.9 - 66 km WNW of Ninilchik, Alaska",
-      "summary": "66 km WNW of Ninilchik, Alaska",
-      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uyrzgx",
-      "published": "2026-10-22T21:45:45.304000+00:00",
+      "title": "M 1.7 - 72 km SSE of Perryville, Alaska",
+      "summary": "72 km SSE of Perryville, Alaska",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uzeduo",
+      "published": "2026-10-23T03:50:49.616000+00:00",
       "score": 1,
       "tags": [
         "災害"
@@ -297,15 +298,52 @@
       "label": "技術RSS",
       "genre": "技術",
       "provider": null,
-      "topic": "その他",
+      "topic": "技術",
       "sourceWeight": 1,
-      "title": "Docker is weird",
+      "title": "UUIDv7 doesn't have the properties you think it does",
       "summary": "Comments",
-      "url": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
-      "published": "2026-10-22T20:09:22+00:00",
+      "url": "https://alexsci.com/blog/uuidv7-is-weird/",
+      "published": "2026-10-23T01:22:17+00:00",
       "score": 1,
       "tags": [
         "技術"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "開発",
+      "sourceWeight": 1,
+      "title": "Custom skills, agents, and MCP servers in usage metrics API",
+      "summary": "Copilot usage metrics now show the names of the skills, custom agents, Model Context Protocol (MCP) servers, slash commands, and plugins that your organization creates, instead of grouping them under… The post Custom ski",
+      "url": "https://github.blog/changelog/2026-10-22-custom-skills-agents-and-mcp-servers-in-usage-metrics-api",
+      "published": "2026-10-22T22:19:17+00:00",
+      "score": 4,
+      "tags": [
+        "開発",
+        "重要",
+        "研究"
+      ]
+    },
+    {
+      "source": "github-changelog",
+      "platform": "開発",
+      "label": "GitHub更新",
+      "genre": "開発",
+      "provider": null,
+      "topic": "AI",
+      "sourceWeight": 1,
+      "title": "Global default for Copilot features generally available",
+      "summary": "In September, we announced a global default policy for generally available GitHub Copilot features and supported client capabilities on Copilot Business and Copilot Enterprise plans. Starting today, we’re gradually rolli",
+      "url": "https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available",
+      "published": "2026-10-22T20:44:28+00:00",
+      "score": 3,
+      "tags": [
+        "開発",
+        "重要"
       ]
     },
     {
@@ -492,24 +530,6 @@
         "AI",
         "重要",
         "研究"
-      ]
-    },
-    {
-      "source": "github-changelog",
-      "platform": "開発",
-      "label": "GitHub更新",
-      "genre": "開発",
-      "provider": null,
-      "topic": "技術",
-      "sourceWeight": 1,
-      "title": "Updates to GitHub secret scanning",
-      "summary": "This update covers improvements and bug fixes for GitHub secret scanning. Update to audit log events On November 12, 2026, the business field in affected secret_scanning_alert.* and secret_scanning_push_protection.bypass",
-      "url": "https://github.blog/changelog/2026-10-20-updates-to-github-secret-scanning",
-      "published": "2026-10-20T18:03:55+00:00",
-      "score": 3,
-      "tags": [
-        "開発",
-        "重要"
       ]
     },
     {
@@ -728,72 +748,54 @@
         "AI",
         "重要"
       ]
-    },
-    {
-      "source": "openai",
-      "platform": "AI",
-      "label": "ChatGPT / OpenAI公式",
-      "genre": "AI",
-      "provider": "chatgpt",
-      "topic": "その他",
-      "sourceWeight": 1,
-      "title": "Broad access through consistent standards",
-      "summary": "How OpenAI works with distribution partners to uphold consistent safeguards, support responsible access, and clarify expectations in our Usage Policies.",
-      "url": "https://openai.com/index/broad-access-through-consistent-standards",
-      "published": "2026-10-21T21:00:00+00:00",
-      "score": 2,
-      "tags": [
-        "AI",
-        "重要"
-      ]
     }
   ],
   "sourceStates": [
     {
       "id": "openai",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-22T21:53:32.603595+00:00",
-      "lastAttemptAt": "2026-10-22T21:53:32.603595+00:00",
+      "lastSuccessAt": "2026-10-23T03:58:01.479480+00:00",
+      "lastAttemptAt": "2026-10-23T03:58:01.479480+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "google-gemini",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-22T21:53:32.603595+00:00",
-      "lastAttemptAt": "2026-10-22T21:53:32.603595+00:00",
+      "lastSuccessAt": "2026-10-23T03:58:01.479480+00:00",
+      "lastAttemptAt": "2026-10-23T03:58:01.479480+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "anthropic-claude",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-22T21:53:32.603595+00:00",
-      "lastAttemptAt": "2026-10-22T21:53:32.603595+00:00",
+      "lastSuccessAt": "2026-10-23T03:58:01.479480+00:00",
+      "lastAttemptAt": "2026-10-23T03:58:01.479480+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-blog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-22T21:53:32.603595+00:00",
-      "lastAttemptAt": "2026-10-22T21:53:32.603595+00:00",
+      "lastSuccessAt": "2026-10-23T03:58:01.479480+00:00",
+      "lastAttemptAt": "2026-10-23T03:58:01.479480+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "github-changelog",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-22T21:53:32.603595+00:00",
-      "lastAttemptAt": "2026-10-22T21:53:32.603595+00:00",
+      "lastSuccessAt": "2026-10-23T03:58:01.479480+00:00",
+      "lastAttemptAt": "2026-10-23T03:58:01.479480+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
     {
       "id": "lobsters",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-22T21:53:32.603595+00:00",
-      "lastAttemptAt": "2026-10-22T21:53:32.603595+00:00",
+      "lastSuccessAt": "2026-10-23T03:58:01.479480+00:00",
+      "lastAttemptAt": "2026-10-23T03:58:01.479480+00:00",
       "retryAfterAt": null,
       "errorCode": null
     },
@@ -808,8 +810,8 @@
     {
       "id": "usgs",
       "status": "fresh",
-      "lastSuccessAt": "2026-10-22T21:53:32.603595+00:00",
-      "lastAttemptAt": "2026-10-22T21:53:32.603595+00:00",
+      "lastSuccessAt": "2026-10-23T03:58:01.479480+00:00",
+      "lastAttemptAt": "2026-10-23T03:58:01.479480+00:00",
       "retryAfterAt": null,
       "errorCode": null
     }
